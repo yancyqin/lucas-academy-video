@@ -1,0 +1,25 @@
+{
+  "name": "lucas-academy-video",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Video prototypes for Lucas Academy lessons, starting with Monkey Republic society simulations.",
+  "scripts": {
+    "data": "node scripts/generate-monkey-data.mjs",
+    "start": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts MonkeySociety out/monkey-society.mp4",
+    "preview": "remotion preview src/index.ts MonkeySociety"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.484",
+    "@remotion/renderer": "^4.0.484",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "remotion": "^4.0.484",
+    "typescript": "^5.9.2"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.0",
+    "@types/react": "^19.2.17"
+  }
+}

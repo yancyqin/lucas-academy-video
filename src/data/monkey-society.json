@@ -1,0 +1,3926 @@
+{
+  "generatedAt": "2026-07-06T02:52:22.768Z",
+  "engine": "snake-lab/v3-coder/games/monkey-republic/society.js",
+  "visualRounds": 100,
+  "cast": [
+    {
+      "key": "student",
+      "label": "Rookie Monkey",
+      "emoji": "🧭",
+      "color": "#22c55e",
+      "human": "The beginner — curious, incomplete, easy to improve"
+    },
+    {
+      "key": "sunny",
+      "label": "Sunny",
+      "emoji": "🌞",
+      "color": "#facc15",
+      "human": "The saint — kind no matter what"
+    },
+    {
+      "key": "sneaky",
+      "label": "Sneaky",
+      "emoji": "😈",
+      "color": "#fb923c",
+      "human": "The con artist — takes and never gives"
+    },
+    {
+      "key": "copycat",
+      "label": "Copycat",
+      "emoji": "🪞",
+      "color": "#60a5fa",
+      "human": "The fair friend — most people, most days"
+    },
+    {
+      "key": "peacekeeper",
+      "label": "Peacekeeper",
+      "emoji": "🕊️",
+      "color": "#34d399",
+      "human": "The peacemaker — forgives on purpose"
+    },
+    {
+      "key": "suspicious",
+      "label": "Suspicious",
+      "emoji": "🧐",
+      "color": "#c084fc",
+      "human": "The wary newcomer — trusts records, not smiles"
+    },
+    {
+      "key": "grudger",
+      "label": "Grudger",
+      "emoji": "🧊",
+      "color": "#38bdf8",
+      "human": "The one who never forgets"
+    },
+    {
+      "key": "learner",
+      "label": "Learner",
+      "emoji": "📈",
+      "color": "#f472b6",
+      "human": "The pragmatist — does what the world rewards"
+    },
+    {
+      "key": "imitator",
+      "label": "Imitator",
+      "emoji": "🐑",
+      "color": "#a3e635",
+      "human": "The follower — does what winners do"
+    }
+  ],
+  "worlds": {
+    "winWin": {
+      "key": "winWin",
+      "label": "Win-Win Jungle",
+      "short": "Sharing creates extra bananas.",
+      "payoff": {
+        "shareShare": [
+          3,
+          3
+        ],
+        "shareGrab": [
+          -1,
+          5
+        ],
+        "grabShare": [
+          5,
+          -1
+        ],
+        "grabGrab": [
+          0,
+          0
+        ]
+      },
+      "mistakeRate": 0
+    },
+    "darkForest": {
+      "key": "darkForest",
+      "label": "Dark Forest",
+      "short": "Sharing pays a little, betrayal hurts badly, and mistakes spread fear.",
+      "payoff": {
+        "shareShare": [
+          1,
+          1
+        ],
+        "shareGrab": [
+          -5,
+          5
+        ],
+        "grabShare": [
+          5,
+          -5
+        ],
+        "grabGrab": [
+          0,
+          0
+        ]
+      },
+      "mistakeRate": 0.12
+    }
+  },
+  "visualRuns": {
+    "winWin": {
+      "seed": 20260705,
+      "worldKey": "winWin",
+      "rounds": 100,
+      "shareRate": 1,
+      "totalBananas": 1740,
+      "betrayals": 83,
+      "repairs": 68,
+      "leader": {
+        "id": "student-1-copycat",
+        "name": "Copycat",
+        "personality": "copycat",
+        "score": 230
+      },
+      "groups": [
+        {
+          "key": "copycat",
+          "label": "Copycat",
+          "color": "#60a5fa",
+          "count": 1,
+          "total": 230,
+          "average": 230,
+          "shareRate": 0.86
+        },
+        {
+          "key": "learner",
+          "label": "Learner",
+          "color": "#f472b6",
+          "count": 1,
+          "total": 223,
+          "average": 223,
+          "shareRate": 0.75
+        },
+        {
+          "key": "sunny",
+          "label": "Sunny",
+          "color": "#facc15",
+          "count": 1,
+          "total": 210,
+          "average": 210,
+          "shareRate": 1
+        },
+        {
+          "key": "grudger",
+          "label": "Grudger",
+          "color": "#38bdf8",
+          "count": 1,
+          "total": 204,
+          "average": 204,
+          "shareRate": 0.8
+        },
+        {
+          "key": "imitator",
+          "label": "Imitator",
+          "color": "#a3e635",
+          "count": 1,
+          "total": 200,
+          "average": 200,
+          "shareRate": 0.95
+        },
+        {
+          "key": "peacekeeper",
+          "label": "Peacekeeper",
+          "color": "#34d399",
+          "count": 1,
+          "total": 199,
+          "average": 199,
+          "shareRate": 0.76
+        },
+        {
+          "key": "student",
+          "label": "Student Monkey",
+          "color": "#4ade80",
+          "count": 1,
+          "total": 195,
+          "average": 195,
+          "shareRate": 0.5
+        },
+        {
+          "key": "suspicious",
+          "label": "Suspicious",
+          "color": "#c084fc",
+          "count": 1,
+          "total": 149,
+          "average": 149,
+          "shareRate": 0.58
+        },
+        {
+          "key": "sneaky",
+          "label": "Sneaky",
+          "color": "#fb923c",
+          "count": 1,
+          "total": 130,
+          "average": 130,
+          "shareRate": 0
+        }
+      ],
+      "students": [
+        {
+          "id": "student-1",
+          "name": "Rookie Monkey",
+          "score": 195,
+          "dials": {
+            "trustStart": 0.45,
+            "trustSpeed": 0.35,
+            "forgiveness": 0.25,
+            "gossipWeight": 0.2,
+            "payoffLearning": 0.15,
+            "copyLeader": 0.1
+          }
+        }
+      ],
+      "timeline": [
+        {
+          "round": 3,
+          "shareRate": 0.75,
+          "totalBananas": 56,
+          "topScore": 15,
+          "betrayals": 4,
+          "repairs": 1,
+          "types": {
+            "student": {
+              "average": 15,
+              "shareRate": 0
+            },
+            "sunny": {
+              "average": 9,
+              "shareRate": 1
+            },
+            "sneaky": {
+              "average": 5,
+              "shareRate": 0
+            },
+            "copycat": {
+              "average": 9,
+              "shareRate": 1
+            },
+            "peacekeeper": {
+              "average": 1,
+              "shareRate": 1
+            },
+            "suspicious": {
+              "average": 5,
+              "shareRate": 0
+            },
+            "grudger": {
+              "average": 1,
+              "shareRate": 1
+            },
+            "learner": {
+              "average": 2,
+              "shareRate": 1
+            },
+            "imitator": {
+              "average": 9,
+              "shareRate": 1
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 15
+            }
+          ]
+        },
+        {
+          "round": 6,
+          "shareRate": 0.75,
+          "totalBananas": 106,
+          "topScore": 19,
+          "betrayals": 6,
+          "repairs": 2,
+          "types": {
+            "student": {
+              "average": 19,
+              "shareRate": 0.17
+            },
+            "sunny": {
+              "average": 12,
+              "shareRate": 1
+            },
+            "sneaky": {
+              "average": 5,
+              "shareRate": 0
+            },
+            "copycat": {
+              "average": 11,
+              "shareRate": 1
+            },
+            "peacekeeper": {
+              "average": 12,
+              "shareRate": 0.83
+            },
+            "suspicious": {
+              "average": 8,
+              "shareRate": 0.2
+            },
+            "grudger": {
+              "average": 10,
+              "shareRate": 1
+            },
+            "learner": {
+              "average": 11,
+              "shareRate": 1
+            },
+            "imitator": {
+              "average": 18,
+              "shareRate": 1
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 19
+            }
+          ]
+        },
+        {
+          "round": 9,
+          "shareRate": 0.63,
+          "totalBananas": 156,
+          "topScore": 26,
+          "betrayals": 8,
+          "repairs": 4,
+          "types": {
+            "student": {
+              "average": 26,
+              "shareRate": 0.33
+            },
+            "sunny": {
+              "average": 17,
+              "shareRate": 1
+            },
+            "sneaky": {
+              "average": 5,
+              "shareRate": 0
+            },
+            "copycat": {
+              "average": 22,
+              "shareRate": 0.88
+            },
+            "peacekeeper": {
+              "average": 18,
+              "shareRate": 0.88
+            },
+            "suspicious": {
+              "average": 14,
+              "shareRate": 0.43
+            },
+            "grudger": {
+              "average": 16,
+              "shareRate": 1
+            },
+            "learner": {
+              "average": 20,
+              "shareRate": 1
+            },
+            "imitator": {
+              "average": 18,
+              "shareRate": 0.67
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 26
+            }
+          ]
+        },
+        {
+          "round": 12,
+          "shareRate": 0.63,
+          "totalBananas": 214,
+          "topScore": 37,
+          "betrayals": 14,
+          "repairs": 9,
+          "types": {
+            "student": {
+              "average": 37,
+              "shareRate": 0.42
+            },
+            "sunny": {
+              "average": 18,
+              "shareRate": 1
+            },
+            "sneaky": {
+              "average": 20,
+              "shareRate": 0
+            },
+            "copycat": {
+              "average": 24,
+              "shareRate": 0.9
+            },
+            "peacekeeper": {
+              "average": 24,
+              "shareRate": 0.9
+            },
+            "suspicious": {
+              "average": 17,
+              "shareRate": 0.5
+            },
+            "grudger": {
+              "average": 25,
+              "shareRate": 0.82
+            },
+            "learner": {
+              "average": 29,
+              "shareRate": 1
+            },
+            "imitator": {
+              "average": 20,
+              "shareRate": 0.73
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 37
+            }
+          ]
+        },
+        {
+          "round": 15,
+          "shareRate": 0.63,
+          "totalBananas": 268,
+          "topScore": 39,
+          "betrayals": 17,
+          "repairs": 12,
+          "types": {
+            "student": {
+              "average": 39,
+              "shareRate": 0.47
+            },
+            "sunny": {
+              "average": 23,
+              "shareRate": 1
+            },
+            "sneaky": {
+              "average": 30,
+              "shareRate": 0
+            },
+            "copycat": {
+              "average": 28,
+              "shareRate": 0.83
+            },
+            "peacekeeper": {
+              "average": 33,
+              "shareRate": 0.92
+            },
+            "suspicious": {
+              "average": 20,
+              "shareRate": 0.46
+            },
+            "grudger": {
+              "average": 34,
+              "shareRate": 0.86
+            },
+            "learner": {
+              "average": 38,
+              "shareRate": 1
+            },
+            "imitator": {
+              "average": 23,
+              "shareRate": 0.75
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 39
+            }
+          ]
+        },
+        {
+          "round": 18,
+          "shareRate": 0.63,
+          "totalBananas": 312,
+          "topScore": 45,
+          "betrayals": 19,
+          "repairs": 13,
+          "types": {
+            "student": {
+              "average": 43,
+              "shareRate": 0.44
+            },
+            "sunny": {
+              "average": 29,
+              "shareRate": 1
+            },
+            "sneaky": {
+              "average": 30,
+              "shareRate": 0
+            },
+            "copycat": {
+              "average": 34,
+              "shareRate": 0.8
+            },
+            "peacekeeper": {
+              "average": 33,
+              "shareRate": 0.8
+            },
+            "suspicious": {
+              "average": 26,
+              "shareRate": 0.5
+            },
+            "grudger": {
+              "average": 45,
+              "shareRate": 0.82
+            },
+            "learner": {
+              "average": 44,
+              "shareRate": 1
+            },
+            "imitator": {
+              "average": 28,
+              "shareRate": 0.8
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 43
+            }
+          ]
+        },
+        {
+          "round": 21,
+          "shareRate": 0.63,
+          "totalBananas": 366,
+          "topScore": 53,
+          "betrayals": 22,
+          "repairs": 14,
+          "types": {
+            "student": {
+              "average": 53,
+              "shareRate": 0.38
+            },
+            "sunny": {
+              "average": 35,
+              "shareRate": 1
+            },
+            "sneaky": {
+              "average": 35,
+              "shareRate": 0
+            },
+            "copycat": {
+              "average": 39,
+              "shareRate": 0.83
+            },
+            "peacekeeper": {
+              "average": 42,
+              "shareRate": 0.83
+            },
+            "suspicious": {
+              "average": 29,
+              "shareRate": 0.5
+            },
+            "grudger": {
+              "average": 43,
+              "shareRate": 0.84
+            },
+            "learner": {
+              "average": 53,
+              "shareRate": 1
+            },
+            "imitator": {
+              "average": 37,
+              "shareRate": 0.83
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 53
+            }
+          ]
+        },
+        {
+          "round": 24,
+          "shareRate": 0.63,
+          "totalBananas": 416,
+          "topScore": 62,
+          "betrayals": 24,
+          "repairs": 16,
+          "types": {
+            "student": {
+              "average": 55,
+              "shareRate": 0.42
+            },
+            "sunny": {
+              "average": 40,
+              "shareRate": 1
+            },
+            "sneaky": {
+              "average": 40,
+              "shareRate": 0
+            },
+            "copycat": {
+              "average": 48,
+              "shareRate": 0.86
+            },
+            "peacekeeper": {
+              "average": 48,
+              "shareRate": 0.81
+            },
+            "suspicious": {
+              "average": 32,
+              "shareRate": 0.5
+            },
+            "grudger": {
+              "average": 51,
+              "shareRate": 0.77
+            },
+            "learner": {
+              "average": 62,
+              "shareRate": 1
+            },
+            "imitator": {
+              "average": 40,
+              "shareRate": 0.84
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 55
+            }
+          ]
+        },
+        {
+          "round": 27,
+          "shareRate": 0.63,
+          "totalBananas": 472,
+          "topScore": 71,
+          "betrayals": 27,
+          "repairs": 19,
+          "types": {
+            "student": {
+              "average": 62,
+              "shareRate": 0.44
+            },
+            "sunny": {
+              "average": 46,
+              "shareRate": 1
+            },
+            "sneaky": {
+              "average": 50,
+              "shareRate": 0
+            },
+            "copycat": {
+              "average": 54,
+              "shareRate": 0.87
+            },
+            "peacekeeper": {
+              "average": 52,
+              "shareRate": 0.78
+            },
+            "suspicious": {
+              "average": 40,
+              "shareRate": 0.48
+            },
+            "grudger": {
+              "average": 56,
+              "shareRate": 0.8
+            },
+            "learner": {
+              "average": 71,
+              "shareRate": 1
+            },
+            "imitator": {
+              "average": 41,
+              "shareRate": 0.86
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 62
+            }
+          ]
+        },
+        {
+          "round": 30,
+          "shareRate": 0.63,
+          "totalBananas": 518,
+          "topScore": 77,
+          "betrayals": 28,
+          "repairs": 20,
+          "types": {
+            "student": {
+              "average": 68,
+              "shareRate": 0.47
+            },
+            "sunny": {
+              "average": 55,
+              "shareRate": 1
+            },
+            "sneaky": {
+              "average": 50,
+              "shareRate": 0
+            },
+            "copycat": {
+              "average": 63,
+              "shareRate": 0.88
+            },
+            "peacekeeper": {
+              "average": 55,
+              "shareRate": 0.73
+            },
+            "suspicious": {
+              "average": 42,
+              "shareRate": 0.5
+            },
+            "grudger": {
+              "average": 64,
+              "shareRate": 0.75
+            },
+            "learner": {
+              "average": 77,
+              "shareRate": 1
+            },
+            "imitator": {
+              "average": 44,
+              "shareRate": 0.87
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 68
+            }
+          ]
+        },
+        {
+          "round": 33,
+          "shareRate": 0.63,
+          "totalBananas": 568,
+          "topScore": 86,
+          "betrayals": 30,
+          "repairs": 22,
+          "types": {
+            "student": {
+              "average": 70,
+              "shareRate": 0.48
+            },
+            "sunny": {
+              "average": 64,
+              "shareRate": 1
+            },
+            "sneaky": {
+              "average": 50,
+              "shareRate": 0
+            },
+            "copycat": {
+              "average": 74,
+              "shareRate": 0.86
+            },
+            "peacekeeper": {
+              "average": 58,
+              "shareRate": 0.69
+            },
+            "suspicious": {
+              "average": 50,
+              "shareRate": 0.5
+            },
+            "grudger": {
+              "average": 69,
+              "shareRate": 0.77
+            },
+            "learner": {
+              "average": 86,
+              "shareRate": 1
+            },
+            "imitator": {
+              "average": 47,
+              "shareRate": 0.88
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 70
+            }
+          ]
+        },
+        {
+          "round": 36,
+          "shareRate": 1,
+          "totalBananas": 634,
+          "topScore": 92,
+          "betrayals": 31,
+          "repairs": 25,
+          "types": {
+            "student": {
+              "average": 81,
+              "shareRate": 0.5
+            },
+            "sunny": {
+              "average": 73,
+              "shareRate": 1
+            },
+            "sneaky": {
+              "average": 60,
+              "shareRate": 0
+            },
+            "copycat": {
+              "average": 83,
+              "shareRate": 0.88
+            },
+            "peacekeeper": {
+              "average": 63,
+              "shareRate": 0.72
+            },
+            "suspicious": {
+              "average": 59,
+              "shareRate": 0.55
+            },
+            "grudger": {
+              "average": 75,
+              "shareRate": 0.79
+            },
+            "learner": {
+              "average": 92,
+              "shareRate": 1
+            },
+            "imitator": {
+              "average": 48,
+              "shareRate": 0.89
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 81
+            }
+          ]
+        },
+        {
+          "round": 39,
+          "shareRate": 0.63,
+          "totalBananas": 686,
+          "topScore": 98,
+          "betrayals": 31,
+          "repairs": 26,
+          "types": {
+            "student": {
+              "average": 84,
+              "shareRate": 0.49
+            },
+            "sunny": {
+              "average": 79,
+              "shareRate": 1
+            },
+            "sneaky": {
+              "average": 65,
+              "shareRate": 0
+            },
+            "copycat": {
+              "average": 89,
+              "shareRate": 0.86
+            },
+            "peacekeeper": {
+              "average": 72,
+              "shareRate": 0.74
+            },
+            "suspicious": {
+              "average": 65,
+              "shareRate": 0.56
+            },
+            "grudger": {
+              "average": 81,
+              "shareRate": 0.8
+            },
+            "learner": {
+              "average": 98,
+              "shareRate": 1
+            },
+            "imitator": {
+              "average": 53,
+              "shareRate": 0.9
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 84
+            }
+          ]
+        },
+        {
+          "round": 42,
+          "shareRate": 0.75,
+          "totalBananas": 738,
+          "topScore": 107,
+          "betrayals": 32,
+          "repairs": 27,
+          "types": {
+            "student": {
+              "average": 87,
+              "shareRate": 0.48
+            },
+            "sunny": {
+              "average": 85,
+              "shareRate": 1
+            },
+            "sneaky": {
+              "average": 65,
+              "shareRate": 0
+            },
+            "copycat": {
+              "average": 95,
+              "shareRate": 0.84
+            },
+            "peacekeeper": {
+              "average": 78,
+              "shareRate": 0.76
+            },
+            "suspicious": {
+              "average": 67,
+              "shareRate": 0.57
+            },
+            "grudger": {
+              "average": 92,
+              "shareRate": 0.79
+            },
+            "learner": {
+              "average": 107,
+              "shareRate": 1
+            },
+            "imitator": {
+              "average": 62,
+              "shareRate": 0.91
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 87
+            }
+          ]
+        },
+        {
+          "round": 45,
+          "shareRate": 0.88,
+          "totalBananas": 800,
+          "topScore": 112,
+          "betrayals": 36,
+          "repairs": 31,
+          "types": {
+            "student": {
+              "average": 90,
+              "shareRate": 0.49
+            },
+            "sunny": {
+              "average": 90,
+              "shareRate": 1
+            },
+            "sneaky": {
+              "average": 75,
+              "shareRate": 0
+            },
+            "copycat": {
+              "average": 104,
+              "shareRate": 0.85
+            },
+            "peacekeeper": {
+              "average": 86,
+              "shareRate": 0.74
+            },
+            "suspicious": {
+              "average": 73,
+              "shareRate": 0.59
+            },
+            "grudger": {
+              "average": 99,
+              "shareRate": 0.78
+            },
+            "learner": {
+              "average": 112,
+              "shareRate": 1
+            },
+            "imitator": {
+              "average": 71,
+              "shareRate": 0.92
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 90
+            }
+          ]
+        },
+        {
+          "round": 48,
+          "shareRate": 0.75,
+          "totalBananas": 854,
+          "topScore": 121,
+          "betrayals": 36,
+          "repairs": 31,
+          "types": {
+            "student": {
+              "average": 93,
+              "shareRate": 0.48
+            },
+            "sunny": {
+              "average": 99,
+              "shareRate": 1
+            },
+            "sneaky": {
+              "average": 75,
+              "shareRate": 0
+            },
+            "copycat": {
+              "average": 113,
+              "shareRate": 0.86
+            },
+            "peacekeeper": {
+              "average": 92,
+              "shareRate": 0.76
+            },
+            "suspicious": {
+              "average": 79,
+              "shareRate": 0.6
+            },
+            "grudger": {
+              "average": 105,
+              "shareRate": 0.79
+            },
+            "learner": {
+              "average": 121,
+              "shareRate": 1
+            },
+            "imitator": {
+              "average": 77,
+              "shareRate": 0.92
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 93
+            }
+          ]
+        },
+        {
+          "round": 51,
+          "shareRate": 0.75,
+          "totalBananas": 910,
+          "topScore": 126,
+          "betrayals": 37,
+          "repairs": 32,
+          "types": {
+            "student": {
+              "average": 101,
+              "shareRate": 0.47
+            },
+            "sunny": {
+              "average": 108,
+              "shareRate": 1
+            },
+            "sneaky": {
+              "average": 80,
+              "shareRate": 0
+            },
+            "copycat": {
+              "average": 122,
+              "shareRate": 0.87
+            },
+            "peacekeeper": {
+              "average": 98,
+              "shareRate": 0.77
+            },
+            "suspicious": {
+              "average": 82,
+              "shareRate": 0.6
+            },
+            "grudger": {
+              "average": 107,
+              "shareRate": 0.78
+            },
+            "learner": {
+              "average": 126,
+              "shareRate": 1
+            },
+            "imitator": {
+              "average": 86,
+              "shareRate": 0.93
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 101
+            }
+          ]
+        },
+        {
+          "round": 54,
+          "shareRate": 0.75,
+          "totalBananas": 970,
+          "topScore": 131,
+          "betrayals": 40,
+          "repairs": 37,
+          "types": {
+            "student": {
+              "average": 104,
+              "shareRate": 0.48
+            },
+            "sunny": {
+              "average": 117,
+              "shareRate": 1
+            },
+            "sneaky": {
+              "average": 95,
+              "shareRate": 0
+            },
+            "copycat": {
+              "average": 129,
+              "shareRate": 0.86
+            },
+            "peacekeeper": {
+              "average": 107,
+              "shareRate": 0.78
+            },
+            "suspicious": {
+              "average": 91,
+              "shareRate": 0.63
+            },
+            "grudger": {
+              "average": 112,
+              "shareRate": 0.77
+            },
+            "learner": {
+              "average": 131,
+              "shareRate": 1
+            },
+            "imitator": {
+              "average": 84,
+              "shareRate": 0.93
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 104
+            }
+          ]
+        },
+        {
+          "round": 57,
+          "shareRate": 0.75,
+          "totalBananas": 1018,
+          "topScore": 136,
+          "betrayals": 42,
+          "repairs": 40,
+          "types": {
+            "student": {
+              "average": 109,
+              "shareRate": 0.46
+            },
+            "sunny": {
+              "average": 122,
+              "shareRate": 1
+            },
+            "sneaky": {
+              "average": 105,
+              "shareRate": 0
+            },
+            "copycat": {
+              "average": 131,
+              "shareRate": 0.87
+            },
+            "peacekeeper": {
+              "average": 116,
+              "shareRate": 0.8
+            },
+            "suspicious": {
+              "average": 94,
+              "shareRate": 0.61
+            },
+            "grudger": {
+              "average": 118,
+              "shareRate": 0.76
+            },
+            "learner": {
+              "average": 136,
+              "shareRate": 1
+            },
+            "imitator": {
+              "average": 87,
+              "shareRate": 0.93
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 109
+            }
+          ]
+        },
+        {
+          "round": 60,
+          "shareRate": 0.75,
+          "totalBananas": 1078,
+          "topScore": 140,
+          "betrayals": 44,
+          "repairs": 43,
+          "types": {
+            "student": {
+              "average": 120,
+              "shareRate": 0.47
+            },
+            "sunny": {
+              "average": 127,
+              "shareRate": 1
+            },
+            "sneaky": {
+              "average": 115,
+              "shareRate": 0
+            },
+            "copycat": {
+              "average": 140,
+              "shareRate": 0.87
+            },
+            "peacekeeper": {
+              "average": 121,
+              "shareRate": 0.81
+            },
+            "suspicious": {
+              "average": 97,
+              "shareRate": 0.61
+            },
+            "grudger": {
+              "average": 124,
+              "shareRate": 0.77
+            },
+            "learner": {
+              "average": 138,
+              "shareRate": 1
+            },
+            "imitator": {
+              "average": 96,
+              "shareRate": 0.94
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 120
+            }
+          ]
+        },
+        {
+          "round": 63,
+          "shareRate": 0.75,
+          "totalBananas": 1132,
+          "topScore": 149,
+          "betrayals": 44,
+          "repairs": 43,
+          "types": {
+            "student": {
+              "average": 123,
+              "shareRate": 0.46
+            },
+            "sunny": {
+              "average": 136,
+              "shareRate": 1
+            },
+            "sneaky": {
+              "average": 115,
+              "shareRate": 0
+            },
+            "copycat": {
+              "average": 149,
+              "shareRate": 0.88
+            },
+            "peacekeeper": {
+              "average": 127,
+              "shareRate": 0.8
+            },
+            "suspicious": {
+              "average": 100,
+              "shareRate": 0.6
+            },
+            "grudger": {
+              "average": 133,
+              "shareRate": 0.78
+            },
+            "learner": {
+              "average": 144,
+              "shareRate": 1
+            },
+            "imitator": {
+              "average": 105,
+              "shareRate": 0.94
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 123
+            }
+          ]
+        },
+        {
+          "round": 66,
+          "shareRate": 0.63,
+          "totalBananas": 1186,
+          "topScore": 159,
+          "betrayals": 50,
+          "repairs": 45,
+          "types": {
+            "student": {
+              "average": 128,
+              "shareRate": 0.48
+            },
+            "sunny": {
+              "average": 137,
+              "shareRate": 1
+            },
+            "sneaky": {
+              "average": 120,
+              "shareRate": 0
+            },
+            "copycat": {
+              "average": 151,
+              "shareRate": 0.88
+            },
+            "peacekeeper": {
+              "average": 138,
+              "shareRate": 0.79
+            },
+            "suspicious": {
+              "average": 104,
+              "shareRate": 0.59
+            },
+            "grudger": {
+              "average": 135,
+              "shareRate": 0.79
+            },
+            "learner": {
+              "average": 159,
+              "shareRate": 0.95
+            },
+            "imitator": {
+              "average": 114,
+              "shareRate": 0.94
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 128
+            }
+          ]
+        },
+        {
+          "round": 69,
+          "shareRate": 0.75,
+          "totalBananas": 1234,
+          "topScore": 164,
+          "betrayals": 53,
+          "repairs": 47,
+          "types": {
+            "student": {
+              "average": 135,
+              "shareRate": 0.49
+            },
+            "sunny": {
+              "average": 143,
+              "shareRate": 1
+            },
+            "sneaky": {
+              "average": 120,
+              "shareRate": 0
+            },
+            "copycat": {
+              "average": 159,
+              "shareRate": 0.87
+            },
+            "peacekeeper": {
+              "average": 140,
+              "shareRate": 0.79
+            },
+            "suspicious": {
+              "average": 109,
+              "shareRate": 0.61
+            },
+            "grudger": {
+              "average": 141,
+              "shareRate": 0.8
+            },
+            "learner": {
+              "average": 164,
+              "shareRate": 0.9
+            },
+            "imitator": {
+              "average": 123,
+              "shareRate": 0.95
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 135
+            }
+          ]
+        },
+        {
+          "round": 72,
+          "shareRate": 0.63,
+          "totalBananas": 1276,
+          "topScore": 169,
+          "betrayals": 56,
+          "repairs": 49,
+          "types": {
+            "student": {
+              "average": 137,
+              "shareRate": 0.5
+            },
+            "sunny": {
+              "average": 149,
+              "shareRate": 1
+            },
+            "sneaky": {
+              "average": 120,
+              "shareRate": 0
+            },
+            "copycat": {
+              "average": 165,
+              "shareRate": 0.88
+            },
+            "peacekeeper": {
+              "average": 143,
+              "shareRate": 0.77
+            },
+            "suspicious": {
+              "average": 113,
+              "shareRate": 0.6
+            },
+            "grudger": {
+              "average": 148,
+              "shareRate": 0.79
+            },
+            "learner": {
+              "average": 169,
+              "shareRate": 0.88
+            },
+            "imitator": {
+              "average": 132,
+              "shareRate": 0.95
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 137
+            }
+          ]
+        },
+        {
+          "round": 75,
+          "shareRate": 0.63,
+          "totalBananas": 1322,
+          "topScore": 179,
+          "betrayals": 60,
+          "repairs": 51,
+          "types": {
+            "student": {
+              "average": 144,
+              "shareRate": 0.51
+            },
+            "sunny": {
+              "average": 154,
+              "shareRate": 1
+            },
+            "sneaky": {
+              "average": 120,
+              "shareRate": 0
+            },
+            "copycat": {
+              "average": 167,
+              "shareRate": 0.87
+            },
+            "peacekeeper": {
+              "average": 150,
+              "shareRate": 0.76
+            },
+            "suspicious": {
+              "average": 119,
+              "shareRate": 0.6
+            },
+            "grudger": {
+              "average": 151,
+              "shareRate": 0.79
+            },
+            "learner": {
+              "average": 179,
+              "shareRate": 0.84
+            },
+            "imitator": {
+              "average": 138,
+              "shareRate": 0.95
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 144
+            }
+          ]
+        },
+        {
+          "round": 78,
+          "shareRate": 0.88,
+          "totalBananas": 1368,
+          "topScore": 178,
+          "betrayals": 65,
+          "repairs": 54,
+          "types": {
+            "student": {
+              "average": 151,
+              "shareRate": 0.51
+            },
+            "sunny": {
+              "average": 157,
+              "shareRate": 1
+            },
+            "sneaky": {
+              "average": 120,
+              "shareRate": 0
+            },
+            "copycat": {
+              "average": 178,
+              "shareRate": 0.86
+            },
+            "peacekeeper": {
+              "average": 153,
+              "shareRate": 0.74
+            },
+            "suspicious": {
+              "average": 127,
+              "shareRate": 0.59
+            },
+            "grudger": {
+              "average": 158,
+              "shareRate": 0.79
+            },
+            "learner": {
+              "average": 177,
+              "shareRate": 0.83
+            },
+            "imitator": {
+              "average": 147,
+              "shareRate": 0.95
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 151
+            }
+          ]
+        },
+        {
+          "round": 81,
+          "shareRate": 0.63,
+          "totalBananas": 1410,
+          "topScore": 187,
+          "betrayals": 69,
+          "repairs": 55,
+          "types": {
+            "student": {
+              "average": 156,
+              "shareRate": 0.49
+            },
+            "sunny": {
+              "average": 166,
+              "shareRate": 1
+            },
+            "sneaky": {
+              "average": 120,
+              "shareRate": 0
+            },
+            "copycat": {
+              "average": 180,
+              "shareRate": 0.85
+            },
+            "peacekeeper": {
+              "average": 155,
+              "shareRate": 0.75
+            },
+            "suspicious": {
+              "average": 130,
+              "shareRate": 0.58
+            },
+            "grudger": {
+              "average": 163,
+              "shareRate": 0.8
+            },
+            "learner": {
+              "average": 187,
+              "shareRate": 0.79
+            },
+            "imitator": {
+              "average": 153,
+              "shareRate": 0.94
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 156
+            }
+          ]
+        },
+        {
+          "round": 84,
+          "shareRate": 0.63,
+          "totalBananas": 1454,
+          "topScore": 195,
+          "betrayals": 71,
+          "repairs": 56,
+          "types": {
+            "student": {
+              "average": 158,
+              "shareRate": 0.5
+            },
+            "sunny": {
+              "average": 172,
+              "shareRate": 1
+            },
+            "sneaky": {
+              "average": 120,
+              "shareRate": 0
+            },
+            "copycat": {
+              "average": 191,
+              "shareRate": 0.84
+            },
+            "peacekeeper": {
+              "average": 161,
+              "shareRate": 0.75
+            },
+            "suspicious": {
+              "average": 129,
+              "shareRate": 0.57
+            },
+            "grudger": {
+              "average": 169,
+              "shareRate": 0.8
+            },
+            "learner": {
+              "average": 195,
+              "shareRate": 0.78
+            },
+            "imitator": {
+              "average": 159,
+              "shareRate": 0.94
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 158
+            }
+          ]
+        },
+        {
+          "round": 87,
+          "shareRate": 0.5,
+          "totalBananas": 1502,
+          "topScore": 198,
+          "betrayals": 72,
+          "repairs": 56,
+          "types": {
+            "student": {
+              "average": 164,
+              "shareRate": 0.51
+            },
+            "sunny": {
+              "average": 181,
+              "shareRate": 1
+            },
+            "sneaky": {
+              "average": 120,
+              "shareRate": 0
+            },
+            "copycat": {
+              "average": 197,
+              "shareRate": 0.85
+            },
+            "peacekeeper": {
+              "average": 167,
+              "shareRate": 0.74
+            },
+            "suspicious": {
+              "average": 135,
+              "shareRate": 0.57
+            },
+            "grudger": {
+              "average": 175,
+              "shareRate": 0.81
+            },
+            "learner": {
+              "average": 198,
+              "shareRate": 0.76
+            },
+            "imitator": {
+              "average": 165,
+              "shareRate": 0.94
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 164
+            }
+          ]
+        },
+        {
+          "round": 90,
+          "shareRate": 0.63,
+          "totalBananas": 1550,
+          "topScore": 204,
+          "betrayals": 75,
+          "repairs": 59,
+          "types": {
+            "student": {
+              "average": 173,
+              "shareRate": 0.5
+            },
+            "sunny": {
+              "average": 190,
+              "shareRate": 1
+            },
+            "sneaky": {
+              "average": 120,
+              "shareRate": 0
+            },
+            "copycat": {
+              "average": 202,
+              "shareRate": 0.85
+            },
+            "peacekeeper": {
+              "average": 171,
+              "shareRate": 0.74
+            },
+            "suspicious": {
+              "average": 135,
+              "shareRate": 0.56
+            },
+            "grudger": {
+              "average": 181,
+              "shareRate": 0.8
+            },
+            "learner": {
+              "average": 204,
+              "shareRate": 0.76
+            },
+            "imitator": {
+              "average": 174,
+              "shareRate": 0.95
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 173
+            }
+          ]
+        },
+        {
+          "round": 93,
+          "shareRate": 0.63,
+          "totalBananas": 1602,
+          "topScore": 213,
+          "betrayals": 78,
+          "repairs": 62,
+          "types": {
+            "student": {
+              "average": 176,
+              "shareRate": 0.51
+            },
+            "sunny": {
+              "average": 196,
+              "shareRate": 1
+            },
+            "sneaky": {
+              "average": 125,
+              "shareRate": 0
+            },
+            "copycat": {
+              "average": 213,
+              "shareRate": 0.85
+            },
+            "peacekeeper": {
+              "average": 180,
+              "shareRate": 0.75
+            },
+            "suspicious": {
+              "average": 138,
+              "shareRate": 0.57
+            },
+            "grudger": {
+              "average": 188,
+              "shareRate": 0.8
+            },
+            "learner": {
+              "average": 207,
+              "shareRate": 0.74
+            },
+            "imitator": {
+              "average": 179,
+              "shareRate": 0.95
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 176
+            }
+          ]
+        },
+        {
+          "round": 96,
+          "shareRate": 0.75,
+          "totalBananas": 1662,
+          "topScore": 222,
+          "betrayals": 80,
+          "repairs": 65,
+          "types": {
+            "student": {
+              "average": 187,
+              "shareRate": 0.51
+            },
+            "sunny": {
+              "average": 198,
+              "shareRate": 1
+            },
+            "sneaky": {
+              "average": 130,
+              "shareRate": 0
+            },
+            "copycat": {
+              "average": 222,
+              "shareRate": 0.85
+            },
+            "peacekeeper": {
+              "average": 191,
+              "shareRate": 0.74
+            },
+            "suspicious": {
+              "average": 144,
+              "shareRate": 0.57
+            },
+            "grudger": {
+              "average": 193,
+              "shareRate": 0.8
+            },
+            "learner": {
+              "average": 209,
+              "shareRate": 0.75
+            },
+            "imitator": {
+              "average": 188,
+              "shareRate": 0.95
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 187
+            }
+          ]
+        },
+        {
+          "round": 99,
+          "shareRate": 0.75,
+          "totalBananas": 1716,
+          "topScore": 227,
+          "betrayals": 83,
+          "repairs": 68,
+          "types": {
+            "student": {
+              "average": 192,
+              "shareRate": 0.49
+            },
+            "sunny": {
+              "average": 207,
+              "shareRate": 1
+            },
+            "sneaky": {
+              "average": 130,
+              "shareRate": 0
+            },
+            "copycat": {
+              "average": 227,
+              "shareRate": 0.86
+            },
+            "peacekeeper": {
+              "average": 196,
+              "shareRate": 0.75
+            },
+            "suspicious": {
+              "average": 146,
+              "shareRate": 0.58
+            },
+            "grudger": {
+              "average": 201,
+              "shareRate": 0.8
+            },
+            "learner": {
+              "average": 220,
+              "shareRate": 0.74
+            },
+            "imitator": {
+              "average": 197,
+              "shareRate": 0.95
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 192
+            }
+          ]
+        },
+        {
+          "round": 100,
+          "shareRate": 1,
+          "totalBananas": 1740,
+          "topScore": 230,
+          "betrayals": 83,
+          "repairs": 68,
+          "types": {
+            "student": {
+              "average": 195,
+              "shareRate": 0.5
+            },
+            "sunny": {
+              "average": 210,
+              "shareRate": 1
+            },
+            "sneaky": {
+              "average": 130,
+              "shareRate": 0
+            },
+            "copycat": {
+              "average": 230,
+              "shareRate": 0.86
+            },
+            "peacekeeper": {
+              "average": 199,
+              "shareRate": 0.76
+            },
+            "suspicious": {
+              "average": 149,
+              "shareRate": 0.58
+            },
+            "grudger": {
+              "average": 204,
+              "shareRate": 0.8
+            },
+            "learner": {
+              "average": 223,
+              "shareRate": 0.75
+            },
+            "imitator": {
+              "average": 200,
+              "shareRate": 0.95
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 195
+            }
+          ]
+        }
+      ],
+      "citizenCount": 9
+    },
+    "darkForest": {
+      "seed": 20260705,
+      "worldKey": "darkForest",
+      "rounds": 100,
+      "shareRate": 0.25,
+      "totalBananas": 178,
+      "betrayals": 125,
+      "repairs": 109,
+      "leader": {
+        "id": "student-1-sneaky",
+        "name": "Sneaky",
+        "personality": "sneaky",
+        "score": 103
+      },
+      "groups": [
+        {
+          "key": "sneaky",
+          "label": "Sneaky",
+          "color": "#fb923c",
+          "count": 1,
+          "total": 103,
+          "average": 103,
+          "shareRate": 0.11
+        },
+        {
+          "key": "suspicious",
+          "label": "Suspicious",
+          "color": "#c084fc",
+          "count": 1,
+          "total": 72,
+          "average": 72,
+          "shareRate": 0.33
+        },
+        {
+          "key": "learner",
+          "label": "Learner",
+          "color": "#f472b6",
+          "count": 1,
+          "total": 65,
+          "average": 65,
+          "shareRate": 0.19
+        },
+        {
+          "key": "imitator",
+          "label": "Imitator",
+          "color": "#a3e635",
+          "count": 1,
+          "total": 27,
+          "average": 27,
+          "shareRate": 0.19
+        },
+        {
+          "key": "student",
+          "label": "Student Monkey",
+          "color": "#4ade80",
+          "count": 1,
+          "total": 20,
+          "average": 20,
+          "shareRate": 0.31
+        },
+        {
+          "key": "grudger",
+          "label": "Grudger",
+          "color": "#38bdf8",
+          "count": 1,
+          "total": 11,
+          "average": 11,
+          "shareRate": 0.58
+        },
+        {
+          "key": "copycat",
+          "label": "Copycat",
+          "color": "#60a5fa",
+          "count": 1,
+          "total": -18,
+          "average": -18,
+          "shareRate": 0.63
+        },
+        {
+          "key": "peacekeeper",
+          "label": "Peacekeeper",
+          "color": "#34d399",
+          "count": 1,
+          "total": -38,
+          "average": -38,
+          "shareRate": 0.39
+        },
+        {
+          "key": "sunny",
+          "label": "Sunny",
+          "color": "#facc15",
+          "count": 1,
+          "total": -64,
+          "average": -64,
+          "shareRate": 0.91
+        }
+      ],
+      "students": [
+        {
+          "id": "student-1",
+          "name": "Rookie Monkey",
+          "score": 20,
+          "dials": {
+            "trustStart": 0.45,
+            "trustSpeed": 0.35,
+            "forgiveness": 0.25,
+            "gossipWeight": 0.2,
+            "payoffLearning": 0.15,
+            "copyLeader": 0.1
+          }
+        }
+      ],
+      "timeline": [
+        {
+          "round": 3,
+          "shareRate": 0.38,
+          "totalBananas": 4,
+          "topScore": 10,
+          "betrayals": 8,
+          "repairs": 4,
+          "types": {
+            "student": {
+              "average": 0,
+              "shareRate": 0
+            },
+            "sunny": {
+              "average": -5,
+              "shareRate": 0.67
+            },
+            "sneaky": {
+              "average": 10,
+              "shareRate": 0
+            },
+            "copycat": {
+              "average": 1,
+              "shareRate": 1
+            },
+            "peacekeeper": {
+              "average": 0,
+              "shareRate": 0
+            },
+            "suspicious": {
+              "average": 1,
+              "shareRate": 0.67
+            },
+            "grudger": {
+              "average": 1,
+              "shareRate": 0.67
+            },
+            "learner": {
+              "average": 0,
+              "shareRate": 0.33
+            },
+            "imitator": {
+              "average": -4,
+              "shareRate": 0.67
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "round": 6,
+          "shareRate": 0.63,
+          "totalBananas": 14,
+          "topScore": 10,
+          "betrayals": 12,
+          "repairs": 6,
+          "types": {
+            "student": {
+              "average": 1,
+              "shareRate": 0.17
+            },
+            "sunny": {
+              "average": -9,
+              "shareRate": 0.8
+            },
+            "sneaky": {
+              "average": 10,
+              "shareRate": 0.25
+            },
+            "copycat": {
+              "average": 4,
+              "shareRate": 1
+            },
+            "peacekeeper": {
+              "average": -4,
+              "shareRate": 0.33
+            },
+            "suspicious": {
+              "average": 6,
+              "shareRate": 0.33
+            },
+            "grudger": {
+              "average": -2,
+              "shareRate": 0.83
+            },
+            "learner": {
+              "average": 6,
+              "shareRate": 0.33
+            },
+            "imitator": {
+              "average": 2,
+              "shareRate": 0.6
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 1
+            }
+          ]
+        },
+        {
+          "round": 9,
+          "shareRate": 0,
+          "totalBananas": 18,
+          "topScore": 20,
+          "betrayals": 16,
+          "repairs": 10,
+          "types": {
+            "student": {
+              "average": -3,
+              "shareRate": 0.33
+            },
+            "sunny": {
+              "average": -13,
+              "shareRate": 0.86
+            },
+            "sneaky": {
+              "average": 20,
+              "shareRate": 0.14
+            },
+            "copycat": {
+              "average": 0,
+              "shareRate": 0.86
+            },
+            "peacekeeper": {
+              "average": 1,
+              "shareRate": 0.25
+            },
+            "suspicious": {
+              "average": 11,
+              "shareRate": 0.25
+            },
+            "grudger": {
+              "average": -1,
+              "shareRate": 0.67
+            },
+            "learner": {
+              "average": 1,
+              "shareRate": 0.33
+            },
+            "imitator": {
+              "average": 2,
+              "shareRate": 0.5
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": -3
+            }
+          ]
+        },
+        {
+          "round": 12,
+          "shareRate": 0.63,
+          "totalBananas": 24,
+          "topScore": 25,
+          "betrayals": 22,
+          "repairs": 14,
+          "types": {
+            "student": {
+              "average": -1,
+              "shareRate": 0.42
+            },
+            "sunny": {
+              "average": -22,
+              "shareRate": 0.9
+            },
+            "sneaky": {
+              "average": 25,
+              "shareRate": 0.1
+            },
+            "copycat": {
+              "average": -4,
+              "shareRate": 0.89
+            },
+            "peacekeeper": {
+              "average": -9,
+              "shareRate": 0.36
+            },
+            "suspicious": {
+              "average": 21,
+              "shareRate": 0.2
+            },
+            "grudger": {
+              "average": -5,
+              "shareRate": 0.73
+            },
+            "learner": {
+              "average": 11,
+              "shareRate": 0.25
+            },
+            "imitator": {
+              "average": 8,
+              "shareRate": 0.45
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": -1
+            }
+          ]
+        },
+        {
+          "round": 15,
+          "shareRate": 0.5,
+          "totalBananas": 30,
+          "topScore": 35,
+          "betrayals": 27,
+          "repairs": 16,
+          "types": {
+            "student": {
+              "average": 0,
+              "shareRate": 0.4
+            },
+            "sunny": {
+              "average": -31,
+              "shareRate": 0.92
+            },
+            "sneaky": {
+              "average": 35,
+              "shareRate": 0.08
+            },
+            "copycat": {
+              "average": -2,
+              "shareRate": 0.91
+            },
+            "peacekeeper": {
+              "average": -19,
+              "shareRate": 0.43
+            },
+            "suspicious": {
+              "average": 21,
+              "shareRate": 0.15
+            },
+            "grudger": {
+              "average": -8,
+              "shareRate": 0.79
+            },
+            "learner": {
+              "average": 21,
+              "shareRate": 0.2
+            },
+            "imitator": {
+              "average": 13,
+              "shareRate": 0.42
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "round": 18,
+          "shareRate": 0.5,
+          "totalBananas": 40,
+          "topScore": 35,
+          "betrayals": 30,
+          "repairs": 16,
+          "types": {
+            "student": {
+              "average": 1,
+              "shareRate": 0.39
+            },
+            "sunny": {
+              "average": -29,
+              "shareRate": 0.88
+            },
+            "sneaky": {
+              "average": 35,
+              "shareRate": 0.06
+            },
+            "copycat": {
+              "average": 0,
+              "shareRate": 0.86
+            },
+            "peacekeeper": {
+              "average": -18,
+              "shareRate": 0.44
+            },
+            "suspicious": {
+              "average": 22,
+              "shareRate": 0.19
+            },
+            "grudger": {
+              "average": -6,
+              "shareRate": 0.81
+            },
+            "learner": {
+              "average": 21,
+              "shareRate": 0.18
+            },
+            "imitator": {
+              "average": 14,
+              "shareRate": 0.4
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 1
+            }
+          ]
+        },
+        {
+          "round": 21,
+          "shareRate": 0.13,
+          "totalBananas": 40,
+          "topScore": 35,
+          "betrayals": 34,
+          "repairs": 18,
+          "types": {
+            "student": {
+              "average": 1,
+              "shareRate": 0.33
+            },
+            "sunny": {
+              "average": -34,
+              "shareRate": 0.84
+            },
+            "sneaky": {
+              "average": 35,
+              "shareRate": 0.05
+            },
+            "copycat": {
+              "average": 5,
+              "shareRate": 0.75
+            },
+            "peacekeeper": {
+              "average": -18,
+              "shareRate": 0.42
+            },
+            "suspicious": {
+              "average": 22,
+              "shareRate": 0.18
+            },
+            "grudger": {
+              "average": -6,
+              "shareRate": 0.68
+            },
+            "learner": {
+              "average": 21,
+              "shareRate": 0.15
+            },
+            "imitator": {
+              "average": 14,
+              "shareRate": 0.33
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 1
+            }
+          ]
+        },
+        {
+          "round": 24,
+          "shareRate": 0.38,
+          "totalBananas": 46,
+          "topScore": 40,
+          "betrayals": 38,
+          "repairs": 22,
+          "types": {
+            "student": {
+              "average": 3,
+              "shareRate": 0.38
+            },
+            "sunny": {
+              "average": -38,
+              "shareRate": 0.86
+            },
+            "sneaky": {
+              "average": 40,
+              "shareRate": 0.09
+            },
+            "copycat": {
+              "average": -4,
+              "shareRate": 0.79
+            },
+            "peacekeeper": {
+              "average": -23,
+              "shareRate": 0.43
+            },
+            "suspicious": {
+              "average": 33,
+              "shareRate": 0.2
+            },
+            "grudger": {
+              "average": -5,
+              "shareRate": 0.68
+            },
+            "learner": {
+              "average": 21,
+              "shareRate": 0.17
+            },
+            "imitator": {
+              "average": 19,
+              "shareRate": 0.3
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 3
+            }
+          ]
+        },
+        {
+          "round": 27,
+          "shareRate": 0.63,
+          "totalBananas": 50,
+          "topScore": 45,
+          "betrayals": 43,
+          "repairs": 25,
+          "types": {
+            "student": {
+              "average": 10,
+              "shareRate": 0.41
+            },
+            "sunny": {
+              "average": -42,
+              "shareRate": 0.87
+            },
+            "sneaky": {
+              "average": 45,
+              "shareRate": 0.08
+            },
+            "copycat": {
+              "average": -13,
+              "shareRate": 0.82
+            },
+            "peacekeeper": {
+              "average": -18,
+              "shareRate": 0.38
+            },
+            "suspicious": {
+              "average": 33,
+              "shareRate": 0.22
+            },
+            "grudger": {
+              "average": -5,
+              "shareRate": 0.67
+            },
+            "learner": {
+              "average": 26,
+              "shareRate": 0.19
+            },
+            "imitator": {
+              "average": 14,
+              "shareRate": 0.3
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 10
+            }
+          ]
+        },
+        {
+          "round": 30,
+          "shareRate": 0.63,
+          "totalBananas": 60,
+          "topScore": 55,
+          "betrayals": 45,
+          "repairs": 29,
+          "types": {
+            "student": {
+              "average": 12,
+              "shareRate": 0.43
+            },
+            "sunny": {
+              "average": -40,
+              "shareRate": 0.88
+            },
+            "sneaky": {
+              "average": 55,
+              "shareRate": 0.07
+            },
+            "copycat": {
+              "average": -16,
+              "shareRate": 0.84
+            },
+            "peacekeeper": {
+              "average": -22,
+              "shareRate": 0.41
+            },
+            "suspicious": {
+              "average": 34,
+              "shareRate": 0.24
+            },
+            "grudger": {
+              "average": -9,
+              "shareRate": 0.67
+            },
+            "learner": {
+              "average": 31,
+              "shareRate": 0.17
+            },
+            "imitator": {
+              "average": 15,
+              "shareRate": 0.32
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 12
+            }
+          ]
+        },
+        {
+          "round": 33,
+          "shareRate": 0.5,
+          "totalBananas": 64,
+          "topScore": 60,
+          "betrayals": 51,
+          "repairs": 34,
+          "types": {
+            "student": {
+              "average": 18,
+              "shareRate": 0.42
+            },
+            "sunny": {
+              "average": -43,
+              "shareRate": 0.89
+            },
+            "sneaky": {
+              "average": 60,
+              "shareRate": 0.1
+            },
+            "copycat": {
+              "average": -21,
+              "shareRate": 0.81
+            },
+            "peacekeeper": {
+              "average": -22,
+              "shareRate": 0.4
+            },
+            "suspicious": {
+              "average": 39,
+              "shareRate": 0.23
+            },
+            "grudger": {
+              "average": -13,
+              "shareRate": 0.67
+            },
+            "learner": {
+              "average": 31,
+              "shareRate": 0.19
+            },
+            "imitator": {
+              "average": 15,
+              "shareRate": 0.32
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 18
+            }
+          ]
+        },
+        {
+          "round": 36,
+          "shareRate": 0.25,
+          "totalBananas": 68,
+          "topScore": 65,
+          "betrayals": 55,
+          "repairs": 38,
+          "types": {
+            "student": {
+              "average": 14,
+              "shareRate": 0.44
+            },
+            "sunny": {
+              "average": -52,
+              "shareRate": 0.9
+            },
+            "sneaky": {
+              "average": 65,
+              "shareRate": 0.09
+            },
+            "copycat": {
+              "average": -15,
+              "shareRate": 0.77
+            },
+            "peacekeeper": {
+              "average": -27,
+              "shareRate": 0.39
+            },
+            "suspicious": {
+              "average": 39,
+              "shareRate": 0.25
+            },
+            "grudger": {
+              "average": -12,
+              "shareRate": 0.68
+            },
+            "learner": {
+              "average": 31,
+              "shareRate": 0.17
+            },
+            "imitator": {
+              "average": 25,
+              "shareRate": 0.29
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 14
+            }
+          ]
+        },
+        {
+          "round": 39,
+          "shareRate": 0.63,
+          "totalBananas": 72,
+          "topScore": 60,
+          "betrayals": 58,
+          "repairs": 43,
+          "types": {
+            "student": {
+              "average": 24,
+              "shareRate": 0.41
+            },
+            "sunny": {
+              "average": -50,
+              "shareRate": 0.91
+            },
+            "sneaky": {
+              "average": 60,
+              "shareRate": 0.14
+            },
+            "copycat": {
+              "average": -19,
+              "shareRate": 0.76
+            },
+            "peacekeeper": {
+              "average": -16,
+              "shareRate": 0.39
+            },
+            "suspicious": {
+              "average": 39,
+              "shareRate": 0.27
+            },
+            "grudger": {
+              "average": -12,
+              "shareRate": 0.67
+            },
+            "learner": {
+              "average": 26,
+              "shareRate": 0.18
+            },
+            "imitator": {
+              "average": 20,
+              "shareRate": 0.29
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 24
+            }
+          ]
+        },
+        {
+          "round": 42,
+          "shareRate": 0.5,
+          "totalBananas": 78,
+          "topScore": 55,
+          "betrayals": 61,
+          "repairs": 47,
+          "types": {
+            "student": {
+              "average": 25,
+              "shareRate": 0.4
+            },
+            "sunny": {
+              "average": -48,
+              "shareRate": 0.91
+            },
+            "sneaky": {
+              "average": 55,
+              "shareRate": 0.15
+            },
+            "copycat": {
+              "average": -12,
+              "shareRate": 0.75
+            },
+            "peacekeeper": {
+              "average": -16,
+              "shareRate": 0.38
+            },
+            "suspicious": {
+              "average": 34,
+              "shareRate": 0.28
+            },
+            "grudger": {
+              "average": -11,
+              "shareRate": 0.66
+            },
+            "learner": {
+              "average": 31,
+              "shareRate": 0.2
+            },
+            "imitator": {
+              "average": 20,
+              "shareRate": 0.27
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 25
+            }
+          ]
+        },
+        {
+          "round": 45,
+          "shareRate": 0.75,
+          "totalBananas": 86,
+          "topScore": 65,
+          "betrayals": 66,
+          "repairs": 53,
+          "types": {
+            "student": {
+              "average": 21,
+              "shareRate": 0.42
+            },
+            "sunny": {
+              "average": -51,
+              "shareRate": 0.92
+            },
+            "sneaky": {
+              "average": 65,
+              "shareRate": 0.14
+            },
+            "copycat": {
+              "average": -12,
+              "shareRate": 0.72
+            },
+            "peacekeeper": {
+              "average": -20,
+              "shareRate": 0.4
+            },
+            "suspicious": {
+              "average": 40,
+              "shareRate": 0.29
+            },
+            "grudger": {
+              "average": -9,
+              "shareRate": 0.66
+            },
+            "learner": {
+              "average": 32,
+              "shareRate": 0.2
+            },
+            "imitator": {
+              "average": 20,
+              "shareRate": 0.26
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 21
+            }
+          ]
+        },
+        {
+          "round": 48,
+          "shareRate": 0.5,
+          "totalBananas": 94,
+          "topScore": 65,
+          "betrayals": 68,
+          "repairs": 54,
+          "types": {
+            "student": {
+              "average": 26,
+              "shareRate": 0.4
+            },
+            "sunny": {
+              "average": -48,
+              "shareRate": 0.93
+            },
+            "sneaky": {
+              "average": 65,
+              "shareRate": 0.13
+            },
+            "copycat": {
+              "average": -16,
+              "shareRate": 0.71
+            },
+            "peacekeeper": {
+              "average": -23,
+              "shareRate": 0.44
+            },
+            "suspicious": {
+              "average": 46,
+              "shareRate": 0.31
+            },
+            "grudger": {
+              "average": -8,
+              "shareRate": 0.65
+            },
+            "learner": {
+              "average": 32,
+              "shareRate": 0.2
+            },
+            "imitator": {
+              "average": 20,
+              "shareRate": 0.24
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 26
+            }
+          ]
+        },
+        {
+          "round": 51,
+          "shareRate": 0.5,
+          "totalBananas": 100,
+          "topScore": 70,
+          "betrayals": 71,
+          "repairs": 57,
+          "types": {
+            "student": {
+              "average": 16,
+              "shareRate": 0.41
+            },
+            "sunny": {
+              "average": -47,
+              "shareRate": 0.91
+            },
+            "sneaky": {
+              "average": 70,
+              "shareRate": 0.13
+            },
+            "copycat": {
+              "average": -13,
+              "shareRate": 0.73
+            },
+            "peacekeeper": {
+              "average": -28,
+              "shareRate": 0.45
+            },
+            "suspicious": {
+              "average": 52,
+              "shareRate": 0.31
+            },
+            "grudger": {
+              "average": -2,
+              "shareRate": 0.63
+            },
+            "learner": {
+              "average": 32,
+              "shareRate": 0.2
+            },
+            "imitator": {
+              "average": 20,
+              "shareRate": 0.23
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 16
+            }
+          ]
+        },
+        {
+          "round": 54,
+          "shareRate": 0.63,
+          "totalBananas": 106,
+          "topScore": 75,
+          "betrayals": 74,
+          "repairs": 59,
+          "types": {
+            "student": {
+              "average": 11,
+              "shareRate": 0.41
+            },
+            "sunny": {
+              "average": -56,
+              "shareRate": 0.91
+            },
+            "sneaky": {
+              "average": 75,
+              "shareRate": 0.12
+            },
+            "copycat": {
+              "average": -12,
+              "shareRate": 0.72
+            },
+            "peacekeeper": {
+              "average": -22,
+              "shareRate": 0.45
+            },
+            "suspicious": {
+              "average": 53,
+              "shareRate": 0.31
+            },
+            "grudger": {
+              "average": 0,
+              "shareRate": 0.63
+            },
+            "learner": {
+              "average": 37,
+              "shareRate": 0.2
+            },
+            "imitator": {
+              "average": 20,
+              "shareRate": 0.22
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 11
+            }
+          ]
+        },
+        {
+          "round": 57,
+          "shareRate": 0.38,
+          "totalBananas": 114,
+          "topScore": 75,
+          "betrayals": 77,
+          "repairs": 60,
+          "types": {
+            "student": {
+              "average": 16,
+              "shareRate": 0.39
+            },
+            "sunny": {
+              "average": -53,
+              "shareRate": 0.92
+            },
+            "sneaky": {
+              "average": 75,
+              "shareRate": 0.11
+            },
+            "copycat": {
+              "average": -12,
+              "shareRate": 0.68
+            },
+            "peacekeeper": {
+              "average": -31,
+              "shareRate": 0.48
+            },
+            "suspicious": {
+              "average": 55,
+              "shareRate": 0.33
+            },
+            "grudger": {
+              "average": 7,
+              "shareRate": 0.63
+            },
+            "learner": {
+              "average": 37,
+              "shareRate": 0.19
+            },
+            "imitator": {
+              "average": 20,
+              "shareRate": 0.21
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 16
+            }
+          ]
+        },
+        {
+          "round": 60,
+          "shareRate": 0.5,
+          "totalBananas": 116,
+          "topScore": 81,
+          "betrayals": 82,
+          "repairs": 65,
+          "types": {
+            "student": {
+              "average": 11,
+              "shareRate": 0.38
+            },
+            "sunny": {
+              "average": -62,
+              "shareRate": 0.92
+            },
+            "sneaky": {
+              "average": 81,
+              "shareRate": 0.13
+            },
+            "copycat": {
+              "average": -2,
+              "shareRate": 0.65
+            },
+            "peacekeeper": {
+              "average": -31,
+              "shareRate": 0.47
+            },
+            "suspicious": {
+              "average": 60,
+              "shareRate": 0.33
+            },
+            "grudger": {
+              "average": 2,
+              "shareRate": 0.63
+            },
+            "learner": {
+              "average": 37,
+              "shareRate": 0.18
+            },
+            "imitator": {
+              "average": 20,
+              "shareRate": 0.2
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 11
+            }
+          ]
+        },
+        {
+          "round": 63,
+          "shareRate": 0.5,
+          "totalBananas": 122,
+          "topScore": 82,
+          "betrayals": 84,
+          "repairs": 69,
+          "types": {
+            "student": {
+              "average": 17,
+              "shareRate": 0.38
+            },
+            "sunny": {
+              "average": -60,
+              "shareRate": 0.93
+            },
+            "sneaky": {
+              "average": 82,
+              "shareRate": 0.14
+            },
+            "copycat": {
+              "average": 4,
+              "shareRate": 0.64
+            },
+            "peacekeeper": {
+              "average": -26,
+              "shareRate": 0.45
+            },
+            "suspicious": {
+              "average": 60,
+              "shareRate": 0.32
+            },
+            "grudger": {
+              "average": -7,
+              "shareRate": 0.65
+            },
+            "learner": {
+              "average": 37,
+              "shareRate": 0.18
+            },
+            "imitator": {
+              "average": 15,
+              "shareRate": 0.2
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 17
+            }
+          ]
+        },
+        {
+          "round": 66,
+          "shareRate": 0.38,
+          "totalBananas": 130,
+          "topScore": 87,
+          "betrayals": 87,
+          "repairs": 73,
+          "types": {
+            "student": {
+              "average": 23,
+              "shareRate": 0.38
+            },
+            "sunny": {
+              "average": -57,
+              "shareRate": 0.93
+            },
+            "sneaky": {
+              "average": 87,
+              "shareRate": 0.13
+            },
+            "copycat": {
+              "average": 0,
+              "shareRate": 0.64
+            },
+            "peacekeeper": {
+              "average": -30,
+              "shareRate": 0.46
+            },
+            "suspicious": {
+              "average": 56,
+              "shareRate": 0.34
+            },
+            "grudger": {
+              "average": 4,
+              "shareRate": 0.63
+            },
+            "learner": {
+              "average": 37,
+              "shareRate": 0.17
+            },
+            "imitator": {
+              "average": 10,
+              "shareRate": 0.21
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 23
+            }
+          ]
+        },
+        {
+          "round": 69,
+          "shareRate": 0.38,
+          "totalBananas": 138,
+          "topScore": 87,
+          "betrayals": 89,
+          "repairs": 75,
+          "types": {
+            "student": {
+              "average": 23,
+              "shareRate": 0.36
+            },
+            "sunny": {
+              "average": -54,
+              "shareRate": 0.93
+            },
+            "sneaky": {
+              "average": 87,
+              "shareRate": 0.13
+            },
+            "copycat": {
+              "average": 7,
+              "shareRate": 0.64
+            },
+            "peacekeeper": {
+              "average": -35,
+              "shareRate": 0.46
+            },
+            "suspicious": {
+              "average": 58,
+              "shareRate": 0.36
+            },
+            "grudger": {
+              "average": 5,
+              "shareRate": 0.63
+            },
+            "learner": {
+              "average": 37,
+              "shareRate": 0.16
+            },
+            "imitator": {
+              "average": 10,
+              "shareRate": 0.21
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 23
+            }
+          ]
+        },
+        {
+          "round": 72,
+          "shareRate": 0.5,
+          "totalBananas": 146,
+          "topScore": 92,
+          "betrayals": 91,
+          "repairs": 77,
+          "types": {
+            "student": {
+              "average": 24,
+              "shareRate": 0.36
+            },
+            "sunny": {
+              "average": -58,
+              "shareRate": 0.94
+            },
+            "sneaky": {
+              "average": 92,
+              "shareRate": 0.12
+            },
+            "copycat": {
+              "average": 7,
+              "shareRate": 0.63
+            },
+            "peacekeeper": {
+              "average": -35,
+              "shareRate": 0.44
+            },
+            "suspicious": {
+              "average": 61,
+              "shareRate": 0.39
+            },
+            "grudger": {
+              "average": 8,
+              "shareRate": 0.65
+            },
+            "learner": {
+              "average": 32,
+              "shareRate": 0.17
+            },
+            "imitator": {
+              "average": 15,
+              "shareRate": 0.2
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 24
+            }
+          ]
+        },
+        {
+          "round": 75,
+          "shareRate": 0.38,
+          "totalBananas": 148,
+          "topScore": 92,
+          "betrayals": 97,
+          "repairs": 80,
+          "types": {
+            "student": {
+              "average": 24,
+              "shareRate": 0.35
+            },
+            "sunny": {
+              "average": -57,
+              "shareRate": 0.92
+            },
+            "sneaky": {
+              "average": 92,
+              "shareRate": 0.12
+            },
+            "copycat": {
+              "average": 2,
+              "shareRate": 0.63
+            },
+            "peacekeeper": {
+              "average": -40,
+              "shareRate": 0.43
+            },
+            "suspicious": {
+              "average": 61,
+              "shareRate": 0.39
+            },
+            "grudger": {
+              "average": 8,
+              "shareRate": 0.65
+            },
+            "learner": {
+              "average": 38,
+              "shareRate": 0.18
+            },
+            "imitator": {
+              "average": 20,
+              "shareRate": 0.21
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 24
+            }
+          ]
+        },
+        {
+          "round": 78,
+          "shareRate": 0.13,
+          "totalBananas": 150,
+          "topScore": 92,
+          "betrayals": 101,
+          "repairs": 83,
+          "types": {
+            "student": {
+              "average": 19,
+              "shareRate": 0.35
+            },
+            "sunny": {
+              "average": -61,
+              "shareRate": 0.93
+            },
+            "sneaky": {
+              "average": 92,
+              "shareRate": 0.11
+            },
+            "copycat": {
+              "average": 2,
+              "shareRate": 0.62
+            },
+            "peacekeeper": {
+              "average": -39,
+              "shareRate": 0.44
+            },
+            "suspicious": {
+              "average": 61,
+              "shareRate": 0.37
+            },
+            "grudger": {
+              "average": 13,
+              "shareRate": 0.62
+            },
+            "learner": {
+              "average": 43,
+              "shareRate": 0.17
+            },
+            "imitator": {
+              "average": 20,
+              "shareRate": 0.2
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 19
+            }
+          ]
+        },
+        {
+          "round": 81,
+          "shareRate": 0.5,
+          "totalBananas": 154,
+          "topScore": 92,
+          "betrayals": 103,
+          "repairs": 87,
+          "types": {
+            "student": {
+              "average": 14,
+              "shareRate": 0.35
+            },
+            "sunny": {
+              "average": -59,
+              "shareRate": 0.91
+            },
+            "sneaky": {
+              "average": 92,
+              "shareRate": 0.11
+            },
+            "copycat": {
+              "average": -3,
+              "shareRate": 0.63
+            },
+            "peacekeeper": {
+              "average": -29,
+              "shareRate": 0.42
+            },
+            "suspicious": {
+              "average": 62,
+              "shareRate": 0.38
+            },
+            "grudger": {
+              "average": 4,
+              "shareRate": 0.63
+            },
+            "learner": {
+              "average": 58,
+              "shareRate": 0.16
+            },
+            "imitator": {
+              "average": 15,
+              "shareRate": 0.21
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 14
+            }
+          ]
+        },
+        {
+          "round": 84,
+          "shareRate": 0.13,
+          "totalBananas": 158,
+          "topScore": 92,
+          "betrayals": 107,
+          "repairs": 92,
+          "types": {
+            "student": {
+              "average": 20,
+              "shareRate": 0.35
+            },
+            "sunny": {
+              "average": -62,
+              "shareRate": 0.92
+            },
+            "sneaky": {
+              "average": 92,
+              "shareRate": 0.12
+            },
+            "copycat": {
+              "average": -13,
+              "shareRate": 0.63
+            },
+            "peacekeeper": {
+              "average": -29,
+              "shareRate": 0.42
+            },
+            "suspicious": {
+              "average": 72,
+              "shareRate": 0.37
+            },
+            "grudger": {
+              "average": 4,
+              "shareRate": 0.63
+            },
+            "learner": {
+              "average": 58,
+              "shareRate": 0.17
+            },
+            "imitator": {
+              "average": 16,
+              "shareRate": 0.21
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 20
+            }
+          ]
+        },
+        {
+          "round": 87,
+          "shareRate": 0.25,
+          "totalBananas": 162,
+          "topScore": 92,
+          "betrayals": 113,
+          "repairs": 94,
+          "types": {
+            "student": {
+              "average": 25,
+              "shareRate": 0.33
+            },
+            "sunny": {
+              "average": -65,
+              "shareRate": 0.92
+            },
+            "sneaky": {
+              "average": 92,
+              "shareRate": 0.12
+            },
+            "copycat": {
+              "average": -18,
+              "shareRate": 0.63
+            },
+            "peacekeeper": {
+              "average": -33,
+              "shareRate": 0.43
+            },
+            "suspicious": {
+              "average": 72,
+              "shareRate": 0.36
+            },
+            "grudger": {
+              "average": 10,
+              "shareRate": 0.62
+            },
+            "learner": {
+              "average": 58,
+              "shareRate": 0.17
+            },
+            "imitator": {
+              "average": 21,
+              "shareRate": 0.21
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 25
+            }
+          ]
+        },
+        {
+          "round": 90,
+          "shareRate": 0.25,
+          "totalBananas": 168,
+          "topScore": 98,
+          "betrayals": 116,
+          "repairs": 99,
+          "types": {
+            "student": {
+              "average": 20,
+              "shareRate": 0.33
+            },
+            "sunny": {
+              "average": -64,
+              "shareRate": 0.91
+            },
+            "sneaky": {
+              "average": 98,
+              "shareRate": 0.12
+            },
+            "copycat": {
+              "average": -12,
+              "shareRate": 0.62
+            },
+            "peacekeeper": {
+              "average": -33,
+              "shareRate": 0.41
+            },
+            "suspicious": {
+              "average": 72,
+              "shareRate": 0.34
+            },
+            "grudger": {
+              "average": 6,
+              "shareRate": 0.63
+            },
+            "learner": {
+              "average": 59,
+              "shareRate": 0.18
+            },
+            "imitator": {
+              "average": 22,
+              "shareRate": 0.21
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 20
+            }
+          ]
+        },
+        {
+          "round": 93,
+          "shareRate": 0.38,
+          "totalBananas": 170,
+          "topScore": 98,
+          "betrayals": 120,
+          "repairs": 102,
+          "types": {
+            "student": {
+              "average": 15,
+              "shareRate": 0.33
+            },
+            "sunny": {
+              "average": -68,
+              "shareRate": 0.91
+            },
+            "sneaky": {
+              "average": 98,
+              "shareRate": 0.12
+            },
+            "copycat": {
+              "average": -21,
+              "shareRate": 0.64
+            },
+            "peacekeeper": {
+              "average": -33,
+              "shareRate": 0.4
+            },
+            "suspicious": {
+              "average": 72,
+              "shareRate": 0.34
+            },
+            "grudger": {
+              "average": 16,
+              "shareRate": 0.6
+            },
+            "learner": {
+              "average": 69,
+              "shareRate": 0.17
+            },
+            "imitator": {
+              "average": 22,
+              "shareRate": 0.2
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 15
+            }
+          ]
+        },
+        {
+          "round": 96,
+          "shareRate": 0.13,
+          "totalBananas": 174,
+          "topScore": 103,
+          "betrayals": 122,
+          "repairs": 104,
+          "types": {
+            "student": {
+              "average": 15,
+              "shareRate": 0.32
+            },
+            "sunny": {
+              "average": -61,
+              "shareRate": 0.9
+            },
+            "sneaky": {
+              "average": 103,
+              "shareRate": 0.12
+            },
+            "copycat": {
+              "average": -19,
+              "shareRate": 0.64
+            },
+            "peacekeeper": {
+              "average": -33,
+              "shareRate": 0.4
+            },
+            "suspicious": {
+              "average": 72,
+              "shareRate": 0.33
+            },
+            "grudger": {
+              "average": 6,
+              "shareRate": 0.61
+            },
+            "learner": {
+              "average": 69,
+              "shareRate": 0.17
+            },
+            "imitator": {
+              "average": 22,
+              "shareRate": 0.2
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 15
+            }
+          ]
+        },
+        {
+          "round": 99,
+          "shareRate": 0.25,
+          "totalBananas": 178,
+          "topScore": 103,
+          "betrayals": 124,
+          "repairs": 107,
+          "types": {
+            "student": {
+              "average": 15,
+              "shareRate": 0.31
+            },
+            "sunny": {
+              "average": -59,
+              "shareRate": 0.91
+            },
+            "sneaky": {
+              "average": 103,
+              "shareRate": 0.11
+            },
+            "copycat": {
+              "average": -18,
+              "shareRate": 0.64
+            },
+            "peacekeeper": {
+              "average": -33,
+              "shareRate": 0.39
+            },
+            "suspicious": {
+              "average": 72,
+              "shareRate": 0.33
+            },
+            "grudger": {
+              "average": 6,
+              "shareRate": 0.59
+            },
+            "learner": {
+              "average": 65,
+              "shareRate": 0.19
+            },
+            "imitator": {
+              "average": 27,
+              "shareRate": 0.19
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 15
+            }
+          ]
+        },
+        {
+          "round": 100,
+          "shareRate": 0.25,
+          "totalBananas": 178,
+          "topScore": 103,
+          "betrayals": 125,
+          "repairs": 109,
+          "types": {
+            "student": {
+              "average": 20,
+              "shareRate": 0.31
+            },
+            "sunny": {
+              "average": -64,
+              "shareRate": 0.91
+            },
+            "sneaky": {
+              "average": 103,
+              "shareRate": 0.11
+            },
+            "copycat": {
+              "average": -18,
+              "shareRate": 0.63
+            },
+            "peacekeeper": {
+              "average": -38,
+              "shareRate": 0.39
+            },
+            "suspicious": {
+              "average": 72,
+              "shareRate": 0.33
+            },
+            "grudger": {
+              "average": 11,
+              "shareRate": 0.58
+            },
+            "learner": {
+              "average": 65,
+              "shareRate": 0.19
+            },
+            "imitator": {
+              "average": 27,
+              "shareRate": 0.19
+            }
+          },
+          "students": [
+            {
+              "id": "student-1",
+              "score": 20
+            }
+          ]
+        }
+      ],
+      "citizenCount": 9
+    }
+  },
+  "classMedians": {
+    "winWin100": {
+      "worldKey": "winWin",
+      "rounds": 100,
+      "studentCount": 8,
+      "citizenCount": 72,
+      "medianFinalShareRate": 0.625,
+      "medianBananasPerCitizen": 200.7,
+      "medianBetrayals": 986,
+      "medianRepairs": 373,
+      "winnerCounts": {
+        "copycat": 2,
+        "learner": 8,
+        "sunny": 1,
+        "imitator": 4,
+        "peacekeeper": 2,
+        "suspicious": 1,
+        "grudger": 2
+      }
+    },
+    "darkForest100": {
+      "worldKey": "darkForest",
+      "rounds": 100,
+      "studentCount": 8,
+      "citizenCount": 72,
+      "medianFinalShareRate": 0.48,
+      "medianBananasPerCitizen": 27.6,
+      "medianBetrayals": 1661,
+      "medianRepairs": 615,
+      "winnerCounts": {
+        "imitator": 7,
+        "sneaky": 9,
+        "learner": 4
+      }
+    }
+  }
+}
