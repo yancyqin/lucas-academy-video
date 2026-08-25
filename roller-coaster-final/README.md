@@ -14,8 +14,9 @@ follow the main idea: **ask, draw, make a rule, test it, and ride it.**
 
 - `final-long.mp4` — the complete 16:9 film, 1920 × 1080, 60 fps, 94.05 seconds.
 - `final-short-vertical.mp4` — the complete 9:16 social cut, 1080 × 1920,
-  60 fps, 59.32 seconds. Horizontal build and gameplay footage is preserved
-  inside a vertical presentation instead of being cropped.
+  60 fps, 59.78 seconds. Milestones 1, 2, and the Agent build are composed
+  natively for portrait. Only the real horizontal gameplay is preserved inside
+  a vertical presentation instead of being cropped.
 
 The three approved long-form milestone sources are in `clips/`:
 
@@ -106,4 +107,3 @@ later, the optional closing line is:
 - Do not read the technical word cloud aloud.
 - Keep the ride narration sparse so the movement has room to breathe.
 - Sound curious and pleased, not like a commercial.
-

@@ -37,7 +37,7 @@ final Surface, `READY TO RIDE`, and the real ride receive time to breathe.
 | Milestone 2 | `RollerCoasterMilestone2` | 22.55 s | Approved |
 | Milestone 3 build | `RollerCoasterMilestone3Build` | 17.05 s | Approved |
 | Final long | `roller-coaster-final/final-long.mp4` | 94.05 s | Complete |
-| Final vertical short | `roller-coaster-final/final-short-vertical.mp4` | 59.32 s | Complete |
+| Final vertical short | `roller-coaster-final/final-short-vertical.mp4` | 59.78 s | Complete; native portrait M3 build |
 
 The ride source is `/Users/yqin/repo/playground/inception-space-ui`. The
 approved continuous-speed black-hole continuation is on `main` at commit

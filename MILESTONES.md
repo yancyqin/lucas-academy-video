@@ -72,10 +72,13 @@ The completed recording follows this approved plan:
 
 - Composition: `RollerCoasterMilestonesShort`
 - Output: `roller-coaster-final/final-short-vertical.mp4`
-- Format: `1080 × 1920`, 30 fps, 28 seconds.
+- Format: `1080 × 1920`, 60 fps, 59.78 seconds.
 - Edit: preserves the exact first Milestone 1 and Milestone 2 questions, keeps
   the uploaded sketch, removes repeated intermediate explanation, and pushes
   answer playback to 12x, 16x, and 20x.
+- Milestone 3 uses the separate native `RollerCoasterMilestone3BuildVertical`
+  composition; only the real horizontal gameplay is carried in a portrait
+  overlay so none of the ride is cropped.
 - Current model: one continuous five-turn tapered logarithmic Surface with
   contraction `k = 0.25`; it shrinks faster than a plain funnel but far more
   slowly than a standard golden spiral, and closes at `(0,0,0)`.

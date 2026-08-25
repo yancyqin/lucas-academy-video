@@ -16,6 +16,7 @@
     "milestone2:still": "remotion still src/index.ts RollerCoasterMilestone2 out/roller-coaster-milestone-2.png --frame=600",
     "milestones:short": "remotion render src/index.ts RollerCoasterMilestonesShort out/roller-coaster-milestones-1-2-short-vertical.mp4",
     "milestone3:build": "remotion render src/index.ts RollerCoasterMilestone3Build out/roller-coaster-milestone-3-build.mp4",
+    "milestone3:build:vertical": "remotion render src/index.ts RollerCoasterMilestone3BuildVertical out/roller-coaster-milestone-3-build-vertical.mp4",
     "roller:render": "npm run milestone1:render",
     "roller:still": "npm run milestone1:still",
     "start": "remotion studio src/index.ts",

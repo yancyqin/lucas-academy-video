@@ -23,6 +23,11 @@ import {
   ROLLER_COASTER_M3_BUILD_FPS,
   RollerCoasterMilestone3BuildVideo,
 } from './videos/RollerCoasterMilestone3BuildVideo';
+import {
+  ROLLER_COASTER_M3_BUILD_VERTICAL_DURATION,
+  ROLLER_COASTER_M3_BUILD_VERTICAL_FPS,
+  RollerCoasterMilestone3BuildVerticalVideo,
+} from './videos/RollerCoasterMilestone3BuildVerticalVideo';
 
 export const Root: FC = () => {
   return (
@@ -58,6 +63,14 @@ export const Root: FC = () => {
         fps={ROLLER_COASTER_M3_BUILD_FPS}
         width={1920}
         height={1080}
+      />
+      <Composition
+        id="RollerCoasterMilestone3BuildVertical"
+        component={RollerCoasterMilestone3BuildVerticalVideo}
+        durationInFrames={ROLLER_COASTER_M3_BUILD_VERTICAL_DURATION}
+        fps={ROLLER_COASTER_M3_BUILD_VERTICAL_FPS}
+        width={1080}
+        height={1920}
       />
       <Composition
         id="MonkeyIntro"
