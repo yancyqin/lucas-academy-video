@@ -1,0 +1,81 @@
+{
+  "id": "monkey-intro-en",
+  "title": "Monkey Republic",
+  "subtitle": "A social simulation about trust, rules, and the world we build.",
+  "fps": 24,
+  "durationSeconds": 112,
+  "segments": [
+    {
+      "id": "01-hook",
+      "start": 1,
+      "end": 10,
+      "scene": "hero",
+      "caption": "What happens when the same monkeys live under different rules?",
+      "voiceover": "What happens when the same monkeys live under different rules?"
+    },
+    {
+      "id": "02-not-just-game",
+      "start": 10,
+      "end": 21,
+      "scene": "hero",
+      "caption": "Monkey Republic is not just a game about bananas.",
+      "voiceover": "Monkey Republic is not just a game about bananas. It is a small society where students can test how trust, memory, rewards, and betrayal shape behavior."
+    },
+    {
+      "id": "03-two-actions",
+      "start": 21,
+      "end": 34,
+      "scene": "rules",
+      "caption": "Every monkey has two choices: share, or grab.",
+      "voiceover": "Every monkey has only two choices: share, or grab. But the numbers behind those choices change the world."
+    },
+    {
+      "id": "04-world-rules",
+      "start": 34,
+      "end": 48,
+      "scene": "rules",
+      "caption": "If sharing creates value, trust has room to grow.",
+      "voiceover": "In one world, sharing creates extra bananas. Trust has room to grow. In another world, sharing still helps a little, but betrayal hurts badly."
+    },
+    {
+      "id": "05-slow-rounds",
+      "start": 48,
+      "end": 64,
+      "scene": "slow",
+      "caption": "The first few rounds are slow, so students can see cause and effect.",
+      "voiceover": "The first few rounds are slow. Students can see who shared, who grabbed, how many bananas changed hands, and why one choice affects the next one."
+    },
+    {
+      "id": "06-fast-society",
+      "start": 64,
+      "end": 79,
+      "scene": "society",
+      "caption": "Then the computer runs the society faster and faster.",
+      "voiceover": "Then the computer runs the society faster and faster. After a hundred rounds, patterns appear. Some monkeys become rich. Some lose trust. Some learn what the world rewards."
+    },
+    {
+      "id": "07-not-final-answer",
+      "start": 79,
+      "end": 93,
+      "scene": "question",
+      "caption": "The takeaway is not a simple sentence. It is a question.",
+      "voiceover": "The takeaway is not a simple sentence. It is a question. Now that we can see how rules train strategy, how do we understand ourselves?"
+    },
+    {
+      "id": "08-vision",
+      "start": 93,
+      "end": 106,
+      "scene": "vision",
+      "caption": "How do we think, create, search for significance, and contribute to real-world problems that matter?",
+      "voiceover": "In the age of AI, learning is not just about skills. It is about thinking with curiosity, creating through discovery, searching for significance, and contributing to real-world problems that matter."
+    },
+    {
+      "id": "09-close",
+      "start": 106,
+      "end": 112,
+      "scene": "close",
+      "caption": "Monkey Republic. A Lucas Academy social experiment.",
+      "voiceover": "Monkey Republic. A Lucas Academy social experiment."
+    }
+  ]
+}

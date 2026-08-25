@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-06T02:52:22.768Z",
+  "generatedAt": "2026-07-06T05:46:49.610Z",
   "engine": "snake-lab/v3-coder/games/monkey-republic/society.js",
   "visualRounds": 100,
   "cast": [
@@ -3886,6 +3886,372 @@
       ],
       "citizenCount": 9
     }
+  },
+  "teachingRuns": {
+    "winWin": [
+      {
+        "round": 1,
+        "shareRate": 0.75,
+        "score": 5,
+        "encounter": {
+          "round": 1,
+          "opponent": {
+            "id": "student-1-peacekeeper",
+            "name": "Peacekeeper",
+            "color": "#34d399",
+            "isBot": true,
+            "score": -1
+          },
+          "intended": {
+            "left": "GRAB",
+            "right": "SHARE"
+          },
+          "actions": {
+            "left": "GRAB",
+            "right": "SHARE"
+          },
+          "mistake": {
+            "left": false,
+            "right": false
+          },
+          "payoff": {
+            "left": 5,
+            "right": -1
+          },
+          "scores": {
+            "left": 5,
+            "right": -1
+          },
+          "outcome": "grabShare"
+        }
+      },
+      {
+        "round": 2,
+        "shareRate": 0.63,
+        "score": 10,
+        "encounter": {
+          "round": 2,
+          "opponent": {
+            "id": "student-1-grudger",
+            "name": "Grudger",
+            "color": "#38bdf8",
+            "isBot": true,
+            "score": -2
+          },
+          "intended": {
+            "left": "GRAB",
+            "right": "SHARE"
+          },
+          "actions": {
+            "left": "GRAB",
+            "right": "SHARE"
+          },
+          "mistake": {
+            "left": false,
+            "right": false
+          },
+          "payoff": {
+            "left": 5,
+            "right": -1
+          },
+          "scores": {
+            "left": 10,
+            "right": -2
+          },
+          "outcome": "grabShare"
+        }
+      },
+      {
+        "round": 3,
+        "shareRate": 0.75,
+        "score": 15,
+        "encounter": {
+          "round": 3,
+          "opponent": {
+            "id": "student-1-learner",
+            "name": "Learner",
+            "color": "#f472b6",
+            "isBot": true,
+            "score": 2
+          },
+          "intended": {
+            "left": "GRAB",
+            "right": "SHARE"
+          },
+          "actions": {
+            "left": "GRAB",
+            "right": "SHARE"
+          },
+          "mistake": {
+            "left": false,
+            "right": false
+          },
+          "payoff": {
+            "left": 5,
+            "right": -1
+          },
+          "scores": {
+            "left": 15,
+            "right": 2
+          },
+          "outcome": "grabShare"
+        }
+      },
+      {
+        "round": 4,
+        "shareRate": 0.63,
+        "score": 14,
+        "encounter": {
+          "round": 4,
+          "opponent": {
+            "id": "student-1-peacekeeper",
+            "name": "Peacekeeper",
+            "color": "#34d399",
+            "isBot": true,
+            "score": 6
+          },
+          "intended": {
+            "left": "SHARE",
+            "right": "GRAB"
+          },
+          "actions": {
+            "left": "SHARE",
+            "right": "GRAB"
+          },
+          "mistake": {
+            "left": false,
+            "right": false
+          },
+          "payoff": {
+            "left": -1,
+            "right": 5
+          },
+          "scores": {
+            "left": 14,
+            "right": 6
+          },
+          "outcome": "shareGrab"
+        }
+      },
+      {
+        "round": 5,
+        "shareRate": 0.63,
+        "score": 19,
+        "encounter": {
+          "round": 5,
+          "opponent": {
+            "id": "student-1-copycat",
+            "name": "Copycat",
+            "color": "#60a5fa",
+            "isBot": true,
+            "score": 11
+          },
+          "intended": {
+            "left": "GRAB",
+            "right": "SHARE"
+          },
+          "actions": {
+            "left": "GRAB",
+            "right": "SHARE"
+          },
+          "mistake": {
+            "left": false,
+            "right": false
+          },
+          "payoff": {
+            "left": 5,
+            "right": -1
+          },
+          "scores": {
+            "left": 19,
+            "right": 11
+          },
+          "outcome": "grabShare"
+        }
+      }
+    ],
+    "darkForest": [
+      {
+        "round": 1,
+        "shareRate": 0.5,
+        "score": 0,
+        "encounter": {
+          "round": 1,
+          "opponent": {
+            "id": "student-1-peacekeeper",
+            "name": "Peacekeeper",
+            "color": "#34d399",
+            "isBot": true,
+            "score": 0
+          },
+          "intended": {
+            "left": "GRAB",
+            "right": "SHARE"
+          },
+          "actions": {
+            "left": "GRAB",
+            "right": "GRAB"
+          },
+          "mistake": {
+            "left": false,
+            "right": true
+          },
+          "payoff": {
+            "left": 0,
+            "right": 0
+          },
+          "scores": {
+            "left": 0,
+            "right": 0
+          },
+          "outcome": "grabGrab"
+        }
+      },
+      {
+        "round": 2,
+        "shareRate": 0.38,
+        "score": 0,
+        "encounter": {
+          "round": 2,
+          "opponent": {
+            "id": "student-1-peacekeeper",
+            "name": "Peacekeeper",
+            "color": "#34d399",
+            "isBot": true,
+            "score": 0
+          },
+          "intended": {
+            "left": "GRAB",
+            "right": "GRAB"
+          },
+          "actions": {
+            "left": "GRAB",
+            "right": "GRAB"
+          },
+          "mistake": {
+            "left": false,
+            "right": false
+          },
+          "payoff": {
+            "left": 0,
+            "right": 0
+          },
+          "scores": {
+            "left": 0,
+            "right": 0
+          },
+          "outcome": "grabGrab"
+        }
+      },
+      {
+        "round": 3,
+        "shareRate": 0.38,
+        "score": 0,
+        "encounter": {
+          "round": 3,
+          "opponent": {
+            "id": "student-1-peacekeeper",
+            "name": "Peacekeeper",
+            "color": "#34d399",
+            "isBot": true,
+            "score": 0
+          },
+          "intended": {
+            "left": "GRAB",
+            "right": "GRAB"
+          },
+          "actions": {
+            "left": "GRAB",
+            "right": "GRAB"
+          },
+          "mistake": {
+            "left": false,
+            "right": false
+          },
+          "payoff": {
+            "left": 0,
+            "right": 0
+          },
+          "scores": {
+            "left": 0,
+            "right": 0
+          },
+          "outcome": "grabGrab"
+        }
+      },
+      {
+        "round": 4,
+        "shareRate": 0.63,
+        "score": 0,
+        "encounter": {
+          "round": 4,
+          "opponent": {
+            "id": "student-1-suspicious",
+            "name": "Suspicious",
+            "color": "#c084fc",
+            "isBot": true,
+            "score": 1
+          },
+          "intended": {
+            "left": "GRAB",
+            "right": "GRAB"
+          },
+          "actions": {
+            "left": "GRAB",
+            "right": "GRAB"
+          },
+          "mistake": {
+            "left": false,
+            "right": false
+          },
+          "payoff": {
+            "left": 0,
+            "right": 0
+          },
+          "scores": {
+            "left": 0,
+            "right": 1
+          },
+          "outcome": "grabGrab"
+        }
+      },
+      {
+        "round": 5,
+        "shareRate": 0.5,
+        "score": 0,
+        "encounter": {
+          "round": 5,
+          "opponent": {
+            "id": "student-1-peacekeeper",
+            "name": "Peacekeeper",
+            "color": "#34d399",
+            "isBot": true,
+            "score": 1
+          },
+          "intended": {
+            "left": "GRAB",
+            "right": "GRAB"
+          },
+          "actions": {
+            "left": "GRAB",
+            "right": "GRAB"
+          },
+          "mistake": {
+            "left": false,
+            "right": false
+          },
+          "payoff": {
+            "left": 0,
+            "right": 0
+          },
+          "scores": {
+            "left": 0,
+            "right": 1
+          },
+          "outcome": "grabGrab"
+        }
+      }
+    ]
   },
   "classMedians": {
     "winWin100": {

@@ -85,6 +85,28 @@ function summarizeWorld(worldKey, rounds, studentCount) {
   };
 }
 
+function captureTeachingRun(worldKey) {
+  const society = new Society({
+    students: makeStudents(1),
+    world: WORLD_PRESETS[worldKey],
+    seed: VISUAL_SEED,
+    roundsTarget: 5,
+    spawnBots: true,
+  });
+  const moments = [];
+  for (let round = 0; round < 5; round++) {
+    society.playRound();
+    const student = society.student('student-1');
+    moments.push({
+      round: society.round,
+      shareRate: round2(society.lastShareRate ?? 0.5),
+      score: student?.score ?? 0,
+      encounter: student?.lastEncounter ?? null,
+    });
+  }
+  return moments;
+}
+
 function median(values) {
   const sorted = [...values].sort((a, b) => a - b);
   const middle = Math.floor(sorted.length / 2);
@@ -140,6 +162,10 @@ const data = {
       studentCount: 1,
       seed: VISUAL_SEED,
     }),
+  },
+  teachingRuns: {
+    winWin: captureTeachingRun('winWin'),
+    darkForest: captureTeachingRun('darkForest'),
   },
   classMedians: {
     winWin100: summarizeWorld('winWin', 100, 8),

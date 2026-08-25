@@ -1,0 +1,87 @@
+export const milestone3Question = 'Go ahead make it a roller coaster';
+
+export const milestone3BuildPhases = [
+  {
+    id: 'orient',
+    step: '01',
+    label: 'ORIENT',
+    title: 'Read the plan and the current Manifold contracts',
+    file: 'docs/THE-MANIFOLD-GOLDEN-FUNNEL-ROLLER-COASTER-PLAN.md',
+    lines: [
+      'Plan verified against the current room',
+      'Existing rides found: line · mobius · parabola',
+      'Fourth attraction pad is ready',
+    ],
+    speed: 8,
+  },
+  {
+    id: 'model',
+    step: '02',
+    label: 'MODEL',
+    title: 'Build one continuous mathematical Surface',
+    file: 'src/inception/world/model/manifoldRoom.js',
+    lines: [
+      '+ contraction: 1.0',
+      '+ goldenFunnelRibbonPoint(u, v)',
+      '+ goldenFunnelRideFrame(t)',
+      'Math: finite · continuous · monotone descent',
+    ],
+    speed: 12,
+  },
+  {
+    id: 'ride',
+    step: '03',
+    label: 'RIDE',
+    title: 'Follow the centerline all the way into the black hole',
+    file: 'src/inception/world/model/manifoldExperience.js',
+    lines: [
+      '+ goldenFunnelCutsceneFrame(t)',
+      '+ manifoldBlackHoleFrame(t)',
+      'Continue through the final 2.25 tight turns',
+      'First-person camera stays locked to the spiral',
+    ],
+    speed: 15,
+  },
+  {
+    id: 'surface',
+    step: '04',
+    label: 'SURFACE',
+    title: 'Draw the ribbon, rails, grid, and start orb',
+    file: 'src/inception/world/render/threeManifoldRoom.ts',
+    lines: [
+      '+ transparent cyan Surface',
+      '+ warm edge rails and center line',
+      '+ cyan hologram launch orb',
+      'Rails converge cleanly at the tip',
+    ],
+    speed: 18,
+  },
+  {
+    id: 'reader',
+    step: '05',
+    label: 'R / READ',
+    title: 'Create the local learning card',
+    file: 'content/inception/exhibits/the-manifold-reader/',
+    lines: [
+      '+ English explanation',
+      '+ local 2D and 3D plots',
+      '+ exact copyable Surface command',
+      'No external applet dependency',
+    ],
+    speed: 20,
+  },
+  {
+    id: 'verify',
+    step: '06',
+    label: 'VERIFY',
+    title: 'Test the math, room, Reader, and rider view',
+    file: 'npm run check',
+    lines: [
+      '✓ 1,153 tests',
+      '✓ build · typecheck · demo boundary',
+      '✓ formula · camera · Reader · presentation',
+      '✓ no console errors',
+    ],
+    speed: 20,
+  },
+] as const;

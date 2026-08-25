@@ -2,6 +2,19 @@
 
 This repo is a small video lab for Lucas Academy lessons.
 
+## Golden Funnel roller coaster
+
+The completed roller-coaster film, its vertical short cut, the three approved
+milestone masters, and the child-friendly English voice-over are packaged in
+[`roller-coaster-final/`](./roller-coaster-final/README.md).
+
+- `final-long.mp4` — complete 16:9 film.
+- `final-short-vertical.mp4` — complete 9:16 short.
+- `clips/` — the three long-form milestone sources.
+
+Generated review files belong in the ignored `out/` directory and are not
+part of the final package.
+
 The first prototype turns the Monkey Republic society simulation into a short
 data-backed video. The goal is not to replace coding. It gives students another
 way to see the same idea: rules shape society, and beliefs become behavior when
