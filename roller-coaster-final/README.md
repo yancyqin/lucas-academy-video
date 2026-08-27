@@ -1,16 +1,17 @@
 # From a Sketch to a Roller Coaster
 
 This folder is the complete delivery package for the Lucas Academy Golden
-Funnel video. The questions in the film were actually asked by a child. The
+Funnel video. Milestone 1 preserves questions actually asked by a child. The
 child did not begin with the words “golden spiral” or with a finished technical
-specification. The idea became clear little by little: ask, look at the result,
-notice what is wrong, draw what words cannot yet explain, and ask again.
+specification. In Milestone 2, an adult participates much more actively. That
+part is **guided discovery**: the adult introduces comparisons, mathematical
+language, and constraints that help the child's original idea become clearer.
 
 If the finished object were the only goal, someone could request a golden
 spiral immediately and receive one. This film deliberately preserves the less
 direct route because that route is the valuable part. It shows a child
-developing an idea and the language needed to express it—not merely an AI
-producing an answer.
+developing an idea, an adult guiding the discovery without replacing it, and
+an AI making each possibility visible—not merely an AI producing an answer.
 
 All visible text and narration are in English. The mathematics may look
 advanced, but the story is written so a child around age ten to twelve can
@@ -20,6 +21,8 @@ follow the main idea: **ask, draw, make a rule, test it, and ride it.**
 
 The excerpts below are the real creative prompts that changed the design.
 Spelling, capitalization, and mixed Chinese/English wording are preserved.
+Attribution is marked by milestone: Milestone 1 is the child's inquiry;
+Milestone 2 is collaborative and includes substantial adult guidance.
 Production and editing instructions are not included in this question chain.
 
 ### Milestone 1 — finding the shape
@@ -43,7 +46,11 @@ without retaining phone metadata. The video cleanup only improves legibility.
 The uneven pencil line and handmade shape remain because they are part of the
 thinking process.
 
-### Milestone 2 — discovering the mathematical description
+### Milestone 2 — guided discovery of the mathematical description
+
+The prompts in this section came from a collaborative stage in which an adult
+participated heavily. They document the guidance around the child's idea and
+should not be presented as questions authored entirely by the child.
 
 > 3d xyz plane like a funal shape spiraling down
 
@@ -58,7 +65,7 @@ band instead of a line, and named the Fibonacci/golden-spiral direction:
 > 你应该给我一个像 我给你的莫比乌斯环函数那样 一条带状的公式 我要做过山车<br>
 > 函数一开始可以是旋转的漏斗，逐渐转变为golden spiral
 
-Then the child made the constraints more exact:
+The guided conversation then made the constraints more exact:
 
 > 最后的轨道曲面 对了<br>
 > 1. 你不能给我一个surface公式吗？为什么要有很多input之前不需要啊？<br>
@@ -79,12 +86,13 @@ ground:
 > 给我 GeoGebra Surface for **linearly tapered logarithmic spiral** 和 golden
 > 都给我 我比较一下 我看短视频 单纯做 golden 感觉也可以
 
-This sequence matters more than any single answer. The child used each result
-to discover a missing requirement: 3D, funnel-shaped, ribbon-like, one Surface,
-down the Y-axis, ending at `(0, 0, 0)`, and contracting at a believable rate.
-“Golden spiral” was not supplied as a magic answer at the beginning; it emerged
-as useful language during the inquiry and was then tested against the child's
-own visual judgment.
+This sequence matters more than any single answer. The child and adult used
+each visible result to discover a missing requirement: 3D, funnel-shaped,
+ribbon-like, one Surface, down the Y-axis, ending at `(0, 0, 0)`, and
+contracting at a believable rate. The adult guidance helped name and compare
+possibilities; the child's original sketch and desired experience kept the
+exploration grounded. “Golden spiral” was not a magic answer at the beginning.
+It became useful language during guided discovery and was tested visually.
 
 ### Milestone 3 — turning the clarified idea into a world
 
@@ -127,17 +135,18 @@ cloud, and ride can speak for themselves.
 
 ### 0:36–0:58 — Milestone 2: the sketch becomes a Surface
 
-> Now the idea moved into three dimensions: like a funnel, spiraling down. Each
-> answer revealed what was still wrong. A line was not a track, so he asked for
-> one Surface.
+> Next, an adult helped guide the search. Together, they moved the idea into
+> three dimensions: like a funnel, spiraling down. Each answer gave them
+> something real to compare. A line was not a track, so they tried one Surface.
 
 > A funnel tightened too slowly; a golden spiral too quickly. Comparing them
-> helped him describe one smooth path between the two, ending at zero.
+> helped the idea become one smooth path between the two, ending at zero.
 
 ### 0:58–1:15 — Milestone 3: the Surface becomes a ride
 
-> Only then did he say, “Go ahead, make it a roller coaster.” Code added rails,
-> motion, a camera, tests, and a place in the museum.
+> Only after the guided discovery did the instruction become clear: “Go ahead,
+> make it a roller coaster.” Code added rails, motion, a camera, tests, and a
+> place in the museum.
 
 > The computer moved quickly, but its direction came from the questions that
 > had just become clear.
@@ -163,5 +172,6 @@ later, the optional closing line is:
 - Do not read the technical word cloud aloud.
 - Keep the ride narration sparse so the movement has room to breathe.
 - Sound curious and pleased, not like a commercial.
-- Do not imply that the AI invented the goal. The child recognized, corrected,
-  compared, and clarified the idea; the AI helped make each version visible.
+- Keep the roles accurate: the child began with the idea and sketch; the adult
+  contributed substantial guidance in Milestone 2; the AI helped make each
+  version visible.

@@ -13,29 +13,32 @@ it.
 
 ## The one-sentence story
 
-A child who does not yet know the words “golden spiral” uses real questions,
-visual judgment, and a rough pencil sketch to clarify a fuzzy idea until it is
-precise enough to become a mathematical Surface and a rideable world.
+A child who does not yet know the words “golden spiral” begins with real
+questions and a rough pencil sketch; an adult then supports guided discovery
+through comparisons and mathematical constraints until the idea is precise
+enough to become a Surface and a rideable world.
 
 ## The central idea
 
 The film is about inquiry, not answer generation. If the final object were the
 only goal, the first prompt could request a golden spiral and skip directly to
 the result. The preserved conversation is valuable because the child's goal
-does not arrive fully formed. Each answer gives the child something concrete
-to inspect, reject, compare, or refine. Through that loop, the child discovers
-both the shape and the language needed to describe it.
+does not arrive fully formed. In Milestone 1, the child asks and draws. In
+Milestone 2, an adult participates substantially, helping compare outputs,
+introduce useful vocabulary, and formulate constraints. This is guided
+discovery, not a claim that every technical prompt came from the child.
 
-The AI makes possibilities visible quickly. The child supplies direction by
-recognizing “not yet,” drawing what words cannot explain, choosing among
-alternatives, and adding constraints. The narration must preserve that agency.
-The exact source questions and both versions of the uploaded drawing are
-recorded in [`roller-coaster-final/README.md`](./roller-coaster-final/README.md).
+The AI makes possibilities visible quickly. The child supplies the initiating
+idea, questions, sketch, and desired experience. The adult guides the middle
+stage through comparison and mathematical framing. The narration must preserve
+all three roles accurately. The source prompts and both versions of the
+uploaded drawing are recorded in
+[`roller-coaster-final/README.md`](./roller-coaster-final/README.md).
 
 ## What the audience should feel
 
 1. **Curiosity:** “Could my drawing become something real?”
-2. **Progress:** Each real question makes the child's own idea clearer.
+2. **Progress:** Questions and guided comparisons make the idea clearer.
 3. **Wonder:** A mathematical rule can make a visible 3D shape.
 4. **Momentum:** Code, tests, and deployment turn the shape into a ride.
 5. **Payoff:** The audience rides the exact idea they watched being created.
@@ -79,8 +82,9 @@ project begins with ordinary curiosity, not with a perfect technical plan.
 
 ### Milestone 2 — A sketch becomes one Surface
 
-Purpose: show the child learning what must be specified: 3D rather than 2D, a
-Surface rather than a line, a useful contraction rate, and an exact endpoint.
+Purpose: show guided discovery. An adult helps turn the child's visual idea
+into choices that can be compared: 3D rather than 2D, a Surface rather than a
+line, a useful contraction rate, and an exact endpoint.
 
 - Begin with the exact question:
   “3d xyz plane like a funal shape spiraling down”
@@ -217,12 +221,13 @@ some of the work.
 
 **Visual:** “3d xyz plane like a funal shape spiraling down” types on screen.
 
-> Now the idea moved into three dimensions: like a funnel, spiraling down.
+> Next, an adult helped guide the search. Together, they moved the idea into
+> three dimensions: like a funnel, spiraling down.
 
 **Visual:** Funnel centerline becomes a ribbon.
 
-> Each answer revealed what was still wrong. A line was not a track, so he
-> asked for one Surface.
+> Each answer gave them something real to compare. A line was not a track, so
+> they tried one Surface.
 
 **Visual:** `u` and `v` are visible in the Surface expression.
 
@@ -230,19 +235,20 @@ some of the work.
 
 **Visual:** Final Surface ending at the origin.
 
-> Comparing them helped him describe one smooth path between the two, ending at
-> zero.
+> Comparing them helped the idea become one smooth path between the two, ending
+> at zero.
 
 **Visual:** The isolated 3D Surface stands upright and moves closer.
 
-> The important result was not only the formula. He had learned how to describe
-> the shape he was imagining.
+> The important result was not only the formula. Guided discovery had turned a
+> visual idea into a shape the team could describe and test.
 
 ### Milestone 3 build
 
 **Visual:** “Go ahead make it a roller coaster” types on screen.
 
-> Only then did he say, “Go ahead, make it a roller coaster.”
+> Only after the guided discovery did the instruction become clear: “Go ahead,
+> make it a roller coaster.”
 
 **Visual:** Agent build steps and technical word cloud accelerate.
 
@@ -294,8 +300,9 @@ silence be the ending.
 - Sound curious and pleased, not amazed by every small action.
 - Avoid words such as “obviously,” “simply,” or “easy.” They can make a child
   feel that a hard idea should already be familiar.
-- Do not frame the AI as having invented the child's goal. The child used each
-  output to recognize, compare, correct, and clarify what he wanted.
+- Keep attribution accurate: the child began with the real questions, sketch,
+  and desired experience; the adult contributed substantial mathematical
+  guidance in Milestone 2; the AI made options visible and implemented them.
 
 ## Gameplay recording plan
 
@@ -369,3 +376,5 @@ silence be the ending.
   test it, and ride it.
 - An adult can explain why the process matters: a direct golden-spiral answer
   would be faster, but it would hide the child's developing thought and agency.
+- The audience can identify Milestone 2 as guided discovery, not as a sequence
+  of technical questions authored entirely by the child.

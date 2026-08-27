@@ -9,10 +9,12 @@ milestone masters, and the child-friendly English voice-over are packaged in
 [`roller-coaster-final/`](./roller-coaster-final/README.md).
 
 This is not primarily a demonstration of how quickly AI can output a golden
-spiral. It preserves a real child's inquiry: an initially fuzzy idea becomes
-clearer through questions, a hand-drawn image, rejected answers, comparisons,
-and new constraints. A finished spiral could be generated in one step; the
-educational value is in watching the child discover what to ask for.
+spiral. It begins with a real child's inquiry: an initially fuzzy idea becomes
+clearer through questions and a hand-drawn image. Milestone 2 then becomes
+**guided discovery**: an adult participates more actively, using comparisons,
+technical vocabulary, and new constraints to help develop the child's idea. A
+finished spiral could be generated in one step; the educational value is in
+watching the idea become clear through inquiry and guidance.
 
 The delivery README records the original wording of the questions and links
 both the untouched uploaded sketch and the mildly enhanced copy used on
@@ -20,8 +22,9 @@ screen.
 
 ## The real inquiry
 
-The wording below is intentionally unpolished. These are not retrospective
-prompts written after the answer was known:
+The Milestone 1 wording below is intentionally unpolished. These are the
+child's questions, not retrospective prompts written after the answer was
+known:
 
 > I'm making a roller coaster from formula in xy coordinate plane, any
 > interesting formula suggestions?
@@ -36,9 +39,11 @@ The idea then moved from 2D into 3D:
 
 > 3d xyz plane like a funal shape spiraling down
 
-The child used later results to discover more exact requirements: it should be
-one ribbon-like `Surface`, descend along the Y-axis, end at `(0, 0, 0)`, and
-contract faster than a funnel but slower than a golden spiral. Only after that
+Milestone 2 is collaborative guided discovery. An adult participated heavily,
+using later results to introduce and compare more exact requirements: one
+ribbon-like `Surface`, descending along the Y-axis, ending at `(0, 0, 0)`, and
+contracting faster than a funnel but slower than a golden spiral. These
+technical prompts should not all be attributed to the child. Only after that
 exploration came the implementation request:
 
 > Go ahead make it a roller coaster
