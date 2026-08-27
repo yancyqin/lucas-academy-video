@@ -8,6 +8,45 @@ The completed roller-coaster film, its vertical short cut, the three approved
 milestone masters, and the child-friendly English voice-over are packaged in
 [`roller-coaster-final/`](./roller-coaster-final/README.md).
 
+This is not primarily a demonstration of how quickly AI can output a golden
+spiral. It preserves a real child's inquiry: an initially fuzzy idea becomes
+clearer through questions, a hand-drawn image, rejected answers, comparisons,
+and new constraints. A finished spiral could be generated in one step; the
+educational value is in watching the child discover what to ask for.
+
+The delivery README records the original wording of the questions and links
+both the untouched uploaded sketch and the mildly enhanced copy used on
+screen.
+
+## The real inquiry
+
+The wording below is intentionally unpolished. These are not retrospective
+prompts written after the answer was known:
+
+> I'm making a roller coaster from formula in xy coordinate plane, any
+> interesting formula suggestions?
+
+> can we have something make a loop?
+
+> something like this
+
+![Original pencil spiral uploaded with “something like this”](public/images/roller-coaster/original-sketch-source.png)
+
+The idea then moved from 2D into 3D:
+
+> 3d xyz plane like a funal shape spiraling down
+
+The child used later results to discover more exact requirements: it should be
+one ribbon-like `Surface`, descend along the Y-axis, end at `(0, 0, 0)`, and
+contract faster than a funnel but slower than a golden spiral. Only after that
+exploration came the implementation request:
+
+> Go ahead make it a roller coaster
+
+The [complete source record](./roller-coaster-final/README.md#original-questions-and-source-image)
+preserves the intermediate questions, the Möbius reference formula, the
+funnel-versus-golden comparison, and links to both versions of the drawing.
+
 - `final-long.mp4` — complete 16:9 film.
 - `final-short-vertical.mp4` — complete 9:16 short.
 - `clips/` — the three long-form milestone sources.

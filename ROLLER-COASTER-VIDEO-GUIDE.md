@@ -13,21 +13,36 @@ it.
 
 ## The one-sentence story
 
-A child starts with a question and a rough pencil spiral, improves the idea by
-talking with an AI, turns the spiral into one mathematical surface, and finally
-rides that same formula into a black hole.
+A child who does not yet know the words “golden spiral” uses real questions,
+visual judgment, and a rough pencil sketch to clarify a fuzzy idea until it is
+precise enough to become a mathematical Surface and a rideable world.
+
+## The central idea
+
+The film is about inquiry, not answer generation. If the final object were the
+only goal, the first prompt could request a golden spiral and skip directly to
+the result. The preserved conversation is valuable because the child's goal
+does not arrive fully formed. Each answer gives the child something concrete
+to inspect, reject, compare, or refine. Through that loop, the child discovers
+both the shape and the language needed to describe it.
+
+The AI makes possibilities visible quickly. The child supplies direction by
+recognizing “not yet,” drawing what words cannot explain, choosing among
+alternatives, and adding constraints. The narration must preserve that agency.
+The exact source questions and both versions of the uploaded drawing are
+recorded in [`roller-coaster-final/README.md`](./roller-coaster-final/README.md).
 
 ## What the audience should feel
 
 1. **Curiosity:** “Could my drawing become something real?”
-2. **Progress:** Each new question makes the idea clearer.
+2. **Progress:** Each real question makes the child's own idea clearer.
 3. **Wonder:** A mathematical rule can make a visible 3D shape.
 4. **Momentum:** Code, tests, and deployment turn the shape into a ride.
 5. **Payoff:** The audience rides the exact idea they watched being created.
 
-The answer text is not the hero. The changing idea is the hero. Long answers
-may move at 8x to 20x, while important questions, the uploaded sketch, the
-final Surface, `READY TO RIDE`, and the real ride receive time to breathe.
+The answer text is not the hero. The child's changing idea is the hero. Long
+answers may move at 8x to 20x, while important questions, the uploaded sketch,
+the final Surface, `READY TO RIDE`, and the real ride receive time to breathe.
 
 ## Current source and deliverables
 
@@ -48,8 +63,8 @@ at `https://is.lucasacademy.org`.
 
 ### Milestone 1 — A question becomes a sketch
 
-Purpose: show that the project begins with ordinary curiosity, not with a
-perfect technical plan.
+Purpose: establish that these are a child's actual questions and that the
+project begins with ordinary curiosity, not with a perfect technical plan.
 
 - Start with the exact first question.
 - Type the first question most slowly.
@@ -59,11 +74,13 @@ perfect technical plan.
   thinking process.
 - Accelerate answers to 8x, 12x, and 20x.
 - End on the first useful spiral function.
+- Never replace the opening with a polished retrospective question. The
+  imprecise original wording is essential evidence of the learning process.
 
 ### Milestone 2 — A sketch becomes one Surface
 
-Purpose: show how asking more exact questions changes a 2D idea into a 3D
-track.
+Purpose: show the child learning what must be specified: 3D rather than 2D, a
+Surface rather than a line, a useful contraction rate, and an exact endpoint.
 
 - Begin with the exact question:
   “3d xyz plane like a funal shape spiraling down”
@@ -77,6 +94,8 @@ track.
 - Remove axes and interface chrome.
 - Stand the surface upright so it already resembles a coaster.
 - Push it toward the viewer and softly blur for about 3.5 seconds.
+- Make the funnel-versus-golden comparison legible. The desired model emerges
+  from noticing that one contracts too slowly and the other too quickly.
 
 ### Milestone 3 — A Surface becomes a ride
 
@@ -174,113 +193,95 @@ some of the work.
 
 **Visual:** The first question types slowly.
 
-> Can a little pencil spiral become a real roller coaster?
+> These are questions a child really asked. He did not begin by saying “golden
+> spiral.” He began with a fuzzy idea: a roller coaster made from formulas.
 
 **Visual:** Early formula suggestions appear quickly.
 
-> I did not begin with the answer. I began with a question.
+> A finished spiral could have been made at once, but that would skip the
+> valuable part.
 
 **Visual:** The loop question appears.
 
-> First, I asked for hills. Then I asked for a loop.
+> He tried hills, then asked for a loop.
 
 **Visual:** The original uploaded sketch fills the screen.
 
-> My drawing was rough, but it showed the idea better than perfect words.
+> When words were not enough, he drew this.
 
 **Visual:** The first spiral function and graph appear.
 
-> The computer helped turn that drawing into a rule. Now every point had a
-> place to go.
+> The rough sketch made the next question possible.
 
 ### Milestone 2
 
 **Visual:** “3d xyz plane like a funal shape spiraling down” types on screen.
 
-> Next, I wanted the track to spiral down in three dimensions, like a funnel.
+> Now the idea moved into three dimensions: like a funnel, spiraling down.
 
 **Visual:** Funnel centerline becomes a ribbon.
 
-> A line was not wide enough for a track, so we gave it a second direction.
+> Each answer revealed what was still wrong. A line was not a track, so he
+> asked for one Surface.
 
 **Visual:** `u` and `v` are visible in the Surface expression.
 
-> The letter U moves along the ride. The letter V moves across its width.
-
-**Visual:** Wide turns gradually shrink.
-
-> A number called phi helps each turn become smaller than the one before it.
+> A funnel tightened too slowly; a golden spiral too quickly.
 
 **Visual:** Final Surface ending at the origin.
 
-> At the end, the height, width, and circle all squeeze toward zero. That gives
-> the track one exact finish.
+> Comparing them helped him describe one smooth path between the two, ending at
+> zero.
 
 **Visual:** The isolated 3D Surface stands upright and moves closer.
 
-> The formula was starting to look like a roller coaster. But it was still
-> only a shape.
+> The important result was not only the formula. He had learned how to describe
+> the shape he was imagining.
 
 ### Milestone 3 build
 
 **Visual:** “Go ahead make it a roller coaster” types on screen.
 
-> So I gave one last instruction: make it a ride.
+> Only then did he say, “Go ahead, make it a roller coaster.”
 
 **Visual:** Agent build steps and technical word cloud accelerate.
 
-> Code gave the Surface rails, a starting point, a camera, and a way to move.
+> Code added rails, motion, a camera, tests, and a place in the museum.
 
 **Visual:** Tests, Git, and deployment fragments appear.
 
-> Then the computer checked more than a thousand things, so the track, the
-> room, and the camera would agree.
-
-**Visual:** Every fragment gathers into `READY TO RIDE`.
-
-> The drawing had become math. The math had become code. Now the code was ready
-> to become an experience.
+> The computer moved quickly, but its direction came from the questions that
+> had just become clear.
 
 ### Reader and gameplay
 
 **Visual:** Open `R / READ` and begin scrolling.
 
-> Before riding, we can stop and read the idea behind the track.
+> This is the same mathematical Surface.
 
 **Visual:** Scroll to the formula near the bottom.
 
-> This is the same Surface we just watched grow from the sketch. It is not a
-> picture placed on the ride. It is the ride.
-
-**Visual:** Close Reader and start at 1.5x speed with 0.5x acceleration.
-
-> Ready? Let’s follow the formula.
+> It is not a picture placed on the ride. It is the ride.
 
 **Visual:** First wide rotations.
 
-> The first turns are wide and easy to see.
+> Its wide turns become smaller as the path falls toward its final point.
 
 **Visual:** Turns become tighter. Keep narration sparse here.
 
-> Each turn becomes smaller, and the track keeps falling toward its final
-> point.
-
-**Visual:** Forced first-person camera continues through the final tight turns.
-
-> Near the center, the track is too tiny for an ordinary coaster car. The
-> camera keeps following the mathematical path.
+> We can ride the result—but remember, the discovery happened before the ride.
 
 **Visual:** Enter the black hole. Let the last second become fully black.
 
-> And at zero, the ride disappears into the black hole.
+> A fuzzy question became a sketch, then a better question, then a world.
 
 ### Optional closing line
 
 Use this only if the video continues after black. Otherwise, let black and
 silence be the ending.
 
-> A question became a sketch. A sketch became a formula. And a formula became
-> a world we could ride.
+> The important result was not only the spiral. It was learning how to turn an
+> unclear idea into a question clear enough to build.
 
 ## Narration performance notes
 
@@ -293,6 +294,8 @@ silence be the ending.
 - Sound curious and pleased, not amazed by every small action.
 - Avoid words such as “obviously,” “simply,” or “easy.” They can make a child
   feel that a hard idea should already be familiar.
+- Do not frame the AI as having invented the child's goal. The child used each
+  output to recognize, compare, correct, and clarify what he wanted.
 
 ## Gameplay recording plan
 
@@ -364,3 +367,5 @@ silence be the ending.
 - All visible text and narration are English.
 - A child can explain the main idea after watching: ask, draw, make a rule,
   test it, and ride it.
+- An adult can explain why the process matters: a direct golden-spiral answer
+  would be faster, but it would hide the child's developing thought and agency.
