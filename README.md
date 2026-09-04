@@ -16,6 +16,9 @@ a sentence. Both run locally on this Mac.
   that Apple Silicon needs; [WORKFLOW.md](./voice-cover/WORKFLOW.md) is the pipeline;
   [VOICE-GUIDE.md](./voice-cover/VOICE-GUIDE.md) covers recording and training a voice.
   Code lives in `rvc/` (Applio, the default) and `svc/` (Seed-VC), tools in `scripts/`.
+- [`LYRIC-VIDEO.md`](./LYRIC-VIDEO.md) -- the lyric-video pipeline: forced
+  alignment of the lyrics, generated and stock footage through one grade, and the
+  failures worth knowing about before repeating any of it.
 
 ## Golden Funnel roller coaster
 

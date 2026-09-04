@@ -11,6 +11,51 @@
 CC0 实拍素材  ──────────────────────────────────┘
 ```
 
+## 安装
+
+Node 侧(渲染):
+
+```bash
+npm install          # Node 20+;Remotion 4.x
+```
+
+Python 侧(对齐 + 放大)。跟 `voice-cover/` 共用同一个 `.venv-align`,如果你已经按
+[voice-cover/SETUP.md](voice-cover/SETUP.md) 建过就跳过前两步:
+
+```bash
+brew install uv
+uv venv --python 3.12 .venv-align
+VIRTUAL_ENV=.venv-align uv pip install torch torchaudio demucs stable-ts soundfile
+VIRTUAL_ENV=.venv-align uv pip install spandrel pillow      # 放大用
+```
+
+torch 需要 Python 3.12,系统的 3.14 没有 wheel,所以必须指定版本。
+
+### 模型权重
+
+**Real-ESRGAN**(放大,64 MB),脚本写死找这个路径:
+
+```bash
+mkdir -p t2v/models/esrgan && curl -fL -o t2v/models/esrgan/RealESRGAN_x4plus.pth \
+  https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.0/RealESRGAN_x4plus.pth
+```
+
+**Whisper medium**(对齐,1.4 GB)首次运行 `align_lyrics.py` 时自动下载,不用手动准备。
+
+**Demucs**(只在没有真分轨时才需要)首次运行时自动下载。
+
+**Wan 2.1**(文生视频)见 [t2v/README.md](t2v/README.md)。设 `HF_HUB_DISABLE_XET=1`,
+否则大文件传输会卡死在 0 字节。
+
+### 验证
+
+```bash
+.venv-align/bin/python -c "import torch, stable_whisper, spandrel; \
+  print('torch', torch.__version__, 'mps', torch.backends.mps.is_available())"
+npx tsc --noEmit -p tsconfig.json
+```
+
+
 ## 数据模型
 
 一首歌一个 `src/songs/<name>.json`,三样东西:
@@ -86,6 +131,17 @@ npm run song:render     # 全片
 ```
 
 只看某一段就渲 `OneBreathChorus`,窗口在 [src/Root.tsx](src/Root.tsx) 里改。
+
+## 素材来源与许可
+
+**生成的素材**(`sh*-loop.mp4`)由本机的 Wan 2.1 产出,没有第三方权利问题。
+
+**实拍素材**(`cc0-*.mp4`)来自 Pexels,按其许可可免费商用、无需署名。
+出处逐条记在 [public/footage/CREDITS.md](public/footage/CREDITS.md) ——
+**每新加一条实拍素材都要往那里补一行**,否则片子发布时无法追溯来源。
+
+`public/footage/` 整个目录不进仓库(见 `.gitignore`),所以 CREDITS.md 是唯一的记录。
+
 
 ## 实测数据(M3 Pro / 36 GB)
 
