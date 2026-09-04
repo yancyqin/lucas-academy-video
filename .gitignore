@@ -25,3 +25,8 @@ rvc/*
 !rvc/README.md
 svc/*
 !svc/README.md
+
+# align_lyrics.py writes these next to the song; they are regenerated, and the
+# checked-in one-breath.json is the version that matters.
+src/songs/*.aligned.json
+src/songs/*.estimated.json
