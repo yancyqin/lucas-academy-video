@@ -2,6 +2,21 @@
 
 This repo is a small video lab for Lucas Academy lessons.
 
+Two ways to make a video live here, and they are different in kind. The Remotion
+compositions below are **deterministic** -- the code draws exactly what it says.
+`t2v/` and `comfyui/` are **generative** -- a diffusion model samples pixels from
+a sentence. Both run locally on this Mac.
+
+- [`comfyui/`](./comfyui/README.md) -- Wan 2.1 in ComfyUI: the graph, the weights
+  it expects, and measured speed/memory on this machine.
+- [`t2v/`](./t2v/README.md) -- the same model from the command line, so a clip can
+  be scripted or batched. Shares ComfyUI's weights rather than downloading its own.
+- [`voice-cover/`](./voice-cover/README.md) -- sing a Suno song in your own voice.
+  [SETUP.md](./voice-cover/SETUP.md) builds the two environments and lists the patches
+  that Apple Silicon needs; [WORKFLOW.md](./voice-cover/WORKFLOW.md) is the pipeline;
+  [VOICE-GUIDE.md](./voice-cover/VOICE-GUIDE.md) covers recording and training a voice.
+  Code lives in `rvc/` (Applio, the default) and `svc/` (Seed-VC), tools in `scripts/`.
+
 ## Golden Funnel roller coaster
 
 The completed roller-coaster film, its vertical short cut, the three approved
