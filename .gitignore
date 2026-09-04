@@ -15,3 +15,10 @@ public/footage/
 public/footage-esrgan/
 public/audio/songs/
 stems/
+
+# Voice-cover environments and data. ~10 GB of venvs, model weights and audio --
+# rebuild with voice-cover/SETUP.md rather than committing any of it.
+rvc/*
+!rvc/README.md
+svc/*
+!svc/README.md
