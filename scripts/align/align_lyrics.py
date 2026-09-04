@@ -1,51 +1,90 @@
-"""Force-align known lyrics to a song and emit per-line start times.
+"""Force-align known lyrics to a song and write per-line start times.
 
-Separates the vocal stem with Demucs first -- alignment on a full rock mix is
-unreliable, on an isolated vocal it is not. The lyrics are already known, so
-this is alignment, never transcription.
+The lyrics are already known, so this is alignment, never transcription.
+
+Vocal source, best first:
+  1. --stem PATH                      an isolated vocal you already have
+  2. stems/*Lead Vocals*              Suno's own stem export
+  3. Demucs separation                last resort
+
+Suno's stems are real tracks, not a separation: no bleed, and the backing vocals
+come on their own file, which matters because gang vocals in a shared stem are
+what make chorus syllable boundaries impossible to measure. Demucs is the fallback
+for audio that has no stems.
 """
-import json, pathlib, subprocess, sys
+import argparse, json, pathlib, subprocess, sys, glob
 
 REPO = pathlib.Path(__file__).resolve().parents[2]
-song = json.loads((REPO / 'src/songs/one-breath.json').read_text())
-audio = REPO / 'public' / song['audio']
+
+ap = argparse.ArgumentParser()
+ap.add_argument('--song', default='src/songs/one-breath.json')
+ap.add_argument('--stem', help='isolated vocal track; skips stem discovery')
+ap.add_argument('--model', default='medium')
+args = ap.parse_args()
+
+song_path = REPO / args.song
+song = json.loads(song_path.read_text())
 work = REPO / 'tmp/align'
 work.mkdir(parents=True, exist_ok=True)
 
-stem = work / 'htdemucs' / audio.stem / 'vocals.wav'
-if not stem.exists():
-    print('== separating vocals (demucs) ==', flush=True)
-    subprocess.run([sys.executable, '-m', 'demucs', '--two-stems=vocals',
-                    '-o', str(work), str(audio)], check=True)
-print('vocal stem:', stem, flush=True)
+def find_vocal() -> pathlib.Path:
+    if args.stem:
+        return pathlib.Path(args.stem)
+    hits = sorted(glob.glob(str(REPO / 'stems' / '*Lead Vocals*')))
+    if hits:
+        print(f'== using the provided stem: {pathlib.Path(hits[0]).name}', flush=True)
+        return pathlib.Path(hits[0])
+    audio = REPO / 'public' / song['audio']
+    stem = work / 'htdemucs' / audio.stem / 'vocals.wav'
+    if not stem.exists():
+        print('== no stem found, separating with demucs ==', flush=True)
+        subprocess.run([sys.executable, '-m', 'demucs', '--two-stems=vocals',
+                        '-o', str(work), str(audio)], check=True)
+    return stem
+
+# Always decode to wav first. Suno's stem exports carry broken MP3 headers -- ffprobe
+# reports 1299s for a 313s file -- and anything that trusts the header slices wrongly.
+src = find_vocal()
+vocal = work / 'vocal-for-align.wav'
+subprocess.run(['ffmpeg', '-v', 'error', '-i', str(src), '-ac', '1', '-ar', '44100',
+                '-y', str(vocal)], check=True)
+dur = float(subprocess.run(['ffprobe', '-v', 'error', '-show_entries', 'format=duration',
+                            '-of', 'csv=p=0', str(vocal)], capture_output=True,
+                           text=True).stdout)
+print(f'vocal: {src.name} -> {dur:.2f}s', flush=True)
 
 import stable_whisper
+model = stable_whisper.load_model(args.model, device='cpu')
 lines = song['lines']
-text = '\n'.join(l['text'] for l in lines)
 
-for device in ('cpu',):
-    print(f'== aligning on {device} ==', flush=True)
-    model = stable_whisper.load_model('medium', device=device)
-    result = model.align(str(stem), text, language='en')
-    break
+# Align in windows split at instrumental gaps. A single whole-song pass can lose the
+# vocal through a long break and stack every remaining word on one timestamp.
+gaps = sorted(((lines[i + 1]['t'] - lines[i]['t'], (lines[i]['t'] + lines[i + 1]['t']) / 2)
+               for i in range(len(lines) - 1)), reverse=True)[:2]
+cuts = [0.0] + sorted(g[1] for g in gaps) + [dur]
+print(f'windows: {[round(c, 1) for c in cuts]}', flush=True)
 
-words = [w for seg in result.segments for w in seg.words]
-print(f'aligned {len(words)} words', flush=True)
+out = []
+for lo, hi in zip(cuts, cuts[1:]):
+    chunk = [l for l in lines if lo <= l['t'] < hi]
+    if not chunk:
+        continue
+    clip = work / f'w{int(lo)}.wav'
+    subprocess.run(['ffmpeg', '-v', 'error', '-ss', str(lo), '-to', str(hi),
+                    '-i', str(vocal), '-y', str(clip)], check=True)
+    r = model.align(str(clip), '\n'.join(l['text'] for l in chunk), language='en')
+    words = [w for seg in r.segments for w in seg.words]
+    cursor = 0
+    for line in chunk:
+        if cursor < len(words):
+            out.append((line, round(lo + words[cursor].start, 2)))
+        cursor += len(line['text'].split())
 
-# Walk the known word sequence and take each line's first word as its start.
-out, cursor = [], 0
-for line in lines:
-    n = len(line['text'].split())
-    if cursor >= len(words):
-        out.append(round(line['t'], 2)); continue
-    out.append(round(words[cursor].start, 2))
-    cursor += n
-
-for line, t in zip(lines, out):
+for line, t in out:
     line['t'] = t
-song['timingSource'] = 'demucs+stable-ts forced alignment'
-(REPO / 'src/songs/one-breath.aligned.json').write_text(json.dumps(song, indent=2, ensure_ascii=False))
-result.save_as_json(str(work / 'words.json'))
-print('wrote src/songs/one-breath.aligned.json', flush=True)
-for line, t in zip(lines, out):
-    print(f'  {int(t)//60:02d}:{t%60:05.2f}  {line["section"]:<9} {line["text"]}')
+song['timingSource'] = f'forced alignment against {src.name}'
+(song_path.parent / (song_path.stem + '.aligned.json')).write_text(
+    json.dumps(song, indent=2, ensure_ascii=False) + '\n')
+print(f'wrote {song_path.stem}.aligned.json  ({len(out)} lines)', flush=True)
+for line, t in out:
+    print(f'  {int(t)//60}:{t%60:05.2f}  {line["section"]:<9} {line["text"]}')
