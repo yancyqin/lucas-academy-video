@@ -11,6 +11,17 @@ tmp/
 t2v/.venv/
 t2v/models/
 t2v/outputs/
-public/footage/
+public/footage/*
 public/footage-esrgan/
+# ...but the provenance record is the only trace of where third-party clips came
+# from, so it is tracked even though the media beside it is not.
+!public/footage/CREDITS.md
 public/audio/songs/
+stems/
+
+# Voice-cover environments and data. ~10 GB of venvs, model weights and audio --
+# rebuild with voice-cover/SETUP.md rather than committing any of it.
+rvc/*
+!rvc/README.md
+svc/*
+!svc/README.md
