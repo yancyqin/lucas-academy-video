@@ -21,7 +21,10 @@
     "roller:still": "npm run milestone1:still",
     "start": "remotion studio src/index.ts",
     "render": "remotion render src/index.ts MonkeySociety out/monkey-society.mp4",
-    "preview": "remotion preview src/index.ts MonkeySociety"
+    "preview": "remotion preview src/index.ts MonkeySociety",
+    "song:render": "remotion render src/index.ts OneBreath out/one-breath-v2.mp4",
+    "song:still": "remotion still src/index.ts OneBreath out/one-breath-v2.png --frame=7890",
+    "song:align": ".venv-align/bin/python scripts/align/align_lyrics.py"
   },
   "dependencies": {
     "@remotion/cli": "^4.0.484",
