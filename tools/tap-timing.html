@@ -1,0 +1,109 @@
+<meta charset="utf-8">
+<title>Tap timing</title>
+<style>
+  :root { color-scheme: dark; }
+  body { margin:0; background:#0b0d12; color:#dfe4ee; font:15px/1.5 "Avenir Next",Inter,system-ui,sans-serif; }
+  header { position:sticky; top:0; background:#0b0d12ee; backdrop-filter:blur(8px);
+           padding:16px 24px; border-bottom:1px solid #1e2430; display:flex; gap:16px; align-items:center; flex-wrap:wrap; }
+  button { background:#1b2230; color:#dfe4ee; border:1px solid #2c3548; border-radius:8px; padding:8px 14px; font:inherit; cursor:pointer; }
+  button:hover { background:#232c3d; }
+  kbd { background:#222b3a; border:1px solid #38435a; border-radius:5px; padding:1px 6px; font-size:12px; }
+  #clock { font-variant-numeric:tabular-nums; font-size:22px; font-weight:600; min-width:110px; }
+  ol { list-style:none; margin:0; padding:12px 0 320px; }
+  li { display:grid; grid-template-columns:96px 92px 1fr; gap:14px; align-items:center;
+       padding:9px 24px; border-left:3px solid transparent; }
+  li.done { color:#8e99ad; }
+  li.cur { background:#141b27; border-left-color:#e8a64a; color:#fff; }
+  .t { font-variant-numeric:tabular-nums; color:#7f8ba1; }
+  .sec { font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:#5d6b85; }
+  .sec { color:#5d6b85; }
+  .nudge { opacity:0; }
+  li.cur .nudge, li:hover .nudge { opacity:1; }
+  #out { position:fixed; inset:auto 0 0 0; height:0; overflow:auto; background:#070910;
+         border-top:1px solid #1e2430; padding:0 24px; font-family:ui-monospace,Menlo,monospace; font-size:12px; white-space:pre; }
+  #out.open { height:280px; padding:16px 24px; }
+</style>
+
+<header>
+  <input type="file" id="file" accept="audio/*">
+  <button id="play">▶ / ⏸ <kbd>P</kbd></button>
+  <span id="clock">0:00.00</span>
+  <label>speed <select id="rate">
+    <option>0.5</option><option>0.75</option><option selected>1</option>
+  </select></label>
+  <button id="back">↺ back 5s <kbd>←</kbd></button>
+  <button id="undo">undo line <kbd>⌫</kbd></button>
+  <button id="export">export JSON</button>
+  <span style="color:#7f8ba1">press <kbd>space</kbd> on each line's first word</span>
+</header>
+
+<ol id="list"></ol>
+<div id="out"></div>
+
+<script>
+const SONG_URL = '../src/songs/one-breath.json';
+let song = null, lines = [], cur = 0;
+const audio = new Audio();
+const $ = (s) => document.querySelector(s);
+
+fetch(SONG_URL).then(r => r.json()).then(d => { song = d; lines = d.lines; render(); })
+  .catch(() => { $('#list').innerHTML = '<li style="padding:24px">Open this page over http (see README) so it can read the song JSON.</li>'; });
+
+const fmt = (t) => `${Math.floor(t/60)}:${(t%60).toFixed(2).padStart(5,'0')}`;
+
+function render() {
+  $('#list').innerHTML = lines.map((l, i) => `
+    <li class="${i < cur ? 'done' : ''} ${i === cur ? 'cur' : ''}" data-i="${i}">
+      <span class="t">${fmt(l.t)}</span>
+      <span class="sec">${l.section}</span>
+      <span>${l.text}
+        <span class="nudge">
+          <button data-nudge="${i}" data-d="-0.1">−.1</button>
+          <button data-nudge="${i}" data-d="0.1">+.1</button>
+        </span>
+      </span>
+    </li>`).join('');
+  const el = document.querySelector('li.cur');
+  if (el) el.scrollIntoView({block:'center', behavior:'smooth'});
+}
+
+$('#file').onchange = (e) => {
+  const f = e.target.files[0];
+  if (f) { audio.src = URL.createObjectURL(f); audio.play(); }
+};
+$('#play').onclick = () => audio.paused ? audio.play() : audio.pause();
+$('#rate').onchange = (e) => { audio.playbackRate = Number(e.target.value); };
+$('#back').onclick = () => { audio.currentTime = Math.max(0, audio.currentTime - 5); };
+$('#undo').onclick = () => { cur = Math.max(0, cur - 1); render(); };
+
+document.body.addEventListener('click', (e) => {
+  const b = e.target.closest('[data-nudge]');
+  if (!b) return;
+  const i = +b.dataset.nudge;
+  lines[i].t = Math.max(0, +(lines[i].t + +b.dataset.d).toFixed(2));
+  render();
+});
+
+addEventListener('keydown', (e) => {
+  if (e.target.tagName === 'SELECT' || e.target.tagName === 'INPUT') return;
+  if (e.code === 'Space') {
+    e.preventDefault();
+    if (cur < lines.length) { lines[cur].t = +audio.currentTime.toFixed(2); cur += 1; render(); }
+  } else if (e.code === 'Backspace') {
+    e.preventDefault(); cur = Math.max(0, cur - 1); render();
+  } else if (e.code === 'KeyP') {
+    e.preventDefault(); audio.paused ? audio.play() : audio.pause();
+  } else if (e.code === 'ArrowLeft') {
+    e.preventDefault(); audio.currentTime = Math.max(0, audio.currentTime - 5);
+  }
+});
+
+$('#export').onclick = () => {
+  const out = {...song, timingSource: 'tap-timing.html', lines};
+  $('#out').textContent = JSON.stringify(out, null, 2);
+  $('#out').classList.add('open');
+  navigator.clipboard?.writeText(JSON.stringify(out, null, 2));
+};
+
+setInterval(() => { $('#clock').textContent = fmt(audio.currentTime || 0); }, 60);
+</script>

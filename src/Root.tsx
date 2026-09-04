@@ -8,6 +8,8 @@ import {
   RollerCoasterChatVideo,
 } from './videos/RollerCoasterChatVideo';
 import introScript from './scripts/intro.en.json';
+import {makeLyricsVideo, type Song} from './videos/LyricsVideo';
+import oneBreath from './songs/one-breath.json';
 import {
   ROLLER_COASTER_M2_DURATION,
   ROLLER_COASTER_M2_FPS,
@@ -29,9 +31,30 @@ import {
   RollerCoasterMilestone3BuildVerticalVideo,
 } from './videos/RollerCoasterMilestone3BuildVerticalVideo';
 
+const OneBreathVideo = makeLyricsVideo(oneBreath as Song);
+const CHORUS_FROM = 84;
+const CHORUS_SECONDS = 46;
+const OneBreathChorus = makeLyricsVideo(oneBreath as Song, {offsetSeconds: CHORUS_FROM});
+
 export const Root: FC = () => {
   return (
     <>
+      <Composition
+        id="OneBreathChorus"
+        component={OneBreathChorus}
+        durationInFrames={CHORUS_SECONDS * oneBreath.fps}
+        fps={oneBreath.fps}
+        width={1920}
+        height={1080}
+      />
+      <Composition
+        id="OneBreath"
+        component={OneBreathVideo}
+        durationInFrames={Math.ceil(oneBreath.durationSeconds * oneBreath.fps)}
+        fps={oneBreath.fps}
+        width={1920}
+        height={1080}
+      />
       <Composition
         id="RollerCoasterMilestone1"
         component={RollerCoasterChatVideo}
