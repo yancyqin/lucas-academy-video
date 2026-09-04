@@ -2,26 +2,26 @@
 
 这个目录的媒体文件不进仓库,所以这份记录是唯一的来源追溯。**每加一条第三方素材就补一行。**
 
-## 实拍(第三方)
+## 实拍(Pexels)
 
-| 文件 | 来源 | 搜索词 | 原始规格 | 处理 |
+来源 URL 与本地文件**逐字节核对过**(`Content-Length` 与下载文件大小完全一致),不是靠搜索词猜的。
+
+| 文件 | 作者 | Pexels 源 | 原始规格 | 本片中的处理 |
 |---|---|---|---|---|
-| `cc0-sunrise-a.mp4` | Pexels | `sunrise clouds mountain` | 1920×1080 / 30fps / 40s | 取 0–20s,慢放 1.5× |
-| `cc0-sunrise-b.mp4` | Pexels | 同上(同一素材) | 同上 | 取 20–40s,慢放 1.5× |
-| `cc0-birds.mp4` | Pexels | `flock of birds sky silhouette` | **1080×1920 竖屏** / 30fps / 16s | 裁 `crop=1080:608:0:960` 转 16:9,放大到 1080p,慢放 2.2× |
+| `cc0-sunrise-a.mp4`<br>`cc0-sunrise-b.mp4` | **Magda Ehlers** | [`video-files/11342250/11342250-hd_1920_1080_30fps.mp4`](https://videos.pexels.com/video-files/11342250/11342250-hd_1920_1080_30fps.mp4)<br>29,587,883 bytes | 1920×1080 / 30fps / 40.107s<br>拍摄于 2022-03-02 | 切成 0–20s 和 20–40s 两段,各慢放 1.5× |
+| `cc0-birds.mp4` | **Amar .M** | [`video-files/36774926/15583977_1080_1920_30fps.mp4`](https://videos.pexels.com/video-files/36774926/15583977_1080_1920_30fps.mp4)<br>9,005,213 bytes | **1080×1920 竖屏** / 30fps / 16.133s | `crop=1080:608:0:960` 裁成 16:9(取下半部,地平线落在上三分之一),lanczos 放大到 1080p,慢放 2.2× |
 
-> **TODO(需要补):** 上面三条缺具体的 Pexels 页面 URL 和作者名。Pexels 许可不强制署名,
-> 但发布前应当把 URL 记下来,以备日后核查。下载这几条的人补一下。
+**下载过但未使用:** `video-files/38976213/16581180_1920_1080_30fps.mp4`(17,585,663 bytes)。
 
 **许可:** Pexels 素材按 [Pexels License](https://www.pexels.com/license/) 可免费用于商业和
 非商业用途,无需署名,但不得原样转售、也不得把可识别的人物用于负面语境。本片属于常规使用。
 
+虽然不强制,本文件仍记下作者名——素材来自具体的人,发布时应当说得清。
+
 ## 生成(本机)
 
-`sh01`–`sh17` 系列由本机的 Wan 2.1(见 [t2v/README.md](../../t2v/README.md))生成,
-prompt 记在 git 历史里。无第三方权利问题。
-
-`fast-grass` 同上,用蒸馏版 `--backend fastwan` 生成。
+`sh01`–`sh17` 系列与 `fast-grass` 由本机的 Wan 2.1 生成(见 [t2v/README.md](../../t2v/README.md)),
+用蒸馏版 `--backend fastwan`,prompt 记在 git 历史里。无第三方权利问题。
 
 ## 音频
 

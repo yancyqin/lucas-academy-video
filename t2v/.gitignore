@@ -1,0 +1,5 @@
+# Local-only: environment, model weights, generated clips
+.venv/
+models/
+outputs/
+__pycache__/
