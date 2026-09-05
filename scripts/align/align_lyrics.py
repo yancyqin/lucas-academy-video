@@ -4,7 +4,7 @@ The lyrics are already known, so this is alignment, never transcription.
 
 Vocal source, best first:
   1. --stem PATH                      an isolated vocal you already have
-  2. stems/*Lead Vocals*              Suno's own stem export
+  2. stems/<song>/*Lead Vocals*       Suno's own stem export
   3. Demucs separation                last resort
 
 Suno's stems are real tracks, not a separation: no bleed, and the backing vocals
@@ -30,14 +30,27 @@ work.mkdir(parents=True, exist_ok=True)
 def find_vocal() -> pathlib.Path:
     if args.stem:
         return pathlib.Path(args.stem)
-    hits = sorted(glob.glob(str(REPO / 'stems' / '*Lead Vocals*')))
-    if hits:
-        print(f'== using the provided stem: {pathlib.Path(hits[0]).name}', flush=True)
-        return pathlib.Path(hits[0])
+    # Stems are filed per song -- stems/<song>/0 Lead Vocals.mp3 -- but an older
+    # layout put them loose in stems/. Only these two shapes are searched: a
+    # recursive glob would happily return another song's vocal and align against
+    # it without complaint.
+    name = song_path.stem
+    for pattern in (f'stems/{name}/*Lead Vocals*', 'stems/*Lead Vocals*'):
+        hits = sorted(glob.glob(str(REPO / pattern)))
+        if hits:
+            print(f'== stem: {pathlib.Path(hits[0]).relative_to(REPO)}', flush=True)
+            return pathlib.Path(hits[0])
+    # Loud on purpose. A separated stem mixes the lead with the backing vocals, and
+    # gang vocals filling the gaps between chorus lines are what make syllable
+    # boundaries unmeasurable. If this fires, the timings will be worse.
+    print('!! ' + '=' * 68, flush=True)
+    print(f'!! No stem found under stems/ for "{name}". Falling back to Demucs.', flush=True)
+    print('!! A separation is markedly worse than a real stem export -- if the song', flush=True)
+    print('!! has stems, put them in stems/%s/ and re-run.' % name, flush=True)
+    print('!! ' + '=' * 68, flush=True)
     audio = REPO / 'public' / song['audio']
     stem = work / 'htdemucs' / audio.stem / 'vocals.wav'
     if not stem.exists():
-        print('== no stem found, separating with demucs ==', flush=True)
         subprocess.run([sys.executable, '-m', 'demucs', '--two-stems=vocals',
                         '-o', str(work), str(audio)], check=True)
     return stem
