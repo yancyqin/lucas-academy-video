@@ -1,0 +1,15 @@
+{
+  "0":  {"t": 2.70,   "end": 9.32,   "why": "clean lead stem, voiced run 2.70-9.32"},
+  "1":  {"t": 9.76,   "end": 19.12,  "why": "clean stem: sung to 19.12, not 16.24. The demucs vocal had instrument bleed at -23.6 dB here so the end had to be capped; the real stem's break is true silence"},
+  "13": {"t": 86.12,  "end": 90.60,  "why": "chorus 1 phrase 1, clean stem run ends 90.60"},
+  "14": {"t": 90.80,  "end": 92.40,  "why": "echo, in the lead's measured gap 90.60-94.84"},
+  "15": {"t": 94.84,  "end": 101.56, "why": "chorus 1 phrase 2, clean stem 94.84-101.56"},
+  "27": {"t": 161.46, "end": 165.64, "why": "chorus 2 phrase 1, clean stem run ends 165.64"},
+  "28": {"t": 165.84, "end": 167.44, "why": "echo, in the lead's measured gap 165.64-169.78"},
+  "29": {"t": 169.78, "end": 176.62, "why": "chorus 2 phrase 2, clean stem 169.78-176.62"},
+  "42": {"t": 269.68, "end": 273.90, "why": "chorus 3 phrase 1, clean stem run ends 273.90"},
+  "43": {"t": 274.10, "end": 275.70, "why": "echo, in the lead's gap 273.90-278.22; the backing vocal answers alone at 275.82-278.48 here"},
+  "44": {"t": 278.22, "end": 285.66, "why": "chorus 3 phrase 2, clean stem 278.22-285.66"},
+  "45": {"t": 287.70, "end": 293.02, "why": "clean stem: silence 285.66-287.70, so 286.89 from the demucs word timing was 0.8s early"},
+  "46": {"t": 293.70, "end": 301.12, "why": "clean stem runs 293.70-296.10 and 296.68-301.12; held to the end of the second"}
+}

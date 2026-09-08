@@ -24,7 +24,11 @@
     "preview": "remotion preview src/index.ts MonkeySociety",
     "song:render": "remotion render src/index.ts OneBreath out/one-breath-v2.mp4",
     "song:still": "remotion still src/index.ts OneBreath out/one-breath-v2.png --frame=7890",
-    "song:align": ".venv-align/bin/python scripts/align/align_lyrics.py"
+    "song:align": ".venv-align/bin/python scripts/align/align_lyrics.py",
+    "rejoice:render": "remotion render src/index.ts Rejoice out/rejoice.mp4",
+    "rejoice:preview": "remotion render src/index.ts RejoiceWindow out/rejoice-window.mp4",
+    "rejoice:finale": "remotion render src/index.ts RejoiceFinale out/rejoice-finale.mp4",
+    "rejoice:shots": ".venv-align/bin/python scripts/mv/build_shots.py"
   },
   "dependencies": {
     "@remotion/cli": "^4.0.484",

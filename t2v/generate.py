@@ -65,10 +65,18 @@ DMD_TIMESTEPS = (1000.0, 757.0, 522.0)
 def pin_dmd_timesteps(scheduler, wanted=DMD_TIMESTEPS):
     """Force the scheduler onto the distilled model's fixed schedule.
 
-    UniPC accepts custom sigmas, but re-applies the flow shift to whatever it is
-    given, so undo the shift first: sigma = y / (shift - y * (shift - 1)).
+    Both schedulers accept custom sigmas and both re-apply the flow shift to
+    whatever they are given, so undo the shift first:
+    sigma = y / (shift - y * (shift - 1)).
+
+    This has to happen whichever scheduler is in use. Left unpinned, a 3-step
+    euler run lands on [1000, 857, 600] instead of [1000, 757, 522] and never
+    steps below sigma 0.6, so the last hop to zero is one the distilled model was
+    never trained to make -- the picture comes out hazy and washed out rather than
+    obviously broken, which is what makes it easy to miss.
     """
-    shift = scheduler.config.flow_shift
+    # UniPC calls the knob flow_shift; FlowMatchEuler calls it shift.
+    shift = getattr(scheduler.config, "flow_shift", None) or scheduler.config.shift
     sigmas = np.array([(y := t / 1000.0) / (shift - y * (shift - 1)) for t in wanted])
     original = scheduler.set_timesteps
 
@@ -183,12 +191,12 @@ def build_pipeline(backend, shift, text_encoder_path=None, scheduler="unipc"):
             num_train_timesteps=1000,
             flow_shift=shift,
         )
-        if backend == "fastwan":
-            pin_dmd_timesteps(pipe.scheduler)
     else:
         pipe.scheduler = FlowMatchEulerDiscreteScheduler(
             num_train_timesteps=1000, shift=shift
         )
+    if backend == "fastwan":
+        pin_dmd_timesteps(pipe.scheduler)
 
     pipe.to("mps")
     # Deliberately NOT vae.enable_tiling(): on this VAE the tiled path holds every
@@ -284,25 +292,22 @@ def main():
 
 
 def decode_latents(pipe, latents, out, fps):
-    """Undo the VAE's per-channel normalisation, decode, and write the mp4."""
+    """Undo the VAE's per-channel normalisation, decode, and write the mp4.
+
+    Decoding streams one latent frame at a time and offloads each chunk to the
+    host (see decode_stream.py). The upstream `vae.decode()` walks the clip the
+    same way but grows the result on the GPU with `torch.cat`, and that
+    accumulation -- not the decode -- is what put 33 frames at 35.9 GiB and made
+    anything longer impossible here. Streaming is bit-for-bit identical (verified
+    max abs diff 0 on a 17-frame clip) and its peak no longer grows with length.
+    """
+    from decode_stream import decode_stream
+
     t = time.time()
     torch.mps.empty_cache()
-    vae = pipe.vae
-    latents = latents.to(vae.dtype)
-    mean = torch.tensor(vae.config.latents_mean).view(1, vae.config.z_dim, 1, 1, 1).to(latents)
-    std = torch.tensor(vae.config.latents_std).view(1, vae.config.z_dim, 1, 1, 1).to(latents)
-    latents = latents * std + mean
-
-    with torch.no_grad():
-        video = vae.decode(latents, return_dict=False)[0]
-    frames = pipe.video_processor.postprocess_video(video, output_type="np")[0]
-    print(
-        f"  vae decode {time.time() - t:.0f}s, "
-        f"peak {torch.mps.driver_allocated_memory() / 2**30:.1f} GiB",
-        flush=True,
-    )
-    export_to_video(frames, out, fps=fps)
-    return len(frames)
+    decode_stream(None, device="mps", fps=fps, out=out, vae=pipe.vae, latents=latents.cpu())
+    print(f"  vae decode {time.time() - t:.0f}s", flush=True)
+    return (latents.shape[2] - 1) * 4 + 1
 
 
 if __name__ == "__main__":
