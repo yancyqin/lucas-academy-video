@@ -63,15 +63,25 @@ npx tsc --noEmit -p tsconfig.json
 ```jsonc
 {
   "audio": "audio/songs/xxx.mp3",     // 相对 public/
-  "fps": 30, "durationSeconds": 313.27,
-  "lines": [ {"t": 26.36, "section": "verse", "text": "..."} ],
-  "shots": [ {"src": "footage/x-loop.mp4", "start": 0, "end": 15.5,
-              "move": "in", "loopSeconds": 23.0} ]
+  "fps": 30, "durationSeconds": 306.67,
+  "lyricAnchor": "lower",             // 歌词压低,别盖住脸和十字架;默认 center
+  "dissolveSeconds": 0.55,            // 溶解长度,不能超过镜头之间的重叠
+  "showNeighbours": false,            // 上下句虚影;实拍底上会糊成一团
+  "lines": [ {"t": 26.36, "end": 30.1, "section": "verse", "text": "...",
+              "echo": false} ],
+  "shots": [ {"src": "footage/rejoice/S01.mp4", "start": 0, "end": 19.6,
+              "move": "in", "loop": false, "lightRamp": false} ]
 }
 ```
 
-`section` 是 `verse | prechorus | chorus | bridge | outro`,驱动 [lyrics-theme.ts](src/videos/lyrics-theme.ts)
-里的配色、字号、字重。`move` 是运镜方向 `in | out | left | right | up`。
+`section` 是 `intro | verse | prechorus | chorus | bridge | outro`,驱动
+[lyrics-theme.ts](src/videos/lyrics-theme.ts) 里的配色、字号、字重。
+`move` 是运镜方向 `in | out | left | right | up | none`(`none` 给自带运动的镜头,
+比如已经按两倍画幅渲好慢推的静帧)。
+
+每行的 `end` 是**实测的收声时间**,有它就不再用 `MAX_HOLD`;`echo` 标出 `(Rejoice)`
+这类括号回声句,字号和不透明度都会降。镜头的 `loop` 默认关(见下面"坑"),
+`lightRamp` 把镜头从冷影调到满金光——模型不给主体运动,这层只能后期加。
 
 组件只有三个文件:[LyricsVideo.tsx](src/videos/LyricsVideo.tsx)(排版)、
 [FootageLayer.tsx](src/videos/FootageLayer.tsx)(镜位+运镜+统一调色)、
@@ -199,3 +209,43 @@ npm run song:render     # 全片
 **节拍网格从鼓点求,不从相位估计。** 自相关估相位在不同片段会偏 70 毫秒;直接检测鼓的能量
 突变能到 3–7 毫秒。三个鼓点之间的间隔如果能闭合成整数拍,速度就是精确的
 (本曲:150.013 秒 ÷ 180 拍 = 0.8334,即 **72.0 BPM 整**)。
+
+## 第二首:《Rejoice》改了什么
+
+同一套组件跑第二首歌,暴露了三处"只对第一首成立"的假设。都改成了按歌配置,
+`one-breath.json` 行为不变。
+
+**镜头默认不再 loop。** `FootageLayer` 原本无条件用 `<Loop>` 包每个镜头,因为第一首的
+Wan 片是 12.2 秒的 boomerang,回环点本身就是运动反向处,接缝看不见。《Rejoice》的硬规则
+是"绝不 loop、绝不倒放",所以 `loop` 现在要显式打开(旧镜头带 `loopSeconds` 视为打开)。
+更根本的保证在结构上:**每个镜头都预渲染成一个和它在时间轴上等长的文件**,
+镜头不可能被要求重播,因为它从不短于它要填的时间。`scripts/mv/verify_shots.py` 会
+重新量所有文件长度,并逐条比较首帧与末帧——boomerang 和回环都会让末帧回到首帧。
+
+**歌词按实测收尾,不再靠 `MAX_HOLD`。** 一个全局常量分不清"长音"和"间奏":强制对齐给
+这首歌两句报了 22.4 秒和 24.5 秒的结束时间,两句都正好在长间奏前面。`LyricLine` 现在带
+`end`,由 `scripts/align/refine_ends.py` 按人声能量夹出来。阈值不是猜的,是拿标注窗口量的:
+唱的地方在 −23…−27 dB,间奏在 −46…−84 dB,所以门限取 −30 dB。**唯一量不出来的是开头那段**——
+17–33 秒的器乐漏进 demucs 人声轨,峰值到 −23.6 dB,和唱的电平重叠,所以那一句靠上限收。
+
+**`(Rejoice)` 这类回声句要单独放。** 录音里每段副歌只唱两次 `Again I sing, rejoice`,
+歌词表却有三行——中间那行括号里的 `(Rejoice)` 是回声,不是第三句主旋律。用 medium 模型
+逐词量三段副歌尾巴才看清这件事(第三段更明显:`Again I sing` 之后隔 2.1 秒才答 `Rejoice`)。
+所以回声句被放进它所回应的那句后面**实测的静音间隙**里,顺序不变、不并入上一行,
+字号和不透明度都调低。
+
+**别拿上一首的 stem 对齐这一首。** Suno 每首歌导出的文件名都一样(`0 Lead Vocals.mp3`…),
+所以 `stems/` 平铺放两首歌必然出事:《One Breath》是 313.272s,《Rejoice》是 306.672s,
+而 `align_lyrics.py` 原本取 glob 的第一个匹配。**这个错误下游完全看不出来**——每句都拿到
+时间戳,长度也像那么回事,只是全错。现在 `stems/` 一首歌一个目录,`align_lyrics.py`
+递归找,**找到多于一条就直接报错让你用 `--stem` 指定**,不再替你猜。
+长度对不上是第一个线索(注意别信 mp3 头,Lead Vocals 那条头里写 1299.79 秒),
+确认要靠**冷转写**:切一段丢给 whisper,听见 "dust became a soul" 就说明拿错歌了。
+
+**真分轨值得等。** 先用 demucs 分离也能做完,而且拿真分轨复核后位移中位数只有 0.060 秒,
+但两件事只有真分轨能给:
+- **收尾能量可信。** demucs 人声在 17–33 秒有 −23.6 dB 的乐器串音,和唱的电平重叠,
+  开场那句只能靠上限掐掉;真分轨的间奏是 −93…−120 dB 的真静音,量出来是唱到 19.12 秒。
+- **和声单独一轨,回声句才有答案。** demucs 把主唱和和声混在一起,`(Rejoice)` 只能靠
+  推断安放;真分轨里和声轨在第三段副歌两句之间**单独唱**(275.82–278.48),
+  直接证实这一行是和声回应,不是第三句主旋律。

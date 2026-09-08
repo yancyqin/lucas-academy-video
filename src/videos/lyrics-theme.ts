@@ -1,6 +1,6 @@
 import {Easing} from 'remotion';
 
-export type LyricSection = 'verse' | 'prechorus' | 'chorus' | 'bridge' | 'outro';
+export type LyricSection = 'intro' | 'verse' | 'prechorus' | 'chorus' | 'bridge' | 'outro';
 
 export type Palette = {
   base: string;
@@ -14,26 +14,46 @@ export type Palette = {
   drift: 1 | -1;
 };
 
+/**
+ * The lyric face. Didot and Bodoni are the high-contrast Didones that give the V1
+ * design its hairlines; the rest of the stack is there so the film still sets in
+ * a serif if it is ever rendered off this machine.
+ */
+export const LYRIC_FONT =
+  'Didot, "Bodoni 72", "Playfair Display", "Hoefler Text", Baskerville, Garamond, serif';
+
+/** Warm ivory, as in the V1 design -- not white. */
+export const LYRIC_INK = '#f7edd6';
+
 export const PALETTES: Record<LyricSection, Palette> = {
+  /**
+   * Rejoice opens underwater, on "how deep", before any of the warmth arrives --
+   * so the intro is the coldest and quietest plate in the film, and the same words
+   * come back hotter in the bridge and softer in the outro.
+   */
+  intro: {
+    base: '#060a10', glow: 'rgba(64,104,150,.26)', glowAlt: 'rgba(32,54,82,.22)',
+    ink: LYRIC_INK, size: 74, weight: 400, tracking: '.012em', drift: 1,
+  },
   verse: {
     base: '#080a0f', glow: 'rgba(78,104,148,.30)', glowAlt: 'rgba(40,58,84,.24)',
-    ink: '#d6dbe4', size: 78, weight: 300, tracking: '.005em', drift: 1,
+    ink: LYRIC_INK, size: 76, weight: 400, tracking: '.010em', drift: 1,
   },
   prechorus: {
     base: '#0b0a0d', glow: 'rgba(150,116,84,.32)', glowAlt: 'rgba(78,86,116,.26)',
-    ink: '#e7ded2', size: 84, weight: 400, tracking: '.01em', drift: 1,
+    ink: LYRIC_INK, size: 80, weight: 400, tracking: '.010em', drift: 1,
   },
   chorus: {
     base: '#120c07', glow: 'rgba(232,166,74,.42)', glowAlt: 'rgba(196,96,48,.30)',
-    ink: '#fff4e2', size: 106, weight: 700, tracking: '-.02em', drift: -1,
+    ink: LYRIC_INK, size: 92, weight: 500, tracking: '.004em', drift: -1,
   },
   bridge: {
     base: '#050507', glow: 'rgba(206,214,236,.34)', glowAlt: 'rgba(120,92,168,.24)',
-    ink: '#ffffff', size: 94, weight: 600, tracking: '.03em', drift: -1,
+    ink: LYRIC_INK, size: 84, weight: 500, tracking: '.012em', drift: -1,
   },
   outro: {
     base: '#0a0908', glow: 'rgba(214,170,116,.26)', glowAlt: 'rgba(70,74,96,.20)',
-    ink: '#eadfd0', size: 74, weight: 300, tracking: '.02em', drift: -1,
+    ink: LYRIC_INK, size: 74, weight: 400, tracking: '.014em', drift: -1,
   },
 };
 

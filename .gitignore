@@ -30,3 +30,12 @@ svc/*
 # checked-in one-breath.json is the version that matters.
 src/songs/*.aligned.json
 src/songs/*.estimated.json
+
+# Python bytecode from the pipeline scripts.
+__pycache__/
+*.pyc
+
+# Working directories for other threads of work (reframe experiments, staged
+# deletions). Large, regenerated, and not part of any song's build.
+output/
+_review-delete/

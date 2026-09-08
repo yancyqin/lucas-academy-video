@@ -10,6 +10,7 @@ import {
 import introScript from './scripts/intro.en.json';
 import {makeLyricsVideo, type Song} from './videos/LyricsVideo';
 import oneBreath from './songs/one-breath.json';
+import rejoice from './songs/rejoice.json';
 import {
   ROLLER_COASTER_M2_DURATION,
   ROLLER_COASTER_M2_FPS,
@@ -36,9 +37,103 @@ const CHORUS_FROM = 84;
 const CHORUS_SECONDS = 46;
 const OneBreathChorus = makeLyricsVideo(oneBreath as Song, {offsetSeconds: CHORUS_FROM});
 
+const RejoiceVideo = makeLyricsVideo(rejoice as Song);
+/** Three cuts of the same film: lyrics low, lyrics centred, and pictures alone. */
+const RejoiceCenter = makeLyricsVideo(rejoice as Song, {anchor: 'center'});
+const RejoiceClean = makeLyricsVideo(rejoice as Song, {hideLyrics: true});
+/** The cross section into the first chorus -- the part with the most to get wrong. */
+const REJOICE_WINDOW_FROM = 41;
+const REJOICE_WINDOW_SECONDS = 62;
+const RejoiceWindow = makeLyricsVideo(rejoice as Song, {offsetSeconds: REJOICE_WINDOW_FROM});
+/** The nail -> cross -> three crosses -> milky way run, on stills and stock only. */
+const REJOICE_CROSS_FROM = 30;
+const REJOICE_CROSS_SECONDS = 18;
+const RejoiceCross = makeLyricsVideo(rejoice as Song, {offsetSeconds: REJOICE_CROSS_FROM});
+/** First chorus: the silhouette, the clouds, the bubbles and the (Rejoice) echo. */
+const REJOICE_C1_FROM = 66;
+const REJOICE_C1_SECONDS = 38;
+const RejoiceChorus1 = makeLyricsVideo(rejoice as Song, {offsetSeconds: REJOICE_C1_FROM});
+/** A movable window for checking one stretch without paying for the whole film. */
+const REJOICE_PROBE_FROM = 140;
+const REJOICE_PROBE_SECONDS = 28;
+// Centred, to match the version being delivered -- a probe is only useful for
+// confirming a change if it is cut the same way as the film it stands in for.
+const RejoiceProbe = makeLyricsVideo(rejoice as Song, {
+  offsetSeconds: REJOICE_PROBE_FROM,
+  anchor: 'center',
+});
+/** The last chorus: the only place the golden-light clip appears. */
+const REJOICE_FINALE_FROM = 250;
+const REJOICE_FINALE_SECONDS = 57;
+const RejoiceFinale = makeLyricsVideo(rejoice as Song, {offsetSeconds: REJOICE_FINALE_FROM});
+
 export const Root: FC = () => {
   return (
     <>
+      <Composition
+        id="Rejoice"
+        component={RejoiceVideo}
+        durationInFrames={Math.ceil(rejoice.durationSeconds * rejoice.fps)}
+        fps={rejoice.fps}
+        width={1920}
+        height={1080}
+      />
+      <Composition
+        id="RejoiceCenter"
+        component={RejoiceCenter}
+        durationInFrames={Math.ceil(rejoice.durationSeconds * rejoice.fps)}
+        fps={rejoice.fps}
+        width={1920}
+        height={1080}
+      />
+      <Composition
+        id="RejoiceClean"
+        component={RejoiceClean}
+        durationInFrames={Math.ceil(rejoice.durationSeconds * rejoice.fps)}
+        fps={rejoice.fps}
+        width={1920}
+        height={1080}
+      />
+      <Composition
+        id="RejoiceWindow"
+        component={RejoiceWindow}
+        durationInFrames={REJOICE_WINDOW_SECONDS * rejoice.fps}
+        fps={rejoice.fps}
+        width={1920}
+        height={1080}
+      />
+      <Composition
+        id="RejoiceCross"
+        component={RejoiceCross}
+        durationInFrames={REJOICE_CROSS_SECONDS * rejoice.fps}
+        fps={rejoice.fps}
+        width={1920}
+        height={1080}
+      />
+      <Composition
+        id="RejoiceChorus1"
+        component={RejoiceChorus1}
+        durationInFrames={REJOICE_C1_SECONDS * rejoice.fps}
+        fps={rejoice.fps}
+        width={1920}
+        height={1080}
+      />
+      <Composition
+        id="RejoiceProbe"
+        component={RejoiceProbe}
+        durationInFrames={REJOICE_PROBE_SECONDS * rejoice.fps}
+        fps={rejoice.fps}
+        width={1920}
+        height={1080}
+      />
+      <Composition
+        id="RejoiceFinale"
+        component={RejoiceFinale}
+        durationInFrames={REJOICE_FINALE_SECONDS * rejoice.fps}
+        fps={rejoice.fps}
+        width={1920}
+        height={1080}
+      />
       <Composition
         id="OneBreathChorus"
         component={OneBreathChorus}

@@ -35,10 +35,23 @@ def upscale(img: np.ndarray) -> np.ndarray:
                 out[y*4:y*4+hh, x*4:x*4+ww] = r[ty:ty+hh, tx:tx+ww]
     return out
 
-for name in sys.argv[1:]:
-    src = REPO / f't2v/outputs/{name}.mp4'
+for arg in sys.argv[1:]:
+    # A bare name still means t2v/outputs/<name>.mp4; a path lets clips that live
+    # elsewhere (this song keeps its raws in tmp/rejoice/wan/) be upscaled too.
+    src = pathlib.Path(arg) if ('/' in arg or arg.endswith('.mp4')) else REPO / f't2v/outputs/{arg}.mp4'
+    if not src.is_absolute():
+        src = REPO / src
+    name = src.stem
+    if not src.exists():
+        print(f'{arg}: no such clip ({src})', flush=True)
+        continue
+    fps = subprocess.run(['ffprobe','-v','error','-select_streams','v:0',
+                          '-show_entries','stream=r_frame_rate','-of','csv=p=0',str(src)],
+                         capture_output=True, text=True).stdout.strip() or '16/1'
     work = REPO / f'tmp/upscale/{name}'
     work.mkdir(parents=True, exist_ok=True)
+    for old in work.glob('*.png'):
+        old.unlink()                      # a shorter clip must not inherit stale frames
     subprocess.run(['ffmpeg','-v','error','-i',str(src),str(work/'in_%03d.png')], check=True)
     frames = sorted(work.glob('in_*.png'))
     t0 = time.time()
@@ -46,7 +59,7 @@ for name in sys.argv[1:]:
         a = np.asarray(Image.open(f).convert('RGB'), np.float32)/255.0
         Image.fromarray((upscale(a)*255).round().astype(np.uint8)).save(work/f'up_{i+1:03d}.png')
     dst = REPO / f'tmp/upscale/{name}-4x.mp4'
-    subprocess.run(['ffmpeg','-v','error','-framerate','16','-i',str(work/'up_%03d.png'),
+    subprocess.run(['ffmpeg','-v','error','-framerate',fps,'-i',str(work/'up_%03d.png'),
                     '-vf','scale=1920:1080:flags=lanczos','-c:v','libx264','-crf','14',
                     '-pix_fmt','yuv420p','-y',str(dst)], check=True)
     print(f'{name}: {len(frames)} frames in {time.time()-t0:.0f}s -> {dst.name}', flush=True)
