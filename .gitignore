@@ -39,3 +39,6 @@ __pycache__/
 # deletions). Large, regenerated, and not part of any song's build.
 output/
 _review-delete/
+
+# 全人教育: narration tracks, Codex concept images and footage stay local.
+public/whole-person-01/

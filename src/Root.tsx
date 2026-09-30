@@ -1,4 +1,5 @@
 import {Composition} from 'remotion';
+import {WP_DURATION, WP_FPS, WholePersonVideo} from './videos/whole-person-01/WholePersonVideo';
 import type {FC} from 'react';
 import {MonkeySocietyVideo} from './MonkeySocietyVideo';
 import {MonkeyIntroVideo} from './videos/MonkeyIntroVideo';
@@ -206,6 +207,23 @@ export const Root: FC = () => {
         width={1920}
         height={1080}
       />
+      {/* 全人教育① (lucas-academy-media#5): zh (Yancy) / en (Louise) narration + clean master. */}
+      {([
+        ['WholePersonZh', {audio: 'zh', subtitles: true}],
+        ['WholePersonEn', {audio: 'en', subtitles: true}],
+        ['WholePersonClean', {audio: 'none', subtitles: false}],
+      ] as const).map(([id, props]) => (
+        <Composition
+          key={id}
+          id={id}
+          component={WholePersonVideo}
+          defaultProps={props}
+          durationInFrames={WP_DURATION}
+          fps={WP_FPS}
+          width={1920}
+          height={1080}
+        />
+      ))}
     </>
   );
 };
