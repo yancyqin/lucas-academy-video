@@ -28,7 +28,9 @@
     "rejoice:render": "remotion render src/index.ts Rejoice out/rejoice.mp4",
     "rejoice:preview": "remotion render src/index.ts RejoiceWindow out/rejoice-window.mp4",
     "rejoice:finale": "remotion render src/index.ts RejoiceFinale out/rejoice-finale.mp4",
-    "rejoice:shots": ".venv-align/bin/python scripts/mv/build_shots.py"
+    "rejoice:shots": ".venv-align/bin/python scripts/mv/build_shots.py",
+    "wp01:timeline": "python3 scripts/whole-person-01/build_timeline.py",
+    "wp01:render": "remotion render src/index.ts WholePersonZh out/whole-person-01/whole-person-01.zh.mp4 && remotion render src/index.ts WholePersonEn out/whole-person-01/whole-person-01.en.mp4 && remotion render src/index.ts WholePersonClean out/whole-person-01/whole-person-01.clean.mp4"
   },
   "dependencies": {
     "@remotion/cli": "^4.0.484",
