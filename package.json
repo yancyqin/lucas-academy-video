@@ -28,7 +28,10 @@
     "rejoice:render": "remotion render src/index.ts Rejoice out/rejoice.mp4",
     "rejoice:preview": "remotion render src/index.ts RejoiceWindow out/rejoice-window.mp4",
     "rejoice:finale": "remotion render src/index.ts RejoiceFinale out/rejoice-finale.mp4",
-    "rejoice:shots": ".venv-align/bin/python scripts/mv/build_shots.py"
+    "rejoice:shots": ".venv-align/bin/python scripts/mv/build_shots.py",
+    "vgwhy:timeline": "python3 scripts/vg-why/build_timeline.py",
+    "vgwhy:render": "remotion render src/index.ts VgWhyPicture out/vg-why-paint-them/picture.mp4 && python3 scripts/vg-why/deliver.py",
+    "vgwhy:deliver": "python3 scripts/vg-why/deliver.py"
   },
   "dependencies": {
     "@remotion/cli": "^4.0.484",
