@@ -54,8 +54,8 @@ cutting two separate videos.
 
 Every picture is a real work: Van Gogh's paintings, drawings and letter
 sketches, plus Giotto's *Lamentation* (c. 1305) for the halo. No generated
-images (Yancy, 2026-09-30: "完全废除用codex的图"; the earlier Codex set is in
-`archive/vg-why-codex-concepts/`, unused).
+images (Yancy, 2026-09-30: "完全废除用codex的图"; the earlier Codex set has been
+deleted).
 
 - The picture plan is `src/videos/vg-why/shots.ts`: each shot covers a run of
   cues. Kinds: `art` (one work with a camera move), `pair`, `row` (a few works
