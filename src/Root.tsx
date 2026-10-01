@@ -1,4 +1,5 @@
 import {Composition} from 'remotion';
+import {VG_WHY_DURATION, VG_WHY_FPS, VgWhyVideo} from './videos/vg-why/VgWhyVideo';
 import type {FC} from 'react';
 import {MonkeySocietyVideo} from './MonkeySocietyVideo';
 import {MonkeyIntroVideo} from './videos/MonkeyIntroVideo';
@@ -206,6 +207,24 @@ export const Root: FC = () => {
         width={1920}
         height={1080}
       />
+      {/* 梵高为什么画他们？ (lucas-academy-media#3): previews with each track, and the
+          silent picture that scripts/vg-why/deliver.py muxes both tracks onto. */}
+      {([
+        ['VgWhyZh', {audio: 'zh'}],
+        ['VgWhyEn', {audio: 'en'}],
+        ['VgWhyPicture', {audio: 'none'}],
+      ] as const).map(([id, props]) => (
+        <Composition
+          key={id}
+          id={id}
+          component={VgWhyVideo}
+          defaultProps={props}
+          durationInFrames={VG_WHY_DURATION}
+          fps={VG_WHY_FPS}
+          width={1920}
+          height={1080}
+        />
+      ))}
     </>
   );
 };

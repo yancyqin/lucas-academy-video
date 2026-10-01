@@ -1,0 +1,1105 @@
+{
+ "fps": 30,
+ "durationSeconds": 429.49,
+ "endCardStart": 422.49,
+ "cues": [
+  {
+   "id": "vg01-01",
+   "section": "vg01",
+   "zh": "一个邮局职员，一个画家朋友。",
+   "en": "A postal worker and an artist friend.",
+   "start": 1.0,
+   "end": 5.83,
+   "speech": {
+    "zh": {
+     "start": 1.2,
+     "end": 5.28
+    },
+    "en": {
+     "start": 1.2,
+     "end": 4.0
+    }
+   }
+  },
+  {
+   "id": "vg01-02",
+   "section": "vg01",
+   "zh": "梵高为什么要为他们画肖像？",
+   "en": "Why did Van Gogh paint their portraits?",
+   "start": 5.83,
+   "end": 10.58,
+   "speech": {
+    "zh": {
+     "start": 6.03,
+     "end": 10.03
+    },
+    "en": {
+     "start": 6.03,
+     "end": 9.23
+    }
+   }
+  },
+  {
+   "id": "vg01-03",
+   "section": "vg01",
+   "zh": "你看，他把胡子一笔一笔画出来，把蓝色制服上的金字也画得很仔细。",
+   "en": "Look at the careful strokes in the beard, and the gold letters on the blue uniform.",
+   "start": 10.58,
+   "end": 19.21,
+   "speech": {
+    "zh": {
+     "start": 10.78,
+     "end": 18.66
+    },
+    "en": {
+     "start": 10.78,
+     "end": 15.89
+    }
+   }
+  },
+  {
+   "id": "vg01-04",
+   "section": "vg01",
+   "zh": "另一个人的身后，竟然是一片星空。",
+   "en": "Behind the other man, there is a sky full of stars.",
+   "start": 19.21,
+   "end": 24.68,
+   "speech": {
+    "zh": {
+     "start": 19.41,
+     "end": 23.33
+    },
+    "en": {
+     "start": 19.41,
+     "end": 23.21
+    }
+   }
+  },
+  {
+   "id": "vg01-05",
+   "section": "vg01",
+   "zh": "今天，我们从这两个人开始，认识梵高。",
+   "en": "Today, these two people will help us get to know Van Gogh.",
+   "start": 24.68,
+   "end": 31.55,
+   "speech": {
+    "zh": {
+     "start": 24.88,
+     "end": 30.1
+    },
+    "en": {
+     "start": 24.88,
+     "end": 28.56
+    }
+   }
+  },
+  {
+   "id": "vg02-01",
+   "section": "vg02",
+   "zh": "梵高是一位出生在荷兰的画家，后来在法国生活、画画。",
+   "en": "Van Gogh was a painter born in the Netherlands. Later, he lived and painted in France.",
+   "start": 31.55,
+   "end": 39.52,
+   "speech": {
+    "zh": {
+     "start": 31.75,
+     "end": 38.97
+    },
+    "en": {
+     "start": 31.75,
+     "end": 37.75
+    }
+   }
+  },
+  {
+   "id": "vg02-02",
+   "section": "vg02",
+   "zh": "他画过星空、麦田、花，也画过许多普通人。",
+   "en": "He painted stars, fields, flowers, and many ordinary people.",
+   "start": 39.52,
+   "end": 47.72,
+   "speech": {
+    "zh": {
+     "start": 39.72,
+     "end": 46.57
+    },
+    "en": {
+     "start": 39.72,
+     "end": 44.72
+    }
+   }
+  },
+  {
+   "id": "vg02-03",
+   "section": "vg02",
+   "zh": "他留下的书信，让我们知道他在想什么。",
+   "en": "His letters help us understand what he was thinking.",
+   "start": 47.72,
+   "end": 52.61,
+   "speech": {
+    "zh": {
+     "start": 47.92,
+     "end": 52.06
+    },
+    "en": {
+     "start": 47.92,
+     "end": 51.88
+    }
+   }
+  },
+  {
+   "id": "vg02-04",
+   "section": "vg02",
+   "zh": "今天，我们一边看画，一边读几句他的信。",
+   "en": "We will look at his paintings and read a few words from those letters.",
+   "start": 52.61,
+   "end": 60.14,
+   "speech": {
+    "zh": {
+     "start": 52.81,
+     "end": 57.89
+    },
+    "en": {
+     "start": 52.81,
+     "end": 56.65
+    }
+   }
+  },
+  {
+   "id": "vg03-01",
+   "section": "vg03",
+   "zh": "这个大胡子的人叫约瑟夫·鲁兰。",
+   "en": "The man with the big beard is Joseph Roulin.",
+   "start": 60.14,
+   "end": 65.13,
+   "speech": {
+    "zh": {
+     "start": 60.34,
+     "end": 64.58
+    },
+    "en": {
+     "start": 60.34,
+     "end": 63.38
+    }
+   }
+  },
+  {
+   "id": "vg03-02",
+   "section": "vg03",
+   "zh": "他在阿尔勒的火车站做邮件收发工作。",
+   "en": "He handled mail at the railway station in Arles.",
+   "start": 65.13,
+   "end": 70.6,
+   "speech": {
+    "zh": {
+     "start": 65.33,
+     "end": 70.05
+    },
+    "en": {
+     "start": 65.33,
+     "end": 69.01
+    }
+   }
+  },
+  {
+   "id": "vg03-03",
+   "section": "vg03",
+   "zh": "大家常把这幅画叫作《邮差鲁兰》。",
+   "en": "This painting is often called Portrait of Postman Roulin.",
+   "start": 70.6,
+   "end": 76.23,
+   "speech": {
+    "zh": {
+     "start": 70.8,
+     "end": 75.68
+    },
+    "en": {
+     "start": 70.8,
+     "end": 75.08
+    }
+   }
+  },
+  {
+   "id": "vg03-04",
+   "section": "vg03",
+   "zh": "你看他的帽子、金色纽扣，还有一笔一笔的胡子。",
+   "en": "Look at his cap, the gold buttons, and all those strokes in his beard.",
+   "start": 76.23,
+   "end": 84.1,
+   "speech": {
+    "zh": {
+     "start": 76.43,
+     "end": 82.55
+    },
+    "en": {
+     "start": 76.43,
+     "end": 80.83
+    }
+   }
+  },
+  {
+   "id": "vg03-05",
+   "section": "vg03",
+   "zh": "梵高在信里说，他是“一个比许多人更有意思的人”。",
+   "en": "Van Gogh called him “A more interesting man than many people.”",
+   "start": 84.1,
+   "end": 91.65,
+   "speech": {
+    "zh": {
+     "start": 84.3,
+     "end": 90.1
+    },
+    "en": {
+     "start": 84.3,
+     "end": 88.9
+    }
+   }
+  },
+  {
+   "id": "vg03-06",
+   "section": "vg03",
+   "zh": "他还画了鲁兰的妻子和孩子。",
+   "en": "He also painted Roulin's wife and children.",
+   "start": 91.65,
+   "end": 97.24,
+   "speech": {
+    "zh": {
+     "start": 91.85,
+     "end": 95.69
+    },
+    "en": {
+     "start": 91.85,
+     "end": 94.53
+    }
+   }
+  },
+  {
+   "id": "vg03-07",
+   "section": "vg03",
+   "zh": "这个住在附近的家庭，值得他一次又一次地画。",
+   "en": "This nearby family was worth painting again and again.",
+   "start": 97.24,
+   "end": 106.01,
+   "speech": {
+    "zh": {
+     "start": 97.44,
+     "end": 102.06
+    },
+    "en": {
+     "start": 97.44,
+     "end": 101.28
+    }
+   }
+  },
+  {
+   "id": "vg04-01",
+   "section": "vg04",
+   "zh": "这段友情还有另一面。",
+   "en": "There was another side to this friendship.",
+   "start": 106.01,
+   "end": 109.14,
+   "speech": {
+    "zh": {
+     "start": 106.21,
+     "end": 108.57
+    },
+    "en": {
+     "start": 106.21,
+     "end": 108.59
+    }
+   }
+  },
+  {
+   "id": "vg04-02",
+   "section": "vg04",
+   "zh": "梵高生病住院时，鲁兰和一位清洁女工帮他照看、收拾了家。",
+   "en": "When Van Gogh was ill and in hospital, Roulin and a cleaning woman looked after his home and put it in order.",
+   "start": 109.14,
+   "end": 119.79,
+   "speech": {
+    "zh": {
+     "start": 109.34,
+     "end": 117.42
+    },
+    "en": {
+     "start": 109.34,
+     "end": 118.24
+    }
+   }
+  },
+  {
+   "id": "vg04-03",
+   "section": "vg04",
+   "zh": "梵高把这件事写进给弟弟的信里。",
+   "en": "Van Gogh told his brother about it in a letter.",
+   "start": 119.79,
+   "end": 125.5,
+   "speech": {
+    "zh": {
+     "start": 119.99,
+     "end": 124.95
+    },
+    "en": {
+     "start": 119.99,
+     "end": 123.75
+    }
+   }
+  },
+  {
+   "id": "vg04-04",
+   "section": "vg04",
+   "zh": "一个人认真画朋友，朋友在他需要的时候来帮忙。",
+   "en": "He took care in painting his friend, and his friend helped him when he needed it.",
+   "start": 125.5,
+   "end": 132.67,
+   "speech": {
+    "zh": {
+     "start": 125.7,
+     "end": 132.12
+    },
+    "en": {
+     "start": 125.7,
+     "end": 130.7
+    }
+   }
+  },
+  {
+   "id": "vg04-05",
+   "section": "vg04",
+   "zh": "这让我们想到：爱也可以是一件很小、很实在的事。",
+   "en": "It reminds us that love can be a small, practical act.",
+   "start": 132.67,
+   "end": 140.52,
+   "speech": {
+    "zh": {
+     "start": 132.87,
+     "end": 139.07
+    },
+    "en": {
+     "start": 132.87,
+     "end": 136.99
+    }
+   }
+  },
+  {
+   "id": "vg05-01",
+   "section": "vg05",
+   "zh": "再看另一个人。他叫欧仁·博赫，也是画家。",
+   "en": "Now look at the other man. His name was Eugène Boch, and he was a painter too.",
+   "start": 140.52,
+   "end": 147.25,
+   "speech": {
+    "zh": {
+     "start": 140.72,
+     "end": 146.46
+    },
+    "en": {
+     "start": 140.72,
+     "end": 146.7
+    }
+   }
+  },
+  {
+   "id": "vg05-02",
+   "section": "vg05",
+   "zh": "梵高给这幅画起了一个名字：《诗人》。",
+   "en": "Van Gogh called this portrait The Poet.",
+   "start": 147.25,
+   "end": 153.12,
+   "speech": {
+    "zh": {
+     "start": 147.45,
+     "end": 152.57
+    },
+    "en": {
+     "start": 147.45,
+     "end": 150.01
+    }
+   }
+  },
+  {
+   "id": "vg05-03",
+   "section": "vg05",
+   "zh": "这里的“诗人”是画名，博赫的工作是画画。",
+   "en": "That was the painting's name; Boch was an artist.",
+   "start": 153.12,
+   "end": 159.21,
+   "speech": {
+    "zh": {
+     "start": 153.32,
+     "end": 158.66
+    },
+    "en": {
+     "start": 153.32,
+     "end": 157.2
+    }
+   }
+  },
+  {
+   "id": "vg05-04",
+   "section": "vg05",
+   "zh": "他穿着黄色外套，身后是深蓝的天空和小小的星星。",
+   "en": "He wears a yellow jacket, with a deep blue sky and small stars behind him.",
+   "start": 159.21,
+   "end": 167.88,
+   "speech": {
+    "zh": {
+     "start": 159.41,
+     "end": 166.53
+    },
+    "en": {
+     "start": 159.41,
+     "end": 165.15
+    }
+   }
+  },
+  {
+   "id": "vg05-05",
+   "section": "vg05",
+   "zh": "亮的黄色，遇到深的蓝色，让这个人一下子被我们看见。",
+   "en": "The bright yellow against the dark blue draws our eyes straight to him.",
+   "start": 167.88,
+   "end": 178.8,
+   "speech": {
+    "zh": {
+     "start": 168.08,
+     "end": 175.85
+    },
+    "en": {
+     "start": 168.08,
+     "end": 172.58
+    }
+   }
+  },
+  {
+   "id": "vg06-01",
+   "section": "vg06",
+   "zh": "在画这幅肖像之前，梵高写过一个想法：",
+   "en": "Before making this portrait, Van Gogh wrote about an idea.",
+   "start": 178.8,
+   "end": 184.35,
+   "speech": {
+    "zh": {
+     "start": 179.0,
+     "end": 183.8
+    },
+    "en": {
+     "start": 179.0,
+     "end": 182.84
+    }
+   }
+  },
+  {
+   "id": "vg06-02",
+   "section": "vg06",
+   "zh": "他想画一位艺术家朋友，把自己对朋友的爱放进画里。",
+   "en": "He wanted to paint an artist friend and express his love for that friend.",
+   "start": 184.35,
+   "end": 191.34,
+   "speech": {
+    "zh": {
+     "start": 184.55,
+     "end": 190.79
+    },
+    "en": {
+     "start": 184.55,
+     "end": 189.03
+    }
+   }
+  },
+  {
+   "id": "vg06-03",
+   "section": "vg06",
+   "zh": "他想让明亮的头发，衬在很深的蓝色前面，像天空里的一颗星。",
+   "en": "He imagined bright hair against a rich blue background, like a star in the sky.",
+   "start": 191.34,
+   "end": 199.67,
+   "speech": {
+    "zh": {
+     "start": 191.54,
+     "end": 199.12
+    },
+    "en": {
+     "start": 191.54,
+     "end": 197.28
+    }
+   }
+  },
+  {
+   "id": "vg06-04",
+   "section": "vg06",
+   "zh": "他用了几个字：“我画出无限。”",
+   "en": "He wrote, “I paint the infinite.”",
+   "start": 199.67,
+   "end": 206.34,
+   "speech": {
+    "zh": {
+     "start": 199.87,
+     "end": 204.59
+    },
+    "en": {
+     "start": 199.87,
+     "end": 203.29
+    }
+   }
+  },
+  {
+   "id": "vg06-05",
+   "section": "vg06",
+   "zh": "听起来有一点难。",
+   "en": "That sounds a little difficult.",
+   "start": 206.34,
+   "end": 209.21,
+   "speech": {
+    "zh": {
+     "start": 206.54,
+     "end": 208.66
+    },
+    "en": {
+     "start": 206.54,
+     "end": 208.38
+    }
+   }
+  },
+  {
+   "id": "vg06-06",
+   "section": "vg06",
+   "zh": "我们可以这样想：他想给珍惜的朋友，一个比房间更大的世界。",
+   "en": "Here is one way to picture it: a world much larger than a room, made for someone he cared about.",
+   "start": 209.21,
+   "end": 220.06,
+   "speech": {
+    "zh": {
+     "start": 209.41,
+     "end": 217.61
+    },
+    "en": {
+     "start": 209.41,
+     "end": 216.33
+    }
+   }
+  },
+  {
+   "id": "vg07-01",
+   "section": "vg07",
+   "zh": "梵高还写过：他希望画能像音乐一样，给人安慰。",
+   "en": "Van Gogh also wrote that he wanted a painting to offer comfort, like music.",
+   "start": 220.06,
+   "end": 227.23,
+   "speech": {
+    "zh": {
+     "start": 220.26,
+     "end": 226.68
+    },
+    "en": {
+     "start": 220.26,
+     "end": 225.84
+    }
+   }
+  },
+  {
+   "id": "vg07-02",
+   "section": "vg07",
+   "zh": "过去，一些画家用人物头后的光圈表示神圣。",
+   "en": "Earlier artists often used a halo behind a person's head to show holiness.",
+   "start": 227.23,
+   "end": 234.86,
+   "speech": {
+    "zh": {
+     "start": 227.43,
+     "end": 233.51
+    },
+    "en": {
+     "start": 227.43,
+     "end": 233.07
+    }
+   }
+  },
+  {
+   "id": "vg07-03",
+   "section": "vg07",
+   "zh": "梵高想用颜色的光亮，表达人物身上说不清的“永恒”。",
+   "en": "Van Gogh wanted glowing colour to suggest something eternal in a person.",
+   "start": 234.86,
+   "end": 242.83,
+   "speech": {
+    "zh": {
+     "start": 235.06,
+     "end": 242.28
+    },
+    "en": {
+     "start": 235.06,
+     "end": 239.54
+    }
+   }
+  },
+  {
+   "id": "vg07-04",
+   "section": "vg07",
+   "zh": "我们再看博赫：黄色外套、深蓝天空、点点星光。",
+   "en": "Look again at Boch: the yellow jacket, the deep blue sky, and the little stars.",
+   "start": 242.83,
+   "end": 251.6,
+   "speech": {
+    "zh": {
+     "start": 243.03,
+     "end": 251.05
+    },
+    "en": {
+     "start": 243.03,
+     "end": 249.29
+    }
+   }
+  },
+  {
+   "id": "vg07-05",
+   "section": "vg07",
+   "zh": "颜色不只告诉我们衣服是什么颜色，也能让我们有一种感受。",
+   "en": "Colour can show us more than the colour of clothes. It can make us feel something.",
+   "start": 251.6,
+   "end": 260.22,
+   "speech": {
+    "zh": {
+     "start": 251.8,
+     "end": 257.77
+    },
+    "en": {
+     "start": 251.8,
+     "end": 257.24
+    }
+   }
+  },
+  {
+   "id": "vg08-01",
+   "section": "vg08",
+   "zh": "珍惜一个人，也可以不用画他的脸。",
+   "en": "You can show care for someone without painting their face.",
+   "start": 260.22,
+   "end": 264.59,
+   "speech": {
+    "zh": {
+     "start": 260.42,
+     "end": 263.94
+    },
+    "en": {
+     "start": 260.42,
+     "end": 264.04
+    }
+   }
+  },
+  {
+   "id": "vg08-02",
+   "section": "vg08",
+   "zh": "这幅《盛开的杏花》，是梵高送给刚出生的小侄子的礼物。",
+   "en": "Van Gogh made Almond Blossom as a gift for his newborn nephew.",
+   "start": 264.59,
+   "end": 271.84,
+   "speech": {
+    "zh": {
+     "start": 264.79,
+     "end": 271.29
+    },
+    "en": {
+     "start": 264.79,
+     "end": 269.47
+    }
+   }
+  },
+  {
+   "id": "vg08-03",
+   "section": "vg08",
+   "zh": "蓝天下，细细的枝条开出白花。",
+   "en": "White flowers open on slender branches against a blue sky.",
+   "start": 271.84,
+   "end": 279.31,
+   "speech": {
+    "zh": {
+     "start": 272.04,
+     "end": 277.56
+    },
+    "en": {
+     "start": 272.04,
+     "end": 276.22
+    }
+   }
+  },
+  {
+   "id": "vg08-04",
+   "section": "vg08",
+   "zh": "一个新生命来了，他用一幅画欢迎这个孩子。",
+   "en": "A new life had arrived, and he welcomed the child with a painting.",
+   "start": 279.31,
+   "end": 286.7,
+   "speech": {
+    "zh": {
+     "start": 279.51,
+     "end": 285.25
+    },
+    "en": {
+     "start": 279.51,
+     "end": 284.39
+    }
+   }
+  },
+  {
+   "id": "vg09-01",
+   "section": "vg09",
+   "zh": "再看《星空》。",
+   "en": "Now look at The Starry Night.",
+   "start": 286.7,
+   "end": 290.09,
+   "speech": {
+    "zh": {
+     "start": 286.9,
+     "end": 288.42
+    },
+    "en": {
+     "start": 286.9,
+     "end": 289.54
+    }
+   }
+  },
+  {
+   "id": "vg09-02",
+   "section": "vg09",
+   "zh": "天空里的线条在转，地上的村庄很安静。",
+   "en": "Lines turn through the sky, while the village below is quiet.",
+   "start": 290.09,
+   "end": 297.62,
+   "speech": {
+    "zh": {
+     "start": 290.29,
+     "end": 296.07
+    },
+    "en": {
+     "start": 290.29,
+     "end": 294.29
+    }
+   }
+  },
+  {
+   "id": "vg09-03",
+   "section": "vg09",
+   "zh": "这幅画有梵高看到的东西，也有他的记忆和想象。",
+   "en": "Van Gogh brought together things he had seen, remembered, and imagined.",
+   "start": 297.62,
+   "end": 304.27,
+   "speech": {
+    "zh": {
+     "start": 297.82,
+     "end": 303.72
+    },
+    "en": {
+     "start": 297.82,
+     "end": 302.58
+    }
+   }
+  },
+  {
+   "id": "vg09-04",
+   "section": "vg09",
+   "zh": "我们可以先问：你最先看见哪里？",
+   "en": "Where do your eyes go first?",
+   "start": 304.27,
+   "end": 310.68,
+   "speech": {
+    "zh": {
+     "start": 304.47,
+     "end": 308.33
+    },
+    "en": {
+     "start": 304.47,
+     "end": 306.55
+    }
+   }
+  },
+  {
+   "id": "vg09-05",
+   "section": "vg09",
+   "zh": "哪条线让你觉得安静？",
+   "en": "Which line feels peaceful?",
+   "start": 310.68,
+   "end": 317.03,
+   "speech": {
+    "zh": {
+     "start": 310.88,
+     "end": 314.68
+    },
+    "en": {
+     "start": 310.88,
+     "end": 312.5
+    }
+   }
+  },
+  {
+   "id": "vg09-06",
+   "section": "vg09",
+   "zh": "哪条线让你觉得有力量？",
+   "en": "Which line feels full of energy?",
+   "start": 317.03,
+   "end": 323.26,
+   "speech": {
+    "zh": {
+     "start": 317.23,
+     "end": 320.91
+    },
+    "en": {
+     "start": 317.23,
+     "end": 319.49
+    }
+   }
+  },
+  {
+   "id": "vg09-07",
+   "section": "vg09",
+   "zh": "你可以说出自己的感受。",
+   "en": "You can tell us what you feel.",
+   "start": 323.26,
+   "end": 329.01,
+   "speech": {
+    "zh": {
+     "start": 323.46,
+     "end": 326.36
+    },
+    "en": {
+     "start": 323.46,
+     "end": 325.74
+    }
+   }
+  },
+  {
+   "id": "vg10-01",
+   "section": "vg10",
+   "zh": "这些画和书信，启发了我们的几节美术课，叫作《爱是永恒》。",
+   "en": "These paintings and letters inspired several art lessons called Love Is What Lasts.",
+   "start": 329.01,
+   "end": 338.32,
+   "speech": {
+    "zh": {
+     "start": 329.21,
+     "end": 337.77
+    },
+    "en": {
+     "start": 329.21,
+     "end": 334.79
+    }
+   }
+  },
+  {
+   "id": "vg10-02",
+   "section": "vg10",
+   "zh": "在课程里，我们也读圣经、谈信、望和爱。",
+   "en": "We also read the Bible and talk about faith, hope, and love.",
+   "start": 338.32,
+   "end": 345.85,
+   "speech": {
+    "zh": {
+     "start": 338.52,
+     "end": 345.3
+    },
+    "en": {
+     "start": 338.52,
+     "end": 344.24
+    }
+   }
+  },
+  {
+   "id": "vg10-03",
+   "section": "vg10",
+   "zh": "课程把这些想法放在一起，这是我们自己的信仰理解。",
+   "en": "Bringing these ideas together is our own Christian reading.",
+   "start": 345.85,
+   "end": 352.48,
+   "speech": {
+    "zh": {
+     "start": 346.05,
+     "end": 351.93
+    },
+    "en": {
+     "start": 346.05,
+     "end": 350.21
+    }
+   }
+  },
+  {
+   "id": "vg10-04",
+   "section": "vg10",
+   "zh": "第一节，记住一个感到被爱的时刻。",
+   "en": "In the first lesson, remember a moment when you felt loved.",
+   "start": 352.48,
+   "end": 358.17,
+   "speech": {
+    "zh": {
+     "start": 352.68,
+     "end": 357.62
+    },
+    "en": {
+     "start": 352.68,
+     "end": 356.8
+    }
+   }
+  },
+  {
+   "id": "vg10-05",
+   "section": "vg10",
+   "zh": "第二节，用线条和背景，画出你希望一直留下的东西。",
+   "en": "In the second, use lines and a background to show what you hope will last.",
+   "start": 358.17,
+   "end": 365.78,
+   "speech": {
+    "zh": {
+     "start": 358.37,
+     "end": 365.23
+    },
+    "en": {
+     "start": 358.37,
+     "end": 363.45
+    }
+   }
+  },
+  {
+   "id": "vg10-06",
+   "section": "vg10",
+   "zh": "第三节，多看一个人一会儿，再开始画。",
+   "en": "In the third, spend longer looking at a person before you draw.",
+   "start": 365.78,
+   "end": 372.33,
+   "speech": {
+    "zh": {
+     "start": 365.98,
+     "end": 371.78
+    },
+    "en": {
+     "start": 365.98,
+     "end": 369.88
+    }
+   }
+  },
+  {
+   "id": "vg10-07",
+   "section": "vg10",
+   "zh": "第四节，想想身边的普通人，谁值得被认真看见。",
+   "en": "In the fourth, think about an ordinary person who deserves our attention.",
+   "start": 372.33,
+   "end": 379.88,
+   "speech": {
+    "zh": {
+     "start": 372.53,
+     "end": 379.33
+    },
+    "en": {
+     "start": 372.53,
+     "end": 377.77
+    }
+   }
+  },
+  {
+   "id": "vg10-09",
+   "section": "vg10",
+   "zh": "还有很多课程正在构思，目的是给每个孩子的表达留一个位置，让他们的感受都被认真地看见。",
+   "en": "Many more lessons are being planned. The aim is to make room for every child's expression, so that their feelings are truly seen.",
+   "start": 379.88,
+   "end": 390.33,
+   "speech": {
+    "zh": {
+     "start": 380.08,
+     "end": 388.98
+    },
+    "en": {
+     "start": 380.08,
+     "end": 388.04
+    }
+   }
+  },
+  {
+   "id": "vg10-10",
+   "section": "vg10",
+   "zh": "孩子可以选自己的颜色和画法。",
+   "en": "Children can choose their own colours and ways of drawing.",
+   "start": 390.33,
+   "end": 394.48,
+   "speech": {
+    "zh": {
+     "start": 390.53,
+     "end": 393.71
+    },
+    "en": {
+     "start": 390.53,
+     "end": 393.93
+    }
+   }
+  },
+  {
+   "id": "vg10-11",
+   "section": "vg10",
+   "zh": "老师帮助他们把自己的想法说清楚、画出来。",
+   "en": "Teachers help them say and show what they mean.",
+   "start": 394.48,
+   "end": 401.12,
+   "speech": {
+    "zh": {
+     "start": 394.68,
+     "end": 399.67
+    },
+    "en": {
+     "start": 394.68,
+     "end": 398.24
+    }
+   }
+  },
+  {
+   "id": "vg11-01",
+   "section": "vg11",
+   "zh": "梵高把身边的人，留在了他的画里。",
+   "en": "Van Gogh kept people close to him in his paintings.",
+   "start": 401.12,
+   "end": 408.47,
+   "speech": {
+    "zh": {
+     "start": 401.32,
+     "end": 405.92
+    },
+    "en": {
+     "start": 401.32,
+     "end": 404.88
+    }
+   }
+  },
+  {
+   "id": "vg11-02",
+   "section": "vg11",
+   "zh": "轮到你时，你想认真看看谁？",
+   "en": "Who would you like to look at more carefully?",
+   "start": 408.47,
+   "end": 414.84,
+   "speech": {
+    "zh": {
+     "start": 408.67,
+     "end": 412.49
+    },
+    "en": {
+     "start": 408.67,
+     "end": 411.81
+    }
+   }
+  },
+  {
+   "id": "vg11-03",
+   "section": "vg11",
+   "zh": "你又想把哪个珍惜的时刻，画下来？",
+   "en": "What precious moment would you like to put into a picture?",
+   "start": 414.84,
+   "end": 422.49,
+   "speech": {
+    "zh": {
+     "start": 415.04,
+     "end": 418.8
+    },
+    "en": {
+     "start": 415.04,
+     "end": 418.84
+    }
+   }
+  }
+ ]
+}

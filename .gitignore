@@ -39,3 +39,12 @@ __pycache__/
 # deletions). Large, regenerated, and not part of any song's build.
 output/
 _review-delete/
+
+# Van Gogh video (media#3): the paintings, the room music and the generated
+# narration (cloned voices) stay local. art/SOURCES.txt and music/SOURCE.md
+# record where each came from; scripts/vg-why/fetch_assets.py restores the
+# pictures and the music, and lucas-academy-media regenerates the narration.
+public/vg-why-paint-them/art/*.jpg
+public/vg-why-paint-them/art/tiles/
+public/vg-why-paint-them/music/*.mp3
+public/vg-why-paint-them/audio/
