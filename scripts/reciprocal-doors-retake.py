@@ -3,7 +3,7 @@
 For every line of a track whose WAV is missing, synthesize it with the line's
 own settings (text, instruct, mode, speed from the media script), transcribe
 it, and keep the first take that reads right: a whole-line match (English
->= 0.9, Chinese >= 0.85 with common homophones folded) plus any words a line
+>= 0.9, Chinese >= 0.94 with common homophones folded) plus any words a line
 must or must not contain. Up to TRIES takes; a line with no good take is
 reported and left missing.
 
@@ -53,7 +53,7 @@ RULES = {
     ("en", "rd06-05"): (["tries the"], []),
     ("zh", "rd01-02"): (["把故事"], []),
     ("zh", "rd02-03"): (["练认字|練認字"], ["恋人"]),
-    ("zh", "rd03-05"): (["难|難"], []),
+    ("zh", "rd03-05"): (["难|難"], ["呵呵"]),  # a stretched breath turned into 呵呵
     ("zh", "rd05-04"): (["事"], ["事儿"]),
     ("zh", "rd06-04"): (["交换|交換"], ["的"]),
     ("zh", "rd06-06"): (["听一听|聽一聽"], []),
@@ -62,7 +62,8 @@ RULES = {
     ("zh", "rd01-05"): (["有些孩子"], []),
     ("zh", "rd06-01"): (["倒了"], ["到了"]),
     ("zh", "rd07-05"): (["理解故事时"], ["答"]),
-    ("zh", "rd07-06"): (["练认字|練認字"], ["脸认字"]),
+    ("zh", "rd07-06"): (["练认字|練認字"], ["脸认字", "恋爱"]),
+    ("zh", "rd07-03"): (["图画|圖畫"], ["读话"]),
     ("zh", "rd09-02"): (["一起讲|一起講"], []),
     ("zh", "rd06-08"): (["确认意思|確認意思"], ["一次"]),
 }

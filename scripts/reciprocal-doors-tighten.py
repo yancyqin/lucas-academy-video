@@ -68,7 +68,7 @@ def main() -> None:
         before = after = 0.0
         for wav in sorted(source.glob("rd*.wav")):
             if not re.fullmatch(r"rd\d\d-\d\d(-p\d)?\.wav", wav.name):
-                continue  # trial takes (.try*, .fit*) are not narration
+                continue  # trial takes (.try*) are not narration
             y, sr = sf.read(wav, dtype="float32")
             t = tighten(y, sr)
             sf.write(target / wav.name, t, sr, subtype="PCM_16")

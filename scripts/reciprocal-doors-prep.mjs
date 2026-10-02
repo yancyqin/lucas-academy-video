@@ -35,6 +35,15 @@ const SCENE_TAIL = 0.9; // breath after the last line of a scene
 const CHUNK_GAP = 0.45;
 const PART_GAP = 0.3;
 const DEMO_GAP = 0.55; // a taught phrase gets room on both sides
+// Playback tempo per film. Viewers found the Chinese film right at 1.5x; the
+// owner chose 1.3x (2026-10-02). The narration is time-stretched (ffmpeg atempo,
+// pitch kept -- the same kind of stretch a player's speed setting uses, so the
+// verified takes stay as they were) and the film's pauses shrink with it. The
+// taught phrases (demo parts) keep their slow reading.
+const TEMPO = {zh: 1.3, en: 1.0};
+// Lines whose stretched take reads wrong get a take voiced at the fast pace instead
+// (scripts/reciprocal-doors-fast.py, already tightened); those play as they are.
+const fastDir = {zh: resolve(media, 'fangfang/zh/reciprocal-doors-fast')};
 const END_CARD = 4.5;
 const TRACKS = ['zh', 'en'];
 
@@ -48,8 +57,8 @@ const duration = (file) =>
 // CosyVoice pads each line with ~0.5 s of leading/trailing silence; the timeline
 // sets the pauses itself, so strip the padding (pauses inside a line stay).
 const EDGE = 'silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.06';
-const trimSilence = (source, target) =>
-  execFileSync('ffmpeg', ['-y', '-loglevel', 'error', '-i', source, '-af', `${EDGE},areverse,${EDGE},areverse`, target]);
+const trimSilence = (source, target, tempo = 1) =>
+  execFileSync('ffmpeg', ['-y', '-loglevel', 'error', '-i', source, '-af', `${EDGE},areverse,${EDGE},areverse${tempo === 1 ? '' : `,atempo=${tempo}`}`, target]);
 
 const estimate = (part) =>
   part.lang === 'zh'
@@ -73,18 +82,20 @@ const measured = script.segments.map((segment) =>
       let offset = 0;
       tracks[track] = parts.map((part, index) => {
         const id = parts.length === 1 ? chunk.id : `${chunk.id}-p${index + 1}`;
-        const source = resolve(narrationDir[track], `${id}.wav`);
+        const fast = !part.demo && fastDir[track] && resolve(fastDir[track], `${id}.wav`);
+        const useFast = Boolean(fast && existsSync(fast));
+        const source = useFast ? fast : resolve(narrationDir[track], `${id}.wav`);
         let seconds;
         let file = null;
         if (existsSync(source)) {
           file = `audio/reciprocal-doors/${track}/${id}.wav`;
-          trimSilence(source, resolve(root, 'public', file));
+          trimSilence(source, resolve(root, 'public', file), part.demo || useFast ? 1 : TEMPO[track]);
           seconds = duration(resolve(root, 'public', file));
         } else {
           seconds = estimate(part);
           missing.push(`${track}/${id}`);
         }
-        if (index > 0) offset += part.demo || parts[index - 1].demo ? DEMO_GAP : PART_GAP;
+        if (index > 0) offset += (part.demo || parts[index - 1].demo ? DEMO_GAP : PART_GAP) / TEMPO[track];
         const placed = {id, file, lang: part.lang, demo: Boolean(part.demo), offset: round(offset), seconds: round(seconds)};
         offset += seconds;
         return placed;
@@ -110,13 +121,13 @@ for (const film of TRACKS) {
   const segments = script.segments.map((segment, s) => {
     const start = t;
     const chunks = segment.chunks.map((chunk, position) => {
-      t += chunk.pause ?? (position === 0 ? SCENE_LEAD : CHUNK_GAP);
+      t += (chunk.pause ?? (position === 0 ? SCENE_LEAD : CHUNK_GAP)) / TEMPO[film];
       const {tracks, spoken} = measured[s][position];
       const placed = {id: chunk.id, zh: plain(chunk.zh), en: plain(chunk.en), start: round(t), slot: spoken[film], spoken, tracks: {[film]: tracks[film]}};
       t += spoken[film];
       return placed;
     });
-    t += SCENE_TAIL;
+    t += SCENE_TAIL / TEMPO[film];
     return {id: segment.id, start: round(start), end: round(t), chunks};
   });
   const total = round(t + END_CARD);

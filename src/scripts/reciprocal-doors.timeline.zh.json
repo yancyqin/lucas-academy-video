@@ -7,7 +7,7 @@
   },
   "titleSeconds": 4,
   "endCardSeconds": 4.5,
-  "durationSeconds": 304.889,
+  "durationSeconds": 236.216,
   "images": [
     "rd01-listen.png",
     "rd01-read-alone.png",
@@ -27,16 +27,16 @@
     {
       "id": "rd01",
       "start": 4,
-      "end": 36.958,
+      "end": 29.36,
       "chunks": [
         {
           "id": "rd01-01",
           "zh": "想象一个孩子。",
           "en": "Imagine a child.",
-          "start": 5,
-          "slot": 1.579,
+          "start": 4.769,
+          "slot": 1.223,
           "spoken": {
-            "zh": 1.579,
+            "zh": 1.223,
             "en": 2.179
           },
           "tracks": {
@@ -47,7 +47,7 @@
                 "lang": "zh",
                 "demo": false,
                 "offset": 0,
-                "seconds": 1.579
+                "seconds": 1.223
               }
             ]
           }
@@ -56,10 +56,10 @@
           "id": "rd01-02",
           "zh": "别人把故事念给他听，他能说出发生了什么。",
           "en": "When someone reads a story aloud, he can tell us what happened.",
-          "start": 7.379,
-          "slot": 4.987,
+          "start": 6.608,
+          "slot": 3.837,
           "spoken": {
-            "zh": 4.987,
+            "zh": 3.837,
             "en": 3.697
           },
           "tracks": {
@@ -70,7 +70,7 @@
                 "lang": "zh",
                 "demo": false,
                 "offset": 0,
-                "seconds": 4.987
+                "seconds": 3.837
               }
             ]
           }
@@ -79,10 +79,10 @@
           "id": "rd01-03",
           "zh": "轮到自己读，有些字却让他停下来。",
           "en": "When he reads it himself, some words stop him.",
-          "start": 12.966,
-          "slot": 5.01,
+          "start": 10.906,
+          "slot": 3.861,
           "spoken": {
-            "zh": 5.01,
+            "zh": 3.861,
             "en": 3.618
           },
           "tracks": {
@@ -93,7 +93,7 @@
                 "lang": "zh",
                 "demo": false,
                 "offset": 0,
-                "seconds": 5.01
+                "seconds": 3.861
               }
             ]
           }
@@ -102,10 +102,10 @@
           "id": "rd01-04",
           "zh": "我们在学习阅读障碍的资料时，注意到这样的情况。",
           "en": "We noticed examples like this while learning about dyslexia.",
-          "start": 18.676,
-          "slot": 6.392,
+          "start": 15.306,
+          "slot": 4.911,
           "spoken": {
-            "zh": 6.392,
+            "zh": 4.911,
             "en": 4.374
           },
           "tracks": {
@@ -116,7 +116,7 @@
                 "lang": "zh",
                 "demo": false,
                 "offset": 0,
-                "seconds": 6.392
+                "seconds": 4.911
               }
             ]
           }
@@ -125,10 +125,10 @@
           "id": "rd01-05",
           "zh": "有些孩子，认字、拼写很困难。",
           "en": "Some children find word reading and spelling difficult.",
-          "start": 25.518,
-          "slot": 3.433,
+          "start": 20.563,
+          "slot": 2.629,
           "spoken": {
-            "zh": 3.433,
+            "zh": 2.629,
             "en": 3.478
           },
           "tracks": {
@@ -139,7 +139,7 @@
                 "lang": "zh",
                 "demo": false,
                 "offset": 0,
-                "seconds": 3.433
+                "seconds": 2.629
               }
             ]
           }
@@ -148,10 +148,10 @@
           "id": "rd01-06",
           "zh": "但单看这一点，还不能知道这个孩子能理解什么、能做什么。",
           "en": "That alone does not tell us everything they can understand or do.",
-          "start": 29.701,
-          "slot": 6.357,
+          "start": 23.769,
+          "slot": 4.899,
           "spoken": {
-            "zh": 6.357,
+            "zh": 4.899,
             "en": 5.335
           },
           "tracks": {
@@ -162,7 +162,7 @@
                 "lang": "zh",
                 "demo": false,
                 "offset": 0,
-                "seconds": 6.357
+                "seconds": 4.899
               }
             ]
           }
@@ -171,17 +171,17 @@
     },
     {
       "id": "rd02",
-      "start": 36.958,
-      "end": 61.069,
+      "start": 29.36,
+      "end": 47.929,
       "chunks": [
         {
           "id": "rd02-01",
           "zh": "所以，我们可以看看：这个孩子需要什么帮助？",
           "en": "So we can ask: what help does this child need?",
-          "start": 37.658,
-          "slot": 5.201,
+          "start": 29.898,
+          "slot": 4.003,
           "spoken": {
-            "zh": 5.201,
+            "zh": 4.003,
             "en": 3.434
           },
           "tracks": {
@@ -192,7 +192,7 @@
                 "lang": "zh",
                 "demo": false,
                 "offset": 0,
-                "seconds": 5.201
+                "seconds": 4.003
               }
             ]
           }
@@ -201,10 +201,10 @@
           "id": "rd02-02",
           "zh": "如果今天是理解故事，可以听、看图，再聊一聊。",
           "en": "If today's goal is to understand a story, we can listen, look at pictures, and talk about it.",
-          "start": 43.309,
-          "slot": 5.485,
+          "start": 34.248,
+          "slot": 4.229,
           "spoken": {
-            "zh": 5.485,
+            "zh": 4.229,
             "en": 6.479
           },
           "tracks": {
@@ -215,7 +215,7 @@
                 "lang": "zh",
                 "demo": false,
                 "offset": 0,
-                "seconds": 5.485
+                "seconds": 4.229
               }
             ]
           }
@@ -224,10 +224,10 @@
           "id": "rd02-03",
           "zh": "需要练认字时，就认真练认字，也给合适的帮助。",
           "en": "When the goal is word reading, we practise reading with suitable support.",
-          "start": 49.244,
-          "slot": 5.406,
+          "start": 38.823,
+          "slot": 4.161,
           "spoken": {
-            "zh": 5.406,
+            "zh": 4.161,
             "en": 5.452
           },
           "tracks": {
@@ -238,7 +238,7 @@
                 "lang": "zh",
                 "demo": false,
                 "offset": 0,
-                "seconds": 5.406
+                "seconds": 4.161
               }
             ]
           }
@@ -247,10 +247,10 @@
           "id": "rd02-04",
           "zh": "每个孩子的情况不一样，我们要先了解他。",
           "en": "Each child is different. We need to get to know the child in front of us.",
-          "start": 55.3,
-          "slot": 4.869,
+          "start": 43.484,
+          "slot": 3.753,
           "spoken": {
-            "zh": 4.869,
+            "zh": 3.753,
             "en": 4.698
           },
           "tracks": {
@@ -261,7 +261,7 @@
                 "lang": "zh",
                 "demo": false,
                 "offset": 0,
-                "seconds": 4.869
+                "seconds": 3.753
               }
             ]
           }
@@ -270,17 +270,17 @@
     },
     {
       "id": "rd03",
-      "start": 61.069,
-      "end": 93.476,
+      "start": 47.929,
+      "end": 72.975,
       "chunks": [
         {
           "id": "rd03-01",
           "zh": "这启发我们想到中英文学习。",
           "en": "This led us to think about learning Chinese and English.",
-          "start": 61.769,
-          "slot": 4.369,
+          "start": 48.468,
+          "slot": 3.373,
           "spoken": {
-            "zh": 4.369,
+            "zh": 3.373,
             "en": 3.792
           },
           "tracks": {
@@ -291,7 +291,7 @@
                 "lang": "zh",
                 "demo": false,
                 "offset": 0,
-                "seconds": 4.369
+                "seconds": 3.373
               }
             ]
           }
@@ -300,10 +300,10 @@
           "id": "rd03-02",
           "zh": "比如，一个孩子能听懂中文，却还不认识很多汉字。",
           "en": "One child may understand spoken Chinese but know only a few Chinese characters.",
-          "start": 66.688,
-          "slot": 6.656,
+          "start": 52.264,
+          "slot": 5.115,
           "spoken": {
-            "zh": 6.656,
+            "zh": 5.115,
             "en": 4.672
           },
           "tracks": {
@@ -314,7 +314,7 @@
                 "lang": "zh",
                 "demo": false,
                 "offset": 0,
-                "seconds": 6.656
+                "seconds": 5.115
               }
             ]
           }
@@ -323,10 +323,10 @@
           "id": "rd03-03",
           "zh": "另一个孩子读中文比较顺，讲英文时却需要帮助。",
           "en": "Another may read Chinese more easily but need help speaking English.",
-          "start": 73.794,
-          "slot": 5.289,
+          "start": 57.725,
+          "slot": 4.07,
           "spoken": {
-            "zh": 5.289,
+            "zh": 4.07,
             "en": 4.411
           },
           "tracks": {
@@ -337,7 +337,7 @@
                 "lang": "zh",
                 "demo": false,
                 "offset": 0,
-                "seconds": 5.289
+                "seconds": 4.07
               }
             ]
           }
@@ -346,10 +346,10 @@
           "id": "rd03-04",
           "zh": "这些情况和阅读障碍有不同的原因。",
           "en": "These difficulties have different causes from dyslexia.",
-          "start": 79.733,
-          "slot": 4.256,
+          "start": 62.295,
+          "slot": 3.282,
           "spoken": {
-            "zh": 4.256,
+            "zh": 3.282,
             "en": 3.22
           },
           "tracks": {
@@ -360,7 +360,7 @@
                 "lang": "zh",
                 "demo": false,
                 "offset": 0,
-                "seconds": 4.256
+                "seconds": 3.282
               }
             ]
           }
@@ -369,10 +369,10 @@
           "id": "rd03-05",
           "zh": "它们提醒我们一个相似的问题：哪一步难？还能从哪里开始？",
           "en": "They invite a similar teaching question: which step is difficult, and where else can we begin?",
-          "start": 84.589,
-          "slot": 7.987,
+          "start": 66.038,
+          "slot": 6.244,
           "spoken": {
-            "zh": 7.987,
+            "zh": 6.244,
             "en": 5.809
           },
           "tracks": {
@@ -383,7 +383,7 @@
                 "lang": "zh",
                 "demo": false,
                 "offset": 0,
-                "seconds": 7.987
+                "seconds": 6.244
               }
             ]
           }
@@ -392,17 +392,17 @@
     },
     {
       "id": "rd04",
-      "start": 93.476,
-      "end": 125.257,
+      "start": 72.975,
+      "end": 97.421,
       "chunks": [
         {
           "id": "rd04-01",
           "zh": "我们来设想两个孩子。",
           "en": "Let's imagine two children.",
-          "start": 94.176,
-          "slot": 3.97,
+          "start": 73.513,
+          "slot": 3.057,
           "spoken": {
-            "zh": 3.97,
+            "zh": 3.057,
             "en": 2.374
           },
           "tracks": {
@@ -413,7 +413,7 @@
                 "lang": "zh",
                 "demo": false,
                 "offset": 0,
-                "seconds": 3.97
+                "seconds": 3.057
               }
             ]
           }
@@ -422,10 +422,10 @@
           "id": "rd04-02",
           "zh": "Jacob 用中文讲故事比较顺，Mary 用英文讲比较顺。",
           "en": "Jacob tells stories more easily in Chinese. Mary tells them more easily in English.",
-          "start": 98.596,
-          "slot": 6.78,
+          "start": 76.916,
+          "slot": 5.209,
           "spoken": {
-            "zh": 6.78,
+            "zh": 5.209,
             "en": 6.301
           },
           "tracks": {
@@ -436,7 +436,7 @@
                 "lang": "zh",
                 "demo": false,
                 "offset": 0,
-                "seconds": 6.78
+                "seconds": 5.209
               }
             ]
           }
@@ -445,10 +445,10 @@
           "id": "rd04-03",
           "zh": "学中文时，Jacob 可以帮 Mary；学英文时，Mary 可以帮 Jacob。",
           "en": "Jacob can help Mary with Chinese, and Mary can help Jacob with English.",
-          "start": 105.826,
-          "slot": 7.248,
+          "start": 82.471,
+          "slot": 5.584,
           "spoken": {
-            "zh": 7.248,
+            "zh": 5.584,
             "en": 4.818
           },
           "tracks": {
@@ -459,7 +459,7 @@
                 "lang": "zh",
                 "demo": false,
                 "offset": 0,
-                "seconds": 7.248
+                "seconds": 5.584
               }
             ]
           }
@@ -468,10 +468,10 @@
           "id": "rd04-04",
           "zh": "这就是“互惠”：我有能帮你的地方，你也有能帮我的地方。",
           "en": "That is reciprocity: I have something that can help you, and you have something that can help me.",
-          "start": 113.924,
-          "slot": 7.126,
+          "start": 88.709,
+          "slot": 5.48,
           "spoken": {
-            "zh": 7.126,
+            "zh": 5.48,
             "en": 6.712
           },
           "tracks": {
@@ -482,7 +482,7 @@
                 "lang": "zh",
                 "demo": false,
                 "offset": 0,
-                "seconds": 7.126
+                "seconds": 5.48
               }
             ]
           }
@@ -491,10 +491,10 @@
           "id": "rd04-05",
           "zh": "两个人都教，也都学。",
           "en": "Both children teach, and both learn.",
-          "start": 121.6,
-          "slot": 2.757,
+          "start": 94.612,
+          "slot": 2.116,
           "spoken": {
-            "zh": 2.757,
+            "zh": 2.116,
             "en": 2.765
           },
           "tracks": {
@@ -505,7 +505,7 @@
                 "lang": "zh",
                 "demo": false,
                 "offset": 0,
-                "seconds": 2.757
+                "seconds": 2.116
               }
             ]
           }
@@ -514,17 +514,17 @@
     },
     {
       "id": "rd05",
-      "start": 125.257,
-      "end": 154.481,
+      "start": 97.421,
+      "end": 119.919,
       "chunks": [
         {
           "id": "rd05-01",
           "zh": "可是，一开始话还说不通，怎么办？",
           "en": "What if they cannot yet explain everything to each other?",
-          "start": 125.957,
-          "slot": 4.628,
+          "start": 97.959,
+          "slot": 3.566,
           "spoken": {
-            "zh": 4.628,
+            "zh": 3.566,
             "en": 3.154
           },
           "tracks": {
@@ -535,7 +535,7 @@
                 "lang": "zh",
                 "demo": false,
                 "offset": 0,
-                "seconds": 4.628
+                "seconds": 3.566
               }
             ]
           }
@@ -544,10 +544,10 @@
           "id": "rd05-02",
           "zh": "我们想到画画。",
           "en": "We thought of drawing.",
-          "start": 131.435,
-          "slot": 2.053,
+          "start": 102.179,
+          "slot": 1.583,
           "spoken": {
-            "zh": 2.053,
+            "zh": 1.583,
             "en": 1.951
           },
           "tracks": {
@@ -558,7 +558,7 @@
                 "lang": "zh",
                 "demo": false,
                 "offset": 0,
-                "seconds": 2.053
+                "seconds": 1.583
               }
             ]
           }
@@ -567,10 +567,10 @@
           "id": "rd05-03",
           "zh": "两个人可以先画同一个故事，看同一张图。",
           "en": "They can draw the same story and look at the same picture.",
-          "start": 133.938,
-          "slot": 4.363,
+          "start": 104.108,
+          "slot": 3.361,
           "spoken": {
-            "zh": 4.363,
+            "zh": 3.361,
             "en": 3.42
           },
           "tracks": {
@@ -581,7 +581,7 @@
                 "lang": "zh",
                 "demo": false,
                 "offset": 0,
-                "seconds": 4.363
+                "seconds": 3.361
               }
             ]
           }
@@ -590,10 +590,10 @@
           "id": "rd05-04",
           "zh": "图画让他们有一件可以一起看、一起说的事。",
           "en": "Now they have something to look at and talk about together.",
-          "start": 138.751,
-          "slot": 4.878,
+          "start": 107.815,
+          "slot": 3.756,
           "spoken": {
-            "zh": 4.878,
+            "zh": 3.756,
             "en": 3.431
           },
           "tracks": {
@@ -604,7 +604,7 @@
                 "lang": "zh",
                 "demo": false,
                 "offset": 0,
-                "seconds": 4.878
+                "seconds": 3.756
               }
             ]
           }
@@ -613,10 +613,10 @@
           "id": "rd05-05",
           "zh": "这是他们共同的渠道。",
           "en": "Drawing is a channel they share.",
-          "start": 144.179,
-          "slot": 2.371,
+          "start": 111.994,
+          "slot": 1.824,
           "spoken": {
-            "zh": 2.371,
+            "zh": 1.824,
             "en": 2.13
           },
           "tracks": {
@@ -627,7 +627,7 @@
                 "lang": "zh",
                 "demo": false,
                 "offset": 0,
-                "seconds": 2.371
+                "seconds": 1.824
               }
             ]
           }
@@ -636,10 +636,10 @@
           "id": "rd05-06",
           "zh": "看图之后，也要问问对方：你想表达的是这个意思吗？",
           "en": "They still need to ask each other: is this what you meant?",
-          "start": 147.15,
-          "slot": 6.431,
+          "start": 114.28,
+          "slot": 4.947,
           "spoken": {
-            "zh": 6.431,
+            "zh": 4.947,
             "en": 3.472
           },
           "tracks": {
@@ -650,7 +650,7 @@
                 "lang": "zh",
                 "demo": false,
                 "offset": 0,
-                "seconds": 6.431
+                "seconds": 4.947
               }
             ]
           }
@@ -659,17 +659,17 @@
     },
     {
       "id": "rd06",
-      "start": 154.481,
-      "end": 195.137,
+      "start": 119.919,
+      "end": 151.837,
       "chunks": [
         {
           "id": "rd06-01",
           "zh": "比如，他们一起画一个小故事：杯子倒了，朋友来帮忙。",
           "en": "For example, they draw a small story: a cup tips over, and a friend comes to help.",
-          "start": 155.181,
-          "slot": 6.495,
+          "start": 120.458,
+          "slot": 5.004,
           "spoken": {
-            "zh": 6.495,
+            "zh": 5.004,
             "en": 6.401
           },
           "tracks": {
@@ -680,7 +680,7 @@
                 "lang": "zh",
                 "demo": false,
                 "offset": 0,
-                "seconds": 6.495
+                "seconds": 5.004
               }
             ]
           }
@@ -689,10 +689,10 @@
           "id": "rd06-02",
           "zh": "Jacob 指着画说：“我来帮你。”",
           "en": "Jacob points to the picture and says, “我来帮你.”",
-          "start": 162.126,
-          "slot": 3.455,
+          "start": 125.808,
+          "slot": 2.937,
           "spoken": {
-            "zh": 3.455,
+            "zh": 2.937,
             "en": 4.178
           },
           "tracks": {
@@ -703,14 +703,14 @@
                 "lang": "zh",
                 "demo": false,
                 "offset": 0,
-                "seconds": 1.715
+                "seconds": 1.324
               },
               {
                 "id": "rd06-02-p2",
                 "file": "audio/reciprocal-doors/zh/rd06-02-p2.wav",
                 "lang": "zh",
                 "demo": true,
-                "offset": 2.265,
+                "offset": 1.747,
                 "seconds": 1.19
               }
             ]
@@ -720,10 +720,10 @@
           "id": "rd06-03",
           "zh": "Mary 告诉他，英文可以说：“Let me help you.”",
           "en": "Mary tells him, “In English, we can say, ‘Let me help you.’”",
-          "start": 166.031,
-          "slot": 5.361,
+          "start": 129.091,
+          "slot": 4.484,
           "spoken": {
-            "zh": 5.361,
+            "zh": 4.484,
             "en": 5.09
           },
           "tracks": {
@@ -734,14 +734,14 @@
                 "lang": "zh",
                 "demo": false,
                 "offset": 0,
-                "seconds": 3.309
+                "seconds": 2.559
               },
               {
                 "id": "rd06-03-p2",
                 "file": "audio/reciprocal-doors/zh/rd06-03-p2.wav",
                 "lang": "en",
                 "demo": true,
-                "offset": 3.859,
+                "offset": 2.982,
                 "seconds": 1.502
               }
             ]
@@ -751,10 +751,10 @@
           "id": "rd06-04",
           "zh": "然后交换。",
           "en": "Then they switch.",
-          "start": 171.942,
-          "slot": 1.214,
+          "start": 133.998,
+          "slot": 0.941,
           "spoken": {
-            "zh": 1.214,
+            "zh": 0.941,
             "en": 1.943
           },
           "tracks": {
@@ -765,7 +765,7 @@
                 "lang": "zh",
                 "demo": false,
                 "offset": 0,
-                "seconds": 1.214
+                "seconds": 0.941
               }
             ]
           }
@@ -774,10 +774,10 @@
           "id": "rd06-05",
           "zh": "Mary 试着说中文，Jacob 试着说英文。",
           "en": "Mary tries the Chinese, and Jacob tries the English.",
-          "start": 173.606,
-          "slot": 4.066,
+          "start": 135.285,
+          "slot": 3.122,
           "spoken": {
-            "zh": 4.066,
+            "zh": 3.122,
             "en": 3.907
           },
           "tracks": {
@@ -788,7 +788,7 @@
                 "lang": "zh",
                 "demo": false,
                 "offset": 0,
-                "seconds": 4.066
+                "seconds": 3.122
               }
             ]
           }
@@ -797,10 +797,10 @@
           "id": "rd06-06",
           "zh": "说不顺，可以听一听，再试一次。",
           "en": "If a phrase is difficult, they can listen and try again.",
-          "start": 178.122,
-          "slot": 5.105,
+          "start": 138.753,
+          "slot": 3.934,
           "spoken": {
-            "zh": 5.105,
+            "zh": 3.934,
             "en": 4.848
           },
           "tracks": {
@@ -811,7 +811,7 @@
                 "lang": "zh",
                 "demo": false,
                 "offset": 0,
-                "seconds": 5.105
+                "seconds": 3.934
               }
             ]
           }
@@ -820,10 +820,10 @@
           "id": "rd06-07",
           "zh": "遇到不认识的字，就把这个字找出来，一起学。",
           "en": "If a written word is unfamiliar, they find it and learn it together.",
-          "start": 183.677,
-          "slot": 5.88,
+          "start": 143.033,
+          "slot": 4.522,
           "spoken": {
-            "zh": 5.88,
+            "zh": 4.522,
             "en": 4.979
           },
           "tracks": {
@@ -834,7 +834,7 @@
                 "lang": "zh",
                 "demo": false,
                 "offset": 0,
-                "seconds": 5.88
+                "seconds": 4.522
               }
             ]
           }
@@ -843,10 +843,10 @@
           "id": "rd06-08",
           "zh": "老师在旁边，帮他们确认意思。",
           "en": "Their teacher helps them check the meaning.",
-          "start": 190.157,
-          "slot": 4.08,
+          "start": 148.017,
+          "slot": 3.128,
           "spoken": {
-            "zh": 4.08,
+            "zh": 3.128,
             "en": 2.1
           },
           "tracks": {
@@ -857,7 +857,7 @@
                 "lang": "zh",
                 "demo": false,
                 "offset": 0,
-                "seconds": 4.08
+                "seconds": 3.128
               }
             ]
           }
@@ -866,17 +866,17 @@
     },
     {
       "id": "rd07",
-      "start": 195.137,
-      "end": 223.925,
+      "start": 151.837,
+      "end": 172.91,
       "chunks": [
         {
           "id": "rd07-01",
           "zh": "文字，让我们学着自己读。",
           "en": "Written words help us learn to read for ourselves.",
-          "start": 195.837,
-          "slot": 3.37,
+          "start": 152.376,
+          "slot": 2.594,
           "spoken": {
-            "zh": 3.37,
+            "zh": 2.594,
             "en": 3.665
           },
           "tracks": {
@@ -887,7 +887,7 @@
                 "lang": "zh",
                 "demo": false,
                 "offset": 0,
-                "seconds": 3.37
+                "seconds": 2.594
               }
             ]
           }
@@ -896,10 +896,10 @@
           "id": "rd07-02",
           "zh": "声音，可以示范怎么说。",
           "en": "Sound can show us how a phrase is spoken.",
-          "start": 199.557,
-          "slot": 2.578,
+          "start": 155.239,
+          "slot": 1.977,
           "spoken": {
-            "zh": 2.578,
+            "zh": 1.977,
             "en": 2.557
           },
           "tracks": {
@@ -910,7 +910,7 @@
                 "lang": "zh",
                 "demo": false,
                 "offset": 0,
-                "seconds": 2.578
+                "seconds": 1.977
               }
             ]
           }
@@ -919,10 +919,10 @@
           "id": "rd07-03",
           "zh": "图画，帮我们一起谈故事。",
           "en": "Pictures give us something to discuss together.",
-          "start": 202.485,
-          "slot": 3.755,
+          "start": 157.485,
+          "slot": 1.744,
           "spoken": {
-            "zh": 3.755,
+            "zh": 1.744,
             "en": 3.232
           },
           "tracks": {
@@ -933,7 +933,7 @@
                 "lang": "zh",
                 "demo": false,
                 "offset": 0,
-                "seconds": 3.755
+                "seconds": 1.744
               }
             ]
           }
@@ -942,10 +942,10 @@
           "id": "rd07-04",
           "zh": "什么时候用哪一种，要看这次想学什么。",
           "en": "We choose what to use by asking what we want to learn.",
-          "start": 206.99,
-          "slot": 4.549,
+          "start": 159.806,
+          "slot": 3.51,
           "spoken": {
-            "zh": 4.549,
+            "zh": 3.51,
             "en": 3.561
           },
           "tracks": {
@@ -956,7 +956,7 @@
                 "lang": "zh",
                 "demo": false,
                 "offset": 0,
-                "seconds": 4.549
+                "seconds": 3.51
               }
             ]
           }
@@ -965,10 +965,10 @@
           "id": "rd07-05",
           "zh": "理解故事时，可以先看图、听故事。",
           "en": "To understand a story, we may begin with pictures and listening.",
-          "start": 212.089,
-          "slot": 4.126,
+          "start": 163.739,
+          "slot": 3.182,
           "spoken": {
-            "zh": 4.126,
+            "zh": 3.182,
             "en": 4.361
           },
           "tracks": {
@@ -979,7 +979,7 @@
                 "lang": "zh",
                 "demo": false,
                 "offset": 0,
-                "seconds": 4.126
+                "seconds": 3.182
               }
             ]
           }
@@ -988,10 +988,10 @@
           "id": "rd07-06",
           "zh": "练认字时，可以先试着读，需要时再用声音和图画帮忙。",
           "en": "To practise word reading, we can try reading first and add sound or pictures when needed.",
-          "start": 216.665,
-          "slot": 6.36,
+          "start": 167.267,
+          "slot": 4.95,
           "spoken": {
-            "zh": 6.36,
+            "zh": 4.95,
             "en": 6.349
           },
           "tracks": {
@@ -1002,7 +1002,7 @@
                 "lang": "zh",
                 "demo": false,
                 "offset": 0,
-                "seconds": 6.36
+                "seconds": 4.95
               }
             ]
           }
@@ -1011,17 +1011,17 @@
     },
     {
       "id": "rd08",
-      "start": 223.925,
-      "end": 249.457,
+      "start": 172.91,
+      "end": 192.538,
       "chunks": [
         {
           "id": "rd08-01",
           "zh": "还有一件事很重要：",
           "en": "There is something else we care about.",
-          "start": 224.925,
-          "slot": 2.44,
+          "start": 173.679,
+          "slot": 1.881,
           "spoken": {
-            "zh": 2.44,
+            "zh": 1.881,
             "en": 2.303
           },
           "tracks": {
@@ -1032,7 +1032,7 @@
                 "lang": "zh",
                 "demo": false,
                 "offset": 0,
-                "seconds": 2.44
+                "seconds": 1.881
               }
             ]
           }
@@ -1041,10 +1041,10 @@
           "id": "rd08-02",
           "zh": "学英文时，中文也可以继续用；",
           "en": "Chinese can keep growing while a child learns English.",
-          "start": 227.965,
-          "slot": 3.492,
+          "start": 176.021,
+          "slot": 2.686,
           "spoken": {
-            "zh": 3.492,
+            "zh": 2.686,
             "en": 4.368
           },
           "tracks": {
@@ -1055,7 +1055,7 @@
                 "lang": "zh",
                 "demo": false,
                 "offset": 0,
-                "seconds": 3.492
+                "seconds": 2.686
               }
             ]
           }
@@ -1064,10 +1064,10 @@
           "id": "rd08-03",
           "zh": "学中文时，英文也有用。",
           "en": "English still matters while a child learns Chinese.",
-          "start": 231.757,
-          "slot": 2.544,
+          "start": 178.938,
+          "slot": 1.943,
           "spoken": {
-            "zh": 2.544,
+            "zh": 1.943,
             "en": 3.374
           },
           "tracks": {
@@ -1078,7 +1078,7 @@
                 "lang": "zh",
                 "demo": false,
                 "offset": 0,
-                "seconds": 2.544
+                "seconds": 1.943
               }
             ]
           }
@@ -1087,10 +1087,10 @@
           "id": "rd08-04",
           "zh": "喜欢画画的孩子，可以继续画，也用画帮助大家学。",
           "en": "A child who enjoys drawing can keep drawing and use it to help the group learn.",
-          "start": 234.851,
-          "slot": 6.371,
+          "start": 181.304,
+          "slot": 4.893,
           "spoken": {
-            "zh": 6.371,
+            "zh": 4.893,
             "en": 5.707
           },
           "tracks": {
@@ -1101,7 +1101,7 @@
                 "lang": "zh",
                 "demo": false,
                 "offset": 0,
-                "seconds": 6.371
+                "seconds": 4.893
               }
             ]
           }
@@ -1110,10 +1110,10 @@
           "id": "rd08-05",
           "zh": "我们希望孩子学会新的东西，同时把原来会的，用得更好。",
           "en": "We want children to learn something new while making good use of what they already know.",
-          "start": 241.922,
-          "slot": 6.635,
+          "start": 186.736,
+          "slot": 5.11,
           "spoken": {
-            "zh": 6.635,
+            "zh": 5.11,
             "en": 4.868
           },
           "tracks": {
@@ -1124,7 +1124,7 @@
                 "lang": "zh",
                 "demo": false,
                 "offset": 0,
-                "seconds": 6.635
+                "seconds": 5.11
               }
             ]
           }
@@ -1133,17 +1133,17 @@
     },
     {
       "id": "rd09",
-      "start": 249.457,
-      "end": 278.604,
+      "start": 192.538,
+      "end": 214.992,
       "chunks": [
         {
           "id": "rd09-01",
           "zh": "父母和孩子也可以这样试。",
           "en": "Parents and children can try this too.",
-          "start": 250.457,
-          "slot": 3.909,
+          "start": 193.307,
+          "slot": 3.019,
           "spoken": {
-            "zh": 3.909,
+            "zh": 3.019,
             "en": 2.31
           },
           "tracks": {
@@ -1154,7 +1154,7 @@
                 "lang": "zh",
                 "demo": false,
                 "offset": 0,
-                "seconds": 3.909
+                "seconds": 3.019
               }
             ]
           }
@@ -1163,10 +1163,10 @@
           "id": "rd09-02",
           "zh": "父母更习惯中文，孩子更习惯英文，可以一起画、一起讲同一个故事。",
           "en": "If parents are more comfortable in Chinese and children in English, they can draw and tell the same story together.",
-          "start": 254.816,
-          "slot": 8.326,
+          "start": 196.672,
+          "slot": 6.413,
           "spoken": {
-            "zh": 8.326,
+            "zh": 6.413,
             "en": 7.696
           },
           "tracks": {
@@ -1177,7 +1177,7 @@
                 "lang": "zh",
                 "demo": false,
                 "offset": 0,
-                "seconds": 8.326
+                "seconds": 6.413
               }
             ]
           }
@@ -1186,10 +1186,10 @@
           "id": "rd09-03",
           "zh": "父母说出自己的意思，孩子帮助找英文的说法，再一起确认。",
           "en": "A parent shares what they mean, a child helps find the English words, and they check it together.",
-          "start": 263.592,
-          "slot": 7.11,
+          "start": 203.432,
+          "slot": 5.479,
           "spoken": {
-            "zh": 7.11,
+            "zh": 5.479,
             "en": 5.953
           },
           "tracks": {
@@ -1200,7 +1200,7 @@
                 "lang": "zh",
                 "demo": false,
                 "offset": 0,
-                "seconds": 7.11
+                "seconds": 5.479
               }
             ]
           }
@@ -1209,10 +1209,10 @@
           "id": "rd09-04",
           "zh": "两代人都有可以分享的东西，也都有可以学习的东西。",
           "en": "Both generations have something to share and something to learn.",
-          "start": 271.402,
-          "slot": 6.302,
+          "start": 209.449,
+          "slot": 4.851,
           "spoken": {
-            "zh": 6.302,
+            "zh": 4.851,
             "en": 3.856
           },
           "tracks": {
@@ -1223,7 +1223,7 @@
                 "lang": "zh",
                 "demo": false,
                 "offset": 0,
-                "seconds": 6.302
+                "seconds": 4.851
               }
             ]
           }
@@ -1232,17 +1232,17 @@
     },
     {
       "id": "rd10",
-      "start": 278.604,
-      "end": 300.389,
+      "start": 214.992,
+      "end": 231.716,
       "chunks": [
         {
           "id": "rd10-01",
           "zh": "这就是“语言的桥”。",
           "en": "This is our Language Bridge.",
-          "start": 279.604,
-          "slot": 2.407,
+          "start": 215.762,
+          "slot": 1.835,
           "spoken": {
-            "zh": 2.407,
+            "zh": 1.835,
             "en": 2.668
           },
           "tracks": {
@@ -1253,7 +1253,7 @@
                 "lang": "zh",
                 "demo": false,
                 "offset": 0,
-                "seconds": 2.407
+                "seconds": 1.835
               }
             ]
           }
@@ -1262,10 +1262,10 @@
           "id": "rd10-02",
           "zh": "我们从阅读障碍教育得到启发，正在设计中英双语的多媒体学习方式。",
           "en": "Inspired by dyslexia education, we are designing ways to learn through Chinese, English, words, sound, and pictures.",
-          "start": 282.611,
-          "slot": 7.455,
+          "start": 218.058,
+          "slot": 5.719,
           "spoken": {
-            "zh": 7.455,
+            "zh": 5.719,
             "en": 9.922
           },
           "tracks": {
@@ -1276,7 +1276,7 @@
                 "lang": "zh",
                 "demo": false,
                 "offset": 0,
-                "seconds": 7.455
+                "seconds": 5.719
               }
             ]
           }
@@ -1285,10 +1285,10 @@
           "id": "rd10-03",
           "zh": "从一个共同的故事开始：",
           "en": "We can begin with one shared story.",
-          "start": 290.666,
-          "slot": 2.383,
+          "start": 224.239,
+          "slot": 1.835,
           "spoken": {
-            "zh": 2.383,
+            "zh": 1.835,
             "en": 3.955
           },
           "tracks": {
@@ -1299,7 +1299,7 @@
                 "lang": "zh",
                 "demo": false,
                 "offset": 0,
-                "seconds": 2.383
+                "seconds": 1.835
               }
             ]
           }
@@ -1308,10 +1308,10 @@
           "id": "rd10-04",
           "zh": "你教我一句，我教你一句，我们一起多懂一点。",
           "en": "You teach me a phrase, I teach you a phrase, and we understand a little more together.",
-          "start": 293.599,
-          "slot": 5.89,
+          "start": 226.497,
+          "slot": 4.527,
           "spoken": {
-            "zh": 5.89,
+            "zh": 4.527,
             "en": 6.34
           },
           "tracks": {
@@ -1322,7 +1322,7 @@
                 "lang": "zh",
                 "demo": false,
                 "offset": 0,
-                "seconds": 5.89
+                "seconds": 4.527
               }
             ]
           }

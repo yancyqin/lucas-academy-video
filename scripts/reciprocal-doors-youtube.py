@@ -9,12 +9,21 @@ Writes out/reciprocal-doors/delivery/youtube-description.{zh,en}.txt.
 """
 from __future__ import annotations
 
+import ast
 import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "out/reciprocal-doors/delivery"
 MEDIA = ROOT.parent / "lucas-academy-media"
+
+# The music credit (CC BY 3.0 asks for it with every upload) lives with the mix;
+# read it from the source, so this runs without the mix's numpy / soundfile.
+MUSIC_CREDIT = next(
+    ast.literal_eval(node.value)
+    for node in ast.parse((ROOT / "scripts/reciprocal-doors-tracks.py").read_text(encoding="utf-8")).body
+    if isinstance(node, ast.Assign) and any(getattr(t, "id", None) == "MUSIC_CREDIT" for t in node.targets)
+)
 
 CHAPTERS = {
     "zh": {
@@ -63,6 +72,7 @@ TEXT = {
         "notes": """说明
 · 片中阅读障碍的例子是假设案例，Mary 和 Jacob 是虚构人物，不代表任何真实学生。这是我们正在设计的教学构想，不是诊断、治疗建议或研究结论。
 · 插画为概念示意（AI 生成）。旁白为合成的朗读声音（CosyVoice）。
+· 背景音乐：{music}
 · 产品画面中的英文经文：The Holy Bible, New International Version® NIV® Copyright © 1973, 1978, 1984, 2011 by Biblica, Inc.® Used by permission. All rights reserved worldwide. 中文经文来源：YouVersion。""",
         "hashtags": "#双语教育 #中英双语 #阅读障碍 #语言学习 #LucasAcademy",
         "tags": "双语教育, 中英双语, 中文学习, 英文学习, 阅读障碍, 亲子共学, 儿童教育, 语言学习, 语言的桥, Lucas Academy",
@@ -86,6 +96,7 @@ In this short film, two fictional children, Mary and Jacob, show the idea:
         "notes": """Notes
 • The dyslexia example is hypothetical, and Mary and Jacob are fictional; they do not represent any real student. This is a teaching idea we are designing, not a diagnosis, treatment advice or a research result.
 • Illustrations are concept art (AI-generated). Narration: synthesized reading voices (CosyVoice).
+• Music: {music}
 • English Scripture in the product screens: The Holy Bible, New International Version® NIV® Copyright © 1973, 1978, 1984, 2011 by Biblica, Inc.® Used by permission. All rights reserved worldwide. Chinese Scripture source: YouVersion.""",
         "hashtags": "#BilingualKids #LearningChinese #Dyslexia #LanguageLearning #LucasAcademy",
         "tags": "bilingual kids, learning Chinese, learning English, dyslexia, reading support, parents and children, language learning, Language Bridge, Lucas Academy",
@@ -109,7 +120,8 @@ def main() -> None:
         script = json.loads((MEDIA / "data/scripts" / f"reciprocal-doors-{lang}.json").read_text(encoding="utf-8"))
         pending = [l["id"] for l in script["lines"] if not (MEDIA / "outputs" / voice / "reciprocal-doors" / f"{l['id']}.wav").exists()]
         draft = (" ⚠️ 配音还在重录，章节时间待更新 / narration being re-recorded, times will change") if (pending or timeline.get("missing")) else ""
-        description = "\n\n".join([text["body"], f"{text['chapters']}{draft}\n" + "\n".join(lines), text["notes"], text["hashtags"]])
+        notes = text["notes"].replace("{music}", MUSIC_CREDIT)
+        description = "\n\n".join([text["body"], f"{text['chapters']}{draft}\n" + "\n".join(lines), notes, text["hashtags"]])
         content = (
             f"【标题 / Title】\n{text['title']}\n\n"
             f"【简介 / Description】（可直接粘贴，约 {len(description)} 字符，YouTube 上限 5000）\n{description}\n\n"

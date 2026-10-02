@@ -53,7 +53,9 @@ public/vg-why-paint-them/audio/
 # (they show NIV text) and the generated narration stay local. The prompts are in
 # docs/RECIPROCAL-DOORS-IMAGE-PROMPTS.md; scripts/reciprocal-doors-capture-product.mjs
 # re-captures the product screens (product/regions.json is tracked: the film points
-# at those rects); lucas-academy-media regenerates the narration.
+# at those rects); lucas-academy-media regenerates the narration. The background
+# music (public/audio/reciprocal-doors/music/) is fetched with the command in
+# LANGUAGE-BRIDGE.md.
 public/images/reciprocal-doors/*.png
 public/images/reciprocal-doors/product/*.png
 public/audio/reciprocal-doors/

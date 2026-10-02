@@ -22,9 +22,6 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 SOURCE = ROOT / "src/scripts/reciprocal-doors.json"
 VOICE_MD = ROOT / "docs/RECIPROCAL-DOORS-VOICE-SCRIPT.md"
-# Chinese speeds fitted by reciprocal-doors-fit.py so each Chinese line lasts
-# about as long as its English line (one picture timing serves both tracks).
-FIT = ROOT / "src/scripts/reciprocal-doors.fit.json"
 # Chinese speeds from reciprocal-doors-pace.py: each line near the film's median
 # speaking rate (applied on top of the one film style).
 PACE = ROOT / "src/scripts/reciprocal-doors.pace.zh.json"
@@ -34,7 +31,7 @@ HAPPY = "请非常开心地说一句话。"
 # tone label -> how CosyVoice is asked for it
 TONES: dict[str, dict] = {
     "默认": {},
-    # Tone lab (outputs/tone-lab, three lines per language, CAM++ similarity + pitch sd):
+    # Tone lab, 2026-09-30 (three lines per language, CAM++ similarity + pitch sd):
     # zh: the instruction in the zero-shot system slot kept fangfang's voice
     #     (0.70–0.83) and moved the pitch at least as much as text alone;
     # en: the same trick made louise *flatter* (pitch sd 2.5–3.2 vs 3.5–4.5 for
@@ -199,7 +196,6 @@ def check(cid: str, spoken: str, subtitle: str, lang: str) -> None:
 
 def narration() -> None:
     source = load()
-    fit = json.loads(FIT.read_text(encoding="utf-8")) if FIT.exists() else {}
     paced = (json.loads(PACE.read_text(encoding="utf-8")) if PACE.exists() else {}).get("speeds", {})
     out: dict[tuple[str, str], list[dict]] = {key: [] for key in OUTPUTS}
     for segment in source["segments"]:
@@ -219,9 +215,7 @@ def narration() -> None:
                     # A taught phrase keeps its plain, slow reading; tone is for narration.
                     if style and not part.get("demo"):
                         line.update(style)
-                    if line["id"] in fit.get(track, {}) and not part.get("demo"):
-                        line["speed"] = fit[track][line["id"]]
-                    # One reading per film: it replaces per-line tones, speeds and the old fit.
+                    # One reading per film: it replaces per-line tones and speeds.
                     if part["lang"] == track and not part.get("demo"):
                         line.update(FILM_STYLE[track])
                         if track == "zh" and line["id"] in paced:

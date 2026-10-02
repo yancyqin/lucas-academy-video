@@ -4,7 +4,7 @@ Uses the same rules as reciprocal-doors-retake.py (whole-line match, homophones,
 must / must-not words, word-for-word lines) on the `reciprocal-doors-tight`
 copies, so a clipped first or last sound from tightening would show up here.
 
-    cd ../lucas-academy-media && PYTHONPATH=src .conda/bin/python ../lucas-academy-video/scripts/reciprocal-doors-check.py en [line ids...]
+    cd ../lucas-academy-media && PYTHONPATH=src .conda/bin/python ../lucas-academy-video/scripts/reciprocal-doors-check.py en [--played] [line ids...]
 """
 from __future__ import annotations
 
@@ -23,9 +23,13 @@ spec.loader.exec_module(retake)
 
 
 def main() -> None:
-    track, wanted = sys.argv[1], set(sys.argv[2:])
+    args = sys.argv[1:]
+    # --played: check the copies the film plays (public/audio, after the film's tempo).
+    played = "--played" in args
+    track, *rest = [a for a in args if a != "--played"]
+    wanted = set(rest)
     voice, scripts = retake.TRACKS[track]
-    folder = retake.MEDIA / "outputs" / voice / "reciprocal-doors-tight"
+    folder = (HERE.parent / "public/audio/reciprocal-doors" / track) if played else retake.MEDIA / "outputs" / voice / "reciprocal-doors-tight"
     asr = whisper.load_model("medium", device="cpu")
     bad = 0
     for name, lang in scripts:
