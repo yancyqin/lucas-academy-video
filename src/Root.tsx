@@ -1,5 +1,6 @@
 import {Composition} from 'remotion';
 import {VG_WHY_DURATION, VG_WHY_FPS, VgWhyVideo} from './videos/vg-why/VgWhyVideo';
+import {RD_FPS, filmDuration, LanguageBridgeVideo, type LanguageBridgeProps} from './videos/ReciprocalDoorsVideo';
 import type {FC} from 'react';
 import {MonkeySocietyVideo} from './MonkeySocietyVideo';
 import {MonkeyIntroVideo} from './videos/MonkeyIntroVideo';
@@ -221,6 +222,29 @@ export const Root: FC = () => {
           defaultProps={props}
           durationInFrames={VG_WHY_DURATION}
           fps={VG_WHY_FPS}
+          width={1920}
+          height={1080}
+        />
+      ))}
+      {/* 语言的桥 · Language Bridge (lucas-academy-media#4): a Chinese film and an English film. */}
+      {([
+        ['LanguageBridgeZh', {lang: 'zh', audio: true, subtitles: true}],
+        ['LanguageBridgeEn', {lang: 'en', audio: true, subtitles: true}],
+        // Delivery pictures, muted (the mixed, loudness-matched narration is muxed in).
+        // Clean = for YouTube with the SRT captions (the owner's choice); Subtitled = burned in
+        // (Chinese film: Chinese + small English; English film: English only) for sharing elsewhere.
+        ['LanguageBridgeZhClean', {lang: 'zh', audio: false, subtitles: false}],
+        ['LanguageBridgeEnClean', {lang: 'en', audio: false, subtitles: false}],
+        ['LanguageBridgeZhSubtitled', {lang: 'zh', audio: false, subtitles: true}],
+        ['LanguageBridgeEnSubtitled', {lang: 'en', audio: false, subtitles: true}],
+      ] as [string, LanguageBridgeProps][]).map(([id, props]) => (
+        <Composition
+          key={id}
+          id={id}
+          component={LanguageBridgeVideo}
+          defaultProps={props}
+          durationInFrames={filmDuration(props.lang)}
+          fps={RD_FPS}
           width={1920}
           height={1080}
         />
