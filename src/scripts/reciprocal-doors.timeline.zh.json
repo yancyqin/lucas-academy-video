@@ -1,0 +1,1333 @@
+{
+  "fps": 30,
+  "lang": "zh",
+  "title": {
+    "zh": "语言的桥：你教我，我教你",
+    "en": "Language Bridge: You Teach Me, I Teach You"
+  },
+  "titleSeconds": 4,
+  "endCardSeconds": 4.5,
+  "durationSeconds": 304.889,
+  "images": [
+    "rd01-listen.png",
+    "rd01-read-alone.png",
+    "rd02-support.png",
+    "rd03-classroom.png",
+    "rd04-two-doors.png",
+    "rd05-shared-paper.png",
+    "rd06-pointing.png",
+    "rd06-story-panels.png",
+    "rd06-teacher.png",
+    "rd08-growing.png",
+    "rd09-family.png",
+    "rd10-together.png"
+  ],
+  "missing": [],
+  "segments": [
+    {
+      "id": "rd01",
+      "start": 4,
+      "end": 36.958,
+      "chunks": [
+        {
+          "id": "rd01-01",
+          "zh": "想象一个孩子。",
+          "en": "Imagine a child.",
+          "start": 5,
+          "slot": 1.579,
+          "spoken": {
+            "zh": 1.579,
+            "en": 2.179
+          },
+          "tracks": {
+            "zh": [
+              {
+                "id": "rd01-01",
+                "file": "audio/reciprocal-doors/zh/rd01-01.wav",
+                "lang": "zh",
+                "demo": false,
+                "offset": 0,
+                "seconds": 1.579
+              }
+            ]
+          }
+        },
+        {
+          "id": "rd01-02",
+          "zh": "别人把故事念给他听，他能说出发生了什么。",
+          "en": "When someone reads a story aloud, he can tell us what happened.",
+          "start": 7.379,
+          "slot": 4.987,
+          "spoken": {
+            "zh": 4.987,
+            "en": 3.697
+          },
+          "tracks": {
+            "zh": [
+              {
+                "id": "rd01-02",
+                "file": "audio/reciprocal-doors/zh/rd01-02.wav",
+                "lang": "zh",
+                "demo": false,
+                "offset": 0,
+                "seconds": 4.987
+              }
+            ]
+          }
+        },
+        {
+          "id": "rd01-03",
+          "zh": "轮到自己读，有些字却让他停下来。",
+          "en": "When he reads it himself, some words stop him.",
+          "start": 12.966,
+          "slot": 5.01,
+          "spoken": {
+            "zh": 5.01,
+            "en": 3.618
+          },
+          "tracks": {
+            "zh": [
+              {
+                "id": "rd01-03",
+                "file": "audio/reciprocal-doors/zh/rd01-03.wav",
+                "lang": "zh",
+                "demo": false,
+                "offset": 0,
+                "seconds": 5.01
+              }
+            ]
+          }
+        },
+        {
+          "id": "rd01-04",
+          "zh": "我们在学习阅读障碍的资料时，注意到这样的情况。",
+          "en": "We noticed examples like this while learning about dyslexia.",
+          "start": 18.676,
+          "slot": 6.392,
+          "spoken": {
+            "zh": 6.392,
+            "en": 4.374
+          },
+          "tracks": {
+            "zh": [
+              {
+                "id": "rd01-04",
+                "file": "audio/reciprocal-doors/zh/rd01-04.wav",
+                "lang": "zh",
+                "demo": false,
+                "offset": 0,
+                "seconds": 6.392
+              }
+            ]
+          }
+        },
+        {
+          "id": "rd01-05",
+          "zh": "有些孩子，认字、拼写很困难。",
+          "en": "Some children find word reading and spelling difficult.",
+          "start": 25.518,
+          "slot": 3.433,
+          "spoken": {
+            "zh": 3.433,
+            "en": 3.478
+          },
+          "tracks": {
+            "zh": [
+              {
+                "id": "rd01-05",
+                "file": "audio/reciprocal-doors/zh/rd01-05.wav",
+                "lang": "zh",
+                "demo": false,
+                "offset": 0,
+                "seconds": 3.433
+              }
+            ]
+          }
+        },
+        {
+          "id": "rd01-06",
+          "zh": "但单看这一点，还不能知道这个孩子能理解什么、能做什么。",
+          "en": "That alone does not tell us everything they can understand or do.",
+          "start": 29.701,
+          "slot": 6.357,
+          "spoken": {
+            "zh": 6.357,
+            "en": 5.335
+          },
+          "tracks": {
+            "zh": [
+              {
+                "id": "rd01-06",
+                "file": "audio/reciprocal-doors/zh/rd01-06.wav",
+                "lang": "zh",
+                "demo": false,
+                "offset": 0,
+                "seconds": 6.357
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "rd02",
+      "start": 36.958,
+      "end": 61.069,
+      "chunks": [
+        {
+          "id": "rd02-01",
+          "zh": "所以，我们可以看看：这个孩子需要什么帮助？",
+          "en": "So we can ask: what help does this child need?",
+          "start": 37.658,
+          "slot": 5.201,
+          "spoken": {
+            "zh": 5.201,
+            "en": 3.434
+          },
+          "tracks": {
+            "zh": [
+              {
+                "id": "rd02-01",
+                "file": "audio/reciprocal-doors/zh/rd02-01.wav",
+                "lang": "zh",
+                "demo": false,
+                "offset": 0,
+                "seconds": 5.201
+              }
+            ]
+          }
+        },
+        {
+          "id": "rd02-02",
+          "zh": "如果今天是理解故事，可以听、看图，再聊一聊。",
+          "en": "If today's goal is to understand a story, we can listen, look at pictures, and talk about it.",
+          "start": 43.309,
+          "slot": 5.485,
+          "spoken": {
+            "zh": 5.485,
+            "en": 6.479
+          },
+          "tracks": {
+            "zh": [
+              {
+                "id": "rd02-02",
+                "file": "audio/reciprocal-doors/zh/rd02-02.wav",
+                "lang": "zh",
+                "demo": false,
+                "offset": 0,
+                "seconds": 5.485
+              }
+            ]
+          }
+        },
+        {
+          "id": "rd02-03",
+          "zh": "需要练认字时，就认真练认字，也给合适的帮助。",
+          "en": "When the goal is word reading, we practise reading with suitable support.",
+          "start": 49.244,
+          "slot": 5.406,
+          "spoken": {
+            "zh": 5.406,
+            "en": 5.452
+          },
+          "tracks": {
+            "zh": [
+              {
+                "id": "rd02-03",
+                "file": "audio/reciprocal-doors/zh/rd02-03.wav",
+                "lang": "zh",
+                "demo": false,
+                "offset": 0,
+                "seconds": 5.406
+              }
+            ]
+          }
+        },
+        {
+          "id": "rd02-04",
+          "zh": "每个孩子的情况不一样，我们要先了解他。",
+          "en": "Each child is different. We need to get to know the child in front of us.",
+          "start": 55.3,
+          "slot": 4.869,
+          "spoken": {
+            "zh": 4.869,
+            "en": 4.698
+          },
+          "tracks": {
+            "zh": [
+              {
+                "id": "rd02-04",
+                "file": "audio/reciprocal-doors/zh/rd02-04.wav",
+                "lang": "zh",
+                "demo": false,
+                "offset": 0,
+                "seconds": 4.869
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "rd03",
+      "start": 61.069,
+      "end": 93.476,
+      "chunks": [
+        {
+          "id": "rd03-01",
+          "zh": "这启发我们想到中英文学习。",
+          "en": "This led us to think about learning Chinese and English.",
+          "start": 61.769,
+          "slot": 4.369,
+          "spoken": {
+            "zh": 4.369,
+            "en": 3.792
+          },
+          "tracks": {
+            "zh": [
+              {
+                "id": "rd03-01",
+                "file": "audio/reciprocal-doors/zh/rd03-01.wav",
+                "lang": "zh",
+                "demo": false,
+                "offset": 0,
+                "seconds": 4.369
+              }
+            ]
+          }
+        },
+        {
+          "id": "rd03-02",
+          "zh": "比如，一个孩子能听懂中文，却还不认识很多汉字。",
+          "en": "One child may understand spoken Chinese but know only a few Chinese characters.",
+          "start": 66.688,
+          "slot": 6.656,
+          "spoken": {
+            "zh": 6.656,
+            "en": 4.672
+          },
+          "tracks": {
+            "zh": [
+              {
+                "id": "rd03-02",
+                "file": "audio/reciprocal-doors/zh/rd03-02.wav",
+                "lang": "zh",
+                "demo": false,
+                "offset": 0,
+                "seconds": 6.656
+              }
+            ]
+          }
+        },
+        {
+          "id": "rd03-03",
+          "zh": "另一个孩子读中文比较顺，讲英文时却需要帮助。",
+          "en": "Another may read Chinese more easily but need help speaking English.",
+          "start": 73.794,
+          "slot": 5.289,
+          "spoken": {
+            "zh": 5.289,
+            "en": 4.411
+          },
+          "tracks": {
+            "zh": [
+              {
+                "id": "rd03-03",
+                "file": "audio/reciprocal-doors/zh/rd03-03.wav",
+                "lang": "zh",
+                "demo": false,
+                "offset": 0,
+                "seconds": 5.289
+              }
+            ]
+          }
+        },
+        {
+          "id": "rd03-04",
+          "zh": "这些情况和阅读障碍有不同的原因。",
+          "en": "These difficulties have different causes from dyslexia.",
+          "start": 79.733,
+          "slot": 4.256,
+          "spoken": {
+            "zh": 4.256,
+            "en": 3.22
+          },
+          "tracks": {
+            "zh": [
+              {
+                "id": "rd03-04",
+                "file": "audio/reciprocal-doors/zh/rd03-04.wav",
+                "lang": "zh",
+                "demo": false,
+                "offset": 0,
+                "seconds": 4.256
+              }
+            ]
+          }
+        },
+        {
+          "id": "rd03-05",
+          "zh": "它们提醒我们一个相似的问题：哪一步难？还能从哪里开始？",
+          "en": "They invite a similar teaching question: which step is difficult, and where else can we begin?",
+          "start": 84.589,
+          "slot": 7.987,
+          "spoken": {
+            "zh": 7.987,
+            "en": 5.809
+          },
+          "tracks": {
+            "zh": [
+              {
+                "id": "rd03-05",
+                "file": "audio/reciprocal-doors/zh/rd03-05.wav",
+                "lang": "zh",
+                "demo": false,
+                "offset": 0,
+                "seconds": 7.987
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "rd04",
+      "start": 93.476,
+      "end": 125.257,
+      "chunks": [
+        {
+          "id": "rd04-01",
+          "zh": "我们来设想两个孩子。",
+          "en": "Let's imagine two children.",
+          "start": 94.176,
+          "slot": 3.97,
+          "spoken": {
+            "zh": 3.97,
+            "en": 2.374
+          },
+          "tracks": {
+            "zh": [
+              {
+                "id": "rd04-01",
+                "file": "audio/reciprocal-doors/zh/rd04-01.wav",
+                "lang": "zh",
+                "demo": false,
+                "offset": 0,
+                "seconds": 3.97
+              }
+            ]
+          }
+        },
+        {
+          "id": "rd04-02",
+          "zh": "Jacob 用中文讲故事比较顺，Mary 用英文讲比较顺。",
+          "en": "Jacob tells stories more easily in Chinese. Mary tells them more easily in English.",
+          "start": 98.596,
+          "slot": 6.78,
+          "spoken": {
+            "zh": 6.78,
+            "en": 6.301
+          },
+          "tracks": {
+            "zh": [
+              {
+                "id": "rd04-02",
+                "file": "audio/reciprocal-doors/zh/rd04-02.wav",
+                "lang": "zh",
+                "demo": false,
+                "offset": 0,
+                "seconds": 6.78
+              }
+            ]
+          }
+        },
+        {
+          "id": "rd04-03",
+          "zh": "学中文时，Jacob 可以帮 Mary；学英文时，Mary 可以帮 Jacob。",
+          "en": "Jacob can help Mary with Chinese, and Mary can help Jacob with English.",
+          "start": 105.826,
+          "slot": 7.248,
+          "spoken": {
+            "zh": 7.248,
+            "en": 4.818
+          },
+          "tracks": {
+            "zh": [
+              {
+                "id": "rd04-03",
+                "file": "audio/reciprocal-doors/zh/rd04-03.wav",
+                "lang": "zh",
+                "demo": false,
+                "offset": 0,
+                "seconds": 7.248
+              }
+            ]
+          }
+        },
+        {
+          "id": "rd04-04",
+          "zh": "这就是“互惠”：我有能帮你的地方，你也有能帮我的地方。",
+          "en": "That is reciprocity: I have something that can help you, and you have something that can help me.",
+          "start": 113.924,
+          "slot": 7.126,
+          "spoken": {
+            "zh": 7.126,
+            "en": 6.712
+          },
+          "tracks": {
+            "zh": [
+              {
+                "id": "rd04-04",
+                "file": "audio/reciprocal-doors/zh/rd04-04.wav",
+                "lang": "zh",
+                "demo": false,
+                "offset": 0,
+                "seconds": 7.126
+              }
+            ]
+          }
+        },
+        {
+          "id": "rd04-05",
+          "zh": "两个人都教，也都学。",
+          "en": "Both children teach, and both learn.",
+          "start": 121.6,
+          "slot": 2.757,
+          "spoken": {
+            "zh": 2.757,
+            "en": 2.765
+          },
+          "tracks": {
+            "zh": [
+              {
+                "id": "rd04-05",
+                "file": "audio/reciprocal-doors/zh/rd04-05.wav",
+                "lang": "zh",
+                "demo": false,
+                "offset": 0,
+                "seconds": 2.757
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "rd05",
+      "start": 125.257,
+      "end": 154.481,
+      "chunks": [
+        {
+          "id": "rd05-01",
+          "zh": "可是，一开始话还说不通，怎么办？",
+          "en": "What if they cannot yet explain everything to each other?",
+          "start": 125.957,
+          "slot": 4.628,
+          "spoken": {
+            "zh": 4.628,
+            "en": 3.154
+          },
+          "tracks": {
+            "zh": [
+              {
+                "id": "rd05-01",
+                "file": "audio/reciprocal-doors/zh/rd05-01.wav",
+                "lang": "zh",
+                "demo": false,
+                "offset": 0,
+                "seconds": 4.628
+              }
+            ]
+          }
+        },
+        {
+          "id": "rd05-02",
+          "zh": "我们想到画画。",
+          "en": "We thought of drawing.",
+          "start": 131.435,
+          "slot": 2.053,
+          "spoken": {
+            "zh": 2.053,
+            "en": 1.951
+          },
+          "tracks": {
+            "zh": [
+              {
+                "id": "rd05-02",
+                "file": "audio/reciprocal-doors/zh/rd05-02.wav",
+                "lang": "zh",
+                "demo": false,
+                "offset": 0,
+                "seconds": 2.053
+              }
+            ]
+          }
+        },
+        {
+          "id": "rd05-03",
+          "zh": "两个人可以先画同一个故事，看同一张图。",
+          "en": "They can draw the same story and look at the same picture.",
+          "start": 133.938,
+          "slot": 4.363,
+          "spoken": {
+            "zh": 4.363,
+            "en": 3.42
+          },
+          "tracks": {
+            "zh": [
+              {
+                "id": "rd05-03",
+                "file": "audio/reciprocal-doors/zh/rd05-03.wav",
+                "lang": "zh",
+                "demo": false,
+                "offset": 0,
+                "seconds": 4.363
+              }
+            ]
+          }
+        },
+        {
+          "id": "rd05-04",
+          "zh": "图画让他们有一件可以一起看、一起说的事。",
+          "en": "Now they have something to look at and talk about together.",
+          "start": 138.751,
+          "slot": 4.878,
+          "spoken": {
+            "zh": 4.878,
+            "en": 3.431
+          },
+          "tracks": {
+            "zh": [
+              {
+                "id": "rd05-04",
+                "file": "audio/reciprocal-doors/zh/rd05-04.wav",
+                "lang": "zh",
+                "demo": false,
+                "offset": 0,
+                "seconds": 4.878
+              }
+            ]
+          }
+        },
+        {
+          "id": "rd05-05",
+          "zh": "这是他们共同的渠道。",
+          "en": "Drawing is a channel they share.",
+          "start": 144.179,
+          "slot": 2.371,
+          "spoken": {
+            "zh": 2.371,
+            "en": 2.13
+          },
+          "tracks": {
+            "zh": [
+              {
+                "id": "rd05-05",
+                "file": "audio/reciprocal-doors/zh/rd05-05.wav",
+                "lang": "zh",
+                "demo": false,
+                "offset": 0,
+                "seconds": 2.371
+              }
+            ]
+          }
+        },
+        {
+          "id": "rd05-06",
+          "zh": "看图之后，也要问问对方：你想表达的是这个意思吗？",
+          "en": "They still need to ask each other: is this what you meant?",
+          "start": 147.15,
+          "slot": 6.431,
+          "spoken": {
+            "zh": 6.431,
+            "en": 3.472
+          },
+          "tracks": {
+            "zh": [
+              {
+                "id": "rd05-06",
+                "file": "audio/reciprocal-doors/zh/rd05-06.wav",
+                "lang": "zh",
+                "demo": false,
+                "offset": 0,
+                "seconds": 6.431
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "rd06",
+      "start": 154.481,
+      "end": 195.137,
+      "chunks": [
+        {
+          "id": "rd06-01",
+          "zh": "比如，他们一起画一个小故事：杯子倒了，朋友来帮忙。",
+          "en": "For example, they draw a small story: a cup tips over, and a friend comes to help.",
+          "start": 155.181,
+          "slot": 6.495,
+          "spoken": {
+            "zh": 6.495,
+            "en": 6.401
+          },
+          "tracks": {
+            "zh": [
+              {
+                "id": "rd06-01",
+                "file": "audio/reciprocal-doors/zh/rd06-01.wav",
+                "lang": "zh",
+                "demo": false,
+                "offset": 0,
+                "seconds": 6.495
+              }
+            ]
+          }
+        },
+        {
+          "id": "rd06-02",
+          "zh": "Jacob 指着画说：“我来帮你。”",
+          "en": "Jacob points to the picture and says, “我来帮你.”",
+          "start": 162.126,
+          "slot": 3.455,
+          "spoken": {
+            "zh": 3.455,
+            "en": 4.178
+          },
+          "tracks": {
+            "zh": [
+              {
+                "id": "rd06-02-p1",
+                "file": "audio/reciprocal-doors/zh/rd06-02-p1.wav",
+                "lang": "zh",
+                "demo": false,
+                "offset": 0,
+                "seconds": 1.715
+              },
+              {
+                "id": "rd06-02-p2",
+                "file": "audio/reciprocal-doors/zh/rd06-02-p2.wav",
+                "lang": "zh",
+                "demo": true,
+                "offset": 2.265,
+                "seconds": 1.19
+              }
+            ]
+          }
+        },
+        {
+          "id": "rd06-03",
+          "zh": "Mary 告诉他，英文可以说：“Let me help you.”",
+          "en": "Mary tells him, “In English, we can say, ‘Let me help you.’”",
+          "start": 166.031,
+          "slot": 5.361,
+          "spoken": {
+            "zh": 5.361,
+            "en": 5.09
+          },
+          "tracks": {
+            "zh": [
+              {
+                "id": "rd06-03-p1",
+                "file": "audio/reciprocal-doors/zh/rd06-03-p1.wav",
+                "lang": "zh",
+                "demo": false,
+                "offset": 0,
+                "seconds": 3.309
+              },
+              {
+                "id": "rd06-03-p2",
+                "file": "audio/reciprocal-doors/zh/rd06-03-p2.wav",
+                "lang": "en",
+                "demo": true,
+                "offset": 3.859,
+                "seconds": 1.502
+              }
+            ]
+          }
+        },
+        {
+          "id": "rd06-04",
+          "zh": "然后交换。",
+          "en": "Then they switch.",
+          "start": 171.942,
+          "slot": 1.214,
+          "spoken": {
+            "zh": 1.214,
+            "en": 1.943
+          },
+          "tracks": {
+            "zh": [
+              {
+                "id": "rd06-04",
+                "file": "audio/reciprocal-doors/zh/rd06-04.wav",
+                "lang": "zh",
+                "demo": false,
+                "offset": 0,
+                "seconds": 1.214
+              }
+            ]
+          }
+        },
+        {
+          "id": "rd06-05",
+          "zh": "Mary 试着说中文，Jacob 试着说英文。",
+          "en": "Mary tries the Chinese, and Jacob tries the English.",
+          "start": 173.606,
+          "slot": 4.066,
+          "spoken": {
+            "zh": 4.066,
+            "en": 3.907
+          },
+          "tracks": {
+            "zh": [
+              {
+                "id": "rd06-05",
+                "file": "audio/reciprocal-doors/zh/rd06-05.wav",
+                "lang": "zh",
+                "demo": false,
+                "offset": 0,
+                "seconds": 4.066
+              }
+            ]
+          }
+        },
+        {
+          "id": "rd06-06",
+          "zh": "说不顺，可以听一听，再试一次。",
+          "en": "If a phrase is difficult, they can listen and try again.",
+          "start": 178.122,
+          "slot": 5.105,
+          "spoken": {
+            "zh": 5.105,
+            "en": 4.848
+          },
+          "tracks": {
+            "zh": [
+              {
+                "id": "rd06-06",
+                "file": "audio/reciprocal-doors/zh/rd06-06.wav",
+                "lang": "zh",
+                "demo": false,
+                "offset": 0,
+                "seconds": 5.105
+              }
+            ]
+          }
+        },
+        {
+          "id": "rd06-07",
+          "zh": "遇到不认识的字，就把这个字找出来，一起学。",
+          "en": "If a written word is unfamiliar, they find it and learn it together.",
+          "start": 183.677,
+          "slot": 5.88,
+          "spoken": {
+            "zh": 5.88,
+            "en": 4.979
+          },
+          "tracks": {
+            "zh": [
+              {
+                "id": "rd06-07",
+                "file": "audio/reciprocal-doors/zh/rd06-07.wav",
+                "lang": "zh",
+                "demo": false,
+                "offset": 0,
+                "seconds": 5.88
+              }
+            ]
+          }
+        },
+        {
+          "id": "rd06-08",
+          "zh": "老师在旁边，帮他们确认意思。",
+          "en": "Their teacher helps them check the meaning.",
+          "start": 190.157,
+          "slot": 4.08,
+          "spoken": {
+            "zh": 4.08,
+            "en": 2.1
+          },
+          "tracks": {
+            "zh": [
+              {
+                "id": "rd06-08",
+                "file": "audio/reciprocal-doors/zh/rd06-08.wav",
+                "lang": "zh",
+                "demo": false,
+                "offset": 0,
+                "seconds": 4.08
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "rd07",
+      "start": 195.137,
+      "end": 223.925,
+      "chunks": [
+        {
+          "id": "rd07-01",
+          "zh": "文字，让我们学着自己读。",
+          "en": "Written words help us learn to read for ourselves.",
+          "start": 195.837,
+          "slot": 3.37,
+          "spoken": {
+            "zh": 3.37,
+            "en": 3.665
+          },
+          "tracks": {
+            "zh": [
+              {
+                "id": "rd07-01",
+                "file": "audio/reciprocal-doors/zh/rd07-01.wav",
+                "lang": "zh",
+                "demo": false,
+                "offset": 0,
+                "seconds": 3.37
+              }
+            ]
+          }
+        },
+        {
+          "id": "rd07-02",
+          "zh": "声音，可以示范怎么说。",
+          "en": "Sound can show us how a phrase is spoken.",
+          "start": 199.557,
+          "slot": 2.578,
+          "spoken": {
+            "zh": 2.578,
+            "en": 2.557
+          },
+          "tracks": {
+            "zh": [
+              {
+                "id": "rd07-02",
+                "file": "audio/reciprocal-doors/zh/rd07-02.wav",
+                "lang": "zh",
+                "demo": false,
+                "offset": 0,
+                "seconds": 2.578
+              }
+            ]
+          }
+        },
+        {
+          "id": "rd07-03",
+          "zh": "图画，帮我们一起谈故事。",
+          "en": "Pictures give us something to discuss together.",
+          "start": 202.485,
+          "slot": 3.755,
+          "spoken": {
+            "zh": 3.755,
+            "en": 3.232
+          },
+          "tracks": {
+            "zh": [
+              {
+                "id": "rd07-03",
+                "file": "audio/reciprocal-doors/zh/rd07-03.wav",
+                "lang": "zh",
+                "demo": false,
+                "offset": 0,
+                "seconds": 3.755
+              }
+            ]
+          }
+        },
+        {
+          "id": "rd07-04",
+          "zh": "什么时候用哪一种，要看这次想学什么。",
+          "en": "We choose what to use by asking what we want to learn.",
+          "start": 206.99,
+          "slot": 4.549,
+          "spoken": {
+            "zh": 4.549,
+            "en": 3.561
+          },
+          "tracks": {
+            "zh": [
+              {
+                "id": "rd07-04",
+                "file": "audio/reciprocal-doors/zh/rd07-04.wav",
+                "lang": "zh",
+                "demo": false,
+                "offset": 0,
+                "seconds": 4.549
+              }
+            ]
+          }
+        },
+        {
+          "id": "rd07-05",
+          "zh": "理解故事时，可以先看图、听故事。",
+          "en": "To understand a story, we may begin with pictures and listening.",
+          "start": 212.089,
+          "slot": 4.126,
+          "spoken": {
+            "zh": 4.126,
+            "en": 4.361
+          },
+          "tracks": {
+            "zh": [
+              {
+                "id": "rd07-05",
+                "file": "audio/reciprocal-doors/zh/rd07-05.wav",
+                "lang": "zh",
+                "demo": false,
+                "offset": 0,
+                "seconds": 4.126
+              }
+            ]
+          }
+        },
+        {
+          "id": "rd07-06",
+          "zh": "练认字时，可以先试着读，需要时再用声音和图画帮忙。",
+          "en": "To practise word reading, we can try reading first and add sound or pictures when needed.",
+          "start": 216.665,
+          "slot": 6.36,
+          "spoken": {
+            "zh": 6.36,
+            "en": 6.349
+          },
+          "tracks": {
+            "zh": [
+              {
+                "id": "rd07-06",
+                "file": "audio/reciprocal-doors/zh/rd07-06.wav",
+                "lang": "zh",
+                "demo": false,
+                "offset": 0,
+                "seconds": 6.36
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "rd08",
+      "start": 223.925,
+      "end": 249.457,
+      "chunks": [
+        {
+          "id": "rd08-01",
+          "zh": "还有一件事很重要：",
+          "en": "There is something else we care about.",
+          "start": 224.925,
+          "slot": 2.44,
+          "spoken": {
+            "zh": 2.44,
+            "en": 2.303
+          },
+          "tracks": {
+            "zh": [
+              {
+                "id": "rd08-01",
+                "file": "audio/reciprocal-doors/zh/rd08-01.wav",
+                "lang": "zh",
+                "demo": false,
+                "offset": 0,
+                "seconds": 2.44
+              }
+            ]
+          }
+        },
+        {
+          "id": "rd08-02",
+          "zh": "学英文时，中文也可以继续用；",
+          "en": "Chinese can keep growing while a child learns English.",
+          "start": 227.965,
+          "slot": 3.492,
+          "spoken": {
+            "zh": 3.492,
+            "en": 4.368
+          },
+          "tracks": {
+            "zh": [
+              {
+                "id": "rd08-02",
+                "file": "audio/reciprocal-doors/zh/rd08-02.wav",
+                "lang": "zh",
+                "demo": false,
+                "offset": 0,
+                "seconds": 3.492
+              }
+            ]
+          }
+        },
+        {
+          "id": "rd08-03",
+          "zh": "学中文时，英文也有用。",
+          "en": "English still matters while a child learns Chinese.",
+          "start": 231.757,
+          "slot": 2.544,
+          "spoken": {
+            "zh": 2.544,
+            "en": 3.374
+          },
+          "tracks": {
+            "zh": [
+              {
+                "id": "rd08-03",
+                "file": "audio/reciprocal-doors/zh/rd08-03.wav",
+                "lang": "zh",
+                "demo": false,
+                "offset": 0,
+                "seconds": 2.544
+              }
+            ]
+          }
+        },
+        {
+          "id": "rd08-04",
+          "zh": "喜欢画画的孩子，可以继续画，也用画帮助大家学。",
+          "en": "A child who enjoys drawing can keep drawing and use it to help the group learn.",
+          "start": 234.851,
+          "slot": 6.371,
+          "spoken": {
+            "zh": 6.371,
+            "en": 5.707
+          },
+          "tracks": {
+            "zh": [
+              {
+                "id": "rd08-04",
+                "file": "audio/reciprocal-doors/zh/rd08-04.wav",
+                "lang": "zh",
+                "demo": false,
+                "offset": 0,
+                "seconds": 6.371
+              }
+            ]
+          }
+        },
+        {
+          "id": "rd08-05",
+          "zh": "我们希望孩子学会新的东西，同时把原来会的，用得更好。",
+          "en": "We want children to learn something new while making good use of what they already know.",
+          "start": 241.922,
+          "slot": 6.635,
+          "spoken": {
+            "zh": 6.635,
+            "en": 4.868
+          },
+          "tracks": {
+            "zh": [
+              {
+                "id": "rd08-05",
+                "file": "audio/reciprocal-doors/zh/rd08-05.wav",
+                "lang": "zh",
+                "demo": false,
+                "offset": 0,
+                "seconds": 6.635
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "rd09",
+      "start": 249.457,
+      "end": 278.604,
+      "chunks": [
+        {
+          "id": "rd09-01",
+          "zh": "父母和孩子也可以这样试。",
+          "en": "Parents and children can try this too.",
+          "start": 250.457,
+          "slot": 3.909,
+          "spoken": {
+            "zh": 3.909,
+            "en": 2.31
+          },
+          "tracks": {
+            "zh": [
+              {
+                "id": "rd09-01",
+                "file": "audio/reciprocal-doors/zh/rd09-01.wav",
+                "lang": "zh",
+                "demo": false,
+                "offset": 0,
+                "seconds": 3.909
+              }
+            ]
+          }
+        },
+        {
+          "id": "rd09-02",
+          "zh": "父母更习惯中文，孩子更习惯英文，可以一起画、一起讲同一个故事。",
+          "en": "If parents are more comfortable in Chinese and children in English, they can draw and tell the same story together.",
+          "start": 254.816,
+          "slot": 8.326,
+          "spoken": {
+            "zh": 8.326,
+            "en": 7.696
+          },
+          "tracks": {
+            "zh": [
+              {
+                "id": "rd09-02",
+                "file": "audio/reciprocal-doors/zh/rd09-02.wav",
+                "lang": "zh",
+                "demo": false,
+                "offset": 0,
+                "seconds": 8.326
+              }
+            ]
+          }
+        },
+        {
+          "id": "rd09-03",
+          "zh": "父母说出自己的意思，孩子帮助找英文的说法，再一起确认。",
+          "en": "A parent shares what they mean, a child helps find the English words, and they check it together.",
+          "start": 263.592,
+          "slot": 7.11,
+          "spoken": {
+            "zh": 7.11,
+            "en": 5.953
+          },
+          "tracks": {
+            "zh": [
+              {
+                "id": "rd09-03",
+                "file": "audio/reciprocal-doors/zh/rd09-03.wav",
+                "lang": "zh",
+                "demo": false,
+                "offset": 0,
+                "seconds": 7.11
+              }
+            ]
+          }
+        },
+        {
+          "id": "rd09-04",
+          "zh": "两代人都有可以分享的东西，也都有可以学习的东西。",
+          "en": "Both generations have something to share and something to learn.",
+          "start": 271.402,
+          "slot": 6.302,
+          "spoken": {
+            "zh": 6.302,
+            "en": 3.856
+          },
+          "tracks": {
+            "zh": [
+              {
+                "id": "rd09-04",
+                "file": "audio/reciprocal-doors/zh/rd09-04.wav",
+                "lang": "zh",
+                "demo": false,
+                "offset": 0,
+                "seconds": 6.302
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "rd10",
+      "start": 278.604,
+      "end": 300.389,
+      "chunks": [
+        {
+          "id": "rd10-01",
+          "zh": "这就是“语言的桥”。",
+          "en": "This is our Language Bridge.",
+          "start": 279.604,
+          "slot": 2.407,
+          "spoken": {
+            "zh": 2.407,
+            "en": 2.668
+          },
+          "tracks": {
+            "zh": [
+              {
+                "id": "rd10-01",
+                "file": "audio/reciprocal-doors/zh/rd10-01.wav",
+                "lang": "zh",
+                "demo": false,
+                "offset": 0,
+                "seconds": 2.407
+              }
+            ]
+          }
+        },
+        {
+          "id": "rd10-02",
+          "zh": "我们从阅读障碍教育得到启发，正在设计中英双语的多媒体学习方式。",
+          "en": "Inspired by dyslexia education, we are designing ways to learn through Chinese, English, words, sound, and pictures.",
+          "start": 282.611,
+          "slot": 7.455,
+          "spoken": {
+            "zh": 7.455,
+            "en": 9.922
+          },
+          "tracks": {
+            "zh": [
+              {
+                "id": "rd10-02",
+                "file": "audio/reciprocal-doors/zh/rd10-02.wav",
+                "lang": "zh",
+                "demo": false,
+                "offset": 0,
+                "seconds": 7.455
+              }
+            ]
+          }
+        },
+        {
+          "id": "rd10-03",
+          "zh": "从一个共同的故事开始：",
+          "en": "We can begin with one shared story.",
+          "start": 290.666,
+          "slot": 2.383,
+          "spoken": {
+            "zh": 2.383,
+            "en": 3.955
+          },
+          "tracks": {
+            "zh": [
+              {
+                "id": "rd10-03",
+                "file": "audio/reciprocal-doors/zh/rd10-03.wav",
+                "lang": "zh",
+                "demo": false,
+                "offset": 0,
+                "seconds": 2.383
+              }
+            ]
+          }
+        },
+        {
+          "id": "rd10-04",
+          "zh": "你教我一句，我教你一句，我们一起多懂一点。",
+          "en": "You teach me a phrase, I teach you a phrase, and we understand a little more together.",
+          "start": 293.599,
+          "slot": 5.89,
+          "spoken": {
+            "zh": 5.89,
+            "en": 6.34
+          },
+          "tracks": {
+            "zh": [
+              {
+                "id": "rd10-04",
+                "file": "audio/reciprocal-doors/zh/rd10-04.wav",
+                "lang": "zh",
+                "demo": false,
+                "offset": 0,
+                "seconds": 5.89
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

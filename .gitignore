@@ -48,3 +48,12 @@ public/vg-why-paint-them/art/*.jpg
 public/vg-why-paint-them/art/tiles/
 public/vg-why-paint-them/music/*.mp3
 public/vg-why-paint-them/audio/
+
+# Language Bridge videos (media#4): the Codex concept images, the product screens
+# (they show NIV text) and the generated narration stay local. The prompts are in
+# docs/RECIPROCAL-DOORS-IMAGE-PROMPTS.md; scripts/reciprocal-doors-capture-product.mjs
+# re-captures the product screens (product/regions.json is tracked: the film points
+# at those rects); lucas-academy-media regenerates the narration.
+public/images/reciprocal-doors/*.png
+public/images/reciprocal-doors/product/*.png
+public/audio/reciprocal-doors/
