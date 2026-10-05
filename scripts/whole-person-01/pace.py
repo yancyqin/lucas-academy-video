@@ -6,7 +6,8 @@ syllables per second of *sound* (pauses and the trimmed edges excluded; an
 English word counts its vowel groups) and re-voices a line more than TOL off
 the median at speed = current / ratio (within SPEED), keeping the take closest
 to the median among those Whisper hears correctly. Chosen speeds are stored in
-src/data/whole-person-01.pace.json so a later re-voice keeps them.
+outputs/whole-person-five-ideas.pace.json (lucas-academy-media, ignored) so the
+next run starts from them.
 
 Run from lucas-academy-media with its env:
   .conda/bin/python ../lucas-academy-video/scripts/whole-person-01/pace.py zh|en [--measure]
@@ -26,8 +27,7 @@ sys.path.insert(0, "src")
 sys.path.insert(0, str(Path(__file__).parent))
 import narrate  # noqa: E402  (OUT, SCRIPT, SPOKEN, ZH_SUBSTITUTIONS)
 
-VIDEO = Path(__file__).resolve().parents[2]
-PACE = VIDEO / "src/data/whole-person-01.pace.json"
+PACE = Path("outputs/whole-person-five-ideas.pace.json")  # beside the takes in lucas-academy-media (ignored)
 TOL = 0.10
 SPEED = (0.8, 1.25)
 TRIES = 3

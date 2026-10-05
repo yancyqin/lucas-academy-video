@@ -1,5 +1,6 @@
 import type {CSSProperties, FC, ReactNode} from 'react';
 import {
+  type CalculateMetadataFunction,
   AbsoluteFill,
   Audio,
   Img,
@@ -11,8 +12,6 @@ import {
   useCurrentFrame,
   useVideoConfig,
 } from 'remotion';
-import zhTimeline from '../../data/whole-person-01.zh.json';
-import enTimeline from '../../data/whole-person-01.en.json';
 import {INTRO, SECTION_BG, SHOTS, type Card, type Clip, type Label, type Shot} from './shots';
 
 /**
@@ -25,14 +24,43 @@ import {INTRO, SECTION_BG, SHOTS, type Card, type Clip, type Label, type Shot} f
  */
 
 export type Lang = 'zh' | 'en';
-export type WholePersonProps = {lang: Lang};
 
-type Timeline = typeof zhTimeline;
+type Cue = {
+  id: string;
+  section: string;
+  zh: string;
+  en: string;
+  start: number;
+  end: number;
+  speech: {start: number; end: number};
+};
 
-const TIMELINES: Record<Lang, Timeline> = {zh: zhTimeline, en: enTimeline as Timeline};
+/** Written by scripts/whole-person-01/build_timeline.py into public/whole-person-01/ — generated, never committed. */
+export type Timeline = {
+  fps: number;
+  leadIn: number;
+  lang: Lang;
+  title: Label;
+  footage: string[];
+  images: string[];
+  footageSeconds: Record<string, number>;
+  durationSeconds: number;
+  endCardStart: number;
+  cues: Cue[];
+};
 
-export const WP_FPS = zhTimeline.fps;
-export const wpDuration = (lang: Lang) => Math.ceil(TIMELINES[lang].durationSeconds * WP_FPS);
+export type WholePersonProps = {lang: Lang; tl?: Timeline | null};
+
+export const WP_FPS = 30;
+
+/** Load the film's timeline (and so its length) before rendering. Run `npm run wp01:timeline` first. */
+export const calculateWholePersonMetadata: CalculateMetadataFunction<WholePersonProps> = async ({props, abortSignal}) => {
+  const file = `whole-person-01/timeline.${props.lang}.json`;
+  const response = await fetch(staticFile(file), {signal: abortSignal});
+  if (!response.ok) throw new Error(`${file} is missing — run npm run wp01:timeline first`);
+  const tl = (await response.json()) as Timeline;
+  return {durationInFrames: Math.ceil(tl.durationSeconds * tl.fps), fps: tl.fps, props: {...props, tl}};
+};
 
 const FADE = 18; // frames of cross-dissolve
 const SAFE_BOTTOM = 150; // keep cards clear of where YouTube draws captions
@@ -438,9 +466,9 @@ const ShotCard: FC<{ctx: Ctx; card: Card; len: number; start: number}> = ({ctx, 
   return <CardView ctx={ctx} card={card} frame={frame} len={len} shotStart={start} />;
 };
 
-export const WholePersonVideo: FC<WholePersonProps> = ({lang}) => {
+export const WholePersonVideo: FC<WholePersonProps> = ({lang, tl}) => {
   const {fps} = useVideoConfig();
-  const tl = TIMELINES[lang];
+  if (!tl) return <Missing name="npm run wp01:timeline" />;
   const byId = new Map(tl.cues.map((c) => [c.id, c]));
   const ctx: Ctx = {tl, lang, cue: (id) => byId.get(id)!};
   const f = (s: number) => Math.round(s * fps);

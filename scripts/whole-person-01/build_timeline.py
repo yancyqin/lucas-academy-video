@@ -3,11 +3,12 @@
 lucas-academy-media#5. Two films, one per language, each paced by its own
 narration (no shared timeline). Reads the confirmed line scripts and per-line
 narration WAVs from lucas-academy-media, then writes for each LANG in zh, en:
-  src/data/whole-person-01.LANG.json             cue timeline for Remotion
+  public/whole-person-01/timeline.LANG.json      cue timeline Remotion loads before rendering
   public/whole-person-01/audio/LANG.wav          full-length narration track
   public/whole-person-01/audio/LANG.mix.wav      narration + ducked music bed, -16 LUFS
-  out/whole-person-01/LANG/zh-Hans.srt, en.srt   captions for that film; both
-                                                 languages share its cue times
+  out/whole-person-01/delivery/whole-person-five-principles.LANG.{zh-Hans,en}.srt
+                                                 captions for that film; both languages
+                                                 share its cue times
 
 Nothing is burned in: YouTube gets the clean film plus both SRTs.
 A missing WAV is stood in for by silence of an estimated length (and reported).
@@ -15,12 +16,13 @@ A missing WAV is stood in for by silence of an estimated length (and reported).
 import array
 import json
 import math
+import os
 import subprocess
 import wave
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-MEDIA = ROOT.parent / "lucas-academy-media"
+MEDIA = Path(os.environ.get("LUCAS_MEDIA", ROOT.parent / "lucas-academy-media"))
 SCRIPTS = {
     "zh": MEDIA / "data/scripts/whole-person-five-ideas-zh.json",
     "en": MEDIA / "data/scripts/whole-person-five-ideas-en.json",
@@ -167,17 +169,17 @@ def main() -> None:
             w.writeframes(track.tobytes())
         mix_with_music(audio_dir / f"{lang}.wav", audio_dir / f"{lang}.mix.wav", total)
 
-        out = ROOT / "out/whole-person-01" / lang
+        out = ROOT / "out/whole-person-01/delivery"
         out.mkdir(parents=True, exist_ok=True)
-        for name, key in (("zh-Hans.srt", "zh"), ("en.srt", "en")):
+        for name, key in (("zh-Hans", "zh"), ("en", "en")):
             blocks = [
                 f"{n}\n{srt_time(c['speech']['start'])} --> {srt_time(c['end'] - 0.1)}\n{c[key]}\n"
                 for n, c in enumerate(cues, 1)
             ]
-            (out / name).write_text("\n".join(blocks), encoding="utf-8")
+            (out / f"whole-person-five-principles.{lang}.{name}.srt").write_text("\n".join(blocks), encoding="utf-8")
 
         data = {**shared, "lang": lang, "durationSeconds": round(total, 3), "endCardStart": round(t, 3), "cues": cues}
-        (ROOT / f"src/data/whole-person-01.{lang}.json").write_text(json.dumps(data, ensure_ascii=False, indent=1) + "\n")
+        (ROOT / f"public/whole-person-01/timeline.{lang}.json").write_text(json.dumps(data, ensure_ascii=False, indent=1) + "\n")
         speech = sum(len(c) for c in clips.values()) / RATE
         print(f"{lang}: {len(cues)} cues, {total:.1f}s ({total/60:.1f} min), speech {speech:.1f}s")
         if missing:

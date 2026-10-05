@@ -1,7 +1,7 @@
 import {Composition} from 'remotion';
 import {VG_WHY_DURATION, VG_WHY_FPS, VgWhyVideo} from './videos/vg-why/VgWhyVideo';
 import {RD_FPS, filmDuration, LanguageBridgeVideo, type LanguageBridgeProps} from './videos/ReciprocalDoorsVideo';
-import {WP_FPS, WholePersonVideo, wpDuration} from './videos/whole-person-01/WholePersonVideo';
+import {WP_FPS, WholePersonVideo, calculateWholePersonMetadata} from './videos/whole-person-01/WholePersonVideo';
 import type {FC} from 'react';
 import {MonkeySocietyVideo} from './MonkeySocietyVideo';
 import {MonkeyIntroVideo} from './videos/MonkeyIntroVideo';
@@ -256,8 +256,9 @@ export const Root: FC = () => {
           key={lang}
           id={lang === 'zh' ? 'WholePersonZh' : 'WholePersonEn'}
           component={WholePersonVideo}
-          defaultProps={{lang}}
-          durationInFrames={wpDuration(lang)}
+          defaultProps={{lang, tl: null}}
+          calculateMetadata={calculateWholePersonMetadata}
+          durationInFrames={1}
           fps={WP_FPS}
           width={1920}
           height={1080}
