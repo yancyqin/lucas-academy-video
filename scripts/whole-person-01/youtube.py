@@ -81,7 +81,6 @@ TEXT = {
         "upload": """【上传设置 / Upload settings】
 · 视频：whole-person-five-principles.zh.mp4（1920×1080，{length}，−16 LUFS）
 · 缩略图：youtube-thumbnail.zh.jpg（1280×720）
-· 字幕：whole-person-five-principles.zh.zh-Hans.srt →「中文（简体）」；whole-person-five-principles.zh.en.srt →「英语」（两份都按中文配音计时）
 · 视频语言：中文（简体）
 · 观众：否，不是专为儿童打造的（这支片子是对家长说的）
 · 修改过或合成的内容：是（旁白是合成声音；YouTube 要求披露「合成人物声音来旁白」）
@@ -117,7 +116,6 @@ Learning is about owning, not being fed. This short film walks through Lucas Aca
         "upload": """【上传设置 / Upload settings】
 · Video: whole-person-five-principles.en.mp4 (1920×1080, {length}, −16 LUFS)
 · Thumbnail: youtube-thumbnail.en.jpg (1280×720)
-· Captions: whole-person-five-principles.en.en.srt → English; whole-person-five-principles.en.zh-Hans.srt → Chinese (Simplified) (both timed to the English narration)
 · Video language: English
 · Audience: No, it's not made for kids (it is addressed to parents)
 · Altered or synthetic content: Yes (the narration is a synthesized voice)
