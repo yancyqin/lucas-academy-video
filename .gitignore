@@ -60,7 +60,7 @@ public/images/reciprocal-doors/*.png
 public/images/reciprocal-doors/product/*.png
 public/audio/reciprocal-doors/
 
-# 全人教育的五个理念 (media#5): narration tracks, the app recordings, the transit-chamber
-# capture, the music bed, the kids' artwork copies and the old concept images stay local.
+# 全人教育的五个理念 (media#5): the timelines, narration tracks, app recordings, transit-chamber
+# capture, music bed and the kids' artwork copies are local working copies, rebuilt when needed.
 # WHOLE-PERSON-01.md says where each comes from and how to rebuild it.
 public/whole-person-01/

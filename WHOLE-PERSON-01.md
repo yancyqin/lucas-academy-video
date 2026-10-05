@@ -9,8 +9,17 @@ Two films, one per language, told to parents. No captions are burned in: each fi
 | `WholePersonZh` | Yancy's own voice (`yancy/zh`), zero-shot-instruct teaching tone, speed 1.0 | ≈ 8:08 |
 | `WholePersonEn` | Louise (`louise/en`) | ≈ 7:34 |
 
-Deliverables (local, `out/` is ignored): `out/whole-person-01/{zh,en}/whole-person-five-principles.{zh,en}.mp4`
-plus `zh-Hans.srt` and `en.srt` in the same folder. Loudness −16 LUFS.
+Delivery (local, `out/` is ignored), all in `out/whole-person-01/delivery/`:
+
+- `whole-person-five-principles.<film>.mp4` — 1080p, −16 LUFS, clean picture.
+- `whole-person-five-principles.<film>.zh-Hans.srt` / `.en.srt` — both captions on that film's own times.
+- `youtube-description.<film>.txt` — title, paste-ready description with chapters, credits and Bible
+  notices, tags, upload settings (not made for kids; altered/synthetic content = yes, synthesized voice).
+- `youtube-thumbnail.<film>.jpg` — the title frame, 1280×720.
+
+Only sources are committed: the line scripts (lucas-academy-media), the code and this file. Everything
+the pipeline writes — voice takes, timelines, mixes, recordings, renders — is a local working copy:
+rebuild it with the steps below when the film changes, and delete it once the film is published.
 
 ## Script
 
@@ -32,7 +41,12 @@ V=../lucas-academy-video/scripts/whole-person-01
 npm run wp01:timeline
 # 3. Render both films at 1080p
 npm run wp01:render
+# 4. YouTube title, description (chapter times from the timelines), tags, thumbnails
+npm run wp01:youtube
 ```
+
+`LUCAS_MEDIA=<path>` points `build_timeline.py` at a lucas-academy-media checkout that is not this
+repo's sibling.
 
 - `narrate.py` — one WAV per line into `OUT`; lines whose text is unchanged since `PREVIOUS` are copied,
   not re-synthesized. `SPOKEN` holds what the voice reads where it differs from the caption: the zh voice
@@ -42,12 +56,15 @@ npm run wp01:render
   English names (Lucas Academy, Art Lab, Matthew): check those lines.
 - `pace.py` — speaking rate = syllables per second of sound (pauses excluded); a line more than 10% off the
   film median is re-voiced with closed-loop speed correction and kept only if Whisper still reads it right.
-  `EXEMPT` keeps the opening question 「谁是教育者？」 slow on purpose. Speeds land in `src/data/whole-person-01.pace.json`.
+  `EXEMPT` keeps the opening question 「谁是教育者？」 slow on purpose. Speeds are kept in lucas-academy-media
+  `outputs/whole-person-five-ideas.pace.json` (ignored) as the next run's starting point.
 - `check_lines.py` — Whisper every line, flag below 0.9. Known zh false alarms: homophones (权柄→全柄,
   勉励→免利, 作主→做主). Final run: all 56 English lines pass; zh only those homophones.
-- `build_timeline.py` — per film: cue timeline (`src/data/whole-person-01.{zh,en}.json`), trimmed narration
-  track, music mix and SRTs. Music: "Echoes in the Void" (Yancy's track for the Inception Space Journey of
-  Art room), looped with 6 s crossfades, −13 dB bed, sidechain-ducked under the voice, mix normalised to −16 LUFS.
+- `build_timeline.py` — per film: cue timeline (`public/whole-person-01/timeline.{zh,en}.json`; the
+  compositions load it before rendering, so it sets each film's length), trimmed narration track, music
+  mix and SRTs. Music: "Echoes in the Void", made by Yancy with Suno for the Inception Space Journey of Art
+  room, looped with 6 s crossfades, −13 dB bed, sidechain-ducked under the voice, mix normalised to −16 LUFS.
+- `youtube.py` — the YouTube text lives here; chapter times and film lengths are read from the timelines.
 
 ## Picture
 
@@ -69,9 +86,8 @@ npm run wp01:render
 | `footage/transit-chamber.mp4` | `scripts/whole-person-01/record-chamber.cjs` (below) |
 | `images/{lucas,matthew}-sketch-original.jpg`, `*-preparation-final.jpg`, `logo.png`, `live-painting.png` | lucasgame-academy `presentation/assets/` |
 | `images/{lucas,matthew}-final-artwork.jpg` | inception-space-ui `output/imagegen/lesson03-matthew-lucas/<kid>/<kid>-completed-full-bleed-final.jpg` (same bytes as the R2 museum objects) |
-| `music/echoes-in-the-void.m4a` | Yancy's original `Echoes in the Void.m4a`; provenance in inception-space-ui `PROVENANCE.md` |
-| `audio/` | written by `npm run wp01:timeline` |
-| `concept/` | Codex concept images from an early version — not used, kept local |
+| `music/echoes-in-the-void.m4a` | Yancy's original `Echoes in the Void.m4a` (made with Suno); provenance in inception-space-ui `PROVENANCE.md` |
+| `timeline.{zh,en}.json`, `audio/` | written by `npm run wp01:timeline` |
 
 Re-encode a recording: `ffmpeg -i IN.mp4 -an -c:v libx264 -crf 18 -pix_fmt yuv420p -r 30 -g 15 -keyint_min 15 -sc_threshold 0 -movflags +faststart OUT.mp4`.
 
