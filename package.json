@@ -31,7 +31,9 @@
     "rejoice:shots": ".venv-align/bin/python scripts/mv/build_shots.py",
     "vgwhy:timeline": "python3 scripts/vg-why/build_timeline.py",
     "vgwhy:render": "remotion render src/index.ts VgWhyPicture out/vg-why-paint-them/picture.mp4 && python3 scripts/vg-why/deliver.py",
-    "vgwhy:deliver": "python3 scripts/vg-why/deliver.py"
+    "vgwhy:deliver": "python3 scripts/vg-why/deliver.py",
+    "wp01:timeline": "python3 scripts/whole-person-01/build_timeline.py",
+    "wp01:render": "remotion render src/index.ts WholePersonZh out/whole-person-01/zh/whole-person-five-principles.zh.mp4 --concurrency=4 --timeout=240000 --offthreadvideo-cache-size-in-bytes=2000000000 && remotion render src/index.ts WholePersonEn out/whole-person-01/en/whole-person-five-principles.en.mp4 --concurrency=4 --timeout=240000 --offthreadvideo-cache-size-in-bytes=2000000000"
   },
   "dependencies": {
     "@remotion/cli": "^4.0.484",

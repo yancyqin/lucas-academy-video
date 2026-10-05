@@ -1,6 +1,7 @@
 import {Composition} from 'remotion';
 import {VG_WHY_DURATION, VG_WHY_FPS, VgWhyVideo} from './videos/vg-why/VgWhyVideo';
 import {RD_FPS, filmDuration, LanguageBridgeVideo, type LanguageBridgeProps} from './videos/ReciprocalDoorsVideo';
+import {WP_FPS, WholePersonVideo, wpDuration} from './videos/whole-person-01/WholePersonVideo';
 import type {FC} from 'react';
 import {MonkeySocietyVideo} from './MonkeySocietyVideo';
 import {MonkeyIntroVideo} from './videos/MonkeyIntroVideo';
@@ -245,6 +246,19 @@ export const Root: FC = () => {
           defaultProps={props}
           durationInFrames={filmDuration(props.lang)}
           fps={RD_FPS}
+          width={1920}
+          height={1080}
+        />
+      ))}
+      {/* 我们怎样陪孩子成长：全人教育的五个理念 (lucas-academy-media#5): one film per language, no burned-in captions. */}
+      {(['zh', 'en'] as const).map((lang) => (
+        <Composition
+          key={lang}
+          id={lang === 'zh' ? 'WholePersonZh' : 'WholePersonEn'}
+          component={WholePersonVideo}
+          defaultProps={{lang}}
+          durationInFrames={wpDuration(lang)}
+          fps={WP_FPS}
           width={1920}
           height={1080}
         />
