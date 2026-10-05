@@ -1,5 +1,7 @@
 import {Composition} from 'remotion';
-import {WP_DURATION, WP_FPS, WholePersonVideo} from './videos/whole-person-01/WholePersonVideo';
+import {VG_WHY_DURATION, VG_WHY_FPS, VgWhyVideo} from './videos/vg-why/VgWhyVideo';
+import {RD_FPS, filmDuration, LanguageBridgeVideo, type LanguageBridgeProps} from './videos/ReciprocalDoorsVideo';
+import {WP_FPS, WholePersonVideo, wpDuration} from './videos/whole-person-01/WholePersonVideo';
 import type {FC} from 'react';
 import {MonkeySocietyVideo} from './MonkeySocietyVideo';
 import {MonkeyIntroVideo} from './videos/MonkeyIntroVideo';
@@ -207,18 +209,55 @@ export const Root: FC = () => {
         width={1920}
         height={1080}
       />
-      {/* 全人教育① (lucas-academy-media#5): zh (Yancy) / en (Louise) narration + clean master. */}
+      {/* 梵高为什么画他们？ (lucas-academy-media#3): previews with each track, and the
+          silent picture that scripts/vg-why/deliver.py muxes both tracks onto. */}
       {([
-        ['WholePersonZh', {audio: 'zh', subtitles: true}],
-        ['WholePersonEn', {audio: 'en', subtitles: true}],
-        ['WholePersonClean', {audio: 'none', subtitles: false}],
+        ['VgWhyZh', {audio: 'zh'}],
+        ['VgWhyEn', {audio: 'en'}],
+        ['VgWhyPicture', {audio: 'none'}],
       ] as const).map(([id, props]) => (
         <Composition
           key={id}
           id={id}
-          component={WholePersonVideo}
+          component={VgWhyVideo}
           defaultProps={props}
-          durationInFrames={WP_DURATION}
+          durationInFrames={VG_WHY_DURATION}
+          fps={VG_WHY_FPS}
+          width={1920}
+          height={1080}
+        />
+      ))}
+      {/* 语言的桥 · Language Bridge (lucas-academy-media#4): a Chinese film and an English film. */}
+      {([
+        ['LanguageBridgeZh', {lang: 'zh', audio: true, subtitles: true}],
+        ['LanguageBridgeEn', {lang: 'en', audio: true, subtitles: true}],
+        // Delivery pictures, muted (the mixed, loudness-matched narration is muxed in).
+        // Clean = for YouTube with the SRT captions (the owner's choice); Subtitled = burned in
+        // (Chinese film: Chinese + small English; English film: English only) for sharing elsewhere.
+        ['LanguageBridgeZhClean', {lang: 'zh', audio: false, subtitles: false}],
+        ['LanguageBridgeEnClean', {lang: 'en', audio: false, subtitles: false}],
+        ['LanguageBridgeZhSubtitled', {lang: 'zh', audio: false, subtitles: true}],
+        ['LanguageBridgeEnSubtitled', {lang: 'en', audio: false, subtitles: true}],
+      ] as [string, LanguageBridgeProps][]).map(([id, props]) => (
+        <Composition
+          key={id}
+          id={id}
+          component={LanguageBridgeVideo}
+          defaultProps={props}
+          durationInFrames={filmDuration(props.lang)}
+          fps={RD_FPS}
+          width={1920}
+          height={1080}
+        />
+      ))}
+      {/* 我们怎样陪孩子成长：全人教育的五个理念 (lucas-academy-media#5): one film per language, no burned-in captions. */}
+      {(['zh', 'en'] as const).map((lang) => (
+        <Composition
+          key={lang}
+          id={lang === 'zh' ? 'WholePersonZh' : 'WholePersonEn'}
+          component={WholePersonVideo}
+          defaultProps={{lang}}
+          durationInFrames={wpDuration(lang)}
           fps={WP_FPS}
           width={1920}
           height={1080}

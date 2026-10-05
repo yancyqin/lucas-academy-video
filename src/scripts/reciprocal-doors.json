@@ -1,0 +1,680 @@
+{
+  "id": "reciprocal-doors",
+  "source": "https://github.com/yancyqin/lucas-academy-media/issues/4",
+  "title": {
+    "zh": "语言的桥：你教我，我教你",
+    "en": "Language Bridge: You Teach Me, I Teach You"
+  },
+  "voices": {
+    "zh": "fangfang/zh",
+    "en": "louise/en"
+  },
+  "segments": [
+    {
+      "id": "rd01",
+      "chunks": [
+        {
+          "id": "rd01-01",
+          "zh": "想象一个孩子。",
+          "en": "Imagine a child.",
+          "say": {
+            "zh": "想象一个孩子。",
+            "en": "Imagine a child."
+          },
+          "speed": 0.82,
+          "pause": 1.0
+        },
+        {
+          "id": "rd01-02",
+          "zh": "别人把故事念给他听，他能说出发生了什么。",
+          "en": "When someone reads a story aloud, he can tell us what happened.",
+          "say": {
+            "zh": "别人把故事<strong>念给他听</strong>，他<strong>能</strong>说出发生了什么。",
+            "en": "When someone <strong>reads a story aloud</strong>, he can tell us what happened."
+          },
+          "speed": 0.9,
+          "pause": 0.8
+        },
+        {
+          "id": "rd01-03",
+          "zh": "轮到自己读，有些字却让他停下来。",
+          "en": "When he reads it himself, some words stop him.",
+          "say": {
+            "zh": "轮到<strong>自己读</strong>，有些字，却让他停下来。",
+            "en": "When he reads it <strong>himself</strong>, some words... stop him."
+          },
+          "speed": 0.85,
+          "pause": 0.6
+        },
+        {
+          "id": "rd01-04",
+          "zh": "我们在学习阅读障碍的资料时，注意到这样的情况。",
+          "en": "We noticed examples like this while learning about dyslexia.",
+          "say": {
+            "zh": "我们在学习<strong>阅读障碍</strong>的资料时，注意到这样的情况。",
+            "en": "We noticed examples like this while learning about <strong>dyslexia</strong>."
+          },
+          "speed": 0.9,
+          "pause": 0.7
+        },
+        {
+          "id": "rd01-05",
+          "zh": "有些孩子，认字、拼写很困难。",
+          "en": "Some children find word reading and spelling difficult.",
+          "say": {
+            "zh": "有些孩子，<strong>认字、拼写</strong>很困难。",
+            "en": "Some children find <strong>word reading and spelling</strong> difficult."
+          },
+          "speed": 0.9
+        },
+        {
+          "id": "rd01-06",
+          "zh": "但单看这一点，还不能知道这个孩子能理解什么、能做什么。",
+          "en": "That alone does not tell us everything they can understand or do.",
+          "say": {
+            "zh": "但单看这一点，还<strong>不能</strong>知道这个孩子能<strong>理解</strong>什么、能<strong>做</strong>什么。",
+            "en": "That alone does <strong>not</strong> tell us everything they can <strong>understand</strong>, or <strong>do</strong>."
+          },
+          "speed": 0.85,
+          "pause": 0.75
+        }
+      ]
+    },
+    {
+      "id": "rd02",
+      "chunks": [
+        {
+          "id": "rd02-01",
+          "zh": "所以，我们可以看看：这个孩子需要什么帮助？",
+          "en": "So we can ask: what help does this child need?",
+          "say": {
+            "zh": "所以，我们可以看看：这个孩子<strong>需要什么帮助</strong>？",
+            "en": "So we can ask: what <strong>help</strong> does this child need?"
+          },
+          "speed": 0.9
+        },
+        {
+          "id": "rd02-02",
+          "zh": "如果今天是理解故事，可以听、看图，再聊一聊。",
+          "en": "If today's goal is to understand a story, we can listen, look at pictures, and talk about it.",
+          "say": {
+            "zh": "如果今天是<strong>理解故事</strong>，可以听、看图，再聊一聊。",
+            "en": "If today's goal is to <strong>understand a story</strong>, we can listen, look at pictures, and talk about it."
+          },
+          "speed": 0.95
+        },
+        {
+          "id": "rd02-03",
+          "zh": "需要练认字时，就认真练认字，也给合适的帮助。",
+          "en": "When the goal is word reading, we practise reading with suitable support.",
+          "say": {
+            "zh": "需要<strong>练认字</strong>时，就<strong>认真</strong>练认字，也给合适的帮助。",
+            "en": "When the goal is <strong>word reading</strong>, we practise reading with suitable support."
+          },
+          "speed": 0.9
+        },
+        {
+          "id": "rd02-04",
+          "zh": "每个孩子的情况不一样，我们要先了解他。",
+          "en": "Each child is different. We need to get to know the child in front of us.",
+          "say": {
+            "zh": "每个孩子的情况<strong>不一样</strong>，我们要先<strong>了解他</strong>。",
+            "en": "Each child is <strong>different</strong>. We need to get to know the child <strong>in front of us</strong>."
+          },
+          "speed": 0.85,
+          "pause": 0.65
+        }
+      ]
+    },
+    {
+      "id": "rd03",
+      "chunks": [
+        {
+          "id": "rd03-01",
+          "zh": "这启发我们想到中英文学习。",
+          "en": "This led us to think about learning Chinese and English.",
+          "say": {
+            "zh": "这启发我们想到<strong>中英文学习</strong>。",
+            "en": "This led us to think about learning... <strong>Chinese and English</strong>."
+          },
+          "speed": 0.9,
+          "tone": "亮"
+        },
+        {
+          "id": "rd03-02",
+          "zh": "比如，一个孩子能听懂中文，却还不认识很多汉字。",
+          "en": "One child may understand spoken Chinese but know only a few Chinese characters.",
+          "say": {
+            "zh": "比如，一个孩子能<strong>听懂</strong>中文，却还不认识很多<strong>汉字</strong>。",
+            "en": "One child may <strong>understand</strong> spoken Chinese but know only a few Chinese <strong>characters</strong>."
+          },
+          "speed": 0.9,
+          "pause": 0.55
+        },
+        {
+          "id": "rd03-03",
+          "zh": "另一个孩子读中文比较顺，讲英文时却需要帮助。",
+          "en": "Another may read Chinese more easily but need help speaking English.",
+          "say": {
+            "zh": "<strong>另一个</strong>孩子读中文比较顺，讲<strong>英文</strong>时却需要帮助。",
+            "en": "<strong>Another</strong> may read Chinese more easily but need help speaking <strong>English</strong>."
+          },
+          "speed": 0.9
+        },
+        {
+          "id": "rd03-04",
+          "zh": "这些情况和阅读障碍有不同的原因。",
+          "en": "These difficulties have different causes from dyslexia.",
+          "say": {
+            "zh": "这些情况和阅读障碍，有<strong>不同的原因</strong>。",
+            "en": "These difficulties have <strong>different causes</strong> from dyslexia."
+          },
+          "speed": 0.85,
+          "pause": 0.65
+        },
+        {
+          "id": "rd03-05",
+          "zh": "它们提醒我们一个相似的问题：哪一步难？还能从哪里开始？",
+          "en": "They invite a similar teaching question: which step is difficult, and where else can we begin?",
+          "say": {
+            "zh": "它们提醒我们一个相似的问题：哪一步<strong>难</strong>？还能<strong>从哪里开始</strong>？",
+            "en": "They invite a similar teaching question: <strong>which step</strong> is difficult, and <strong>where else</strong> can we begin?"
+          },
+          "speed": 0.88,
+          "pause": 0.6
+        }
+      ]
+    },
+    {
+      "id": "rd04",
+      "chunks": [
+        {
+          "id": "rd04-01",
+          "zh": "我们来设想两个孩子。",
+          "en": "Let's imagine two children.",
+          "say": {
+            "zh": "我们来设想<strong>两个</strong>孩子。",
+            "en": "Let's imagine... <strong>two</strong> children."
+          },
+          "speed": 0.9,
+          "tone": "亮"
+        },
+        {
+          "id": "rd04-02",
+          "zh": "Jacob 用中文讲故事比较顺，Mary 用英文讲比较顺。",
+          "en": "Jacob tells stories more easily in Chinese. Mary tells them more easily in English.",
+          "say": {
+            "zh": "Jacob 用<strong>中文</strong>讲故事比较顺，Mary 用<strong>英文</strong>讲比较顺。",
+            "en": "Jacob tells stories more easily in <strong>Chinese</strong>. Mary tells them more easily in <strong>English</strong>."
+          },
+          "speed": 0.92
+        },
+        {
+          "id": "rd04-03",
+          "zh": "学中文时，Jacob 可以帮 Mary；学英文时，Mary 可以帮 Jacob。",
+          "en": "Jacob can help Mary with Chinese, and Mary can help Jacob with English.",
+          "say": {
+            "zh": "学<strong>中文</strong>时，Jacob 可以帮 Mary；学<strong>英文</strong>时，Mary 可以帮 Jacob。",
+            "en": "Jacob can help Mary with <strong>Chinese</strong>, and Mary can help Jacob with <strong>English</strong>."
+          },
+          "speed": 0.92
+        },
+        {
+          "id": "rd04-04",
+          "zh": "这就是“互惠”：我有能帮你的地方，你也有能帮我的地方。",
+          "en": "That is reciprocity: I have something that can help you, and you have something that can help me.",
+          "say": {
+            "zh": "这就是“<strong>互惠</strong>”：我有能帮<strong>你</strong>的地方，你也有能帮<strong>我</strong>的地方。",
+            "en": "That is... <strong>reciprocity</strong>: I have something that can help <strong>you</strong>, and you have something that can help <strong>me</strong>."
+          },
+          "speed": 0.85,
+          "pause": 0.85
+        },
+        {
+          "id": "rd04-05",
+          "zh": "两个人都教，也都学。",
+          "en": "Both children teach, and both learn.",
+          "say": {
+            "zh": "两个人<strong>都教</strong>，也<strong>都学</strong>！",
+            "en": "<strong>Both</strong> children teach, and <strong>both</strong> learn!"
+          },
+          "speed": 0.9,
+          "tone": "亮",
+          "pause": 0.55
+        }
+      ]
+    },
+    {
+      "id": "rd05",
+      "chunks": [
+        {
+          "id": "rd05-01",
+          "zh": "可是，一开始话还说不通，怎么办？",
+          "en": "What if they cannot yet explain everything to each other?",
+          "say": {
+            "zh": "可是，一开始话还说不通，<strong>怎么办</strong>？",
+            "en": "What if they <strong>cannot yet</strong> explain everything to each other?"
+          },
+          "speed": 0.88
+        },
+        {
+          "id": "rd05-02",
+          "zh": "我们想到画画。",
+          "en": "We thought of drawing.",
+          "say": {
+            "zh": "我们想到<strong>画画</strong>！",
+            "en": "We thought of... <strong>drawing</strong>!"
+          },
+          "speed": 0.9,
+          "tone": "亮",
+          "pause": 0.85
+        },
+        {
+          "id": "rd05-03",
+          "zh": "两个人可以先画同一个故事，看同一张图。",
+          "en": "They can draw the same story and look at the same picture.",
+          "say": {
+            "zh": "两个人可以先画<strong>同一个</strong>故事，看<strong>同一张</strong>图。",
+            "en": "They can draw the <strong>same</strong> story and look at the <strong>same</strong> picture."
+          },
+          "speed": 0.95
+        },
+        {
+          "id": "rd05-04",
+          "zh": "图画让他们有一件可以一起看、一起说的事。",
+          "en": "Now they have something to look at and talk about together.",
+          "say": {
+            "zh": "图画让他们有一件可以<strong>一起看</strong>、<strong>一起说</strong>的事。",
+            "en": "Now they have something to <strong>look at</strong> and <strong>talk about</strong> together."
+          },
+          "speed": 0.9
+        },
+        {
+          "id": "rd05-05",
+          "zh": "这是他们共同的渠道。",
+          "en": "Drawing is a channel they share.",
+          "say": {
+            "zh": "这是他们<strong>共同的渠道</strong>。",
+            "en": "Drawing is <strong>a channel they share</strong>."
+          },
+          "speed": 0.85,
+          "pause": 0.55
+        },
+        {
+          "id": "rd05-06",
+          "zh": "看图之后，也要问问对方：你想表达的是这个意思吗？",
+          "en": "They still need to ask each other: is this what you meant?",
+          "say": {
+            "zh": "看图之后，也要问问对方：你想表达的，是<strong>这个意思</strong>吗？",
+            "en": "They still need to ask each other: is this what you <strong>meant</strong>?"
+          },
+          "speed": 0.9,
+          "pause": 0.6
+        }
+      ]
+    },
+    {
+      "id": "rd06",
+      "chunks": [
+        {
+          "id": "rd06-01",
+          "zh": "比如，他们一起画一个小故事：杯子倒了，朋友来帮忙。",
+          "en": "For example, they draw a small story: a cup tips over, and a friend comes to help.",
+          "say": {
+            "zh": "比如，他们一起画一个小故事：<strong>杯子倒了</strong>，朋友来<strong>帮忙</strong>。",
+            "en": "For example, they draw a small story: <strong>a cup tips over</strong>, and a friend comes to <strong>help</strong>."
+          },
+          "speed": 0.95,
+          "tone": "亮"
+        },
+        {
+          "id": "rd06-02",
+          "zh": "Jacob 指着画说：“我来帮你。”",
+          "en": "Jacob points to the picture and says, “我来帮你.”",
+          "parts": {
+            "zh": [
+              {
+                "text": "Jacob 指着画说：",
+                "lang": "zh",
+                "speed": 0.95
+              },
+              {
+                "text": "我来帮你。",
+                "lang": "zh",
+                "demo": true,
+                "speed": 0.75
+              }
+            ],
+            "en": [
+              {
+                "text": "Jacob points to the picture and says,",
+                "lang": "en",
+                "speed": 0.95
+              },
+              {
+                "text": "我来帮你。",
+                "lang": "zh",
+                "demo": true,
+                "speed": 0.75
+              }
+            ]
+          }
+        },
+        {
+          "id": "rd06-03",
+          "zh": "Mary 告诉他，英文可以说：“Let me help you.”",
+          "en": "Mary tells him, “In English, we can say, ‘Let me help you.’”",
+          "parts": {
+            "zh": [
+              {
+                "text": "Mary 告诉他，英文可以说：",
+                "lang": "zh",
+                "speed": 0.95
+              },
+              {
+                "text": "Let me help you.",
+                "lang": "en",
+                "demo": true,
+                "speed": 0.75
+              }
+            ],
+            "en": [
+              {
+                "text": "Mary tells him, in English, we can say,",
+                "lang": "en",
+                "speed": 0.95
+              },
+              {
+                "text": "Let me help you.",
+                "lang": "en",
+                "demo": true,
+                "speed": 0.75
+              }
+            ]
+          }
+        },
+        {
+          "id": "rd06-04",
+          "zh": "然后交换。",
+          "en": "Then they switch.",
+          "say": {
+            "zh": "然后，<strong>交换</strong>！",
+            "en": "Then they... <strong>switch</strong>!"
+          },
+          "speed": 0.9,
+          "tone": "亮",
+          "pause": 0.55
+        },
+        {
+          "id": "rd06-05",
+          "zh": "Mary 试着说中文，Jacob 试着说英文。",
+          "en": "Mary tries the Chinese, and Jacob tries the English.",
+          "say": {
+            "zh": "Mary 试着说<strong>中文</strong>，Jacob 试着说<strong>英文</strong>。",
+            "en": "Mary tries the <strong>Chinese</strong>, and Jacob tries the <strong>English</strong>."
+          },
+          "speed": 0.92
+        },
+        {
+          "id": "rd06-06",
+          "zh": "说不顺，可以听一听，再试一次。",
+          "en": "If a phrase is difficult, they can listen and try again.",
+          "say": {
+            "zh": "说不顺？可以听一听，<strong>再试一次</strong>。",
+            "en": "If a phrase is difficult, they can listen, and <strong>try again</strong>."
+          },
+          "speed": 0.9,
+          "tone": "亮"
+        },
+        {
+          "id": "rd06-07",
+          "zh": "遇到不认识的字，就把这个字找出来，一起学。",
+          "en": "If a written word is unfamiliar, they find it and learn it together.",
+          "say": {
+            "zh": "遇到不认识的字，就把这个字<strong>找出来</strong>，<strong>一起学</strong>。",
+            "en": "If a written word is unfamiliar, they <strong>find it</strong> and learn it <strong>together</strong>."
+          },
+          "speed": 0.92
+        },
+        {
+          "id": "rd06-08",
+          "zh": "老师在旁边，帮他们确认意思。",
+          "en": "Their teacher helps them check the meaning.",
+          "say": {
+            "zh": "老师在旁边，帮他们<strong>确认意思</strong>。",
+            "en": "Their teacher helps them <strong>check the meaning</strong>."
+          },
+          "speed": 0.88,
+          "pause": 0.6
+        }
+      ]
+    },
+    {
+      "id": "rd07",
+      "chunks": [
+        {
+          "id": "rd07-01",
+          "zh": "文字，让我们学着自己读。",
+          "en": "Written words help us learn to read for ourselves.",
+          "say": {
+            "zh": "<strong>文字</strong>，让我们学着<strong>自己读</strong>。",
+            "en": "<strong>Written words</strong> help us learn to read <strong>for ourselves</strong>."
+          },
+          "speed": 0.9
+        },
+        {
+          "id": "rd07-02",
+          "zh": "声音，可以示范怎么说。",
+          "en": "Sound can show us how a phrase is spoken.",
+          "say": {
+            "zh": "<strong>声音</strong>，可以示范<strong>怎么说</strong>。",
+            "en": "<strong>Sound</strong> can show us how a phrase is <strong>spoken</strong>."
+          },
+          "speed": 0.9,
+          "pause": 0.35
+        },
+        {
+          "id": "rd07-03",
+          "zh": "图画，帮我们一起谈故事。",
+          "en": "Pictures give us something to discuss together.",
+          "say": {
+            "zh": "<strong>图画</strong>，帮我们<strong>一起</strong>谈故事。",
+            "en": "<strong>Pictures</strong> give us something to discuss <strong>together</strong>."
+          },
+          "speed": 0.9,
+          "pause": 0.35
+        },
+        {
+          "id": "rd07-04",
+          "zh": "什么时候用哪一种，要看这次想学什么。",
+          "en": "We choose what to use by asking what we want to learn.",
+          "say": {
+            "zh": "什么时候用哪一种，要看这次<strong>想学什么</strong>。",
+            "en": "We choose what to use by asking what we <strong>want to learn</strong>."
+          },
+          "speed": 0.85,
+          "pause": 0.75
+        },
+        {
+          "id": "rd07-05",
+          "zh": "理解故事时，可以先看图、听故事。",
+          "en": "To understand a story, we may begin with pictures and listening.",
+          "say": {
+            "zh": "<strong>理解故事</strong>时，可以先看图、听故事。",
+            "en": "To <strong>understand a story</strong>, we may begin with pictures and listening."
+          },
+          "speed": 0.92,
+          "pause": 0.55
+        },
+        {
+          "id": "rd07-06",
+          "zh": "练认字时，可以先试着读，需要时再用声音和图画帮忙。",
+          "en": "To practise word reading, we can try reading first and add sound or pictures when needed.",
+          "say": {
+            "zh": "<strong>练认字</strong>时，可以<strong>先试着读</strong>，需要时，再用声音和图画帮忙。",
+            "en": "To <strong>practise word reading</strong>, we can <strong>try reading first</strong>, and add sound or pictures when needed."
+          },
+          "speed": 0.92
+        }
+      ]
+    },
+    {
+      "id": "rd08",
+      "chunks": [
+        {
+          "id": "rd08-01",
+          "zh": "还有一件事很重要：",
+          "en": "There is something else we care about.",
+          "say": {
+            "zh": "还有一件事，<strong>很重要</strong>：",
+            "en": "There is something else... we <strong>care about</strong>."
+          },
+          "speed": 0.82,
+          "pause": 1.0
+        },
+        {
+          "id": "rd08-02",
+          "zh": "学英文时，中文也可以继续用；",
+          "en": "Chinese can keep growing while a child learns English.",
+          "say": {
+            "zh": "学英文时，中文<strong>也</strong>可以继续用；",
+            "en": "Chinese can <strong>keep growing</strong> while a child learns English."
+          },
+          "speed": 0.9,
+          "pause": 0.6
+        },
+        {
+          "id": "rd08-03",
+          "zh": "学中文时，英文也有用。",
+          "en": "English still matters while a child learns Chinese.",
+          "say": {
+            "zh": "学中文时，英文<strong>也</strong>有用。",
+            "en": "English <strong>still matters</strong> while a child learns Chinese."
+          },
+          "speed": 0.9,
+          "pause": 0.3
+        },
+        {
+          "id": "rd08-04",
+          "zh": "喜欢画画的孩子，可以继续画，也用画帮助大家学。",
+          "en": "A child who enjoys drawing can keep drawing and use it to help the group learn.",
+          "say": {
+            "zh": "喜欢画画的孩子，可以<strong>继续画</strong>，也用画<strong>帮助大家</strong>学。",
+            "en": "A child who enjoys drawing can <strong>keep drawing</strong>, and use it to <strong>help the group</strong> learn."
+          },
+          "speed": 0.92,
+          "tone": "亮",
+          "pause": 0.55
+        },
+        {
+          "id": "rd08-05",
+          "zh": "我们希望孩子学会新的东西，同时把原来会的，用得更好。",
+          "en": "We want children to learn something new while making good use of what they already know.",
+          "say": {
+            "zh": "我们希望孩子学会<strong>新的</strong>东西，同时，把<strong>原来会的</strong>，用得更好。",
+            "en": "We want children to learn something <strong>new</strong>, while making good use of what they <strong>already know</strong>."
+          },
+          "speed": 0.85,
+          "pause": 0.7
+        }
+      ]
+    },
+    {
+      "id": "rd09",
+      "chunks": [
+        {
+          "id": "rd09-01",
+          "zh": "父母和孩子也可以这样试。",
+          "en": "Parents and children can try this too.",
+          "say": {
+            "zh": "<strong>父母和孩子</strong>，也可以这样试。",
+            "en": "<strong>Parents and children</strong> can try this too."
+          },
+          "speed": 0.9,
+          "pause": 1.0
+        },
+        {
+          "id": "rd09-02",
+          "zh": "父母更习惯中文，孩子更习惯英文，可以一起画、一起讲同一个故事。",
+          "en": "If parents are more comfortable in Chinese and children in English, they can draw and tell the same story together.",
+          "say": {
+            "zh": "父母更习惯<strong>中文</strong>，孩子更习惯<strong>英文</strong>，可以一起画、一起讲<strong>同一个</strong>故事。",
+            "en": "If parents are more comfortable in <strong>Chinese</strong> and children in <strong>English</strong>, they can draw and tell the <strong>same</strong> story together."
+          },
+          "speed": 0.92
+        },
+        {
+          "id": "rd09-03",
+          "zh": "父母说出自己的意思，孩子帮助找英文的说法，再一起确认。",
+          "en": "A parent shares what they mean, a child helps find the English words, and they check it together.",
+          "say": {
+            "zh": "父母说出自己的意思，孩子帮助找英文的说法，再<strong>一起确认</strong>。",
+            "en": "A parent shares what they mean, a child helps find the English words, and they <strong>check it together</strong>."
+          },
+          "speed": 0.92
+        },
+        {
+          "id": "rd09-04",
+          "zh": "两代人都有可以分享的东西，也都有可以学习的东西。",
+          "en": "Both generations have something to share and something to learn.",
+          "say": {
+            "zh": "<strong>两代人</strong>都有可以<strong>分享</strong>的东西，也都有可以<strong>学习</strong>的东西。",
+            "en": "<strong>Both generations</strong> have something to <strong>share</strong>, and something to <strong>learn</strong>."
+          },
+          "speed": 0.85,
+          "pause": 0.7
+        }
+      ]
+    },
+    {
+      "id": "rd10",
+      "chunks": [
+        {
+          "id": "rd10-01",
+          "zh": "这就是“语言的桥”。",
+          "en": "This is our Language Bridge.",
+          "say": {
+            "zh": "这就是“<strong>语言的桥</strong>”。",
+            "en": "This is our... <strong>Language Bridge</strong>."
+          },
+          "speed": 0.85,
+          "pause": 1.0
+        },
+        {
+          "id": "rd10-02",
+          "zh": "我们从阅读障碍教育得到启发，正在设计中英双语的多媒体学习方式。",
+          "en": "Inspired by dyslexia education, we are designing ways to learn through Chinese, English, words, sound, and pictures.",
+          "say": {
+            "zh": "我们从阅读障碍教育得到启发，正在设计<strong>中英双语</strong>的多媒体学习方式。",
+            "en": "Inspired by dyslexia education, we are designing ways to learn through <strong>Chinese, English</strong>, words, sound, and pictures."
+          },
+          "speed": 0.9,
+          "pause": 0.6
+        },
+        {
+          "id": "rd10-03",
+          "zh": "从一个共同的故事开始：",
+          "en": "We can begin with one shared story.",
+          "say": {
+            "zh": "从<strong>一个共同的故事</strong>开始：",
+            "en": "We can begin with <strong>one shared story</strong>."
+          },
+          "speed": 0.88,
+          "pause": 0.6
+        },
+        {
+          "id": "rd10-04",
+          "zh": "你教我一句，我教你一句，我们一起多懂一点。",
+          "en": "You teach me a phrase, I teach you a phrase, and we understand a little more together.",
+          "say": {
+            "zh": "<strong>你教我</strong>一句，<strong>我教你</strong>一句，我们<strong>一起</strong>多懂一点！",
+            "en": "<strong>You</strong> teach me a phrase, <strong>I</strong> teach you a phrase, and we understand a little more <strong>together</strong>!"
+          },
+          "speed": 0.85,
+          "tone": "亮",
+          "pause": 0.55
+        }
+      ]
+    }
+  ]
+}

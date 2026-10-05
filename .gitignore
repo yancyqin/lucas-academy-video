@@ -40,5 +40,27 @@ __pycache__/
 output/
 _review-delete/
 
-# 全人教育: narration tracks, Codex concept images and footage stay local.
+# Van Gogh video (media#3): the paintings, the room music and the generated
+# narration (cloned voices) stay local. art/SOURCES.txt and music/SOURCE.md
+# record where each came from; scripts/vg-why/fetch_assets.py restores the
+# pictures and the music, and lucas-academy-media regenerates the narration.
+public/vg-why-paint-them/art/*.jpg
+public/vg-why-paint-them/art/tiles/
+public/vg-why-paint-them/music/*.mp3
+public/vg-why-paint-them/audio/
+
+# Language Bridge videos (media#4): the Codex concept images, the product screens
+# (they show NIV text) and the generated narration stay local. The prompts are in
+# docs/RECIPROCAL-DOORS-IMAGE-PROMPTS.md; scripts/reciprocal-doors-capture-product.mjs
+# re-captures the product screens (product/regions.json is tracked: the film points
+# at those rects); lucas-academy-media regenerates the narration. The background
+# music (public/audio/reciprocal-doors/music/) is fetched with the command in
+# LANGUAGE-BRIDGE.md.
+public/images/reciprocal-doors/*.png
+public/images/reciprocal-doors/product/*.png
+public/audio/reciprocal-doors/
+
+# 全人教育的五个理念 (media#5): narration tracks, the app recordings, the transit-chamber
+# capture, the music bed, the kids' artwork copies and the old concept images stay local.
+# WHOLE-PERSON-01.md says where each comes from and how to rebuild it.
 public/whole-person-01/
