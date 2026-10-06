@@ -1,4 +1,6 @@
-# 我们怎样陪孩子成长：全人教育的五个理念 / How We Grow Alongside Our Kids: Five Principles of Whole-Person Education
+# 孩子说“不”，你怎么办？｜全人教育的五个理念 / Your Child Says “No.” Now What? | Five Principles of Whole-Person Education
+
+(The film's name, on its opening card: 我们怎样陪孩子成长：全人教育的五个理念 / How We Grow Alongside Our Kids.)
 
 Videos for [yancyqin/lucas-academy-media#5](https://github.com/yancyqin/lucas-academy-media/issues/5).
 Two films, one per language, told to parents. Published without captions (owner's call, 2026-10-05);
@@ -7,15 +9,17 @@ narration in case they are wanted later.
 
 | | narration | length |
 | --- | --- | --- |
-| `WholePersonZh` | Yancy's own voice (`yancy/zh`, v9), zero-shot-instruct teaching tone, speed 1.0 | ≈ 8:08 |
-| `WholePersonEn` | Louise (`louise/en`) | ≈ 7:34 |
+| `WholePersonZh` | Yancy's own voice (`yancy/zh`, v10), zero-shot-instruct teaching tone, speed 1.0 | ≈ 8:26 |
+| `WholePersonEn` | Louise (`louise/en`, v9) | ≈ 7:52 |
 
-The zh film went up twice on 2026-10-05: first with zh v8, then as an audio-only remix with v9 (v8 with
-off-pitch lines re-voiced) and the steady mix, picture unchanged. Louise's Chinese voice (`louise/zh`) was
-tried for the whole film the same night; the owner kept Yancy's voice. The byline "By Lucas Academy
-Team" was added to the title card afterwards: the zh film on YouTube predates it; any re-render shows
-it on the card. Final uploads: zh vfMCkIFj8nw (the first upload; the owner kept it over the audio-fixed
-re-upload), en ZaKR2wA7dFk (re-rendered with the byline and the steady mix).
+History: first uploads 2026-10-05 (zh v8). An audio-only zh remix followed with v9, which is v8 with the
+off-pitch lines re-voiced plus the steady mix. Louise's Chinese voice was tried and dropped; the owner kept
+Yancy's. The en film was re-uploaded with the byline (ZaKR2wA7dFk).
+
+2026-10-06 re-make (owner: 「这个视频很重要」, script v0.9): the films open on 「孩子说“不”，你怎么办？」.
+They answer 「谁是教育者？」 first, then come back to the question at principle 1, and the YouTube title
+is the question. Four new lines per language: zh v10 / en v9, every other take reused. The picture is
+re-rendered for both.
 
 Delivery (local, `out/` is ignored), all in `out/whole-person-01/delivery/`:
 
@@ -23,8 +27,9 @@ Delivery (local, `out/` is ignored), all in `out/whole-person-01/delivery/`:
 - `whole-person-five-principles.<film>.zh-Hans.srt` / `.en.srt` — both captions on that film's own times (not uploaded).
 - `youtube-description.<film>.txt` — title, paste-ready description with chapters, credits and Bible
   notices, tags, upload settings (not made for kids; altered/synthetic content = yes, synthesized voice).
-- `youtube-thumbnail.<film>.jpg` — the cover, 1280×720: 「孩子说“不”你怎么办？」 / "Your Child Says “No.” Now What?" big
-  on the title frame's background (composition `WholePersonCoverZh` / `WholePersonCoverEn`, copy in `COVER`).
+- `youtube-thumbnail.<film>.jpg` — the cover, 1280×720: only the question, 「孩子说“不”你怎么办？」 /
+  "Your Child Says “No.” Now What?", big on the title frame's background (the README cover rule;
+  composition `WholePersonCoverZh` / `WholePersonCoverEn`, copy in `QUESTION`).
 
 Only sources are committed: the line scripts (lucas-academy-media), the code and this file. Everything
 the pipeline writes — voice takes, timelines, mixes, recordings, renders — is a local working copy:
@@ -71,7 +76,7 @@ must still fit its line's slot; `pitch.py` only keeps takes that do.
   English names (Lucas Academy, Art Lab, Matthew): check those lines.
 - `pace.py` — speaking rate = syllables per second of sound (pauses excluded); a line more than 10% off the
   film median is re-voiced with closed-loop speed correction and kept only if Whisper still reads it right.
-  `EXEMPT` keeps the opening question 「谁是教育者？」 slow on purpose. Speeds are kept in lucas-academy-media
+  `EXEMPT` keeps the questions (wp00-00, wp00-01) and the hanging wp01-00a as read. Speeds are kept in lucas-academy-media
   `outputs/whole-person-five-ideas.pace.json` (ignored) as the next run's starting point.
 - `pitch.py` — median pitch of each trimmed take (pyin, voiced frames) against the film median; a line more
   than 2 semitones off is re-voiced at its paced speed until a take lands within 1 semitone, Whisper still
@@ -96,10 +101,15 @@ must still fit its line's slot; `pitch.py` only keeps takes that do.
 
 ## Picture
 
-- **Opening:** Inception Space's own loading screen (rebuilt from `inception-space-ui/index.html`
-  `#entry-loading` at 1.5×, English text kept) → the transit chamber with the avatar hidden; the title card
-  (with the byline "By Lucas Academy Team") and 「谁是教育者？」 sit on the footage;
-  the question is asked, ~2 s pause, then the answer.
+- **Opening (2026-10-06):** the first frame is the cover: 「孩子说“不”，你怎么办？」 big, plus what the
+  cover leaves out (LUCAS ACADEMY, the film's name, "By Lucas Academy Team"), on the transit chamber with
+  the avatar hidden. The question is asked after 2 s and followed by ~2 s of pause. The card stays through
+  「在回答这个问题之前……」 and gives way to 「谁是教育者？」 in the same big type; that is asked slowly,
+  held, then answered. The first upload opened on Inception Space's loading screen; it was dropped so the
+  film starts on its cover.
+- **Back to the question (wp01-00/00a):** after the five principles are listed, the question comes back big
+  over the principle-1 recording: 「现在我们回答最开始的问题……它关乎……」, a 1.5 s pause, then
+  「第一个理念，是权柄」 on its card. `pace.py`/`pitch.py` leave the two questions and the hanging line alone.
 - **Sections:** each principle plays its app recording dimmed under frosted-glass cards (cyan hairline,
   mono kickers); a demo line brings the recording up full. Cards that state a belief carry
   「Lucas Academy 的团队相信」 even though the narration says 我们相信.

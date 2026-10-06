@@ -35,7 +35,7 @@ VIDEO = Path(__file__).resolve().parents[2]
 TOL = 2.0              # semitones off the film median that make a line stand out
 GOAL = 1.0             # stop re-voicing a line once a take is this close
 TRIES = 8
-EXEMPT = {"wp00-01"}   # the opening question is asked higher on purpose
+EXEMPT = {"wp00-00", "wp00-01", "wp01-00a"}  # the questions are asked higher, the hanging line ends high
 F0_RANGE = {"yancy/zh": (65, 330), "louise/zh": (110, 420), "louise/en": (110, 420)}  # by voice: pyin search range, Hz
 SILENCE, KEEP = 300, 0.05  # build_timeline.py's trim: |int16| above SILENCE, KEEP s kept each side
 

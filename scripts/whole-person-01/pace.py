@@ -32,7 +32,7 @@ TOL = 0.10
 SPEED = (0.8, 1.25)
 TRIES = 3
 # Lines read deliberately on purpose: the opening question is asked slowly and then held.
-EXEMPT = {"wp00-01"}
+EXEMPT = {"wp00-00", "wp00-01", "wp01-00a"}  # questions, and the line left hanging on purpose
 PROMPT = {"zh": "以下是普通话的句子，使用简体中文。", "en": None}
 # Whisper's known zh mishearings of this script; they are not voice errors.
 HOMOPHONES = {"zh": {"全柄": "权柄", "免利": "勉励", "做主": "作主"}, "en": {}}

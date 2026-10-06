@@ -23,7 +23,8 @@ export type Card =
   | {kind: 'steps'; reveal: [string, string]}
   | {kind: 'drawing'; who: Label; sketch: string; final: string; finished?: string}
   | {kind: 'image'; file: string; caption: Label}
-  | {kind: 'contrast'; kicker?: Label; heading: Label; yes: {term: Label; gloss: Label}; no: {term: Label; gloss: Label}};
+  | {kind: 'contrast'; kicker?: Label; heading: Label; yes: {term: Label; gloss: Label}; no: {term: Label; gloss: Label}}
+  | {kind: 'question'; question: BigQuestion};
 
 export type Shot = {
   from: string;
@@ -34,25 +35,31 @@ export type Shot = {
 };
 
 /** Background recording for each section, dimmed under the cards. */
-/** The opening (owner 2026-10-04): Inception Space's own loading screen, then the
- * transit chamber with the avatar hidden; title + the question on top of it. */
-export const INTRO = {
-  loadingSeconds: 2.0,
-  chamber: {file: 'transit-chamber.mp4', from: 0} as Clip,
-  subtitle: {zh: '谁是教育者？', en: 'Who is an educator?'} as Label,
-  /** Under the title (owner 2026-10-06): the same English line on both films. */
-  byline: {zh: 'By Lucas Academy Team', en: 'By Lucas Academy Team'} as Label,
-  /** The title card leaves when this line starts; the question line keeps it. */
-  titleUntil: 'wp00-02',
-  last: 'wp00-03',
+/** A big title question: [before, highlight, after] on line one, an optional line two. */
+export type BigQuestion = {first: Record<'zh' | 'en', [string, string, string]>; second?: Label};
+
+/** The question the film opens on, answers at principle 1, and the YouTube cover asks (owner 2026-10-06);
+ * two lines, the line-end comma dropped. */
+export const QUESTION: BigQuestion = {
+  first: {zh: ['孩子说', '“不”', ''], en: ['Your Child Says ', '“No.”', '']},
+  second: {zh: '你怎么办？', en: 'Now What?'},
 };
 
-/** YouTube cover (owner 2026-10-06): 「孩子说“不”，你怎么办？」 big on the title frame's background, in two lines
- * (the line-end comma dropped): [before, highlight, after] + line two. */
-export const COVER = {
-  first: {zh: ['孩子说', '“不”', ''], en: ['Your Child Says ', '“No.”', '']} as Record<'zh' | 'en', [string, string, string]>,
-  second: {zh: '你怎么办？', en: 'Now What?'} as Label,
-  subtitle: {zh: '全人教育的五个理念', en: 'Five Principles of Whole-Person Education'} as Label,
+/** The question answered first, in the same big type. */
+export const EDUCATOR: BigQuestion = {first: {zh: ['谁是', '教育者', '？'], en: ['Who Is an ', 'Educator', '?']}};
+
+/** The opening (owner 2026-10-06): the first frame is the cover — the question, big — plus what the cover
+ * leaves out: Lucas Academy, the film's name and the byline. It stays through 「在回答这个问题之前……」; then
+ * 「谁是教育者？」 big, until the answer begins. The transit chamber (avatar hidden) runs underneath. */
+export const INTRO = {
+  chamber: {file: 'transit-chamber.mp4', from: 0} as Clip,
+  name: {zh: '全人教育的五个理念', en: 'Five Principles of Whole-Person Education'} as Label,
+  byline: {zh: 'By Lucas Academy Team', en: 'By Lucas Academy Team'} as Label,
+  /** The opening card gives way to 「谁是教育者？」 as this line starts… */
+  coverUntil: 'wp00-01',
+  /** …which leaves as this one starts. */
+  educatorUntil: 'wp00-02',
+  last: 'wp00-03',
 };
 
 export const SECTION_BG: Record<string, Clip> = {
@@ -101,6 +108,8 @@ export const SHOTS: Shot[] = [
     card: {kind: 'list', heading: {zh: '全人教育的五个理念', en: 'Five principles of whole-person education'}, items: PRINCIPLES, reveal: FIVE}},
 
   // 理念 1 · 权柄
+  // 回到开头的问题：「现在我们回答最开始的问题……它关乎……」，停顿，然后揭晓权柄
+  {from: 'wp01-00', to: 'wp01-00a', card: {kind: 'question', question: QUESTION}},
   {from: 'wp01-01', to: 'wp01-01', card: {kind: 'principle', n: 1, title: PRINCIPLES[0]}},
   {from: 'wp01-02', to: 'wp01-02',
     card: {kind: 'words', text: {zh: '当孩子对权柄说「不」', en: 'When a child says no to authority'},

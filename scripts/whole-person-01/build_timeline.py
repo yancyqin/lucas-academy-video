@@ -45,12 +45,12 @@ SCRIPTS = {
     "en": MEDIA / "data/scripts/whole-person-five-ideas-en.json",
 }
 VOICES = {
-    "zh": MEDIA / "outputs/yancy/zh/whole-person-five-ideas-v9",  # Yancy, zero-shot-instruct teaching tone, 1.0; pitch-evened
-    "en": MEDIA / "outputs/louise/en/whole-person-five-ideas-v8",
+    "zh": MEDIA / "outputs/yancy/zh/whole-person-five-ideas-v10",  # Yancy, zero-shot-instruct teaching tone, 1.0; v9 + the question lines
+    "en": MEDIA / "outputs/louise/en/whole-person-five-ideas-v9",
 }
 FPS = 30
 RATE = 24000
-LEAD_IN = 6.0      # loading screen (2 s) + title on the chamber before the question
+LEAD_IN = 2.0      # the opening card (the cover) on its own before the first question
 ONSET = 0.15       # breath at the start of every cue
 GAP = 0.4          # after every cue
 SECTION_GAP = 0.9  # extra at the end of a section
@@ -59,6 +59,7 @@ SILENCE = 300      # |sample| below this (about -40 dBFS) counts as silence when
 KEEP = round(0.05 * RATE)
 # Extra time to read a card or watch a demo after a line.
 HOLD = {
+    "wp00-00": 2.0, "wp00-00a": 0.3, "wp01-00": 0.4, "wp01-00a": 1.5,  # the two questions, and 「它关乎……」's pause
     "wp00-01": 1.5, "wp00-03": 0.6, "wp00-06": 1.0, "wp00-08": 1.5, "wp01-19": 1.0, "wp01-07": 1.0, "wp01-09": 0.8, "wp01-10": 0.8, "wp01-11": 0.8,
     "wp01-14": 3.2, "wp01-16": 3.5, "wp02-03": 1.0, "wp02-07": 3.0, "wp02-09": 3.0,
     "wp03-03": 1.0, "wp03-05": 4.0, "wp04-03": 1.0, "wp04-04": 1.0, "wp04-07": 4.0,
