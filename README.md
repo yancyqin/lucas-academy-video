@@ -20,6 +20,19 @@ a sentence. Both run locally on this Mac.
   alignment of the lyrics, generated and stock footage through one grade, and the
   failures worth knowing about before repeating any of it.
 
+## YouTube covers
+
+The owner's rule (2026-10-06): a cover carries **one question and nothing else**. That is the
+film's title asked as a question, big in the film's language, with the same question small in
+English when the film also serves English viewers. There is no Lucas Academy name, lesson tag,
+subtitle or byline on the cover; that belongs inside the film, on its opening title card
+("By Lucas Academy Team"). Before designing a cover, agree on the question with the owner. He
+prefers question-form titles, and a short list of options helps.
+
+Example: `VgWhyCover` puts 「梵高为什么 / 画他们？」 and "Why Did Van Gogh Paint Them?" over the
+film's first painting ([VG-WHY-PAINT-THEM.md](./VG-WHY-PAINT-THEM.md)). The covers for the
+whole-person films were made before this rule.
+
 ## Golden Funnel roller coaster
 
 The completed roller-coaster film, its vertical short cut, the three approved

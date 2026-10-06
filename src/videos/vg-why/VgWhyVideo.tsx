@@ -472,7 +472,8 @@ const FadeIn: FC<{frames: number; children: ReactNode}> = ({frames, children}) =
 
 /**
  * The YouTube cover (owner 2026-10-06): the film's first picture, Postman Roulin
- * (Detroit), with the title big in Chinese and small in English.
+ * (Detroit), and only the question — big in Chinese, small in English. No brand or
+ * byline here; that lives inside the film (see README, "YouTube covers").
  */
 export const VgWhyCover: FC = () => (
   <AbsoluteFill style={{background: BG}}>
@@ -482,8 +483,7 @@ export const VgWhyCover: FC = () => (
     <Img src={artSrc('roulin')} style={{position: 'absolute', right: 110, top: 80, height: 920, boxShadow: '0 30px 80px rgba(0,0,0,0.6)'}} />
     <div style={{position: 'absolute', left: 120, top: 0, bottom: 0, width: 960, display: 'flex', flexDirection: 'column',
       justifyContent: 'center', color: INK}}>
-      <div style={{fontFamily: EN_FONT, fontSize: 28, letterSpacing: 6, color: '#8a7650'}}>LUCAS ACADEMY · 美术课 · ART LESSONS</div>
-      <div style={{fontFamily: ZH_FONT, fontSize: 180, fontWeight: 800, lineHeight: 1.14, marginTop: 34}}>梵高为什么</div>
+      <div style={{fontFamily: ZH_FONT, fontSize: 180, fontWeight: 800, lineHeight: 1.14}}>梵高为什么</div>
       <div style={{fontFamily: ZH_FONT, fontSize: 180, fontWeight: 800, lineHeight: 1.14}}>
         画<span style={{color: GOLD}}>他们</span>？
       </div>
