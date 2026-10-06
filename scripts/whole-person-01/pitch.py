@@ -29,16 +29,14 @@ import soundfile as sf
 sys.path.insert(0, "src")
 sys.path.insert(0, str(Path(__file__).parent))
 import narrate  # noqa: E402  (OUT, SCRIPT, SPOKEN, ZH_SUBSTITUTIONS)
-import pace  # noqa: E402  (PACE, PROMPT, SPEED, TOL, norm, rate)
+import pace  # noqa: E402  (HOMOPHONES, PACE, PROMPT, SPEED, TOL, norm, rate)
 
 VIDEO = Path(__file__).resolve().parents[2]
 TOL = 2.0              # semitones off the film median that make a line stand out
 GOAL = 1.0             # stop re-voicing a line once a take is this close
 TRIES = 8
 EXEMPT = {"wp00-01"}   # the opening question is asked higher on purpose
-F0_RANGE = {"zh": (65, 330), "en": (110, 420)}
-# Whisper's known zh mishearings of this script; they are not voice errors.
-HOMOPHONES = {"zh": {"全柄": "权柄", "免利": "勉励", "做主": "作主"}, "en": {}}
+F0_RANGE = {"yancy/zh": (65, 330), "louise/zh": (110, 420), "louise/en": (110, 420)}  # by voice: pyin search range, Hz
 SILENCE, KEEP = 300, 0.05  # build_timeline.py's trim: |int16| above SILENCE, KEEP s kept each side
 
 
@@ -50,10 +48,10 @@ def trimmed(path: Path) -> tuple[np.ndarray, int]:
     return y[max(0, loud[0] - keep):min(len(y), loud[-1] + keep)].astype(np.float32) / 32768, sr
 
 
-def pitch(path: Path, lang: str) -> float:
+def pitch(path: Path, voice: str) -> float:
     # Measured on the trimmed take: the faint tails CosyVoice leaves read as low "voiced" frames.
     y, sr = trimmed(path)
-    f0, voiced, _ = librosa.pyin(y, fmin=F0_RANGE[lang][0], fmax=F0_RANGE[lang][1], sr=sr, frame_length=1024, hop_length=240)
+    f0, voiced, _ = librosa.pyin(y, fmin=F0_RANGE[voice][0], fmax=F0_RANGE[voice][1], sr=sr, frame_length=1024, hop_length=240)
     return float(np.median(f0[voiced & ~np.isnan(f0)]))
 
 
@@ -66,7 +64,7 @@ def main(lang: str, measure_only: bool) -> None:
     script = json.load(open(narrate.SCRIPT.format(lang=lang)))
     out = Path(narrate.OUT[lang])
     text = {l["id"]: l["text"] for l in script["lines"]}
-    f0 = {i: pitch(out / f"{i}.wav", lang) for i in text}
+    f0 = {i: pitch(out / f"{i}.wav", script["voice"]) for i in text}
     median = statistics.median(f0.values())
     st = lambda hz: 12 * np.log2(hz / median)  # noqa: E731
     off = {i: st(hz) for i, hz in f0.items() if abs(st(hz)) > TOL and i not in EXEMPT}
@@ -102,10 +100,10 @@ def main(lang: str, measure_only: bool) -> None:
             tmp = out / f"{i}.pitch{k}.wav"
             save_wav(tmp, add_peak_headroom(speech, peak_dbfs=DEFAULT_PEAK_DBFS), sr)
             heard = model.transcribe(str(tmp), language=lang, initial_prompt=pace.PROMPT[lang], fp16=False)["text"]
-            for a, b in HOMOPHONES[lang].items():
+            for a, b in pace.HOMOPHONES[lang].items():
                 heard = heard.replace(a, b)
             match = difflib.SequenceMatcher(None, pace.norm(spoken.lower(), lang), pace.norm(heard.lower(), lang)).ratio()
-            length, now = speech_length(tmp), st(pitch(tmp, lang))
+            length, now = speech_length(tmp), st(pitch(tmp, script["voice"]))
             paced = pace.rate(tmp, text[i], lang) / pace_median
             fits = length <= room and abs(paced - 1) <= pace.TOL
             print(f"   try {k} {i}: {now:+.1f} st, pace {paced:.2f}x, {length:.2f}s (room {room:.2f}s), whisper {match:.2f}", flush=True)

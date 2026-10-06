@@ -34,6 +34,8 @@ TRIES = 3
 # Lines read deliberately on purpose: the opening question is asked slowly and then held.
 EXEMPT = {"wp00-01"}
 PROMPT = {"zh": "以下是普通话的句子，使用简体中文。", "en": None}
+# Whisper's known zh mishearings of this script; they are not voice errors.
+HOMOPHONES = {"zh": {"全柄": "权柄", "免利": "勉励", "做主": "作主"}, "en": {}}
 
 
 def english_syllables(word: str) -> int:
@@ -101,7 +103,10 @@ def main(lang: str, measure_only: bool) -> None:
             tmp = out / f"{i}.pace{k}.wav"
             save_wav(tmp, add_peak_headroom(speech, peak_dbfs=DEFAULT_PEAK_DBFS), sr)
             heard = model.transcribe(str(tmp), language=lang, initial_prompt=PROMPT[lang], fp16=False)["text"]
-            match = difflib.SequenceMatcher(None, norm(text[i], lang), norm(heard, lang)).ratio()
+            for a, b in HOMOPHONES[lang].items():
+                heard = heard.replace(a, b)
+            # Compare with what the voice reads (SPOKEN: 119 is spoken 一百一十九).
+            match = difflib.SequenceMatcher(None, norm(spoken.lower(), lang), norm(heard.lower(), lang)).ratio()
             new_ratio = rate(tmp, text[i], lang) / median
             print(f"   try {k} {i} speed {speed:.2f}: {new_ratio:.2f}x, whisper {match:.2f}", flush=True)
             if match >= 0.9 and (best is None or abs(new_ratio - 1) < best[0]):

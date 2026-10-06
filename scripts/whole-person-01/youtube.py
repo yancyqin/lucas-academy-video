@@ -3,7 +3,8 @@
 Chapter times and lengths come from each film's own timeline, so re-run this
 after `npm run wp01:timeline` (and the render) whenever the narration changes:
 
-    npm run wp01:youtube
+    npm run wp01:youtube          # both films
+    npm run wp01:youtube -- en    # one film
 
 Writes out/whole-person-01/delivery/youtube-description.{zh,en}.txt and
 youtube-thumbnail.{zh,en}.jpg (the title frame, 1280×720).
@@ -12,6 +13,7 @@ from __future__ import annotations
 
 import json
 import subprocess
+import sys
 import tempfile
 from pathlib import Path
 
@@ -71,7 +73,7 @@ TEXT = {
         "chapters": "章节",
         "notes": f"""说明
 · 片中 Lucas 和 Matthew 的画经家长同意使用；最终作品为 Inception Space 展出版本（轻微修整、增亮）。
-· 旁白：Yancy 本人的声音，经 CosyVoice 声音克隆合成。
+· 旁白：合成的朗读声音（CosyVoice）。
 · 画面：Lucas Academy 的应用录屏（Inception Space、Art Lab、语言的桥、Snake-Lab）。
 · 背景音乐：《Echoes in the Void》，Yancy 用 Suno 创作（Inception Space「Journey of Art」房间配乐）。
 · 爱因斯坦引用：《论教育》（On Education，1936）。
@@ -141,7 +143,8 @@ def thumbnail(lang: str) -> None:
 
 def main() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
-    for lang, text in TEXT.items():
+    for lang in sys.argv[1:] or list(TEXT):
+        text = TEXT[lang]
         timeline = json.loads((ROOT / f"public/whole-person-01/timeline.{lang}.json").read_text(encoding="utf-8"))
         start = {c["id"]: c["start"] for c in timeline["cues"]}
         lines = [f"{'0:00' if i == 0 else stamp(start[cue])} {name}" for i, (cue, name) in enumerate(CHAPTERS[lang].items())]

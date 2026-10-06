@@ -411,6 +411,9 @@ const Intro: FC<{ctx: Ctx; len: number}> = ({ctx, len}) => {
           <div style={{fontFamily: zh ? EN_FONT : ZH_FONT, fontSize: zh ? 26 : 26, color: SOFT, marginTop: 8, opacity: 0.8}}>
             {zh ? ctx.tl.title.en : ctx.tl.title.zh}
           </div>
+          <div style={{fontFamily: zh ? ZH_FONT : EN_FONT, fontSize: 28, color: WHITE, marginTop: 22, letterSpacing: 1.5}}>
+            {zh ? INTRO.byline.zh : INTRO.byline.en}
+          </div>
           <div style={{marginTop: 26, paddingTop: 20, borderTop: '1px solid rgba(127,227,255,0.3)'}}>
             <div style={{fontFamily: zh ? ZH_FONT : EN_FONT, fontSize: zh ? 54 : 48, fontWeight: 700, color: CYAN, textShadow: glow}}>
               {zh ? INTRO.subtitle.zh : INTRO.subtitle.en}
