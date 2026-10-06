@@ -40,8 +40,8 @@ export const INTRO = {
   loadingSeconds: 2.0,
   chamber: {file: 'transit-chamber.mp4', from: 0} as Clip,
   subtitle: {zh: '谁是教育者？', en: 'Who is an educator?'} as Label,
-  /** Under the title (owner 2026-10-05). */
-  byline: {zh: 'Lucas Academy 团队', en: 'By Lucas Academy Team'} as Label,
+  /** Under the title (owner 2026-10-06): the same English line on both films. */
+  byline: {zh: 'By Lucas Academy Team', en: 'By Lucas Academy Team'} as Label,
   /** The title card leaves when this line starts; the question line keeps it. */
   titleUntil: 'wp00-02',
   last: 'wp00-03',

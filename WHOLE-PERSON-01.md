@@ -7,12 +7,14 @@ narration in case they are wanted later.
 
 | | narration | length |
 | --- | --- | --- |
-| `WholePersonZh` | Louise's Chinese voice (`louise/zh`), zero-shot-instruct teaching tone, speed 1.0 (the opening question 0.85) | ≈ 7:27 |
+| `WholePersonZh` | Yancy's own voice (`yancy/zh`, v9), zero-shot-instruct teaching tone, speed 1.0 | ≈ 8:08 |
 | `WholePersonEn` | Louise (`louise/en`) | ≈ 7:34 |
 
-The first zh upload (2026-10-05) was read in Yancy's own voice (`yancy/zh`, zh v8; v9 = v8 with
-off-pitch lines re-voiced). The owner switched the zh film to Louise's Chinese voice the same day (v10)
-and added the byline to the title card; both films were re-rendered.
+The zh film went up twice on 2026-10-05: first with zh v8, then as an audio-only remix with v9 (v8 with
+off-pitch lines re-voiced) and the steady mix, picture unchanged. Louise's Chinese voice (`louise/zh`) was
+tried for the whole film the same night; the owner kept Yancy's voice. The byline "By Lucas Academy
+Team" was added to the title card afterwards: the zh film on YouTube predates it, so its thumbnail
+carries it; any re-render shows it on the card.
 
 Delivery (local, `out/` is ignored), all in `out/whole-person-01/delivery/`:
 
@@ -42,7 +44,7 @@ V=../lucas-academy-video/scripts/whole-person-01
 .conda/bin/python $V/retake.py zh 'wp01-19=authoritative&authoritarian'     # re-voice until Whisper hears the words
 .conda/bin/python $V/pace.py zh && .conda/bin/python $V/pace.py en           # every line within ±10% of the median pace
 .conda/bin/python $V/pitch.py zh && .conda/bin/python $V/pitch.py en         # every line within ±2 semitones of the median pitch
-.conda/bin/python $V/check_lines.py data/scripts/whole-person-five-ideas-zh.json outputs/louise/zh/whole-person-five-ideas-v10 zh
+.conda/bin/python $V/check_lines.py data/scripts/whole-person-five-ideas-zh.json outputs/yancy/zh/whole-person-five-ideas-v9 zh
 # 2. Timelines, narration + music mixes, SRTs (this repo)
 npm run wp01:timeline
 # 3. Render both films at 1080p
@@ -77,8 +79,8 @@ must still fit its line's slot; `pitch.py` only keeps takes that do.
 - `check_lines.py` — Whisper every line, flag below 0.9. Known zh false alarms: homophones (权柄→全柄,
   勉励→免利, 作主→做主, 陡峭→抖窍). Final run: all 56 English lines pass; zh only those homophones.
   Re-check zh flags with Whisper medium before re-voicing: small also mishears tones (互教→虎交), while
-  medium caught Louise's real slips (权柄 read bìng, 命题 read míng, 「孩子也是」 slurred, 和 read kě,
-  赐 read zì), each fixed with a fresh take. `pace.py` and `pitch.py` compare with the spoken text and
+  medium caught real slips in the Louise trial (权柄 read bìng, 命题 read míng, 「孩子也是」 slurred,
+  和 read kě, 赐 read zì), each fixed with a fresh take. `pace.py` and `pitch.py` compare with the spoken text and
   apply the homophone map, so a homophone no longer blocks a good take.
 - `build_timeline.py` — per film: cue timeline (`public/whole-person-01/timeline.{zh,en}.json`; the
   compositions load it before rendering, so it sets each film's length), trimmed narration track, music
@@ -94,7 +96,7 @@ must still fit its line's slot; `pitch.py` only keeps takes that do.
 
 - **Opening:** Inception Space's own loading screen (rebuilt from `inception-space-ui/index.html`
   `#entry-loading` at 1.5×, English text kept) → the transit chamber with the avatar hidden; the title card
-  (with the byline 「Lucas Academy 团队」 / "By Lucas Academy Team") and 「谁是教育者？」 sit on the footage;
+  (with the byline "By Lucas Academy Team") and 「谁是教育者？」 sit on the footage;
   the question is asked, ~2 s pause, then the answer.
 - **Sections:** each principle plays its app recording dimmed under frosted-glass cards (cyan hairline,
   mono kickers); a demo line brings the recording up full. Cards that state a belief carry

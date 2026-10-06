@@ -19,16 +19,12 @@ from lucas_media.cosyvoice_engine import CosyVoiceEngine  # noqa: E402
 from lucas_media.joke import DEFAULT_PEAK_DBFS, add_peak_headroom, save_wav  # noqa: E402
 
 SCRIPT = "data/scripts/whole-person-five-ideas-{lang}.json"
-# zh v10 = Louise's Chinese voice (owner, 2026-10-05), reusing the checked opening trial; zh v8/v9
-# were Yancy's own voice (v9 = v8 with off-pitch lines re-voiced by pitch.py). en is unchanged since v8.
-OUT = {"zh": "outputs/louise/zh/whole-person-five-ideas-v10", "en": "outputs/louise/en/whole-person-five-ideas-v8"}
-PREVIOUS = {"zh": "outputs/louise/zh/whole-person-five-ideas-trial", "en": "outputs/louise/en/whole-person-five-ideas-v7"}
+# zh v9 = v8 with the off-pitch lines re-voiced by pitch.py (2026-10-05); en is unchanged since v8.
+OUT = {"zh": "outputs/yancy/zh/whole-person-five-ideas-v9", "en": "outputs/louise/en/whole-person-five-ideas-v8"}
+PREVIOUS = {"zh": "outputs/yancy/zh/whole-person-five-ideas-v8", "en": "outputs/louise/en/whole-person-five-ideas-v7"}
 # 梵高 = fán gāo (Yancy's reading); the zh voice reads 凡高 correctly. The English
 # terms in wp01-09 are spoken too (Yancy, 2026-10-04): commas instead of brackets.
 ZH_SUBSTITUTIONS = {"梵高": "凡高"}
-# Per-line speed where the film-wide speed is not right: Louise reads the opening question at
-# normal pace at 1.0, but it is asked slowly on purpose (pace.py leaves it alone).
-SPEED = {"zh": {"wp00-01": 0.85}, "en": {}}
 SPOKEN = {
     "zh": {
         "wp01-09": "这里涉及到两个重要的教育概念：批判性素养，critical literacy，和问题化，problematizing。",
@@ -66,8 +62,7 @@ def main(lang: str) -> None:
             for a, b in ZH_SUBSTITUTIONS.items():
                 text = text.replace(a, b)
         kwargs = {"mode": script["mode"], "instruction": script["instruction"]} if "mode" in script else {}
-        speed = SPEED[lang].get(line["id"], script.get("speed", 1.0))
-        speech, rate, _ = engine.synthesize(text, target_language=lang, speed=speed, **kwargs)
+        speech, rate, _ = engine.synthesize(text, target_language=lang, speed=script.get("speed", 1.0), **kwargs)
         save_wav(out / f"{line['id']}.wav", add_peak_headroom(speech, peak_dbfs=DEFAULT_PEAK_DBFS), rate)
         print(f"[{lang} {n}/{len(todo)}] {line['id']} {speech.shape[1] / rate:.2f}s", flush=True)
     json.dump({l["id"]: l["text"] for l in script["lines"]}, open(out / "texts.json", "w"), ensure_ascii=False, indent=1)

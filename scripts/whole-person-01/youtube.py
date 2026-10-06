@@ -73,7 +73,7 @@ TEXT = {
         "chapters": "章节",
         "notes": f"""说明
 · 片中 Lucas 和 Matthew 的画经家长同意使用；最终作品为 Inception Space 展出版本（轻微修整、增亮）。
-· 旁白：合成的朗读声音（CosyVoice）。
+· 旁白：Yancy 本人的声音，经 CosyVoice 声音克隆合成。
 · 画面：Lucas Academy 的应用录屏（Inception Space、Art Lab、语言的桥、Snake-Lab）。
 · 背景音乐：《Echoes in the Void》，Yancy 用 Suno 创作（Inception Space「Journey of Art」房间配乐）。
 · 爱因斯坦引用：《论教育》（On Education，1936）。

@@ -45,7 +45,7 @@ SCRIPTS = {
     "en": MEDIA / "data/scripts/whole-person-five-ideas-en.json",
 }
 VOICES = {
-    "zh": MEDIA / "outputs/louise/zh/whole-person-five-ideas-v10",  # Louise's Chinese voice, zero-shot-instruct teaching tone
+    "zh": MEDIA / "outputs/yancy/zh/whole-person-five-ideas-v9",  # Yancy, zero-shot-instruct teaching tone, 1.0; pitch-evened
     "en": MEDIA / "outputs/louise/en/whole-person-five-ideas-v8",
 }
 FPS = 30
