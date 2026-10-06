@@ -93,6 +93,11 @@ In `out/reciprocal-doors/delivery/`, per film (`zh`, `en`):
   Chinese + small English; English film: English only), for elsewhere.
 - `youtube-description.<film>.txt` — title, description with chapters, the
   music credit, tags.
+- `youtube-cover.<film>.jpg` — the cover (2026-10-06): only the question, on the title card's picture
+  and veil — 「学了英文 / 会忘了中文吗？」 with "Learning English — Will They Forget Chinese?" small
+  (zh film); the English film the other way round, in three lines so it clears the children. 英文 /
+  English in Mary's coral, 中文 / Chinese in Jacob's teal. Render `LanguageBridgeCoverZh` / `...En`
+  (`npx remotion still src/index.ts LanguageBridgeCoverZh cover.zh.png`), then scale to 1280×720.
 
 ## Checks that caught real slips
 

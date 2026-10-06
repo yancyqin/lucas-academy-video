@@ -1063,3 +1063,28 @@ export const LanguageBridgeVideo: React.FC<LanguageBridgeProps> = ({lang, audio,
     </Film.Provider>
   );
 };
+
+/**
+ * The YouTube cover (owner 2026-10-06): only the question, on the title card's picture
+ * and veil. 英文 in Mary's coral and 中文 in Jacob's teal, the colours of their doors; the English
+ * question takes three lines, set lower, so it stays clear of the two children.
+ */
+export const LanguageBridgeCover: React.FC<{lang: Lang}> = ({lang}) => {
+  const english = lang === 'en';
+  const lines = english
+    ? [<>Learning <span style={{color: C.coral}}>English</span></>, <>Will They Forget</>, <><span style={{color: C.teal}}>Chinese</span>?</>]
+    : [<>学了<span style={{color: C.coral}}>英文</span></>, <>会忘了<span style={{color: C.teal}}>中文</span>吗？</>];
+  return (
+    <AbsoluteFill>
+      <Picture name="rd04-two-doors" t={0} from={0} to={1} zoom={[1.05, 1.05]} dim={0.55} />
+      <AbsoluteFill style={{alignItems: 'center', justifyContent: 'center', textAlign: 'center', color: C.ink, paddingTop: english ? 170 : 0}}>
+        {lines.map((line, i) => (
+          <div key={i} style={{fontFamily: english ? EN : ZH, fontSize: english ? 124 : 196, fontWeight: 800, lineHeight: 1.1}}>{line}</div>
+        ))}
+        <div style={{fontFamily: english ? ZH : EN, fontSize: 54, fontWeight: 600, color: C.soft, marginTop: 40}}>
+          {english ? '学了英文，会忘了中文吗？' : 'Learning English — Will They Forget Chinese?'}
+        </div>
+      </AbsoluteFill>
+    </AbsoluteFill>
+  );
+};
