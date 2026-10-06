@@ -1,5 +1,5 @@
 import {Composition} from 'remotion';
-import {VG_WHY_DURATION, VG_WHY_FPS, VgWhyVideo} from './videos/vg-why/VgWhyVideo';
+import {VG_WHY_DURATION, VG_WHY_FPS, VgWhyCover, VgWhyVideo} from './videos/vg-why/VgWhyVideo';
 import {RD_FPS, filmDuration, LanguageBridgeVideo, type LanguageBridgeProps} from './videos/ReciprocalDoorsVideo';
 import {WP_FPS, WholePersonVideo, calculateWholePersonMetadata} from './videos/whole-person-01/WholePersonVideo';
 import type {FC} from 'react';
@@ -227,6 +227,7 @@ export const Root: FC = () => {
           height={1080}
         />
       ))}
+      <Composition id="VgWhyCover" component={VgWhyCover} durationInFrames={1} fps={VG_WHY_FPS} width={1920} height={1080} />
       {/* 语言的桥 · Language Bridge (lucas-academy-media#4): a Chinese film and an English film. */}
       {([
         ['LanguageBridgeZh', {lang: 'zh', audio: true, subtitles: true}],

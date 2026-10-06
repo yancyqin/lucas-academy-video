@@ -469,3 +469,25 @@ const FadeIn: FC<{frames: number; children: ReactNode}> = ({frames, children}) =
   const frame = useCurrentFrame();
   return <AbsoluteFill style={{opacity: interpolate(frame, [0, frames], [0, 1], {extrapolateRight: 'clamp'})}}>{children}</AbsoluteFill>;
 };
+
+/**
+ * The YouTube cover (owner 2026-10-06): the film's first picture, Postman Roulin
+ * (Detroit), with the title big in Chinese and small in English.
+ */
+export const VgWhyCover: FC = () => (
+  <AbsoluteFill style={{background: BG}}>
+    <Img src={artSrc('roulin')} style={{position: 'absolute', left: -60, top: -60, width: 2040, height: 1200, objectFit: 'cover',
+      filter: 'blur(30px) brightness(0.42)'}} />
+    <AbsoluteFill style={{background: 'linear-gradient(90deg, rgba(20,17,13,0.94) 0%, rgba(20,17,13,0.78) 42%, rgba(20,17,13,0.15) 78%)'}} />
+    <Img src={artSrc('roulin')} style={{position: 'absolute', right: 110, top: 80, height: 920, boxShadow: '0 30px 80px rgba(0,0,0,0.6)'}} />
+    <div style={{position: 'absolute', left: 120, top: 0, bottom: 0, width: 960, display: 'flex', flexDirection: 'column',
+      justifyContent: 'center', color: INK}}>
+      <div style={{fontFamily: EN_FONT, fontSize: 28, letterSpacing: 6, color: '#8a7650'}}>LUCAS ACADEMY · 美术课 · ART LESSONS</div>
+      <div style={{fontFamily: ZH_FONT, fontSize: 180, fontWeight: 800, lineHeight: 1.14, marginTop: 34}}>梵高为什么</div>
+      <div style={{fontFamily: ZH_FONT, fontSize: 180, fontWeight: 800, lineHeight: 1.14}}>
+        画<span style={{color: GOLD}}>他们</span>？
+      </div>
+      <div style={{fontFamily: SERIF, fontSize: 56, fontStyle: 'italic', marginTop: 40, opacity: 0.92}}>Why Did Van Gogh Paint Them?</div>
+    </div>
+  </AbsoluteFill>
+);
