@@ -1,7 +1,7 @@
 import {Composition} from 'remotion';
 import {VG_WHY_DURATION, VG_WHY_FPS, VgWhyCover, VgWhyVideo} from './videos/vg-why/VgWhyVideo';
 import {RD_FPS, filmDuration, LanguageBridgeVideo, type LanguageBridgeProps} from './videos/ReciprocalDoorsVideo';
-import {WP_FPS, WholePersonVideo, calculateWholePersonMetadata} from './videos/whole-person-01/WholePersonVideo';
+import {WP_FPS, WholePersonCover, WholePersonVideo, calculateWholePersonMetadata} from './videos/whole-person-01/WholePersonVideo';
 import type {FC} from 'react';
 import {MonkeySocietyVideo} from './MonkeySocietyVideo';
 import {MonkeyIntroVideo} from './videos/MonkeyIntroVideo';
@@ -259,6 +259,19 @@ export const Root: FC = () => {
           component={WholePersonVideo}
           defaultProps={{lang, tl: null}}
           calculateMetadata={calculateWholePersonMetadata}
+          durationInFrames={1}
+          fps={WP_FPS}
+          width={1920}
+          height={1080}
+        />
+      ))}
+      {/* …and their YouTube covers (rendered by scripts/whole-person-01/youtube.py). */}
+      {(['zh', 'en'] as const).map((lang) => (
+        <Composition
+          key={`cover-${lang}`}
+          id={lang === 'zh' ? 'WholePersonCoverZh' : 'WholePersonCoverEn'}
+          component={WholePersonCover}
+          defaultProps={{lang}}
           durationInFrames={1}
           fps={WP_FPS}
           width={1920}

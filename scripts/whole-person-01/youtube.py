@@ -3,22 +3,23 @@
 Chapter times and lengths come from each film's own timeline, so re-run this
 after `npm run wp01:timeline` (and the render) whenever the narration changes:
 
-    npm run wp01:youtube
+    npm run wp01:youtube          # both films
+    npm run wp01:youtube -- en    # one film
 
 Writes out/whole-person-01/delivery/youtube-description.{zh,en}.txt and
-youtube-thumbnail.{zh,en}.jpg (the title frame, 1280×720).
+youtube-thumbnail.{zh,en}.jpg (the big-question cover, 1280×720).
 """
 from __future__ import annotations
 
 import json
 import subprocess
+import sys
 import tempfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "out/whole-person-01/delivery"
-COMPOSITION = {"zh": "WholePersonZh", "en": "WholePersonEn"}
-THUMBNAIL_FRAME = 150  # 5 s in: the title card over the transit chamber
+COMPOSITION = {"zh": "WholePersonCoverZh", "en": "WholePersonCoverEn"}  # WholePersonCover: needs footage/transit-chamber.mp4
 
 NIV = ("The Holy Bible, New International Version® NIV® Copyright © 1973, 1978, 1984, 2011 by Biblica, Inc.® "
        "Used by permission. All rights reserved worldwide.")
@@ -81,7 +82,6 @@ TEXT = {
         "upload": """【上传设置 / Upload settings】
 · 视频：whole-person-five-principles.zh.mp4（1920×1080，{length}，−16 LUFS）
 · 缩略图：youtube-thumbnail.zh.jpg（1280×720）
-· 字幕：whole-person-five-principles.zh.zh-Hans.srt →「中文（简体）」；whole-person-five-principles.zh.en.srt →「英语」（两份都按中文配音计时）
 · 视频语言：中文（简体）
 · 观众：否，不是专为儿童打造的（这支片子是对家长说的）
 · 修改过或合成的内容：是（旁白是合成声音；YouTube 要求披露「合成人物声音来旁白」）
@@ -117,7 +117,6 @@ Learning is about owning, not being fed. This short film walks through Lucas Aca
         "upload": """【上传设置 / Upload settings】
 · Video: whole-person-five-principles.en.mp4 (1920×1080, {length}, −16 LUFS)
 · Thumbnail: youtube-thumbnail.en.jpg (1280×720)
-· Captions: whole-person-five-principles.en.en.srt → English; whole-person-five-principles.en.zh-Hans.srt → Chinese (Simplified) (both timed to the English narration)
 · Video language: English
 · Audience: No, it's not made for kids (it is addressed to parents)
 · Altered or synthetic content: Yes (the narration is a synthesized voice)
@@ -136,14 +135,15 @@ def thumbnail(lang: str) -> None:
     with tempfile.TemporaryDirectory() as tmp:
         frame = Path(tmp) / "frame.png"
         subprocess.run(["npx", "remotion", "still", "src/index.ts", COMPOSITION[lang], str(frame),
-                        f"--frame={THUMBNAIL_FRAME}", "--timeout=240000", "--log=error"], cwd=ROOT, check=True)
+                        "--frame=0", "--timeout=240000", "--log=error"], cwd=ROOT, check=True)
         subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(frame), "-vf", "scale=1280:720:flags=lanczos",
-                        "-q:v", "3", str(OUT / f"youtube-thumbnail.{lang}.jpg")], check=True)
+                        "-q:v", "2", str(OUT / f"youtube-thumbnail.{lang}.jpg")], check=True)
 
 
 def main() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
-    for lang, text in TEXT.items():
+    for lang in sys.argv[1:] or list(TEXT):
+        text = TEXT[lang]
         timeline = json.loads((ROOT / f"public/whole-person-01/timeline.{lang}.json").read_text(encoding="utf-8"))
         start = {c["id"]: c["start"] for c in timeline["cues"]}
         lines = [f"{'0:00' if i == 0 else stamp(start[cue])} {name}" for i, (cue, name) in enumerate(CHAPTERS[lang].items())]

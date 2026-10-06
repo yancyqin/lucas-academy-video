@@ -12,7 +12,7 @@ import {
   useCurrentFrame,
   useVideoConfig,
 } from 'remotion';
-import {INTRO, SECTION_BG, SHOTS, type Card, type Clip, type Label, type Shot} from './shots';
+import {COVER, INTRO, SECTION_BG, SHOTS, type Card, type Clip, type Label, type Shot} from './shots';
 
 /**
  * "全人教育的五个理念 / Five Principles of Whole-Person Education" —
@@ -411,6 +411,9 @@ const Intro: FC<{ctx: Ctx; len: number}> = ({ctx, len}) => {
           <div style={{fontFamily: zh ? EN_FONT : ZH_FONT, fontSize: zh ? 26 : 26, color: SOFT, marginTop: 8, opacity: 0.8}}>
             {zh ? ctx.tl.title.en : ctx.tl.title.zh}
           </div>
+          <div style={{fontFamily: zh ? ZH_FONT : EN_FONT, fontSize: 28, color: WHITE, marginTop: 22, letterSpacing: 1.5}}>
+            {zh ? INTRO.byline.zh : INTRO.byline.en}
+          </div>
           <div style={{marginTop: 26, paddingTop: 20, borderTop: '1px solid rgba(127,227,255,0.3)'}}>
             <div style={{fontFamily: zh ? ZH_FONT : EN_FONT, fontSize: zh ? 54 : 48, fontWeight: 700, color: CYAN, textShadow: glow}}>
               {zh ? INTRO.subtitle.zh : INTRO.subtitle.en}
@@ -510,6 +513,34 @@ export const WholePersonVideo: FC<WholePersonProps> = ({lang, tl}) => {
         <EndCard ctx={ctx} />
       </Sequence>
       <Audio src={staticFile(`whole-person-01/audio/${lang}.mix.wav`)} />
+    </AbsoluteFill>
+  );
+};
+
+/**
+ * The YouTube cover: the background of the title frame (the transit chamber 5 s in)
+ * with one big question in place of the title card, then the film's name and byline.
+ */
+export const WholePersonCover: FC<{lang: Lang}> = ({lang}) => {
+  const zh = lang === 'zh';
+  const font = zh ? ZH_FONT : EN_FONT;
+  const [before, highlight, after] = COVER.first[lang];
+  return (
+    <AbsoluteFill style={{background: BG}}>
+      <OffthreadVideo src={staticFile(`whole-person-01/footage/${INTRO.chamber.file}`)} startFrom={150} muted
+        style={{width: '100%', height: '100%', objectFit: 'cover'}} />
+      <AbsoluteFill style={{background: 'radial-gradient(ellipse 62% 58% at 50% 50%, rgba(7,11,20,0.62), rgba(7,11,20,0) 100%)'}} />
+      <AbsoluteFill style={{alignItems: 'center', justifyContent: 'center', textAlign: 'center', color: WHITE}}>
+        <Kicker>LUCAS ACADEMY  //  BRINGER OF LIGHT</Kicker>
+        <div style={{fontFamily: font, fontSize: zh ? 200 : 128, fontWeight: 800, lineHeight: 1.12, marginTop: 18, textShadow: glow}}>
+          {before}<span style={{color: '#ffc94d'}}>{highlight}</span>{after}
+        </div>
+        <div style={{fontFamily: font, fontSize: zh ? 200 : 168, fontWeight: 800, lineHeight: 1.12, color: CYAN, textShadow: glow}}>
+          {COVER.second[lang]}
+        </div>
+        <div style={{fontFamily: font, fontSize: 46, color: SOFT, marginTop: 44}}>{COVER.subtitle[lang]}</div>
+        <div style={{fontFamily: EN_FONT, fontSize: 34, color: WHITE, marginTop: 14, letterSpacing: 1.5}}>{INTRO.byline[lang]}</div>
+      </AbsoluteFill>
     </AbsoluteFill>
   );
 };

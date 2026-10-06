@@ -40,9 +40,19 @@ export const INTRO = {
   loadingSeconds: 2.0,
   chamber: {file: 'transit-chamber.mp4', from: 0} as Clip,
   subtitle: {zh: '谁是教育者？', en: 'Who is an educator?'} as Label,
+  /** Under the title (owner 2026-10-06): the same English line on both films. */
+  byline: {zh: 'By Lucas Academy Team', en: 'By Lucas Academy Team'} as Label,
   /** The title card leaves when this line starts; the question line keeps it. */
   titleUntil: 'wp00-02',
   last: 'wp00-03',
+};
+
+/** YouTube cover (owner 2026-10-06): 「孩子说“不”，你怎么办？」 big on the title frame's background, in two lines
+ * (the line-end comma dropped): [before, highlight, after] + line two. */
+export const COVER = {
+  first: {zh: ['孩子说', '“不”', ''], en: ['Your Child Says ', '“No.”', '']} as Record<'zh' | 'en', [string, string, string]>,
+  second: {zh: '你怎么办？', en: 'Now What?'} as Label,
+  subtitle: {zh: '全人教育的五个理念', en: 'Five Principles of Whole-Person Education'} as Label,
 };
 
 export const SECTION_BG: Record<string, Clip> = {
