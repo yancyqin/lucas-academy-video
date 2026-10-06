@@ -41,6 +41,10 @@ No burned-in captions: YouTube carries them. In `out/vg-why-paint-them/`:
   length as the video).
 - `zh-Hans.srt`, `en.srt` — captions; either language lines up with either track.
 - `vg-why-paint-them.en.mp4` — the English cut, for checking only.
+- `youtube-thumbnail.jpg` — the cover (2026-10-06): the film's first picture, Postman Roulin (Detroit),
+  and only the question, big in Chinese and small in English (the README's cover rule).
+  `npx remotion still src/index.ts VgWhyCover out/vg-why-paint-them/cover.png` (needs `art/roulin.jpg`
+  from `fetch_assets.py`), then `ffmpeg -i cover.png -vf scale=1280:720:flags=lanczos -q:v 2 youtube-thumbnail.jpg`.
 
 Both tracks carry the Van Gogh House music under the narration (Human Horizon A,
 the owner's Suno song — `public/vg-why-paint-them/music/SOURCE.md`): looped
