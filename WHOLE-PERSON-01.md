@@ -13,8 +13,9 @@ narration in case they are wanted later.
 The zh film went up twice on 2026-10-05: first with zh v8, then as an audio-only remix with v9 (v8 with
 off-pitch lines re-voiced) and the steady mix, picture unchanged. Louise's Chinese voice (`louise/zh`) was
 tried for the whole film the same night; the owner kept Yancy's voice. The byline "By Lucas Academy
-Team" was added to the title card afterwards: the zh film on YouTube predates it, so its thumbnail
-carries it; any re-render shows it on the card.
+Team" was added to the title card afterwards: the zh film on YouTube predates it; any re-render shows
+it on the card. Final uploads: zh vfMCkIFj8nw (the first upload; the owner kept it over the audio-fixed
+re-upload), en ZaKR2wA7dFk (re-rendered with the byline and the steady mix).
 
 Delivery (local, `out/` is ignored), all in `out/whole-person-01/delivery/`:
 
@@ -22,7 +23,8 @@ Delivery (local, `out/` is ignored), all in `out/whole-person-01/delivery/`:
 - `whole-person-five-principles.<film>.zh-Hans.srt` / `.en.srt` — both captions on that film's own times (not uploaded).
 - `youtube-description.<film>.txt` — title, paste-ready description with chapters, credits and Bible
   notices, tags, upload settings (not made for kids; altered/synthetic content = yes, synthesized voice).
-- `youtube-thumbnail.<film>.jpg` — the title frame, 1280×720.
+- `youtube-thumbnail.<film>.jpg` — the cover, 1280×720: 「孩子说“不”你怎么办？」 / "Your Child Says “No.” Now What?" big
+  on the title frame's background (composition `WholePersonCoverZh` / `WholePersonCoverEn`, copy in `COVER`).
 
 Only sources are committed: the line scripts (lucas-academy-media), the code and this file. Everything
 the pipeline writes — voice takes, timelines, mixes, recordings, renders — is a local working copy:

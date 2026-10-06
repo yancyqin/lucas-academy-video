@@ -7,7 +7,7 @@ after `npm run wp01:timeline` (and the render) whenever the narration changes:
     npm run wp01:youtube -- en    # one film
 
 Writes out/whole-person-01/delivery/youtube-description.{zh,en}.txt and
-youtube-thumbnail.{zh,en}.jpg (the title frame, 1280×720).
+youtube-thumbnail.{zh,en}.jpg (the big-question cover, 1280×720).
 """
 from __future__ import annotations
 
@@ -19,8 +19,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "out/whole-person-01/delivery"
-COMPOSITION = {"zh": "WholePersonZh", "en": "WholePersonEn"}
-THUMBNAIL_FRAME = 150  # 5 s in: the title card over the transit chamber
+COMPOSITION = {"zh": "WholePersonCoverZh", "en": "WholePersonCoverEn"}  # WholePersonCover: needs footage/transit-chamber.mp4
 
 NIV = ("The Holy Bible, New International Version® NIV® Copyright © 1973, 1978, 1984, 2011 by Biblica, Inc.® "
        "Used by permission. All rights reserved worldwide.")
@@ -136,9 +135,9 @@ def thumbnail(lang: str) -> None:
     with tempfile.TemporaryDirectory() as tmp:
         frame = Path(tmp) / "frame.png"
         subprocess.run(["npx", "remotion", "still", "src/index.ts", COMPOSITION[lang], str(frame),
-                        f"--frame={THUMBNAIL_FRAME}", "--timeout=240000", "--log=error"], cwd=ROOT, check=True)
+                        "--frame=0", "--timeout=240000", "--log=error"], cwd=ROOT, check=True)
         subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(frame), "-vf", "scale=1280:720:flags=lanczos",
-                        "-q:v", "3", str(OUT / f"youtube-thumbnail.{lang}.jpg")], check=True)
+                        "-q:v", "2", str(OUT / f"youtube-thumbnail.{lang}.jpg")], check=True)
 
 
 def main() -> None:

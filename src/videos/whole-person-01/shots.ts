@@ -47,6 +47,14 @@ export const INTRO = {
   last: 'wp00-03',
 };
 
+/** YouTube cover (owner 2026-10-06): 「孩子说“不”，你怎么办？」 big on the title frame's background, in two lines
+ * (the line-end comma dropped): [before, highlight, after] + line two. */
+export const COVER = {
+  first: {zh: ['孩子说', '“不”', ''], en: ['Your Child Says ', '“No.”', '']} as Record<'zh' | 'en', [string, string, string]>,
+  second: {zh: '你怎么办？', en: 'Now What?'} as Label,
+  subtitle: {zh: '全人教育的五个理念', en: 'Five Principles of Whole-Person Education'} as Label,
+};
+
 export const SECTION_BG: Record<string, Clip> = {
   wp00: {file: 'journey-of-art.mp4', from: 8},
   wp01: {file: 'journey-of-art.mp4', from: 50},
