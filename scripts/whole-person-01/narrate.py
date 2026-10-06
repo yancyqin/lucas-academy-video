@@ -19,9 +19,11 @@ from lucas_media.cosyvoice_engine import CosyVoiceEngine  # noqa: E402
 from lucas_media.joke import DEFAULT_PEAK_DBFS, add_peak_headroom, save_wav  # noqa: E402
 
 SCRIPT = "data/scripts/whole-person-five-ideas-{lang}.json"
-# zh v9 = v8 with the off-pitch lines re-voiced by pitch.py (2026-10-05); en is unchanged since v8.
-OUT = {"zh": "outputs/yancy/zh/whole-person-five-ideas-v9", "en": "outputs/louise/en/whole-person-five-ideas-v8"}
-PREVIOUS = {"zh": "outputs/yancy/zh/whole-person-five-ideas-v8", "en": "outputs/louise/en/whole-person-five-ideas-v7"}
+# zh v10 / en v9 (2026-10-06 re-make, the film opens on 「孩子说“不”，你怎么办？」): four new lines each,
+# every unchanged take reused from zh v9 (Yancy; v8 with the off-pitch lines re-voiced by pitch.py)
+# and en v8 (Louise).
+OUT = {"zh": "outputs/yancy/zh/whole-person-five-ideas-v10", "en": "outputs/louise/en/whole-person-five-ideas-v9"}
+PREVIOUS = {"zh": "outputs/yancy/zh/whole-person-five-ideas-v9", "en": "outputs/louise/en/whole-person-five-ideas-v8"}
 # 梵高 = fán gāo (Yancy's reading); the zh voice reads 凡高 correctly. The English
 # terms in wp01-09 are spoken too (Yancy, 2026-10-04): commas instead of brackets.
 ZH_SUBSTITUTIONS = {"梵高": "凡高"}

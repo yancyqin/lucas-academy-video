@@ -12,7 +12,7 @@ import {
   useCurrentFrame,
   useVideoConfig,
 } from 'remotion';
-import {COVER, INTRO, SECTION_BG, SHOTS, type Card, type Clip, type Label, type Shot} from './shots';
+import {EDUCATOR, INTRO, QUESTION, SECTION_BG, SHOTS, type BigQuestion, type Card, type Clip, type Label, type Shot} from './shots';
 
 /**
  * "全人教育的五个理念 / Five Principles of Whole-Person Education" —
@@ -168,6 +168,30 @@ const Pair: FC<{ctx: Ctx; text: Label; size: number}> = ({ctx, text, size}) => {
   );
 };
 
+/** A question in the cover's big type: line one white with its key word in gold, line two cyan. */
+const BigQuestionText: FC<{lang: Lang; question: BigQuestion}> = ({lang, question}) => {
+  const zh = lang === 'zh';
+  const font = zh ? ZH_FONT : EN_FONT;
+  const [before, highlight, after] = question.first[lang];
+  return (
+    <>
+      <div style={{fontFamily: font, fontSize: zh ? 200 : question.second ? 128 : 150, fontWeight: 800, lineHeight: 1.12, textShadow: glow}}>
+        {before}<span style={{color: '#ffc94d'}}>{highlight}</span>{after}
+      </div>
+      {question.second && (
+        <div style={{fontFamily: font, fontSize: zh ? 200 : 168, fontWeight: 800, lineHeight: 1.12, color: CYAN, textShadow: glow}}>
+          {question.second[lang]}
+        </div>
+      )}
+    </>
+  );
+};
+
+/** Darkens the middle of the picture so big type reads on any footage. */
+const Scrim: FC = () => (
+  <AbsoluteFill style={{background: 'radial-gradient(ellipse 62% 58% at 50% 50%, rgba(7,11,20,0.62), rgba(7,11,20,0) 100%)'}} />
+);
+
 const CardView: FC<{ctx: Ctx; card: Card; frame: number; len: number; shotStart: number}> = ({ctx, card, frame, len, shotStart}) => {
   const {fps} = useVideoConfig();
   const cueFrame = (id: string) => Math.round(ctx.cue(id).speech.start * fps) - shotStart;
@@ -175,6 +199,15 @@ const CardView: FC<{ctx: Ctx; card: Card; frame: number; len: number; shotStart:
   const y = interpolate(frame, [6, 22], [18, 0], clamp);
   const out = interpolate(frame, [len - 16, len], [1, 0], clamp);
   switch (card.kind) {
+    case 'question':
+      return (
+        <AbsoluteFill style={{opacity: o}}>
+          <Scrim />
+          <AbsoluteFill style={{alignItems: 'center', justifyContent: 'center', textAlign: 'center', color: WHITE, transform: `translateY(${y}px)`}}>
+            <BigQuestionText lang={ctx.lang} question={card.question} />
+          </AbsoluteFill>
+        </AbsoluteFill>
+      );
     case 'principle':
       return (
         <Centre opacity={o} y={y}>
@@ -365,64 +398,38 @@ const Demo: FC<{ctx: Ctx; demo: NonNullable<Shot['demo']>; len: number}> = ({ctx
 };
 
 /** Inception Space's own loading screen (index.html #entry-loading, at 1.5x). */
-const LoadingScreen: FC<{frame: number; fps: number}> = ({frame, fps}) => {
-  const turn = ((frame / fps) * 1000) / 850; // entry-spin: 850 ms a turn
-  return (
-    <AbsoluteFill style={{
-      background: 'radial-gradient(circle at 50% 42%, rgba(52, 105, 117, 0.28), transparent 38%), rgba(4, 7, 13, 0.97)',
-      alignItems: 'center', justifyContent: 'center',
-    }}>
-      <div style={{display: 'grid', justifyItems: 'center', gap: 21, color: '#f6f8fb', textAlign: 'center', fontFamily: '-apple-system, "SF Pro Text", system-ui, sans-serif'}}>
-        <div style={{width: 69, height: 69, borderRadius: '50%', border: '4.5px solid rgba(158, 215, 189, 0.2)',
-          borderTopColor: '#9ed7bd', transform: `rotate(${turn * 360}deg)`, boxSizing: 'border-box'}} />
-        <div style={{fontSize: 27, fontWeight: 750}}>Opening Space Museum...</div>
-        <div style={{fontSize: 19.5, color: '#a9b7c8'}}>Preparing the world and its living paintings</div>
-      </div>
-    </AbsoluteFill>
-  );
-};
-
 /**
- * The opening: loading screen, then the transit chamber (avatar hidden) with the
- * title and the question 「谁是教育者？」 on it. The title stays through the
- * question and its pause, and leaves as the answer begins.
+ * The opening (see INTRO): the first frame is the cover — the question, big — plus Lucas Academy, the
+ * film's name and the byline, on the transit chamber. It gives way to 「谁是教育者？」 in the same type,
+ * which leaves as the answer begins.
  */
 const Intro: FC<{ctx: Ctx; len: number}> = ({ctx, len}) => {
   const frame = useCurrentFrame();
   const {fps} = useVideoConfig();
-  const load = Math.round(INTRO.loadingSeconds * fps);
-  const loadingOpacity = interpolate(frame, [load - 12, load + 12], [1, 0], clamp);
-  const titleIn = load + 6;
-  const titleOut = Math.round(ctx.cue(INTRO.titleUntil).speech.start * fps);
-  const titleOpacity = interpolate(frame, [titleIn, titleIn + 20, titleOut - 4, titleOut + 14], [0, 1, 1, 0], clamp);
-  const lift = interpolate(frame, [titleIn, titleIn + 20], [16, 0], clamp);
+  const at = (id: string) => Math.round(ctx.cue(id).speech.start * fps);
+  const coverOut = at(INTRO.coverUntil);
+  const coverOpacity = interpolate(frame, [coverOut - 14, coverOut + 4], [1, 0], clamp);
+  const educatorIn = coverOut;
+  const educatorOut = at(INTRO.educatorUntil);
+  const educatorOpacity = interpolate(frame, [educatorIn, educatorIn + 16, educatorOut - 4, educatorOut + 14], [0, 1, 1, 0], clamp);
+  const lift = interpolate(frame, [educatorIn, educatorIn + 16], [16, 0], clamp);
   const out = interpolate(frame, [len - FADE, len], [1, 0], clamp);
-  const [mainZh, restZh] = ctx.tl.title.zh.split('：');
-  const [mainEn, restEn] = ctx.tl.title.en.split(': ');
   const zh = ctx.lang === 'zh';
   return (
     <AbsoluteFill style={{opacity: out}}>
       <ClipView ctx={ctx} clip={INTRO.chamber} push={0.04 * (frame / Math.max(1, len))} />
-      <AbsoluteFill style={{opacity: titleOpacity, alignItems: 'center', justifyContent: 'center', paddingBottom: SAFE_BOTTOM}}>
-        <div style={glass({padding: '46px 90px', textAlign: 'center', transform: `translateY(${lift}px)`})}>
-          <Kicker>LUCAS ACADEMY  //  BRINGER OF LIGHT</Kicker>
-          <div style={{fontFamily: zh ? ZH_FONT : EN_FONT, fontSize: zh ? 86 : 66, fontWeight: 700, textShadow: glow}}>{zh ? mainZh : mainEn}</div>
-          <div style={{fontFamily: zh ? ZH_FONT : EN_FONT, fontSize: zh ? 44 : 38, color: SOFT, marginTop: 10}}>{zh ? restZh : restEn}</div>
-          <div style={{fontFamily: zh ? EN_FONT : ZH_FONT, fontSize: zh ? 26 : 26, color: SOFT, marginTop: 8, opacity: 0.8}}>
-            {zh ? ctx.tl.title.en : ctx.tl.title.zh}
-          </div>
-          <div style={{fontFamily: zh ? ZH_FONT : EN_FONT, fontSize: 28, color: WHITE, marginTop: 22, letterSpacing: 1.5}}>
-            {zh ? INTRO.byline.zh : INTRO.byline.en}
-          </div>
-          <div style={{marginTop: 26, paddingTop: 20, borderTop: '1px solid rgba(127,227,255,0.3)'}}>
-            <div style={{fontFamily: zh ? ZH_FONT : EN_FONT, fontSize: zh ? 54 : 48, fontWeight: 700, color: CYAN, textShadow: glow}}>
-              {zh ? INTRO.subtitle.zh : INTRO.subtitle.en}
-            </div>
-          </div>
-        </div>
+      <AbsoluteFill style={{opacity: Math.max(coverOpacity, educatorOpacity)}}>
+        <Scrim />
       </AbsoluteFill>
-      <AbsoluteFill style={{opacity: loadingOpacity}}>
-        <LoadingScreen frame={frame} fps={fps} />
+      <AbsoluteFill style={{opacity: coverOpacity, alignItems: 'center', justifyContent: 'center', textAlign: 'center', color: WHITE}}>
+        <Kicker>LUCAS ACADEMY  //  BRINGER OF LIGHT</Kicker>
+        <div style={{marginTop: 18}}><BigQuestionText lang={ctx.lang} question={QUESTION} /></div>
+        <div style={{fontFamily: zh ? ZH_FONT : EN_FONT, fontSize: 46, color: SOFT, marginTop: 44}}>{INTRO.name[ctx.lang]}</div>
+        <div style={{fontFamily: EN_FONT, fontSize: 34, color: WHITE, marginTop: 14, letterSpacing: 1.5}}>{INTRO.byline[ctx.lang]}</div>
+      </AbsoluteFill>
+      <AbsoluteFill style={{opacity: educatorOpacity, alignItems: 'center', justifyContent: 'center', textAlign: 'center', color: WHITE,
+        transform: `translateY(${lift}px)`}}>
+        <BigQuestionText lang={ctx.lang} question={EDUCATOR} />
       </AbsoluteFill>
     </AbsoluteFill>
   );
@@ -518,29 +525,16 @@ export const WholePersonVideo: FC<WholePersonProps> = ({lang, tl}) => {
 };
 
 /**
- * The YouTube cover: the background of the title frame (the transit chamber 5 s in)
- * with one big question in place of the title card, then the film's name and byline.
+ * The YouTube cover: the opening card without what the cover rule keeps off it — only the question,
+ * on the title frame's background (the transit chamber 5 s in).
  */
-export const WholePersonCover: FC<{lang: Lang}> = ({lang}) => {
-  const zh = lang === 'zh';
-  const font = zh ? ZH_FONT : EN_FONT;
-  const [before, highlight, after] = COVER.first[lang];
-  return (
-    <AbsoluteFill style={{background: BG}}>
-      <OffthreadVideo src={staticFile(`whole-person-01/footage/${INTRO.chamber.file}`)} startFrom={150} muted
-        style={{width: '100%', height: '100%', objectFit: 'cover'}} />
-      <AbsoluteFill style={{background: 'radial-gradient(ellipse 62% 58% at 50% 50%, rgba(7,11,20,0.62), rgba(7,11,20,0) 100%)'}} />
-      <AbsoluteFill style={{alignItems: 'center', justifyContent: 'center', textAlign: 'center', color: WHITE}}>
-        <Kicker>LUCAS ACADEMY  //  BRINGER OF LIGHT</Kicker>
-        <div style={{fontFamily: font, fontSize: zh ? 200 : 128, fontWeight: 800, lineHeight: 1.12, marginTop: 18, textShadow: glow}}>
-          {before}<span style={{color: '#ffc94d'}}>{highlight}</span>{after}
-        </div>
-        <div style={{fontFamily: font, fontSize: zh ? 200 : 168, fontWeight: 800, lineHeight: 1.12, color: CYAN, textShadow: glow}}>
-          {COVER.second[lang]}
-        </div>
-        <div style={{fontFamily: font, fontSize: 46, color: SOFT, marginTop: 44}}>{COVER.subtitle[lang]}</div>
-        <div style={{fontFamily: EN_FONT, fontSize: 34, color: WHITE, marginTop: 14, letterSpacing: 1.5}}>{INTRO.byline[lang]}</div>
-      </AbsoluteFill>
+export const WholePersonCover: FC<{lang: Lang}> = ({lang}) => (
+  <AbsoluteFill style={{background: BG}}>
+    <OffthreadVideo src={staticFile(`whole-person-01/footage/${INTRO.chamber.file}`)} startFrom={150} muted
+      style={{width: '100%', height: '100%', objectFit: 'cover'}} />
+    <Scrim />
+    <AbsoluteFill style={{alignItems: 'center', justifyContent: 'center', textAlign: 'center', color: WHITE}}>
+      <BigQuestionText lang={lang} question={QUESTION} />
     </AbsoluteFill>
-  );
-};
+  </AbsoluteFill>
+);
