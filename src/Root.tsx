@@ -2,6 +2,7 @@ import {Composition} from 'remotion';
 import {VG_WHY_DURATION, VG_WHY_FPS, VgWhyCover, VgWhyVideo} from './videos/vg-why/VgWhyVideo';
 import {RD_FPS, filmDuration, LanguageBridgeCover, LanguageBridgeVideo, type LanguageBridgeProps} from './videos/ReciprocalDoorsVideo';
 import {WP_FPS, WholePersonCover, WholePersonVideo, calculateWholePersonMetadata} from './videos/whole-person-01/WholePersonVideo';
+import {FI_FPS, FunInformaticsCover, FunInformaticsVideo, calculateFunInformaticsMetadata} from './videos/fun-informatics-01/FunInformaticsVideo';
 import type {FC} from 'react';
 import {MonkeySocietyVideo} from './MonkeySocietyVideo';
 import {MonkeyIntroVideo} from './videos/MonkeyIntroVideo';
@@ -281,6 +282,16 @@ export const Root: FC = () => {
           width={1920}
           height={1080}
         />
+      ))}
+      {/* Fun Informatics 1 · 计算机怎么算 1+1=？ / How Does a Computer Add 1 + 1=? (FUN-INFORMATICS-01.md): one film per language. */}
+      {(['zh', 'en'] as const).map((lang) => (
+        <Composition key={`fi01-${lang}`} id={lang === 'zh' ? 'FunInformatics01Zh' : 'FunInformatics01En'}
+          component={FunInformaticsVideo} defaultProps={{lang, tl: null}} calculateMetadata={calculateFunInformaticsMetadata}
+          durationInFrames={1} fps={FI_FPS} width={1920} height={1080} />
+      ))}
+      {(['zh', 'en'] as const).map((lang) => (
+        <Composition key={`fi01-cover-${lang}`} id={lang === 'zh' ? 'FunInformatics01CoverZh' : 'FunInformatics01CoverEn'}
+          component={FunInformaticsCover} defaultProps={{lang}} durationInFrames={1} fps={FI_FPS} width={1920} height={1080} />
       ))}
     </>
   );

@@ -34,7 +34,10 @@
     "vgwhy:deliver": "python3 scripts/vg-why/deliver.py",
     "wp01:timeline": "python3 scripts/whole-person-01/build_timeline.py",
     "wp01:render": "remotion render src/index.ts WholePersonZh out/whole-person-01/delivery/whole-person-five-principles.zh.mp4 --concurrency=4 --timeout=240000 --offthreadvideo-cache-size-in-bytes=2000000000 && remotion render src/index.ts WholePersonEn out/whole-person-01/delivery/whole-person-five-principles.en.mp4 --concurrency=4 --timeout=240000 --offthreadvideo-cache-size-in-bytes=2000000000",
-    "wp01:youtube": "python3 scripts/whole-person-01/youtube.py"
+    "wp01:youtube": "python3 scripts/whole-person-01/youtube.py",
+    "fi01:timeline": "python3 scripts/fun-informatics-01/build_timeline.py",
+    "fi01:render": "remotion render src/index.ts FunInformatics01Zh out/fun-informatics-01/delivery/fun-informatics-01.zh.mp4 --concurrency=6 --timeout=240000 --offthreadvideo-cache-size-in-bytes=3000000000 && remotion render src/index.ts FunInformatics01En out/fun-informatics-01/delivery/fun-informatics-01.en.mp4 --concurrency=6 --timeout=240000 --offthreadvideo-cache-size-in-bytes=3000000000",
+    "fi01:youtube": "python3 scripts/fun-informatics-01/youtube.py"
   },
   "dependencies": {
     "@remotion/cli": "^4.0.484",
