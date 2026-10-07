@@ -29,9 +29,10 @@ NLT = ("Holy Bible, New Living Translation, copyright © 1996, 2004, 2015 by Tyn
 # YouTube chapters start at the line named here; the first one is always 0:00.
 CHAPTERS = {
     "zh": {
+        "wp00-00": "孩子说“不”，你怎么办？",
         "wp00-01": "谁是教育者？",
         "wp00-04": "学习是拥有，而不是被喂养",
-        "wp01-01": "理念 1 · 权柄",
+        "wp01-00": "理念 1 · 权柄",
         "wp01-12": "Lucas 和 Matthew 的画",
         "wp02-01": "理念 2 · 目标",
         "wp03-01": "理念 3 · 互教互学",
@@ -40,9 +41,10 @@ CHAPTERS = {
         "wp06-01": "全人教育的五个理念",
     },
     "en": {
+        "wp00-00": "Your child says no. Now what?",
         "wp00-01": "Who is an educator?",
         "wp00-04": "Learning is about owning, not being fed",
-        "wp01-01": "Principle 1 · Authority",
+        "wp01-00": "Principle 1 · Authority",
         "wp01-12": "Lucas and Matthew's drawings",
         "wp02-01": "Principle 2 · Purpose",
         "wp03-01": "Principle 3 · Learning from each other",
@@ -54,8 +56,8 @@ CHAPTERS = {
 
 TEXT = {
     "zh": {
-        "title": "我们怎样陪孩子成长：全人教育的五个理念",
-        "body": """谁是教育者？老师、父母、朋友，孩子都可以是教育者。如果你这样想，这个视频，就是给你的。
+        "title": "孩子说“不”，你怎么办？｜全人教育的五个理念",
+        "body": """孩子说“不”，你怎么办？在回答这个问题之前，我们要先回答另一个问题：谁是教育者？老师、父母、朋友，孩子都可以是教育者。如果你这样想，这个视频，就是给你的。
 
 学习是拥有，而不是被喂养。这支短片讲 Lucas Academy 全人教育的五个理念，并配上孩子们在 Lucas Academy 使用和创作的作品：
 · 权柄：当孩子对权柄说“不”，我们带着好奇心问：为什么？——批判性素养（critical literacy）与问题化（problematizing）。我们相信，教育者应该是 authoritative（有权威又温暖），而不是 authoritarian（专制）。
@@ -64,7 +66,7 @@ TEXT = {
 · 引导探索：只比孩子领先一步，让探索充满乐趣；也领先一千步，让旅程安全。（诗篇 119:105）
 · 你来作主：孩子定方向，教育者做孩子的 agent。（创世记 1:28）
 
-📖 全文《全人教育理念的根基》：https://lucasacademy.org/research/whole-person-education
+📖 文章（精简版）《全人教育理念的根基》：https://lucasacademy.org/research/whole-person-education
 🚀 Inception Space 太空博物馆：https://is.lucasacademy.org
 🌉 语言的桥：https://lang.lucasacademy.org
 🐍 Snake-Lab 公开排行榜：https://lucasacademy.org/challenge
@@ -89,8 +91,8 @@ TEXT = {
 · 公开范围：由你决定""",
     },
     "en": {
-        "title": "How We Grow Alongside Our Kids: Five Principles of Whole-Person Education",
-        "body": """Who is an educator? Teachers, parents, friends, and kids can all be educators. If you see it that way, this video is for you.
+        "title": "Your Child Says “No.” Now What? | Five Principles of Whole-Person Education",
+        "body": """Your child says no. Now what? Before we answer that, we need to answer another question first: who is an educator? Teachers, parents, friends, and kids can all be educators. If you see it that way, this video is for you.
 
 Learning is about owning, not being fed. This short film walks through Lucas Academy's five principles of whole-person education, alongside things kids use and make at Lucas Academy:
 • Authority: when a child says no to authority, we ask why, with curiosity — critical literacy and problematizing. We believe educators should be authoritative, with both authority and warmth, rather than authoritarian.
@@ -146,7 +148,14 @@ def main() -> None:
         text = TEXT[lang]
         timeline = json.loads((ROOT / f"public/whole-person-01/timeline.{lang}.json").read_text(encoding="utf-8"))
         start = {c["id"]: c["start"] for c in timeline["cues"]}
-        lines = [f"{'0:00' if i == 0 else stamp(start[cue])} {name}" for i, (cue, name) in enumerate(CHAPTERS[lang].items())]
+        lines, last = [], -10.0
+        for i, (cue, name) in enumerate(CHAPTERS[lang].items()):
+            t = 0.0 if i == 0 else start[cue]
+            if t - last < 10:  # YouTube ignores the whole list if two chapters are under 10 s apart
+                print(f"  chapter {name} skipped: {t - last:.1f}s after the previous one")
+                continue
+            lines.append(f"{stamp(t)} {name}")
+            last = t
         description = "\n\n".join([text["body"], f"{text['chapters']}\n" + "\n".join(lines), text["notes"], text["hashtags"]])
         length = stamp(round(timeline["durationSeconds"]))
         content = (

@@ -30,8 +30,9 @@ subtitle or byline on the cover; that belongs inside the film, on its opening ti
 prefers question-form titles, and a short list of options helps.
 
 Example: `VgWhyCover` puts 「梵高为什么 / 画他们？」 and "Why Did Van Gogh Paint Them?" over the
-film's first painting ([VG-WHY-PAINT-THEM.md](./VG-WHY-PAINT-THEM.md)). The covers for the
-whole-person films were made before this rule.
+film's first painting ([VG-WHY-PAINT-THEM.md](./VG-WHY-PAINT-THEM.md)). The re-made whole-person
+films (2026-10-06) follow the rule too: the cover asks 「孩子说“不”，你怎么办？」, and the film opens on the
+same question with Lucas Academy, the film's name and the byline added.
 
 ## Golden Funnel roller coaster
 
