@@ -64,6 +64,11 @@ HOLD = {
 }
 
 
+# One film's own exceptions to HOLD. 「当然是二呀！」 (2026-10-07) made the Chinese it01-02 take 0.335 s shorter,
+# so its hold grew by as much and the rest of the Chinese film kept its timing; the English film is unchanged.
+HOLD_BY_LANG = {"zh": {"it01-02": 1.135}}
+
+
 def listing(sub: str, exts: tuple) -> list:
     d = PUB / sub
     return sorted(str(f.relative_to(d)) for f in d.rglob("*") if f.suffix.lower() in exts) if d.is_dir() else []
@@ -96,7 +101,8 @@ def build(langs: list) -> None:
         for n, c in enumerate(cue_text):
             speech = len(clips[c["id"]]) / RATE
             last_in_section = n + 1 == len(ids) or ids[n + 1][:4] != c["id"][:4]
-            slot = ONSET + speech + GAP + HOLD.get(c["id"], 0) + (SECTION_GAP if last_in_section else 0)
+            hold = HOLD_BY_LANG.get(lang, {}).get(c["id"], HOLD.get(c["id"], 0))
+            slot = ONSET + speech + GAP + hold + (SECTION_GAP if last_in_section else 0)
             cues.append({"id": c["id"], "section": c["section"], "zh": c["zh"], "en": c["en"],
                          "start": round(t, 3), "end": round(t + slot, 3),
                          "speech": {"start": round(t + ONSET, 3), "end": round(t + ONSET + speech, 3)}})

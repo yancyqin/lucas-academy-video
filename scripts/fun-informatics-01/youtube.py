@@ -1,20 +1,25 @@
-"""YouTube title, description (chapters from the timeline), tags and cover for both films.
+"""YouTube title, description (chapters from each film's timeline), tags and cover for both films.
 
     python3 scripts/fun-informatics-01/youtube.py
 
-Writes out/fun-informatics-01/delivery/youtube-description.{zh,en}.txt and
-youtube-cover.{zh,en}.jpg (1280×720, the big-question cover).
+Tags follow README "YouTube tags" (scripts/youtube_tags.py: lowercase, the default set first in the
+hashtag line). Each file has the project's layout: 【标题】, 【简介】 (paste as is, ends in the hashtags),
+【标签】 (the Studio tags field) and 【上传设置】. Writes out/fun-informatics-01/delivery/
+youtube-description.{zh,en}.txt and youtube-cover.{zh,en}.jpg (1280×720, the big-question cover).
 """
 import json
 import re
 import subprocess
 import tempfile
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "out/fun-informatics-01/delivery"
 PUB = ROOT / "public/fun-informatics-01"
 SECTION = re.compile(r"^## (IT\d\d) · (.+)$")
+sys.path.insert(0, str(ROOT / "scripts"))
+from youtube_tags import hashtags, tags  # noqa: E402  (README "YouTube tags": lowercase, the default set)
 
 TEXT = {
     "zh": {
@@ -32,7 +37,18 @@ TEXT = {
             "音乐：Echoes in the Void（Yancy，用 Suno 制作）",
             "配音：AI 合成语音",
         ],
-        "tags": ["信息论", "香农", "比特", "二进制", "1+1", "像素", "分形", "曼德博集合", "计算机原理", "计算机怎么算", "儿童科学", "Lucas Academy"],
+        # after the 9 defaults, at most 6 of the film's own (15 in all); no spaces and no "+" in a hashtag
+        "hashtags": ["趣味信息学", "信息论", "计算机", "香农", "二进制", "像素"],
+        "tags": ["趣味信息学", "信息论", "香农", "比特", "二进制", "1+1", "像素", "分形", "曼德博集合", "计算机原理", "计算机怎么算", "儿童科学"],
+        "paste": "可直接粘贴，约 {n} 字符，YouTube 上限 5000",
+        "upload": """【上传设置 / Upload settings】
+· 视频：fun-informatics-01.zh.mp4（1920×1080，{length}，−16 LUFS）
+· 字幕：fun-informatics-01.zh.zh-Hans.srt（中文），fun-informatics-01.zh.en.srt（英文）
+· 缩略图：youtube-cover.zh.jpg（1280×720）
+· 视频语言：中文（简体）
+· 观众：由你决定；选「专为儿童打造」会关掉评论和个性化广告
+· 修改过或合成的内容：是（合成配音；电路画面由 AI 生成）
+· 类别：教育""",
     },
     "en": {
         "title": "How Does a Computer Add 1 + 1=? | Fun Informatics 1",
@@ -50,8 +66,18 @@ TEXT = {
             "Music: Echoes in the Void (Yancy, made with Suno)",
             "Narration: AI-synthesized voice",
         ],
-        "tags": ["information theory", "Claude Shannon", "bit", "binary", "1+1", "pixels", "fractal", "Mandelbrot set",
-                 "how computers work", "science for kids", "Lucas Academy"],
+        "hashtags": ["funinformatics", "informationtheory", "computerscience", "claudeshannon", "binary", "pixels"],
+        "tags": ["fun informatics", "information theory", "claude shannon", "bits", "binary", "1+1", "pixels", "fractal",
+                 "mandelbrot set", "how computers work", "computer science", "science for kids"],
+        "paste": "paste as is; about {n} characters, YouTube allows 5000",
+        "upload": """【上传设置 / Upload settings】
+· Video: fun-informatics-01.en.mp4 (1920×1080, {length}, −16 LUFS)
+· Subtitles: fun-informatics-01.en.en.srt (English), fun-informatics-01.en.zh-Hans.srt (Chinese)
+· Thumbnail: youtube-cover.en.jpg (1280×720)
+· Video language: English
+· Audience: your call; "Made for kids" turns off comments and personalized ads
+· Altered or synthetic content: yes (synthesized voice; AI-generated circuit pictures)
+· Category: Education""",
     },
 }
 
@@ -77,10 +103,12 @@ def main() -> None:
             first.setdefault(c["section"], c["start"])
         lines = [f"0:00 {names['it00']}"] + [f"{stamp(first[s])} {names[s]}" for s in sorted(first) if s != "it00"]
         t = TEXT[lang]
-        body = "\n".join([t["title"], "", t["lead"], "", t["chapters"], *lines, "", *t["credits"], "", t["byline"],
-                          "", "Tags: " + ", ".join(t["tags"]),
-                          "", "Upload: not made for kids · altered or synthetic content: yes (synthesized voice, AI-generated pictures)"])
-        (OUT / f"youtube-description.{lang}.txt").write_text(body + "\n", encoding="utf-8")
+        description = "\n\n".join([t["lead"], "\n".join([t["chapters"], *lines]), "\n".join(t["credits"]), t["byline"], hashtags(t["hashtags"])])
+        content = (f"【标题 / Title】\n{t['title']}\n\n"
+                   f"【简介 / Description】（{t['paste'].format(n=len(description))}）\n{description}\n\n"
+                   f"【标签 / Tags】\n{tags(t['tags'])}\n\n"
+                   f"{t['upload'].replace('{length}', stamp(round(tl['durationSeconds'])))}\n")
+        (OUT / f"youtube-description.{lang}.txt").write_text(content, encoding="utf-8")
         with tempfile.TemporaryDirectory() as tmp:
             png = Path(tmp) / "cover.png"
             subprocess.run(["npx", "remotion", "still", "src/index.ts", f"FunInformatics01Cover{lang.capitalize()}", str(png), "--log=error"],
