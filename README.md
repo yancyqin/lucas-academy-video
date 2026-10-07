@@ -26,12 +26,24 @@ The owner's rule (2026-10-06): a cover carries **one question and nothing else**
 film's title asked as a question, big in the film's language, with the same question small in
 English when the film also serves English viewers. There is no Lucas Academy name, lesson tag,
 subtitle or byline on the cover; that belongs inside the film, on its opening title card
-("By Lucas Academy Team"). Before designing a cover, agree on the question with the owner. He
+("By Lucas Academy Team", or the authors' names when the owner gives them). Before designing a cover, agree on the question with the owner. He
 prefers question-form titles, and a short list of options helps.
 
 Example: `VgWhyCover` puts 「梵高为什么 / 画他们？」 and "Why Did Van Gogh Paint Them?" over the
 film's first painting ([VG-WHY-PAINT-THEM.md](./VG-WHY-PAINT-THEM.md)). The covers for the
 whole-person films were made before this rule.
+
+## Film endings
+
+The owner's rule (2026-10-07): every film **ends with an open-ended, inviting question**. It is the
+last line spoken, after any easter egg and just before the end card, and it is also shown on screen.
+It has no single right answer: it takes the film's idea into the viewer's own life and invites them
+to keep thinking about it with us, ending on Lucas Academy as the place where we learn and think
+together. Write it into the script with the other lines, so it is voiced and captioned like them.
+
+Example, the redundancy film ([INFORMATION-THEORY-02.md](./INFORMATION-THEORY-02.md)): 「那么，在今天这个
+充满 AI 信息冗余的时代，你怎么分辨哪些是最有用的信息，哪些是噪声呢？这是我们在 Lucas Academy 一起学习、
+一起思考的问题。」
 
 ## Golden Funnel roller coaster
 

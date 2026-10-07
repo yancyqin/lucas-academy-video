@@ -1,4 +1,4 @@
-# Do You Know Claude? 英文配音稿（与 zh-edit.md 同步 · v0.3 · 2026-10-07 · 待 Yancy 审）
+# Do You Know Claude? 英文配音稿（与 zh-edit.md 同步 · v0.4 · 2026-10-07 · 待 Yancy 审）
 
 Introduction to Information Theory ②. By Yancy Qin, Louise Meng | Lucas Academy. Video plan: [INFORMATION-THEORY-02.md](../../INFORMATION-THEORY-02.md).
 
@@ -214,3 +214,10 @@ Section tone:
   > 1916 年到 1918 年，三位人类 Claude 同时活在这个世界上：一个在画画，一个在作曲，一个刚出生。
 - cl06-06 | By the way, it was the third Claude who brought up the fourth while writing this script. See? Saying a little more can pay off sometimes.
   > 说起来，这第四个 Claude，是第三个 Claude 写稿的时候提起来的。你看，多说一句，有时候也有好处。
+
+## CL07 · The closing question
+
+Section tone: 
+
+- cl07-01 | So, in a time so full of AI and so full of redundancy, how do you tell the most useful information from the noise? That's what we learn and think about together, at Lucas Academy.
+  > 那么，在今天这个充满 AI 信息冗余的时代，你怎么分辨，哪些是最有用的信息，哪些是噪声呢？这是我们在 Lucas Academy 一起学习、一起思考的问题。
