@@ -1,6 +1,6 @@
 # 你认识 Claude 吗？中文配音稿（v0.4 · 2026-10-07 · 待 Yancy 审）
 
-信息论导论 ②。作者 Yancy Qin, Louise Meng | Lucas Academy。视频方案见 [INFORMATION-THEORY-02.md](../../INFORMATION-THEORY-02.md)。
+趣味信息学2（Fun Informatics 2）。作者 Yancy Qin, Louise Yang | Lucas Academy。视频方案见 [FUN-INFORMATICS-02.md](../../FUN-INFORMATICS-02.md)。
 
 一句话主线：**冗余，就是你能猜到的那部分。** 莫奈把它去掉，香农把它量出来，第三个 Claude 从它身上学会了说话，也提醒我们：通顺不等于对。
 最后的彩蛋是第四个 Claude：德彪西，他在音乐里也去掉了你猜得到的部分。
@@ -8,7 +8,7 @@
 v0.4（Yancy 2026-10-07）：全片最后加一个开放、邀请式的问题 cl07-01，放在德彪西彩蛋之后、结束卡之前；这是项目的默认标准，见 README 的 Film endings。
 
 v0.3 改了什么（Yancy 2026-10-07）：
-- 片名改为「你认识 Claude 吗？」；署名「作者 Yancy Qin, Louise Meng | Lucas Academy」。
+- 片名改为「你认识 Claude 吗？」；署名「作者 Yancy Qin, Louise Yang | Lucas Academy」。
 - 莫奈段加了 cl02-11、cl02-12：把身边的景色变成莫奈风（Codex 生成的实景和莫奈风成对出现），后面的编号顺延。
 - 德彪西彩蛋要，扩成单独一段 CL06：背景音乐全用德彪西的曲子，他在音乐里也去掉你猜得到的部分；最后一句：第四个 Claude 是第三个 Claude 想起来的，多说一句也有好处。
 - 陌生经文用箴言 25:11；声音继续用 Louise；两个游戏已经上线。

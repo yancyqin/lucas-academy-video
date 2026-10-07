@@ -41,7 +41,7 @@ It has no single right answer: it takes the film's idea into the viewer's own li
 to keep thinking about it with us, ending on Lucas Academy as the place where we learn and think
 together. Write it into the script with the other lines, so it is voiced and captioned like them.
 
-Example, the redundancy film ([INFORMATION-THEORY-02.md](./INFORMATION-THEORY-02.md)): 「那么，在今天这个
+Example, the redundancy film ([FUN-INFORMATICS-02.md](./FUN-INFORMATICS-02.md)): 「那么，在今天这个
 充满 AI 信息冗余的时代，你怎么分辨哪些是最有用的信息，哪些是噪声呢？这是我们在 Lucas Academy 一起学习、
 一起思考的问题。」
 

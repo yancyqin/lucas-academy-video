@@ -1,6 +1,6 @@
 # Do You Know Claude? 英文配音稿（与 zh-edit.md 同步 · v0.4 · 2026-10-07 · 待 Yancy 审）
 
-Introduction to Information Theory ②. By Yancy Qin, Louise Meng | Lucas Academy. Video plan: [INFORMATION-THEORY-02.md](../../INFORMATION-THEORY-02.md).
+Fun Informatics 2. By Yancy Qin, Louise Yang | Lucas Academy. Video plan: [FUN-INFORMATICS-02.md](../../FUN-INFORMATICS-02.md).
 
 写法与中文稿相同：`<strong>…</strong>` 是强调，字幕里自动去掉；每句下面 `>` 开头的是对应的中文，只作对照，不会读出来。
 

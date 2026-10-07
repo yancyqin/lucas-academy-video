@@ -1,30 +1,30 @@
 # 你认识 Claude 吗？ / Do You Know Claude?
 
-信息论导论 ②。作者 Yancy Qin, Louise Meng | Lucas Academy。
+**Fun Informatics 2 · 趣味信息学2**（系列原名「信息论导论」，2026-10-07 改成 Fun Informatics / 趣味信息学）。作者 Yancy Qin, Louise Yang | Lucas Academy。
 
-第一集「电脑怎么算 1+1=？」讲到：信息，是你猜不到的那部分。这一集讲它的另一面：**冗余，就是你能猜到的那部分。**
+第一集「计算机怎么算 1+1=？」讲到：信息，是你猜不到的那部分。这一集讲它的另一面：**冗余，就是你能猜到的那部分。**
 几个都叫 Claude 的主角，各自对冗余做了一件事：莫奈把它去掉，香农把它量出来，第三个 Claude（AI）从它身上学会了说话，
 也提醒我们通顺不等于对。片尾彩蛋是第四个 Claude：德彪西，他在音乐里也去掉了你猜得到的部分。
 
-配音稿：[docs/information-theory-02/zh-edit.md](docs/information-theory-02/zh-edit.md) ·
-[docs/information-theory-02/en-edit.md](docs/information-theory-02/en-edit.md)。v0.4，84 句，中文约 2,450 字，语音约 10.5 分钟，
+配音稿：[docs/fun-informatics-02/zh-edit.md](docs/fun-informatics-02/zh-edit.md) ·
+[docs/fun-informatics-02/en-edit.md](docs/fun-informatics-02/en-edit.md)。v0.4，84 句，中文约 2,450 字，语音约 10.5 分钟，
 加上画面和停顿，成片估计 12 到 13 分钟。**文案和方案已定（2026-10-07），下一步是制作。**
 
 ## 0. 新会话从这里开始
 
 1. 读这份文件和两份配音稿。文案已经过 Yancy 审，制作中只改读法（SPOKEN），不改字。
-2. **先把第一集的代码合进 main**：第一集的配音、核对、重配、时间线、分段渲染、YouTube 脚本和 Remotion 合成，
-   都还在分支 `claude/information-theory-video-plan-d0f6c2` 的工作区里，没有提交（`scripts/information-theory-01/`、
-   `src/videos/information-theory-01/`、`INFORMATION-THEORY-01.md` 等）。第二集复用它们，最好改成按集传参数，不要再复制一份。
-3. 请 Yancy 用 Codex 生成第 4 节列出的图，放进 `public/information-theory-02/images/`。
+2. **先把第一集的代码合进 main**：第一集的配音、核对、重配、时间线、分段渲染、YouTube 脚本和 Remotion 合成
+   在 PR #18（分支 `claude/information-theory-video-plan-d0f6c2`）：`scripts/fun-informatics-01/`、
+   `src/videos/fun-informatics-01/`、`FUN-INFORMATICS-01.md` 等。第二集复用它们，最好改成按集传参数，不要再复制一份。
+3. 请 Yancy 用 Codex 生成第 4 节列出的图，放进 `public/fun-informatics-02/images/`。
 4. 下载画作和照片、找德彪西的录音（第 4 节），录 Bible 游戏（第 4 节）。
 5. 配音（Louise，中英文）→ Whisper 逐句核对、重配 → 时间线和混音 → 合成 → 分段渲染 → 扫黑帧、量响度 → YouTube 描述和封面。
-   第一集踩过的坑都写在 `INFORMATION-THEORY-01.md` 的 5.1 和 5.4 节。
+   第一集踩过的坑都写在 `FUN-INFORMATICS-01.md` 的 5.1 和 5.4 节。
 
 ## 1. 已定的事（Yancy，2026-10-07）
 
 - **片名**：「你认识 Claude 吗？」/ "Do You Know Claude?"。封面只放这个问句。
-- **署名**：片头片名卡和结束卡写「作者 Yancy Qin, Louise Meng | Lucas Academy」，英文版 "By Yancy Qin, Louise Meng | Lucas Academy"。封面不放署名。
+- **署名**：片头片名卡和结束卡写「作者 Yancy Qin, Louise Yang | Lucas Academy」，英文版 "By Yancy Qin, Louise Yang | Lucas Academy"。封面不放署名。
 - **旁白反转**：前面正常讲故事；cl04-01 揭晓「你现在听到的这段话，就是第三个 Claude 写的」，cl04-03「下面这段，就让他自己来说」，
   之后 Claude 用第一人称说话，画面上是一个标着 Claude 的对话框，字一句句打出来。YouTube 描述写明：文案与 Claude 合作完成，配音为 AI 合成。
 - **两个游戏**已经上线 bible.lucasacademy.org（lucas-academy-bible PR #3）：「猜字」（Guess Letters）是香农的实验，放在香农那段；
@@ -63,7 +63,7 @@
 | cl00-04 | 再来一个。这句话被挖掉了几个字，你还读得出来吗？ | 卡片 `blanks`：「小明背着书＿去上学，路＿看见一只小＿。」三个空在闪；背景是这句话的莫奈风画面，调暗 | 卡 ＋ images/schoolbag-cat-monet |
 | cl00-05 | 前两个空，你一定猜得中：书包，路上。最后一个呢？可能是小猫，可能是小狗，也可能是小鸟。 | 前两个空依次填上「包」「上」；第三个空轮流闪过 猫、狗、鸟 | 同上 |
 | cl00-06 | 猜得中的那部分，有个名字，叫**冗余**。猜不中的那部分，才是**信息**。 | 卡片两栏：猜得中＝冗余（青色）｜猜不中＝信息（金色） | 卡 |
-| cl00-07 | 今天这一集的主角，都叫 Claude。他们做的，其实是同一件事。你认识 Claude 吗？认识几个？ | 一排名字卡翻起：Claude、Claude、Claude……都只露出名字；接片名卡「你认识 Claude 吗？」＋「作者 Yancy Qin, Louise Meng ｜ Lucas Academy」 | 卡 |
+| cl00-07 | 今天这一集的主角，都叫 Claude。他们做的，其实是同一件事。你认识 Claude 吗？认识几个？ | 一排名字卡翻起：Claude、Claude、Claude……都只露出名字；接片名卡「你认识 Claude 吗？」＋「作者 Yancy Qin, Louise Yang ｜ Lucas Academy」 | 卡 |
 
 ### CL01 · 三个 Claude
 
@@ -179,7 +179,7 @@
 
 ## 4. 素材
 
-### 莫奈的画、老照片（`public/information-theory-02/art/`，不提交）
+### 莫奈的画、老照片（`public/fun-informatics-02/art/`，不提交）
 
 全部是公有领域。博物馆开放图片优先，下载时把每张的来源页、馆藏号、尺寸、sha256 记进 `art/SOURCES.txt`（梵高那部片的做法）。
 
@@ -197,7 +197,7 @@
 不用的：香农的照片。维基共享资源上常见的那张是 CC BY-SA，放进片子会让整部片落到 ShareAlike 许可下（语言的桥那部片在音乐上避开过同一个问题）。
 香农用名牌卡加莫奈风的剪影；以后拿到许可合适的照片再换。
 
-### Codex 生成：实景 → 莫奈风（`public/information-theory-02/images/`）
+### Codex 生成：实景 → 莫奈风（`public/fun-informatics-02/images/`）
 
 成对的图先生成实景，再把实景当参考图，让它重画成莫奈风；两张构图一致，片里才能溶过去。片里每张角上注明「AI 生成」，日本桥写「AI 还原」。
 
@@ -227,10 +227,10 @@ Keep the same composition, viewpoint and lighting so the two images line up. No 
 | `apple-for-her-monet` | In a sunny garden, a mother hands a red apple to a young girl, both seen from the side at a distance, faces not detailed. 只要莫奈风。 | cl04-09 到 cl04-11 |
 | `moonlit-water-photo` / `moonlit-water-monet` | A calm lake under a full moon at night, the moonlight making a silver path on the water, dark trees on the shore. | cl06-03 |
 
-### Bible 应用录屏（`public/information-theory-02/footage/`）
+### Bible 应用录屏（`public/fun-informatics-02/footage/`）
 
 - **从线上录**：bible.lucasacademy.org 已经有这两个游戏（2026-10-07 查过线上的包）。和合本、WEB 都是公有领域。
-- **录法**：照第一集 `record-room.cjs` 的路子写 `scripts/information-theory-02/record-bible.cjs`，Playwright 开 1280×720、1.5 倍像素，
+- **录法**：照第一集 `record-room.cjs` 的路子写 `scripts/fun-informatics-02/record-bible.cjs`，Playwright 开 1280×720、1.5 倍像素，
   画面 1920×1080。用链接直接进游戏，选项用键盘 1–4 选：
   - 「背熟的人」：每一步读出四个选项，直接选对的那个，全是一次猜中。
   - 「第一次读的人」：按固定种子随机选，选错就再选，直到选对，结束画面的颜色就真实地分散开。
