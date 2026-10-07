@@ -19,6 +19,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "out/whole-person-01/delivery"
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "scripts"))
+from youtube_tags import hashtags, tags  # noqa: E402  (README "YouTube tags": lowercase, the default set)
 COMPOSITION = {"zh": "WholePersonCoverZh", "en": "WholePersonCoverEn"}  # WholePersonCover: needs footage/transit-chamber.mp4
 
 NIV = ("The Holy Bible, New International Version® NIV® Copyright © 1973, 1978, 1984, 2011 by Biblica, Inc.® "
@@ -79,8 +81,8 @@ TEXT = {
 · 背景音乐：《Echoes in the Void》，Yancy 用 Suno 创作（Inception Space「Journey of Art」房间配乐）。
 · 爱因斯坦引用：《论教育》（On Education，1936）。
 · 中文经文：和合本。画面中的英文经文：{NIV} 以弗所书 2:10 英文：{NLT}""",
-        "hashtags": "#全人教育 #基督教教育 #亲子教育 #批判性素养 #LucasAcademy",
-        "tags": "全人教育, 基督教教育, 亲子教育, 家长, 教育理念, 批判性素养, 问题化, 引导探索, Inception Space, Art Lab, 语言的桥, Snake-Lab, Lucas Academy",
+        "hashtags": hashtags(["全人教育", "基督教教育", "亲子教育", "批判性素养"]),
+        "tags": tags(["全人教育", "基督教教育", "亲子教育", "家长", "教育理念", "批判性素养", "问题化", "引导探索", "inception space", "art lab", "语言的桥", "snake-lab"]),
         "upload": """【上传设置 / Upload settings】
 · 视频：whole-person-five-principles.zh.mp4（1920×1080，{length}，−16 LUFS）
 · 缩略图：youtube-thumbnail.zh.jpg（1280×720）
@@ -114,8 +116,8 @@ Learning is about owning, not being fed. This short film walks through Lucas Aca
 • Music: "Echoes in the Void", made by Yancy with Suno (the Journey of Art room in Inception Space).
 • Einstein quotation: "On Education" (1936).
 • Scripture quotations marked NIV are taken from {NIV} Ephesians 2:10 is taken from the {NLT}""",
-        "hashtags": "#WholePersonEducation #ChristianEducation #Parenting #CriticalLiteracy #LucasAcademy",
-        "tags": "whole-person education, Christian education, parenting, educators, critical literacy, problematizing, guided discovery, Inception Space, Art Lab, Language Bridge, Snake-Lab, Lucas Academy",
+        "hashtags": hashtags(["wholepersoneducation", "criticalliteracy"]),
+        "tags": tags(["whole-person education", "christian education", "educators", "critical literacy", "problematizing", "guided discovery", "inception space", "art lab", "language bridge", "snake-lab"]),
         "upload": """【上传设置 / Upload settings】
 · Video: whole-person-five-principles.en.mp4 (1920×1080, {length}, −16 LUFS)
 · Thumbnail: youtube-thumbnail.en.jpg (1280×720)

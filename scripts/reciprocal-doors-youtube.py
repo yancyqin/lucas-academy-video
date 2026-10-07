@@ -11,11 +11,14 @@ from __future__ import annotations
 
 import ast
 import json
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "out/reciprocal-doors/delivery"
 MEDIA = ROOT.parent / "lucas-academy-media"
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
+from youtube_tags import hashtags, tags  # noqa: E402  (README "YouTube tags": lowercase, the default set)
 
 # The music credit (CC BY 3.0 asks for it with every upload) lives with the mix;
 # read it from the source, so this runs without the mix's numpy / soundfile.
@@ -74,8 +77,8 @@ TEXT = {
 · 插画为概念示意（AI 生成）。旁白为合成的朗读声音（CosyVoice）。
 · 背景音乐：{music}
 · 产品画面中的英文经文：The Holy Bible, New International Version® NIV® Copyright © 1973, 1978, 1984, 2011 by Biblica, Inc.® Used by permission. All rights reserved worldwide. 中文经文来源：YouVersion。""",
-        "hashtags": "#双语教育 #中英双语 #阅读障碍 #语言学习 #LucasAcademy",
-        "tags": "双语教育, 中英双语, 中文学习, 英文学习, 阅读障碍, 亲子共学, 儿童教育, 语言学习, 语言的桥, Lucas Academy",
+        "hashtags": hashtags(["双语教育", "中英双语", "阅读障碍", "语言学习"]),
+        "tags": tags(["双语教育", "中英双语", "中文学习", "英文学习", "阅读障碍", "亲子共学", "儿童教育", "语言学习", "语言的桥"]),
     },
     "en": {
         "title": "Language Bridge: You Teach Me, I Teach You",
@@ -98,8 +101,8 @@ In this short film, two fictional children, Mary and Jacob, show the idea:
 • Illustrations are concept art (AI-generated). Narration: synthesized reading voices (CosyVoice).
 • Music: {music}
 • English Scripture in the product screens: The Holy Bible, New International Version® NIV® Copyright © 1973, 1978, 1984, 2011 by Biblica, Inc.® Used by permission. All rights reserved worldwide. Chinese Scripture source: YouVersion.""",
-        "hashtags": "#BilingualKids #LearningChinese #Dyslexia #LanguageLearning #LucasAcademy",
-        "tags": "bilingual kids, learning Chinese, learning English, dyslexia, reading support, parents and children, language learning, Language Bridge, Lucas Academy",
+        "hashtags": hashtags(["bilingualkids", "learningchinese", "dyslexia", "languagelearning"]),
+        "tags": tags(["bilingual kids", "learning chinese", "learning english", "dyslexia", "reading support", "parents and children", "language learning", "language bridge"]),
     },
 }
 
