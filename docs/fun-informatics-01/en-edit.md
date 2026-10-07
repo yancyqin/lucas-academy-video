@@ -7,7 +7,7 @@ Voice: `louise/en`.
 Overall tone: Please speak in a curious, unhurried voice, like discovering something together with a child.
 Overall speed: 1.0
 
-## IT00 · 开场：计算机的图像能无限放大吗？
+## IT00 · Opening: Can a computer picture be zoomed in forever?
 
 Section tone: 
 
@@ -22,7 +22,7 @@ Section tone:
 - it00-05 | Is that really so? Let's put that question aside for a moment.
   > 真的是这样吗？先把这个问题放一放。
 
-## IT01 · 引子：计算机怎么算 1+1？
+## IT01 · The question: How does a computer add 1 + 1?
 
 Section tone: 
 
@@ -41,7 +41,7 @@ Section tone:
 - it01-07 | This is the Pixel Science Room, in the Lucas Academy space museum. It was built for exactly these two questions.
   > 这是 Lucas Academy 太空博物馆里的「像素科学室」。它就是为这两个问题造的。
 
-## IT02 · 两个状态，一个比特
+## IT02 · Two states, one bit
 
 Section tone: 
 
@@ -58,7 +58,7 @@ Section tone:
 - it02-06 | Like the light switch at home: either off, or on. Those tiny switches inside a computer hold bits.
   > 就像家里的电灯开关：不是关，就是开。计算机里那些小开关，记的就是比特。
 
-## IT03 · 只用两个符号数数
+## IT03 · Counting with only two symbols
 
 Section tone: 
 
@@ -79,7 +79,7 @@ Section tone:
 - it03-08 | Add 1 more, carry twice, and it's 0100. That's 4.
   > 再加 1，连着进两位，就是 0100，也就是 4。
 
-## IT04 · 开关怎么相加：1+1=10
+## IT04 · How switches add: 1 + 1 = 10
 
 Section tone: 
 
@@ -102,7 +102,7 @@ Section tone:
 - it04-09 | Keep adding 1, sixty-five times, and eight switches read 01000001. That is 65.
   > 就这样一直加 1，加到第 65 次，八个开关排成了 01000001，它就是 65。
 
-## IT05 · 换一条规则，数字变字母
+## IT05 · A new rule turns numbers into letters
 
 Section tone: 
 
@@ -117,7 +117,7 @@ Section tone:
 - it05-05 | A few more groups of bits, read by the same table: H, E, L, L, O. For the first time, the information <strong>speaks</strong>.
   > 再来几组比特，按同一张表读：H、E、L、L、O。信息第一次<strong>开口说话</strong>了。
 
-## IT06 · 像素：最小单元，排列才是图画
+## IT06 · Pixels: the smallest unit, and the arrangement is the picture
 
 Section tone: 
 
@@ -144,7 +144,7 @@ Section tone:
 - it06-11 | Nothing was added. The same pixels, under a different rule, make a different shape.
   > 什么都没有加。同样的像素，换一条规则，就换一个形状。
 
-## IT07 · 回答第一个问题：有最小单元，无限是算出来的
+## IT07 · The first question answered: a smallest unit, and “infinite” is computed
 
 Section tone: 
 
@@ -171,7 +171,7 @@ Section tone:
 - it07-11 | Besides a colour, what else can a computed number become?
   > 算出来的数，除了颜色，还能变成什么？
 
-## IT08 · 同一串 0 和 1，五种意思
+## IT08 · One string of 0s and 1s, five meanings
 
 Section tone: 
 
@@ -188,7 +188,7 @@ Section tone:
 - it08-06 | The wall says it: a code gives bits meaning. Two symbols, many worlds.
   > 墙上写着：规则给比特意义。两个符号，许多世界。
 
-## IT09 · 游戏怎么做：规则加数字
+## IT09 · How games are made: rules plus numbers
 
 Section tone: 
 
@@ -211,7 +211,7 @@ Section tone:
 - it09-09 | <strong>The infinity is not in the picture. It is in the rule.</strong> The picture is finite every time.
   > <strong>无限不在图里，在规则里。</strong>图，每次都是有限的。
 
-## IT10 · 香农的尺子：信息 = 要问几个问题
+## IT10 · Shannon's ruler: information = how many questions you ask
 
 Section tone: 
 
@@ -238,7 +238,7 @@ Section tone:
 - it10-11 | That is Shannon's ruler. Information isn't how much was said. It's how much you <strong>still have to ask</strong>. Words, pictures, sound or a game: all measured with the same ruler.
   > 这就是香农的尺子：信息不是说了多少，是你<strong>还得问多少</strong>。不管装的是字、图、声音还是棋，都用这一把尺子量。
 
-## IT11 · 回到两个问题
+## IT11 · Back to our two questions
 
 Section tone: 
 
