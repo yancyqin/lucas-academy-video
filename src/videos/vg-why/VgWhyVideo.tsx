@@ -472,22 +472,36 @@ const FadeIn: FC<{frames: number; children: ReactNode}> = ({frames, children}) =
 
 /**
  * The YouTube cover (owner 2026-10-06): the film's first picture, Postman Roulin
- * (Detroit), and only the question — big in Chinese, small in English. No brand or
- * byline here; that lives inside the film (see README, "YouTube covers").
+ * (Detroit), and only the question, big in one language and small in the other.
+ * `VgWhyCover` is the Chinese cover (English line under it); `VgWhyCoverEn` flips it
+ * (2026-10-07). 他们 / Them is the gold word in both. No brand or byline here; that
+ * lives inside the film (see README, "YouTube covers").
  */
-export const VgWhyCover: FC = () => (
-  <AbsoluteFill style={{background: BG}}>
-    <Img src={artSrc('roulin')} style={{position: 'absolute', left: -60, top: -60, width: 2040, height: 1200, objectFit: 'cover',
-      filter: 'blur(30px) brightness(0.42)'}} />
-    <AbsoluteFill style={{background: 'linear-gradient(90deg, rgba(20,17,13,0.94) 0%, rgba(20,17,13,0.78) 42%, rgba(20,17,13,0.15) 78%)'}} />
-    <Img src={artSrc('roulin')} style={{position: 'absolute', right: 110, top: 80, height: 920, boxShadow: '0 30px 80px rgba(0,0,0,0.6)'}} />
-    <div style={{position: 'absolute', left: 120, top: 0, bottom: 0, width: 960, display: 'flex', flexDirection: 'column',
-      justifyContent: 'center', color: INK}}>
-      <div style={{fontFamily: ZH_FONT, fontSize: 180, fontWeight: 800, lineHeight: 1.14}}>梵高为什么</div>
-      <div style={{fontFamily: ZH_FONT, fontSize: 180, fontWeight: 800, lineHeight: 1.14}}>
-        画<span style={{color: GOLD}}>他们</span>？
+export const VgWhyCover: FC<{lang?: 'zh' | 'en'}> = ({lang = 'zh'}) => {
+  const title = (fontFamily: string, fontSize: number, lineHeight: number) => ({fontFamily, fontSize, fontWeight: 800, lineHeight});
+  return (
+    <AbsoluteFill style={{background: BG}}>
+      <Img src={artSrc('roulin')} style={{position: 'absolute', left: -60, top: -60, width: 2040, height: 1200, objectFit: 'cover',
+        filter: 'blur(30px) brightness(0.42)'}} />
+      <AbsoluteFill style={{background: 'linear-gradient(90deg, rgba(20,17,13,0.94) 0%, rgba(20,17,13,0.78) 42%, rgba(20,17,13,0.15) 78%)'}} />
+      <Img src={artSrc('roulin')} style={{position: 'absolute', right: 110, top: 80, height: 920, boxShadow: '0 30px 80px rgba(0,0,0,0.6)'}} />
+      <div style={{position: 'absolute', left: 120, top: 0, bottom: 0, width: 960, display: 'flex', flexDirection: 'column',
+        justifyContent: 'center', color: INK}}>
+        {lang === 'en' ? (
+          <>
+            <div style={title(EN_FONT, 144, 1.08)}>Why Did</div>
+            <div style={title(EN_FONT, 144, 1.08)}>Van Gogh</div>
+            <div style={title(EN_FONT, 144, 1.08)}>Paint <span style={{color: GOLD}}>Them</span>?</div>
+            <div style={{fontFamily: SERIF, fontSize: 56, marginTop: 44, opacity: 0.92}}>梵高为什么画他们？</div>
+          </>
+        ) : (
+          <>
+            <div style={title(ZH_FONT, 180, 1.14)}>梵高为什么</div>
+            <div style={title(ZH_FONT, 180, 1.14)}>画<span style={{color: GOLD}}>他们</span>？</div>
+            <div style={{fontFamily: SERIF, fontSize: 56, fontStyle: 'italic', marginTop: 40, opacity: 0.92}}>Why Did Van Gogh Paint Them?</div>
+          </>
+        )}
       </div>
-      <div style={{fontFamily: SERIF, fontSize: 56, fontStyle: 'italic', marginTop: 40, opacity: 0.92}}>Why Did Van Gogh Paint Them?</div>
-    </div>
-  </AbsoluteFill>
-);
+    </AbsoluteFill>
+  );
+};
