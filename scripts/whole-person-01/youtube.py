@@ -66,7 +66,7 @@ TEXT = {
 · 引导探索：只比孩子领先一步，让探索充满乐趣；也领先一千步，让旅程安全。（诗篇 119:105）
 · 你来作主：孩子定方向，教育者做孩子的 agent。（创世记 1:28）
 
-📖 全文《全人教育理念的根基》：https://lucasacademy.org/research/whole-person-education
+📖 文章（精简版）《全人教育理念的根基》：https://lucasacademy.org/research/whole-person-education
 🚀 Inception Space 太空博物馆：https://is.lucasacademy.org
 🌉 语言的桥：https://lang.lucasacademy.org
 🐍 Snake-Lab 公开排行榜：https://lucasacademy.org/challenge
