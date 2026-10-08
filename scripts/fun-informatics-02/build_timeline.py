@@ -218,7 +218,11 @@ def mix_feedback(tl):
     premix=shared.PUB / "audio/zh.feedback-premix.wav"
     subprocess.run(["ffmpeg","-v","error","-y","-i",str(base),"-f","f32le","-ar",str(rate),"-ac","2","-i",str(sfx),"-filter_complex","[0:a][1:a]amix=inputs=2:normalize=0", "-c:a","pcm_s16le",str(premix)],check=True)
     gain=shared.wp.FILM_LUFS-shared.wp.loudness("-i",str(premix))
-    subprocess.run(["ffmpeg","-v","error","-y","-i",str(premix),"-af",f"volume={gain:.3f}dB,alimiter=limit={10**(shared.wp.PEAK_DB/20):.4f}:level=false:latency=true",str(base)],check=True)
+    limited=shared.PUB / "audio/zh.peak-limited.wav"
+    subprocess.run(["ffmpeg","-v","error","-y","-i",str(premix),"-af",f"volume={gain:.3f}dB,aresample=192000,alimiter=limit=0.7079:level=false:latency=true,aresample=48000",str(limited)],check=True)
+    makeup=min(.6,shared.wp.FILM_LUFS-shared.wp.loudness("-i",str(limited)))
+    subprocess.run(["ffmpeg","-v","error","-y","-i",str(limited),"-af",f"volume={makeup:.3f}dB",str(base)],check=True)
+    limited.unlink()
     premix.unlink();sfx.unlink()
 
 

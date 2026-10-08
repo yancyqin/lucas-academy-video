@@ -2,6 +2,7 @@
 import hashlib
 import json
 import shutil
+import sys
 from datetime import datetime
 from pathlib import Path
 
@@ -10,6 +11,9 @@ PUB=ROOT / "public/fun-informatics-02"
 OUT=ROOT / "out/fun-informatics-02"
 DELIVERY=OUT / "delivery"
 DEST=Path.home() / "Desktop/你认识Claude吗-上传"
+sys.path.insert(0,str(ROOT / "scripts"))
+from youtube_tags import hashtags, tags
+TOPICS=["趣味信息学","信息论","claude","莫奈","香农","德彪西"]
 
 
 def stamp(seconds):
@@ -29,9 +33,8 @@ def main():
         chapters.append(f"{'00:00' if prefix=='cl00' else stamp(cue['start'])} {title}")
     sources=json.loads((ROOT / "docs/fun-informatics-02/assets.json").read_text())["assets"]
     source_text="\n".join(f"- {a['title']}：{a['source']}（{a['license']}）" for a in sources)
-    description=f'''你认识 Claude 吗？｜趣味信息学2 Fun Informatics 2
-
-冗余，就是你能猜到的那部分。
+    title="你认识 Claude 吗？｜趣味信息学2 Fun Informatics 2"
+    description=f'''冗余，就是你能猜到的那部分。
 从莫奈的睡莲，到香农的猜字母，再到 Claude 的语言模型：几个同名的朋友，带我们看看什么可以去掉，什么值得保留。
 
 作者 Yancy Qin, Louise Yang | Lucas Academy
@@ -65,9 +68,27 @@ https://arxiv.org/abs/1706.03762
 那么，在今天这个充满 AI 信息冗余的时代，你怎么分辨，这里面，有多少是新的呢？有多少是真的呢？什么是重要的呢？什么是可以忽略的呢？
 这也是我们在 Lucas Academy 一起学习、一起思考的问题。
 
-#LucasAcademy #趣味信息学 #Claude #莫奈 #香农 #德彪西 #信息论
+{hashtags(TOPICS)}
 '''
-    text=DELIVERY / "upload.zh.txt";text.write_text(description)
+    assert len(description)<=5000, len(description)
+    content=f'''【标题 / Title】
+{title}
+
+【简介 / Description】（可直接粘贴，{len(description)} 字符）
+{description}
+【标签 / Tags】
+{tags(TOPICS)}
+
+【上传设置 / Upload settings】
+· 视频：你认识Claude吗-中文版.mp4（1920×1080，{stamp(round(tl['durationSeconds']))}，−16 LUFS）
+· 字幕：你认识Claude吗-中文字幕.srt、你认识Claude吗-English.srt
+· 缩略图：你认识Claude吗-封面.jpg（1920×1080）
+· 视频语言：中文（简体）
+· 观众：由作者选择
+· 修改过或合成的内容：是（合成配音；AI 配图）
+· 类别：教育
+'''
+    text=DELIVERY / "upload.zh.txt";text.write_text(content)
     files={film:"你认识Claude吗-中文版.mp4",DELIVERY / "fun-informatics-02.zh.zh-Hans.srt":"你认识Claude吗-中文字幕.srt",DELIVERY / "fun-informatics-02.zh.en.srt":"你认识Claude吗-English.srt",DELIVERY / "cover.zh.jpg":"你认识Claude吗-封面.jpg",text:"你认识Claude吗-上传描述.txt"}
     assert files and all(p.is_file() for p in files)
     assert (DELIVERY / "cover.zh.jpg").stat().st_size<2_000_000

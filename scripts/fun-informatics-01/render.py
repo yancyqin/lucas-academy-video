@@ -19,6 +19,8 @@ OUT = ROOT / "out/fun-informatics-01/delivery"
 FILM_NAME = "fun-informatics-01"
 COMP_PREFIX = "FunInformatics01"
 LANGS = ("zh", "en")
+AUDIO_CODEC = "aac"
+SHORTEST = True
 
 
 def render(comp: str, out: Path, frames: str, concurrency: int) -> bool:
@@ -56,7 +58,7 @@ def main() -> None:
     film = OUT / f"{FILM_NAME}.{args.lang}.mp4"
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "concat", "-safe", "0", "-i", str(listing),
                     "-i", str(PUB / f"audio/{args.lang}.mix.wav"), "-map", "0:v:0", "-map", "1:a:0",
-                    "-c:v", "copy", "-c:a", "aac", "-b:a", "320k", "-shortest", "-movflags", "+faststart", str(film)], check=True)
+                    "-c:v", "copy", "-c:a", AUDIO_CODEC, "-b:a", "320k", *(["-shortest"] if SHORTEST else []), "-movflags", "+faststart", str(film)], check=True)
     got = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(film)],
                                capture_output=True, text=True, check=True).stdout)
     print(f"{film.name}: {got:.1f}s (timeline {tl['durationSeconds']:.1f}s)", flush=True)

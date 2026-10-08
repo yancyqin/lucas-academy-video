@@ -24,6 +24,10 @@
 2026-10-07 接手检查：两份配音稿和分镜均为 84 句，编号、顺序、中文台词及英文稿里的中文对照完全一致。
 制作时的例子和简化边界见 [production-check.md](docs/fun-informatics-02/production-check.md)。
 
+2026-10-08：中文版已制作完成并交付到桌面「你认识Claude吗-上传」。1080p／30 fps，14 分 12 秒，配中英文外挂字幕、封面和上传说明。
+全部 84 句已核对，92 张抽帧已检查，最终编码零黑帧、−16.0 LUFS、−2.2 dBTP；英文配音继续暂缓。
+质量记录见 [delivery-check.json](docs/fun-informatics-02/delivery-check.json)。
+
 ## 1. 已定的事（Yancy，2026-10-07）
 
 - **片名**：「你认识 Claude 吗？」/ "Do You Know Claude?"。封面只放这个问句。
@@ -331,6 +335,31 @@ cl04-16 的柱状图表示候选概率，避免画成每次都必须选最高的
 4. 时间线保留 cl04-05 的 12–18 秒游玩停顿，再合成、抽帧检查（每句一帧）、渲染、扫黑帧（YMAX < 12 的帧应为 0）、量响度。最后一句一定是 cl07-01 那个开放的问题，问句停留到读完再接结束卡。
 5. 封面按「新的封面标准」：两行大字问句「你认识 / Claude 吗？」，Claude 用强调色；背景用一幅莫奈的睡莲；中文版下面一行小英文，英文版反过来。
 6. 交付放到桌面「你认识Claude吗-上传」文件夹：本轮中文版成片、中英文外挂字幕、中文上传描述和中文封面。英文版及英文配音暂缓，不以静音或临时声音代替。
+
+### 本轮实现与再生成
+
+实现位于 `src/videos/fun-informatics-02/`，42 个连续分镜覆盖 84 句。
+素材、生成图、录屏、反馈音和音乐的来源分别记录在 `docs/fun-informatics-02/` 的 JSON 清单中；
+媒体和克隆声线音频留在本地，不进 Git。音乐录音是 CC BY 3.0，描述中保留演奏者、来源、许可及改动说明。
+最终时间线为 852.179 秒；猜词停顿 15 秒、开放问句后停留 4 秒、结束卡 8 秒。
+
+先备齐清单中的图片、音乐与录屏，设置 `LUCAS_MEDIA` 指向声线仓库。`fi02:narration` 只生成中文配音输入及双语字幕文案，
+然后在该声线仓库以 `louise/zh`、速度 1.0 合成全部 84 句到 `outputs/louise/zh/fun-informatics-02-v1/`。
+使用该仓库 `.conda/bin/python` 运行 `scripts/fun-informatics-02/check.py`；疑句用 `--model medium --only 编号` 复核。
+重配保留原始 WAV；`repair_edges.py` 和 `select_retakes.py` 只有经复核更清楚的版本才替换制作音频。
+
+```bash
+npm run fi02:timeline
+npm run fi02:frames
+npm run fi02:frames -- --details
+npm run fi02:render
+npm run fi02:check
+npm run fi02:package
+```
+
+渲染前要求全部中文音频已核对、SHA 相符；自然句间停顿的审核记录也绑定具体音频 SHA。
+`--draft` 仅供缺少配音时检查画面，不能导出交付成片。上传说明使用项目共用 `youtube_tags.py`，
+包含统一小写标签及本集话题标签。`fi02:package` 只整理本地文件，不执行上传。
 
 ## 7. 事实和出处（做片前再核一遍）
 

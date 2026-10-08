@@ -3,6 +3,7 @@ import hashlib
 import importlib.util
 import json
 import os
+import subprocess
 import sys
 from pathlib import Path
 
@@ -16,6 +17,11 @@ shared.OUT = ROOT / "out/fun-informatics-02/delivery"
 shared.FILM_NAME = "fun-informatics-02"
 shared.COMP_PREFIX = "FunInformatics02"
 shared.LANGS = ("zh",)
+encoders=subprocess.run(["ffmpeg","-hide_banner","-encoders"],capture_output=True,text=True,check=True).stdout
+shared.AUDIO_CODEC = "aac_at" if " aac_at " in encoders else "aac"
+# Both tracks already have their final duration. -shortest can drop delayed
+# H.264 B-frames from the end of a stream-copy concatenation.
+shared.SHORTEST = False
 
 if __name__ == "__main__":
     timeline = json.loads((shared.PUB / "timeline.zh.json").read_text())

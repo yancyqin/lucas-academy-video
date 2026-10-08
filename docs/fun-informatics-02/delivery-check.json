@@ -1,0 +1,23 @@
+{
+  "language": "zh",
+  "englishNarration": "on hold; not generated",
+  "approvedCues": 84,
+  "duration": 852.2,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "fps": 30,
+  "captionBlocks": {
+    "zh-Hans": 152,
+    "en": 186
+  },
+  "blackFrames": 0,
+  "projectYMAXBelow12": 0,
+  "encodedBlackThresholdYMAX": 18,
+  "scannedFrames": 25566,
+  "integratedLUFS": -16.0,
+  "truePeakDBTP": -2.2,
+  "sha256": "786965872bce20fab653419dfa0b8efd1e0a77ce10e89ed8881c7c0004687f5d",
+  "bytes": 284744386
+}
