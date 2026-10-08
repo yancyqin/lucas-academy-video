@@ -16,6 +16,9 @@ ROOT = Path(__file__).resolve().parents[2]
 PUB = ROOT / "public/fun-informatics-01"
 WORK = ROOT / "out/fun-informatics-01/chunks"
 OUT = ROOT / "out/fun-informatics-01/delivery"
+FILM_NAME = "fun-informatics-01"
+COMP_PREFIX = "FunInformatics01"
+LANGS = ("zh", "en")
 
 
 def render(comp: str, out: Path, frames: str, concurrency: int) -> bool:
@@ -26,13 +29,13 @@ def render(comp: str, out: Path, frames: str, concurrency: int) -> bool:
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("lang", choices=["zh", "en"])
+    ap.add_argument("lang", choices=LANGS)
     ap.add_argument("--chunks", type=int, default=4)
     ap.add_argument("--concurrency", type=int, default=6)
     args = ap.parse_args()
     tl = json.loads((PUB / f"timeline.{args.lang}.json").read_text())
     total = math.ceil(tl["durationSeconds"] * tl["fps"])
-    comp = f"FunInformatics01{args.lang.capitalize()}"
+    comp = f"{COMP_PREFIX}{args.lang.capitalize()}"
     WORK.mkdir(parents=True, exist_ok=True)
     OUT.mkdir(parents=True, exist_ok=True)
     size = math.ceil(total / args.chunks)
@@ -50,7 +53,7 @@ def main() -> None:
         part.with_suffix(".ok").touch()
     listing = WORK / f"{args.lang}.txt"
     listing.write_text("".join(f"file '{p}'\n" for p in parts))
-    film = OUT / f"fun-informatics-01.{args.lang}.mp4"
+    film = OUT / f"{FILM_NAME}.{args.lang}.mp4"
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "concat", "-safe", "0", "-i", str(listing),
                     "-i", str(PUB / f"audio/{args.lang}.mix.wav"), "-map", "0:v:0", "-map", "1:a:0",
                     "-c:v", "copy", "-c:a", "aac", "-b:a", "320k", "-shortest", "-movflags", "+faststart", str(film)], check=True)

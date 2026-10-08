@@ -1,10 +1,13 @@
-# Do You Know Claude? 英文配音稿（与 zh-edit.md 同步 · v0.4 · 2026-10-07 · 待 Yancy 审）
+# Do You Know Claude? 英文配音稿（与 zh-edit.md 同步 · v0.5 · 2026-10-07 · Yancy 已定稿）
 
 Fun Informatics 2. By Yancy Qin, Louise Yang | Lucas Academy. Video plan: [FUN-INFORMATICS-02.md](../../FUN-INFORMATICS-02.md).
 
 写法与中文稿相同：`<strong>…</strong>` 是强调，字幕里自动去掉；每句下面 `>` 开头的是对应的中文，只作对照，不会读出来。
 
+v0.5：与中文稿同步，CL03 中英上下分屏逐字补全，CL04 引出猜词并留游玩停顿，CL06 区分人类和 AI，CL07 用新的四个开放问题。
+
 读法和字幕不一样的地方（配音时写进 SPOKEN）：
+- cl03-04 的 L、D 分别按英文字母名称读；cl03-05 的 God so loved 是中文「神爱」的含义说明，英文旁白不直接念中文汉字。
 - cl03-14 屏幕上是乱序的句子，配音按正常拼写读：It doesn't matter in what order the letters in a word are, as long as the first and last letters are in the right place.
 - 名字：中文版的小明、小红，英文版是 Sam、Lily；cl00-04 的填空句是 Sam put on his schoolb\_\_ and walked to school. On the w\_\_ he saw a little \_\_\_.
 
@@ -97,14 +100,14 @@ Section tone:
   > 香农是个很好玩的科学家。他喜欢一边骑独轮车，一边抛球杂耍。
 - cl03-02 | He once ran an experiment: take a book, cover what comes next, and ask someone to guess it, one letter at a time.
   > 他做过一个实验：拿一本书，遮住后面的字母，让人一个一个地猜。
-- cl03-03 | We turned his idea into a <strong>letter-guessing</strong> game: every word shows its start and hides its end, and you pick each missing letter from four.
-  > 我们照着他的办法，做了一个<strong>猜字</strong>游戏：每个词露出开头，藏起最后的字，从四个里选一个。
-- cl03-04 | For God so loved the wor... what comes next? Work? Word? Worth? Or world?
-  > 神爱世……下一个字是什么？世界、世代、世上，还是世人？
-- cl03-05 | All four begin with "wor", so the word alone can't tell you. But after "loved the", you pick world straight away.
-  > 四个都是「世」开头，单看这一个字，猜不出来。可前面是「神爱」，你一下就选了「人」。
-- cl03-06 | Keep going: only, Son, believes, perish, eternal... If you know this verse by heart, almost every letter is right on the first try.
-  > 一路猜下去：独生子，灭亡，永生……如果你背过这节经文，几乎每个字都是一次猜中。
+- cl03-03 | We made a <strong>guess-the-letters</strong> game inspired by that idea: fill in English one letter at a time, and Chinese one character at a time. Each time, choose from four options.
+  > 我们照着这个想法，做了一个<strong>猜字</strong>游戏：英文一个字母一个字母地补，中文一个字一个字地补。每次都从四个选项里选一个。
+- cl03-04 | In the English example, we finish world in two steps: first L, then D. In Chinese below, we fill in one missing character.
+  > 英文这里，world 最后的两个字母，要分两次补上。中文这里，神爱世……缺的是哪个字？
+- cl03-05 | Each option is one Chinese character, not a whole word. The start of the word alone doesn't tell you enough, but the words before it—God so loved—help you choose the missing character.
+  > 界、代、上，还是人？单看一个「世」，你还不确定；可前面是「神爱」，你一下就选了「人」。
+- cl03-06 | Keep going: letter by letter in English, character by character in Chinese. If you know this verse by heart, you can fill almost every blank on the first try.
+  > 再一路往后补，英文逐个字母，中文逐个字。如果你背过这节经文，几乎每个空都能一次补对。
 - cl03-07 | That doesn't mean the verse isn't important. Just the opposite: you've kept it in your heart, so you can fill it in, letter by letter.
   > 这不是说这节经文不重要。恰恰相反：你把它记在了心里，所以才能一个字一个字地补出来。
 - cl03-08 | Try a verse you've never read, and it's not so easy: suddenly, many more letters take two or three tries.
@@ -144,16 +147,16 @@ Section tone:
   > 他是 Anthropic 做的人工智能，名字被普遍认为是在致敬香农。
 - cl04-03 | For this part, let's hear it from him.
   > 下面这段，就让他自己来说。
-- cl04-04 | Hi, I'm Claude. How did I learn to talk? By playing the second game: <strong>guess the next word</strong>.
-  > 大家好，我是 Claude。我是怎么学会说话的？玩的就是第二个游戏：<strong>猜词</strong>。
-- cl04-05 | Each sentence gives you its first few words, and every word after that is picked from four.
-  > 每句话先给你开头几个词，后面的每个词，都要从四个里选一个。
-- cl04-06 | That's exactly the game I trained on, only I played it a great many times: guess, check, and if I'm wrong, adjust myself a little, then guess the next one.
-  > 这正是我训练时玩的游戏，只是我玩了非常非常多次：猜一个，对一下，猜错了，就把自己调一调，再猜下一个。
+- cl04-04 | Hi, I'm Claude. How did I learn to talk? We were filling in one letter or character at a time. Now let's try something different: <strong>guess the next word</strong>.
+  > 大家好，我是 Claude。我是怎么学会说话的？刚才，我们一个字一个字地补。现在换个玩法：<strong>猜下一个词</strong>。
+- cl04-05 | This time, each sentence gives you its first few words. At every step after that, you guess a whole word from four options. Come on, let's play a few rounds.
+  > 这次每句话先给你开头几个词，后面的每一步，都从四个选项里猜一整个词。来，一起玩几步。
+- cl04-06 | When I first learned language, I practised predicting what would come next from the text before it, too. But I had far more than four possibilities, and far more practice: guess, check, adjust myself a little, then guess the next one.
+  > 我最初学语言，练的也是根据前文预测后面会出现什么，只是候选远不止四个，练习的次数也多得多：猜一个，对一下，把自己调一调，再猜下一个。
 - cl04-07 | I could learn only because language has redundancy. If every word were impossible to guess, there would be no patterns to learn.
   > 我能学会，正是因为语言有冗余。如果每个词都完全猜不到，那就没有规律可学。
-- cl04-08 | The ruler that measures how well I guess is Shannon's "surprise": guess right, a little surprise; guess wrong, a big one.
-  > 衡量我猜得好不好的那把尺子，用的正是香农的「意外」：猜中了，意外很小；猜错了，意外很大。
+- cl04-08 | The ruler that measures how well I guess is Shannon's "surprise": the more likely I thought the word that actually appeared was, the smaller the surprise. The less I expected it, the bigger the surprise.
+  > 衡量我猜得好不好的那把尺子，用的正是香农的「意外」：我越觉得真正出现的词可能出现，意外就越小；越没想到它，意外就越大。
 - cl04-09 | Before I guess the next word, I look back at every word so far and ask: which one helps me guess right now?
   > 猜下一个词之前，我会回头看前面的每一个词，问自己：现在，哪个词最能帮我猜？
 - cl04-10 | Then I give each one a score, and look harder at the ones that score high. This is called <strong>attention</strong>.
@@ -212,12 +215,12 @@ Section tone:
   > 他也在去掉你猜得到的部分：按老规矩，一串和弦总要走回你等着听的那个音；德彪西常常偏不，留下的是颜色、光和气氛。
 - cl06-05 | From 1916 to 1918, all three human Claudes were alive at once: one painting, one composing, and one just born.
   > 1916 年到 1918 年，三位人类 Claude 同时活在这个世界上：一个在画画，一个在作曲，一个刚出生。
-- cl06-06 | By the way, it was the third Claude who brought up the fourth while writing this script. See? Saying a little more can pay off sometimes.
-  > 说起来，这第四个 Claude，是第三个 Claude 写稿的时候提起来的。你看，多说一句，有时候也有好处。
+- cl06-06 | By the way, the fourth Claude—Debussy—was brought up by the third Claude—the AI—while writing this script. See? Saying a little more can pay off sometimes.
+  > 说起来，这第四个 Claude——德彪西，是第三个 Claude——AI 写稿的时候提起来的。你看，多说一句，有时候也有好处。
 
 ## CL07 · The closing question
 
 Section tone: 
 
-- cl07-01 | So, in a time so full of AI and so full of redundancy, how do you tell the most useful information from the noise? That's what we learn and think about together, at Lucas Academy.
-  > 那么，在今天这个充满 AI 信息冗余的时代，你怎么分辨，哪些是最有用的信息，哪些是噪声呢？这是我们在 Lucas Academy 一起学习、一起思考的问题。
+- cl07-01 | So, in this age so full of redundancy in AI-generated information, how do you tell how much of it is new? How much is true? What matters? What can you leave aside? These, too, are questions we learn and think about together at Lucas Academy.
+  > 那么，在今天这个充满 AI 信息冗余的时代，你怎么分辨，这里面，有多少是新的呢？有多少是真的呢？什么是重要的呢？什么是可以忽略的呢？这也是我们在 Lucas Academy 一起学习、一起思考的问题。

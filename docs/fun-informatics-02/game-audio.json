@@ -1,0 +1,46 @@
+{
+  "assets": [
+    {
+      "path": "sfx/damage.wav",
+      "source": "https://github.com/yancyqin/lucas-academy-bible/blob/a6479863bdcf39b7f64bf01bb3e6a5afa256d49a/public/audio/damage.wav",
+      "sha256": "cf5c354eb856d1a3cf5062d7030c64245ce7f2cb8dfd1abe5d5bf648f616a9b0",
+      "kind": "original app interaction cue"
+    },
+    {
+      "path": "sfx/correct.wav",
+      "source": "https://github.com/yancyqin/lucas-academy-bible/blob/a6479863bdcf39b7f64bf01bb3e6a5afa256d49a/public/audio/correct.wav",
+      "sha256": "3d794e8c5f0eb95e4d0476560a961fc000d56ab081835f78bbc96b21e304c7ed",
+      "kind": "original app interaction cue"
+    },
+    {
+      "path": "sfx/correct-2.wav",
+      "source": "https://github.com/yancyqin/lucas-academy-bible/blob/a6479863bdcf39b7f64bf01bb3e6a5afa256d49a/public/audio/correct-2.wav",
+      "sha256": "ed3da16b9fceab3480b053ccffef281397d8bfc6570e192e339483c4533f1323",
+      "kind": "original app interaction cue"
+    },
+    {
+      "path": "sfx/correct-3.wav",
+      "source": "https://github.com/yancyqin/lucas-academy-bible/blob/a6479863bdcf39b7f64bf01bb3e6a5afa256d49a/public/audio/correct-3.wav",
+      "sha256": "dfaa580b12e08dddd572fed99de382adc8fbc4570cddd45d72fdddce9f581cd4",
+      "kind": "original app interaction cue"
+    },
+    {
+      "path": "sfx/correct-4.wav",
+      "source": "https://github.com/yancyqin/lucas-academy-bible/blob/a6479863bdcf39b7f64bf01bb3e6a5afa256d49a/public/audio/correct-4.wav",
+      "sha256": "eda1f101fb8d1932e491d65a907735dd072fab98ab1d748085b6f53fd09af8ff",
+      "kind": "original app interaction cue"
+    },
+    {
+      "path": "sfx/correct-5.wav",
+      "source": "https://github.com/yancyqin/lucas-academy-bible/blob/a6479863bdcf39b7f64bf01bb3e6a5afa256d49a/public/audio/correct-5.wav",
+      "sha256": "75d24d8b24431faa1ff4d2a91ca3fbf21085f0316c378b92e09ee5694419f843",
+      "kind": "original app interaction cue"
+    },
+    {
+      "path": "sfx/correct-6.wav",
+      "source": "https://github.com/yancyqin/lucas-academy-bible/blob/a6479863bdcf39b7f64bf01bb3e6a5afa256d49a/public/audio/correct-6.wav",
+      "sha256": "786919e99af5230a08f08a14d7ffad5b707191d68efb8f7b92fee2755016edb4",
+      "kind": "original app interaction cue"
+    }
+  ]
+}

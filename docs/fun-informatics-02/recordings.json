@@ -1,0 +1,2567 @@
+{
+  "recordings": [
+    {
+      "name": "letters-jhn316-en",
+      "url": "https://bible.lucasacademy.org/?passage=JHN.3.16&translation=WEB&game=letters",
+      "recorded": "2026-10-07",
+      "seed": 251103,
+      "kind": "letters",
+      "translation": "WEB",
+      "simulated": false,
+      "displayOnlyLayout": true,
+      "trimmedSourceLeadInSeconds": 2.045,
+      "videoStartOffsetSeconds": 0,
+      "events": [
+        {
+          "time": 2.213,
+          "shownAt": 0.007,
+          "action": "correct",
+          "value": "r",
+          "word": "For",
+          "shown": "Fo",
+          "stepIndex": 0,
+          "unitIndex": 0,
+          "options": [
+            "o",
+            "u",
+            "l",
+            "r"
+          ]
+        },
+        {
+          "time": 4.729,
+          "shownAt": 2.523,
+          "action": "correct",
+          "value": "d",
+          "word": "God",
+          "shown": "Go",
+          "stepIndex": 1,
+          "unitIndex": 0,
+          "options": [
+            "d",
+            "t",
+            "s",
+            "o"
+          ]
+        },
+        {
+          "time": 6.345,
+          "shownAt": 5.041,
+          "action": "correct",
+          "value": "o",
+          "word": "so",
+          "shown": "s",
+          "stepIndex": 2,
+          "unitIndex": 0,
+          "options": [
+            "a",
+            "o",
+            "u",
+            "e"
+          ]
+        },
+        {
+          "time": 7.961,
+          "shownAt": 6.656,
+          "action": "correct",
+          "value": "e",
+          "word": "loved",
+          "shown": "lov",
+          "stepIndex": 3,
+          "unitIndex": 0,
+          "options": [
+            "e",
+            "n",
+            "i",
+            "g"
+          ]
+        },
+        {
+          "time": 9.572,
+          "shownAt": 8.267,
+          "action": "correct",
+          "value": "d",
+          "word": "loved",
+          "shown": "lov",
+          "stepIndex": 3,
+          "unitIndex": 1,
+          "options": [
+            "s",
+            "y",
+            "r",
+            "d"
+          ]
+        },
+        {
+          "time": 11.183,
+          "shownAt": 9.879,
+          "action": "correct",
+          "value": "e",
+          "word": "the",
+          "shown": "th",
+          "stepIndex": 4,
+          "unitIndex": 0,
+          "options": [
+            "a",
+            "e",
+            "r",
+            "i"
+          ]
+        },
+        {
+          "time": 12.793,
+          "shownAt": 11.49,
+          "action": "correct",
+          "value": "l",
+          "word": "world",
+          "shown": "wor",
+          "stepIndex": 5,
+          "unitIndex": 0,
+          "options": [
+            "d",
+            "l",
+            "s",
+            "t"
+          ]
+        },
+        {
+          "time": 14.408,
+          "shownAt": 13.104,
+          "action": "correct",
+          "value": "d",
+          "word": "world",
+          "shown": "wor",
+          "stepIndex": 5,
+          "unitIndex": 1,
+          "options": [
+            "y",
+            "d",
+            "e",
+            "h"
+          ]
+        },
+        {
+          "time": 16.02,
+          "shownAt": 14.717,
+          "action": "correct",
+          "value": "t",
+          "word": "that",
+          "shown": "tha",
+          "stepIndex": 6,
+          "unitIndex": 0,
+          "options": [
+            "n",
+            "k",
+            "t",
+            "e"
+          ]
+        },
+        {
+          "time": 17.633,
+          "shownAt": 16.329,
+          "action": "correct",
+          "value": "e",
+          "word": "he",
+          "shown": "h",
+          "stepIndex": 7,
+          "unitIndex": 0,
+          "options": [
+            "e",
+            "i",
+            "a",
+            "o"
+          ]
+        },
+        {
+          "time": 19.246,
+          "shownAt": 17.941,
+          "action": "correct",
+          "value": "e",
+          "word": "gave",
+          "shown": "gav",
+          "stepIndex": 8,
+          "unitIndex": 0,
+          "options": [
+            "e",
+            "s",
+            "n",
+            "t"
+          ]
+        },
+        {
+          "time": 20.89,
+          "shownAt": 19.585,
+          "action": "correct",
+          "value": "s",
+          "word": "his",
+          "shown": "hi",
+          "stepIndex": 9,
+          "unitIndex": 0,
+          "options": [
+            "s",
+            "g",
+            "m",
+            "l"
+          ]
+        },
+        {
+          "time": 22.505,
+          "shownAt": 21.2,
+          "action": "correct",
+          "value": "y",
+          "word": "only",
+          "shown": "onl",
+          "stepIndex": 10,
+          "unitIndex": 0,
+          "options": [
+            "t",
+            "y",
+            "d",
+            "h"
+          ]
+        },
+        {
+          "time": 24.14,
+          "shownAt": 22.813,
+          "action": "correct",
+          "value": "n",
+          "word": "born",
+          "shown": "bor",
+          "stepIndex": 11,
+          "unitIndex": 0,
+          "options": [
+            "d",
+            "e",
+            "n",
+            "l"
+          ]
+        },
+        {
+          "time": 25.75,
+          "shownAt": 24.446,
+          "action": "correct",
+          "value": "n",
+          "word": "Son",
+          "shown": "So",
+          "stepIndex": 12,
+          "unitIndex": 0,
+          "options": [
+            "r",
+            "m",
+            "n",
+            "u"
+          ]
+        },
+        {
+          "time": 27.376,
+          "shownAt": 26.058,
+          "action": "correct",
+          "value": "t",
+          "word": "that",
+          "shown": "tha",
+          "stepIndex": 13,
+          "unitIndex": 0,
+          "options": [
+            "d",
+            "e",
+            "t",
+            "n"
+          ]
+        },
+        {
+          "time": 28.992,
+          "shownAt": 27.687,
+          "action": "correct",
+          "value": "e",
+          "word": "whoever",
+          "shown": "whoev",
+          "stepIndex": 14,
+          "unitIndex": 0,
+          "options": [
+            "n",
+            "s",
+            "v",
+            "e"
+          ]
+        },
+        {
+          "time": 30.607,
+          "shownAt": 29.3,
+          "action": "correct",
+          "value": "r",
+          "word": "whoever",
+          "shown": "whoev",
+          "stepIndex": 14,
+          "unitIndex": 1,
+          "options": [
+            "t",
+            "r",
+            "g",
+            "d"
+          ]
+        },
+        {
+          "time": 32.24,
+          "shownAt": 30.913,
+          "action": "correct",
+          "value": "e",
+          "word": "believes",
+          "shown": "believ",
+          "stepIndex": 15,
+          "unitIndex": 0,
+          "options": [
+            "o",
+            "t",
+            "e",
+            "n"
+          ]
+        },
+        {
+          "time": 33.866,
+          "shownAt": 32.562,
+          "action": "correct",
+          "value": "s",
+          "word": "believes",
+          "shown": "believ",
+          "stepIndex": 15,
+          "unitIndex": 1,
+          "options": [
+            "s",
+            "d",
+            "g",
+            "n"
+          ]
+        },
+        {
+          "time": 35.485,
+          "shownAt": 34.182,
+          "action": "correct",
+          "value": "n",
+          "word": "in",
+          "shown": "i",
+          "stepIndex": 16,
+          "unitIndex": 0,
+          "options": [
+            "s",
+            "t",
+            "m",
+            "n"
+          ]
+        },
+        {
+          "time": 37.1,
+          "shownAt": 35.795,
+          "action": "correct",
+          "value": "m",
+          "word": "him",
+          "shown": "hi",
+          "stepIndex": 17,
+          "unitIndex": 0,
+          "options": [
+            "m",
+            "g",
+            "l",
+            "s"
+          ]
+        },
+        {
+          "time": 38.709,
+          "shownAt": 37.406,
+          "action": "correct",
+          "value": "l",
+          "word": "should",
+          "shown": "shou",
+          "stepIndex": 18,
+          "unitIndex": 0,
+          "options": [
+            "s",
+            "o",
+            "t",
+            "l"
+          ]
+        },
+        {
+          "time": 40.321,
+          "shownAt": 39.018,
+          "action": "correct",
+          "value": "d",
+          "word": "should",
+          "shown": "shou",
+          "stepIndex": 18,
+          "unitIndex": 1,
+          "options": [
+            "r",
+            "n",
+            "e",
+            "d"
+          ]
+        },
+        {
+          "time": 41.933,
+          "shownAt": 40.631,
+          "action": "correct",
+          "value": "t",
+          "word": "not",
+          "shown": "no",
+          "stepIndex": 19,
+          "unitIndex": 0,
+          "options": [
+            "r",
+            "d",
+            "t",
+            "w"
+          ]
+        },
+        {
+          "time": 43.549,
+          "shownAt": 42.246,
+          "action": "correct",
+          "value": "s",
+          "word": "perish",
+          "shown": "peri",
+          "stepIndex": 20,
+          "unitIndex": 0,
+          "options": [
+            "r",
+            "o",
+            "s",
+            "e"
+          ]
+        },
+        {
+          "time": 45.161,
+          "shownAt": 43.856,
+          "action": "correct",
+          "value": "h",
+          "word": "perish",
+          "shown": "peri",
+          "stepIndex": 20,
+          "unitIndex": 1,
+          "options": [
+            "g",
+            "h",
+            "e",
+            "w"
+          ]
+        },
+        {
+          "time": 46.775,
+          "shownAt": 45.471,
+          "action": "correct",
+          "value": "t",
+          "word": "but",
+          "shown": "bu",
+          "stepIndex": 21,
+          "unitIndex": 0,
+          "options": [
+            "y",
+            "t",
+            "i",
+            "r"
+          ]
+        },
+        {
+          "time": 48.387,
+          "shownAt": 47.085,
+          "action": "correct",
+          "value": "e",
+          "word": "have",
+          "shown": "hav",
+          "stepIndex": 22,
+          "unitIndex": 0,
+          "options": [
+            "e",
+            "i",
+            "s",
+            "o"
+          ]
+        },
+        {
+          "time": 50,
+          "shownAt": 48.696,
+          "action": "correct",
+          "value": "a",
+          "word": "eternal",
+          "shown": "etern",
+          "stepIndex": 23,
+          "unitIndex": 0,
+          "options": [
+            "e",
+            "a",
+            "l",
+            "i"
+          ]
+        },
+        {
+          "time": 51.611,
+          "shownAt": 50.305,
+          "action": "correct",
+          "value": "l",
+          "word": "eternal",
+          "shown": "etern",
+          "stepIndex": 23,
+          "unitIndex": 1,
+          "options": [
+            "n",
+            "l",
+            "d",
+            "s"
+          ]
+        },
+        {
+          "time": 53.224,
+          "shownAt": 51.917,
+          "action": "correct",
+          "value": "e",
+          "word": "life",
+          "shown": "lif",
+          "stepIndex": 24,
+          "unitIndex": 0,
+          "options": [
+            "t",
+            "s",
+            "y",
+            "e"
+          ]
+        }
+      ],
+      "game": {
+        "kind": "letters",
+        "tokens": [
+          "For",
+          "God",
+          "so",
+          "loved",
+          "the",
+          "world,",
+          "that",
+          "he",
+          "gave",
+          "his",
+          "only",
+          "born",
+          "Son,",
+          "that",
+          "whoever",
+          "believes",
+          "in",
+          "him",
+          "should",
+          "not",
+          "perish,",
+          "but",
+          "have",
+          "eternal",
+          "life."
+        ],
+        "steps": [
+          {
+            "tokenIndex": 0,
+            "word": "For",
+            "shown": "Fo",
+            "units": [
+              {
+                "answer": "r",
+                "options": [
+                  "o",
+                  "u",
+                  "l",
+                  "r"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 1,
+            "word": "God",
+            "shown": "Go",
+            "units": [
+              {
+                "answer": "d",
+                "options": [
+                  "d",
+                  "t",
+                  "s",
+                  "o"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 2,
+            "word": "so",
+            "shown": "s",
+            "units": [
+              {
+                "answer": "o",
+                "options": [
+                  "a",
+                  "o",
+                  "u",
+                  "e"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 3,
+            "word": "loved",
+            "shown": "lov",
+            "units": [
+              {
+                "answer": "e",
+                "options": [
+                  "e",
+                  "n",
+                  "i",
+                  "g"
+                ]
+              },
+              {
+                "answer": "d",
+                "options": [
+                  "s",
+                  "y",
+                  "r",
+                  "d"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 4,
+            "word": "the",
+            "shown": "th",
+            "units": [
+              {
+                "answer": "e",
+                "options": [
+                  "a",
+                  "e",
+                  "r",
+                  "i"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 5,
+            "word": "world",
+            "shown": "wor",
+            "units": [
+              {
+                "answer": "l",
+                "options": [
+                  "d",
+                  "l",
+                  "s",
+                  "t"
+                ]
+              },
+              {
+                "answer": "d",
+                "options": [
+                  "y",
+                  "d",
+                  "e",
+                  "h"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 6,
+            "word": "that",
+            "shown": "tha",
+            "units": [
+              {
+                "answer": "t",
+                "options": [
+                  "n",
+                  "k",
+                  "t",
+                  "e"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 7,
+            "word": "he",
+            "shown": "h",
+            "units": [
+              {
+                "answer": "e",
+                "options": [
+                  "e",
+                  "i",
+                  "a",
+                  "o"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 8,
+            "word": "gave",
+            "shown": "gav",
+            "units": [
+              {
+                "answer": "e",
+                "options": [
+                  "e",
+                  "s",
+                  "n",
+                  "t"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 9,
+            "word": "his",
+            "shown": "hi",
+            "units": [
+              {
+                "answer": "s",
+                "options": [
+                  "s",
+                  "g",
+                  "m",
+                  "l"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 10,
+            "word": "only",
+            "shown": "onl",
+            "units": [
+              {
+                "answer": "y",
+                "options": [
+                  "t",
+                  "y",
+                  "d",
+                  "h"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 11,
+            "word": "born",
+            "shown": "bor",
+            "units": [
+              {
+                "answer": "n",
+                "options": [
+                  "d",
+                  "e",
+                  "n",
+                  "l"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 12,
+            "word": "Son",
+            "shown": "So",
+            "units": [
+              {
+                "answer": "n",
+                "options": [
+                  "r",
+                  "m",
+                  "n",
+                  "u"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 13,
+            "word": "that",
+            "shown": "tha",
+            "units": [
+              {
+                "answer": "t",
+                "options": [
+                  "d",
+                  "e",
+                  "t",
+                  "n"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 14,
+            "word": "whoever",
+            "shown": "whoev",
+            "units": [
+              {
+                "answer": "e",
+                "options": [
+                  "n",
+                  "s",
+                  "v",
+                  "e"
+                ]
+              },
+              {
+                "answer": "r",
+                "options": [
+                  "t",
+                  "r",
+                  "g",
+                  "d"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 15,
+            "word": "believes",
+            "shown": "believ",
+            "units": [
+              {
+                "answer": "e",
+                "options": [
+                  "o",
+                  "t",
+                  "e",
+                  "n"
+                ]
+              },
+              {
+                "answer": "s",
+                "options": [
+                  "s",
+                  "d",
+                  "g",
+                  "n"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 16,
+            "word": "in",
+            "shown": "i",
+            "units": [
+              {
+                "answer": "n",
+                "options": [
+                  "s",
+                  "t",
+                  "m",
+                  "n"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 17,
+            "word": "him",
+            "shown": "hi",
+            "units": [
+              {
+                "answer": "m",
+                "options": [
+                  "m",
+                  "g",
+                  "l",
+                  "s"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 18,
+            "word": "should",
+            "shown": "shou",
+            "units": [
+              {
+                "answer": "l",
+                "options": [
+                  "s",
+                  "o",
+                  "t",
+                  "l"
+                ]
+              },
+              {
+                "answer": "d",
+                "options": [
+                  "r",
+                  "n",
+                  "e",
+                  "d"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 19,
+            "word": "not",
+            "shown": "no",
+            "units": [
+              {
+                "answer": "t",
+                "options": [
+                  "r",
+                  "d",
+                  "t",
+                  "w"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 20,
+            "word": "perish",
+            "shown": "peri",
+            "units": [
+              {
+                "answer": "s",
+                "options": [
+                  "r",
+                  "o",
+                  "s",
+                  "e"
+                ]
+              },
+              {
+                "answer": "h",
+                "options": [
+                  "g",
+                  "h",
+                  "e",
+                  "w"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 21,
+            "word": "but",
+            "shown": "bu",
+            "units": [
+              {
+                "answer": "t",
+                "options": [
+                  "y",
+                  "t",
+                  "i",
+                  "r"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 22,
+            "word": "have",
+            "shown": "hav",
+            "units": [
+              {
+                "answer": "e",
+                "options": [
+                  "e",
+                  "i",
+                  "s",
+                  "o"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 23,
+            "word": "eternal",
+            "shown": "etern",
+            "units": [
+              {
+                "answer": "a",
+                "options": [
+                  "e",
+                  "a",
+                  "l",
+                  "i"
+                ]
+              },
+              {
+                "answer": "l",
+                "options": [
+                  "n",
+                  "l",
+                  "d",
+                  "s"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 24,
+            "word": "life",
+            "shown": "lif",
+            "units": [
+              {
+                "answer": "e",
+                "options": [
+                  "t",
+                  "s",
+                  "y",
+                  "e"
+                ]
+              }
+            ]
+          }
+        ],
+        "given": [],
+        "separator": " "
+      },
+      "path": "footage/letters-jhn316-en.mp4",
+      "sha256": "340337adfddb45e31d63e58120046b369da3d7afe87893905050e1a5430aa409",
+      "bytes": 742818
+    },
+    {
+      "name": "letters-jhn316-zh",
+      "url": "https://bible.lucasacademy.org/?passage=JHN.3.16&translation=CUV&game=letters",
+      "recorded": "2026-10-07",
+      "seed": 251103,
+      "kind": "letters",
+      "translation": "CUV",
+      "simulated": false,
+      "displayOnlyLayout": true,
+      "trimmedSourceLeadInSeconds": 3.592,
+      "videoStartOffsetSeconds": 0,
+      "events": [
+        {
+          "time": 2.233,
+          "shownAt": 0.012,
+          "action": "correct",
+          "value": "世",
+          "word": "神爱世人",
+          "shown": "神爱",
+          "stepIndex": 0,
+          "unitIndex": 0,
+          "options": [
+            "基",
+            "没",
+            "一",
+            "世"
+          ]
+        },
+        {
+          "time": 4.805,
+          "shownAt": 2.54,
+          "action": "correct",
+          "value": "人",
+          "word": "神爱世人",
+          "shown": "神爱",
+          "stepIndex": 0,
+          "unitIndex": 1,
+          "options": [
+            "有",
+            "督",
+            "人",
+            "然"
+          ]
+        },
+        {
+          "time": 6.421,
+          "shownAt": 5.116,
+          "action": "correct",
+          "value": "至",
+          "word": "甚至",
+          "shown": "甚",
+          "stepIndex": 1,
+          "unitIndex": 0,
+          "options": [
+            "者",
+            "以",
+            "咐",
+            "至"
+          ]
+        },
+        {
+          "time": 8.035,
+          "shownAt": 6.731,
+          "action": "correct",
+          "value": "的",
+          "word": "他的",
+          "shown": "他",
+          "stepIndex": 2,
+          "unitIndex": 0,
+          "options": [
+            "在",
+            "所",
+            "不",
+            "的"
+          ]
+        },
+        {
+          "time": 9.65,
+          "shownAt": 8.345,
+          "action": "correct",
+          "value": "子",
+          "word": "生子",
+          "shown": "生",
+          "stepIndex": 3,
+          "unitIndex": 0,
+          "options": [
+            "明",
+            "典",
+            "子",
+            "命"
+          ]
+        },
+        {
+          "time": 11.27,
+          "shownAt": 9.963,
+          "action": "correct",
+          "value": "给",
+          "word": "赐给",
+          "shown": "赐",
+          "stepIndex": 4,
+          "unitIndex": 0,
+          "options": [
+            "人",
+            "罪",
+            "给",
+            "过"
+          ]
+        },
+        {
+          "time": 12.887,
+          "shownAt": 11.582,
+          "action": "correct",
+          "value": "们",
+          "word": "他们",
+          "shown": "他",
+          "stepIndex": 5,
+          "unitIndex": 0,
+          "options": [
+            "是",
+            "的",
+            "所",
+            "们"
+          ]
+        },
+        {
+          "time": 14.506,
+          "shownAt": 13.2,
+          "action": "correct",
+          "value": "切",
+          "word": "一切",
+          "shown": "一",
+          "stepIndex": 6,
+          "unitIndex": 0,
+          "options": [
+            "生",
+            "位",
+            "切",
+            "举"
+          ]
+        },
+        {
+          "time": 16.118,
+          "shownAt": 14.815,
+          "action": "correct",
+          "value": "的",
+          "word": "他的",
+          "shown": "他",
+          "stepIndex": 7,
+          "unitIndex": 0,
+          "options": [
+            "是",
+            "们",
+            "的",
+            "所"
+          ]
+        },
+        {
+          "time": 17.733,
+          "shownAt": 16.424,
+          "action": "correct",
+          "value": "致",
+          "word": "不致",
+          "shown": "不",
+          "stepIndex": 8,
+          "unitIndex": 0,
+          "options": [
+            "致",
+            "晓",
+            "义",
+            "再"
+          ]
+        },
+        {
+          "time": 19.35,
+          "shownAt": 18.044,
+          "action": "correct",
+          "value": "亡",
+          "word": "灭亡",
+          "shown": "灭",
+          "stepIndex": 9,
+          "unitIndex": 0,
+          "options": [
+            "又",
+            "人",
+            "等",
+            "亡"
+          ]
+        },
+        {
+          "time": 20.973,
+          "shownAt": 19.658,
+          "action": "correct",
+          "value": "生",
+          "word": "永生",
+          "shown": "永",
+          "stepIndex": 10,
+          "unitIndex": 0,
+          "options": [
+            "远",
+            "不",
+            "生",
+            "存"
+          ]
+        }
+      ],
+      "game": {
+        "kind": "letters",
+        "tokens": [
+          "「　神爱世人，",
+          "甚至",
+          "将",
+          "他的",
+          "独",
+          "生子",
+          "赐给[",
+          "他们]，",
+          "叫",
+          "一切",
+          "信",
+          "他的，",
+          "不致",
+          "灭亡，",
+          "反",
+          "得",
+          "永生。"
+        ],
+        "steps": [
+          {
+            "tokenIndex": 0,
+            "word": "神爱世人",
+            "shown": "神爱",
+            "units": [
+              {
+                "answer": "世",
+                "options": [
+                  "基",
+                  "没",
+                  "一",
+                  "世"
+                ]
+              },
+              {
+                "answer": "人",
+                "options": [
+                  "有",
+                  "督",
+                  "人",
+                  "然"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 1,
+            "word": "甚至",
+            "shown": "甚",
+            "units": [
+              {
+                "answer": "至",
+                "options": [
+                  "者",
+                  "以",
+                  "咐",
+                  "至"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 3,
+            "word": "他的",
+            "shown": "他",
+            "units": [
+              {
+                "answer": "的",
+                "options": [
+                  "在",
+                  "所",
+                  "不",
+                  "的"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 5,
+            "word": "生子",
+            "shown": "生",
+            "units": [
+              {
+                "answer": "子",
+                "options": [
+                  "明",
+                  "典",
+                  "子",
+                  "命"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 6,
+            "word": "赐给",
+            "shown": "赐",
+            "units": [
+              {
+                "answer": "给",
+                "options": [
+                  "人",
+                  "罪",
+                  "给",
+                  "过"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 7,
+            "word": "他们",
+            "shown": "他",
+            "units": [
+              {
+                "answer": "们",
+                "options": [
+                  "是",
+                  "的",
+                  "所",
+                  "们"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 9,
+            "word": "一切",
+            "shown": "一",
+            "units": [
+              {
+                "answer": "切",
+                "options": [
+                  "生",
+                  "位",
+                  "切",
+                  "举"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 11,
+            "word": "他的",
+            "shown": "他",
+            "units": [
+              {
+                "answer": "的",
+                "options": [
+                  "是",
+                  "们",
+                  "的",
+                  "所"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 12,
+            "word": "不致",
+            "shown": "不",
+            "units": [
+              {
+                "answer": "致",
+                "options": [
+                  "致",
+                  "晓",
+                  "义",
+                  "再"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 13,
+            "word": "灭亡",
+            "shown": "灭",
+            "units": [
+              {
+                "answer": "亡",
+                "options": [
+                  "又",
+                  "人",
+                  "等",
+                  "亡"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 16,
+            "word": "永生",
+            "shown": "永",
+            "units": [
+              {
+                "answer": "生",
+                "options": [
+                  "远",
+                  "不",
+                  "生",
+                  "存"
+                ]
+              }
+            ]
+          }
+        ],
+        "given": [],
+        "separator": ""
+      },
+      "path": "footage/letters-jhn316-zh.mp4",
+      "sha256": "7105d4f68e8bbd0e9d6e9120f6f15ee3b1d9fabc05a265afd2e587da89e98ea8",
+      "bytes": 445325
+    },
+    {
+      "name": "letters-pro2511-en",
+      "url": "https://bible.lucasacademy.org/?passage=PRO.25.11&translation=WEB&game=letters",
+      "recorded": "2026-10-07",
+      "seed": 251103,
+      "kind": "letters",
+      "translation": "WEB",
+      "simulated": true,
+      "displayOnlyLayout": true,
+      "trimmedSourceLeadInSeconds": 1.914,
+      "videoStartOffsetSeconds": 0,
+      "events": [
+        {
+          "time": 2.213,
+          "shownAt": 0.008,
+          "action": "correct",
+          "value": "d",
+          "word": "word",
+          "shown": "wor",
+          "stepIndex": 0,
+          "unitIndex": 0,
+          "options": [
+            "k",
+            "d",
+            "l",
+            "t"
+          ]
+        },
+        {
+          "time": 4.788,
+          "action": "wrong",
+          "value": "e",
+          "stepIndex": 1,
+          "unitIndex": 0
+        },
+        {
+          "time": 5.642,
+          "shownAt": 2.521,
+          "action": "correct",
+          "value": "l",
+          "word": "fitly",
+          "shown": "fit",
+          "stepIndex": 1,
+          "unitIndex": 0,
+          "options": [
+            "e",
+            "r",
+            "l",
+            "n"
+          ]
+        },
+        {
+          "time": 7.299,
+          "action": "wrong",
+          "value": "t",
+          "stepIndex": 1,
+          "unitIndex": 1
+        },
+        {
+          "time": 8.161,
+          "shownAt": 5.959,
+          "action": "correct",
+          "value": "y",
+          "word": "fitly",
+          "shown": "fit",
+          "stepIndex": 1,
+          "unitIndex": 1,
+          "options": [
+            "t",
+            "y",
+            "g",
+            "s"
+          ]
+        },
+        {
+          "time": 9.788,
+          "shownAt": 8.472,
+          "action": "correct",
+          "value": "e",
+          "word": "spoken",
+          "shown": "spok",
+          "stepIndex": 2,
+          "unitIndex": 0,
+          "options": [
+            "e",
+            "o",
+            "k",
+            "y"
+          ]
+        },
+        {
+          "time": 11.499,
+          "action": "wrong",
+          "value": "y",
+          "stepIndex": 2,
+          "unitIndex": 1
+        },
+        {
+          "time": 12.359,
+          "shownAt": 10.125,
+          "action": "correct",
+          "value": "n",
+          "word": "spoken",
+          "shown": "spok",
+          "stepIndex": 2,
+          "unitIndex": 1,
+          "options": [
+            "y",
+            "n",
+            "h",
+            "s"
+          ]
+        },
+        {
+          "time": 13.994,
+          "shownAt": 12.69,
+          "action": "correct",
+          "value": "s",
+          "word": "is",
+          "shown": "i",
+          "stepIndex": 3,
+          "unitIndex": 0,
+          "options": [
+            "t",
+            "n",
+            "s",
+            "m"
+          ]
+        },
+        {
+          "time": 15.616,
+          "shownAt": 14.303,
+          "action": "correct",
+          "value": "e",
+          "word": "like",
+          "shown": "lik",
+          "stepIndex": 4,
+          "unitIndex": 0,
+          "options": [
+            "h",
+            "e",
+            "t",
+            "l"
+          ]
+        },
+        {
+          "time": 17.253,
+          "action": "wrong",
+          "value": "l",
+          "stepIndex": 5,
+          "unitIndex": 0
+        },
+        {
+          "time": 18.108,
+          "shownAt": 15.929,
+          "action": "correct",
+          "value": "e",
+          "word": "apples",
+          "shown": "appl",
+          "stepIndex": 5,
+          "unitIndex": 0,
+          "options": [
+            "l",
+            "e",
+            "t",
+            "c"
+          ]
+        },
+        {
+          "time": 19.729,
+          "shownAt": 18.425,
+          "action": "correct",
+          "value": "s",
+          "word": "apples",
+          "shown": "appl",
+          "stepIndex": 5,
+          "unitIndex": 1,
+          "options": [
+            "g",
+            "s",
+            "n",
+            "e"
+          ]
+        },
+        {
+          "time": 21.346,
+          "shownAt": 20.042,
+          "action": "correct",
+          "value": "f",
+          "word": "of",
+          "shown": "o",
+          "stepIndex": 6,
+          "unitIndex": 0,
+          "options": [
+            "r",
+            "f",
+            "v",
+            "n"
+          ]
+        },
+        {
+          "time": 22.988,
+          "action": "wrong",
+          "value": "t",
+          "stepIndex": 7,
+          "unitIndex": 0
+        },
+        {
+          "time": 23.841,
+          "shownAt": 21.655,
+          "action": "correct",
+          "value": "d",
+          "word": "gold",
+          "shown": "gol",
+          "stepIndex": 7,
+          "unitIndex": 0,
+          "options": [
+            "d",
+            "t",
+            "e",
+            "s"
+          ]
+        },
+        {
+          "time": 25.452,
+          "shownAt": 24.148,
+          "action": "correct",
+          "value": "n",
+          "word": "in",
+          "shown": "i",
+          "stepIndex": 8,
+          "unitIndex": 0,
+          "options": [
+            "s",
+            "f",
+            "t",
+            "n"
+          ]
+        },
+        {
+          "time": 27.078,
+          "action": "wrong",
+          "value": "e",
+          "stepIndex": 9,
+          "unitIndex": 0
+        },
+        {
+          "time": 27.93,
+          "shownAt": 25.759,
+          "action": "correct",
+          "value": "g",
+          "word": "settings",
+          "shown": "settin",
+          "stepIndex": 9,
+          "unitIndex": 0,
+          "options": [
+            "g",
+            "e",
+            "n",
+            "t"
+          ]
+        },
+        {
+          "time": 29.563,
+          "action": "wrong",
+          "value": "r",
+          "stepIndex": 9,
+          "unitIndex": 1
+        },
+        {
+          "time": 30.418,
+          "shownAt": 28.238,
+          "action": "correct",
+          "value": "s",
+          "word": "settings",
+          "shown": "settin",
+          "stepIndex": 9,
+          "unitIndex": 1,
+          "options": [
+            "s",
+            "r",
+            "n",
+            "d"
+          ]
+        },
+        {
+          "time": 32.033,
+          "shownAt": 30.727,
+          "action": "correct",
+          "value": "f",
+          "word": "of",
+          "shown": "o",
+          "stepIndex": 10,
+          "unitIndex": 0,
+          "options": [
+            "u",
+            "r",
+            "n",
+            "f"
+          ]
+        },
+        {
+          "time": 33.648,
+          "shownAt": 32.344,
+          "action": "correct",
+          "value": "e",
+          "word": "silver",
+          "shown": "silv",
+          "stepIndex": 11,
+          "unitIndex": 0,
+          "options": [
+            "i",
+            "e",
+            "c",
+            "n"
+          ]
+        },
+        {
+          "time": 35.274,
+          "action": "wrong",
+          "value": "s",
+          "stepIndex": 11,
+          "unitIndex": 1
+        },
+        {
+          "time": 36.132,
+          "shownAt": 33.955,
+          "action": "correct",
+          "value": "r",
+          "word": "silver",
+          "shown": "silv",
+          "stepIndex": 11,
+          "unitIndex": 1,
+          "options": [
+            "r",
+            "s",
+            "d",
+            "g"
+          ]
+        }
+      ],
+      "game": {
+        "kind": "letters",
+        "tokens": [
+          "A",
+          "word",
+          "fitly",
+          "spoken",
+          "is",
+          "like",
+          "apples",
+          "of",
+          "gold",
+          "in",
+          "settings",
+          "of",
+          "silver."
+        ],
+        "steps": [
+          {
+            "tokenIndex": 1,
+            "word": "word",
+            "shown": "wor",
+            "units": [
+              {
+                "answer": "d",
+                "options": [
+                  "k",
+                  "d",
+                  "l",
+                  "t"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 2,
+            "word": "fitly",
+            "shown": "fit",
+            "units": [
+              {
+                "answer": "l",
+                "options": [
+                  "e",
+                  "r",
+                  "l",
+                  "n"
+                ]
+              },
+              {
+                "answer": "y",
+                "options": [
+                  "t",
+                  "y",
+                  "g",
+                  "s"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 3,
+            "word": "spoken",
+            "shown": "spok",
+            "units": [
+              {
+                "answer": "e",
+                "options": [
+                  "e",
+                  "o",
+                  "k",
+                  "y"
+                ]
+              },
+              {
+                "answer": "n",
+                "options": [
+                  "y",
+                  "n",
+                  "h",
+                  "s"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 4,
+            "word": "is",
+            "shown": "i",
+            "units": [
+              {
+                "answer": "s",
+                "options": [
+                  "t",
+                  "n",
+                  "s",
+                  "m"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 5,
+            "word": "like",
+            "shown": "lik",
+            "units": [
+              {
+                "answer": "e",
+                "options": [
+                  "h",
+                  "e",
+                  "t",
+                  "l"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 6,
+            "word": "apples",
+            "shown": "appl",
+            "units": [
+              {
+                "answer": "e",
+                "options": [
+                  "l",
+                  "e",
+                  "t",
+                  "c"
+                ]
+              },
+              {
+                "answer": "s",
+                "options": [
+                  "g",
+                  "s",
+                  "n",
+                  "e"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 7,
+            "word": "of",
+            "shown": "o",
+            "units": [
+              {
+                "answer": "f",
+                "options": [
+                  "r",
+                  "f",
+                  "v",
+                  "n"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 8,
+            "word": "gold",
+            "shown": "gol",
+            "units": [
+              {
+                "answer": "d",
+                "options": [
+                  "d",
+                  "t",
+                  "e",
+                  "s"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 9,
+            "word": "in",
+            "shown": "i",
+            "units": [
+              {
+                "answer": "n",
+                "options": [
+                  "s",
+                  "f",
+                  "t",
+                  "n"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 10,
+            "word": "settings",
+            "shown": "settin",
+            "units": [
+              {
+                "answer": "g",
+                "options": [
+                  "g",
+                  "e",
+                  "n",
+                  "t"
+                ]
+              },
+              {
+                "answer": "s",
+                "options": [
+                  "s",
+                  "r",
+                  "n",
+                  "d"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 11,
+            "word": "of",
+            "shown": "o",
+            "units": [
+              {
+                "answer": "f",
+                "options": [
+                  "u",
+                  "r",
+                  "n",
+                  "f"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 12,
+            "word": "silver",
+            "shown": "silv",
+            "units": [
+              {
+                "answer": "e",
+                "options": [
+                  "i",
+                  "e",
+                  "c",
+                  "n"
+                ]
+              },
+              {
+                "answer": "r",
+                "options": [
+                  "r",
+                  "s",
+                  "d",
+                  "g"
+                ]
+              }
+            ]
+          }
+        ],
+        "given": [],
+        "separator": " "
+      },
+      "path": "footage/letters-pro2511-en.mp4",
+      "sha256": "4f36e60d12ceeb8a5fa1c74e045e5dddbd35ec146b7fa5e0561d6eefa5863260",
+      "bytes": 628749
+    },
+    {
+      "name": "letters-pro2511-zh",
+      "url": "https://bible.lucasacademy.org/?passage=PRO.25.11&translation=CUV&game=letters",
+      "recorded": "2026-10-07",
+      "seed": 251103,
+      "kind": "letters",
+      "translation": "CUV",
+      "simulated": true,
+      "displayOnlyLayout": true,
+      "trimmedSourceLeadInSeconds": 1.933,
+      "videoStartOffsetSeconds": 0,
+      "events": [
+        {
+          "time": 2.245,
+          "shownAt": 0.005,
+          "action": "correct",
+          "value": "句",
+          "word": "一句",
+          "shown": "一",
+          "stepIndex": 0,
+          "unitIndex": 0,
+          "options": [
+            "举",
+            "句",
+            "体",
+            "粒"
+          ]
+        },
+        {
+          "time": 4.84,
+          "action": "wrong",
+          "value": "地",
+          "stepIndex": 1,
+          "unitIndex": 0
+        },
+        {
+          "time": 5.7,
+          "shownAt": 2.551,
+          "action": "correct",
+          "value": "说",
+          "word": "话说",
+          "shown": "话",
+          "stepIndex": 1,
+          "unitIndex": 0,
+          "options": [
+            "地",
+            "紧",
+            "实",
+            "说"
+          ]
+        },
+        {
+          "time": 7.339,
+          "action": "wrong",
+          "value": "来",
+          "stepIndex": 2,
+          "unitIndex": 0
+        },
+        {
+          "time": 8.195,
+          "shownAt": 6.01,
+          "action": "correct",
+          "value": "宜",
+          "word": "合宜",
+          "shown": "合",
+          "stepIndex": 2,
+          "unitIndex": 0,
+          "options": [
+            "来",
+            "制",
+            "也",
+            "宜"
+          ]
+        },
+        {
+          "time": 9.835,
+          "shownAt": 8.505,
+          "action": "correct",
+          "value": "果",
+          "word": "苹果",
+          "shown": "苹",
+          "stepIndex": 3,
+          "unitIndex": 0,
+          "options": [
+            "告",
+            "中",
+            "果",
+            "阴"
+          ]
+        }
+      ],
+      "game": {
+        "kind": "letters",
+        "tokens": [
+          "一句",
+          "话说",
+          "得",
+          "合宜， ",
+          "就",
+          "如",
+          "金",
+          "苹果",
+          "在",
+          "银",
+          "网",
+          "子",
+          "里。"
+        ],
+        "steps": [
+          {
+            "tokenIndex": 0,
+            "word": "一句",
+            "shown": "一",
+            "units": [
+              {
+                "answer": "句",
+                "options": [
+                  "举",
+                  "句",
+                  "体",
+                  "粒"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 1,
+            "word": "话说",
+            "shown": "话",
+            "units": [
+              {
+                "answer": "说",
+                "options": [
+                  "地",
+                  "紧",
+                  "实",
+                  "说"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 3,
+            "word": "合宜",
+            "shown": "合",
+            "units": [
+              {
+                "answer": "宜",
+                "options": [
+                  "来",
+                  "制",
+                  "也",
+                  "宜"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 7,
+            "word": "苹果",
+            "shown": "苹",
+            "units": [
+              {
+                "answer": "果",
+                "options": [
+                  "告",
+                  "中",
+                  "果",
+                  "阴"
+                ]
+              }
+            ]
+          }
+        ],
+        "given": [],
+        "separator": ""
+      },
+      "path": "footage/letters-pro2511-zh.mp4",
+      "sha256": "65c159ae9a4d620f0b12e58f26f715ea3ddd241ef38e01c99c7275fa6be17c6b",
+      "bytes": 237872
+    },
+    {
+      "name": "words-psa231-zh",
+      "url": "https://bible.lucasacademy.org/?passage=PSA.23.1&translation=CUV&game=words",
+      "recorded": "2026-10-07",
+      "seed": 251103,
+      "kind": "words",
+      "translation": "CUV",
+      "simulated": true,
+      "displayOnlyLayout": true,
+      "trimmedSourceLeadInSeconds": 1.955,
+      "videoStartOffsetSeconds": 0,
+      "events": [
+        {
+          "time": 2.247,
+          "shownAt": 0.011,
+          "action": "correct",
+          "value": "的",
+          "word": "的",
+          "shown": "",
+          "stepIndex": 0,
+          "unitIndex": 0,
+          "options": [
+            "从",
+            "其",
+            "却",
+            "的"
+          ]
+        },
+        {
+          "time": 4.828,
+          "action": "wrong",
+          "value": "跟",
+          "stepIndex": 1,
+          "unitIndex": 0
+        },
+        {
+          "time": 5.687,
+          "shownAt": 2.558,
+          "action": "correct",
+          "value": "诗",
+          "word": "诗",
+          "shown": "",
+          "stepIndex": 1,
+          "unitIndex": 0,
+          "options": [
+            "跟",
+            "诗",
+            "以",
+            "效"
+          ]
+        },
+        {
+          "time": 7.323,
+          "action": "wrong",
+          "value": "那些",
+          "stepIndex": 2,
+          "unitIndex": 0
+        },
+        {
+          "time": 8.182,
+          "shownAt": 5.996,
+          "action": "correct",
+          "value": "我的",
+          "word": "我的",
+          "shown": "",
+          "stepIndex": 2,
+          "unitIndex": 0,
+          "options": [
+            "我的",
+            "那些",
+            "你的",
+            "一个"
+          ]
+        },
+        {
+          "time": 9.794,
+          "shownAt": 8.489,
+          "action": "correct",
+          "value": "牧者",
+          "word": "牧者",
+          "shown": "",
+          "stepIndex": 3,
+          "unitIndex": 0,
+          "options": [
+            "羞辱",
+            "工作",
+            "牧者",
+            "盼望"
+          ]
+        },
+        {
+          "time": 11.43,
+          "action": "wrong",
+          "value": "不",
+          "stepIndex": 4,
+          "unitIndex": 0
+        },
+        {
+          "time": 12.287,
+          "shownAt": 10.106,
+          "action": "correct",
+          "value": "我",
+          "word": "我",
+          "shown": "",
+          "stepIndex": 4,
+          "unitIndex": 0,
+          "options": [
+            "不",
+            "谁",
+            "我",
+            "在"
+          ]
+        },
+        {
+          "time": 13.905,
+          "shownAt": 12.598,
+          "action": "correct",
+          "value": "必",
+          "word": "必",
+          "shown": "",
+          "stepIndex": 5,
+          "unitIndex": 0,
+          "options": [
+            "两",
+            "喜",
+            "颊",
+            "必"
+          ]
+        },
+        {
+          "time": 15.521,
+          "shownAt": 14.214,
+          "action": "correct",
+          "value": "不致",
+          "word": "不致",
+          "shown": "",
+          "stepIndex": 6,
+          "unitIndex": 0,
+          "options": [
+            "不致",
+            "在此",
+            "顺服",
+            "再说"
+          ]
+        },
+        {
+          "time": 17.157,
+          "action": "wrong",
+          "value": "谦虚",
+          "stepIndex": 7,
+          "unitIndex": 0
+        },
+        {
+          "time": 18.026,
+          "shownAt": 15.83,
+          "action": "correct",
+          "value": "缺乏",
+          "word": "缺乏",
+          "shown": "",
+          "stepIndex": 7,
+          "unitIndex": 0,
+          "options": [
+            "谦虚",
+            "缺乏",
+            "领会",
+            "信心"
+          ]
+        }
+      ],
+      "game": {
+        "kind": "words",
+        "tokens": [
+          "大卫",
+          "的",
+          "诗。 ",
+          "耶和华",
+          "是",
+          "我的",
+          "牧者， ",
+          "我",
+          "必",
+          "不致",
+          "缺乏。"
+        ],
+        "steps": [
+          {
+            "tokenIndex": 1,
+            "word": "的",
+            "shown": "",
+            "units": [
+              {
+                "answer": "的",
+                "options": [
+                  "从",
+                  "其",
+                  "却",
+                  "的"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 2,
+            "word": "诗",
+            "shown": "",
+            "units": [
+              {
+                "answer": "诗",
+                "options": [
+                  "跟",
+                  "诗",
+                  "以",
+                  "效"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 5,
+            "word": "我的",
+            "shown": "",
+            "units": [
+              {
+                "answer": "我的",
+                "options": [
+                  "我的",
+                  "那些",
+                  "你的",
+                  "一个"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 6,
+            "word": "牧者",
+            "shown": "",
+            "units": [
+              {
+                "answer": "牧者",
+                "options": [
+                  "羞辱",
+                  "工作",
+                  "牧者",
+                  "盼望"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 7,
+            "word": "我",
+            "shown": "",
+            "units": [
+              {
+                "answer": "我",
+                "options": [
+                  "不",
+                  "谁",
+                  "我",
+                  "在"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 8,
+            "word": "必",
+            "shown": "",
+            "units": [
+              {
+                "answer": "必",
+                "options": [
+                  "两",
+                  "喜",
+                  "颊",
+                  "必"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 9,
+            "word": "不致",
+            "shown": "",
+            "units": [
+              {
+                "answer": "不致",
+                "options": [
+                  "不致",
+                  "在此",
+                  "顺服",
+                  "再说"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 10,
+            "word": "缺乏",
+            "shown": "",
+            "units": [
+              {
+                "answer": "缺乏",
+                "options": [
+                  "谦虚",
+                  "缺乏",
+                  "领会",
+                  "信心"
+                ]
+              }
+            ]
+          }
+        ],
+        "given": [
+          0,
+          3,
+          4
+        ],
+        "separator": ""
+      },
+      "path": "footage/words-psa231-zh.mp4",
+      "sha256": "1178a6c3c02a1f6e8599fba43dd024726acfd2555c93711924686bd83ed018a6",
+      "bytes": 536641
+    }
+  ],
+  "teachingOverlay": {
+    "cues": [
+      "cl03-04",
+      "cl03-05"
+    ],
+    "reason": "真实 CUV 把神爱世人分成四字词，干扰项来自四字词末字，无法产生界代上人；保留定稿，局部叠明确教学示意。"
+  }
+}

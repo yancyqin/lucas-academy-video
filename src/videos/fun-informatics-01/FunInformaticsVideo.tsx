@@ -1,3 +1,4 @@
+import {rampAt} from '../../lib/timeRamps';
 import type {CSSProperties, FC, ReactNode} from 'react';
 import {
   type CalculateMetadataFunction,
@@ -167,19 +168,7 @@ const ClipSpan: FC<{ctx: Ctx; file: string; span: Span; main: number; len: numbe
   );
 };
 
-/** Footage second at shot second `t`: a cubic Hermite curve through [t, s, speed] keys, so the speed changes smoothly. */
-export const rampAt = (keys: RampKey[], t: number): number => {
-  if (t <= keys[0][0]) return keys[0][1];
-  for (let i = 1; i < keys.length; i++) {
-    const [t0, s0, v0] = keys[i - 1];
-    const [t1, s1, v1] = keys[i];
-    if (t > t1) continue;
-    const h = t1 - t0;
-    const u = (t - t0) / h;
-    return (2 * u ** 3 - 3 * u ** 2 + 1) * s0 + (u ** 3 - 2 * u ** 2 + u) * h * v0 + (3 * u ** 2 - 2 * u ** 3) * s1 + (u ** 3 - u ** 2) * h * v1;
-  }
-  return keys[keys.length - 1][1];
-};
+export {rampAt} from '../../lib/timeRamps';
 
 /** One unbroken recording played along a speed curve: every frame is looked up on the curve, never cut. */
 const RampClip: FC<{ctx: Ctx; file: string; keys: RampKey[]; dim?: number}> = ({ctx, file, keys, dim = 0}) => {

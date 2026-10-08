@@ -1,0 +1,472 @@
+{
+  "checked": "2026-10-07",
+  "assets": [
+    {
+      "name": "monet-bridge-1899",
+      "path": "art/monet-bridge-1899.jpg",
+      "title": "Bridge Over a Pond of Water Lilies, Claude Monet 1899.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Bridge_Over_a_Pond_of_Water_Lilies,_Claude_Monet_1899.jpg",
+      "download": "https://upload.wikimedia.org/wikipedia/commons/1/10/Bridge_Over_a_Pond_of_Water_Lilies%2C_Claude_Monet_1899.jpg",
+      "license": "Public domain",
+      "metadata": {
+        "DateTime": {
+          "value": "2008-07-24 16:10:33",
+          "source": "mediawiki-metadata",
+          "hidden": ""
+        },
+        "ObjectName": {
+          "value": "<div class=\"fn\">\n<div style=\"font-size:0.9em;display:inline-block;\">German:  <div style=\"display:inline-block\" dir=\"ltr\" lang=\"de\"><i>Brücke über einen Seerosenteich</i></div></div><br><div style=\"font-weight:bold;display:inline-block;\"><div style=\"display:inline-block\" dir=\"ltr\" lang=\"en\"><i>Bridge Over a Pond of Water Lilies</i></div></div><div style=\"display: none;\">title QS:P1476,de:\"Brücke über einen Seerosenteich\"</div><div style=\"display: none;\">label QS:Lde,\"Brücke über einen Seerosenteich\"</div><div style=\"display: none;\">label QS:Lfr,\"Le Bassin aux nymphéas\"</div><div style=\"display: none;\">label QS:Len,\"Bridge Over a Pond of Water Lilies\"</div></div>",
+          "source": "commons-desc-page"
+        },
+        "CommonsMetadataExtension": {
+          "value": 1.2,
+          "source": "extension",
+          "hidden": ""
+        },
+        "Categories": {
+          "value": "Bridge over a Pond of Water Lilies, MET|Artworks with Wikidata item|Artworks with known accession number|CC-PD-Mark|Artworks with accession number from Wikidata|PD-old-95-expired|Artworks digital representation of 2D work|Files by User:Dschwen|Metropolitan Museum of Art works with link to Collection Database",
+          "source": "commons-categories",
+          "hidden": ""
+        },
+        "Assessments": {
+          "value": "",
+          "source": "commons-categories",
+          "hidden": ""
+        },
+        "Artist": {
+          "value": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Claude_Monet\" class=\"extiw\" title=\"w:en:Claude Monet\"><span title=\"French painter (1840–1926)\">Claude Monet</span></a></bdi>",
+          "source": "commons-desc-page"
+        },
+        "DateTimeOriginal": {
+          "value": "1899<div style=\"display: none;\">date QS:P571,+1899-00-00T00:00:00Z/9</div>",
+          "source": "commons-desc-page"
+        },
+        "Credit": {
+          "value": "<a href=\"//commons.wikimedia.org/wiki/User:Dschwen\" title=\"User:Dschwen\">Daniel Schwen</a>, Own work, image taken at the Metropolitan Museum of Art, New York, 2008-05-28",
+          "source": "commons-desc-page"
+        },
+        "LicenseShortName": {
+          "value": "Public domain",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "UsageTerms": {
+          "value": "Public domain",
+          "source": "commons-desc-page"
+        },
+        "AttributionRequired": {
+          "value": "false",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "Copyrighted": {
+          "value": "False",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "Restrictions": {
+          "value": "",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "License": {
+          "value": "pd",
+          "source": "commons-templates",
+          "hidden": ""
+        }
+      },
+      "sha256": "6492e54e19b7b38f5fd3094bcd47d0f591d687f851f9cd52411e5d3ee9509933",
+      "bytes": 3812155
+    },
+    {
+      "name": "impression-sunrise",
+      "path": "art/impression-sunrise.jpg",
+      "title": "Claude Monet, Impression, soleil levant.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Claude_Monet,_Impression,_soleil_levant.jpg",
+      "download": "https://upload.wikimedia.org/wikipedia/commons/5/54/Claude_Monet%2C_Impression%2C_soleil_levant.jpg",
+      "license": "Public domain",
+      "metadata": {
+        "DateTime": {
+          "value": "2012-01-11 17:36:47",
+          "source": "mediawiki-metadata",
+          "hidden": ""
+        },
+        "ObjectName": {
+          "value": "<div class=\"fn\">\n<div style=\"font-weight:bold;display:inline-block;\"><div style=\"display:inline-block\" dir=\"ltr\" lang=\"en\"><i>Impression, Sunrise <span class=\"mw-valign-text-top noprint\" typeof=\"mw:File/Frameless\"><a href=\"https://www.wikidata.org/wiki/Q328523#P1476\" title=\"Edit this at Wikidata\"><img alt=\"Edit this at Wikidata\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"10\" height=\"10\" class=\"mw-file-element\" data-file-width=\"20\" data-file-height=\"20\"></a></span></i></div></div><div style=\"display: none;\">label QS:Les,\"Impresión, sol naciente\"</div><div style=\"display: none;\">label QS:Lfr,\"Impression Soleil levant\"</div><div style=\"display: none;\">label QS:Len,\"Impression Sunrise\"</div><div style=\"display: none;\">label QS:Lru,\"Впечатление. Восходящее солнце\"</div><div style=\"display: none;\">label QS:Luk,\"Враження. Сонце, що сходить\"</div><div style=\"display: none;\">label QS:Lde,\"Impression Sonnenaufgang\"</div><div style=\"display: none;\">label QS:Lja,\"印象・日の出\"</div></div>",
+          "source": "commons-desc-page"
+        },
+        "CommonsMetadataExtension": {
+          "value": 1.2,
+          "source": "extension",
+          "hidden": ""
+        },
+        "Categories": {
+          "value": "Impression, soleil levant by Claude Monet|Artworks with Wikidata item|Artworks with known accession number|CC-PD-Mark|Artworks with accession number from Wikidata|PD-old-95|Artworks digital representation of 2D work",
+          "source": "commons-categories",
+          "hidden": ""
+        },
+        "Assessments": {
+          "value": "",
+          "source": "commons-categories",
+          "hidden": ""
+        },
+        "Artist": {
+          "value": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Claude_Monet\" class=\"extiw\" title=\"w:en:Claude Monet\"><span title=\"French painter (1840–1926)\">Claude Monet</span></a></bdi>",
+          "source": "commons-desc-page"
+        },
+        "DateTimeOriginal": {
+          "value": "1872<div style=\"display: none;\">date QS:P571,+1872-00-00T00:00:00Z/9</div>",
+          "source": "commons-desc-page"
+        },
+        "Credit": {
+          "value": "<a rel=\"nofollow\" class=\"external text\" href=\"http://faculty.wartburg.edu/wilson/arthistory/images/29/29-20.jpg\">wartburg.edu</a>",
+          "source": "commons-desc-page"
+        },
+        "LicenseShortName": {
+          "value": "Public domain",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "UsageTerms": {
+          "value": "Public domain",
+          "source": "commons-desc-page"
+        },
+        "AttributionRequired": {
+          "value": "false",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "Copyrighted": {
+          "value": "False",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "Restrictions": {
+          "value": "",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "License": {
+          "value": "pd",
+          "source": "commons-templates",
+          "hidden": ""
+        }
+      },
+      "sha256": "4ddfd849ed38c27eb8ccb47ecdfd3a329b5d41607ebc13fdb5fb721afb8df1a3",
+      "bytes": 1876279
+    },
+    {
+      "name": "monet-nadar-1899",
+      "path": "art/monet-nadar-1899.jpg",
+      "title": "Claude Monet 1899 Nadar crop.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Claude_Monet_1899_Nadar_crop.jpg",
+      "download": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Claude_Monet_1899_Nadar_crop.jpg",
+      "license": "Public domain",
+      "metadata": {
+        "DateTime": {
+          "value": "2009-10-12 16:47:12",
+          "source": "mediawiki-metadata",
+          "hidden": ""
+        },
+        "ObjectName": {
+          "value": "Claude Monet 1899 Nadar crop",
+          "source": "mediawiki-metadata"
+        },
+        "CommonsMetadataExtension": {
+          "value": 1.2,
+          "source": "extension",
+          "hidden": ""
+        },
+        "Categories": {
+          "value": "Retouched pictures|Author died more than 100 years ago public domain images|Self-published work|PD-self|Files by User:Dsmurat from tr.wikipedia|Featured pictures on Wikipedia, Persian|Featured pictures on Wikipedia, Turkish|CC-PD-Mark|Photographs of Claude Monet by Nadar|1899 black and white portrait photographs of men",
+          "source": "commons-categories",
+          "hidden": ""
+        },
+        "Assessments": {
+          "value": "valued",
+          "source": "commons-categories",
+          "hidden": ""
+        },
+        "ImageDescription": {
+          "value": "Portrait photograph of the French impressionist painter <a href=\"https://en.wikipedia.org/wiki/Claude_Monet\" class=\"extiw\" title=\"en:Claude Monet\">Claude Monet</a> by <a href=\"https://en.wikipedia.org/wiki/Nadar_(photographer)\" class=\"extiw\" title=\"en:Nadar (photographer)\">Nadar</a>",
+          "source": "commons-desc-page"
+        },
+        "DateTimeOriginal": {
+          "value": "1899",
+          "source": "commons-desc-page"
+        },
+        "Credit": {
+          "value": "<p><a href=\"//commons.wikimedia.org/wiki/File:Claude_Monet_1899_Nadar.jpg\" title=\"File:Claude Monet 1899 Nadar.jpg\">Claude Monet 1899 Nadar.jpg</a>\n</p>\n<table class=\"layouttemplate\" lang=\"en\" dir=\"ltr\" style=\"margin:.5em auto;width:100%;background:var(--background-color-neutral-subtle,#f8f8f8);border:2px solid var(--border-color-muted,#EEE);color: inherit;padding:5px\">\n\n<tbody><tr>\n<td style=\"padding:5px\"><div class=\"wpImageAnnotatorControl wpImageAnnotatorOff\"><span typeof=\"mw:File\"><a href=\"//commons.wikimedia.org/wiki/File:Applications-graphics.svg\" class=\"mw-file-description\"><img src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Applications-graphics.svg/60px-Applications-graphics.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"45\" height=\"45\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Applications-graphics.svg/120px-Applications-graphics.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"48\" data-file-height=\"48\"></a></span></div>\n</td>\n<td style=\"width:100%\">This  is a <i><b><span lang=\"en\" dir=\"ltr\"><a href=\"https://en.wikipedia.org/wiki/Image_editing\" class=\"extiw\" title=\"en:Image editing\"><span lang=\"en\" dir=\"ltr\">retouched picture</span></a></span></b></i>, which means that it has been digitally altered from its original version. Modifications: <i>Resim kırpıldı, renk ve parlaklık ayarı yapıldı</i>. The original can be viewed here: <b><a href=\"//commons.wikimedia.org/wiki/File:Claude_Monet_1899_Nadar.jpg\" title=\"File:Claude Monet 1899 Nadar.jpg\">Claude Monet 1899 Nadar.jpg</a>: <span class=\"mw-image-border\" typeof=\"mw:File\"><a href=\"//commons.wikimedia.org/wiki/File:Claude_Monet_1899_Nadar.jpg\" class=\"mw-file-description\"><img src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Claude_Monet_1899_Nadar.jpg/20px-Claude_Monet_1899_Nadar.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"10\" height=\"16\" class=\"mw-file-element\" data-file-width=\"2021\" data-file-height=\"3285\"></a></span></b>. Modifications made by <a href=\"//commons.wikimedia.org/wiki/User:Dsmurat\" title=\"User:Dsmurat\">Dsmurat</a>.\n<p><span class=\"layouttemplateargs\" style=\"display:none;speak:none;\" title=\"template=Retouched+picture 1%3DResim+k%C4%B1rp%C4%B1ld%C4%B1%2C+renk+ve+parlakl%C4%B1k+ayar%C4%B1+yap%C4%B1ld%C4%B1 2%3DClaude+Monet+1899+Nadar.jpg 3%3DDsmurat 4%3D 5%3D\"> </span>\n</p>\n</td></tr></tbody></table>",
+          "source": "commons-desc-page"
+        },
+        "Artist": {
+          "value": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Nadar\" class=\"extiw\" title=\"w:en:Nadar\"><span title=\"French photographer and balloonist (1820–1910)\">Nadar</span></a></bdi>",
+          "source": "commons-desc-page"
+        },
+        "LicenseShortName": {
+          "value": "Public domain",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "UsageTerms": {
+          "value": "Public domain",
+          "source": "commons-desc-page"
+        },
+        "AttributionRequired": {
+          "value": "false",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "Copyrighted": {
+          "value": "False",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "Restrictions": {
+          "value": "",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "License": {
+          "value": "pd",
+          "source": "commons-templates",
+          "hidden": ""
+        }
+      },
+      "sha256": "3dea922f0a99fa73bab62e7a6dba976303a7b0d18e1de15e3fa6a5aae3adc472",
+      "bytes": 1826613
+    },
+    {
+      "name": "debussy-nadar-1908",
+      "path": "art/debussy-nadar-1908.jpg",
+      "title": "Claude Debussy ca 1908, foto av Félix Nadar.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Claude_Debussy_ca_1908,_foto_av_F%C3%A9lix_Nadar.jpg",
+      "download": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Claude_Debussy_ca_1908%2C_foto_av_F%C3%A9lix_Nadar.jpg",
+      "license": "Public domain",
+      "metadata": {
+        "DateTime": {
+          "value": "2014-08-12 08:40:20",
+          "source": "mediawiki-metadata",
+          "hidden": ""
+        },
+        "ObjectName": {
+          "value": "Claude Debussy ca 1908, foto av Félix Nadar",
+          "source": "mediawiki-metadata"
+        },
+        "CommonsMetadataExtension": {
+          "value": 1.2,
+          "source": "extension",
+          "hidden": ""
+        },
+        "Categories": {
+          "value": "Files with no machine-readable source|Author died more than 100 years ago public domain images|Images without source|Black and white portrait photographs of men|Men facing right|CC-PD-Mark|Photographs of Claude Debussy by Nadar",
+          "source": "commons-categories",
+          "hidden": ""
+        },
+        "Assessments": {
+          "value": "",
+          "source": "commons-categories",
+          "hidden": ""
+        },
+        "ImageDescription": {
+          "value": "Photograph of <a href=\"//commons.wikimedia.org/wiki/Claude_Debussy\" title=\"Claude Debussy\">Claude Debussy</a>",
+          "source": "commons-desc-page"
+        },
+        "DateTimeOriginal": {
+          "value": "circa 1908<div style=\"display: none;\">date QS:P,+1908-00-00T00:00:00Z/9,P1480,Q5727902</div>",
+          "source": "commons-desc-page"
+        },
+        "Artist": {
+          "value": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Nadar\" class=\"extiw\" title=\"w:en:Nadar\"><span title=\"French photographer and balloonist (1820–1910)\">Nadar</span></a></bdi>",
+          "source": "commons-desc-page"
+        },
+        "Permission": {
+          "value": "This image is in the <a href=\"//commons.wikimedia.org/wiki/Public_domain\" class=\"mw-redirect\" title=\"Public domain\">public domain</a>.",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "LicenseShortName": {
+          "value": "Public domain",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "UsageTerms": {
+          "value": "Public domain",
+          "source": "commons-desc-page"
+        },
+        "AttributionRequired": {
+          "value": "false",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "Copyrighted": {
+          "value": "False",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "Restrictions": {
+          "value": "",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "License": {
+          "value": "pd",
+          "source": "commons-templates",
+          "hidden": ""
+        }
+      },
+      "sha256": "b366cb187289822bec6f6b6f11c8c64b6a9ea9c5f8e4ad7a6047a9a553e04a2e",
+      "bytes": 194229
+    },
+    {
+      "name": "daguerre-boulevard",
+      "path": "art/daguerre-boulevard.jpg",
+      "title": "Boulevard du Temple by Daguerre.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Boulevard_du_Temple_by_Daguerre.jpg",
+      "download": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Boulevard_du_Temple_by_Daguerre.jpg",
+      "license": "Public domain",
+      "metadata": {
+        "DateTime": {
+          "value": "2022-07-15 09:38:02",
+          "source": "mediawiki-metadata",
+          "hidden": ""
+        },
+        "ObjectName": {
+          "value": "<div class=\"fn\">\n<div style=\"font-weight:bold;display:inline-block;\"><div style=\"display:inline-block\" dir=\"ltr\" lang=\"en\"><i>Boulevard du Temple</i></div></div><div style=\"display: none;\">label QS:Lfr,\"Boulevard du Temple\"</div><div style=\"display: none;\">label QS:Len,\"Boulevard du Temple\"</div><div style=\"display: none;\">label QS:Lar,\"بولڤار دو تومپل\"</div></div>",
+          "source": "commons-desc-page"
+        },
+        "CommonsMetadataExtension": {
+          "value": 1.2,
+          "source": "extension",
+          "hidden": ""
+        },
+        "Categories": {
+          "value": "Boulevard du Temple by Louis Daguerre|Images with annotations|PD-old-100-expired|Featured pictures on Wikipedia, English|Commons featured desktop backgrounds|Scans by Michael Maggs|Photographs with Wikidata item|CC-PD-Mark|Files with coordinates missing SDC location of creation (48° N, 2° E)|Featured photographs in the public domain|Artworks digital representation of unknown type of work|Artworks digital representation of 2D work|Artworks with digital representation of different depicts|Featured pictures on Wikipedia, Arabic|Assessment tagged pages marked as POTY candidates|Photographs with Wikidata item missing author|Featured pictures of history of Paris",
+          "source": "commons-categories",
+          "hidden": ""
+        },
+        "Assessments": {
+          "value": "featured|potd|poty",
+          "source": "commons-categories",
+          "hidden": ""
+        },
+        "GPSLatitude": {
+          "value": "48.868639",
+          "source": "commons-desc-page"
+        },
+        "GPSLongitude": {
+          "value": "2.363250",
+          "source": "commons-desc-page"
+        },
+        "GPSMapDatum": {
+          "value": "WGS-84",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "Artist": {
+          "value": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Louis_Daguerre\" class=\"extiw\" title=\"w:en:Louis Daguerre\"><span title=\"French scientist, artist and photographer (1787–1851)\">Louis Daguerre</span></a></bdi>",
+          "source": "commons-desc-page"
+        },
+        "ImageDescription": {
+          "value": "<a href=\"https://en.wikipedia.org/wiki/Boulevard_du_Temple\" class=\"extiw\" title=\"en:Boulevard du Temple\">Boulevard du Temple</a>, <a href=\"https://en.wikipedia.org/wiki/Paris\" class=\"extiw\" title=\"en:Paris\">Paris</a>, 3rd arrondissement, <a href=\"https://en.wikipedia.org/wiki/Daguerreotype\" class=\"extiw\" title=\"en:Daguerreotype\">Daguerreotype</a>. Made in 1838 by inventor <a href=\"https://en.wikipedia.org/wiki/Louis_Daguerre\" class=\"extiw\" title=\"en:Louis Daguerre\">Louis Daguerre</a>, this is believed to be the earliest photograph showing a living person. It is a view of a busy street, but because the exposure lasted for 4 to 5 minutes (see <a rel=\"nofollow\" class=\"external text\" href=\"https://www.reclamebeeld.nl/shutter-speed-time-of-the-first-image-human-daguerre-photo-boulevard-du-temple-paris/\">shutter speed Daguerre photo explained</a>) the moving traffic left no trace. Only the two men near the bottom left corner, one apparently having his boots polished by the other, stayed in one place long enough to be visible. As with most daguerreotypes, the image is a <a href=\"https://en.wikipedia.org/wiki/mirror_image\" class=\"extiw\" title=\"en:mirror image\">mirror image</a>.",
+          "source": "commons-desc-page"
+        },
+        "DateTimeOriginal": {
+          "value": "between 24 April 1838 and 4 May 1838 (or possibly 1837)",
+          "source": "commons-desc-page"
+        },
+        "Credit": {
+          "value": "Scanned from The Photography Book, Phaidon Press, London, 1997.",
+          "source": "commons-desc-page"
+        },
+        "LicenseShortName": {
+          "value": "Public domain",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "UsageTerms": {
+          "value": "Public domain",
+          "source": "commons-desc-page"
+        },
+        "AttributionRequired": {
+          "value": "false",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "Copyrighted": {
+          "value": "False",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "Restrictions": {
+          "value": "",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "License": {
+          "value": "pd",
+          "source": "commons-templates",
+          "hidden": ""
+        }
+      },
+      "sha256": "e1a9822e0396c23272a0b9a8bb82009ee47e6515a8af6fa397c3d781633880c6",
+      "bytes": 3402919
+    },
+    {
+      "name": "water-lilies-1906",
+      "path": "art/water-lilies-1906.jpg",
+      "title": "Water Lilies",
+      "date": "1906",
+      "author": "Claude Monet (French, 1840–1926)",
+      "source": "https://www.artic.edu/artworks/16568",
+      "download": "https://www.artic.edu/iiif/2/3c27b499-af56-f0d5-93b5-a7f2f1ad5813/full/3000,/0/default.jpg",
+      "license": "CC0",
+      "licenseSource": "https://www.artic.edu/open-access/open-access-images",
+      "isPublicDomain": true,
+      "sha256": "b61a1c384193a4bec03de96b839dfdae492433a13067b89a1c31eaaabc50decb",
+      "bytes": 4084058
+    },
+    {
+      "name": "stacks-summer",
+      "path": "art/stacks-summer.jpg",
+      "title": "Stacks of Wheat (End of Summer)",
+      "date": "1890–91",
+      "author": "Claude Monet (French, 1840–1926)",
+      "source": "https://www.artic.edu/artworks/64818",
+      "download": "https://www.artic.edu/iiif/2/a38e2828-ec6f-ece1-a30f-70243449197b/full/3000,/0/default.jpg",
+      "license": "CC0",
+      "licenseSource": "https://www.artic.edu/open-access/open-access-images",
+      "isPublicDomain": true,
+      "sha256": "4f5d19e2f246e4ff84899ee33e32efc7acb91fcbc83cf679504dcdbe591477d9",
+      "bytes": 1835467
+    },
+    {
+      "name": "stacks-autumn",
+      "path": "art/stacks-autumn.jpg",
+      "title": "Stacks of Wheat (End of Day, Autumn)",
+      "date": "1890–91",
+      "author": "Claude Monet (French, 1840–1926)",
+      "source": "https://www.artic.edu/artworks/14624",
+      "download": "https://www.artic.edu/iiif/2/4c364c64-2108-4e19-5fc5-1ab26ba924a7/full/3000,/0/default.jpg",
+      "license": "CC0",
+      "licenseSource": "https://www.artic.edu/open-access/open-access-images",
+      "isPublicDomain": true,
+      "sha256": "0635c588aa8b703b2f43ba0871bab723f223a1bee0556c91259bf4bc5ef61d99",
+      "bytes": 1977713
+    },
+    {
+      "name": "stacks-snow",
+      "path": "art/stacks-snow.jpg",
+      "title": "Stacks of Wheat (Sunset, Snow Effect)",
+      "date": "1890–91",
+      "author": "Claude Monet (French, 1840–1926)",
+      "source": "https://www.artic.edu/artworks/81545",
+      "download": "https://www.artic.edu/iiif/2/be0d3e50-a600-6f33-ea8f-16a34d892442/full/3000,/0/default.jpg",
+      "license": "CC0",
+      "licenseSource": "https://www.artic.edu/open-access/open-access-images",
+      "isPublicDomain": true,
+      "sha256": "46e300efef936a34b52074f1addf5f316b906e7cacb6a9155e28278ef70d7da6",
+      "bytes": 1859793
+    }
+  ]
+}
