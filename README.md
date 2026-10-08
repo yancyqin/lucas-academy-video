@@ -45,6 +45,25 @@ Reuse the `ramp` visual in `src/videos/fun-informatics-01/shots.ts` and the shar
 Hermite interpolation in `src/lib/timeRamps.ts`. A montage is appropriate for separate
 scenes; a continuous transformation or game recording must retain its continuity.
 
+## YouTube tags
+
+The owner's rule (2026-10-07): every tag is **lowercase**, and every film carries the default set
+
+    #education #christianeducation #parenting
+    #art #arthistory #stem
+    #bilingual #bilingualchildren #lucas_academy
+
+in two places: the hashtag line that ends the description, and the Studio tags field (there without `#`).
+A film adds a few lowercase topic tags of its own. In the hashtag line they come after the defaults,
+because YouTube shows a description's first three hashtags (#education #christianeducation #parenting)
+above the title; more than 15 hashtags and YouTube ignores them all, so a film adds at most six. In the
+tags field they come first, and the field holds 500 characters.
+
+The set lives in [`scripts/youtube_tags.py`](./scripts/youtube_tags.py); every description generator
+(`scripts/*/youtube.py`, `scripts/reciprocal-doors-youtube.py`) should take its hashtags and tags from it,
+so changing the defaults is one edit, and write the whole-person layout: 【标题 / Title】, 【简介 / Description】
+(ending in the hashtags), 【标签 / Tags】 and 【上传设置 / Upload settings】.
+
 ## Film endings
 
 The owner's rule (2026-10-07): every film **ends with an open-ended, inviting question**. It is the

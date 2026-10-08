@@ -45,6 +45,12 @@ No burned-in captions: YouTube carries them. In `out/vg-why-paint-them/`:
   and only the question, big in Chinese and small in English (the README's cover rule).
   `npx remotion still src/index.ts VgWhyCover out/vg-why-paint-them/cover.png` (needs `art/roulin.jpg`
   from `fetch_assets.py`), then `ffmpeg -i cover.png -vf scale=1280:720:flags=lanczos -q:v 2 youtube-thumbnail.jpg`.
+- English cover (2026-10-07): `VgWhyCoverEn` flips it, "Why Did / Van Gogh / Paint Them?" big with 「梵高为什么画他们？」
+  small, *Them* gold like 他们. Same commands with `VgWhyCoverEn` and `cover.en.png`.
+- English title, description and tags (Studio → Languages, for the English dub):
+  `python3 scripts/vg-why/youtube.py` → `youtube-description.en.txt`. Title "Why Did Van Gogh Paint Them? | Painting
+  the People He Loved"; chapters from `src/data/vg-why-paint-them.json`; the 31 works from `shots.ts`, with one link to
+  `art/SOURCES.txt` on GitHub for the Commons pages (31 links would pass YouTube's 5,000 characters).
 
 Both tracks carry the Van Gogh House music under the narration (Human Horizon A,
 the owner's Suno song — `public/vg-why-paint-them/music/SOURCE.md`): looped

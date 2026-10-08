@@ -230,6 +230,7 @@ export const Root: FC = () => {
         />
       ))}
       <Composition id="VgWhyCover" component={VgWhyCover} durationInFrames={1} fps={VG_WHY_FPS} width={1920} height={1080} />
+      <Composition id="VgWhyCoverEn" component={VgWhyCover} defaultProps={{lang: 'en' as const}} durationInFrames={1} fps={VG_WHY_FPS} width={1920} height={1080} />
       {/* 语言的桥 · Language Bridge (lucas-academy-media#4): a Chinese film and an English film. */}
       {([
         ['LanguageBridgeZh', {lang: 'zh', audio: true, subtitles: true}],
