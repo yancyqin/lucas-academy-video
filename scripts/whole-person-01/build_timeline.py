@@ -20,6 +20,8 @@ pauses of PAUSE s or more; a sidechain compressor had let it swell 12 dB in ever
 card hold. The result gets one fixed gain to FILM_LUFS plus a peak limiter
 (one-pass loudnorm rides the gain).
 
+  [zh] [en]
+      Build only these films (both by default); the other film's timeline and audio stay as they are.
   --keep-timeline LANG [--remux]
       The picture is already rendered: keep public/whole-person-01/timeline.LANG.json
       and rebuild only that film's audio, e.g. after pitch.py re-voiced lines (every
@@ -46,7 +48,7 @@ SCRIPTS = {
 }
 VOICES = {
     "zh": MEDIA / "outputs/yancy/zh/whole-person-five-ideas-v10",  # Yancy, zero-shot-instruct teaching tone, 1.0; v9 + the question lines
-    "en": MEDIA / "outputs/louise/en/whole-person-five-ideas-v9",
+    "en": MEDIA / "outputs/louise/en/whole-person-five-ideas-v10",  # Louise; v9 + the 2026-10-08 fixes
 }
 FPS = 30
 RATE = 24000
@@ -55,12 +57,15 @@ ONSET = 0.15       # breath at the start of every cue
 GAP = 0.4          # after every cue
 SECTION_GAP = 0.9  # extra at the end of a section
 END_CARD = 9.0
-SILENCE = 300      # |sample| below this (about -40 dBFS) counts as silence when trimming
+ACTIVE_DB = -50    # a 10 ms frame above this (RMS, dBFS) is sound, when trimming
+SPEECH_DB = -30    # a stretch of sound that peaks above this is speech
+LEAD_GAP, TAIL_GAP = 0.1, 0.25  # seconds of quiet that still join a sound to the first / last word
 KEEP = round(0.05 * RATE)
 # Extra time to read a card or watch a demo after a line.
 HOLD = {
     "wp00-00": 2.0, "wp00-00a": 0.3, "wp01-00": 0.4, "wp01-00a": 1.5,  # the two questions, and 「它关乎……」's pause
-    "wp00-01": 1.5, "wp00-03": 0.6, "wp00-06": 1.0, "wp00-08": 1.5, "wp01-19": 1.0, "wp01-07": 1.0, "wp01-09": 0.8, "wp01-10": 0.8, "wp01-11": 0.8,
+    "wp00-01": 1.5, "wp00-03": 0.6, "wp00-06": 1.0, "wp00-08": 1.5, "wp01-19": 1.0, "wp01-07": 1.0, "wp01-09": 0.8, "wp01-09a": 0.8, "wp01-11": 0.8,
+    "wp01-10": 2.0,  # the two terms are defined; a full pause before 「Because we believe…」 (owner 2026-10-08)
     "wp01-14": 3.2, "wp01-16": 3.5, "wp02-03": 1.0, "wp02-07": 3.0, "wp02-09": 3.0,
     "wp03-03": 1.0, "wp03-05": 4.0, "wp04-03": 1.0, "wp04-04": 1.0, "wp04-07": 4.0,
     "wp05-04": 1.0, "wp05-06": 4.0, "wp06-02": 1.5,
@@ -85,11 +90,34 @@ def read_wav(path: Path) -> array.array:
 
 
 def trim(clip: array.array) -> array.array:
-    """Drop room tone before the first and after the last word, keeping a few ms."""
-    loud = [i for i in range(0, len(clip), 120) if abs(clip[i]) > SILENCE]
-    if not loud:
+    """Drop room tone and stray sounds before the first and after the last word, keeping a few ms.
+
+    CosyVoice often starts a take with a click or a faint murmur before the first word (en wp01-15 had
+    three, heard at 3:20) and can end one with a click (wp01-15, 0.55 s after 「inside.」). Cutting at the
+    first loud sample kept them. The take now runs from the first stretch of speech (0.1 s+, peaking
+    above SPEECH_DB) to the last, plus any sound within LEAD_GAP before it (a soft onset) or TAIL_GAP
+    after it (a final consonant's release)."""
+    frame = RATE // 100
+    db = []
+    for k in range(len(clip) // frame):
+        chunk = clip[k * frame:(k + 1) * frame]
+        db.append(10 * math.log10(sum(s * s for s in chunk) / frame / 32768 ** 2 + 1e-12))
+    runs = []  # [first frame, end frame, loudest dB] of sound above ACTIVE_DB, merged across 40 ms gaps
+    for k, d in enumerate(db):
+        if d > ACTIVE_DB:
+            if runs and k - runs[-1][1] < 4:
+                runs[-1][1], runs[-1][2] = k + 1, max(runs[-1][2], d)
+            else:
+                runs.append([k, k + 1, d])
+    speech = [n for n, (a, b, d) in enumerate(runs) if b - a >= 10 and d > SPEECH_DB]
+    if not speech:
         return clip
-    return clip[max(0, loud[0] - KEEP):min(len(clip), loud[-1] + KEEP)]
+    first, last = speech[0], speech[-1]
+    while first > 0 and runs[first][0] - runs[first - 1][1] < LEAD_GAP * 100:
+        first -= 1
+    while last + 1 < len(runs) and runs[last + 1][0] - runs[last][1] < TAIL_GAP * 100:
+        last += 1
+    return clip[max(0, runs[first][0] * frame - KEEP):min(len(clip), runs[last][1] * frame + KEEP)]
 
 
 def estimate(lang: str, text: str) -> array.array:
@@ -216,7 +244,7 @@ def present(sub: str, exts: tuple[str, ...]) -> list[str]:
     return sorted(f.name for f in d.iterdir() if f.suffix.lower() in exts) if d.is_dir() else []
 
 
-def build() -> None:
+def build(langs: list[str]) -> None:
     scripts = {lang: json.loads(p.read_text()) for lang, p in SCRIPTS.items()}
     text = {lang: {l["id"]: l["text"] for l in s["lines"]} for lang, s in scripts.items()}
     ids = list(text["zh"])
@@ -237,7 +265,7 @@ def build() -> None:
         },
     }
 
-    for lang in ("zh", "en"):
+    for lang in langs:
         missing, clips = [], {}
         for i in ids:
             path = VOICES[lang] / f"{i}.wav"
@@ -292,4 +320,4 @@ if __name__ == "__main__":
     if "--keep-timeline" in sys.argv:
         keep_timeline(sys.argv[sys.argv.index("--keep-timeline") + 1], "--remux" in sys.argv)
     else:
-        build()
+        build([lang for lang in ("zh", "en") if lang in sys.argv[1:]] or ["zh", "en"])

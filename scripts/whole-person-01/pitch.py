@@ -15,6 +15,7 @@ LANG` rebuilds only the audio.
 Run from lucas-academy-media with its env:
   .conda/bin/python ../lucas-academy-video/scripts/whole-person-01/pitch.py zh|en [--measure]
 """
+import array
 import difflib
 import json
 import shutil
@@ -30,6 +31,7 @@ sys.path.insert(0, "src")
 sys.path.insert(0, str(Path(__file__).parent))
 import narrate  # noqa: E402  (OUT, SCRIPT, SPOKEN, ZH_SUBSTITUTIONS)
 import pace  # noqa: E402  (HOMOPHONES, PACE, PROMPT, SPEED, TOL, norm, rate)
+import build_timeline  # noqa: E402  (trim)
 
 VIDEO = Path(__file__).resolve().parents[2]
 TOL = 2.0              # semitones off the film median that make a line stand out
@@ -37,15 +39,13 @@ GOAL = 1.0             # stop re-voicing a line once a take is this close
 TRIES = 8
 EXEMPT = {"wp00-00", "wp00-01", "wp01-00a"}  # the questions are asked higher, the hanging line ends high
 F0_RANGE = {"yancy/zh": (65, 330), "louise/zh": (110, 420), "louise/en": (110, 420)}  # by voice: pyin search range, Hz
-SILENCE, KEEP = 300, 0.05  # build_timeline.py's trim: |int16| above SILENCE, KEEP s kept each side
 
 
 def trimmed(path: Path) -> tuple[np.ndarray, int]:
-    """The take as the film plays it: build_timeline.py trims the room tone."""
+    """The take as the film plays it: build_timeline.py trims the room tone and stray sounds."""
     y, sr = sf.read(path, dtype="int16")
-    loud = np.nonzero(np.abs(y[::120].astype(np.int32)) > SILENCE)[0] * 120
-    keep = round(KEEP * sr)
-    return y[max(0, loud[0] - keep):min(len(y), loud[-1] + keep)].astype(np.float32) / 32768, sr
+    clip = build_timeline.trim(array.array("h", y.tobytes()))
+    return np.frombuffer(clip.tobytes(), dtype=np.int16).astype(np.float32) / 32768, sr
 
 
 def pitch(path: Path, voice: str) -> float:
@@ -69,7 +69,7 @@ def main(lang: str, measure_only: bool) -> None:
     st = lambda hz: 12 * np.log2(hz / median)  # noqa: E731
     off = {i: st(hz) for i, hz in f0.items() if abs(st(hz)) > TOL and i not in EXEMPT}
     spread = max(st(hz) for hz in f0.values()) - min(st(hz) for hz in f0.values())
-    pace_median = statistics.median(pace.rate(out / f"{i}.wav", text[i], lang) for i in text)
+    pace_median = statistics.median(pace.rate(out / f"{i}.wav", narrate.SPOKEN[lang].get(i, text[i]), lang) for i in text)
     print(f"[{lang}] median {median:.0f} Hz, lines span {spread:.1f} st, {len(off)} lines beyond ±{TOL} st", flush=True)
     for i, s in sorted(off.items(), key=lambda kv: -abs(kv[1])):
         print(f"   {i} {s:+.1f} st  {text[i][:24]}", flush=True)
@@ -104,7 +104,7 @@ def main(lang: str, measure_only: bool) -> None:
                 heard = heard.replace(a, b)
             match = difflib.SequenceMatcher(None, pace.norm(spoken.lower(), lang), pace.norm(heard.lower(), lang)).ratio()
             length, now = speech_length(tmp), st(pitch(tmp, script["voice"]))
-            paced = pace.rate(tmp, text[i], lang) / pace_median
+            paced = pace.rate(tmp, narrate.SPOKEN[lang].get(i, text[i]), lang) / pace_median
             fits = length <= room and abs(paced - 1) <= pace.TOL
             print(f"   try {k} {i}: {now:+.1f} st, pace {paced:.2f}x, {length:.2f}s (room {room:.2f}s), whisper {match:.2f}", flush=True)
             if match >= 0.9 and fits and (best is None or abs(now) < abs(best[0])):

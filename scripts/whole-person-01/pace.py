@@ -45,6 +45,9 @@ def english_syllables(word: str) -> int:
 
 
 def syllables(text: str, lang: str) -> int:
+    # A digit has no vowel group: 「Psalm 119」 lost five syllables, read as slow and was sped up 23%.
+    if re.search(r"\d", text):
+        raise ValueError(f"spell out the number in SPOKEN so its syllables count: {text}")
     words = re.findall(r"[A-Za-z]+(?:'[a-z]+)?", text)
     latin = sum(english_syllables(w) for w in words)
     return latin + (len(re.findall(r"[一-鿿]", text)) if lang == "zh" else 0)
@@ -69,7 +72,7 @@ def main(lang: str, measure_only: bool) -> None:
     script = json.load(open(narrate.SCRIPT.format(lang=lang)))
     out = Path(narrate.OUT[lang])
     lines = script["lines"]
-    rates = {l["id"]: rate(out / f"{l['id']}.wav", l["text"], lang) for l in lines}
+    rates = {l["id"]: rate(out / f"{l['id']}.wav", narrate.SPOKEN[lang].get(l["id"], l["text"]), lang) for l in lines}
     median = statistics.median(rates.values())
     off = {i: r / median for i, r in rates.items() if abs(r / median - 1) > TOL and i not in EXEMPT}
     spread = max(abs(r / median - 1) for r in rates.values())
@@ -107,7 +110,7 @@ def main(lang: str, measure_only: bool) -> None:
                 heard = heard.replace(a, b)
             # Compare with what the voice reads (SPOKEN: 119 is spoken 一百一十九).
             match = difflib.SequenceMatcher(None, norm(spoken.lower(), lang), norm(heard.lower(), lang)).ratio()
-            new_ratio = rate(tmp, text[i], lang) / median
+            new_ratio = rate(tmp, spoken, lang) / median
             print(f"   try {k} {i} speed {speed:.2f}: {new_ratio:.2f}x, whisper {match:.2f}", flush=True)
             if match >= 0.9 and (best is None or abs(new_ratio - 1) < best[0]):
                 if best:
