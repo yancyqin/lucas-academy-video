@@ -21,9 +21,10 @@ from lucas_media.joke import DEFAULT_PEAK_DBFS, add_peak_headroom, save_wav  # n
 SCRIPT = "data/scripts/whole-person-five-ideas-{lang}.json"
 # zh v10 / en v9 (2026-10-06 re-make, the film opens on 「孩子说“不”，你怎么办？」): four new lines each,
 # every unchanged take reused from zh v9 (Yancy; v8 with the off-pitch lines re-voiced by pitch.py)
-# and en v8 (Louise).
-OUT = {"zh": "outputs/yancy/zh/whole-person-five-ideas-v10", "en": "outputs/louise/en/whole-person-five-ideas-v9"}
-PREVIOUS = {"zh": "outputs/yancy/zh/whole-person-five-ideas-v9", "en": "outputs/louise/en/whole-person-five-ideas-v8"}
+# and en v8 (Louise). en v10 (2026-10-08) = v9 + the curious opening, wp01-09a (critical literacy),
+# wp01-11 without 「we we would」, wp04-04 / wp05-05 at their natural pace, stray sounds cut.
+OUT = {"zh": "outputs/yancy/zh/whole-person-five-ideas-v10", "en": "outputs/louise/en/whole-person-five-ideas-v10"}
+PREVIOUS = {"zh": "outputs/yancy/zh/whole-person-five-ideas-v9", "en": "outputs/louise/en/whole-person-five-ideas-v9"}
 # 梵高 = fán gāo (Yancy's reading); the zh voice reads 凡高 correctly. The English
 # terms in wp01-09 are spoken too (Yancy, 2026-10-04): commas instead of brackets.
 ZH_SUBSTITUTIONS = {"梵高": "凡高"}
@@ -33,7 +34,18 @@ SPOKEN = {
         "wp01-19": "我们相信，在权柄的问题上，教育者应该是 authoritative，有权威又温暖，而不是 authoritarian，专制。",
         "wp04-04": "在圣经诗篇第一百一十九篇里，诗人写下了他被神引导的感受：“你的话是我脚前的灯，是我路上的光。”",
     },
-    "en": {},
+    "en": {
+        "wp00-00": "Your child says no. Hmm... now what?",
+        # Spelled out so pace.py can count its syllables (as 119 is in the zh line).
+        "wp04-04": "In Psalm one hundred nineteen, the psalmist writes of being guided by God: “Your word is a lamp for my feet, a light on my path.”",
+    },
+}
+# The en opening question is wondered aloud, not snapped: Louise read 「Now what?」 in 2 s and it sounded
+# critical (owner, 2026-10-08: 「不是批评，应该是好奇，探索」). The caption and card keep the line as written.
+INSTRUCTION = {
+    "zh": {},
+    "en": {"wp00-00": "Speak with warm, gentle curiosity, like a friend wondering aloud with other parents. "
+                      "Soft and open, never scolding or annoyed."},
 }
 
 
@@ -63,7 +75,11 @@ def main(lang: str) -> None:
         if lang == "zh":
             for a, b in ZH_SUBSTITUTIONS.items():
                 text = text.replace(a, b)
-        kwargs = {"mode": script["mode"], "instruction": script["instruction"]} if "mode" in script else {}
+        instruction = INSTRUCTION[lang].get(line["id"])
+        if instruction:
+            kwargs = {"mode": "zero-shot-instruct", "instruction": instruction}
+        else:
+            kwargs = {"mode": script["mode"], "instruction": script["instruction"]} if "mode" in script else {}
         speech, rate, _ = engine.synthesize(text, target_language=lang, speed=script.get("speed", 1.0), **kwargs)
         save_wav(out / f"{line['id']}.wav", add_peak_headroom(speech, peak_dbfs=DEFAULT_PEAK_DBFS), rate)
         print(f"[{lang} {n}/{len(todo)}] {line['id']} {speech.shape[1] / rate:.2f}s", flush=True)
