@@ -1,0 +1,25 @@
+{
+  "title": "Clair de lune — Suite bergamasque, III",
+  "composer": "Claude Debussy",
+  "performer": "Laurens Goedhart",
+  "recorded": "2011-08-20",
+  "source": "https://commons.wikimedia.org/wiki/File:Clair_de_lune_(Claude_Debussy)_Suite_bergamasque.ogg",
+  "performerSource": "https://soundcloud.com/laurensgoedhart/claude-debussys-clair-de-lune",
+  "recordingLicense": "CC BY 3.0",
+  "recordingLicenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "recordingLicenseEvidence": "<a rel=\"nofollow\" class=\"external autonumber\" href=\"https://web.archive.org/web/20120210054738/http://soundcloud.com/laurensgoedhart/claude-debussys-clair-de-lune\">[1]</a>: \"Claude Debussy's Clair de Lune by Laurens Goedhart is licensed under a <a rel=\"nofollow\" class=\"external text\" href=\"https://creativecommons.org/licenses/by/3.0/\">Creative Commons License</a>.\"",
+  "composition": "Public domain",
+  "path": "music/clair-de-lune-goedhart.ogg",
+  "bytes": 15740765,
+  "sha256": "2f7a1e833f4e2408d9d1b893131863d790ba75cd5fbcf81292dc5ed6f25918fe",
+  "example": {
+    "sourceSeconds": [
+      272.0,
+      304.088526
+    ],
+    "completeEnding": true,
+    "purpose": "保留真实末段的 I–III♭–I 色彩路线和最终主和弦，不截掉结尾来伪造不解决。画面为儿童理解路线的示意，不是逐音分析。",
+    "analysisSource": "https://johnhooker.tepper.cmu.edu/osherMusicDebussy.pdf#page=31",
+    "alignmentNote": "录音最后32秒；FFT色度仅用于定位核对，不作为独立音乐理论出处。"
+  }
+}

@@ -37,7 +37,14 @@
     "wp01:youtube": "python3 scripts/whole-person-01/youtube.py",
     "fi01:timeline": "python3 scripts/fun-informatics-01/build_timeline.py",
     "fi01:render": "remotion render src/index.ts FunInformatics01Zh out/fun-informatics-01/delivery/fun-informatics-01.zh.mp4 --concurrency=6 --timeout=240000 --offthreadvideo-cache-size-in-bytes=3000000000 && remotion render src/index.ts FunInformatics01En out/fun-informatics-01/delivery/fun-informatics-01.en.mp4 --concurrency=6 --timeout=240000 --offthreadvideo-cache-size-in-bytes=3000000000",
-    "fi01:youtube": "python3 scripts/fun-informatics-01/youtube.py"
+    "fi01:youtube": "python3 scripts/fun-informatics-01/youtube.py",
+    "fi02:narration": "python3 scripts/fun-informatics-02/narration.py",
+    "fi02:timeline": "python3 scripts/fun-informatics-02/build_timeline.py",
+    "fi02:render": "python3 scripts/fun-informatics-02/render.py --concurrency 2",
+    "fi02:frames": "node scripts/fun-informatics-02/frames.cjs",
+    "fi02:record": "node scripts/fun-informatics-02/record-bible.cjs",
+    "fi02:check": "python3 scripts/fun-informatics-02/quality.py",
+    "fi02:package": "python3 scripts/fun-informatics-02/package.py"
   },
   "dependencies": {
     "@remotion/cli": "^4.0.484",
