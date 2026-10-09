@@ -21,6 +21,14 @@ They answer 「谁是教育者？」 first, then come back to the question at pr
 is the question. Four new lines per language: zh v10 / en v9, every other take reused. The picture is
 re-rendered for both.
 
+2026-10-08 audio-only en remix: Louise's opening 「Your child says no. Now what?」 came out in 2 s and sounded
+critical (owner: 「不是批评，应该是好奇，探索」). wp00-00 was re-voiced in `zero-shot-instruct` with its own
+curious instruction, spoken 「Your child says no. Hmm... now what?」 (`INSTRUCTION`/`SPOKEN` in `narrate.py`;
+the card and captions keep the line as written; the owner chose this take out of 15). Then
+`--keep-timeline en --remux`: the picture stream is byte-identical and the mix differs only from 2.15 s to
+6.70 s. The zh film is unchanged. Working copies were restored from the owner's archive
+`~/Desktop/全人教育-清理-20261005/最终清理/1006-remake/` (`media-outputs/`, `video-worktree/{out,public-whole-person-01}/`).
+
 Delivery (local, `out/` is ignored), all in `out/whole-person-01/delivery/`:
 
 - `whole-person-five-principles.<film>.mp4` — 1080p, −16 LUFS, clean picture.
