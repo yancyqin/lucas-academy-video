@@ -37,6 +37,11 @@ MUSIC_SOURCE = shared.wp.MUSIC
 CODA_START = 272.0
 CODA_END = shared.seconds(MUSIC_SOURCE)
 ORIGINAL_MIX = shared.wp.mix_with_music
+ORIGINAL_ENVELOPE = shared.wp.music_envelope
+LISTEN_BOOST_DB = 20.0  # The original pianissimo ending is much quieter than the full piece.
+# Feedback is only a quiet confirmation, including when narration is absent.
+FEEDBACK_SPEAKING_LUFS = -50.0
+FEEDBACK_PAUSE_LUFS = -43.0
 shared.HOLD = {
     "cl00-01": 2.0, "cl00-02": 1.0, "cl00-03": 1.5, "cl00-04": 3.0, "cl00-05": 1.5, "cl00-06": 1.5, "cl00-07": 4.0,
     "cl01-03": 1.0, "cl01-04": 1.0, "cl01-05": 1.0,
@@ -45,11 +50,29 @@ shared.HOLD = {
     "cl03-02": 1.5, "cl03-03": 1.0, "cl03-04": 2.0, "cl03-05": 2.0, "cl03-06": 2.0, "cl03-08": 2.0,
     "cl03-10": 1.0, "cl03-12": 1.5, "cl03-13": 2.0, "cl03-14": 1.0, "cl03-15": 1.0, "cl03-18": 1.0,
     "cl04-01": 1.5, "cl04-04": 1.0, "cl04-05": 15.0, "cl04-08": 1.5, "cl04-10": 1.0, "cl04-11": 1.5,
-    "cl04-12": 1.0, "cl04-17": 2.0, "cl04-18": 1.5,
+    "cl04-12": 1.0, "cl04-17": 2.0, "cl04-18": 1.5, "cl04-19": 4.0,
     "cl05-05": 1.5, "cl05-07": 3.0,
     "cl06-01": 1.5, "cl06-02": 2.0, "cl06-03": 2.0, "cl06-04": 4.0, "cl06-05": 1.0, "cl06-06": 1.5,
     "cl07-01": 4.0,
 }
+
+
+def episode_music_envelope(cues, total, bed_lufs, path):
+    """Keep normal ducking, then make the piano the focus during listening."""
+    ORIGINAL_ENVELOPE(cues, total, bed_lufs, path)
+    with wave.open(str(path)) as wav:
+        envelope = array.array("h", wav.readframes(wav.getnframes()))
+    cue = next(c for c in cues if c["id"] == "cl06-04")
+    begin, end = cue["speech"]["end"], cue["end"]
+    rate = shared.wp.ENV_RATE
+    samples = array.array("f", (value / 32767 for value in envelope))
+    for k in range(max(0, round(begin * rate)), min(len(samples), round(end * rate))):
+        t = k / rate
+        progress = max(0.0, min(1.0, (t - begin) / 1.5, (end - t) / 0.8))
+        smooth = progress * progress * (3 - 2 * progress)
+        samples[k] *= 10 ** (LISTEN_BOOST_DB * smooth / 20)
+    # Float envelopes retain gain above unity without silently clipping it.
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "f32le", "-ar", str(rate), "-ac", "1", "-i", "-", "-c:a", "pcm_f32le", str(path)], input=samples.tobytes(), check=True)
 
 
 def episode_mix(voice, out, cues, total):
@@ -75,8 +98,11 @@ def episode_mix(voice, out, cues, total):
         prepared=Path(tmp)/"music-with-complete-coda.wav"
         subprocess.run(["ffmpeg","-v","error","-y",*inputs,"-i",str(MUSIC_SOURCE),"-filter_complex",";".join(chain),"-map","[music]","-ar","48000","-c:a","pcm_f32le",str(prepared)],check=True)
         shared.wp.MUSIC=prepared
+        shared.wp.music_envelope=episode_music_envelope
         try: ORIGINAL_MIX(voice,out,cues,total)
-        finally: shared.wp.MUSIC=MUSIC_SOURCE
+        finally:
+            shared.wp.MUSIC=MUSIC_SOURCE
+            shared.wp.music_envelope=ORIGINAL_ENVELOPE
 
 
 shared.wp.mix_with_music=episode_mix
@@ -207,7 +233,7 @@ def mix_feedback(tl):
         clip=array.array("f", data)
         level=shared.wp.loudness("-i",str(source))
         speaking=any(c["speech"]["start"]<=sound["time"]<c["speech"]["end"] for c in tl["cues"])
-        target=-35 if speaking else -28
+        target=FEEDBACK_SPEAKING_LUFS if speaking else FEEDBACK_PAUSE_LUFS
         gain=10**((target-level)/20)
         at=round(sound["time"]*rate)*2
         for i,value in enumerate(clip):

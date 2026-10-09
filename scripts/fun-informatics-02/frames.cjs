@@ -54,6 +54,7 @@ const only = new Set(process.argv.slice(2).filter((a) => a !== "--details"));
         "letter-person": cue("cl03-06").start - 0.5,
         "words-play": cue("cl04-05").speech.end + 8,
         "words-four-steps": cue("cl04-05").end - 0.5,
+        "ai-questions-pause": cue("cl04-19").end - 1,
         "cadence-ending": tl.musicExample.end - 0.4,
         "questions-reading-hold": tl.endCardStart - 1,
         "end-card": tl.endCardStart + 4,

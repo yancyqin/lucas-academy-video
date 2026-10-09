@@ -194,8 +194,8 @@ Section tone:
   > 香农把冗余量了出来，告诉我们能去掉多少，该留下多少。
 - cl05-04 | The third Claude learned to talk from redundancy, and reminds us: smooth is not the same as true.
   > 第三个 Claude 从冗余里学会了说话，也提醒我们：通顺，不等于对。
-- cl05-05 | Monet and Shannon sharing a name is just a coincidence. But all three Claudes are doing the same thing: telling apart what you could guess from what is truly new.
-  > 莫奈和香农同名，只是巧合。可三个 Claude 做的，其实是同一件事：分清楚，哪些是你猜得到的，哪些是真正新的。
+- cl05-05 | Claude Monet and Claude Shannon sharing a name is just a coincidence. But all three Claudes are doing the same thing: telling apart what you could guess from what is truly new.
+  > 克劳德·莫奈和克劳德·香农同名，只是巧合。可三个 Claude 做的，其实是同一件事：分清楚，哪些是你猜得到的，哪些是真正新的。
 - cl05-06 | Next time you look at a painting, read a sentence, or listen to an AI, you can ask yourself that question too.
   > 下次你看一幅画、读一句话、听 AI 说话的时候，也可以问问自己这个问题。
 - cl05-07 | We started with a few patches of colour. Now, step back... and there's the whole pond.

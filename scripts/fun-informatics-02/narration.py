@@ -20,15 +20,22 @@ def main():
     lines, cues = [], []
     for cid, cue in zh.items():
         text = cue["text"]
+        instruct = tone
+        if cid in {"cl01-02", "cl04-12", "cl05-05"}:
+            instruct += "每个字读清楚，句末停住。"
         text = re.sub(r"\b(18|19|20)\d{2}\b", lambda m: "".join("〇一二三四五六七八九"[int(d)] for d in m[0]), text)
         if cid == "cl01-02":
-            text = text.replace("比特量出了信息", "比特梁出了信息")
+            text = text.replace("比特量出了信息", "比特，梁出了信息")
+            instruct += "在“他用比特”之后稍停，“梁出了信息”连续读。"
+        if cid == "cl04-12":
+            text = re.sub(r"二〇一七\s*年", "二零一七年", text)
+            instruct += "年份“二零一七年”连续读，数字之间不停顿。"
         if cid == "cl03-14":
             text = "研究表明，汉字的顺序并不一定能影响阅读。"
         assert not re.search(r"\d", text), (cid, text)
-        lines.append({"id": cid, "text": text, "instruct": tone, "mode": shared.MODE, "speed": 1.0})
+        lines.append({"id": cid, "text": text, "instruct": instruct, "mode": shared.MODE, "speed": 1.0})
         cues.append({"id": cid, "section": cue["section"], "zh": shared.plain(cue["text"]), "en": shared.plain(en[cid]["text"])})
-    assert "比特梁" in next(line["text"] for line in lines if line["id"] == "cl01-02")
+    assert "比特，梁出了信息" in next(line["text"] for line in lines if line["id"] == "cl01-02")
     OUT.mkdir(parents=True, exist_ok=True)
     (OUT / "zh.json").write_text(json.dumps({"voice": "louise/zh", "language": "zh", "lines": lines}, ensure_ascii=False, indent=2) + "\n")
     (OUT / "cues.json").write_text(json.dumps(cues, ensure_ascii=False, indent=2) + "\n")

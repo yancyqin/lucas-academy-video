@@ -1780,9 +1780,9 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
           <Center>
             <div style={{ display: "flex", gap: 35 }}>
               {[
-                ["莫奈", "去掉冗余，留下光", "art/impression-sunrise.jpg"],
+                ["克劳德·莫奈", "去掉冗余，留下光", "art/impression-sunrise.jpg"],
                 [
-                  "香农",
+                  "克劳德·香农",
                   "量出冗余，留一些备份",
                   "images/unicycle-juggler-monet.png",
                 ],
