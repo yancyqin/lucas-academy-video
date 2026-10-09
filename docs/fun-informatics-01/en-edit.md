@@ -4,8 +4,7 @@
 
 Voice: `louise/en`.
 
-Overall tone: Please speak in a curious, unhurried voice, like discovering something together with a child.
-Overall speed: 1.0
+Voice: louise/en with the project default delivery (scripts/voice_defaults.py, README "Narration voices"). An `Overall tone:` line here would replace its instruction.
 
 ## IT00 · Opening: Can a computer picture be zoomed in forever?
 
@@ -45,7 +44,7 @@ Section tone:
 
 Section tone: 
 
-- it02-01 | Start with the middle wall. Green symbols fall like rain.
+- it02-01 | Start with the middle screen. Green symbols fall like rain.
   > 先看中间这面墙。绿色的符号，像雨一样落下来。
 - it02-02 | Look: one spot can only be two ways. <strong>Dark</strong>, or <strong>bright</strong>.
   > 看，一个位置，只有两种样子：<strong>暗</strong>，或者<strong>亮</strong>。
@@ -68,7 +67,7 @@ Section tone:
   > 我们平时有十个数字。9 再加 1，就要<strong>进位</strong>，写成 10。
 - it03-03 | A computer has only two digits. Each place in it is like that switch: only on or off, only 0 or 1. The biggest digit is 1. So add 1 to 1, and it has to carry too: it writes 10, read “one, zero”. Not ten!
   > 计算机只有两个数字。它的每一个位置，就像前面那个开关，只有开、关两种样子，只能是 0 或 1，最大就是 1。所以 1 再加 1，也要进位，写成 10，读作“一零”，不是十哦。
-- it03-04 | Watch the wall: 0000 is 0.
+- it03-04 | Watch the screen: 0000 is 0.
   > 看墙上：0000 是 0。
 - it03-05 | 0001 is 1.
   > 0001 是 1。
@@ -91,11 +90,11 @@ Section tone:
   > 第一盏灯叫“<strong>和</strong>”：两个开关里<strong>只有一个</strong>开着，它亮。
 - it04-04 | The second lamp is called <strong>CARRY</strong>. It lights when <strong>both</strong> switches are on.
   > 第二盏灯叫“<strong>进位</strong>”：两个开关<strong>都</strong>开着，它亮。
-- it04-05 | Let's try. Off, off: no lamp lights. 0 plus 0 is 0.
+- it04-05 | Let's try. Both switches off: no lamp lights. 0 plus 0 is 0.
   > 试试看。关、关：两盏灯都不亮，0 加 0 等于 0。
-- it04-06 | On, off: the SUM lamp lights. 0 plus 1 is 1.
+- it04-06 | One on, one off: the SUM lamp lights. 0 plus 1 is 1.
   > 开、关：和灯亮了，0 加 1 等于 1。
-- it04-07 | On, on: SUM goes dark, CARRY lights. Read the two lamps together, CARRY then SUM: 1, 0. That's <strong>10</strong>.
+- it04-07 | Both on: SUM goes dark, CARRY lights. Read the two lamps together, CARRY then SUM: 1, 0. That's <strong>10</strong>.
   > 开、开：和灯灭，进位灯亮。把两盏灯连起来读，进位是 1，和是 0，就是 <strong>10</strong>。
 - it04-08 | So inside a computer, 1 + 1 is not written 2. It's written <strong>10</strong>: “one, zero”.
   > 所以在计算机里，1+1 不写成 2，而是写成 <strong>10</strong>，读作“一零”。
@@ -121,7 +120,7 @@ Section tone:
 
 Section tone: 
 
-- it06-01 | Many 0s and 1s together: besides letters, what else can they become? Let's look at another wall. Its tiny pieces are called <strong>pixels</strong>: one dot on a screen, and the <strong>smallest</strong> piece a screen has.
+- it06-01 | Many 0s and 1s together: besides letters, what else can they become? Let's look at another screen. Its tiny pieces are called <strong>pixels</strong>: one dot on a screen, and the <strong>smallest</strong> piece a screen has.
   > 很多 0 和 1 在一起，除了字母，还能变成什么？换一面墙看看。这面墙上的小零件叫<strong>像素</strong>：屏幕上的一个点，也是屏幕上<strong>最小</strong>的一块。
 - it06-02 | One pixel, two, three. Thirty-six little squares in eight rows make a triangle.
   > 1 个像素，2 个，3 个。36 个小方块排成八行，是一个三角形。
@@ -133,7 +132,7 @@ Section tone:
   > 一个点，几乎说明不了什么。真正装着图画的，是它们的<strong>排列</strong>。
 - it06-06 | Let the positions go, and the picture falls apart.
   > 位置一放开，图画就散了。
-- it06-07 | And colour? Back on the bits wall, read with another rule: three groups of bits are red, green and blue. Three numbers make one colour.
+- it06-07 | And colour? Back on the bits screen, read with another rule: three groups of bits are red, green and blue. Three numbers make one colour.
   > 那颜色呢？回到比特的墙，换一条规则来读：三组比特，分别是红、绿、蓝，三个数合成一个颜色。
 - it06-08 | Many little squares like that, in the right places, make a picture. <strong>Bits to colour, pixels to image.</strong>
   > 很多这样的小方块，放对位置，就是一幅画。<strong>比特变颜色，像素变图画。</strong>
@@ -150,7 +149,7 @@ Section tone:
 
 - it07-01 | Now we can answer the question from the start. Can a computer picture be zoomed in forever?
   > 现在，可以回答开头的问题了。计算机的图像，能不能无限放大？
-- it07-02 | Zoom into this pixel picture on the wall. Closer, and closer. Look: it turns into little squares.
+- it07-02 | Zoom into this pixel picture on the screen. Closer, and closer. Look: it turns into little squares.
   > 把墙上这幅像素图放大，再放大。看，变成了一块一块的方格。
 - it07-03 | A picture on a screen has a <strong>smallest unit</strong>. Zoom all the way in, and you reach the pixel.
   > 屏幕上的图，是<strong>有最小单元</strong>的。放到底，就是像素。
@@ -185,14 +184,14 @@ Section tone:
   > 它可以是 <strong>65</strong>，可以是 <strong>A</strong>，可以是一个像素，一小段声音，或者一个动作。
 - it08-05 | One string of 0s and 1s, <strong>five meanings</strong>. It never changed once. Only the rule did.
   > 同一串 0 和 1，<strong>五种意思</strong>。它一次都没变，变的只是规则。
-- it08-06 | The wall says it: a code gives bits meaning. Two symbols, many worlds.
+- it08-06 | In one sentence: a code gives bits meaning. Two symbols, many worlds.
   > 墙上写着：规则给比特意义。两个符号，许多世界。
 
 ## IT09 · How games are made: rules plus numbers
 
 Section tone: 
 
-- it09-01 | So how is a moving picture, like a game, made? The third wall. First, Snake.
+- it09-01 | So how is a moving picture, like a game, made? Let's start with Snake.
   > 那一张会动的图，比如游戏，是怎么做出来的？看第三面墙。先是贪吃蛇。
 - it09-02 | Each turn, the head moves one square and the body follows. Over a hundred squares on the board, and only <strong>a few numbers</strong> change.
   > 每一步，蛇头前进一格，身子跟上。棋盘上一百多个格子，其实只有<strong>几个数</strong>在变。
@@ -200,7 +199,7 @@ Section tone:
   > 下一帧，不是画好存着的。是程序按规则，从这几个数<strong>算</strong>出来的。
 - it09-04 | The arena with three snakes works the same way: a few more rules, a few more numbers to keep, and the picture gets complicated.
   > 三条蛇的竞技场也一样：规则多了几条，要记的数多了几个，画面就复杂了。
-- it09-05 | The wall ends by asking: what is your favourite game? Whichever it is, it was made the same way: rules reading lots and lots and lots of numbers.
+- it09-05 | So what is your favourite game? Whichever it is, it was made the same way: rules reading lots and lots and lots of numbers.
   > 墙上最后问你：你最喜欢的游戏是什么？不管是哪一个，它都是这样做出来的：用规则去读很多很多很多数字。
 - it09-06 | The zoom at the start was made the same way. Its rule is a single line of formula.
   > 开头那段放大，也是这样做的。它的规则，只有一行公式。
@@ -250,7 +249,7 @@ Section tone:
   > 你看这整个房间：图画、字母、声音、游戏、一个立体的形状……
 - it11-04 | All of it is <strong>the same kind of switch</strong>, arranged, connected, and read together by a rule.
   > 全都是那<strong>同一种开关</strong>，排好，连上，再按规则一起读。
-- it11-05 | The last line on the wall is written for you: pixels in the right place become letters, and so form other things.
+- it11-05 | One last line, written for you: pixels in the right place become letters, and so form other things.
   > 墙上最后一句话是写给你的：像素放对了位置，就变成字母——于是，也变成别的东西。
 - it11-06 | From now on, however complex a picture is, you know what's behind it: many tiny pixels, arranged by a rule.
   > 从此以后，再复杂的图像，你也知道它背后是什么了：许多小小的像素，按规则排在一起。

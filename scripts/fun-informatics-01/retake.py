@@ -46,7 +46,7 @@ def squash(text: str) -> str:
 def main() -> None:
     lang, wanted = sys.argv[1], dict(a.split("=", 1) for a in sys.argv[2:])
     script = ROOT / f"public/fun-informatics-01/narration/{lang}.json"
-    out = MEDIA / f"outputs/louise/{lang}/fun-informatics-01-v2"
+    out = MEDIA / f"outputs/louise/{lang}/" / {"zh": "fun-informatics-01-v3", "en": "fun-informatics-01-v4"}[lang]  # build_timeline.TAKES
     model = whisper.load_model("medium", device="cpu")
     prompt = "以下是普通话的句子，使用简体中文。" if lang == "zh" else None
     data = json.loads(script.read_text())
