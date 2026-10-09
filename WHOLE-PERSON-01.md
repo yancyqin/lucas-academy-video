@@ -46,11 +46,15 @@ the card and captions keep the line as written; the owner chose this take out of
   (zh wp04-04 got 1.17× for the same reason). wp05-05 drew out 「So,」 and then rushed 「you choose the
   strategy」 (5.5 syllables/s). Both re-voiced at their own pace (1.00×, 0.96×), each phrase near the median.
 
-Archive (owner's Desktop, `~/Desktop/全人教育-清理-20261005/最终清理/`): `全人教育-重制版上传/` = the 2026-10-06
-uploads; `1006-remake/` = that make's working copies (footage, images, music, zh v10 and en v9 takes,
-timelines); `全人教育-英文修订版-20261008/上传/` = this en film, description and cover, and `工作稿/` = en v10
-takes (with `<id>.orig.wav` / `<id>.v9.wav` for the takes they replace), `pace.json`, `timeline.en.json`
-and the en mix. To edit the en film again, restore `1006-remake` first, then lay `工作稿/` over it.
+To upload: `~/Desktop/全人教育-英文版-重新上传/` holds this en film, its description and its cover, and nothing
+else. Archive (`~/Desktop/全人教育-清理-20261005/最终清理/`):
+- `全人教育-重制版上传/` holds the 2026-10-06 uploads.
+- `1006-remake/` holds that make's working copies: footage, images, music, zh v10 and en v9 takes, timelines.
+- `全人教育-英文修订版-工作稿-20261008/` holds the en v10 takes, with `<id>.orig.wav` / `<id>.v9.wav` for the
+  takes they replace. It also has `pace.json`, `timeline.en.json`, the en mix, the review reel and the
+  superseded opening-only remix.
+
+To edit the en film again, restore `1006-remake` first, then lay the 工作稿 folder over it.
 
 Delivery (local, `out/` is ignored), all in `out/whole-person-01/delivery/`:
 
