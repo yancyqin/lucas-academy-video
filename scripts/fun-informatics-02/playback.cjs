@@ -12,7 +12,7 @@ const target = path.join(ROOT, "out/fun-informatics-02/playback.cjs");
     format: "cjs",
   });
   const { buildPlayback } = require(target);
-  const file = path.join(ROOT, "public/fun-informatics-02/timeline.zh.json");
+  const file = path.join(ROOT, `public/fun-informatics-02/timeline.${process.argv[2] || "zh"}.json`);
   const tl = JSON.parse(fs.readFileSync(file, "utf8"));
   Object.assign(tl, buildPlayback(tl));
   fs.writeFileSync(file, JSON.stringify(tl, null, 2) + "\n");

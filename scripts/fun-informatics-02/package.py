@@ -21,7 +21,7 @@ def stamp(seconds):
     return f"{minutes:02d}:{second:02d}"
 
 
-def main():
+def chinese():
     tl=json.loads((PUB / "timeline.zh.json").read_text())
     qa=json.loads((OUT / "delivery-check.json").read_text())
     film=DELIVERY / "fun-informatics-02.zh.mp4"
@@ -103,6 +103,90 @@ https://arxiv.org/abs/1706.03762
         manifest.append({"file":name,"sha256":hashlib.sha256(target.read_bytes()).hexdigest(),"bytes":target.stat().st_size})
     (OUT / "package-manifest.json").write_text(json.dumps({"destination":str(DEST),"files":manifest},ensure_ascii=False,indent=2)+"\n")
     print(f"Chinese film, two captions, cover and description -> {DEST}",flush=True)
+
+
+def english():
+    tl=json.loads((PUB / "timeline.en.json").read_text())
+    qa=json.loads((OUT / "delivery-check.en.json").read_text())
+    film=DELIVERY / "fun-informatics-02.en.mp4"
+    assert not tl["draft"] and hashlib.sha256(film.read_bytes()).hexdigest()==qa["sha256"]
+    titles={"cl00":"Can you still tell?", "cl01":"Three Claudes", "cl02":"Monet: leaving detail behind", "cl03":"Shannon: guess one letter", "cl04":"Claude: from words to language models", "cl05":"One shared question", "cl06":"A fourth Claude: Debussy", "cl07":"Your own questions"}
+    chapters=[f"{'00:00' if prefix=='cl00' else stamp(next(c for c in tl['cues'] if c['id'].startswith(prefix))['start'])} {title}" for prefix,title in titles.items()]
+    assets=json.loads((ROOT / "docs/fun-informatics-02/assets.json").read_text())["assets"]
+    sources="\n".join(f"- {a['title']}: {a['source']} ({a['license']})" for a in assets)
+    topics=["FunInformatics","InformationTheory","Claude","Monet","Shannon","Debussy"]
+    description=f"""Redundancy is the part you can predict.
+From Monet’s water lilies to Shannon’s letter-guessing game and Claude’s language model, meet several people who share a name—and explore what we can leave out, and what we should keep.
+
+By Yancy Qin, Louise Yang | Lucas Academy
+Script developed with Claude. English narration uses Louise’s authorised AI-cloned voice.
+
+Play along:
+https://bible.lucasacademy.org/?passage=JHN.3.16&translation=WEB&game=letters
+https://bible.lucasacademy.org/?passage=PSA.23.1&translation=WEB&game=words
+
+{chr(10).join(chapters)}
+
+The English film uses new English sentence, scrambled-letter and attention examples. Chinese remains in the game comparison panel. The four-choice games simplify Shannon’s idea for teaching; unfamiliar-verse mistakes are simulated, not a participant study or a measurement of redundancy. The world / Chinese-character close-up, probability bars, attention links and harmony paths are illustrations. Real language models predict tokens, which need not be whole words.
+
+AI-generated scene pairs and the unicycle illustration are labelled on screen. Artwork and historical photographs:
+{sources}
+
+Music: Claude Debussy, Clair de lune, from Suite bergamasque.
+Piano and recording: Laurens Goedhart (2011), licensed under CC BY 3.0.
+https://soundcloud.com/laurensgoedhart/claude-debussys-clair-de-lune
+https://commons.wikimedia.org/wiki/File:Clair_de_lune_(Claude_Debussy)_Suite_bergamasque.ogg
+https://creativecommons.org/licenses/by/3.0/
+Modifications: looping, fades, volume changes and excerpts. The listening example preserves the recording’s complete final passage and final chord, at its original speed.
+Harmony reference: John Hooker, Carnegie Mellon University, Music: Under the Hood (2017).
+https://johnhooker.tepper.cmu.edu/osherMusicDebussy.pdf
+
+Information theory: Claude E. Shannon, A Mathematical Theory of Communication (1948); Prediction and Entropy of Printed English (1951).
+Attention: Vaswani et al., Attention Is All You Need (2017).
+https://arxiv.org/abs/1706.03762
+
+With so much AI-generated information around us, what is new? What is true? What matters? What can you leave aside? We learn and think about these questions together at Lucas Academy.
+
+{hashtags(topics)}
+"""
+    assert len(description)<=5000, len(description)
+    content=f"""Title
+Do You Know Claude? | Fun Informatics 2
+
+Description ({len(description)} characters)
+{description}
+Tags
+{tags(topics)}
+
+Upload settings
+Video language: English
+Video: 1920×1080, 30 fps, {stamp(round(tl['durationSeconds']))}, −16 LUFS
+Captions: English and Simplified Chinese, timed to this English film
+Altered or synthetic content: Yes (AI-cloned narration; AI-generated illustrations)
+Category: Education
+Audience: selected by the author
+"""
+    text=DELIVERY / "upload.en.txt";text.write_text(content)
+    files={film:"你认识Claude吗-英文版.mp4",DELIVERY / "fun-informatics-02.en.en.srt":"你认识Claude吗-英文版-English.srt",DELIVERY / "fun-informatics-02.en.zh-Hans.srt":"你认识Claude吗-英文版-中文字幕.srt",DELIVERY / "cover.en.jpg":"你认识Claude吗-英文封面.jpg",text:"你认识Claude吗-英文上传描述.txt"}
+    assert all(p.is_file() for p in files)
+    assert (DELIVERY / "cover.en.jpg").stat().st_size<2_000_000
+    DEST.mkdir(parents=True,exist_ok=True)
+    manifest=[]
+    for source,name in files.items():
+        target=DEST / name
+        if target.exists() and hashlib.sha256(target.read_bytes()).digest()!=hashlib.sha256(source.read_bytes()).digest():
+            backup=Path.home() / "Desktop/你认识Claude吗-旧版" / datetime.now().strftime('%Y%m%d-%H%M%S')
+            backup.mkdir(parents=True,exist_ok=True);shutil.copy2(target,backup / name)
+        shutil.copy2(source,target)
+        manifest.append({"file":name,"sha256":hashlib.sha256(target.read_bytes()).hexdigest(),"bytes":target.stat().st_size})
+    (OUT / "package-manifest.en.json").write_text(json.dumps({"destination":str(DEST),"files":manifest},ensure_ascii=False,indent=2)+"\n")
+    print(f"English film, two captions, cover and description -> {DEST}",flush=True)
+
+
+def main():
+    lang=sys.argv[1] if len(sys.argv)>1 else "zh"
+    assert lang in ("zh", "en")
+    english() if lang=="en" else chinese()
 
 
 if __name__=="__main__":main()

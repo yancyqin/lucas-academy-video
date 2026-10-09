@@ -8,9 +8,11 @@ const {
   renderStill,
 } = require("@remotion/renderer");
 const ROOT = path.resolve(__dirname, "../..");
-const OUT = path.join(ROOT, "out/fun-informatics-02/frames");
+const lang = process.argv.includes("en") ? "en" : "zh";
+const OUT = path.join(ROOT, `out/fun-informatics-02/frames${lang === "en" ? ".en" : ""}`);
 const details = process.argv.includes("--details");
-const only = new Set(process.argv.slice(2).filter((a) => a !== "--details"));
+const tails = process.argv.includes("--tails");
+const only = new Set(process.argv.slice(2).filter((a) => a !== "--details" && a !== "--tails" && a !== "en" && a !== "zh"));
 (async () => {
   fs.mkdirSync(OUT, { recursive: true });
   const serveUrl = await bundle({
@@ -18,10 +20,39 @@ const only = new Set(process.argv.slice(2).filter((a) => a !== "--details"));
     rootDir: ROOT,
   });
   const browser = await openBrowser("chrome");
+  const audits = [];
+  let label = "metadata";
+  if (lang === "en") {
+    const newPage = browser.newPage.bind(browser);
+    browser.newPage = async (...args) => {
+      const page = await newPage(...args);
+      const close = page.close.bind(page);
+      page.close = async (...closeArgs) => {
+        try {
+          const nodes = await page.evaluate(() => {
+            const result = [];
+            const walk = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+            let node;
+            while ((node = walk.nextNode())) {
+              const text = node.textContent.trim();
+              if (!text || ["SCRIPT", "STYLE"].includes(node.parentElement?.tagName)) continue;
+              const range = document.createRange();range.selectNodeContents(node);
+              const r = range.getBoundingClientRect();
+              if (r.width > 0 && r.height > 0) result.push({text, x:r.x, y:r.y, right:r.right, bottom:r.bottom});
+            }
+            return result;
+          });
+          audits.push({label, chinese:nodes.filter(n=>/[一-鿿]/.test(n.text)), outside:nodes.filter(n=>n.x < -1 || n.y < -1 || n.right > 1921 || n.bottom > 1081)});
+        } catch (e) { audits.push({label,error:String(e)}); }
+        return close(...closeArgs);
+      };
+      return page;
+    };
+  }
   try {
     const composition = await selectComposition({
       serveUrl,
-      id: "FunInformatics02Zh",
+      id: `FunInformatics02${lang === "en" ? "En" : "Zh"}`,
       puppeteerInstance: browser,
     });
     const tl = composition.props.tl;
@@ -29,8 +60,9 @@ const only = new Set(process.argv.slice(2).filter((a) => a !== "--details"));
       if (details) continue;
       if (only.size && !only.has(cue.id)) continue;
       const time =
-        cue.speech.start + (cue.speech.end - cue.speech.start) * 0.72;
+        cue.speech.start + (cue.speech.end - cue.speech.start) * (tails ? 0.98 : 0.72);
       const frame = Math.round(time * tl.fps);
+      label = cue.id;
       await renderStill({
         serveUrl,
         composition,
@@ -39,7 +71,7 @@ const only = new Set(process.argv.slice(2).filter((a) => a !== "--details"));
         scale: 0.5,
         imageFormat: "jpeg",
         jpegQuality: 88,
-        output: path.join(OUT, cue.id + ".jpg"),
+        output: path.join(OUT, cue.id + (tails ? ".tail" : "") + ".jpg"),
         timeoutInMilliseconds: 180000,
         logLevel: "error",
       });
@@ -60,6 +92,7 @@ const only = new Set(process.argv.slice(2).filter((a) => a !== "--details"));
         "end-card": tl.endCardStart + 4,
       };
       for (const [name, time] of Object.entries(samples)) {
+        label = name;
         await renderStill({
           serveUrl,
           composition,
@@ -76,6 +109,7 @@ const only = new Set(process.argv.slice(2).filter((a) => a !== "--details"));
       }
     }
   } finally {
+    if (lang === "en") fs.writeFileSync(path.join(OUT, details ? "text-audit.details.json" : tails ? "text-audit.tails.json" : "text-audit.json"), JSON.stringify(audits,null,2)+"\n");
     await browser.close({ silent: true });
   }
 })().catch((e) => {

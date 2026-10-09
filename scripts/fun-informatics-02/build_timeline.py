@@ -1,7 +1,7 @@
-"""Reuse episode 1's narration/timeline/mix pipeline for the Chinese-only episode.
+"""Reuse episode 1's pipeline, with each film paced by its own Louise narration.
 
 --draft explicitly permits missing voice takes for visual previews. Final builds
-require all 84 WAVs. No English narration or English composition is generated.
+require all 84 WAVs. Build one language at a time; Chinese delivery artifacts remain intact.
 """
 import argparse
 import array
@@ -27,7 +27,8 @@ spec.loader.exec_module(shared)
 shared.PUB = ROOT / "public/fun-informatics-02"
 shared.DELIVERY = ROOT / "out/fun-informatics-02/delivery"
 shared.FILM_NAME = "fun-informatics-02"
-shared.VOICES = {"zh": shared.MEDIA / "outputs/louise/zh/fun-informatics-02-v1"}
+shared.VOICES = {lang: shared.MEDIA / f"outputs/louise/{lang}/fun-informatics-02-v1" for lang in ("zh", "en")}
+shared.HOLD_BY_LANG = {}
 shared.TITLE = {"zh": "你认识 Claude 吗？", "en": "Do You Know Claude?"}
 shared.LEAD_IN = 0.6
 shared.END_CARD = 8.0
@@ -111,8 +112,9 @@ shared.wp.mix_with_music=episode_mix
 
 
 def markers(tl):
+    lang = tl["lang"]
     """Align approved caption units to checked Whisper words after trim offset."""
-    path = ROOT / "out/fun-informatics-02/narration-check.json"
+    path = ROOT / f"out/fun-informatics-02/narration-check{'.en' if lang == 'en' else ''}.json"
     checked = json.loads(path.read_text())["cues"] if path.exists() else {}
     result, word_times = {}, {}
     phrases = {
@@ -123,12 +125,21 @@ def markers(tl):
         "cl04-18": ["听着很通顺", "莫奈"],
         "cl07-01": ["有多少是新的呢？", "有多少是真的呢？", "什么是重要的呢？", "什么是可以忽略的呢？", "这也是", "一起学习"],
     }
+    english_phrases = {
+        "这是街道": "a street", "这是操场": "a playground", "这是海边": "the seaside",
+        "英文这里": "In English above", "中文这里": "The lower panel",
+        "你一下就选了": "The words before the gap", "读到最后": "To work out",
+        "听着很通顺": "Sounds smooth", "莫奈": "two Claudes",
+        "有多少是新的呢？": "what is new?", "有多少是真的呢？": "What is true?",
+        "什么是重要的呢？": "What matters?", "什么是可以忽略的呢？": "What can you leave aside?",
+        "这也是": "These are questions", "一起学习": "learn and think",
+    }
     for cue in tl["cues"]:
         cid = cue["id"]
         if cid not in checked:
             continue
         record = checked[cid]
-        audio = shared.VOICES["zh"] / (cid + ".wav")
+        audio = shared.VOICES[lang] / (cid + ".wav")
         if hashlib.sha256(audio.read_bytes()).hexdigest() != record["sha256"]:
             continue
         analysis = record["analyses"].get("medium", record["analyses"].get("small"))
@@ -136,7 +147,7 @@ def markers(tl):
             continue
         words = analysis["_cut"]["words"]
         normalize = lambda s: re.sub(r"[^一-鿿a-z0-9]", "", s.lower())
-        want = normalize(cue["zh"])
+        want = normalize(cue[lang])
         got, times = "", []
         for word in words:
             text = normalize(word["word"])
@@ -147,24 +158,30 @@ def markers(tl):
             if op == "equal":
                 matched.update({a+i: times[x+i] for i in range(b-a)})
         raw = shared.wp.read_wav(audio)
-        loud = [i for i in range(0, len(raw), 120) if abs(raw[i]) > shared.wp.SILENCE]
-        offset = max(0, loud[0]-shared.wp.KEEP) / shared.RATE if loud else 0
-        raw_indices = [m.start() for m in re.finditer(r"[一-鿿a-zA-Z0-9]",cue["zh"])]
+        trimmed = shared.wp.trim(raw)
+        byte_offset = raw.tobytes().find(trimmed.tobytes())
+        assert byte_offset >= 0 and byte_offset % 2 == 0
+        offset = byte_offset / 2 / shared.RATE
+        raw_indices = [m.start() for m in re.finditer(r"[一-鿿a-zA-Z0-9]",cue[lang])]
         word_times[cid] = [{"offset":raw_indices[i],"time":round(cue["speech"]["start"]+max(0,t-offset),3)} for i,t in sorted(matched.items())]
         entries = {}
         for phrase in phrases.get(cid,[]):
-            index = want.find(normalize(phrase))
+            index = want.find(normalize(english_phrases.get(phrase, phrase) if lang == "en" else phrase))
             if index < 0:
                 continue
             found = next((matched[i] for i in range(index, min(index+3,len(want))) if i in matched), None)
             if found is not None:
                 entries[phrase] = round(cue["speech"]["start"] + max(0,found-offset), 3)
+        if lang == "en" and cid == "cl03-04":
+            for label, spellings in {"letter-l": {"ell", "l"}, "letter-d": {"dee", "d"}}.items():
+                word = next((w for w in words if normalize(w["word"]) in spellings), None)
+                if word: entries[label] = round(cue["speech"]["start"] + max(0, word["start"] - offset), 3)
         result[cid] = entries
     return result, word_times
 
 
 def subtitles(tl):
-    """Two readable external caption files, timed to the Chinese film only."""
+    """Two readable external caption files, timed to the current film."""
     for suffix, language in [("zh-Hans", "zh"), ("en", "en")]:
         blocks = []
         for cue in tl["cues"]:
@@ -204,8 +221,8 @@ def subtitles(tl):
                 a = begin + span*cursor/total_weight
                 cursor += len(part)
                 b = begin+span*cursor/total_weight
-                if language == "zh":
-                    raw_index=cue["zh"].find(part,raw_cursor)
+                if language == tl["lang"]:
+                    raw_index=cue[language].find(part,raw_cursor)
                     aligned=next((word["time"] for word in tl["wordTimes"].get(cue["id"],[]) if raw_index<=word["offset"]<raw_index+min(4,len(part))),None)
                     if aligned is not None: a=aligned
                     raw_cursor=raw_index+len(part)
@@ -220,10 +237,11 @@ def subtitles(tl):
             a,b,text=blocks[i]; next_start=blocks[i+1][0]
             blocks[i]=(a,max(a+.08,min(b,next_start-.01)),text)
         output = "\n".join(f"{i}\n{shared.wp.srt_time(a)} --> {shared.wp.srt_time(b)}\n{text}\n" for i,(a,b,text) in enumerate(blocks,1))
-        (shared.DELIVERY / f"fun-informatics-02.zh.{suffix}.srt").write_text(output)
+        (shared.DELIVERY / f"fun-informatics-02.{tl['lang']}.{suffix}.srt").write_text(output)
 
 
 def mix_feedback(tl):
+    lang = tl["lang"]
     """Restore the app's original short cues at the curve's actual event times."""
     sounds = tl.get("gameFeedback", [])
     if not sounds: return
@@ -248,15 +266,15 @@ def mix_feedback(tl):
         gain=ceiling/peak
         track=array.array("f",(value*gain for value in track))
     metrics={"events":len(sounds),"normalization":"decoded sample peak, not short-clip LUFS","speakingPeakDBFS":FEEDBACK_SPEAKING_PEAK_DBFS,"pausePeakDBFS":FEEDBACK_PAUSE_PEAK_DBFS,"combinedStemPeakDBFS":round(20*__import__("math").log10(min(peak,ceiling)),2) if peak else None}
-    report=ROOT / "out/fun-informatics-02/feedback-check.json"
+    report=ROOT / f"out/fun-informatics-02/feedback-check{'.en' if lang == 'en' else ''}.json"
     report.write_text(json.dumps(metrics,ensure_ascii=False,indent=2)+"\n")
-    sfx=shared.PUB / "audio/game-feedback.f32"
+    sfx=shared.PUB / f"audio/{lang}.game-feedback.f32"
     sfx.write_bytes(track.tobytes())
-    base=shared.PUB / "audio/zh.mix.wav"
-    premix=shared.PUB / "audio/zh.feedback-premix.wav"
+    base=shared.PUB / f"audio/{lang}.mix.wav"
+    premix=shared.PUB / f"audio/{lang}.feedback-premix.wav"
     subprocess.run(["ffmpeg","-v","error","-y","-i",str(base),"-f","f32le","-ar",str(rate),"-ac","2","-i",str(sfx),"-filter_complex","[0:a][1:a]amix=inputs=2:normalize=0", "-c:a","pcm_s16le",str(premix)],check=True)
     gain=shared.wp.FILM_LUFS-shared.wp.loudness("-i",str(premix))
-    limited=shared.PUB / "audio/zh.peak-limited.wav"
+    limited=shared.PUB / f"audio/{lang}.peak-limited.wav"
     subprocess.run(["ffmpeg","-v","error","-y","-i",str(premix),"-af",f"volume={gain:.3f}dB,aresample=192000,alimiter=limit=0.7079:level=false:latency=true,aresample=48000",str(limited)],check=True)
     makeup=min(.6,shared.wp.FILM_LUFS-shared.wp.loudness("-i",str(limited)))
     subprocess.run(["ffmpeg","-v","error","-y","-i",str(limited),"-af",f"volume={makeup:.3f}dB",str(base)],check=True)
@@ -266,26 +284,31 @@ def mix_feedback(tl):
 
 def main():
     ap = argparse.ArgumentParser()
+    ap.add_argument("lang", choices=("zh", "en"), nargs="?", default="zh")
     ap.add_argument("--draft", action="store_true")
     args = ap.parse_args()
+    lang = args.lang
     cues = json.loads((shared.PUB / "narration/cues.json").read_text())
-    missing = [c["id"] for c in cues if not (shared.VOICES["zh"] / (c["id"] + ".wav")).is_file()]
+    missing = [c["id"] for c in cues if not (shared.VOICES[lang] / (c["id"] + ".wav")).is_file()]
     if missing and not args.draft:
-        raise SystemExit(f"Final timeline needs all 84 Chinese takes; missing {len(missing)}: {', '.join(missing[:6])}")
-    coda_voice=shared.VOICES["zh"] / "cl06-04.wav"
+        raise SystemExit(f"Final timeline needs all 84 {lang} takes; missing {len(missing)}: {', '.join(missing[:6])}")
+    coda_voice=shared.VOICES[lang] / "cl06-04.wav"
     spoken=len(shared.wp.trim(shared.wp.read_wav(coda_voice)))/shared.RATE if coda_voice.exists() else len(cues[[c["id"] for c in cues].index("cl06-04")]["zh"])/4.6
     shared.HOLD["cl06-04"]=max(4.0,CODA_END-CODA_START+2.0-shared.ONSET-spoken-shared.GAP)
-    shared.build(["zh"])
-    path = shared.PUB / "timeline.zh.json"
+    shared.build([lang])
+    path = shared.PUB / f"timeline.{lang}.json"
     tl = json.loads(path.read_text())
-    tl.update({"draft": bool(missing), "missingNarration": missing, "narrationPolicy": "Chinese only; English voice on hold"})
+    tl.update({"draft": bool(missing), "missingNarration": missing, "narrationPolicy": "Separate Louise narration, original-language examples"})
+    for cue, source in zip(tl["cues"], cues):
+        if lang == "en": cue["zh"] = source["enZh"]
+        else: cue["en"] = source["zhEn"]
     tl["art"] = [str(p.relative_to(shared.PUB)) for p in (shared.PUB / "art").glob("*.jpg")]
     tl["recordings"] = {p.stem: json.loads(p.read_text()) for p in (shared.PUB / "footage").glob("*.json")}
     tl["markers"],tl["wordTimes"] = markers(tl)
     coda_cue=next(c for c in tl["cues"] if c["id"]=="cl06-04")
     tl["musicExample"]={"sourceStart":CODA_START,"sourceEnd":CODA_END,"start":coda_cue["start"]+1,"end":coda_cue["start"]+1+CODA_END-CODA_START,"route":"I–III♭–I rather than the familiar I–V–I; real final tonic retained","analysisSource":"https://johnhooker.tepper.cmu.edu/osherMusicDebussy.pdf#page=31"}
     path.write_text(json.dumps(tl, ensure_ascii=False, indent=2) + "\n")
-    subprocess.run(["node",str(ROOT / "scripts/fun-informatics-02/playback.cjs")],check=True,cwd=ROOT)
+    subprocess.run(["node",str(ROOT / "scripts/fun-informatics-02/playback.cjs"),lang],check=True,cwd=ROOT)
     tl=json.loads(path.read_text())
     subtitles(tl)
     mix_feedback(tl)

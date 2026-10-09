@@ -14,6 +14,7 @@ const SPECS = [
   ['letters-jhn316-en', 'JHN.3.16', 'WEB', 'letters', false],
   ['letters-pro2511-zh', 'PRO.25.11', 'CUV', 'letters', true],
   ['letters-pro2511-en', 'PRO.25.11', 'WEB', 'letters', true],
+  ['words-psa231-en', 'PSA.23.1', 'WEB', 'words', true],
   ['words-psa231-zh', 'PSA.23.1', 'CUV', 'words', true],
 ];
 const layout = `
@@ -91,7 +92,7 @@ async function record(browser, spec) {
   const output = path.join(OUT,name+'.mp4');
   const encode = spawnSync('ffmpeg',['-v','error','-y','-ss',sourceLeadIn.toFixed(3),'-i',videoPath,'-vf','fps=30','-an','-c:v','libx264','-crf','18','-pix_fmt','yuv420p','-movflags','+faststart',output],{stdio:'inherit'});
   if(encode.status!==0)throw Error('ffmpeg failed for '+name);
-  const meta={name,url,recorded:'2026-10-07',seed,kind,translation,simulated,displayOnlyLayout:true,trimmedSourceLeadInSeconds:sourceLeadIn,videoStartOffsetSeconds:0,events,game:props.game};
+  const meta={name,url,recorded:new Date().toISOString().slice(0,10),seed,kind,translation,simulated,displayOnlyLayout:true,trimmedSourceLeadInSeconds:sourceLeadIn,videoStartOffsetSeconds:0,events,game:props.game};
   fs.writeFileSync(path.join(OUT,name+'.json'),JSON.stringify(meta,null,2)+'\n');
   console.log(name+': '+ordinal+' single '+(kind==='letters'?'characters':'words')+' recorded');
 }

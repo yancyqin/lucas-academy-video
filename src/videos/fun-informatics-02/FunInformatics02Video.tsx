@@ -1,5 +1,6 @@
 import {
   useEffect,
+  useContext,
   useLayoutEffect,
   useRef,
   useState,
@@ -25,6 +26,7 @@ import {
 import { rampAt } from "../../lib/timeRamps";
 import type { PlaybackPlan } from "./playback";
 import { SHOTS, type Shot } from "./shots";
+import { FilmLanguage, L, type Language } from "./localization";
 
 type Cue = {
   id: string;
@@ -51,6 +53,7 @@ type Recording = {
   simulated: boolean;
 };
 export type ClaudeTimeline = {
+  lang: Language;
   fps: number;
   durationSeconds: number;
   endCardStart: number;
@@ -70,7 +73,7 @@ export type ClaudeTimeline = {
   footageSeconds: Record<string, number>;
   recordings: Record<string, Recording>;
 };
-export type ClaudeProps = { tl?: ClaudeTimeline | null };
+export type ClaudeProps = { tl?: ClaudeTimeline | null; lang?: Language };
 const DIR = "fun-informatics-02";
 const FONT = '"PingFang SC", "Hiragino Sans GB", sans-serif';
 const EN = '"Avenir Next", "Helvetica Neue", sans-serif';
@@ -96,7 +99,7 @@ const glass: CSSProperties = {
 export const calculateClaudeMetadata: CalculateMetadataFunction<
   ClaudeProps
 > = async ({ props, abortSignal }) => {
-  const response = await fetch(file("timeline.zh.json"), {
+  const response = await fetch(file(`timeline.${props.lang ?? "zh"}.json`), {
     signal: abortSignal,
   });
   if (!response.ok) throw Error("Run fi02:timeline first");
@@ -121,13 +124,17 @@ const Tag: FC<{ children: ReactNode; style?: CSSProperties }> = ({
       ...style,
     }}
   >
-    {children}
+    <L>{children}</L>
   </div>
 );
 const Card: FC<{ children: ReactNode; style?: CSSProperties }> = ({
   children,
   style,
-}) => <div style={{ ...glass, padding: 44, ...style }}>{children}</div>;
+}) => (
+  <div style={{ ...glass, padding: 44, ...style }}>
+    <L>{children}</L>
+  </div>
+);
 const Center: FC<{ children: ReactNode }> = ({ children }) => (
   <AbsoluteFill
     style={{
@@ -137,7 +144,7 @@ const Center: FC<{ children: ReactNode }> = ({ children }) => (
       padding: "100px 100px 150px",
     }}
   >
-    {children}
+    <L>{children}</L>
   </AbsoluteFill>
 );
 const Heading: FC<{ small?: string; children: ReactNode }> = ({
@@ -154,10 +161,10 @@ const Heading: FC<{ small?: string; children: ReactNode }> = ({
         marginBottom: 20,
       }}
     >
-      {small}
+      <L>{small}</L>
     </div>
     <div style={{ fontSize: 68, fontWeight: 650, lineHeight: 1.3 }}>
-      {children}
+      <L>{children}</L>
     </div>
   </>
 );
@@ -177,7 +184,7 @@ const Note: FC<{ children: ReactNode; style?: CSSProperties }> = ({
       ...style,
     }}
   >
-    {children}
+    <L>{children}</L>
   </div>
 );
 
@@ -214,21 +221,27 @@ const Art: FC<{
         style={{ width: "100%", height: "100%", objectFit: "contain" }}
       />
     </AbsoluteFill>
-    {dim > 0 && <AbsoluteFill style={{ background: `rgba(3,17,18,${dim})` }} />}
-    {caption && (
-      <div
-        style={{
-          position: "absolute",
-          left: 54,
-          bottom: 120,
-          ...glass,
-          padding: "10px 18px",
-          fontSize: 22,
-        }}
-      >
-        {caption}
-      </div>
-    )}
+    <L>
+      {dim > 0 && (
+        <AbsoluteFill style={{ background: `rgba(3,17,18,${dim})` }} />
+      )}
+    </L>
+    <L>
+      {caption && (
+        <div
+          style={{
+            position: "absolute",
+            left: 54,
+            bottom: 120,
+            ...glass,
+            padding: "10px 18px",
+            fontSize: 22,
+          }}
+        >
+          {caption}
+        </div>
+      )}
+    </L>
   </AbsoluteFill>
 );
 
@@ -238,8 +251,14 @@ const Still: FC<{ name: string; dim?: number }> = ({ name, dim = 0 }) => (
       src={file(`images/${name}.png`)}
       style={{ width: "100%", height: "100%", objectFit: "cover" }}
     />
-    {dim > 0 && <AbsoluteFill style={{ background: `rgba(3,17,18,${dim})` }} />}
-    <Note style={{ left: 54, right: "auto" }}>AI 生成</Note>
+    <L>
+      {dim > 0 && (
+        <AbsoluteFill style={{ background: `rgba(3,17,18,${dim})` }} />
+      )}
+    </L>
+    <Note style={{ left: 54, right: "auto" }}>
+      <L>AI 生成</L>
+    </Note>
   </AbsoluteFill>
 );
 const Dissolve: FC<{
@@ -259,7 +278,9 @@ const Dissolve: FC<{
         style={{ width: "100%", height: "100%", objectFit: "cover" }}
       />
     </AbsoluteFill>
-    <Note>AI 生成 · 同构图实景／莫奈风</Note>
+    <Note>
+      <L>AI 生成 · 同构图实景／莫奈风</L>
+    </Note>
   </AbsoluteFill>
 );
 
@@ -282,25 +303,31 @@ const Portrait: FC<{
       ...style,
     }}
   >
-    {src ? (
-      <Img
-        src={file(src)}
-        style={{
-          width: 360,
-          height: 420,
-          objectFit: "contain",
-          borderRadius: 10,
-        }}
-      />
-    ) : (
-      <div
-        style={{ fontFamily: EN, fontSize: 240, color: GOLD, lineHeight: 1 }}
-      >
-        {question ? "?" : "Claude"}
-      </div>
-    )}
-    <div style={{ fontSize: 48, fontWeight: 650 }}>{name}</div>
-    <div style={{ fontFamily: EN, fontSize: 28, color: GREEN }}>{sub}</div>
+    <L>
+      {src ? (
+        <Img
+          src={file(src)}
+          style={{
+            width: 360,
+            height: 420,
+            objectFit: "contain",
+            borderRadius: 10,
+          }}
+        />
+      ) : (
+        <div
+          style={{ fontFamily: EN, fontSize: 240, color: GOLD, lineHeight: 1 }}
+        >
+          {question ? "?" : "Claude"}
+        </div>
+      )}
+    </L>
+    <div style={{ fontSize: 48, fontWeight: 650 }}>
+      <L>{name}</L>
+    </div>
+    <div style={{ fontFamily: EN, fontSize: 28, color: GREEN }}>
+      <L>{sub}</L>
+    </div>
   </Card>
 );
 
@@ -323,7 +350,7 @@ const Lifelines: FC<{ three?: boolean; time: number }> = ({
     <Center>
       <Card style={{ width: 1640 }}>
         <Heading small="A MOMENT IN COMMON">
-          {three ? "三位人类 Claude" : "他们在同一个世界里"}
+          <L>{three ? "三位人类 Claude" : "他们在同一个世界里"}</L>
         </Heading>
         <div
           style={{
@@ -345,64 +372,68 @@ const Lifelines: FC<{ three?: boolean; time: number }> = ({
               borderRight: `2px solid ${GOLD}`,
             }}
           />
-          {lines.map(([name, a, b], i) => (
-            <div
-              key={name}
-              style={{
-                position: "absolute",
-                left: 0,
-                top: i * 125,
-                width: 1330,
-                opacity: ease(time / 1.2 - i * 0.18),
-              }}
-            >
+          <L>
+            {lines.map(([name, a, b], i) => (
               <div
+                key={name}
                 style={{
                   position: "absolute",
-                  left: -130,
-                  fontSize: 36,
-                  top: 6,
+                  left: 0,
+                  top: i * 125,
+                  width: 1330,
+                  opacity: ease(time / 1.2 - i * 0.18),
                 }}
               >
-                {name}
+                <div
+                  style={{
+                    position: "absolute",
+                    left: -130,
+                    fontSize: 36,
+                    top: 6,
+                  }}
+                >
+                  {name}
+                </div>
+                <div
+                  style={{
+                    position: "absolute",
+                    left: x(Number(a)),
+                    width: x(Number(b)) - x(Number(a)),
+                    height: 48,
+                    background: i === 0 ? GREEN : i === 1 ? GOLD : "#a6cbd3",
+                    borderRadius: 8,
+                  }}
+                />
+                <div
+                  style={{
+                    position: "absolute",
+                    left: x(Number(a)),
+                    top: 60,
+                    fontFamily: EN,
+                    fontSize: 27,
+                  }}
+                >
+                  {a}
+                </div>
+                <div
+                  style={{
+                    position: "absolute",
+                    left: x(Number(b)) - 75,
+                    top: 60,
+                    fontFamily: EN,
+                    fontSize: 27,
+                  }}
+                >
+                  {b}
+                </div>
               </div>
-              <div
-                style={{
-                  position: "absolute",
-                  left: x(Number(a)),
-                  width: x(Number(b)) - x(Number(a)),
-                  height: 48,
-                  background: i === 0 ? GREEN : i === 1 ? GOLD : "#a6cbd3",
-                  borderRadius: 8,
-                }}
-              />
-              <div
-                style={{
-                  position: "absolute",
-                  left: x(Number(a)),
-                  top: 60,
-                  fontFamily: EN,
-                  fontSize: 27,
-                }}
-              >
-                {a}
-              </div>
-              <div
-                style={{
-                  position: "absolute",
-                  left: x(Number(b)) - 75,
-                  top: 60,
-                  fontFamily: EN,
-                  fontSize: 27,
-                }}
-              >
-                {b}
-              </div>
-            </div>
-          ))}
+            ))}
+          </L>
         </div>
         <div style={{ fontSize: 38, color: GOLD, textAlign: "center" }}>
-          {three ? "1916—1918 · 画画／作曲／刚出生" : "1916—1926 · 十年重叠"}
+          <L>
+            {three ? "1916—1918 · 画画／作曲／刚出生" : "1916—1926 · 十年重叠"}
+          </L>
         </div>
       </Card>
     </Center>
@@ -414,6 +445,7 @@ const Chat: FC<{ cue: Cue; now: number; compact?: boolean }> = ({
   now,
   compact = false,
 }) => {
+  const lang = useContext(FilmLanguage);
   const fraction = Math.max(
     0,
     Math.min(
@@ -422,14 +454,17 @@ const Chat: FC<{ cue: Cue; now: number; compact?: boolean }> = ({
         Math.max(1, cue.speech.end - cue.speech.start - 0.5),
     ),
   );
-  const text = cue.zh.slice(0, Math.ceil(cue.zh.length * fraction));
+  const full = cue[lang];
+  const typed = full.slice(0, Math.ceil(full.length * fraction));
+  const text =
+    lang === "en" && fraction < 1 ? typed.replace(/\s+\S*$/, "") : typed;
   return (
     <Card
       style={{
         position: "absolute",
-        left: compact ? 1120 : 240,
+        left: compact ? (lang === "en" ? 1050 : 1120) : 240,
         top: compact ? 645 : 300,
-        width: compact ? 710 : 1440,
+        width: compact ? (lang === "en" ? 780 : 710) : 1440,
         padding: compact ? 24 : 48,
       }}
     >
@@ -446,11 +481,11 @@ const Chat: FC<{ cue: Cue; now: number; compact?: boolean }> = ({
       <div
         style={{
           fontSize: compact ? 27 : 48,
-          lineHeight: 1.55,
+          lineHeight: lang === "en" ? 1.45 : 1.55,
           minHeight: compact ? 80 : 190,
         }}
       >
-        {text}
+        <L>{text}</L>
         <span
           style={{ color: GREEN, opacity: Math.floor(now * 2) % 2 ? 1 : 0.3 }}
         >
@@ -489,17 +524,20 @@ const LetterCard: FC<{
   language: "en" | "zh";
   time: number;
   length: number;
-}> = ({ language, time, length }) => {
+  firstAt?: number;
+  secondAt?: number;
+}> = ({ language, time, length, firstAt, secondAt }) => {
   const zh = language === "zh";
   const l = zh ? "神爱世" : "For God so loved the wor";
   const options = zh
     ? ["界", "代", "上", "人"]
-    : time < length * 0.5
+    : time < (secondAt !== undefined ? secondAt - 0.4 : length * 0.5)
       ? ["l", "r", "m", "n"]
       : ["d", "t", "s", "k"];
-  const firstLetter = time > length * 0.35;
-  const secondStep = time >= length * 0.5;
-  const reveal = time > length * 0.8;
+  const firstLetter = time >= (firstAt ?? length * 0.35);
+  const secondStep =
+    time >= (secondAt !== undefined ? secondAt - 0.4 : length * 0.5);
+  const reveal = time >= (secondAt ?? length * 0.8);
   const selected = zh
     ? reveal
       ? "人"
@@ -528,28 +566,30 @@ const LetterCard: FC<{
       <div
         style={{ fontSize: 58, fontFamily: zh ? FONT : EN, marginBottom: 25 }}
       >
-        {text}
+        <L>{text}</L>
       </div>
       <div style={{ display: "flex", gap: 25 }}>
-        {options.map((o) => (
-          <div
-            key={o}
-            style={{
-              border: `2px solid ${o === selected ? GOLD : GREEN}`,
-              background:
-                o === selected ? "rgba(239,204,137,.24)" : "transparent",
-              borderRadius: 14,
-              width: 120,
-              height: 78,
-              textAlign: "center",
-              fontSize: 48,
-              lineHeight: "74px",
-              color: WHITE,
-            }}
-          >
-            {o}
-          </div>
-        ))}
+        <L>
+          {options.map((o) => (
+            <div
+              key={o}
+              style={{
+                border: `2px solid ${o === selected ? GOLD : GREEN}`,
+                background:
+                  o === selected ? "rgba(239,204,137,.24)" : "transparent",
+                borderRadius: 14,
+                width: 120,
+                height: 78,
+                textAlign: "center",
+                fontSize: 48,
+                lineHeight: "74px",
+                color: WHITE,
+              }}
+            >
+              {o}
+            </div>
+          ))}
+        </L>
       </div>
       <div
         style={{
@@ -560,7 +600,7 @@ const LetterCard: FC<{
           bottom: 16,
         }}
       >
-        单字符选择 · 教学示意
+        <L>单字符选择 · 教学示意</L>
       </div>
     </Card>
   );
@@ -586,62 +626,83 @@ const GuessSplit: FC<{
     <AbsoluteFill style={{ padding: "46px 70px 112px", gap: 24 }}>
       <div style={{ fontSize: 30, color: GREEN }}>
         bible.lucasacademy.org　·　
-        {unfamiliar
-          ? "箴言 25:11 · 模拟试错"
-          : "约翰福音 3:16 · 一个字母／一个汉字"}
+        <L>
+          {unfamiliar
+            ? "箴言 25:11 · 模拟试错"
+            : "约翰福音 3:16 · 一个字母／一个汉字"}
+        </L>
       </div>
-      {names.map((name, index) => {
-        const recording = tl.recordings[name];
-        const keys = tl.playback[name].keys;
-        const demo = !unfamiliar && time >= target4 && time < target6;
-        const demoStart = index === 0 ? target4 : target5;
-        const demoLength = index === 0 ? target5 - target4 : target6 - target5;
-        return (
-          <div
-            key={name}
-            style={{
-              position: "relative",
-              height: 384,
-              width: 1780,
-              flexShrink: 0,
-              ...glass,
-              overflow: "hidden",
-            }}
-          >
+      <L>
+        {names.map((name, index) => {
+          const recording = tl.recordings[name];
+          const keys = tl.playback[name].keys;
+          const demo = !unfamiliar && time >= target4 && time < target6;
+          const demoStart = index === 0 ? target4 : target5;
+          const demoLength =
+            index === 0 ? target5 - target4 : target6 - target5;
+          return (
             <div
+              key={name}
               style={{
-                position: "absolute",
-                left: 20,
-                top: 12,
-                zIndex: 2,
-                fontFamily: EN,
-                fontSize: 21,
-                color: GREEN,
+                position: "relative",
+                height: 384,
+                width: 1780,
+                flexShrink: 0,
                 ...glass,
-                padding: "5px 13px",
+                overflow: "hidden",
               }}
             >
-              {" "}
-              {index === 0 ? "ENGLISH · LETTERS" : "中文 · 猜字"}
+              <div
+                style={{
+                  position: "absolute",
+                  left: 20,
+                  top: 12,
+                  zIndex: 2,
+                  fontFamily: EN,
+                  fontSize: 21,
+                  color: GREEN,
+                  ...glass,
+                  padding: "5px 13px",
+                }}
+              >
+                {" "}
+                {index === 0 ? "ENGLISH · LETTERS" : "中文 · 猜字"}
+              </div>
+              {demo ? (
+                index === 0 && time >= target5 ? (
+                  <LetterCard language="en" time={100} length={1} />
+                ) : index === 1 && time < target5 ? (
+                  <LetterCard language="zh" time={0} length={1} />
+                ) : (
+                  <LetterCard
+                    language={index === 0 ? "en" : "zh"}
+                    time={time - demoStart}
+                    length={Math.max(1, demoLength)}
+                    firstAt={
+                      tl.lang === "en" && index === 0
+                        ? (tl.markers?.["cl03-04"]?.["letter-l"] ??
+                            cue("cl03-04").speech.start + 3) -
+                          start -
+                          demoStart
+                        : undefined
+                    }
+                    secondAt={
+                      tl.lang === "en" && index === 0
+                        ? (tl.markers?.["cl03-04"]?.["letter-d"] ??
+                            cue("cl03-04").speech.start + 4) -
+                          start -
+                          demoStart
+                        : undefined
+                    }
+                  />
+                )
+              ) : recording ? (
+                <VideoAt tl={tl} name={name} keys={keys} time={time} />
+              ) : null}
             </div>
-            {demo ? (
-              index === 0 && time >= target5 ? (
-                <LetterCard language="en" time={100} length={1} />
-              ) : index === 1 && time < target5 ? (
-                <LetterCard language="zh" time={0} length={1} />
-              ) : (
-                <LetterCard
-                  language={index === 0 ? "en" : "zh"}
-                  time={time - demoStart}
-                  length={Math.max(1, demoLength)}
-                />
-              )
-            ) : recording ? (
-              <VideoAt tl={tl} name={name} keys={keys} time={time} />
-            ) : null}
-          </div>
-        );
-      })}
+          );
+        })}
+      </L>
     </AbsoluteFill>
   );
 };
@@ -660,7 +721,7 @@ const Probability: FC<{ surprise?: boolean; time: number }> = ({
     }}
   >
     <Heading small="ILLUSTRATION">
-      {surprise ? "越有可能，越不意外" : "候选词的概率"}
+      <L>{surprise ? "越有可能，越不意外" : "候选词的概率"}</L>
     </Heading>
     <div
       style={{
@@ -671,36 +732,38 @@ const Probability: FC<{ surprise?: boolean; time: number }> = ({
         marginTop: 20,
       }}
     >
-      {[
-        ["苹果", 0.62],
-        ["面包", 0.24],
-        ["书", 0.1],
-        ["天空", 0.04],
-      ].map(([label, p]) => (
-        <div key={label} style={{ width: 200, textAlign: "center" }}>
-          <div
-            style={{
-              fontFamily: EN,
-              fontSize: 32,
-              color: GOLD,
-              marginBottom: 10,
-            }}
-          >
-            {Math.round(Number(p) * 100)}%
+      <L>
+        {[
+          ["苹果", 0.62],
+          ["面包", 0.24],
+          ["书", 0.1],
+          ["天空", 0.04],
+        ].map(([label, p]) => (
+          <div key={label} style={{ width: 200, textAlign: "center" }}>
+            <div
+              style={{
+                fontFamily: EN,
+                fontSize: 32,
+                color: GOLD,
+                marginBottom: 10,
+              }}
+            >
+              {Math.round(Number(p) * 100)}%
+            </div>
+            <div
+              style={{
+                height: 180 * Number(p) * ease(time / 1.2) + 6,
+                background: GREEN,
+                borderRadius: "12px 12px 0 0",
+              }}
+            />
+            <div style={{ fontSize: 35, marginTop: 14 }}>{label}</div>
           </div>
-          <div
-            style={{
-              height: 180 * Number(p) * ease(time / 1.2) + 6,
-              background: GREEN,
-              borderRadius: "12px 12px 0 0",
-            }}
-          />
-          <div style={{ fontSize: 35, marginTop: 14 }}>{label}</div>
-        </div>
-      ))}
+        ))}
+      </L>
     </div>
     <div style={{ fontSize: 22, color: SOFT, marginTop: 28 }}>
-      示意 · 实际模型预测 token，候选来自词表；生成也可以按概率采样
+      <L>示意 · 实际模型预测 token，候选来自词表；生成也可以按概率采样</L>
     </div>
   </Card>
 );
@@ -746,12 +809,12 @@ const PixelLoss: FC<{ time: number; duration: number }> = ({
       </div>
       <Card style={{ marginLeft: 90, width: 700 }}>
         <Heading small="HOW MUCH CAN GO?">
-          {time < duration * 0.6 ? "细节越来越少" : "只剩几块颜色"}
+          <L>{time < duration * 0.6 ? "细节越来越少" : "只剩几块颜色"}</L>
         </Heading>
         <div style={{ fontSize: 34, color: GREEN, marginTop: 30 }}>
-          冗余可以去掉
+          <L>冗余可以去掉</L>
           <br />
-          信息也丢了，就认不出了
+          <L>信息也丢了，就认不出了</L>
         </div>
       </Card>
     </Center>
@@ -760,6 +823,7 @@ const PixelLoss: FC<{ time: number; duration: number }> = ({
 
 type SceneProps = { tl: ClaudeTimeline; shot: Shot; first: Cue; last: Cue };
 const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
+  const english = tl.lang === "en";
   const frame = useCurrentFrame(),
     { fps } = useVideoConfig();
   const time = frame / fps,
@@ -798,22 +862,58 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
     case "blanks": {
       const show = current.id === "cl00-05",
         q = show ? local("cl00-05") : 0;
+      if (english) {
+        visual = (
+          <>
+            {background}
+            <Center>
+              <Card style={{ width: 1640 }}>
+                <div style={{ fontSize: 63, lineHeight: 1.7 }}>
+                  Emma pulled on her{" "}
+                  <span style={{ color: GOLD }}>
+                    {q > 1.5 ? "shoes" : "sho__"}
+                  </span>
+                  <br />
+                  and stepped out into the{" "}
+                  <span style={{ color: GOLD }}>{q > 3 ? "rain" : "ra__"}</span>
+                  .<br />
+                  Beside the gate, she spotted a{" "}
+                  <span style={{ color: GOLD }}>
+                    {q > 5
+                      ? ["cat", "dog", "fox"][Math.floor((q - 5) / 1.6) % 3]
+                      : "___"}
+                  </span>
+                  .
+                </div>
+              </Card>
+            </Center>
+          </>
+        );
+        break;
+      }
       visual = (
         <>
           <Still name="schoolbag-cat-monet" dim={0.3} />
           <Center>
             <Card style={{ width: 1640 }}>
               <div style={{ fontSize: 64, lineHeight: 1.65 }}>
-                小明背着书
-                <span style={{ color: GOLD }}>{q > 1.5 ? "包" : "＿"}</span>
-                去上学，
-                <br />路
-                <span style={{ color: GOLD }}>{q > 3 ? "上" : "＿"}</span>
-                看见一只小
+                <L>小明背着书</L>
                 <span style={{ color: GOLD }}>
-                  {q > 5
-                    ? ["猫", "狗", "鸟"][Math.floor((q - 5) / 1.6) % 3]
-                    : "＿"}
+                  <L>{q > 1.5 ? "包" : "＿"}</L>
+                </span>
+                <L>去上学，</L>
+                <br />
+                <L>路</L>
+                <span style={{ color: GOLD }}>
+                  <L>{q > 3 ? "上" : "＿"}</L>
+                </span>
+                <L>看见一只小</L>
+                <span style={{ color: GOLD }}>
+                  <L>
+                    {q > 5
+                      ? ["猫", "狗", "鸟"][Math.floor((q - 5) / 1.6) % 3]
+                      : "＿"}
+                  </L>
                 </span>
                 。
               </div>
@@ -826,19 +926,23 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
     case "redundancy":
       visual = (
         <>
-          {background}
+          <L>{background}</L>
           <Center>
             <div style={{ display: "flex", gap: 55 }}>
               <Card style={{ width: 730 }}>
-                <Heading small="REDUNDANCY">猜得到的 · 冗余</Heading>
+                <Heading small="REDUNDANCY">
+                  <L>猜得到的 · 冗余</L>
+                </Heading>
                 <div style={{ fontSize: 38, color: GREEN, marginTop: 32 }}>
-                  书包　路上
+                  <L>书包　路上</L>
                 </div>
               </Card>
               <Card style={{ width: 730 }}>
-                <Heading small="INFORMATION">猜不到的 · 信息</Heading>
+                <Heading small="INFORMATION">
+                  <L>猜不到的 · 信息</L>
+                </Heading>
                 <div style={{ fontSize: 38, color: GOLD, marginTop: 32 }}>
-                  猫？　狗？　鸟？
+                  <L>猫？　狗？　鸟？</L>
                 </div>
               </Card>
             </div>
@@ -849,13 +953,14 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
     case "title":
       visual = (
         <>
-          {background}
+          <L>{background}</L>
           <Center>
             <div>
               <div style={{ fontSize: 116, fontWeight: 700, lineHeight: 1.27 }}>
-                你认识
+                <L>你认识</L>
                 <br />
-                <span style={{ fontFamily: EN, color: GOLD }}>Claude</span> 吗？
+                <span style={{ fontFamily: EN, color: GOLD }}>Claude</span>
+                <L> 吗？</L>
               </div>
               <div
                 style={{
@@ -865,10 +970,10 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
                   marginTop: 30,
                 }}
               >
-                Do You Know Claude?
+                {english ? "Fun Informatics 2" : "Do You Know Claude?"}
               </div>
               <div style={{ fontSize: 27, color: SOFT, marginTop: 58 }}>
-                作者 Yancy Qin, Louise Yang | Lucas Academy
+                <L>作者 Yancy Qin, Louise Yang | Lucas Academy</L>
               </div>
             </div>
           </Center>
@@ -878,7 +983,7 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
     case "introductions":
       visual = (
         <>
-          {background}
+          <L>{background}</L>
           <Center>
             <div style={{ display: "flex", gap: 70 }}>
               <Portrait
@@ -894,14 +999,16 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
               />
             </div>
           </Center>
-          <Note>独轮车插图 · AI 生成</Note>
+          <Note>
+            <L>独轮车插图 · AI 生成</L>
+          </Note>
         </>
       );
       break;
     case "lifelines":
       visual = (
         <>
-          {background}
+          <L>{background}</L>
           <Lifelines time={time} />
         </>
       );
@@ -909,7 +1016,7 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
     case "mystery":
       visual = (
         <>
-          {background}
+          <L>{background}</L>
           <Center>
             <Portrait name="第三个 Claude" sub="稍后揭晓" question />
           </Center>
@@ -925,7 +1032,9 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
             caption="Louis Daguerre · Boulevard du Temple · 1838"
           />
           <div style={{ position: "absolute", top: 55, left: 65 }}>
-            <Tag>1839 · 照相术公开问世　→　1840 · 莫奈出生</Tag>
+            <Tag>
+              <L>1839 · 照相术公开问世　→　1840 · 莫奈出生</L>
+            </Tag>
           </div>
         </>
       );
@@ -937,20 +1046,22 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
             src="art/impression-sunrise.jpg"
             caption="Claude Monet · Impression, soleil levant · 1872"
           />
-          {current.id === "cl02-05" || current.id === "cl02-06" ? (
-            <div style={{ position: "absolute", right: 70, top: 70 }}>
-              <Card>
-                <div style={{ fontSize: 58, color: GOLD }}>
-                  {current.id === "cl02-05"
-                    ? "不过是个「印象」！"
-                    : "「印象派」"}
-                </div>
-                <div style={{ fontSize: 28, marginTop: 15 }}>
-                  1874 · 从一个名字开始
-                </div>
-              </Card>
-            </div>
-          ) : null}
+          <L>
+            {current.id === "cl02-05" || current.id === "cl02-06" ? (
+              <div style={{ position: "absolute", right: 70, top: 70 }}>
+                <Card>
+                  <div style={{ fontSize: 58, color: GOLD }}>
+                    {current.id === "cl02-05"
+                      ? "不过是个「印象」！"
+                      : "「印象派」"}
+                  </div>
+                  <div style={{ fontSize: 28, marginTop: 15 }}>
+                    1874 · 从一个名字开始
+                  </div>
+                </Card>
+              </div>
+            ) : null}
+          </L>
         </>
       );
       break;
@@ -974,7 +1085,7 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
             : 1;
       visual = (
         <>
-          {background}
+          <L>{background}</L>
           <div
             style={{
               position: "absolute",
@@ -1005,29 +1116,31 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
               zoom={z}
               caption="Claude Monet · 日本桥 · 1899"
             />
-            {current.id === "cl02-08" && (
-              <div
-                style={{
-                  position: "absolute",
-                  left:
-                    time - at("cl02-08") < 2
-                      ? "25%"
-                      : time - at("cl02-08") < 4
-                        ? "45%"
-                        : "30%",
-                  top:
-                    time - at("cl02-08") < 2
-                      ? "23%"
-                      : time - at("cl02-08") < 4
-                        ? "38%"
-                        : "68%",
-                  width: 160,
-                  height: 110,
-                  border: `5px solid ${GOLD}`,
-                  borderRadius: "50%",
-                }}
-              />
-            )}
+            <L>
+              {current.id === "cl02-08" && (
+                <div
+                  style={{
+                    position: "absolute",
+                    left:
+                      time - at("cl02-08") < 2
+                        ? "25%"
+                        : time - at("cl02-08") < 4
+                          ? "45%"
+                          : "30%",
+                    top:
+                      time - at("cl02-08") < 2
+                        ? "23%"
+                        : time - at("cl02-08") < 4
+                          ? "38%"
+                          : "68%",
+                    width: 160,
+                    height: 110,
+                    border: `5px solid ${GOLD}`,
+                    borderRadius: "50%",
+                  }}
+                />
+              )}
+            </L>
           </div>
         </>
       );
@@ -1057,7 +1170,7 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
           now >= marker("这是海边") ? 2 : now >= marker("这是操场") ? 1 : 0;
         visual = (
           <>
-            {background}
+            <L>{background}</L>
             <div
               style={{
                 position: "absolute",
@@ -1067,39 +1180,43 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
                 gap: 28,
               }}
             >
-              {["street", "playground", "seaside"].map((name, i) => (
-                <Card
-                  key={name}
-                  style={{
-                    width: 573,
-                    padding: 18,
-                    opacity: i === active ? 1 : 0.6,
-                    borderColor: i === active ? GOLD : GREEN,
-                  }}
-                >
-                  <Img
-                    src={file(`images/${name}-monet.png`)}
+              <L>
+                {["street", "playground", "seaside"].map((name, i) => (
+                  <Card
+                    key={name}
                     style={{
-                      width: "100%",
-                      aspectRatio: "16/9",
-                      objectFit: "contain",
-                      borderRadius: 12,
-                    }}
-                  />
-                  <div
-                    style={{
-                      fontSize: 46,
-                      textAlign: "center",
-                      marginTop: 24,
-                      color: i === active ? GOLD : WHITE,
+                      width: 573,
+                      padding: 18,
+                      opacity: i === active ? 1 : 0.6,
+                      borderColor: i === active ? GOLD : GREEN,
                     }}
                   >
-                    {["街道", "操场", "海边"][i]}
-                  </div>
-                </Card>
-              ))}
+                    <Img
+                      src={file(`images/${name}-monet.png`)}
+                      style={{
+                        width: "100%",
+                        aspectRatio: "16/9",
+                        objectFit: "contain",
+                        borderRadius: 12,
+                      }}
+                    />
+                    <div
+                      style={{
+                        fontSize: 46,
+                        textAlign: "center",
+                        marginTop: 24,
+                        color: i === active ? GOLD : WHITE,
+                      }}
+                    >
+                      {["街道", "操场", "海边"][i]}
+                    </div>
+                  </Card>
+                ))}
+              </L>
             </div>
-            <Note>AI 生成 · 实景与莫奈风保持同一构图</Note>
+            <Note>
+              <L>AI 生成 · 实景与莫奈风保持同一构图</L>
+            </Note>
           </>
         );
       }
@@ -1108,7 +1225,7 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
     case "stacks":
       visual = (
         <>
-          {background}
+          <L>{background}</L>
           <div
             style={{
               position: "absolute",
@@ -1117,29 +1234,31 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
               gap: 30,
             }}
           >
-            {[
-              ["summer", "夏末"],
-              ["autumn", "秋日暮色"],
-              ["snow", "落日 · 雪"],
-            ].map(([name, label], i) => (
-              <div
-                key={name}
-                style={{
-                  flex: 1,
-                  position: "relative",
-                  opacity:
-                    current.id === "cl02-14" &&
-                    Math.floor(local("cl02-14") / 2.5) % 3 !== i
-                      ? 0.45
-                      : 1,
-                }}
-              >
-                <Art src={`art/stacks-${name}.jpg`} />
-                <div style={{ position: "absolute", bottom: 20, left: 20 }}>
-                  <Tag>{label} · 1890—91</Tag>
+            <L>
+              {[
+                ["summer", "夏末"],
+                ["autumn", "秋日暮色"],
+                ["snow", "落日 · 雪"],
+              ].map(([name, label], i) => (
+                <div
+                  key={name}
+                  style={{
+                    flex: 1,
+                    position: "relative",
+                    opacity:
+                      current.id === "cl02-14" &&
+                      Math.floor(local("cl02-14") / 2.5) % 3 !== i
+                        ? 0.45
+                        : 1,
+                  }}
+                >
+                  <Art src={`art/stacks-${name}.jpg`} />
+                  <div style={{ position: "absolute", bottom: 20, left: 20 }}>
+                    <Tag>{label} · 1890—91</Tag>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </L>
           </div>
           <div
             style={{
@@ -1150,7 +1269,7 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
               color: GOLD,
             }}
           >
-            同样的草堆，不一样的光
+            <L>同样的草堆，不一样的光</L>
           </div>
         </>
       );
@@ -1158,7 +1277,7 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
     case "pixel-loss":
       visual = (
         <>
-          {background}
+          <L>{background}</L>
           <PixelLoss time={time} duration={duration} />
         </>
       );
@@ -1170,10 +1289,12 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
       const count = Math.min(12, Math.floor(time * 0.65));
       visual = (
         <>
-          {background}
+          <L>{background}</L>
           <Center>
             <Card style={{ width: 1620 }}>
-              <Heading small="CLAUDE SHANNON">遮住后面的字母，再猜一个</Heading>
+              <Heading small="CLAUDE SHANNON">
+                <L>遮住后面的字母，再猜一个</L>
+              </Heading>
               <div
                 style={{
                   fontFamily: EN,
@@ -1184,7 +1305,7 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
               >
                 INFORMATION
                 <span style={{ background: "#223d33", color: "#223d33" }}>
-                  {" "}
+                  <L> </L>
                   THEORY
                 </span>
               </div>
@@ -1192,7 +1313,7 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
                 I N F O R M A T I O N　→　?
               </div>
               <div style={{ fontSize: 24, color: SOFT, marginTop: 28 }}>
-                受香农猜下一个字母的实验启发 · 游戏是教学简化
+                <L>受香农猜下一个字母的实验启发 · 游戏是教学简化</L>
               </div>
             </Card>
           </Center>
@@ -1204,7 +1325,7 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
     case "letters":
       visual = (
         <>
-          {background}
+          <L>{background}</L>
           <GuessSplit tl={tl} first={first} last={last} time={time} />
         </>
       );
@@ -1226,11 +1347,11 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
     case "listener":
       visual = (
         <>
-          {background}
+          <L>{background}</L>
           <Center>
             <Card style={{ width: 1480, textAlign: "center" }}>
               <Heading small="THE LISTENER MATTERS">
-                同一句话，不同的听众
+                <L>同一句话，不同的听众</L>
               </Heading>
               <div
                 style={{
@@ -1242,14 +1363,18 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
                 }}
               >
                 <div>
-                  已经记在心里
+                  <L>已经记在心里</L>
                   <br />
-                  <span style={{ fontSize: 32, color: GREEN }}>能猜到</span>
+                  <span style={{ fontSize: 32, color: GREEN }}>
+                    <L>能猜到</L>
+                  </span>
                 </div>
                 <div>
-                  第一次读
+                  <L>第一次读</L>
                   <br />
-                  <span style={{ fontSize: 32, color: GOLD }}>有意外</span>
+                  <span style={{ fontSize: 32, color: GOLD }}>
+                    <L>有意外</L>
+                  </span>
                 </div>
               </div>
             </Card>
@@ -1260,11 +1385,11 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
     case "half":
       visual = (
         <>
-          {background}
+          <L>{background}</L>
           <Center>
             <Card style={{ width: 1520 }}>
               <Heading small="SHANNON · HISTORICAL ESTIMATE">
-                英文里，大约一半是冗余
+                <L>英文里，大约一半是冗余</L>
               </Heading>
               <div
                 style={{
@@ -1284,7 +1409,7 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
                     fontSize: 34,
                   }}
                 >
-                  语言规律决定的
+                  <L>语言规律决定的</L>
                 </div>
                 <div
                   style={{
@@ -1295,11 +1420,11 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
                     fontSize: 34,
                   }}
                 >
-                  可以自由选择的
+                  <L>可以自由选择的</L>
                 </div>
               </div>
               <div style={{ fontSize: 25, color: SOFT, marginTop: 35 }}>
-                历史估计 · 本片四选一游戏不测量冗余率
+                <L>历史估计 · 本片四选一游戏不测量冗余率</L>
               </div>
             </Card>
           </Center>
@@ -1309,10 +1434,12 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
     case "crossword":
       visual = (
         <>
-          {background}
+          <L>{background}</L>
           <Center>
             <Card style={{ width: 1570 }}>
-              <Heading small="WHY REDUNDANCY?">规则让词能够相遇</Heading>
+              <Heading small="WHY REDUNDANCY?">
+                <L>规则让词能够相遇</L>
+              </Heading>
               <div
                 style={{
                   display: "flex",
@@ -1340,26 +1467,29 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
                     gap: 6,
                   }}
                 >
-                  {"  C    L  WORLD  U    D    E  "
-                    .slice(0, 25)
-                    .split("")
-                    .map((ch, i) => (
-                      <div
-                        key={i}
-                        style={{
-                          width: 75,
-                          height: 75,
-                          background: ch === " " ? "rgba(0,0,0,.2)" : "#ededd6",
-                          color: "#1c3d31",
-                          textAlign: "center",
-                          lineHeight: "75px",
-                          fontSize: 40,
-                          fontFamily: EN,
-                        }}
-                      >
-                        {ch}
-                      </div>
-                    ))}
+                  <L>
+                    {"  C    L  WORLD  U    D    E  "
+                      .slice(0, 25)
+                      .split("")
+                      .map((ch, i) => (
+                        <div
+                          key={i}
+                          style={{
+                            width: 75,
+                            height: 75,
+                            background:
+                              ch === " " ? "rgba(0,0,0,.2)" : "#ededd6",
+                            color: "#1c3d31",
+                            textAlign: "center",
+                            lineHeight: "75px",
+                            fontSize: 40,
+                            fontFamily: EN,
+                          }}
+                        >
+                          {ch}
+                        </div>
+                      ))}
+                  </L>
                 </div>
               </div>
             </Card>
@@ -1373,18 +1503,20 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
       const solved = current.id === "cl03-15" || current.id === "cl03-16";
       visual = (
         <>
-          {background}
+          <L>{background}</L>
           <Center>
             <Card style={{ width: 1580 }}>
               <div style={{ fontSize: 66, lineHeight: 1.65, color: GOLD }}>
-                {solved ? correct : scrambled}
+                <L>{solved ? correct : scrambled}</L>
               </div>
               <div style={{ fontSize: 30, color: GREEN, marginTop: 38 }}>
-                {current.id === "cl03-16"
-                  ? "冗余像备份，帮消息扛过噪声"
-                  : solved
-                    ? "顺序错了一些，意思仍能补上"
-                    : "网上的玩笑话 · 先自己读一遍"}
+                <L>
+                  {current.id === "cl03-16"
+                    ? "冗余像备份，帮消息扛过噪声"
+                    : solved
+                      ? "顺序错了一些，意思仍能补上"
+                      : "网上的玩笑话 · 先自己读一遍"}
+                </L>
               </div>
             </Card>
           </Center>
@@ -1395,19 +1527,23 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
     case "coding":
       visual = (
         <>
-          {background}
+          <L>{background}</L>
           <Center>
             <div style={{ display: "flex", gap: 70 }}>
               <Card style={{ width: 720 }}>
-                <Heading small="COMPRESSION">消息更短</Heading>
+                <Heading small="COMPRESSION">
+                  <L>消息更短</L>
+                </Heading>
                 <div style={{ fontSize: 42, color: GREEN, marginTop: 30 }}>
-                  去掉能猜到的部分
+                  <L>去掉能猜到的部分</L>
                 </div>
               </Card>
               <Card style={{ width: 720 }}>
-                <Heading small="RELIABILITY">消息更结实</Heading>
+                <Heading small="RELIABILITY">
+                  <L>消息更结实</L>
+                </Heading>
                 <div style={{ fontSize: 42, color: GOLD, marginTop: 30 }}>
-                  留一些备份
+                  <L>留一些备份</L>
                 </div>
               </Card>
             </div>
@@ -1420,11 +1556,11 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
         "THE HEAD AND IN FRONTAL ATTACK ON AN ENGLISH WRITER THAT THE CHARACTER OF THIS POINT IS THEREFORE ANOTHER METHOD";
       visual = (
         <>
-          {background}
+          <L>{background}</L>
           <Center>
             <Card style={{ width: 1600 }}>
               <Heading small="SHANNON · 1948">
-                按前一个词的统计，再接一个词
+                <L>按前一个词的统计，再接一个词</L>
               </Heading>
               <div
                 style={{
@@ -1435,10 +1571,12 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
                   color: GOLD,
                 }}
               >
-                {text.slice(0, Math.min(text.length, Math.floor(time * 12)))}
+                <L>
+                  {text.slice(0, Math.min(text.length, Math.floor(time * 12)))}
+                </L>
               </div>
               <div style={{ fontSize: 27, color: SOFT, marginTop: 35 }}>
-                二阶词近似 · 香农论文中的示例
+                <L>二阶词近似 · 香农论文中的示例</L>
               </div>
             </Card>
           </Center>
@@ -1449,7 +1587,7 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
     case "reveal":
       visual = (
         <>
-          {background}
+          <L>{background}</L>
           <div
             style={{
               position: "absolute",
@@ -1463,48 +1601,52 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
             Claude
           </div>
           <Chat cue={current} now={now} />
-          <Note>文案与 Claude 合作完成 · AI 合成配音</Note>
+          <Note>
+            <L>文案与 Claude 合作完成 · AI 合成配音</L>
+          </Note>
         </>
       );
       break;
     case "words": {
       const active = time >= at("cl04-05");
       const afterSpeech = Math.max(0, now - current.speech.end);
-      const name = "words-psa231-zh";
+      const name = `words-psa231-${tl.lang}`;
       const keys = tl.playback[name].keys;
       visual = (
         <>
-          {background}
-          {active ? (
-            <>
-              <div
-                style={{
-                  position: "absolute",
-                  left: 100,
-                  top: 190,
-                  width: 1720,
-                  height: 485,
-                }}
-              >
-                <VideoAt tl={tl} name={name} keys={keys} time={time} />
-              </div>
-              <div
-                style={{
-                  position: "absolute",
-                  left: 110,
-                  top: 100,
-                  fontSize: 38,
-                  color: GOLD,
-                }}
-              >
-                这次，每一步选一整个词
-              </div>
-              <Note>四选一为教学简化 · 一处先错，再选对</Note>
-              {afterSpeech === 0 && <Chat cue={current} now={now} compact />}
-            </>
-          ) : (
-            <Chat cue={current} now={now} />
-          )}
+          <L>{background}</L>
+          <L>
+            {active ? (
+              <>
+                <div
+                  style={{
+                    position: "absolute",
+                    left: 100,
+                    top: 190,
+                    width: 1720,
+                    height: 485,
+                  }}
+                >
+                  <VideoAt tl={tl} name={name} keys={keys} time={time} />
+                </div>
+                <div
+                  style={{
+                    position: "absolute",
+                    left: 110,
+                    top: 100,
+                    fontSize: 38,
+                    color: GOLD,
+                  }}
+                >
+                  这次，每一步选一整个词
+                </div>
+                <Note>四选一为教学简化 · 一处先错，再选对</Note>
+                {afterSpeech === 0 && <Chat cue={current} now={now} compact />}
+              </>
+            ) : (
+              <Chat cue={current} now={now} />
+            )}
+          </L>
         </>
       );
       break;
@@ -1512,17 +1654,17 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
     case "training":
       visual = (
         <>
-          {background}
+          <L>{background}</L>
           <Center>
             <Card style={{ width: 1500, marginTop: -280 }}>
               <Heading small="LEARNING TO PREDICT">
-                猜一个　→　对一下　→　调一调
+                <L>猜一个　→　对一下　→　调一调</L>
               </Heading>
               <div style={{ fontSize: 42, color: GREEN, marginTop: 45 }}>
-                规律可以学，练习可以继续。
+                <L>规律可以学，练习可以继续。</L>
               </div>
               <div style={{ fontSize: 24, color: SOFT, marginTop: 32 }}>
-                真实模型预测下一个 token · 候选远不止四个
+                <L>真实模型预测下一个 token · 候选远不止四个</L>
               </div>
             </Card>
           </Center>
@@ -1534,7 +1676,7 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
     case "probability":
       visual = (
         <>
-          {background}
+          <L>{background}</L>
           <Probability time={time} surprise={shot.kind === "surprise"} />
           <Chat cue={current} now={now} compact />
         </>
@@ -1545,6 +1687,69 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
         current.id === "cl04-11"
           ? ease(Math.max(0, local("cl04-11")) / 0.8)
           : 0;
+      if (english) {
+        const reveal = ease(
+          (now -
+            (tl.markers?.["cl04-11"]?.["读到最后"] ??
+              current.speech.start + 4)) /
+            1.4,
+        );
+        visual = (
+          <>
+            {background}
+            <Card
+              style={{
+                position: "absolute",
+                left: 100,
+                top: 120,
+                width: 1720,
+                padding: 54,
+              }}
+            >
+              <Heading small="ATTENTION · ILLUSTRATION">
+                Which earlier word helps?
+              </Heading>
+              <div
+                style={{
+                  position: "relative",
+                  height: 315,
+                  fontSize: 64,
+                  lineHeight: 1.7,
+                  marginTop: 35,
+                }}
+              >
+                Maya lent <span style={{ color: GOLD }}>Ben</span> a book.
+                <br />
+                <span style={{ color: GOLD }}>He</span> read it on the train.
+                <svg
+                  viewBox="0 0 1600 315"
+                  style={{
+                    position: "absolute",
+                    inset: 0,
+                    width: "100%",
+                    height: "100%",
+                    opacity: reveal,
+                  }}
+                >
+                  <path
+                    d="M48 137 C48 95 420 140 420 65"
+                    fill="none"
+                    stroke={GOLD}
+                    strokeWidth={6}
+                  />
+                  <circle cx="420" cy="65" r="8" fill={GOLD} />
+                </svg>
+              </div>
+              <div style={{ fontSize: 32, color: GOLD, opacity: reveal }}>
+                To understand “he”, look back at “Ben”.
+              </div>
+            </Card>
+            <Note>Attention links are illustrative</Note>
+            <Chat cue={current} now={now} compact />
+          </>
+        );
+        break;
+      }
       visual = (
         <>
           <Still name="apple-for-her-monet" dim={0.36} />
@@ -1578,8 +1783,14 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
                   lineHeight: 1.4,
                 }}
               >
-                <span style={{ color: GOLD }}>小红</span>饿了，
-                <span style={{ color: GREEN }}>妈妈</span>给了她一个苹果。
+                <span style={{ color: GOLD }}>
+                  <L>小红</L>
+                </span>
+                <L>饿了，</L>
+                <span style={{ color: GREEN }}>
+                  <L>妈妈</L>
+                </span>
+                <L>给了她一个苹果。</L>
               </div>
               <svg
                 viewBox="0 0 1592 290"
@@ -1623,14 +1834,19 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
                   lineHeight: 1.4,
                 }}
               >
-                <span style={{ color: GOLD }}>她</span>吃得很开心。
+                <span style={{ color: GOLD }}>
+                  <L>她</L>
+                </span>
+                <L>吃得很开心。</L>
               </div>
             </div>
             <div style={{ fontSize: 30, color: GOLD, opacity: reveal }}>
-              读到最后这个「她」，更关注前面的「小红」。
+              <L>读到最后这个「她」，更关注前面的「小红」。</L>
             </div>
           </Card>
-          <Note>注意力连线为示意</Note>
+          <Note>
+            <L>注意力连线为示意</L>
+          </Note>
           <Chat cue={current} now={now} compact />
         </>
       );
@@ -1639,14 +1855,14 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
     case "paper":
       visual = (
         <>
-          {background}
+          <L>{background}</L>
           <Center>
             <Card style={{ width: 1480, marginTop: -210 }}>
               <Heading small="VASWANI ET AL. · 2017">
                 Attention Is All You Need
               </Heading>
               <div style={{ fontSize: 49, color: GREEN, marginTop: 38 }}>
-                注意力，就是你需要的一切。
+                <L>注意力，就是你需要的一切。</L>
               </div>
             </Card>
           </Center>
@@ -1658,29 +1874,35 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
       const trim = current.id === "cl04-15";
       visual = (
         <>
-          {background}
+          <L>{background}</L>
           <Card
             style={{ position: "absolute", left: 100, top: 120, width: 1650 }}
           >
-            <Heading small="WHEN WORDS KEEP COMING">一句话，能说清吗？</Heading>
+            <Heading small="WHEN WORDS KEEP COMING">
+              <L>一句话，能说清吗？</L>
+            </Heading>
             <div style={{ fontSize: 42, lineHeight: 1.7, marginTop: 35 }}>
-              <div>先看问题里，有多少是新的。</div>
-              {[
-                "这是一个非常值得我们深入思考的问题。",
-                "从很多不同的角度来看，它都非常重要。",
-                "总而言之，我们需要认真、全面地考虑。",
-              ].map((text, i) => (
-                <div
-                  key={text}
-                  style={{
-                    color: trim ? "#82928a" : SOFT,
-                    opacity: trim ? 0.25 : 1,
-                    textDecoration: trim ? "line-through" : "none",
-                  }}
-                >
-                  {text}
-                </div>
-              ))}
+              <div>
+                <L>先看问题里，有多少是新的。</L>
+              </div>
+              <L>
+                {[
+                  "这是一个非常值得我们深入思考的问题。",
+                  "从很多不同的角度来看，它都非常重要。",
+                  "总而言之，我们需要认真、全面地考虑。",
+                ].map((text, i) => (
+                  <div
+                    key={text}
+                    style={{
+                      color: trim ? "#82928a" : SOFT,
+                      opacity: trim ? 0.25 : 1,
+                      textDecoration: trim ? "line-through" : "none",
+                    }}
+                  >
+                    {text}
+                  </div>
+                ))}
+              </L>
             </div>
           </Card>
           <Chat cue={current} now={now} compact />
@@ -1692,19 +1914,19 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
       const corrected = current.id === "cl04-18" && local("cl04-18") > 2;
       visual = (
         <>
-          {background}
+          <L>{background}</L>
           <Card
             style={{ position: "absolute", left: 95, top: 140, width: 1650 }}
           >
             <Heading small="SOUNDS RIGHT?">
-              克劳德·
+              <L>克劳德·</L>
               <span
                 style={{
                   color: corrected ? "#f4a199" : WHITE,
                   textDecoration: corrected ? "line-through" : "none",
                 }}
               >
-                香农
+                <L>香农</L>
               </span>
               ，
             </Heading>
@@ -1714,7 +1936,7 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
                   borderBottom: corrected ? "4px solid #f4a199" : undefined,
                 }}
               >
-                1840 年生在法国，
+                <L>1840 年生在法国，</L>
               </span>
               <br />
               <span
@@ -1722,14 +1944,16 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
                   borderBottom: corrected ? "4px solid #f4a199" : undefined,
                 }}
               >
-                是一位印象派画家。
+                <L>是一位印象派画家。</L>
               </span>
             </div>
-            {corrected && (
-              <div style={{ fontSize: 46, color: GOLD, marginTop: 30 }}>
-                ↑ 这是莫奈。通顺，不等于对。
-              </div>
-            )}
+            <L>
+              {corrected && (
+                <div style={{ fontSize: 46, color: GOLD, marginTop: 30 }}>
+                  ↑ 这是莫奈。通顺，不等于对。
+                </div>
+              )}
+            </L>
           </Card>
           <Chat cue={current} now={now} compact />
         </>
@@ -1739,13 +1963,13 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
     case "new-true":
       visual = (
         <>
-          {background}
+          <L>{background}</L>
           <Center>
             <Card style={{ width: 1480, marginTop: -190 }}>
               <Heading small="READ WITH QUESTIONS">
-                有多少是新的？
+                <L>有多少是新的？</L>
                 <br />
-                有多少是真的？
+                <L>有多少是真的？</L>
               </Heading>
             </Card>
           </Center>
@@ -1756,16 +1980,16 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
     case "useful-repeat":
       visual = (
         <>
-          {background}
+          <L>{background}</L>
           <Center>
             <Card style={{ width: 1470, marginTop: -200 }}>
               <Heading small="REDUNDANCY WITH A PURPOSE">
-                重点再说一遍
+                <L>重点再说一遍</L>
                 <br />
-                步骤一步一步写
+                <L>步骤一步一步写</L>
               </Heading>
               <div style={{ fontSize: 40, color: GREEN, marginTop: 30 }}>
-                容易记住，也方便检查。
+                <L>容易记住，也方便检查。</L>
               </div>
             </Card>
           </Center>
@@ -1776,71 +2000,79 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
     case "trio":
       visual = (
         <>
-          {background}
+          <L>{background}</L>
           <Center>
             <div style={{ display: "flex", gap: 35 }}>
-              {[
-                ["克劳德·莫奈", "去掉冗余，留下光", "art/impression-sunrise.jpg"],
-                [
-                  "克劳德·香农",
-                  "量出冗余，留一些备份",
-                  "images/unicycle-juggler-monet.png",
-                ],
-                ["Claude · AI", "学会说话，也需要核对", ""],
-              ].map(([name, sub, src], i) => (
-                <Card
-                  key={name}
-                  style={{
-                    width: 520,
-                    textAlign: "center",
-                    opacity: time > i * 2 ? 1 : 0.4,
-                  }}
-                >
-                  {src ? (
-                    <Img
-                      src={file(src)}
-                      style={{
-                        width: "100%",
-                        height: 300,
-                        objectFit: "contain",
-                      }}
-                    />
-                  ) : (
-                    <div
-                      style={{
-                        height: 300,
-                        fontFamily: EN,
-                        fontSize: 80,
-                        color: GOLD,
-                        paddingTop: 80,
-                      }}
-                    >
-                      Claude
-                    </div>
-                  )}
-                  <div style={{ fontSize: 47, marginTop: 25 }}>{name}</div>
-                  <div
+              <L>
+                {[
+                  [
+                    "克劳德·莫奈",
+                    "去掉冗余，留下光",
+                    "art/impression-sunrise.jpg",
+                  ],
+                  [
+                    "克劳德·香农",
+                    "量出冗余，留一些备份",
+                    "images/unicycle-juggler-monet.png",
+                  ],
+                  ["Claude · AI", "学会说话，也需要核对", ""],
+                ].map(([name, sub, src], i) => (
+                  <Card
+                    key={name}
                     style={{
-                      fontSize: 28,
-                      color: GREEN,
-                      marginTop: 20,
-                      lineHeight: 1.5,
+                      width: 520,
+                      textAlign: "center",
+                      opacity: time > i * 2 ? 1 : 0.4,
                     }}
                   >
-                    {sub}
-                  </div>
-                </Card>
-              ))}
+                    {src ? (
+                      <Img
+                        src={file(src)}
+                        style={{
+                          width: "100%",
+                          height: 300,
+                          objectFit: "contain",
+                        }}
+                      />
+                    ) : (
+                      <div
+                        style={{
+                          height: 300,
+                          fontFamily: EN,
+                          fontSize: 80,
+                          color: GOLD,
+                          paddingTop: 80,
+                        }}
+                      >
+                        Claude
+                      </div>
+                    )}
+                    <div style={{ fontSize: 47, marginTop: 25 }}>{name}</div>
+                    <div
+                      style={{
+                        fontSize: 28,
+                        color: GREEN,
+                        marginTop: 20,
+                        lineHeight: 1.5,
+                      }}
+                    >
+                      {sub}
+                    </div>
+                  </Card>
+                ))}
+              </L>
             </div>
           </Center>
-          <Note>独轮车插图 · AI 生成</Note>
+          <Note>
+            <L>独轮车插图 · AI 生成</L>
+          </Note>
         </>
       );
       break;
     case "debussy":
       visual = (
         <>
-          {background}
+          <L>{background}</L>
           <Center>
             <div style={{ display: "flex", gap: 90, alignItems: "center" }}>
               <Portrait
@@ -1850,15 +2082,15 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
               />
               <div>
                 <Heading small="THE FOURTH CLAUDE">
-                  第四个 Claude
+                  <L>第四个 Claude</L>
                   <br />
-                  原来一直在耳边
+                  <L>原来一直在耳边</L>
                 </Heading>
                 <div style={{ fontSize: 40, color: GOLD, marginTop: 40 }}>
-                  《月光》 · Clair de lune
+                  <L>《月光》 · Clair de lune</L>
                 </div>
                 <div style={{ fontSize: 26, color: SOFT, marginTop: 24 }}>
-                  钢琴 · Laurens Goedhart
+                  <L>钢琴 · Laurens Goedhart</L>
                 </div>
               </div>
             </div>
@@ -1878,10 +2110,10 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
           <Center>
             <Card style={{ width: 1600 }}>
               <Heading small="HARMONIC COLOUR · ILLUSTRATION">
-                回到「家」，可以走不同的路
+                <L>回到「家」，可以走不同的路</L>
               </Heading>
               <div style={{ fontSize: 28, color: GREEN, marginTop: 35 }}>
-                期待中的路线（示意）
+                <L>期待中的路线（示意）</L>
               </div>
               <div
                 style={{
@@ -1891,25 +2123,27 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
                   marginTop: 18,
                 }}
               >
-                {["出发", "紧张", "回家"].map((text, i) => (
-                  <div
-                    key={text}
-                    style={{
-                      width: 400,
-                      padding: 22,
-                      textAlign: "center",
-                      fontSize: 36,
-                      border: `2px solid ${GREEN}`,
-                      borderRadius: 16,
-                      opacity: 1 - q * 0.5,
-                    }}
-                  >
-                    {text}
-                  </div>
-                ))}
+                <L>
+                  {["出发", "紧张", "回家"].map((text, i) => (
+                    <div
+                      key={text}
+                      style={{
+                        width: 400,
+                        padding: 22,
+                        textAlign: "center",
+                        fontSize: 36,
+                        border: `2px solid ${GREEN}`,
+                        borderRadius: 16,
+                        opacity: 1 - q * 0.5,
+                      }}
+                    >
+                      {text}
+                    </div>
+                  ))}
+                </L>
               </div>
               <div style={{ fontSize: 28, color: GOLD, marginTop: 40 }}>
-                《月光》末段：另一条和声路线
+                <L>《月光》末段：另一条和声路线</L>
               </div>
               <div
                 style={{
@@ -1919,35 +2153,41 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
                   marginTop: 18,
                 }}
               >
-                {["出发", "另一种颜色", "回家"].map((text, i) => (
-                  <div
-                    key={text}
-                    style={{
-                      width: 400,
-                      padding: 22,
-                      textAlign: "center",
-                      fontSize: 39,
-                      border: `2px solid ${GOLD}`,
-                      borderRadius: 16,
-                      opacity: i === 2 && !arrived ? 0.3 : 1,
-                      background:
-                        i === (arrived ? 2 : 1)
-                          ? "rgba(239,204,137,.24)"
-                          : "transparent",
-                    }}
-                  >
-                    {text}
-                  </div>
-                ))}
+                <L>
+                  {["出发", "另一种颜色", "回家"].map((text, i) => (
+                    <div
+                      key={text}
+                      style={{
+                        width: 400,
+                        padding: 22,
+                        textAlign: "center",
+                        fontSize: 39,
+                        border: `2px solid ${GOLD}`,
+                        borderRadius: 16,
+                        opacity: i === 2 && !arrived ? 0.3 : 1,
+                        background:
+                          i === (arrived ? 2 : 1)
+                            ? "rgba(239,204,137,.24)"
+                            : "transparent",
+                      }}
+                    >
+                      {text}
+                    </div>
+                  ))}
+                </L>
               </div>
               <div style={{ fontSize: 34, color: GOLD, marginTop: 35 }}>
-                {arrived
-                  ? "最后的和弦也完整响完。路，可以不一样。"
-                  : "留一点时间，听颜色怎样变化。"}
+                <L>
+                  {arrived
+                    ? "最后的和弦也完整响完。路，可以不一样。"
+                    : "留一点时间，听颜色怎样变化。"}
+                </L>
               </div>
             </Card>
           </Center>
-          <Note>路线动画为示意 · 保留《月光》真实收束</Note>
+          <Note>
+            <L>路线动画为示意 · 保留《月光》真实收束</L>
+          </Note>
         </>
       );
       break;
@@ -1955,7 +2195,7 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
     case "three-lives":
       visual = (
         <>
-          {background}
+          <L>{background}</L>
           <Lifelines three time={time} />
         </>
       );
@@ -1963,7 +2203,7 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
     case "debussy-joke":
       visual = (
         <>
-          {background}
+          <L>{background}</L>
           <Center>
             <div style={{ display: "flex", gap: 80, alignItems: "center" }}>
               <Portrait
@@ -1975,9 +2215,9 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
               <Card style={{ width: 750 }}>
                 <Heading small="THE THIRD CLAUDE">Claude · AI</Heading>
                 <div style={{ fontSize: 43, lineHeight: 1.6, marginTop: 40 }}>
-                  写稿时，
+                  <L>写稿时，</L>
                   <br />
-                  提到了德彪西。
+                  <L>提到了德彪西。</L>
                 </div>
               </Card>
             </div>
@@ -1986,7 +2226,7 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
       );
       break;
     case "questions": {
-      const text = current.zh;
+      const text = current[tl.lang];
       const endings = [
         "有多少是新的呢？",
         "有多少是真的呢？",
@@ -2008,26 +2248,44 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
           <Center>
             <div style={{ width: 1600 }}>
               <div style={{ fontSize: 41, color: GREEN, marginBottom: 42 }}>
-                在今天这个充满 AI 信息冗余的时代，
+                <L>在今天这个充满 AI 信息冗余的时代，</L>
                 <br />
-                你怎么分辨——
+                <L>你怎么分辨——</L>
               </div>
-              {endings.map((q) => (
-                <div
-                  key={q}
-                  style={{
-                    fontSize: 68,
-                    lineHeight: 1.55,
-                    color: GOLD,
-                    opacity:
-                      tl.markers?.[current.id]?.[q] !== undefined
-                        ? ease((now - tl.markers[current.id][q]) / 0.45)
-                        : ease((spokenChars - text.indexOf(q)) / 3),
-                  }}
-                >
-                  {q}
-                </div>
-              ))}
+              <L>
+                {endings.map((q) => (
+                  <div
+                    key={q}
+                    style={{
+                      fontSize: 68,
+                      lineHeight: 1.55,
+                      color: GOLD,
+                      opacity:
+                        tl.markers?.[current.id]?.[q] !== undefined
+                          ? ease((now - tl.markers[current.id][q]) / 0.45)
+                          : ease(
+                              (spokenChars -
+                                text.indexOf(
+                                  english
+                                    ? (
+                                        {
+                                          "有多少是新的呢？": "what is new?",
+                                          "有多少是真的呢？": "What is true?",
+                                          "什么是重要的呢？": "What matters?",
+                                          "什么是可以忽略的呢？":
+                                            "What can you leave aside?",
+                                        } as Record<string, string>
+                                      )[q]
+                                    : q,
+                                )) /
+                                3,
+                            ),
+                    }}
+                  >
+                    {q}
+                  </div>
+                ))}
+              </L>
               <div
                 style={{
                   fontSize: 39,
@@ -2037,12 +2295,18 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
                   opacity:
                     tl.markers?.[current.id]?.["这也是"] !== undefined
                       ? ease((now - tl.markers[current.id]["这也是"]) / 0.65)
-                      : ease((spokenChars - text.indexOf("这也是")) / 5),
+                      : ease(
+                          (spokenChars -
+                            text.indexOf(
+                              english ? "These are questions" : "这也是",
+                            )) /
+                            5,
+                        ),
                 }}
               >
-                这也是我们在 Lucas Academy
+                <L>这也是我们在 Lucas Academy</L>
                 <br />
-                一起学习、一起思考的问题。
+                <L>一起学习、一起思考的问题。</L>
               </div>
             </div>
           </Center>
@@ -2053,7 +2317,7 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
   }
   return (
     <AbsoluteFill style={{ opacity: Math.min(1, frame / 12) }}>
-      {visual}
+      <L>{visual}</L>
     </AbsoluteFill>
   );
 };
@@ -2063,54 +2327,79 @@ export const FunInformatics02Video: FC<ClaudeProps> = ({ tl }) => {
     { fps } = useVideoConfig();
   if (!tl) return null;
   return (
-    <AbsoluteFill
-      style={{ fontFamily: FONT, background: "#173b30", color: WHITE }}
-    >
-      <Art src="art/water-lilies-1906.jpg" zoom={7} />
-      <Audio src={file("audio/zh.mix.wav")} />
-      {SHOTS.map((shot) => {
-        const first = tl.cues.find((c) => c.id === shot.from)!,
-          last = tl.cues.find((c) => c.id === shot.to)!;
-        return (
-          <Sequence
-            key={shot.from}
-            from={Math.round(first.start * fps)}
-            durationInFrames={Math.ceil((last.end - first.start) * fps) + 12}
-          >
-            <Scene tl={tl} shot={shot} first={first} last={last} />
-          </Sequence>
-        );
-      })}
-      {frame >= Math.round(tl.endCardStart * fps) && (
-        <AbsoluteFill
-          style={{
-            alignItems: "center",
-            justifyContent: "center",
-            background: "#18382e",
-          }}
-        >
-          <div style={{ textAlign: "center" }}>
-            <div style={{ fontSize: 90, fontWeight: 650 }}>
-              你认识 <span style={{ fontFamily: EN, color: GOLD }}>Claude</span>{" "}
-              吗？
-            </div>
-            <div
+    <FilmLanguage.Provider value={tl.lang}>
+      <AbsoluteFill
+        style={{
+          fontFamily: tl.lang === "en" ? EN : FONT,
+          background: "#173b30",
+          color: WHITE,
+        }}
+      >
+        <Art src="art/water-lilies-1906.jpg" zoom={7} />
+        <Audio src={file(`audio/${tl.lang}.mix.wav`)} />
+        <L>
+          {SHOTS.map((shot) => {
+            const first = tl.cues.find((c) => c.id === shot.from)!,
+              last = tl.cues.find((c) => c.id === shot.to)!;
+            return (
+              <Sequence
+                key={shot.from}
+                from={Math.round(first.start * fps)}
+                durationInFrames={
+                  Math.ceil((last.end - first.start) * fps) + 12
+                }
+              >
+                <Scene tl={tl} shot={shot} first={first} last={last} />
+              </Sequence>
+            );
+          })}
+        </L>
+        <L>
+          {frame >= Math.round(tl.endCardStart * fps) && (
+            <AbsoluteFill
               style={{
-                fontFamily: EN,
-                fontSize: 32,
-                color: GREEN,
-                marginTop: 28,
+                alignItems: "center",
+                justifyContent: "center",
+                background: "#18382e",
               }}
             >
-              Do You Know Claude?
-            </div>
-            <div style={{ fontSize: 31, marginTop: 65 }}>
-              作者 Yancy Qin, Louise Yang | Lucas Academy
-            </div>
-          </div>
-        </AbsoluteFill>
-      )}
-    </AbsoluteFill>
+              <div style={{ textAlign: "center" }}>
+                <div style={{ fontSize: 90, fontWeight: 650 }}>
+                  {tl.lang === "en" ? (
+                    <>
+                      Do You Know <span style={{ color: GOLD }}>Claude?</span>
+                    </>
+                  ) : (
+                    <>
+                      你认识{" "}
+                      <span style={{ fontFamily: EN, color: GOLD }}>
+                        Claude
+                      </span>{" "}
+                      吗？
+                    </>
+                  )}
+                </div>
+                <div
+                  style={{
+                    fontFamily: EN,
+                    fontSize: 32,
+                    color: GREEN,
+                    marginTop: 28,
+                  }}
+                >
+                  {tl.lang === "en"
+                    ? "Fun Informatics 2"
+                    : "Do You Know Claude?"}
+                </div>
+                <div style={{ fontSize: 31, marginTop: 65 }}>
+                  作者 Yancy Qin, Louise Yang | Lucas Academy
+                </div>
+              </div>
+            </AbsoluteFill>
+          )}
+        </L>
+      </AbsoluteFill>
+    </FilmLanguage.Provider>
   );
 };
 
@@ -2126,13 +2415,35 @@ export const FunInformatics02Cover: FC = () => (
       }}
     >
       <div style={{ fontSize: 155, fontWeight: 750, lineHeight: 1.3 }}>
-        你认识
+        <L>你认识</L>
         <br />
-        <span style={{ fontFamily: EN, color: GOLD }}>Claude</span> 吗？
+        <span style={{ fontFamily: EN, color: GOLD }}>Claude</span>
+        <L> 吗？</L>
       </div>
       <div style={{ fontFamily: EN, fontSize: 45, marginTop: 28 }}>
         Do You Know Claude?
       </div>
+    </div>
+  </AbsoluteFill>
+);
+
+export const FunInformatics02EnglishCover: FC = () => (
+  <AbsoluteFill style={{ fontFamily: EN, color: WHITE }}>
+    <Art src="art/water-lilies-1906.jpg" dim={0.32} />
+    <div
+      style={{
+        position: "absolute",
+        left: 105,
+        top: 235,
+        fontSize: 145,
+        fontWeight: 750,
+        lineHeight: 1.2,
+        textShadow: "0 4px 35px rgba(0,0,0,.75)",
+      }}
+    >
+      Do you know
+      <br />
+      <span style={{ color: GOLD }}>Claude?</span>
     </div>
   </AbsoluteFill>
 );

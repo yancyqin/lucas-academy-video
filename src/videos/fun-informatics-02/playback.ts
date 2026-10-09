@@ -20,6 +20,7 @@ type Event = {
   stepIndex: number;
 };
 type Timeline = {
+  lang: "zh" | "en";
   fps: number;
   cues: Cue[];
   markers?: Record<string, Record<string, number>>;
@@ -100,7 +101,7 @@ export const buildPlayback = (tl: Timeline) => {
       };
     }
   }
-  const name = "words-psa231-zh";
+  const name = `words-psa231-${tl.lang}`;
   const events = tl.recordings[name]?.events ?? [];
   // Skip the two superscription units, then follow FOUR actual word choices.
   const first = events.find((e) => e.action === "correct" && e.stepIndex === 2);

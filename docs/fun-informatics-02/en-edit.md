@@ -1,21 +1,22 @@
-# Do You Know Claude? 英文配音稿（与 zh-edit.md 同步 · v0.5 · 2026-10-07 · Yancy 已定稿）
+# Do You Know Claude? 英文配音稿（英文制作适配 · v0.6 · 2026-10-09）
 
 Fun Informatics 2. By Yancy Qin, Louise Yang | Lucas Academy. Video plan: [FUN-INFORMATICS-02.md](../../FUN-INFORMATICS-02.md).
 
 写法与中文稿相同：`<strong>…</strong>` 是强调，字幕里自动去掉；每句下面 `>` 开头的是对应的中文，只作对照，不会读出来。
 
-v0.5：与中文稿同步，CL03 中英上下分屏逐字补全，CL04 引出猜词并留游玩停顿，CL06 区分人类和 AI，CL07 用新的四个开放问题。
+v0.6：英文版沿用定稿结构，教学例子为英语重新编写。中文只在猜字游戏的对照画面中保留；下方中文译文用于英文片的中文字幕，不改中文版台词。
 
-读法和字幕不一样的地方（配音时写进 SPOKEN）：
-- cl03-04 的 L、D 分别按英文字母名称读；cl03-05 的 God so loved 是中文「神爱」的含义说明，英文旁白不直接念中文汉字。
-- cl03-14 屏幕上是乱序的句子，配音按正常拼写读：It doesn't matter in what order the letters in a word are, as long as the first and last letters are in the right place.
-- 名字：中文版的小明、小红，英文版是 Sam、Lily；cl00-04 的填空句是 Sam put on his schoolb\_\_ and walked to school. On the w\_\_ he saw a little \_\_\_.
+屏幕与读法：
+- 开场填空：Emma pulled on her sho__ and stepped out into the ra__. Beside the gate, she spotted a ___.
+- cl03-04 的 L、D 按字母名称读；游戏对照不逐字解释中文选项。
+- cl03-14 屏幕：The ltitle dog ran aorund the gadren. 旁白按正常拼写读。
+- 注意力例子：Maya lent Ben a book. He read it on the train. 连线只作示意。
+- 年份和字母在 narration.py 中明确拼写，字幕保留常规写法。
 
-Voice: `louise/en`, like episode ①.
+Voice: `louise/en`, using the current Fun Informatics 1 delivery (scripts/voice_defaults.py).
 
-Overall tone: Please speak in a curious, light, slightly playful voice, like discovering something together with a child.
+Overall tone: Please speak in a curious, unhurried voice, like discovering something together with a child.
 Overall speed: 1.0
-
 
 ## CL00 · Opening: take some away, can you still tell?
 
@@ -28,9 +29,9 @@ Section tone:
 - cl00-03 | It's a pond, with water lilies floating on it.
   > 原来是一个池塘，水面上开着睡莲。
 - cl00-04 | One more. This sentence has a few letters missing. Can you still read it?
-  > 再来一个。这句话被挖掉了几个字，你还读得出来吗？
-- cl00-05 | The first two blanks are easy: schoolbag, way. And the last one? It could be a cat, a dog, or even a bird.
-  > 前两个空，你一定猜得中：书包，路上。最后一个呢？可能是小猫，可能是小狗，也可能是小鸟。
+  > 再来一个。这句英文缺了几个字母，你还读得出来吗？
+- cl00-05 | The first two are fairly easy: shoes, rain. But what did Emma spot beside the gate? A cat, a dog, or a fox? The sentence doesn't tell us.
+  > 前两个比较容易：鞋子、雨。可艾玛在门边看见了什么？猫、狗，还是狐狸？这句话没有告诉我们。
 - cl00-06 | The part you can guess has a name: <strong>redundancy</strong>. The part you can't guess is the <strong>information</strong>.
   > 猜得中的那部分，有个名字，叫<strong>冗余</strong>。猜不中的那部分，才是<strong>信息</strong>。
 - cl00-07 | Everyone in this episode is called Claude, and what they do is, in a way, the same thing. Do you know Claude? How many do you know?
@@ -102,10 +103,10 @@ Section tone:
   > 他做过一个实验：拿一本书，遮住后面的字母，让人一个一个地猜。
 - cl03-03 | We made a <strong>guess-the-letters</strong> game inspired by that idea: fill in English one letter at a time, and Chinese one character at a time. Each time, choose from four options.
   > 我们照着这个想法，做了一个<strong>猜字</strong>游戏：英文一个字母一个字母地补，中文一个字一个字地补。每次都从四个选项里选一个。
-- cl03-04 | In the English example, we finish world in two steps: first L, then D. In Chinese below, we fill in one missing character.
-  > 英文这里，world 最后的两个字母，要分两次补上。中文这里，神爱世……缺的是哪个字？
-- cl03-05 | Each option is one Chinese character, not a whole word. The start of the word alone doesn't tell you enough, but the words before it—God so loved—help you choose the missing character.
-  > 界、代、上，还是人？单看一个「世」，你还不确定；可前面是「神爱」，你一下就选了「人」。
+- cl03-04 | In English above, we finish world in two steps: first L, then D. The lower panel shows the same idea in Chinese, one character at a time.
+  > 上面的英文把 world 分两步补完：先 L，再 D。下方中文展示相同的玩法，一次补一个汉字。
+- cl03-05 | We aren't choosing a whole word yet: the options are single letters. The words before the gap, For God so loved the, help us predict world, and then its next letter.
+  > 现在选的还不是整个词，选项是一个个字母。空格前面的 For God so loved the 帮我们预测 world，再猜它的下一个字母。
 - cl03-06 | Keep going: letter by letter in English, character by character in Chinese. If you know this verse by heart, you can fill almost every blank on the first try.
   > 再一路往后补，英文逐个字母，中文逐个字。如果你背过这节经文，几乎每个空都能一次补对。
 - cl03-07 | That doesn't mean the verse isn't important. Just the opposite: you've kept it in your heart, so you can fill it in, letter by letter.
@@ -120,12 +121,12 @@ Section tone:
   > 他是这么说的：我们写英文的时候，一半是由语言的规律决定的，只有一半是自由选的。
 - cl03-12 | He noticed something fun, too: with no redundancy at all, any jumble of letters would be a sentence; with too much, nobody could make a big crossword puzzle.
   > 他还说过一件好玩的事：要是一点冗余都没有，随便乱拼的字母都算一句话；要是冗余太多，就编不出大的填字游戏。
-- cl03-13 | So why does language keep so much redundancy? Look at this famous joke from the internet.
-  > 那为什么语言要留着这么多冗余？看看这句网上很有名的玩笑话。
-- cl03-14 | It deosn't mttaer in waht oredr the ltteers in a wrod are, as lnog as the frist and lsat ltteers are in the rghit pclae.
-  > 研表究明，汉字的序顺并不定一能影阅响读。
-- cl03-15 | The letters on the screen are all mixed up, yet you read it as smoothly as I did. A few typos, a few words lost on a bad phone line: you can still work them out.
-  > 屏幕上字的顺序全乱了，可你读起来，跟我读的一样顺。打错几个字，电话里听漏几个字，你也能猜出来。
+- cl03-13 | So why does language keep so much redundancy? Try this sentence with a few letters muddled.
+  > 那为什么语言保留这么多冗余？试着读这句有几个字母乱序的英文。
+- cl03-14 | The ltitle dog ran aorund the gadren.
+  > 小狗在花园里跑来跑去。
+- cl03-15 | Did you still recognise the sentence? Familiar words and context help you fill in the gaps. It won't work for every jumble, but a few typos, or a few words lost on a bad phone line, don't always destroy the message.
+  > 你还认得出这句话吗？熟悉的词和上下文能帮你补全。并不是每种乱序都有效，但几个错字、电话里漏掉几个词，不一定会破坏整个消息。
 - cl03-16 | Redundancy is like a backup. It helps a message get through the <strong>noise</strong>.
   > 冗余就像备份，帮消息扛过<strong>噪声</strong>。
 - cl03-17 | So Shannon tells us: take redundancy out, and a message gets shorter; keep some in, and it gets stronger. A good code thinks about both.
@@ -161,8 +162,8 @@ Section tone:
   > 猜下一个词之前，我会回头看前面的每一个词，问自己：现在，哪个词最能帮我猜？
 - cl04-10 | Then I give each one a score, and look harder at the ones that score high. This is called <strong>attention</strong>.
   > 然后给它们打分，分数高的，多看几眼。这叫<strong>注意力</strong>，Attention。
-- cl04-11 | For example: Lily was hungry, so Mum gave her an apple. She ate it happily. When I reach that last "she", the word I pay most attention to is "Lily".
-  > 比如：小红饿了，妈妈给了她一个苹果。她吃得很开心。读到最后那个「她」，我最注意的，是「小红」。
+- cl04-11 | For example: Maya lent Ben a book. He read it on the train. To work out who that he refers to, the earlier name Ben matters.
+  > 比如：玛雅借给本一本书。他在火车上读了它。要明白这个“他”指谁，前面的名字“本”很重要。
 - cl04-12 | In 2017, a famous paper about this idea gave itself a very bold title: Attention Is All You Need.
   > 2017 年，一篇很有名的论文讲的就是这个办法，题目起得很大胆：注意力，就是你需要的一切。
 - cl04-13 | But I have my flaws. The first: sometimes I say too much.
@@ -175,8 +176,8 @@ Section tone:
   > 第二个毛病更要紧：我说出的每个词，都是我觉得很可能接在后面的词。
 - cl04-17 | So even when I'm wrong, I can still sound smooth. Like this: Claude Shannon was born in France in 1840, and he was an Impressionist painter.
   > 所以就算我说错了，听起来也可能很通顺。比如这句：克劳德·香农，1840 年生在法国，是一位印象派画家。
-- cl04-18 | Sounds smooth, right? But it mixes up two Claudes. Smoothness comes from redundancy, but smooth is <strong>not the same as true</strong>.
-  > 听起来很顺吧？可它把两个 Claude 搞混了。通顺来自冗余，可通顺<strong>不等于对</strong>。
+- cl04-18 | Sounds smooth, right? But it mixes up two Claudes. Language patterns help it sound fluent; fluency is <strong>not the same as truth</strong>.
+  > 听起来很顺吧？可它把两个 Claude 搞混了。语言规律让它流利，流利却不等于真实。
 - cl04-19 | So when you listen to me, ask what Shannon would ask: how much of this is new? And how much of it is true?
   > 所以，听我说话的时候，也请像香农一样问一问：这里面，有多少是新的？有多少是真的？
 - cl04-20 | Not all repetition is bad, though. A teacher saying the key point twice, me writing out every step: that's redundancy on purpose, so you don't miss anything, and so you can check it.
@@ -194,8 +195,8 @@ Section tone:
   > 香农把冗余量了出来，告诉我们能去掉多少，该留下多少。
 - cl05-04 | The third Claude learned to talk from redundancy, and reminds us: smooth is not the same as true.
   > 第三个 Claude 从冗余里学会了说话，也提醒我们：通顺，不等于对。
-- cl05-05 | Claude Monet and Claude Shannon sharing a name is just a coincidence. But all three Claudes are doing the same thing: telling apart what you could guess from what is truly new.
-  > 克劳德·莫奈和克劳德·香农同名，只是巧合。可三个 Claude 做的，其实是同一件事：分清楚，哪些是你猜得到的，哪些是真正新的。
+- cl05-05 | Claude Monet and Claude Shannon sharing a name is just a coincidence. But Claude Monet, Claude Shannon, and Claude the AI all help us ask the same question: what could you already guess, and what is truly new?
+  > 克劳德·莫奈和克劳德·香农同名只是巧合。可克劳德·莫奈、克劳德·香农和 AI Claude 都帮我们问同一个问题：哪些你已经能猜到，哪些才是真正新的？
 - cl05-06 | Next time you look at a painting, read a sentence, or listen to an AI, you can ask yourself that question too.
   > 下次你看一幅画、读一句话、听 AI 说话的时候，也可以问问自己这个问题。
 - cl05-07 | We started with a few patches of colour. Now, step back... and there's the whole pond.
@@ -222,5 +223,5 @@ Section tone:
 
 Section tone: 
 
-- cl07-01 | So, in this age so full of redundancy in AI-generated information, how do you tell how much of it is new? How much is true? What matters? What can you leave aside? These, too, are questions we learn and think about together at Lucas Academy.
-  > 那么，在今天这个充满 AI 信息冗余的时代，你怎么分辨，这里面，有多少是新的呢？有多少是真的呢？什么是重要的呢？什么是可以忽略的呢？这也是我们在 Lucas Academy 一起学习、一起思考的问题。
+- cl07-01 | So, with so much AI-generated information around us today, how do you tell what is new? What is true? What matters? What can you leave aside? These are questions we learn and think about together at Lucas Academy.
+  > 那么，在今天这个充满 AI 生成信息的时代，你怎么分辨哪些是新的？哪些是真的？什么是重要的？什么可以忽略？这也是我们在 Lucas Academy 一起学习、一起思考的问题。

@@ -2555,6 +2555,253 @@
       "path": "footage/words-psa231-zh.mp4",
       "sha256": "1178a6c3c02a1f6e8599fba43dd024726acfd2555c93711924686bd83ed018a6",
       "bytes": 536641
+    },
+    {
+      "name": "words-psa231-en",
+      "url": "https://bible.lucasacademy.org/?passage=PSA.23.1&translation=WEB&game=words",
+      "recorded": "2026-10-09",
+      "seed": 251103,
+      "kind": "words",
+      "translation": "WEB",
+      "simulated": true,
+      "displayOnlyLayout": true,
+      "trimmedSourceLeadInSeconds": 3.603,
+      "videoStartOffsetSeconds": 0,
+      "events": [
+        {
+          "time": 2.232,
+          "shownAt": 0.009,
+          "action": "correct",
+          "value": "is",
+          "word": "is",
+          "shown": "",
+          "stepIndex": 0,
+          "unitIndex": 0,
+          "options": [
+            "if",
+            "yet",
+            "it",
+            "is"
+          ]
+        },
+        {
+          "time": 4.814,
+          "action": "wrong",
+          "value": "were",
+          "stepIndex": 1,
+          "unitIndex": 0
+        },
+        {
+          "time": 5.668,
+          "shownAt": 2.545,
+          "action": "correct",
+          "value": "my",
+          "word": "my",
+          "shown": "",
+          "stepIndex": 1,
+          "unitIndex": 0,
+          "options": [
+            "were",
+            "us",
+            "at",
+            "my"
+          ]
+        },
+        {
+          "time": 7.296,
+          "action": "wrong",
+          "value": "new",
+          "stepIndex": 2,
+          "unitIndex": 0
+        },
+        {
+          "time": 8.153,
+          "shownAt": 5.975,
+          "action": "correct",
+          "value": "shepherd",
+          "word": "shepherd",
+          "shown": "",
+          "stepIndex": 2,
+          "unitIndex": 0,
+          "options": [
+            "shepherd",
+            "new",
+            "captivity",
+            "sins"
+          ]
+        },
+        {
+          "time": 9.77,
+          "shownAt": 8.464,
+          "action": "correct",
+          "value": "shall",
+          "word": "shall",
+          "shown": "",
+          "stepIndex": 3,
+          "unitIndex": 0,
+          "options": [
+            "shall",
+            "loving",
+            "three",
+            "credited"
+          ]
+        },
+        {
+          "time": 11.448,
+          "action": "wrong",
+          "value": "thing",
+          "stepIndex": 4,
+          "unitIndex": 0
+        },
+        {
+          "time": 12.303,
+          "shownAt": 10.125,
+          "action": "correct",
+          "value": "lack",
+          "word": "lack",
+          "shown": "",
+          "stepIndex": 4,
+          "unitIndex": 0,
+          "options": [
+            "thing",
+            "lack",
+            "person",
+            "grace"
+          ]
+        },
+        {
+          "time": 13.936,
+          "shownAt": 12.61,
+          "action": "correct",
+          "value": "nothing",
+          "word": "nothing",
+          "shown": "",
+          "stepIndex": 5,
+          "unitIndex": 0,
+          "options": [
+            "nothing",
+            "praise",
+            "discern",
+            "become"
+          ]
+        }
+      ],
+      "game": {
+        "kind": "words",
+        "tokens": [
+          "Yahweh",
+          "is",
+          "my",
+          "shepherd;",
+          "I",
+          "shall",
+          "lack",
+          "nothing."
+        ],
+        "steps": [
+          {
+            "tokenIndex": 1,
+            "word": "is",
+            "shown": "",
+            "units": [
+              {
+                "answer": "is",
+                "options": [
+                  "if",
+                  "yet",
+                  "it",
+                  "is"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 2,
+            "word": "my",
+            "shown": "",
+            "units": [
+              {
+                "answer": "my",
+                "options": [
+                  "were",
+                  "us",
+                  "at",
+                  "my"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 3,
+            "word": "shepherd",
+            "shown": "",
+            "units": [
+              {
+                "answer": "shepherd",
+                "options": [
+                  "shepherd",
+                  "new",
+                  "captivity",
+                  "sins"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 5,
+            "word": "shall",
+            "shown": "",
+            "units": [
+              {
+                "answer": "shall",
+                "options": [
+                  "shall",
+                  "loving",
+                  "three",
+                  "credited"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 6,
+            "word": "lack",
+            "shown": "",
+            "units": [
+              {
+                "answer": "lack",
+                "options": [
+                  "thing",
+                  "lack",
+                  "person",
+                  "grace"
+                ]
+              }
+            ]
+          },
+          {
+            "tokenIndex": 7,
+            "word": "nothing",
+            "shown": "",
+            "units": [
+              {
+                "answer": "nothing",
+                "options": [
+                  "nothing",
+                  "praise",
+                  "discern",
+                  "become"
+                ]
+              }
+            ]
+          }
+        ],
+        "given": [
+          0,
+          4
+        ],
+        "separator": " "
+      }
     }
   ],
   "teachingOverlay": {
