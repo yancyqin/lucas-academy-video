@@ -42,6 +42,7 @@ def main():
         "cl01-01": en["cl01-01"]["text"].replace("1840", "eighteen forty"),
         "cl01-04": en["cl01-04"]["text"].replace("1916", "nineteen sixteen"),
         "cl02-04": en["cl02-04"]["text"].replace("1872", "eighteen seventy-two"),
+        "cl02-15": en["cl02-15"]["text"].replace("can't", "cannot"),
         "cl03-04": en["cl03-04"]["text"].replace("first L, then D", "first ell, then dee"),
         "cl03-14": "The little dog ran around the garden.",
         "cl03-18": en["cl03-18"]["text"].replace("1948", "nineteen forty-eight"),

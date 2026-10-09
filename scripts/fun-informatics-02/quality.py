@@ -1,4 +1,4 @@
-"""Delivery checks: full Chinese narration, captions, codec, black frames and audio."""
+"""Delivery checks: complete narration, captions, codec, black frames and audio."""
 import hashlib
 import json
 import math

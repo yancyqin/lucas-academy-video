@@ -81,8 +81,8 @@ const only = new Set(process.argv.slice(2).filter((a) => a !== "--details" && a 
       const cue = (id) => tl.cues.find((c) => c.id === id);
       const letter = cue("cl03-04");
       const samples = {
-        "letter-l": letter.start + (letter.end - letter.start) * 0.4,
-        "letter-d": letter.start + (letter.end - letter.start) * 0.85,
+        "letter-l": lang === "en" ? (tl.markers?.["cl03-04"]?.["letter-l"] ?? letter.speech.start + 3) + 0.15 : letter.start + (letter.end - letter.start) * 0.4,
+        "letter-d": lang === "en" ? (tl.markers?.["cl03-04"]?.["letter-d"] ?? letter.speech.start + 4) + 0.25 : letter.start + (letter.end - letter.start) * 0.85,
         "letter-person": cue("cl03-06").start - 0.5,
         "words-play": cue("cl04-05").speech.end + 8,
         "words-four-steps": cue("cl04-05").end - 0.5,

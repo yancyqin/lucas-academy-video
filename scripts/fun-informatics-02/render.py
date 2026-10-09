@@ -51,7 +51,9 @@ if __name__ == "__main__":
     if not media.is_dir() and "LUCAS_MEDIA" not in os.environ:
         media=ROOT.parents[1] / "lucas-academy-media"
     voices=media / f"outputs/louise/{lang}/fun-informatics-02-v1"
+    expected = {line["id"]: line["text"] for line in json.loads((shared.PUB / f"narration/{lang}.json").read_text())["lines"]}
     for cid, record in check["cues"].items():
+        if record.get("spoken") != expected[cid]: raise SystemExit(f"{cid}: script changed after check")
         if hashlib.sha256((voices/(cid+".wav")).read_bytes()).hexdigest()!=record["sha256"]:
             raise SystemExit(f"{cid}: voice changed after check")
     files = sorted((ROOT / "src/videos/fun-informatics-02").glob("*.ts*")) + [ROOT / "src/lib/timeRamps.ts", shared.PUB / f"timeline.{lang}.json"]

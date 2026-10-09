@@ -33,7 +33,9 @@ ORIGINAL_UNITS = shared.units
 
 def units(text, language):
     if language == "en":
-        text = text.lower()
+        text = text.lower().replace("’", "'")
+        for contraction, expanded in {"can't":"can not", "cannot":"can not", "don't":"do not", "doesn't":"does not", "didn't":"did not", "isn't":"is not", "aren't":"are not", "wasn't":"was not", "weren't":"were not", "won't":"will not", "wouldn't":"would not", "couldn't":"could not", "shouldn't":"should not", "it's":"it is", "that's":"that is", "there's":"there is", "he's":"he is", "we're":"we are", "they're":"they are", "you're":"you are", "i'm":"i am", "we've":"we have", "you've":"you have", "i've":"i have", "we'll":"we will", "you'll":"you will"}.items():
+            text = re.sub(r"\b" + re.escape(contraction) + r"\b", expanded, text)
         for number, words in {"1840":"eighteen forty", "1872":"eighteen seventy two", "1916":"nineteen sixteen", "1918":"nineteen eighteen", "1948":"nineteen forty eight", "2017":"twenty seventeen", "1862":"eighteen sixty two"}.items():
             text = re.sub(r"\b" + number + r"\b", words, text)
         small = "zero one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen".split()
@@ -46,7 +48,7 @@ def units(text, language):
         text = re.sub(r"\b\d+\b", number, text)
         text = re.sub(r"\bell\b", "l", text)
         text = re.sub(r"\bdee\b", "d", text)
-        for original, canonical in (("colour", "color"), ("recognise", "recognize"), ("practised", "practiced"), ("practising", "practicing")):
+        for original, canonical in (("colour", "color"), ("harbour", "harbor"), ("recognise", "recognize"), ("practised", "practiced"), ("practising", "practicing")):
             text = text.replace(original, canonical)
         return ORIGINAL_UNITS(text, language)
     text = re.sub(r"<[^>]+>", "", text).lower()
@@ -107,13 +109,20 @@ def save(report, lines):
         for cid, record in latest.items():
             if cid not in report:
                 report[cid] = record
-            elif record["sha256"] == report[cid]["sha256"]:
+            elif record["sha256"] == report[cid]["sha256"] and record.get("spoken") == report[cid].get("spoken"):
                 report[cid]["analyses"] = {**record["analyses"], **report[cid]["analyses"]}
     results = [x["analyses"].get("medium", x["analyses"].get("small")) for x in report.values()]
     median = float(np.median([x["pace"] for x in results if x]))
     for record in report.values():
         selected = record["analyses"].get("medium", record["analyses"].get("small"))
         record["flags"] = shared.problems(selected, .9, median)
+        if LANG == "en":
+            expected = units(record["spoken"], "en")
+            heard = units(selected["heard"], "en")
+            if expected != heard:
+                record["flags"].append("word mismatch needs review")
+            if any(expected.count(word) != heard.count(word) for word in ("not", "no", "never")):
+                record["flags"].append("possible negation change")
     payload = {"language": LANG, "expected": len(lines), "checked": len(report), "medianPace": median, "flagged": [cid for cid,r in report.items() if r["flags"]], "cues": report}
     temporary = OUT.with_suffix(".tmp")
     temporary.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n")
@@ -166,9 +175,9 @@ def main():
                 continue
             digest = hashlib.sha256(path.read_bytes()).hexdigest()
             old = report.get(cid)
-            if old and old["sha256"] == digest and args.model in old["analyses"]:
+            if old and old["sha256"] == digest and old.get("spoken") == line["text"] and args.model in old["analyses"]:
                 continue
-            if old and old["sha256"] != digest:
+            if old and (old["sha256"] != digest or old.get("spoken") != line["text"]):
                 old = None
             prompt = "以下是普通话科普旁白。术语：Claude、克劳德·莫奈、克劳德·香农、德彪西、冗余、睡莲、池塘、独轮车、抛球杂耍、信息论、噪声、注意力、Lucas Academy。"
             if LANG == "en": prompt = "English educational narration. Claude Monet, Claude Shannon, Claude Debussy, Clair de lune, redundancy, Anthropic, Lucas Academy."

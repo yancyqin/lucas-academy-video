@@ -68,18 +68,18 @@ Section tone:
   > 1872 年，他画了一幅清晨的港口，名字叫《印象·日出》。
 - cl02-05 | A critic made fun of it: that's not a painting, it's just an "impression"!
   > 有个评论家看了，嘲笑说：这哪是画，不过是个「印象」！
-- cl02-06 | And the name stuck. That's how the Impressionists got their name.
-  > 结果，「印象派」这个名字，就这么留了下来。
+- cl02-06 | The name stayed. We still call them Impressionists today.
+  > 这个名字留了下来。今天，我们仍然把他们叫作印象派。
 - cl02-07 | Let's see how much he left out. On the left, the little Japanese-style bridge in his garden; on the right, his painting.
   > 来看看他到底省掉了多少。左边，是他花园里那座日本式小桥的样子；右边，是他画的。
-- cl02-08 | Every leaf, every rail, every detail on the water: he didn't paint them one by one.
-  > 每一片叶子、每一根栏杆、水面上的每一个细节，他都没有一笔一笔去画。
+- cl02-08 | Monet did not paint every leaf, every rail, and every detail on the water, one by one.
+  > 莫奈并没有把每一片叶子、每一根栏杆、水上的每个细节，一一画出来。
 - cl02-09 | If I paint only from my impression and leave the details out, can you still recognise it?
   > 如果我只凭印象画，去掉细节，你还认得出来吗？
 - cl02-10 | Yes, you can. So the details he left out are <strong>redundancy</strong>: your eyes fill them in.
   > 认得出来。那么，去掉的那些细节，就是<strong>冗余</strong>：你的眼睛自己能补上。
-- cl02-11 | Let's try it ourselves: hand some everyday places to Monet's eyes.
-  > 我们也来试试：把身边的景色，交给莫奈的眼睛。
+- cl02-11 | Let's try it ourselves. Imagine seeing familiar places through Monet's eyes.
+  > 我们自己试试：想象透过莫奈的眼睛看熟悉的地方。
 - cl02-12 | Lots of detail is gone, yet you know them at a glance: a street, a playground, the seaside.
   > 细节少了很多，可你一眼就认得出：这是街道，这是操场，这是海边。
 - cl02-13 | He also painted haystacks in the same field, more than twenty times.
@@ -107,8 +107,8 @@ Section tone:
   > 上面的英文把 world 分两步补完：先 L，再 D。下方中文展示相同的玩法，一次补一个汉字。
 - cl03-05 | We aren't choosing a whole word yet: the options are single letters. The words before the gap, For God so loved the, help us predict world, and then its next letter.
   > 现在选的还不是整个词，选项是一个个字母。空格前面的 For God so loved the 帮我们预测 world，再猜它的下一个字母。
-- cl03-06 | Keep going: letter by letter in English, character by character in Chinese. If you know this verse by heart, you can fill almost every blank on the first try.
-  > 再一路往后补，英文逐个字母，中文逐个字。如果你背过这节经文，几乎每个空都能一次补对。
+- cl03-06 | Keep going: letter by letter in English, character by character in Chinese. If you know this verse by heart, you can get almost every answer right on your first try.
+  > 再一路往后补，英文逐个字母，中文逐个字。如果你背过这节经文，几乎每个答案都能一次猜对。
 - cl03-07 | That doesn't mean the verse isn't important. Just the opposite: you've kept it in your heart, so you can fill it in, letter by letter.
   > 这不是说这节经文不重要。恰恰相反：你把它记在了心里，所以才能一个字一个字地补出来。
 - cl03-08 | Try a verse you've never read, and it's not so easy: suddenly, many more letters take two or three tries.
@@ -121,7 +121,7 @@ Section tone:
   > 他是这么说的：我们写英文的时候，一半是由语言的规律决定的，只有一半是自由选的。
 - cl03-12 | He noticed something fun, too: with no redundancy at all, any jumble of letters would be a sentence; with too much, nobody could make a big crossword puzzle.
   > 他还说过一件好玩的事：要是一点冗余都没有，随便乱拼的字母都算一句话；要是冗余太多，就编不出大的填字游戏。
-- cl03-13 | So why does language keep so much redundancy? Try this sentence with a few letters muddled.
+- cl03-13 | So why does language keep so much redundancy? Try this sentence with a few letters mixed up.
   > 那为什么语言保留这么多冗余？试着读这句有几个字母乱序的英文。
 - cl03-14 | The ltitle dog ran aorund the gadren.
   > 小狗在花园里跑来跑去。
