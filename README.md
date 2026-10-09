@@ -53,6 +53,27 @@ The set lives in [`scripts/youtube_tags.py`](./scripts/youtube_tags.py); every d
 so changing the defaults is one edit, and write the whole-person layout: 【标题 / Title】, 【简介 / Description】
 (ending in the hashtags), 【标签 / Tags】 and 【上传设置 / Upload settings】.
 
+## Narration voices
+
+The owner's standard (2026-10-07): three voices, each with one delivery, kept in
+[`scripts/voice_defaults.py`](./scripts/voice_defaults.py). A film's narration script writes them into
+every line (lucas-narrate's per-line `instruct`, `mode` and `speed`), so a finished film stays
+reproducible; a film overrides the instruction only when it has a reason to.
+
+| Voice | Mode | Speed | Instruction | Chosen in |
+|---|---|---|---|---|
+| `fangfang/zh` | zero-shot cloning | 1.15 | none: the tone is the reference recording's | 「你可以用剪刀画画吗？」 (Matisse) |
+| `louise/zh` | zero-shot-instruct | 1.0 | 请用好奇、慢慢探索的语气，像带着孩子一起发现一样说。 | Fun Informatics 1 |
+| `louise/en` | zero-shot-instruct | 1.0 | "Please speak in a curious, unhurried voice, like discovering something together with a child." | Fun Informatics 1 |
+
+`zero-shot-instruct` keeps the reference recording's rhythm and adds the instruction; `instruct` keeps
+only the timbre and lets the instruction carry the delivery. The Van Gogh House demo's English
+(instruct, "a lively, warm educational adventure guide") was tried as the `louise/en` default and was
+too lively and too fast across a whole film (2026-10-08), so English is back to the curious, unhurried
+delivery. A default fixes the style, not the
+reading of every word: a polyphone (落 read là, 量 read liàng) still needs the film's own spoken
+respelling (洛, 梁), and every take still gets a Whisper check.
+
 ## Film endings
 
 The owner's rule (2026-10-07): every film **ends with an open-ended, inviting question**. It is the

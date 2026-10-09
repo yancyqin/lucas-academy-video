@@ -74,6 +74,18 @@
 - 英文稿 `en-edit.md` 的分段标题改成英文（原来照抄了中文），英文 YouTube 说明的章节名从这里读。
 - YouTube 说明照 README "YouTube tags"（`scripts/youtube_tags.py`）：标签全小写，hashtag 先放 9 个默认的（#education … #lucas_academy），
   再放本片 6 个，一共 15 个；文件分【标题】【简介】【标签】【上传设置】四块，简介可以直接粘贴。
+- **默认配音**（Yancy 确认，README "Narration voices"，`scripts/voice_defaults.py`）：fangfang/zh 零样本、无指令、1.15；
+  louise/zh zero-shot-instruct、1.0、「请用好奇、慢慢探索的语气……」（就是本片中文原来的设置，中文片不动）；louise/en instruct、1.0、
+  梵高那段 adventure guide 指令。英文旁白按新默认整段重配，录音在 `outputs/louise/en/fun-informatics-01-v3`（v2 留着）；
+  `narration.py` 从 `voice_defaults.py` 取每句的设置，两份稿子里原来的「整体语气」行换成一句说明。
+- **2026-10-08 看片反馈**（初中生观众）：梵高那种英文太活泼、太快（3:41 两个 on 听着太激动），8:28「The wall says it」要懂博物馆才明白。
+  - 英文配音改回原来「好奇、不着急」的设置，louise/en 默认也改回去；没改的句子直接用原来的 v2 录音（`fun-informatics-01-v4` = v2 + 改过的句子）。
+  - 开关三句改成 "Both switches off / One on, one off / Both on"（中文「关、关」「开、开」不变）。
+  - 把墙当成说话人的四句改掉，中英文一起：it08-06「用一句话说」/ "In one sentence"，it09-01 去掉「看第三面墙」，
+    it09-05「那你最喜欢的游戏是什么？」，it11-05「最后这一句是写给你的」。只是指着画面的「看墙上」那几句留着。
+  - 中文 it11-05 重配了三遍：第一遍「字母」读成了 zìmù，第二遍「像素」偏向「香醋」，第三遍两个都对。英文 it08-06 第一遍多读了一个 the，重配一次。
+- 英文里的 "wall" Louise 读得怪、也不清楚（Yancy，10-08），英文稿五处全改成 "screen"（it02-01、it03-04、it06-01、it06-07、it07-02），
+  只重配这五句、只重渲英文片；中文「墙」不动，中文片的英文字幕跟着变成 screen。
 
 ## 2. 主线：两个问题，一条线
 
