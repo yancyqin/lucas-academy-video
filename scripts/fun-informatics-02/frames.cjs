@@ -12,7 +12,7 @@ const lang = process.argv.includes("en") ? "en" : "zh";
 const OUT = path.join(ROOT, `out/fun-informatics-02/frames${lang === "en" ? ".en" : ""}`);
 const details = process.argv.includes("--details");
 const tails = process.argv.includes("--tails");
-const only = new Set(process.argv.slice(2).filter((a) => a !== "--details" && a !== "--tails" && a !== "en" && a !== "zh"));
+const only = new Set(process.argv.slice(2).filter((a) => a !== "--details" && a !== "--tails" && a !== "en" && a !== "zh").flatMap((a) => a.split(",")));
 (async () => {
   fs.mkdirSync(OUT, { recursive: true });
   const serveUrl = await bundle({

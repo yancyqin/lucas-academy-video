@@ -27,10 +27,22 @@ def render(comp, out, frames, concurrency):
     gl = os.environ.get("REMOTION_GL", "angle" if sys.platform == "darwin" else "swangle")
     command = ["npx", "remotion", "render", "src/index.ts", comp, str(out), f"--frames={frames}", "--muted",
                f"--concurrency={concurrency}", f"--gl={gl}", "--timeout=300000", "--offthreadvideo-cache-size-in-bytes=1500000000", "--log=error"]
-    if subprocess.run(command, cwd=ROOT).returncode != 0 or not out.is_file(): return False
-    actual = subprocess.run(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries", "stream=nb_frames", "-of", "csv=p=0", str(out)], capture_output=True, text=True)
+    code = subprocess.run(command, cwd=ROOT).returncode
+    if code != 0 or not out.is_file():
+        print(f"{out.name}: renderer exited {code}; output present: {out.is_file()}", flush=True)
+        return False
+    # CSV can add a trailing comma when stream side data is present. Read
+    # structured output so a valid chunk is not rejected and rendered twice.
+    actual = subprocess.run(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries", "stream=nb_frames", "-of", "json", str(out)], capture_output=True, text=True)
     a, b = map(int, frames.split("-"))
-    return actual.returncode == 0 and actual.stdout.strip() == str(b - a + 1)
+    try:
+        count = int(json.loads(actual.stdout)["streams"][0]["nb_frames"])
+    except (ValueError, TypeError, KeyError, IndexError):
+        count = None
+    if actual.returncode != 0 or count != b - a + 1:
+        print(f"{out.name}: expected {b-a+1} frames, found {count}", flush=True)
+        return False
+    return True
 
 shared.render = render
 

@@ -68,8 +68,8 @@ Section tone:
   > 1872 年，他画了一幅清晨的港口，名字叫《印象·日出》。
 - cl02-05 | A critic made fun of it: that's not a painting, it's just an "impression"!
   > 有个评论家看了，嘲笑说：这哪是画，不过是个「印象」！
-- cl02-06 | The name stayed. We still call them Impressionists today.
-  > 这个名字留了下来。今天，我们仍然把他们叫作印象派。
+- cl02-06 | We still call them Impressionists today.
+  > 直到今天，我们仍然把他们叫作印象派。
 - cl02-07 | Let's see how much he left out. On the left, the little Japanese-style bridge in his garden; on the right, his painting.
   > 来看看他到底省掉了多少。左边，是他花园里那座日本式小桥的样子；右边，是他画的。
 - cl02-08 | Monet did not paint every leaf, every rail, and every detail on the water, one by one.
@@ -121,16 +121,16 @@ Section tone:
   > 他是这么说的：我们写英文的时候，一半是由语言的规律决定的，只有一半是自由选的。
 - cl03-12 | He noticed something fun, too: with no redundancy at all, any jumble of letters would be a sentence; with too much, nobody could make a big crossword puzzle.
   > 他还说过一件好玩的事：要是一点冗余都没有，随便乱拼的字母都算一句话；要是冗余太多，就编不出大的填字游戏。
-- cl03-13 | So why does language keep so much redundancy? Try this sentence with a few letters mixed up.
-  > 那为什么语言保留这么多冗余？试着读这句有几个字母乱序的英文。
+- cl03-13 | So why is there so much redundancy in language? Try this sentence with a few letters mixed up.
+  > 那么，语言里为什么有这么多冗余？试着读这句有几个字母乱序的英文。
 - cl03-14 | The ltitle dog ran aorund the gadren.
   > 小狗在花园里跑来跑去。
-- cl03-15 | Did you still recognise the sentence? Familiar words and context help you fill in the gaps. It won't work for every jumble, but a few typos, or a few words lost on a bad phone line, don't always destroy the message.
-  > 你还认得出这句话吗？熟悉的词和上下文能帮你补全。并不是每种乱序都有效，但几个错字、电话里漏掉几个词，不一定会破坏整个消息。
+- cl03-15 | Could you still read it? Familiar words and context help you fill the gaps. Not every jumble works. But a few spelling mistakes, or words lost on a bad phone line, don't always destroy a message.
+  > 你还能读懂吗？熟悉的词和上下文帮你补上空缺。不是所有乱序都能读懂。不过，几个拼写错误，或电话里漏听几个词，并不一定让消息失去意思。
 - cl03-16 | Redundancy is like a backup. It helps a message get through the <strong>noise</strong>.
   > 冗余就像备份，帮消息扛过<strong>噪声</strong>。
-- cl03-17 | So Shannon tells us: take redundancy out, and a message gets shorter; keep some in, and it gets stronger. A good code thinks about both.
-  > 所以香农告诉我们：去掉冗余，消息更短；留下一些冗余，消息更结实。好的编码，两件事都要想。
+- cl03-17 | So Shannon tells us: remove redundancy, and a message gets shorter. Keep some redundancy, and it gets stronger. Good coding has to do both.
+  > 所以香农告诉我们：去掉冗余，消息更短。保留一些冗余，消息更结实。好的编码要兼顾这两件事。
 - cl03-18 | In 1948, Shannon did one more thing: he counted which words tend to follow which in English, then followed those counts to chain words together, one at a time.
   > 1948 年，香农还做了一件事：他统计英文里一个词后面常跟着哪些词，再照着统计，一个词一个词地往下接。
 - cl03-19 | The sentences sounded like English, but made no sense at all.
@@ -168,16 +168,16 @@ Section tone:
   > 2017 年，一篇很有名的论文讲的就是这个办法，题目起得很大胆：注意力，就是你需要的一切。
 - cl04-13 | But I have my flaws. The first: sometimes I say too much.
   > 不过，我也有毛病。第一个：我有时候会说得太多。
-- cl04-14 | AIs like me are often rewarded in training for answers that are long and thorough, so we tend to keep talking.
-  > 像我这样的 AI，训练时常常因为回答又长又周全而得到更高的分，于是容易越说越多。
+- cl04-14 | During training, models like me are often rewarded for long, thorough answers. So we tend to keep talking.
+  > 训练时，像我这样的模型常常会因为又长又周到的回答得到奖励。所以，我们很容易继续往下说。
 - cl04-15 | Much of the extra is redundancy: it sounds careful, but it doesn't tell you anything new.
   > 多出来的话，很多是冗余：听起来很认真，其实没多告诉你什么。
 - cl04-16 | The second flaw matters more: every word I say is one I think is likely to come next.
   > 第二个毛病更要紧：我说出的每个词，都是我觉得很可能接在后面的词。
 - cl04-17 | So even when I'm wrong, I can still sound smooth. Like this: Claude Shannon was born in France in 1840, and he was an Impressionist painter.
   > 所以就算我说错了，听起来也可能很通顺。比如这句：克劳德·香农，1840 年生在法国，是一位印象派画家。
-- cl04-18 | Sounds smooth, right? But it mixes up two Claudes. Language patterns help it sound fluent; fluency is <strong>not the same as truth</strong>.
-  > 听起来很顺吧？可它把两个 Claude 搞混了。语言规律让它流利，流利却不等于真实。
+- cl04-18 | Sounds smooth, right? But it confuses Claude Monet with Claude Shannon. Language patterns help a model sound fluent. A fluent answer <strong>can still be false</strong>.
+  > 听起来很顺，对吧？可它把克劳德·莫奈和克劳德·香农搞混了。语言规律让模型流利，但流利的回答仍然可能是错的。
 - cl04-19 | So when you listen to me, ask what Shannon would ask: how much of this is new? And how much of it is true?
   > 所以，听我说话的时候，也请像香农一样问一问：这里面，有多少是新的？有多少是真的？
 - cl04-20 | Not all repetition is bad, though. A teacher saying the key point twice, me writing out every step: that's redundancy on purpose, so you don't miss anything, and so you can check it.
@@ -187,8 +187,8 @@ Section tone:
 
 Section tone: 
 
-- cl05-01 | Now, let's put the three Claudes side by side.
-  > 现在，把三个 Claude 放在一起。
+- cl05-01 | Now, let's put Claude Monet, Claude Shannon, and Claude the AI side by side.
+  > 现在，把克劳德·莫奈、克劳德·香农和 AI Claude 放在一起。
 - cl05-02 | Monet took redundancy away, and kept the light.
   > 莫奈把冗余去掉，留下了光。
 - cl05-03 | Shannon measured it, and told us how much we can take away, and how much to keep.
@@ -206,17 +206,17 @@ Section tone:
 
 Section tone: 
 
-- cl06-01 | Wait! How many Claudes do you know now? Three? There's a fourth.
-  > 等一下！你认识几个 Claude 了？三个？其实还有第四个。
+- cl06-01 | Wait! How many characters named Claude have we met? Three? There is a fourth Claude.
+  > 等一下！我们认识了几个名叫 Claude 的主角？三个？还有第四个 Claude。
 - cl06-02 | All the music in this episode was written by Claude Debussy, like Clair de Lune, which you're hearing now. He was born in France in 1862: after Monet, before Shannon.
   > 这一集的背景音乐，都是克劳德·德彪西写的，比如你现在听到的《月光》。他 1862 年生在法国，比莫奈晚，比香农早。
 - cl06-03 | His music is often called Impressionist, just like Monet's paintings.
   > 他的音乐，常被人叫作「印象派」，就像莫奈的画。
 - cl06-04 | He, too, took away the parts you could guess. By the old rules, a run of chords always walks back to the note you're waiting for; Debussy often doesn't, and leaves you colour, light and mood instead.
   > 他也在去掉你猜得到的部分：按老规矩，一串和弦总要走回你等着听的那个音；德彪西常常偏不，留下的是颜色、光和气氛。
-- cl06-05 | From 1916 to 1918, all three human Claudes were alive at once: one painting, one composing, and one just born.
-  > 1916 年到 1918 年，三位人类 Claude 同时活在这个世界上：一个在画画，一个在作曲，一个刚出生。
-- cl06-06 | By the way, the fourth Claude—Debussy—was brought up by the third Claude—the AI—while writing this script. See? Saying a little more can pay off sometimes.
+- cl06-05 | From 1916 to 1918, Monet, Debussy, and Shannon were all alive: one painting, one composing, and one just born.
+  > 1916 年到 1918 年，莫奈、德彪西和香农同时在世：一个在画画，一个在作曲，一个刚出生。
+- cl06-06 | By the way, the fourth Claude, Debussy, came up when the third Claude, an AI model, was writing the script. See? Saying a little more can pay off sometimes.
   > 说起来，这第四个 Claude——德彪西，是第三个 Claude——AI 写稿的时候提起来的。你看，多说一句，有时候也有好处。
 
 ## CL07 · The closing question

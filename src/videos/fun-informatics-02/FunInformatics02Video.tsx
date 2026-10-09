@@ -1911,7 +1911,12 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
       break;
     }
     case "correction": {
-      const corrected = current.id === "cl04-18" && local("cl04-18") > 2;
+      const correctionTime =
+        tl.markers?.["cl04-18"]?.["莫奈"] ??
+        tl.cues.find((c) => c.id === "cl04-18")!.speech.start + 2;
+      const corrected =
+        current.id === "cl04-18" &&
+        (english ? now >= correctionTime : local("cl04-18") > 2);
       visual = (
         <>
           <L>{background}</L>
@@ -1928,7 +1933,7 @@ const Scene: FC<SceneProps> = ({ tl, shot, first, last }) => {
               >
                 <L>香农</L>
               </span>
-              ，
+              {english ? "," : "，"}
             </Heading>
             <div style={{ fontSize: 59, lineHeight: 1.5, marginTop: 25 }}>
               <span

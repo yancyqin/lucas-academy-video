@@ -32,6 +32,8 @@
 
 已同步 PR #23 的第一集英文 v4 与项目默认声音。英文版保持 84 个 cue，中文片的已交付文件保留；两种电影的字幕和章节各自按配音时间生成。
 
+**英文版已完成**：约 14 分 12 秒，Louise English，实际语速 143.6 词／分钟（第一集 136.9）。84 句已核对，100 张抽帧已检查，25,558 帧零黑帧，−16.0 LUFS、−3.0 dBTP。成片、两套外挂字幕、英文封面和上传说明已放入桌面「你认识Claude吗-上传」。详见 [英文交付检查](docs/fun-informatics-02/delivery-check.en.json)。
+
 - 开场：`Emma pulled on her sho__ and stepped out into the ra__. Beside the gate, she spotted a ___.` 前两个空是 shoes、rain，最后可为 cat、dog、fox。
 - CL03：旁白以英文 `world` 的 l、d 解释逐字母；上下屏仍保留英文／中文对照。乱序阅读改为 `The ltitle dog ran aorund the gadren.`，旁白读正常拼写，并说明并非所有乱序都可读。
 - CL04：新增 WEB 英文 Psalm 23:1 猜词录屏，跟玩 shepherd、shall、lack、nothing；注意力例子改为 `Maya lent Ben a book. He read it on the train.`，连线仅作示意。
@@ -352,7 +354,7 @@ cl04-16 的柱状图表示候选概率，避免画成每次都必须选最高的
 实现位于 `src/videos/fun-informatics-02/`，42 个连续分镜覆盖 84 句。
 素材、生成图、录屏、反馈音和音乐的来源分别记录在 `docs/fun-informatics-02/` 的 JSON 清单中；
 媒体和克隆声线音频留在本地，不进 Git。音乐录音是 CC BY 3.0，描述中保留演奏者、来源、许可及改动说明。
-观片修订后的中文时间线为 855.209 秒；猜词停顿 15 秒、开放问句后停留 4 秒、结束卡 8 秒。英文片长根据新的英文配音核算。
+观片修订后的中文时间线为 855.209 秒；猜词停顿 15 秒、开放问句后停留 4 秒、结束卡 8 秒。英文时间线为 851.909 秒。
 
 先备齐清单中的图片、音乐与录屏，设置 `LUCAS_MEDIA` 指向声线仓库。`fi02:narration` 生成两种语言的配音输入及字幕文案，
 使用 `scripts/fun-informatics-02/narrate.py zh|en`，以 `louise/zh` 或 `louise/en`、速度 1.0 合成该语言的 84 句。

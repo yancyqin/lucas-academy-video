@@ -129,7 +129,7 @@ def markers(tl):
         "这是街道": "a street", "这是操场": "a playground", "这是海边": "the seaside",
         "英文这里": "In English above", "中文这里": "The lower panel",
         "你一下就选了": "The words before the gap", "读到最后": "To work out",
-        "听着很通顺": "Sounds smooth", "莫奈": "two Claudes",
+        "听着很通顺": "Sounds smooth", "莫奈": "confuses Claude Monet",
         "有多少是新的呢？": "what is new?", "有多少是真的呢？": "What is true?",
         "什么是重要的呢？": "What matters?", "什么是可以忽略的呢？": "What can you leave aside?",
         "这也是": "These are questions", "一起学习": "learn and think",
@@ -186,6 +186,10 @@ def subtitles(tl):
         blocks = []
         for cue in tl["cues"]:
             text = cue[language]
+            # Keep the exercise scrambled on screen; accessibility captions
+            # spell the English sentence as it is actually spoken.
+            if tl["lang"] == "en" and language == "en" and cue["id"] == "cl03-14":
+                text = "The little dog ran around the garden."
             # Sentence punctuation gives useful breath/meaning boundaries.
             pieces = re.findall(r"[^。？！]+[。？！]*", text) if language == "zh" else re.findall(r"[^.!?]+[.!?]*", text)
             parts = []
@@ -222,7 +226,7 @@ def subtitles(tl):
                 cursor += len(part)
                 b = begin+span*cursor/total_weight
                 if language == tl["lang"]:
-                    raw_index=cue[language].find(part,raw_cursor)
+                    raw_index=text.find(part,raw_cursor)
                     aligned=next((word["time"] for word in tl["wordTimes"].get(cue["id"],[]) if raw_index<=word["offset"]<raw_index+min(4,len(part))),None)
                     if aligned is not None: a=aligned
                     raw_cursor=raw_index+len(part)
