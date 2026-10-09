@@ -488,7 +488,9 @@ export const WholePersonVideo: FC<WholePersonProps> = ({lang, tl}) => {
     const cues = tl.cues.filter((c) => c.section === key);
     return {key, start: i === 0 ? 0 : f(cues[0].start), end: f(cues[cues.length - 1].end)};
   });
-  const shots = SHOTS.map((shot) => ({shot, start: f(ctx.cue(shot.from).start), end: f(ctx.cue(shot.to).end)}));
+  // A line the film's timeline does not have (zh wp01-09a: the zh film was not re-made with it) has no shot.
+  const shots = SHOTS.filter((shot) => byId.has(shot.from) && byId.has(shot.to))
+    .map((shot) => ({shot, start: f(ctx.cue(shot.from).start), end: f(ctx.cue(shot.to).end)}));
 
   return (
     <AbsoluteFill style={{background: BG}}>

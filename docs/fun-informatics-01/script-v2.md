@@ -222,12 +222,12 @@
 **08-05**（it08-05）同一串 0 和 1，**五种意思**。它一次都没变，变的只是规则。
 > One string of 0s and 1s, **five meanings**. It never changed once. Only the rule did.
 
-**08-06**（it08-06）墙上写着：规则给比特意义。两个符号，许多世界。
+**08-06**（it08-06）用一句话说：规则给比特意义。两个符号，许多世界。
 > The wall says it: a code gives bits meaning. Two symbols, many worlds.
 
 ## 09 · 游戏怎么做：规则加数字
 
-**09-01**（it09-01）那一张会动的图，比如游戏，是怎么做出来的？看第三面墙。先是贪吃蛇。
+**09-01**（it09-01）那一张会动的图，比如游戏，是怎么做出来的？先看贪吃蛇。
 > So how is a moving picture, like a game, made? The third wall. First, Snake.
 
 **09-02**（it09-02）每一步，蛇头前进一格，身子跟上。棋盘上一百多个格子，其实只有**几个数**在变。
@@ -239,7 +239,7 @@
 **09-04**（it09-04）三条蛇的竞技场也一样：规则多了几条，要记的数多了几个，画面就复杂了。
 > The arena with three snakes works the same way: a few more rules, a few more numbers to keep, and the picture gets complicated.
 
-**09-05**（it09-05）墙上最后问你：你最喜欢的游戏是什么？不管是哪一个，它都是这样做出来的：用规则去读很多很多很多数字。
+**09-05**（it09-05）那你最喜欢的游戏是什么？不管是哪一个，它都是这样做出来的：用规则去读很多很多很多数字。
 > The wall ends by asking: what is your favourite game? Whichever it is, it was made the same way: rules reading lots and lots and lots of numbers.
 
 **09-06**（it09-06）开头那段放大，也是这样做的。它的规则，只有一行公式。
@@ -303,7 +303,7 @@
 **11-04**（it11-04）全都是那**同一种开关**，排好，连上，再按规则一起读。
 > All of it is **the same kind of switch**, arranged, connected, and read together by a rule.
 
-**11-05**（it11-05）墙上最后一句话是写给你的：像素放对了位置，就变成字母——于是，也变成别的东西。
+**11-05**（it11-05）最后这一句是写给你的：像素放对了位置，就变成字母——于是，也变成别的东西。
 > The last line on the wall is written for you: pixels in the right place become letters, and so form other things.
 
 **11-06**（it11-06）从此以后，再复杂的图像，你也知道它背后是什么了：许多小小的像素，按规则排在一起。

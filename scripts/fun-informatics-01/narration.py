@@ -1,23 +1,26 @@
 """Narration scripts for 「计算机怎么算 1+1=？」 (FUN-INFORMATICS-01.md), from the two edit files.
 
 docs/fun-informatics-01/{zh,en}-edit.md are the source of truth: one line per cue, the same ids in
-both, `<strong>` for emphasis, one film-wide `整体语气` / `Overall tone`. This writes
+both, `<strong>` for emphasis. Each line gets its voice's default delivery from scripts/voice_defaults.py
+(README "Narration voices"); an edit file's `整体语气` / `Overall tone` replaces the instruction. This writes
 public/fun-informatics-01/narration/{zh,en}.json in lucas-narrate's line format (what the voice
 READS: digits and binary spelled out, ASCII respelled) and cues.json (what the captions SHOW).
 
   python3 scripts/fun-informatics-01/narration.py
-  cd ../lucas-academy-media && .conda/bin/lucas-narrate <repo>/public/fun-informatics-01/narration/zh.json \\
-      --profile louise/zh --language zh --speed 1.0 --output-dir outputs/louise/zh/fun-informatics-01
+  cd ../lucas-academy-media && .conda/bin/lucas-narrate <repo>/public/fun-informatics-01/narration/en.json \\
+      --profile louise/en --language en --speed 1.0 --output-dir outputs/louise/en/fun-informatics-01-v4
 """
 import json
 import re
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 SRC = ROOT / "docs/fun-informatics-01"
 OUT = ROOT / "public/fun-informatics-01/narration"
 VOICE = {"zh": "louise/zh", "en": "louise/en"}
-MODE = "zero-shot-instruct"
+sys.path.insert(0, str(ROOT / "scripts"))
+from voice_defaults import line_settings  # noqa: E402  (README "Narration voices")
 
 SECTION = re.compile(r"^## (IT\d\d)\b")
 OVERALL = re.compile(r"^(整体语气|Overall tone|整体语速|Overall speed):\s*(.*)$")
@@ -81,21 +84,21 @@ SPOKEN = {
         "it03-01": "But with only zero and one, how do you count?",
         "it03-02": "We usually have ten digits. Add one to nine, and you have to <strong>carry</strong>: you write ten.",
         "it03-03": "A computer has only two digits. Each place in it is like that switch: only on or off, only zero or one. The biggest digit is one. So add one to one, and it has to carry too: it writes one, zero. Not ten!",
-        "it03-04": "Watch the wall: zero zero zero zero is zero.",
+        "it03-04": "Watch the screen: zero zero zero zero is zero.",
         "it03-05": "Zero zero zero one is one.",
         "it03-06": "Add one, carry, and it's zero zero one zero. That's two.",
         "it03-07": "Zero zero one zero plus one is zero zero one one. That's three.",
         "it03-08": "Add one more, carry twice, and it's zero one zero zero. That's four.",
         "it04-01": "So how do the switches themselves add one plus one?",
-        "it04-05": "Let's try. Off, off: no lamp lights. Zero plus zero is zero.",
-        "it04-06": "On, off: the SUM lamp lights. Zero plus one is one.",
-        "it04-07": "On, on: SUM goes dark, CARRY lights. Read the two lamps together, CARRY then SUM, and you get <strong>one, zero</strong>.",
+        "it04-05": "Let's try. Both switches off: no lamp lights. Zero plus zero is zero.",
+        "it04-06": "One on, one off: the SUM lamp lights. Zero plus one is one.",
+        "it04-07": "Both on: SUM goes dark, CARRY lights. Read the two lamps together, CARRY then SUM, and you get <strong>one, zero</strong>.",
         "it04-08": "So inside a computer, one plus one is not written two. It's written <strong>one, zero</strong>.",
         "it04-09": "Keep adding one, sixty-five times, and eight switches read zero one zero zero zero zero zero one. That is sixty-five.",
         "it05-01": "Does sixty-five <strong>mean</strong> anything special?",
         "it05-02": "A number doesn't tell you what it's for. On its own, sixty-five means nothing special.",
         "it05-03": "But long ago, people agreed on a table called <strong>Askey</strong>. In that table, sixty-five stands for the capital letter A.",
-        "it06-01": "Many zeros and ones together: besides letters, what else can they become? Let's look at another wall. Its tiny pieces are called <strong>pixels</strong>: one dot on a screen, and the <strong>smallest</strong> piece a screen has.",
+        "it06-01": "Many zeros and ones together: besides letters, what else can they become? Let's look at another screen. Its tiny pieces are called <strong>pixels</strong>: one dot on a screen, and the <strong>smallest</strong> piece a screen has.",
         "it06-03": "Now two thousand three hundred and nine coloured dots fly around on their own. Can you tell what this is?",
         "it06-09": "Look again: twelve hundred and sixty pixels crowded together are a <strong>point</strong>. In a row, a <strong>line</strong>. Spread out, a <strong>plane</strong>.",
         "it07-07": "How is it computed? No magic, and nobody hiding inside. It's still that one plus one: electricity, following a rule, through switches.",
@@ -145,7 +148,7 @@ def main() -> None:
     for lang, cues, tone in (("zh", zh, zh_tone), ("en", en, en_tone)):
         missing = [cid for cid, cue in cues.items() if re.search(r"\d", plain(cue["text"])) and cid not in SPOKEN[lang]]
         assert not missing, f"{lang}: lines with digits need a SPOKEN form: {missing}"
-        lines = [{"id": cid, "text": SPOKEN[lang].get(cid, cue["text"]), "instruct": tone, "mode": MODE, "speed": 1.0}
+        lines = [{"id": cid, "text": SPOKEN[lang].get(cid, cue["text"]), **line_settings(VOICE[lang], tone)}
                  for cid, cue in cues.items()]
         json.dump({"voice": VOICE[lang], "language": lang, "lines": lines},
                   open(OUT / f"{lang}.json", "w"), ensure_ascii=False, indent=1)

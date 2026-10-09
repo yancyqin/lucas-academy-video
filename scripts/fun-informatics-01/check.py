@@ -22,7 +22,7 @@ MEDIA = Path("/Users/yqin/repo/playground/lucas-academy-media")
 lang = sys.argv[1]
 spoken = {l["id"]: re.sub(r"</?strong>", "", l["text"]) for l in json.loads((ROOT / f"public/fun-informatics-01/narration/{lang}.json").read_text())["lines"]}
 caption = {c["id"]: c[lang] for c in json.loads((ROOT / "public/fun-informatics-01/narration/cues.json").read_text())}
-wavs = MEDIA / f"outputs/louise/{lang}/fun-informatics-01-v2"
+wavs = MEDIA / f"outputs/louise/{lang}/" / {"zh": "fun-informatics-01-v3", "en": "fun-informatics-01-v4"}[lang]  # build_timeline.TAKES
 prompt = "以下是普通话的句子，使用简体中文。" if lang == "zh" else None
 
 

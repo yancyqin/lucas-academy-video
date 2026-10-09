@@ -10,7 +10,7 @@ narration in case they are wanted later.
 | | narration | length |
 | --- | --- | --- |
 | `WholePersonZh` | Yancy's own voice (`yancy/zh`, v10), zero-shot-instruct teaching tone, speed 1.0 | ≈ 8:26 |
-| `WholePersonEn` | Louise (`louise/en`, v9) | ≈ 7:52 |
+| `WholePersonEn` | Louise (`louise/en`, v10) | ≈ 7:59 |
 
 History: first uploads 2026-10-05 (zh v8). An audio-only zh remix followed with v9, which is v8 with the
 off-pitch lines re-voiced plus the steady mix. Louise's Chinese voice was tried and dropped; the owner kept
@@ -20,6 +20,41 @@ Yancy's. The en film was re-uploaded with the byline (ZaKR2wA7dFk).
 They answer 「谁是教育者？」 first, then come back to the question at principle 1, and the YouTube title
 is the question. Four new lines per language: zh v10 / en v9, every other take reused. The picture is
 re-rendered for both.
+
+2026-10-08 audio-only en remix: Louise's opening 「Your child says no. Now what?」 came out in 2 s and sounded
+critical (owner: 「不是批评，应该是好奇，探索」). wp00-00 was re-voiced in `zero-shot-instruct` with its own
+curious instruction, spoken 「Your child says no. Hmm... now what?」 (`INSTRUCTION`/`SPOKEN` in `narrate.py`;
+the card and captions keep the line as written; the owner chose this take out of 15). Then
+`--keep-timeline en --remux`: the picture stream is byte-identical and the mix differs only from 2.15 s to
+6.70 s. The zh film is unchanged. Working copies were restored from the owner's archive
+`~/Desktop/全人教育-清理-20261005/最终清理/1006-remake/` (`media-outputs/`, `video-worktree/{out,public-whole-person-01}/`).
+
+2026-10-08 en re-make (en v10, script v1.0; the owner's review of that remix). The picture is re-rendered:
+- 1:20 「a strange sound」: a click and a faint murmur in wp01-00's pause after 「…started with.」, silenced
+  in the take. The same kind of click sat in wp06-02 and wp02-07's pauses (silenced too; originals kept as
+  `<id>.orig.wav`), and at the start of many takes, one of them heard at 3:20 (wp01-15, plus a loud one at
+  its end): `trim()` now starts a line at its first stretch of speech, which removes all of those.
+- 2:55 「we would would」: wp01-11 re-voiced (Whisper had merged the repeat, see Gotchas), and the pause before
+  it is now 2.55 s (HOLD wp01-10 2.0): 「首先要和前面一句有充分停顿」.
+- Critical literacy is defined as problematizing is: a new line wp01-09a with its own card, the essay's
+  sentence 「reading not only what a text says, but why it is there: who chose it, for whom, and what was
+  left out」. The zh film stays as published (owner: 「中文不用改了」). The zh script has the line too (the
+  essay's zh sentence; both scripts must share line ids) but no take. Its timeline has no wp01-09a cue, so
+  that shot is skipped. Building zh again would leave a silent slot for it (reported as ESTIMATED).
+- Psalm 119 「忽然很快」 and 7:11 「有点快」: `pace.py` had sped wp04-04 up 23% and wp05-05 20%. wp04-04's
+  「119」 counted no syllables, so the line measured slow; it measured 1.33× the film median once counted
+  (zh wp04-04 got 1.17× for the same reason). wp05-05 drew out 「So,」 and then rushed 「you choose the
+  strategy」 (5.5 syllables/s). Both re-voiced at their own pace (1.00×, 0.96×), each phrase near the median.
+
+To upload: `~/Desktop/全人教育-英文版-重新上传/` holds this en film, its description and its cover, and nothing
+else. Archive (`~/Desktop/全人教育-清理-20261005/最终清理/`):
+- `全人教育-重制版上传/` holds the 2026-10-06 uploads.
+- `1006-remake/` holds that make's working copies: footage, images, music, zh v10 and en v9 takes, timelines.
+- `全人教育-英文修订版-工作稿-20261008/` holds the en v10 takes, with `<id>.orig.wav` / `<id>.v9.wav` for the
+  takes they replace. It also has `pace.json`, `timeline.en.json`, the en mix, the review reel and the
+  superseded opening-only remix.
+
+To edit the en film again, restore `1006-remake` first, then lay the 工作稿 folder over it.
 
 Delivery (local, `out/` is ignored), all in `out/whole-person-01/delivery/`:
 
@@ -37,8 +72,8 @@ rebuild it with the steps below when the film changes, and delete it once the fi
 
 ## Script
 
-Source of truth: lucas-academy-media `data/scripts/whole-person-five-ideas.md` (v0.8, approved),
-`whole-person-five-ideas-zh.json`, `whole-person-five-ideas-en.json` — 56 lines, one line = one voice
+Source of truth: lucas-academy-media `data/scripts/whole-person-five-ideas.md` (v1.0),
+`whole-person-five-ideas-zh.json`, `whole-person-five-ideas-en.json` — 61 lines, one line = one voice
 take = one caption. It follows the parents deck (lucasacademy.org/presentation/?deck=parents, slides
 7–18) with Yancy's edits, and the essay page `/research/whole-person-education` was aligned with it.
 
@@ -52,7 +87,7 @@ V=../lucas-academy-video/scripts/whole-person-01
 .conda/bin/python $V/pace.py zh && .conda/bin/python $V/pace.py en           # every line within ±10% of the median pace
 .conda/bin/python $V/pitch.py zh && .conda/bin/python $V/pitch.py en         # every line within ±2 semitones of the median pitch
 .conda/bin/python $V/check_lines.py data/scripts/whole-person-five-ideas-zh.json outputs/yancy/zh/whole-person-five-ideas-v9 zh
-# 2. Timelines, narration + music mixes, SRTs (this repo)
+# 2. Timelines, narration + music mixes, SRTs (this repo); `-- en` builds one film and leaves the other as it is
 npm run wp01:timeline
 # 3. Render both films at 1080p
 npm run wp01:render
@@ -71,13 +106,15 @@ must still fit its line's slot; `pitch.py` only keeps takes that do.
 - `narrate.py` — one WAV per line into `OUT`; lines whose text is unchanged since `PREVIOUS` are copied,
   not re-synthesized. `SPOKEN` holds what the voice reads where it differs from the caption: the zh voice
   reads the English terms (critical literacy, problematizing, authoritative, authoritarian), 梵高 is
-  spoken 凡高 (fán gāo), 119 is spoken 一百一十九.
+  spoken 凡高 (fán gāo), 119 is spoken 一百一十九 (and 「one hundred nineteen」 in en). `INSTRUCTION` gives a
+  line its own reading style: the en opening question is asked with curiosity.
 - `retake.py ID=REGEX&REGEX …` — fresh takes until Whisper's transcript matches. The zh voice garbles
   English names (Lucas Academy, Art Lab, Matthew): check those lines.
 - `pace.py` — speaking rate = syllables per second of sound (pauses excluded); a line more than 10% off the
   film median is re-voiced with closed-loop speed correction and kept only if Whisper still reads it right.
   `EXEMPT` keeps the questions (wp00-00, wp00-01) and the hanging wp01-00a as read. Speeds are kept in lucas-academy-media
-  `outputs/whole-person-five-ideas.pace.json` (ignored) as the next run's starting point.
+  `outputs/whole-person-five-ideas.pace.json` (ignored) as the next run's starting point. It counts the
+  spoken text, and a digit stops it: spell numbers out in `SPOKEN` (a digit has no vowel group).
 - `pitch.py` — median pitch of each trimmed take (pyin, voiced frames) against the film median; a line more
   than 2 semitones off is re-voiced at its paced speed until a take lands within 1 semitone, Whisper still
   reads it right, and it keeps its length (±10%) inside its timeline slot. Added after a listener heard the
@@ -91,7 +128,10 @@ must still fit its line's slot; `pitch.py` only keeps takes that do.
   apply the homophone map, so a homophone no longer blocks a good take.
 - `build_timeline.py` — per film: cue timeline (`public/whole-person-01/timeline.{zh,en}.json`; the
   compositions load it before rendering, so it sets each film's length), trimmed narration track, music
-  mix and SRTs. Every line is levelled to −23 LUFS first (the takes came out up to 5 dB apart). Music:
+  mix and SRTs. Each take is trimmed to its speech: from the first stretch of sound of 0.1 s+ peaking
+  above −30 dBFS to the last, plus sound within 0.1 s before (a soft onset) or 0.25 s after (a final
+  consonant). Whisper heard the same words in all 24 takes this cut into. Every line is levelled to −23 LUFS
+  first (the takes came out up to 5 dB apart). Music:
   "Echoes in the Void", made by Yancy with Suno for the Inception Space Journey of Art room, looped with
   6 s crossfades; it sits 17 dB under the voice and rises to 10 dB under only in pauses of 2.5 s or more
   (fades of 0.5 s down, 1.5 s up), driven by the timeline. The first films used a sidechain compressor,
@@ -144,3 +184,9 @@ time with the avatar hidden.
 - `npx remotion render --help` starts a render instead of printing help.
 - Instruct-only CosyVoice (`instruct2`) loses the speaker's voice; the free-form "chat" tone sounded wrong.
   One film-wide `zero-shot-instruct` teaching tone keeps Yancy's voice.
+- Whisper (small and medium) writes a repeated word once: wp01-11's 「we we would」 passed `check_lines.py`
+  and was heard by the owner. For a verbatim check, give Whisper small a disfluent prompt
+  (`initial_prompt="Umm, so, so I I think, like, we we would would, uh, you know... Hmm."`,
+  `condition_on_previous_text=False`); it then writes the repeat.
+- A clip's average pace hides a rushed phrase: check the syllable rate per phrase (Whisper word timestamps,
+  split at pauses) when a line is heard as fast but measures near the median.

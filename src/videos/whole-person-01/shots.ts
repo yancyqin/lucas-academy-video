@@ -134,6 +134,10 @@ export const SHOTS: Shot[] = [
         {zh: '批判性素养', en: 'critical literacy'},
         {zh: '问题化', en: 'problematizing'},
       ]}},
+  // The essay's definition (/research/whole-person-education), owner 2026-10-08: one sentence, one card.
+  {from: 'wp01-09a', to: 'wp01-09a',
+    card: {kind: 'words', text: {zh: '批判性素养', en: 'Critical literacy'},
+      small: {zh: '不只读它说了什么，也问它为什么在这里：是谁选的，为谁选的，又漏掉了什么', en: 'reading not only what a text says, but why it is there: who chose it, for whom, and what was left out'}}},
   {from: 'wp01-10', to: 'wp01-10',
     card: {kind: 'words', text: {zh: '问题化', en: 'Problematizing'},
       small: {zh: '把一件看起来已经有答案的事，重新变成一个问题', en: 'turning something that seems to have an answer back into a question'}}},

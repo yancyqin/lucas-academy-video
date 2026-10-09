@@ -41,7 +41,10 @@ DELIVERY = ROOT / "out/fun-informatics-01/delivery"
 FILM_NAME = "fun-informatics-01"
 wp.MUSIC = PUB / "music/echoes-in-the-void.m4a"
 
-VOICES = {lang: MEDIA / f"outputs/louise/{lang}/fun-informatics-01-v2" for lang in ("zh", "en")}  # v2 (2026-10-07); v1 takes stay in fun-informatics-01
+# zh v3 and en v4 (2026-10-08): the v2 takes plus the re-voiced "Both on" and no-wall lines. en v3 (the Van Gogh
+# delivery, too lively and fast for the film) stays in lucas-academy-media as a record.
+TAKES = {"zh": "fun-informatics-01-v3", "en": "fun-informatics-01-v4"}
+VOICES = {lang: MEDIA / f"outputs/louise/{lang}/{TAKES[lang]}" for lang in ("zh", "en")}
 TITLE = {"zh": "计算机怎么算 1+1=？", "en": "How Does a Computer Add 1 + 1=?"}
 FPS, RATE = 30, wp.RATE
 LEAD_IN = 6.0      # loading screen (2 s) + the title on the transit chamber
