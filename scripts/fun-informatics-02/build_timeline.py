@@ -39,9 +39,11 @@ CODA_END = shared.seconds(MUSIC_SOURCE)
 ORIGINAL_MIX = shared.wp.mix_with_music
 ORIGINAL_ENVELOPE = shared.wp.music_envelope
 LISTEN_BOOST_DB = 20.0  # The original pianissimo ending is much quieter than the full piece.
-# Feedback is only a quiet confirmation, including when narration is absent.
-FEEDBACK_SPEAKING_LUFS = -50.0
-FEEDBACK_PAUSE_LUFS = -43.0
+# The app's 0.34–0.375 s clips are shorter than EBU R128's 400 ms window.
+# Its -70 LUFS fallback must never be treated as their real loudness: doing
+# that amplifies already audible cues into the final limiter. Use real peaks.
+FEEDBACK_SPEAKING_PEAK_DBFS = -34.0
+FEEDBACK_PAUSE_PEAK_DBFS = -27.0
 shared.HOLD = {
     "cl00-01": 2.0, "cl00-02": 1.0, "cl00-03": 1.5, "cl00-04": 3.0, "cl00-05": 1.5, "cl00-06": 1.5, "cl00-07": 4.0,
     "cl01-03": 1.0, "cl01-04": 1.0, "cl01-05": 1.0,
@@ -231,13 +233,23 @@ def mix_feedback(tl):
         source=shared.PUB / "sfx" / sound["file"]
         data=subprocess.run(["ffmpeg","-v","error","-i",str(source),"-ar",str(rate),"-ac","2","-f","f32le","-"],capture_output=True,check=True).stdout
         clip=array.array("f", data)
-        level=shared.wp.loudness("-i",str(source))
+        peak=max((abs(value) for value in clip), default=0.0)
+        if peak==0: continue
         speaking=any(c["speech"]["start"]<=sound["time"]<c["speech"]["end"] for c in tl["cues"])
-        target=FEEDBACK_SPEAKING_LUFS if speaking else FEEDBACK_PAUSE_LUFS
-        gain=10**((target-level)/20)
+        target=FEEDBACK_SPEAKING_PEAK_DBFS if speaking else FEEDBACK_PAUSE_PEAK_DBFS
+        gain=10**(target/20)/peak
         at=round(sound["time"]*rate)*2
         for i,value in enumerate(clip):
             if at+i<len(track): track[at+i]+=value*gain
+    # Simultaneous feedback from the two panels must remain quiet as a whole.
+    peak=max((abs(value) for value in track),default=0.0)
+    ceiling=10**(FEEDBACK_PAUSE_PEAK_DBFS/20)
+    if peak>ceiling:
+        gain=ceiling/peak
+        track=array.array("f",(value*gain for value in track))
+    metrics={"events":len(sounds),"normalization":"decoded sample peak, not short-clip LUFS","speakingPeakDBFS":FEEDBACK_SPEAKING_PEAK_DBFS,"pausePeakDBFS":FEEDBACK_PAUSE_PEAK_DBFS,"combinedStemPeakDBFS":round(20*__import__("math").log10(min(peak,ceiling)),2) if peak else None}
+    report=ROOT / "out/fun-informatics-02/feedback-check.json"
+    report.write_text(json.dumps(metrics,ensure_ascii=False,indent=2)+"\n")
     sfx=shared.PUB / "audio/game-feedback.f32"
     sfx.write_bytes(track.tobytes())
     base=shared.PUB / "audio/zh.mix.wav"

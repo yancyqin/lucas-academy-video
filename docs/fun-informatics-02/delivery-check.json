@@ -2,7 +2,7 @@
   "language": "zh",
   "englishNarration": "on hold; not generated",
   "approvedCues": 84,
-  "duration": 852.2,
+  "duration": 855.233333,
   "resolution": [
     1920,
     1080
@@ -15,9 +15,9 @@
   "blackFrames": 0,
   "projectYMAXBelow12": 0,
   "encodedBlackThresholdYMAX": 18,
-  "scannedFrames": 25566,
+  "scannedFrames": 25657,
   "integratedLUFS": -16.0,
-  "truePeakDBTP": -2.2,
-  "sha256": "786965872bce20fab653419dfa0b8efd1e0a77ce10e89ed8881c7c0004687f5d",
-  "bytes": 284744386
+  "truePeakDBTP": -3.0,
+  "sha256": "9237ff744bb4dbb6f5c317fa5c8136e06da6ee4b32d01f602d5ed18ce5668e99",
+  "bytes": 280281617
 }
