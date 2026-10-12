@@ -1,4 +1,4 @@
-node_modules/
+node_modules
 out/
 dist/
 .DS_Store
@@ -69,3 +69,4 @@ public/whole-person-01/
 # images, narration, timelines and mixes are local working copies; FUN-INFORMATICS-01.md
 # says where each comes from and how to rebuild it.
 public/fun-informatics-01/
+public/fun-informatics-02/

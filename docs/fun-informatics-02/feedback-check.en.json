@@ -1,0 +1,7 @@
+{
+  "events": 47,
+  "normalization": "decoded sample peak, not short-clip LUFS",
+  "speakingPeakDBFS": -34.0,
+  "pausePeakDBFS": -27.0,
+  "combinedStemPeakDBFS": -27.0
+}

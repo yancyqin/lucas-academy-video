@@ -37,6 +37,8 @@ _spec = importlib.util.spec_from_file_location("wp01", ROOT / "scripts/whole-per
 wp = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(wp)
 PUB = ROOT / "public/fun-informatics-01"
+DELIVERY = ROOT / "out/fun-informatics-01/delivery"
+FILM_NAME = "fun-informatics-01"
 wp.MUSIC = PUB / "music/echoes-in-the-void.m4a"
 
 # zh v3 and en v4 (2026-10-08): the v2 takes plus the re-voiced "Both on" and no-wall lines. en v3 (the Van Gogh
@@ -120,12 +122,12 @@ def build(langs: list) -> None:
             track[at:at + len(clip)] = clip
         wp.write_wav(audio / f"{lang}.wav", track, RATE)
         wp.mix_with_music(audio / f"{lang}.wav", audio / f"{lang}.mix.wav", cues, total)
-        out = ROOT / "out/fun-informatics-01/delivery"
+        out = DELIVERY
         out.mkdir(parents=True, exist_ok=True)
         for name, key in (("zh-Hans", "zh"), ("en", "en")):
             blocks = [f"{n}\n{wp.srt_time(c['speech']['start'])} --> {wp.srt_time(c['end'] - 0.1)}\n{c[key]}\n"
                       for n, c in enumerate(cues, 1)]
-            (out / f"fun-informatics-01.{lang}.{name}.srt").write_text("\n".join(blocks), encoding="utf-8")
+            (out / f"{FILM_NAME}.{lang}.{name}.srt").write_text("\n".join(blocks), encoding="utf-8")
         data = {**shared, "lang": lang, "durationSeconds": round(total, 3), "endCardStart": round(t, 3), "cues": cues}
         (PUB / f"timeline.{lang}.json").write_text(json.dumps(data, ensure_ascii=False, indent=1) + "\n")
         print(f"{lang}: {len(cues)} cues, {total:.1f}s ({total / 60:.1f} min)")

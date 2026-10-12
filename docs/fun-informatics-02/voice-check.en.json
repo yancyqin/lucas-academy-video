@@ -1,0 +1,797 @@
+{
+  "language": "en",
+  "voice": "louise/en",
+  "expected": 84,
+  "checked": 84,
+  "exactNormalizedContentMatches": 84,
+  "models": {
+    "small": 68,
+    "medium": 16
+  },
+  "retakenCues": [
+    "cl02-06",
+    "cl02-08",
+    "cl02-11",
+    "cl02-15",
+    "cl03-06",
+    "cl03-13",
+    "cl03-15",
+    "cl03-17",
+    "cl04-14",
+    "cl04-18",
+    "cl05-01",
+    "cl06-01",
+    "cl06-05",
+    "cl06-06"
+  ],
+  "trimmedTailCues": [
+    "cl04-16"
+  ],
+  "unresolvedChecks": [],
+  "cues": [
+    {
+      "id": "cl00-01",
+      "sha256": "80e82025930d62ddc26a2186b1d7fc77dde2d8404dab1a4972b31d80066289fd",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl00-02",
+      "sha256": "b003c7aa321148d0d0ed6c35a168027b0c9ec6eead8d0f94fb110c55c3920bb1",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl00-03",
+      "sha256": "f5770436f99dc193e098df7a16446a421605c2430e297881e0593bc8b2979467",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl00-04",
+      "sha256": "90565ad3df3364851489c5955395d4bd557aad2d09f9acb27dc8b9cc54f9fe72",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl00-05",
+      "sha256": "67a3f40aefc10bab4e57ca9c8ebb680597b5ed84578877daf44a91720fa7b0e6",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl00-06",
+      "sha256": "7c8285ad69349d6eb2a9ba523de84248473120d42e3c4f7ce77ed740961199a6",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl00-07",
+      "sha256": "63f8d841bb3a52f203a76a9e5c3126812b1656652392cb74f17662b0f2cb2277",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl01-01",
+      "sha256": "b10aabf565a9ac9806104f633b8c56c7a36baeea0cb9bcd42025b405591f00b2",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl01-02",
+      "sha256": "051e9889799b9c341eb522f39e47ad879454fe088b2e1d13f774d5b78c6e1784",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl01-03",
+      "sha256": "931569579255bcba260778bbeed18258caf11241cf33bba8d1edea7a897108b5",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl01-04",
+      "sha256": "05fea115697ca0bdf4e71710a978a3252d03a4ee0896f9edbaf6abde0d6a3c07",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl01-05",
+      "sha256": "f3abdb35a3cd3a674be7337abd31da70ad1f6c41517f328d5eced047375657c3",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl01-06",
+      "sha256": "9834e7703d787435d54f78e35b5813a0dccce2c0d4fd67b12a325ed881685a19",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl02-01",
+      "sha256": "bb6bb8ca6015cbf7eb660e49aee72200a3b4cf630766d1ab6a0907ff4370d1ac",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl02-02",
+      "sha256": "18afc52ecfbf849d82a8abbec1388602fb9439d49064c7c6854c50ab5fb175f1",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl02-03",
+      "sha256": "2251f0437be8da00288d6455b0717b345b4c2c29ce8d9f5acad1908f1d6e6a71",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl02-04",
+      "sha256": "9cf8b65c08ff0cc4d3a50f081b7393942d1d00aaad8ce9250001b381a7a86abd",
+      "model": "medium",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl02-05",
+      "sha256": "3dcb7350e164bdc3cc5613432e2ddc33d71af5c99e63182fc31eeb48b851e2b0",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl02-06",
+      "sha256": "94791e04d61e6073f266d6b9953f530f6f5d8304be387ce82f768823052800b7",
+      "model": "medium",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl02-07",
+      "sha256": "d6928d8d99ef508850ee1a21c2f4db31a5b6a97535eb0a2fd5e800d72ee402d1",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl02-08",
+      "sha256": "cf1bb4d2e139a593403d5ea3e1a5024ce6f6b7126ab0ca1b2744fb86f9dbaf08",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl02-09",
+      "sha256": "5123027443fecbb4fd67f69f3b62ecb16aea29bb3a868d346f7b0ccd46cc0632",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl02-10",
+      "sha256": "20bafe5861b01543fd8533af6fa162108388868097df76077134e4edd3d93038",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl02-11",
+      "sha256": "7a5432c25cc93a61a503880ed6cdd125ccf9f3692dc56cfe3bd89045078d0ea2",
+      "model": "medium",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl02-12",
+      "sha256": "5a1ce10c3b0f7bce265f8d81a2131c68de94363476c03af704e9dcb472b91d25",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl02-13",
+      "sha256": "6a1af69c66d32590c3f512534dd40d7bb95c19e6cbe30df520fa0f9684873646",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl02-14",
+      "sha256": "8f0bf983137f97aef66f7ede7d3b672cf07a2d661ac6592852bb6d5d25fd5bc5",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl02-15",
+      "sha256": "558d78db872dc416f030c560a0c11cbc52e036405d2607ec17f5bd5e294d8b61",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl02-16",
+      "sha256": "36c462e13b4a58a8881701c4e8153d4e30681d6a3061fea2231cc220c0300799",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl02-17",
+      "sha256": "6867fa98d0eaec14da7187cd4884b257e6ea48cb95f2e279a10ad09078580a82",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl03-01",
+      "sha256": "ef8f43ea3b655f1d6cc0aa9837d319db073f178e34716614907608a1a36ab1b7",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl03-02",
+      "sha256": "9d35ab7ba28abf1620cf7924ac36d85c9647f797512101ae18a5685d593cbf4e",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl03-03",
+      "sha256": "c37195d8c800b6c8fa2678005b7a82c8c8d648b47ca03569707a1ce58fbeaa00",
+      "model": "medium",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl03-04",
+      "sha256": "bce919f217ae2c33109ee065917465ee3d3fd1b490f85a476c50a0884be7ea87",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl03-05",
+      "sha256": "cdfe35e0e343cae8a228237bcf6e69452c665557f72be610e32d4960ced0b14f",
+      "model": "medium",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl03-06",
+      "sha256": "948a85697a779b0962bc47a3e6412200d76068bd11bd8dac0a3ba680706ee0be",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl03-07",
+      "sha256": "ff4fe8c8399eee440f3c8dd7bcd88dfdce56cef632447e5763fcc79525bedf56",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl03-08",
+      "sha256": "fceec235be1c4f1f600650d16d150b7dc687ab08cfdb611e0189b3d635f68294",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl03-09",
+      "sha256": "85f49677067b4ce9e4276b176db4e55f2a7292094a28502bfbb78d2329a66493",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl03-10",
+      "sha256": "c14fcbae8a682b4c662becea7e8c072c0ca2c09ba1d46ab93f8ef22e2b6401e8",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl03-11",
+      "sha256": "36c6d9605f85311b40fb801f95cb5e701c02afdafd3a2bfd8c0cbe29b3f28863",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl03-12",
+      "sha256": "5a83ac89bc816f14900ec5b64aaf74f68977e80173fd3f18ce3934c534cb3133",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl03-13",
+      "sha256": "2b8e41b0e17a331c5b28f04d4421a727a5548151284cd19b2e08e1433c907c27",
+      "model": "medium",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl03-14",
+      "sha256": "8b76b1d1c5585ed799364fc46c18e580bc45413383a7264eaa808bca4b8a54c1",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl03-15",
+      "sha256": "43576f8303526279135955aac75889f0aed0834d6b3074f50e2ea77c9e193dde",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl03-16",
+      "sha256": "4293f9a4069509b59963b8470ca886e0c8ff6132dd3f823d08b0840d55dab4ed",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl03-17",
+      "sha256": "096e4aa4bf6e6a879730b4ab8e1c181c5219642bc47ebb5ffe1fd7166affd28d",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl03-18",
+      "sha256": "0c8078c8c34737eace68e1cea7455999de5aaebfcd4533586ce4478f905c532f",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl03-19",
+      "sha256": "f8b778a769e5a4febc29173aeea4db0d7ba533c4c937cd3af673e5da7e71fdbf",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl03-20",
+      "sha256": "63ca8d049b0f3c7df744f21720450d012c520acfc66cc808c237feb6d9396acc",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl04-01",
+      "sha256": "e94a01c758fbdebbf7a0d1f9d098ac05452d6a634767a863ec3b6be02f1956b5",
+      "model": "medium",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl04-02",
+      "sha256": "d7cf31c7f7f8273561315bf5c12e3e47f3fd33b1e3a4fce0efc47fbf9a6bb3a2",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl04-03",
+      "sha256": "da9f2fcef04f683825493de339a673ae13f31c429b7104c64a5b30a7bc4aa488",
+      "model": "medium",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": {
+        "sha256": "da9f2fcef04f683825493de339a673ae13f31c429b7104c64a5b30a7bc4aa488",
+        "decision": "retain",
+        "reason": "Complete words verified by Whisper medium, no extra words or unmatched sounds. Deliberate, unhurried invitation / question delivery; maximum word gap 0.7 s. Overall film pace remains close to episode 1."
+      }
+    },
+    {
+      "id": "cl04-04",
+      "sha256": "736c4c16aeeb19a4ccc1381df1a2c28b247589302ac838f6ad95eb09837ff27a",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl04-05",
+      "sha256": "20b245c4c01f5a5336199a6a1844b1d8cff51a1181568f599f4bff7c71aeb486",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl04-06",
+      "sha256": "734588153a4367a65c0d3e6238db3e6a3a9bfeb550f9e73e5ed5e9d507ca09ea",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl04-07",
+      "sha256": "bb1680a62004d0682a6363f27a3398ec0c63e49f674d6861c405a3f79e3934ac",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl04-08",
+      "sha256": "52c815a9d0e0e60468887a53413a7ef645dd1625595c1bf90800c1f1f493606e",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl04-09",
+      "sha256": "7950f44ebb45c0112d4ad0142576fca140819f9bcaa8673fcb2ac59c215d3eb1",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl04-10",
+      "sha256": "84620db6f82ae1225ab10c77411ac15cc24b7e5c1e9ad2cf9558ba4bde52726e",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl04-11",
+      "sha256": "3a908484dca787ed2658995e3c3c984a0bb2b9547efbd6f8263cb45552d83bb0",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl04-12",
+      "sha256": "2103cf7d7ca1a80752808dff2826b873fdfeebba341cbdabe7377e40768db862",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl04-13",
+      "sha256": "77369b2b6989391b093643792c873bd49206a2f5b1e5c679edf52dbe0853b9e3",
+      "model": "medium",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl04-14",
+      "sha256": "1c1a4702fb4f94f8e052da8b7a86a9da53d3c38869ac9278c0476c4eeac89fc5",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl04-15",
+      "sha256": "8189fc7207ec5d1096a9bd903a9b87db4be26c8307b7b868f0584ed09aee6c0b",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl04-16",
+      "sha256": "cb40f0967fe7dd19c0c3fdab0cfd84e0b7c01985e380b5f0cf05baf749acf40b",
+      "model": "medium",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl04-17",
+      "sha256": "131bf4bfaa38d0942773563f1e047ee8f9dcdb745ce5dabd54e5015798914d1e",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl04-18",
+      "sha256": "894feb61e4723daa9f1c0a860f99cd889b015b20790449a52d93784061eeddcd",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl04-19",
+      "sha256": "2ab392035bd79fd46a8cc1179c5abbecd6bf974699b923e822ab291ea136ede2",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl04-20",
+      "sha256": "0b1dee287e4ebb9573c58e8e407987eefd550c9eab7b512148add561adf27305",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl05-01",
+      "sha256": "31df61423db7ae6516d97df0e14969319e19a5fd06dff2ee59acd8c27e8dd2cf",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl05-02",
+      "sha256": "66bd1d12eac1d7059f958c0bd1a4b2147c238f07f84577ae6e392bd841ed57f7",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl05-03",
+      "sha256": "16ef2cb6cf99fcc7dabc9641f041295910e20de4b1d4ec937a4ecc452aa4b340",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl05-04",
+      "sha256": "8f0d9c2ae0f5422f0cbbaa77871c05ffe569cb049eed89ee5b18e5b486ed8e51",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl05-05",
+      "sha256": "0691d5915126cb0dd8c5edae1177fad764ae62338ad47cf1fdca893e06dd68b1",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl05-06",
+      "sha256": "751bc533b0ab059d20770f1699f5a65ef88e2dca63d6cbcbfc9e9cb8504cff01",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl05-07",
+      "sha256": "b31932357ab2bc6251e08eaab3fb28142e6ec1c041d603d69a5798ae424be7c6",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl06-01",
+      "sha256": "c6e1b500feeef312ee3e9ffb8c49260122e4528c5baed008f5f5f5a606f9fe43",
+      "model": "medium",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": {
+        "sha256": "c6e1b500feeef312ee3e9ffb8c49260122e4528c5baed008f5f5f5a606f9fe43",
+        "decision": "retain",
+        "reason": "Complete words verified by Whisper medium, no extra words or unmatched sounds. Deliberate, unhurried invitation / question delivery; maximum word gap 0.58 s. Overall film pace remains close to episode 1."
+      }
+    },
+    {
+      "id": "cl06-02",
+      "sha256": "b9e579ae431d5540356e03d823a3f6e8351b4e9137273509fbb621465ccd486d",
+      "model": "medium",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl06-03",
+      "sha256": "f94c401e4c7ffa1a2b0fff3dc9a181b61cced0cd4960ede3765a41fd85685b6e",
+      "model": "medium",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl06-04",
+      "sha256": "66f54959172d51a59589b0dc888b17e4031cc9e907544b2302bf97f8a73117a6",
+      "model": "medium",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl06-05",
+      "sha256": "813f0eee4645c0da75800c4dfe0a9eefad8619e64c28008a3d8b4596b7f17afa",
+      "model": "small",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl06-06",
+      "sha256": "f578284d0a7ac48e756cd2ca3c3a0d34640a7713c150ed1c08f64a35378c966a",
+      "model": "medium",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    },
+    {
+      "id": "cl07-01",
+      "sha256": "d4dd990403fff965f4f1d041a748fb05e4519c79a1a821fcd267dbe06e12989c",
+      "model": "medium",
+      "normalizedContentMatch": 1.0,
+      "extraWords": [],
+      "unmatchedSounds": [],
+      "review": null
+    }
+  ]
+}

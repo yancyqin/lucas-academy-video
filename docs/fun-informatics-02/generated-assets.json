@@ -1,0 +1,186 @@
+{
+  "assets": [
+    {
+      "path": "images/apple-for-her-monet.png",
+      "tool": "image_gen.imagegen",
+      "created": "2026-10-07",
+      "intent": "晴朗花园中母亲把红苹果递给小女孩，远景侧面，无详细面部；莫奈风。",
+      "reference": null,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "169fa16e3a6c625f24138189c5899fab58cdd0935ae8cd6544dae77162375e4d",
+      "bytes": 3212489,
+      "label": "AI 生成"
+    },
+    {
+      "path": "images/giverny-bridge-photo.png",
+      "tool": "image_gen.imagegen",
+      "created": "2026-10-07",
+      "intent": "参照莫奈1899日本桥真迹，绿色木桥、睡莲、柳树、夏日光；同构图写实，4:5。",
+      "reference": "art/monet-bridge-1899.jpg",
+      "dimensions": [
+        1122,
+        1402
+      ],
+      "sha256": "2e2a98c2a3e05fbe1f30b70635e8d646e2d238edb1509672178829917cc7dd6a",
+      "bytes": 3922067,
+      "label": "AI 还原"
+    },
+    {
+      "path": "images/golden-apples-monet.png",
+      "tool": "image_gen.imagegen",
+      "created": "2026-10-07",
+      "intent": "窗边桌上的银丝篮与金苹果，柔和晨光；莫奈风。",
+      "reference": null,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "da24c2cf0ad611573aa45000eec1895d06ab1f6b306ece7e975543529df5802c",
+      "bytes": 3158439,
+      "label": "AI 生成"
+    },
+    {
+      "path": "images/moonlit-water-monet.png",
+      "tool": "image_gen.imagegen",
+      "created": "2026-10-07",
+      "intent": "参照 moonlit-water-photo 的相同构图、视点与光照，莫奈风。",
+      "reference": "images/moonlit-water-photo.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "e79128bb6e2d9e02f22afb46fe14a9b07e560046a65222db7978fae0dd8f2e5b",
+      "bytes": 3103727,
+      "label": "AI 生成"
+    },
+    {
+      "path": "images/moonlit-water-photo.png",
+      "tool": "image_gen.imagegen",
+      "created": "2026-10-07",
+      "intent": "满月下平静湖面、银色月光水路与岸边暗树；写实，无字无标志。",
+      "reference": null,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "17dbbd24775f91d2fb749ff77d70a167dc2210bc2b7957936cec1a29d9fdc0fe",
+      "bytes": 1967752,
+      "label": "AI 生成"
+    },
+    {
+      "path": "images/playground-monet.png",
+      "tool": "image_gen.imagegen",
+      "created": "2026-10-07",
+      "intent": "参照 playground-photo 的相同构图与光照，莫奈风。",
+      "reference": "images/playground-photo.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "6a1940d2f5cddde725d049dfbe79c555f2481c5315e0bdc64f3d2db6cbf27b42",
+      "bytes": 3241384,
+      "label": "AI 生成"
+    },
+    {
+      "path": "images/playground-photo.png",
+      "tool": "image_gen.imagegen",
+      "created": "2026-10-07",
+      "intent": "晴朗校园操场，红滑梯、秋千与树；无儿童面部，无字无标志。",
+      "reference": null,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "afb02862c11a485a0866f07a3e0feb3327cc2b325efc615a6874f66e0fd67cea",
+      "bytes": 3546870,
+      "label": "AI 生成"
+    },
+    {
+      "path": "images/schoolbag-cat-monet.png",
+      "tool": "image_gen.imagegen",
+      "created": "2026-10-07",
+      "intent": "背书包的孩子背影沿树下小路上学，路边小猫；莫奈风。",
+      "reference": null,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "9b82e2d671ac77e77d112eadb7f9865211053f95a42fd9ea427394656bc05240",
+      "bytes": 3466518,
+      "label": "AI 生成"
+    },
+    {
+      "path": "images/seaside-monet.png",
+      "tool": "image_gen.imagegen",
+      "created": "2026-10-07",
+      "intent": "参照 seaside-photo 的相同构图与光照，莫奈风。",
+      "reference": "images/seaside-photo.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "be1d9c73d3d5417e0b6d8be3a78478803b43803059039481843d0e6c1cad7f08",
+      "bytes": 3015425,
+      "label": "AI 生成"
+    },
+    {
+      "path": "images/seaside-photo.png",
+      "tool": "image_gen.imagegen",
+      "created": "2026-10-07",
+      "intent": "黄昏岩岸、悬崖、平缓波浪与远处小帆船；无字无标志。",
+      "reference": null,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "94114118076652b3065dcbe1086560ddfcda4fd7869b03e06b69cff6f102fbcf",
+      "bytes": 2930049,
+      "label": "AI 生成"
+    },
+    {
+      "path": "images/street-monet.png",
+      "tool": "image_gen.imagegen",
+      "created": "2026-10-07",
+      "intent": "参照 street-photo 的相同构图、视点、人物与光照，莫奈风可见笔触。",
+      "reference": "images/street-photo.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "3f0092a496ba3d6d9240a56da5112b520e71b3d4d3cdb5db4109b546d8fb912c",
+      "bytes": 3373987,
+      "label": "AI 生成"
+    },
+    {
+      "path": "images/street-photo.png",
+      "tool": "image_gen.imagegen",
+      "created": "2026-10-07",
+      "intent": "雨后黄昏的街道，伞下行人背影、湿路灯光，写实；无字无标志。",
+      "reference": null,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "67793684a89a4695de32a6bc9efb3aad15a49cd59dc4c9babffacfe0a8da902f",
+      "bytes": 2988359,
+      "label": "AI 生成"
+    },
+    {
+      "path": "images/unicycle-juggler-monet.png",
+      "tool": "image_gen.imagegen",
+      "created": "2026-10-07",
+      "intent": "远景男子在公园骑一辆单轮独轮车、抛三个球；莫奈风，不展示面部。",
+      "reference": null,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "285fa323a835047285a2556ba1ca484c0482684475953da07a029e4c9733a181",
+      "bytes": 3152240,
+      "label": "AI 生成"
+    }
+  ]
+}

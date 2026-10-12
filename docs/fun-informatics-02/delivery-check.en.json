@@ -1,0 +1,23 @@
+{
+  "language": "en",
+  "voice": "louise/en",
+  "approvedCues": 84,
+  "duration": 851.933333,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "fps": 30,
+  "captionBlocks": {
+    "zh-Hans": 156,
+    "en": 191
+  },
+  "blackFrames": 0,
+  "projectYMAXBelow12": 0,
+  "encodedBlackThresholdYMAX": 18,
+  "scannedFrames": 25558,
+  "integratedLUFS": -16.0,
+  "truePeakDBTP": -3.0,
+  "sha256": "ffcd02dfe64350c3aec018e38a648ef7d9545fddbd424b07e8e27f0b29a60e41",
+  "bytes": 254585325
+}

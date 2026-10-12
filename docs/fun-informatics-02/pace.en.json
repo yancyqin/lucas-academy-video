@@ -1,0 +1,19 @@
+{
+  "reference": "fun-informatics-01.en / Louise v4",
+  "referenceMetrics": {
+    "takes": 96,
+    "medianSecondsPerWord": 0.43333333333333335,
+    "wordsPerMinute": 136.9126450177465,
+    "totalSeconds": 755.0799999999997,
+    "words": 1723
+  },
+  "currentMetrics": {
+    "takes": 84,
+    "medianSecondsPerWord": 0.4196969696969697,
+    "wordsPerMinute": 143.5675373655539,
+    "totalSeconds": 715.8999999999997,
+    "words": 1713
+  },
+  "medianPaceRatio": 0.9685314685314684,
+  "withinFifteenPercent": true
+}

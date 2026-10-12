@@ -34,6 +34,17 @@ film's first painting ([VG-WHY-PAINT-THEM.md](./VG-WHY-PAINT-THEM.md)). The re-m
 films (2026-10-06) follow the rule too: the cover asks 「孩子说“不”，你怎么办？」, and the film opens on the
 same question with Lucas Academy, the film's name and the byline added.
 
+## Continuous footage and speed curves
+
+The owner's rule (2026-10-07): compress a long continuous recording as **one unbroken
+take on a smooth speed curve**. Slow down at the moments named by the narration and
+speed up between them. Match the keys to each language's word timings, keep source
+time moving forward, and keep the usable span clear of the recording's fades and black.
+
+Reuse the `ramp` visual in `src/videos/fun-informatics-01/shots.ts` and the shared cubic
+Hermite interpolation in `src/lib/timeRamps.ts`. A montage is appropriate for separate
+scenes; a continuous transformation or game recording must retain its continuity.
+
 ## YouTube tags
 
 The owner's rule (2026-10-07): every tag is **lowercase**, and every film carries the default set
@@ -82,9 +93,7 @@ It has no single right answer: it takes the film's idea into the viewer's own li
 to keep thinking about it with us, ending on Lucas Academy as the place where we learn and think
 together. Write it into the script with the other lines, so it is voiced and captioned like them.
 
-Example, the redundancy film ([FUN-INFORMATICS-02.md](./FUN-INFORMATICS-02.md)): 「那么，在今天这个
-充满 AI 信息冗余的时代，你怎么分辨哪些是最有用的信息，哪些是噪声呢？这是我们在 Lucas Academy 一起学习、
-一起思考的问题。」
+Example, the redundancy film ([FUN-INFORMATICS-02.md](./FUN-INFORMATICS-02.md)): 「那么，在今天这个充满 AI 信息冗余的时代，你怎么分辨，这里面，有多少是新的呢？有多少是真的呢？什么是重要的呢？什么是可以忽略的呢？这也是我们在 Lucas Academy 一起学习、一起思考的问题。」
 
 ## Golden Funnel roller coaster
 
