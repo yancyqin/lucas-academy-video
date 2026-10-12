@@ -19,6 +19,10 @@ a sentence. Both run locally on this Mac.
 - [`LYRIC-VIDEO.md`](./LYRIC-VIDEO.md) -- the lyric-video pipeline: forced
   alignment of the lyrics, generated and stock footage through one grade, and the
   failures worth knowing about before repeating any of it.
+- [`MINIMAX-VIDEO-EXPERIENCE.md`](./MINIMAX-VIDEO-EXPERIENCE.md) -- reusable
+  MiniMax video-generation experience: credential location (no secrets), API
+  workflow, reference-frame geometry, prompting, quota safeguards, and real
+  validation results and limitations. Read before starting another video project.
 
 ## YouTube covers
 
