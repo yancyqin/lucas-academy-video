@@ -1,0 +1,369 @@
+{
+ "data": "/Users/yqin/repo/playground/lucas-academy-video-data/jesu",
+ "journey": "/Users/yqin/repo/playground/lucas-academy-video-data/journey",
+ "music": "music/jesu-gli-armonici-novocals-ft.wav",
+ "music_note": "Bach BWV 147/10, Orchestra Gli Armonici (CC0, via Musopen/Commons); choir removed with demucs htdemucs_ft. Phrase starts (beat-snapped): 22.9 35.1 44.7 61.3 74.4 84.1 102.9 119.1 128.9 135.1 148.1 160.2; end 202.3",
+ "dissolve": 1.6,
+ "fade_in": 3.0,
+ "fade_out": 4.0,
+ "shots": [
+  {
+   "id": "C1-birth",
+   "at": 0.0,
+   "src": "jesu:C/C1-big-bang.m4v",
+   "desc": "point of light, burst, cosmic web emerging (NASA SVS 12656)",
+   "best_in_s": 0.0,
+   "best_out_s": 15.0
+  },
+  {
+   "id": "C2-early",
+   "at": 9.69,
+   "src": "jesu:C/C2-galaxies-flythrough.mp4",
+   "desc": "slow drift through galaxies and cosmic-web threads (NASA SVS 14950)",
+   "best_in_s": 22.0,
+   "best_out_s": 40.0,
+   "beat": 9.94,
+   "cut_on": "bar"
+  },
+  {
+   "id": "C3-deepfield",
+   "at": 22.67,
+   "src": "jesu:C/C3-hudf-flythrough.m4v",
+   "desc": "3D flight through the Hubble Ultra Deep Field (SVS 30687)",
+   "best_in_s": 35.0,
+   "best_out_s": 51.0,
+   "beat": 22.92,
+   "cut_on": "phrase"
+  },
+  {
+   "id": "C4-nebula",
+   "at": 34.84,
+   "src": "jesu:C/C4-cosmic-cliffs-3d.mp4",
+   "desc": "slow 3D push into Webb's Cosmic Cliffs (NASA/STScI)",
+   "best_in_s": 7.0,
+   "best_out_s": 23.0,
+   "beat": 35.09,
+   "cut_on": "phrase"
+  },
+  {
+   "id": "C5-milkyway",
+   "at": 44.47,
+   "src": "jesu:C/C5-milky-way-zoom.mp4",
+   "desc": "the Milky Way band, zooming toward the galactic centre (ESA/Webb weic2216d, CC BY 4.0)",
+   "best_in_s": 0.0,
+   "best_out_s": 19.6,
+   "beat": 44.72,
+   "cut_on": "phrase"
+  },
+  {
+   "id": "C7-earth",
+   "at": 61.03,
+   "src": "jesu:C/C7-earthrise.mp4",
+   "desc": "Earthrise over the lunar horizon (NASA SVS 4129, LRO data)",
+   "best_in_s": 56.5,
+   "best_out_s": 72.0,
+   "beat": 61.28,
+   "cut_on": "phrase"
+  },
+  {
+   "id": "E3a-near-space",
+   "at": 74.15,
+   "src": "jesu:E/E3a-artemis2-orion-window-near-space-limb.mp4",
+   "best_in_s": 48.0,
+   "best_out_s": 61.0,
+   "crop": [
+    0.1667,
+    0.0,
+    0.8333,
+    0.8333
+   ],
+   "desc": "Artemis II, through Orion's window coming home: black sky, the thin blue atmosphere, cloud far below (NASA)",
+   "beat": 74.4,
+   "cut_on": "phrase"
+  },
+  {
+   "id": "E4-cloudsea",
+   "src": "jesu:X/E4-cloudsea-pexels-30700901.mp4",
+   "best_in_s": 13.5,
+   "best_out_s": 30.0,
+   "desc": "sunrise over a sea of clouds and dark peaks (Pexels, muhammad fadhil)",
+   "at": 83.81,
+   "beat": 84.06,
+   "cut_on": "phrase"
+  },
+  {
+   "id": "L1-microbes",
+   "at": 94.26,
+   "src": "jesu:E/L1-synura-golden-colonies.webm",
+   "desc": "golden Synura colonies tumbling (living cells); alt: journey #40 diatoms still",
+   "best_in_s": 12.6,
+   "best_out_s": 24.6,
+   "beat": 94.51,
+   "cut_on": "bar"
+  },
+  {
+   "id": "L2-flower",
+   "src": "jesu:X/L2-flowers-blooming-pexels-856030.mp4",
+   "best_in_s": 0.9,
+   "best_out_s": 11.0,
+   "desc": "a hibiscus opening (Pexels, Pixabay)",
+   "beat": 103.21,
+   "at": 102.96,
+   "cut_on": "phrase"
+  },
+  {
+   "id": "L3-turtle",
+   "src": "jesu:X/L3-turtle-pexels-33463697.mp4",
+   "best_in_s": 11.0,
+   "best_out_s": 24.5,
+   "desc": "a sea turtle swimming (Pexels, Florian Delée)",
+   "at": 111.02,
+   "beat": 111.27,
+   "cut_on": "bar"
+  },
+  {
+   "id": "34-sunbeams",
+   "at": 118.85,
+   "src": "journey:N/34-diana-creek-sunrays.webm",
+   "best_in_s": 4.0,
+   "best_out_s": 16.0,
+   "desc": "sun rays through mist onto a forest creek",
+   "beat": 119.1,
+   "cut_on": "phrase"
+  },
+  {
+   "id": "36-ants",
+   "at": 126.93,
+   "src": "journey:N/36-leafcutters-yellow-flowers.webm",
+   "best_in_s": 12.0,
+   "best_out_s": 22.0,
+   "desc": "leafcutter ants carrying petals",
+   "beat": 127.18,
+   "cut_on": "bar"
+  },
+  {
+   "id": "L5-bee",
+   "src": "jesu:X/L5-bee-pexels-6833235.mp4",
+   "best_in_s": 2.0,
+   "best_out_s": 16.0,
+   "desc": "a bee on a yellow daisy (Pexels, av)",
+   "at": 133.91,
+   "beat": 134.16,
+   "cut_on": "bar"
+  },
+  {
+   "id": "09-bird",
+   "at": 140.16,
+   "src": "journey:N/09-blackbird-feeding-chicks.ogv",
+   "best_in_s": 6.0,
+   "best_out_s": 18.0,
+   "desc": "a blackbird feeding its chicks",
+   "beat": 140.41,
+   "cut_on": "bar"
+  },
+  {
+   "id": "P1-adam",
+   "at": 148.22,
+   "src": "jesu:P/P1p-sistine-chapel-wide-pompeo-2019.jpg",
+   "kenburns": {
+    "path": [
+     [
+      0.147,
+      0.207,
+      0.245,
+      0.2067
+     ],
+     [
+      0.08,
+      0.14,
+      0.42,
+      0.354
+     ]
+    ]
+   },
+   "desc": "The Creation of Adam in the Sistine Chapel, pulling back to the vault (photo: Ron Przysucha, US State Dept, PD)",
+   "beat": 148.47,
+   "cut_on": "phrase"
+  },
+  {
+   "id": "26-society",
+   "at": 154.46,
+   "src": "journey:S/26-iss-westcoast-city-lights-4k.mp4",
+   "best_in_s": 10.0,
+   "best_out_s": 18.0,
+   "crop": [
+    0,
+    0.125,
+    0.75,
+    0.75
+   ],
+   "desc": "city lights from the ISS",
+   "beat": 154.71,
+   "cut_on": "beat"
+  },
+  {
+   "id": "P2-pieta",
+   "at": 159.85,
+   "src": "jesu:P/P2p-pieta-stpeters-fredromero.jpg",
+   "desc": "Michelangelo, Pietà (St Peter's): slow push toward Mary and Jesus (photo: Fred Romero, CC BY 2.0)",
+   "kenburns": {
+    "from": [
+     0.0,
+     0.0506,
+     1.0,
+     0.84375
+    ],
+    "to": [
+     0.2,
+     0.03,
+     0.55,
+     0.464
+    ]
+   },
+   "beat": 160.1,
+   "cut_on": "phrase"
+  },
+  {
+   "id": "65-walkers",
+   "at": 167.86,
+   "src": "journey:N/04-bromo-timelapse.webm",
+   "best_in_s": 115.9,
+   "best_out_s": 123.1,
+   "interp": true,
+   "desc": "people walking a trail toward the sunrise",
+   "beat": 168.11,
+   "cut_on": "bar"
+  },
+  {
+   "id": "29-dawn",
+   "at": 175.85,
+   "src": "journey:N/29-shenandoah-dawn-timelapse.webm",
+   "best_in_s": 12.5,
+   "best_out_s": 26.0,
+   "desc": "the sky reddens and the sun breaks the horizon",
+   "beat": 176.1,
+   "cut_on": "bar"
+  },
+  {
+   "id": "58-orbit-dawn",
+   "at": 186.39,
+   "src": "journey:S/03-iss-night-to-dawn.webm",
+   "best_in_s": 22.2,
+   "best_out_s": 31.4,
+   "desc": "ISS night pass; the blue dawn arc brightens along the limb at the end, a bright planet above",
+   "beat": 186.64,
+   "cut_on": "bar"
+  },
+  {
+   "id": "01-star",
+   "at": 194.29,
+   "src": "journey:S/01-webb-focused-star.png",
+   "kenburns": {
+    "from": [
+     0.0,
+     0.0,
+     1.0,
+     1.0
+    ],
+    "to": [
+     0.05,
+     0.05,
+     0.9,
+     0.9
+    ]
+   },
+   "desc": "the bright morning star, fade to black",
+   "beat": 194.54,
+   "cut_on": "bar"
+  }
+ ],
+ "subtitle_style": {
+  "size": 44,
+  "ref_size": 26,
+  "line_height": 1.55,
+  "ref_gap": 14,
+  "max_width": 0.62,
+  "bottom": 0.86,
+  "shadow_blur": 9,
+  "shadow_strength": 1.1,
+  "fade": 0.9
+ },
+ "burn_subtitles": false,
+ "tail": 4.3,
+ "write_srt": false,
+ "verses": [
+  {
+   "start": 3.5,
+   "end": 10.5,
+   "text": "太初有道，道与　神同在，道就是　神。",
+   "ref": "约翰福音 1:1"
+  },
+  {
+   "start": 12.0,
+   "end": 21.5,
+   "text": "这道太初与　神同在。万物是藉着他造的；凡被造的，没有一样不是藉着他造的。",
+   "ref": "约翰福音 1:2–3"
+  },
+  {
+   "start": 47.0,
+   "end": 56.5,
+   "text": "他在万有之先；",
+   "ref": "歌罗西书 1:17"
+  },
+  {
+   "start": 63.5,
+   "end": 72.5,
+   "text": "万有也靠他而立。",
+   "ref": "歌罗西书 1:17"
+  },
+  {
+   "start": 96.8,
+   "end": 103.4,
+   "text": "生命在他里头，这生命就是人的光。",
+   "ref": "约翰福音 1:4"
+  },
+  {
+   "start": 113.3,
+   "end": 120.8,
+   "text": "光照在黑暗里，黑暗却不接受光。",
+   "ref": "约翰福音 1:5"
+  },
+  {
+   "start": 148.2,
+   "end": 154.6,
+   "text": "道成了肉身，住在我们中间，充充满满地有恩典有真理。",
+   "ref": "约翰福音 1:14"
+  },
+  {
+   "start": 155.4,
+   "end": 159.6,
+   "text": "看哪，　神的羔羊，除去世人罪孽的！",
+   "ref": "约翰福音 1:29"
+  },
+  {
+   "start": 160.4,
+   "end": 166.3,
+   "text": "他因那摆在前面的喜乐，就轻看羞辱，忍受了十字架的苦难，",
+   "ref": "希伯来书 12:2"
+  },
+  {
+   "start": 167.4,
+   "end": 174.0,
+   "text": "便坐在　神宝座的右边。",
+   "ref": "希伯来书 12:2"
+  },
+  {
+   "start": 186.8,
+   "end": 193.2,
+   "text": "看哪，我将一切都更新了！",
+   "ref": "启示录 21:5"
+  },
+  {
+   "start": 194.4,
+   "end": 201.6,
+   "text": "我是明亮的晨星。……「是了，我必快来！」阿们！主耶稣啊，我愿你来！",
+   "ref": "启示录 22:16, 20"
+  }
+ ],
+ "pending": "flower replaces sprout; plane removed and re-timed (cloud sea 4 bars). Render when the owner asks."
+}
