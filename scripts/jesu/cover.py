@@ -4,6 +4,7 @@
   cover.py                       the default candidates
   cover.py star=199.5            a named frame at a time (s) in jesu-clean.mp4
   cover.py earthrise=72.5@top    title in the upper third (dark sky above a horizon)
+  cover.py video=<mp4> ...       take the frames from another render (e.g. the uploaded mp4)
 """
 import json
 import pathlib
@@ -16,13 +17,16 @@ HERE = pathlib.Path(__file__).parent
 EDIT = json.loads((HERE / "edit.json").read_text())
 DATA = pathlib.Path(EDIT["data"])
 W, H = 1280, 720
-TITLES = {"zh": ("耶稣，世人仰望的喜悦", "从创世到再来", 92, 44),
-          "en": ("Jesu, Joy of Man's Desiring", "From Creation to His Return", 70, 40)}
+# title, subtitle, their sizes, and the subtitle's baseline below the title's.
+# The English cover is the Chinese title big with the English one just a little smaller under it,
+# as wide as the Chinese line (owner 2026-10-11).
+TITLES = {"zh": ("耶稣，世人仰望的喜悦", "从创世到再来", 92, 44, 72),
+          "en": ("耶稣，世人仰望的喜悦", "Jesu, Joy of Man's Desiring", 92, 72, 90)}
 DEFAULT = {"star": 199.5, "earthrise": 72.0, "sistine": 150.0}
 
 
-def frame(t):
-    p = subprocess.run(["ffmpeg", "-v", "error", "-ss", f"{t}", "-i", str(DATA / "build/jesu-clean.mp4"),
+def frame(video, t):
+    p = subprocess.run(["ffmpeg", "-v", "error", "-ss", f"{t}", "-i", str(video),
                         "-frames:v", "1", "-f", "image2pipe", "-vcodec", "png", "-"],
                        capture_output=True, check=True)
     import io
@@ -38,14 +42,14 @@ def cover(img, lang, top=False):
         d.line([(0, y), (W, y)], fill=int(170 * max(0.0, u) ** 1.3))
     base = H * 0.30 if top else H * 0.70
     img = Image.composite(Image.new("RGB", (W, H), (0, 0, 0)), img, shade)
-    title, sub, size, sub_size = TITLES[lang]
+    title, sub, size, sub_size, gap = TITLES[lang]
     fz = ImageFont.truetype(str(DATA / "fonts/NotoSerifSC-Regular.otf"), size)
     fe = ImageFont.truetype(str(DATA / "fonts/NotoSerifSC-Light.otf"), sub_size)
     text = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     t = ImageDraw.Draw(text)
     t.text((W / 2, base), title, font=fz, fill=(255, 255, 255, 255), anchor="ms")
     if sub:
-        t.text((W / 2, base + 72), sub, font=fe, fill=(235, 228, 210, 255), anchor="ms")
+        t.text((W / 2, base + gap), sub, font=fe, fill=(235, 228, 210, 255), anchor="ms")
     glow = text.getchannel("A").filter(ImageFilter.GaussianBlur(10))
     halo = Image.merge("RGBA", (*Image.new("RGB", (W, H), (0, 0, 0)).split(), glow.point(lambda v: int(v * 0.8))))
     out = Image.alpha_composite(img.convert("RGBA"), halo)
@@ -53,10 +57,11 @@ def cover(img, lang, top=False):
 
 
 def main():
-    picks = dict(a.split("=") for a in sys.argv[1:]) or DEFAULT
-    for name, t in picks.items():
+    picks = dict(a.split("=", 1) for a in sys.argv[1:])
+    video = pathlib.Path(picks.pop("video", DATA / "build/jesu-clean.mp4"))
+    for name, t in (picks or DEFAULT).items():
         t, _, where = str(t).partition("@")
-        img = frame(float(t))
+        img = frame(video, float(t))
         for lang in TITLES:
             path = DATA / f"build/youtube-cover-{name}.{lang}.jpg"
             cover(img, lang, top=where == "top").save(path, quality=92)

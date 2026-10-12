@@ -36,7 +36,7 @@ separation residue. Suno's "Without Lead Vocal" export also works as a bed but i
 ### 2. Prepare the source
 
 ```bash
-ffmpeg -i "stems/0 Lead Vocals.mp3" -ac 1 -ar 44100 -c:a pcm_s16le -y source.wav
+ffmpeg -i "stems/one-breath/0 Lead Vocals.mp3" -ac 1 -ar 44100 -c:a pcm_s16le -y source.wav
 ```
 
 ### 3. Convert
@@ -69,7 +69,7 @@ export PYTORCH_ENABLE_MPS_FALLBACK=1
 ### 4–5. Gate, then match
 
 ```bash
-python scripts/gate.py     converted.wav "stems/0 Lead Vocals.mp3" gated.wav
+python scripts/gate.py     converted.wav "stems/one-breath/0 Lead Vocals.mp3" gated.wav
 python scripts/matcheq.py  gated.wav processed.wav 0 -1 -19.5
 ```
 
@@ -78,10 +78,23 @@ noise too.
 
 ### 6. Mix
 
+```bash
+scripts/audio/wet-lead.sh processed.wav svc/proc/ir-plate.wav 32 WET.wav
+```
+
 ```
 bed   = stems 1..6 summed, untouched
 lead  = processed vocal + convolution reverb (~32 % wet)
 ```
+
+**`afir`'s `dry` is an input gain, not a dry/wet mix.** `afir=dry=0:wet=1` does not
+give the wet signal — it zeroes the input and returns digital silence, and the only
+symptom is a reverb that never arrives. Leave both at 1; afir's output is already the
+convolution alone. `gtype` made no difference here either (peak/none/rms/dc all
+measured −55.2 LUFS), so the tail has to be measured and level-matched rather than
+assumed — this plate lands 36 dB below the dry lead. That match is a +36 dB lift, so
+do the whole chain in one float graph; a −44 dBFS intermediate written to 16-bit
+brings its quantisation noise up with the reverb.
 
 ---
 
@@ -103,8 +116,24 @@ other model often renders it differently — a per-section swap costs minutes.
 
 Neither model gets close to the original's air. At 9–10 kHz both sit well below the
 Suno vocal, and **more diffusion steps make it worse, not better** (80 steps
-measured 1.3 dB below 40). That ceiling is the vocoder's; no EQ recovers detail
-that was never generated.
+measured 1.3 dB below 40).
+
+**That ceiling is the recording's, not the vocoder's.** This file used to claim the
+opposite. Measured on the shawn48k model at D4–G4, each file normalised to its own
+250–1000 Hz, the conversion tracks the singer's own takes to within a few dB
+everywhere — while both sit far below the studio vocal:
+
+| band | Suno lead | singer's take | model output |
+|---|---|---|---|
+| 2–4k | −9.9 | −26.1 | **−25.9** |
+| 4–6k | −19.8 | −30.8 | **−35.2** |
+| 8–11k | −26.4 | −55.0 | **−56.1** |
+
+The vocoder loses about 4 dB in 4–6 kHz and roughly 1 dB above 8 kHz. Everything
+else is the microphone. The consequence is practical: no EQ recovers what was never
+*recorded*, and the fix is a better take, not a better model — see
+[VOICE-GUIDE.md](VOICE-GUIDE.md) and the printable
+[RECORDING-GUIDE.pdf](RECORDING-GUIDE.pdf).
 
 ---
 
@@ -160,7 +189,9 @@ is why upstream's Mac support did not cover them):
 - `inference.py:408` — torchaudio 2.11 routes `save()` through TorchCodec. Write
   with `soundfile` instead.
 
-**RVC's faiss index segfaults here** (exit 139) on load. Running with
+**RVC's faiss index segfaults here** (exit 139) on load — reproduced on a second,
+independently trained model, so treat it as a property of this machine rather than a
+bad index file. Running with
 `--index-path "" --index-rate 0` works; timbre fidelity is slightly lower.
 
 **Both models hallucinate through silence.** The source is digital silence for the
@@ -201,16 +232,27 @@ floor is the singer's own fundamental (E3 = 165 Hz to G4 = 390 Hz here).
 ## Where things are
 
 ```
-stems/                          Suno's 7 stems
+stems/<song>/                   Suno's stems, one folder per song
 svc/seed-vc/                    Seed-VC (patched); inference.py.orig is upstream
-svc/voice/raw/Yancy/            voice samples
+svc/voice/raw/<Name>/           voice samples
 svc/voice/wav/ref-y37.wav       Seed-VC reference (samples 3 + 7)
+svc/voice/guide-chromatic.mp3   G2-C5 chromatic guide, 3 passes
+svc/proc/ir-plate.wav           the plate IR used for the wet lead
 rvc/applio/                     Applio (patched); extract.py.orig is upstream
-rvc/dataset/yancy/              12 min training set, silence stripped
+rvc/dataset/<name>/             training set, silence stripped
 rvc/applio/logs/yancy48k/
   yancy48k_200e_7800s.pth       the trained model (55 MB)
-  G_2809.pth                    lowest generator loss was at epoch 73
+rvc/applio/logs/shawn48k/
+  shawn48k_100e_2600s.pth       the trained model (55 MB)
+  G_1950.pth                    kept for re-export; loss bottomed at epoch 78
 ```
 
-Training ran 200 epochs but the loss bottomed at **epoch 73** and never improved —
-100 epochs would have been enough, and ~2.5 h instead of 5.
+Yancy ran 200 epochs but the loss bottomed at **epoch 73** and never improved —
+100 would have been enough, and ~2.5 h instead of 5. Shawn ran 100 on 9:43 of audio
+(2 h 3 min, 1:02 per epoch) and bottomed at **epoch 78**, so 100 is a well-sized
+budget rather than luck.
+
+Only the exported 55 MB model is needed for inference. The `G_*/D_*` checkpoints are
+431 MB and 817 MB each; a finished run leaves several GB behind. Keep one `G_` near
+the loss minimum if you might re-export and delete the rest — but note that deleting
+the `D_*` discriminators makes the run unresumable.
