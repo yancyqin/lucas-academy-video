@@ -11,7 +11,7 @@
 """
 import subprocess, sys, os, re, numpy as np
 SR=44100; N=8192
-REF='stems/0 Lead Vocals.mp3'
+REF=os.environ.get('LEAD_REF','stems/one-breath/0 Lead Vocals.mp3')
 BANDS=[(120,250),(250,500),(500,1000),(1000,2000),(2000,3000),
        (3000,5000),(5000,8000),(8000,12000)]
 PRE='highpass=f=130:poles=2,highpass=f=130:poles=2,acompressor=threshold=0.09:ratio=4:attack=6:release=110:makeup=3'

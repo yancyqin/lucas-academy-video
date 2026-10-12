@@ -14,21 +14,47 @@ The reference has to cover the range the song demands. Where it does not, the mo
 extrapolates, and extrapolated high notes are exactly the "fake" sound people hear.
 
 ```bash
-python scripts/range_check.py song "stems/0 Lead Vocals.mp3"
+python scripts/range_check.py song "stems/one-breath/0 Lead Vocals.mp3"
 ```
 
-*One Breath* came back **E3–G4, median D4**, with F#4 alone at 15.7 % of the sung
-frames and G4 at 3.8 %. Those two notes are a fifth of the song; the first six takes
-had 4.7 s and 0.5 s of them respectively, and the choruses sounded synthetic.
+*One Breath* comes back **E3–A4, median E4** — D4 25.2 %, F#4 18.1 %, E4 14.8 %,
+G4 12.4 %, A4 5.8 %. The top four notes are most of the song, and the early takes
+had almost none of them, which is why the choruses sounded synthetic.
+
+> **These numbers replace the ones this file used to quote** (E3–G4, median D4,
+> F#4 15.7 %, G4 3.8 %). The old figures came out of a detector that octave-halved;
+> see *The tool that lied* below. The correction matters: the song reaches **A4**,
+> not G4, and the yancy takes contain **0.0 s** of A4 against the song's 5.8 %. That
+> gap sat unnoticed through a whole model because the measurement hid the note.
 
 **Target: ≥10 seconds of phonation per semitone the song uses.** Check before
 training, not after:
 
 ```bash
-python scripts/range_check.py cover "stems/0 Lead Vocals.mp3" svc/voice/wav/yancy/y*.wav
+python scripts/range_check.py cover "stems/one-breath/0 Lead Vocals.mp3" svc/voice/wav/yancy/y*.wav
 ```
 
 ---
+
+### The tool that lied
+
+`range_check.py` originally took its pitch from `torchaudio.detect_pitch_frequency`,
+which is autocorrelation-based and **octave-halves on sung high notes**. On the Shawn
+takes it reported 8.7 s of F#4 and 42.2 s of F#3; the truth is 47.8 s and 14.0 s. The
+two totals are nearly conserved, which is the signature — the energy did not vanish,
+it moved down an octave.
+
+Settled by a direct test rather than a second opinion: on the frames the good detector
+calls F#4, the energy at f0/2 is 50–60 dB below f0 and **no frame carries a
+sub-harmonic**. The singer really was at F#4.
+
+It now uses `librosa.pyin` at 16 kHz — nothing sung reaches 900 Hz, and the shorter lag
+search keeps a whole song under a minute.
+
+Why it mattered: the bad numbers said a singer was missing the exact note he had the
+most of, which would have sent him back to re-record a range he already covered. At
+the same time it hid the note he genuinely lacked (A4). **A measurement that is wrong
+in both directions is worse than no measurement**, because it gets acted on.
 
 ## Record against a guide tone, not against the song
 
@@ -36,13 +62,21 @@ Singing along to the record drifts — the singer follows the arrangement instea
 the pitch. A sustained tone is far easier to lock onto.
 
 ```bash
-python scripts/guide_tone.py
+python scripts/guide_tone.py                             # the two song-specific runs
+python scripts/guide_tone.py chromatic G2 C5 3.5 3 svc/voice/guide-chromatic.mp3
 ```
 
-Writes two files: one that walks up to the notes the song needs, one that covers a
-full range for a singer starting from nothing. Each note is held 3–6 s and the whole
-run repeats three times — sing **ah** on the first pass, **ee** on the second,
-**oo** on the third.
+The first form writes two song-specific runs. The second walks the whole range one
+semitone at a time, for covers that are not chosen yet: **G2–C5, three passes, 6.6 min,
+10.5 s per semitone**, which clears the target below. Sing **ah** on the first pass,
+**ee** on the second, **oo** on the third, and stay silent where the range runs out —
+silence costs nothing, a strained squeak teaches a voice the singer does not have.
+
+A short high pip marks every C, so a singer ten minutes into a featureless chromatic
+run still knows where they are.
+
+Pick the top by what the songs demand, not by the singer. *One Breath* reaches A4;
+*Rejoice* puts **21.7 % of the song at A4 or above**. C5 covers both with headroom.
 
 A pure sine is hard to tune to; these carry harmonics, which is why an organ note or
 a hummed pitch is easy to match.
@@ -63,8 +97,9 @@ Two defences:
 - **Check the take before recording more.** `range_check.py cover` takes seconds and
   would have caught it immediately.
 
-The take that finally worked (7) covered D3–G4 in one pass and brought G4 from 0.5 s
-to 12.8 s.
+The take that finally worked (7) covered D3–G4 in one pass and brought the set to
+12.8 s of G4. (The "0.5 s before" figure came from the broken detector; the shape of
+the story holds, the exact before-number does not.)
 
 ### Chest or mixed voice, not breath
 
@@ -115,8 +150,23 @@ python core.py extract --model-name NAME --f0-method rmvpe --cpu-cores 8 --gpu 0
 
 python core.py train --model-name NAME --sample-rate 48000 --vocoder HiFi-GAN \
   --total-epoch 100 --batch-size 8 --gpu 0 --pretrained \
-  --save-every-epoch 25 --save-every-weights --index-algorithm Auto
+  --save-every-epoch 25 --index-algorithm Auto
 ```
+
+**Do not pass `--save-every-weights`.** It is declared `is_flag=True, default=True`,
+and Click sets a flag's value to `not default` when there is no `--no-` twin — so
+passing it sets it to **False** and silently disables the per-epoch export it appears
+to request. Omitting it leaves the default True. Verified against Click 8.1.8:
+
+```
+--save-every-weights   ->  False        (what the flag does)
+omitted                ->  True         (what you want)
+```
+
+The shawn48k run passed the flag as this file used to document it and got no
+deployable model at epochs 25, 50 or 75 — only the 1.3 GB `G_*/D_*` pairs. The final
+export at the last epoch is unconditional in `train.py`, so it still appeared at
+epoch 100. This is the real mechanism behind the third silent failure below.
 
 **Count the output files after every step.** All three have failed silently here —
 see the Traps section of WORKFLOW.md.
@@ -187,4 +237,10 @@ invites the delivery to answer instead of the timbre.
 | `scripts/guide_tone.py` | sustained guide tones to sing against |
 | `scripts/voiceprint.py` | ECAPA speaker verification with baselines |
 | `scripts/gate.py` | silence what the source singer did not sing |
-| `scripts/matcheq.py` | spectrum + LUFS match to the original vocal |
+| `scripts/matcheq.py` | spectrum + LUFS match to the original vocal (`LEAD_REF` selects the song) |
+| `scripts/audio/wet-lead.sh` | convolution reverb blended by ear-percentage |
+| `scripts/make_recording_pdf.py` | the printable session sheet, `en` or `zh` |
+
+The handout for the singer is [RECORDING-GUIDE.pdf](RECORDING-GUIDE.pdf)
+([中文](RECORDING-GUIDE-zh.pdf)) — room, mic, settings, and how to use the guide
+track, on two printable pages.

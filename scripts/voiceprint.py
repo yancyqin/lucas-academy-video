@@ -7,6 +7,8 @@ same material.
 """
 import subprocess, itertools, numpy as np, torch, warnings
 warnings.filterwarnings('ignore')
+import os
+LEAD_REF = os.environ.get('LEAD_REF', 'stems/one-breath/0 Lead Vocals.mp3')
 from speechbrain.inference.speaker import EncoderClassifier
 enc = EncoderClassifier.from_hparams(source="speechbrain/spkrec-ecapa-voxceleb",
         savedir="tmp/ecapa", run_opts={"device":"cpu"})
@@ -29,7 +31,7 @@ SETS={
  'Yancy-b' : ('svc/voice/wav/yancy/y3.wav', 0, 3, 25, 4),
  'Yancy-c' : ('svc/voice/wav/yancy/y7.wav', 0, 3, 25, 6),
  'Shawn'   : ('svc/voice/wav/shawn/sh1.wav', 0, 3, 25, 3),
- 'Suno'    : ('stems/0 Lead Vocals.mp3', 100, 3, 30, 5),
+ 'Suno'    : (LEAD_REF, 100, 3, 30, 5),
  '转换成品': ('out/vox/LEAD-dry.wav', 100, 3, 30, 5),
 }
 E={k:segs(*v) for k,v in SETS.items()}
