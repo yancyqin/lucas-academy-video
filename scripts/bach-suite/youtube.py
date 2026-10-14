@@ -104,7 +104,10 @@ def stamp(sec):
 def credits_block():
     """Pexels names (this film + the Jesu section), the CC BY images, and the public sources."""
     foot = json.loads((DATA / "footage/sources.json").read_text())
-    pexels = list(dict.fromkeys(r["author"] for r in foot if r.get("used")))
+    # which clips the film uses comes from the edit itself, not a flag that can go stale
+    used = {s["src"].replace("-reversed", "").replace("P10-", "P1-") for p in EDIT["pieces"].values()
+            for s in p.get("shots", []) if s.get("src") and not s["src"].startswith("art:")}
+    pexels = list(dict.fromkeys(r["author"] for r in foot if r["file"] in used))
     art = json.loads((DATA / "art/sources.json").read_text())
     used_art = {s["src"][4:] for p in EDIT["pieces"].values() for s in p.get("shots", []) if s.get("src", "").startswith("art:")}
     used_art |= {pp["src"][4:].split("/")[-1] for p in EDIT["pieces"].values() for s in p.get("shots", []) for pp in s.get("pops", [])}
