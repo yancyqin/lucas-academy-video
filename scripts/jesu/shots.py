@@ -7,7 +7,9 @@ cover the frame. Optional per-shot fields:
   best_in_s, best_out_s   the clean window in the source
   crop      [x, y, w, h]  normalised crop of the source before scaling
   kenburns  {from, to}    normalised [x, y, w, h] rectangles for stills,
-            or {path: [r1, r2, ...]} to move through several stops
+            or {path: [r1, r2, ...]} to move through several stops;
+            with from/to, `ease` ("linear" default, "out" = glide to rest, "inout")
+            and `hold` (seconds standing still on the last framing at the end)
   interp    true          motion-interpolate slowed footage instead of repeating frames
   grade     "<filters>"   ffmpeg filters applied after scaling (colour)
   fit       "contain"     show the whole source frame on black instead of filling
@@ -88,11 +90,19 @@ def render_still(rec, dur, out):
         else:
             a, b = cover_box(iw, ih, 1.0), cover_box(iw, ih, 0.92)
 
+        ease = kb.get("ease", "linear")
+
         def at(u):                     # linear: a long take should drift, not ease
+            if ease == "out":          # glide in and come to rest (a pause in the music)
+                u = 1 - (1 - u) ** 2
+            elif ease == "inout":
+                u = u * u * (3 - 2 * u)
             return a + (b - a) * u
+    # `hold`: seconds at the end where the camera stands still on the last framing
+    moving = max(n - round(float(kb.get("hold", 0)) * FPS), 1)
     p = _encoder(out)
     for i in range(n):
-        box = at(i / max(n - 1, 1))
+        box = at(min(i / max(moving - 1, 1), 1.0))
         p.stdin.write(im.resize((W, H), Image.BICUBIC, box=tuple(box)).tobytes())
     p.stdin.close()
     p.wait()
