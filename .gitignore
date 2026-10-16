@@ -70,3 +70,9 @@ public/whole-person-01/
 # says where each comes from and how to rebuild it.
 public/fun-informatics-01/
 public/fun-informatics-02/
+
+# Fun Economics 1 · 一根冰棍，要花多少钱？: Codex images, hand footage, narration, timelines and mixes are local
+# working copies; FUN-ECONOMICS-01.md lists the prompts and sources, docs/fun-economics-01/generated-assets.json the files.
+public/fun-economics-01/
+# 你会算 7×8 吗？ (Fun Economics 1 · Extra): narration, timelines, mixes and footage are local working copies like the main film's.
+public/fun-economics-01-7x8/
