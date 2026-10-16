@@ -4,6 +4,8 @@ import {RD_FPS, filmDuration, LanguageBridgeCover, LanguageBridgeVideo, type Lan
 import {WP_FPS, WholePersonCover, WholePersonVideo, calculateWholePersonMetadata} from './videos/whole-person-01/WholePersonVideo';
 import {FI_FPS, FunInformaticsCover, FunInformaticsVideo, calculateFunInformaticsMetadata} from './videos/fun-informatics-01/FunInformaticsVideo';
 import {FunInformatics02Video, FunInformatics02Cover, FunInformatics02EnglishCover, calculateClaudeMetadata} from './videos/fun-informatics-02/FunInformatics02Video';
+import {FunEconomics01Video, FunEconomics01Cover, FunEconomics01CoverEn, calculateEconMetadata} from './videos/fun-economics-01/FunEconomics01Video';
+import {FunEconomics01ExtraVideo, FunEconomics01ExtraCover, FunEconomics01ExtraCoverEn, calculateExtraMetadata} from './videos/fun-economics-01-7x8/FunEconomics01ExtraVideo';
 import type {FC} from 'react';
 import {MonkeySocietyVideo} from './MonkeySocietyVideo';
 import {MonkeyIntroVideo} from './videos/MonkeyIntroVideo';
@@ -299,6 +301,14 @@ export const Root: FC = () => {
       <Composition id="FunInformatics02En" component={FunInformatics02Video} durationInFrames={24000} fps={30} width={1920} height={1080} defaultProps={{tl:null,lang:"en"}} calculateMetadata={calculateClaudeMetadata} />
       <Composition id="FunInformatics02CoverZh" component={FunInformatics02Cover} durationInFrames={1} fps={30} width={1920} height={1080} />
       <Composition id="FunInformatics02CoverEn" component={FunInformatics02EnglishCover} durationInFrames={1} fps={30} width={1920} height={1080} />
+      <Composition id="FunEconomics01Zh" component={FunEconomics01Video} durationInFrames={18000} fps={30} width={1920} height={1080} defaultProps={{tl:null,lang:"zh"}} calculateMetadata={calculateEconMetadata} />
+      <Composition id="FunEconomics01En" component={FunEconomics01Video} durationInFrames={18000} fps={30} width={1920} height={1080} defaultProps={{tl:null,lang:"en"}} calculateMetadata={calculateEconMetadata} />
+      <Composition id="FunEconomics01CoverZh" component={FunEconomics01Cover} durationInFrames={1} fps={30} width={1920} height={1080} />
+      <Composition id="FunEconomics01CoverEn" component={FunEconomics01CoverEn} durationInFrames={1} fps={30} width={1920} height={1080} />
+      <Composition id="FunEconomics01ExtraZh" component={FunEconomics01ExtraVideo} durationInFrames={3600} fps={30} width={1920} height={1080} defaultProps={{tl:null,lang:"zh"}} calculateMetadata={calculateExtraMetadata} />
+      <Composition id="FunEconomics01ExtraEn" component={FunEconomics01ExtraVideo} durationInFrames={3600} fps={30} width={1920} height={1080} defaultProps={{tl:null,lang:"en"}} calculateMetadata={calculateExtraMetadata} />
+      <Composition id="FunEconomics01ExtraCoverZh" component={FunEconomics01ExtraCover} durationInFrames={1} fps={30} width={1920} height={1080} />
+      <Composition id="FunEconomics01ExtraCoverEn" component={FunEconomics01ExtraCoverEn} durationInFrames={1} fps={30} width={1920} height={1080} />
     </>
   );
 };
