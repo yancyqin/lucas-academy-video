@@ -71,6 +71,8 @@ public/whole-person-01/
 public/fun-informatics-01/
 public/fun-informatics-02/
 
+# Fun Informatics 3 working data (narration inputs, generated images, drawings, mixes) -- regenerated or kept in lucas-academy-video-data.
+public/fun-informatics-03/
 # Fun Economics 1 · 一根冰棍，要花多少钱？: Codex images, hand footage, narration, timelines and mixes are local
 # working copies; FUN-ECONOMICS-01.md lists the prompts and sources, docs/fun-economics-01/generated-assets.json the files.
 public/fun-economics-01/

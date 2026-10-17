@@ -89,6 +89,22 @@ delivery. A default fixes the style, not the
 reading of every word: a polyphone (落 read là, 量 read liàng) still needs the film's own spoken
 respelling (洛, 梁), and every take still gets a Whisper check.
 
+## Music under narration
+
+The owner's rule (2026-10-16): the music **audibly makes room whenever a voice comes in**, and comes back
+as soon as it stops: in every gap between lines, not only in long pauses. `scripts/music_ducking.py` holds the
+defaults. The music sits 20 dB under the voice while someone speaks (the narration, or a real recording in the
+film). In any gap of 0.8 s or more it rises to 9 dB under the voice. It steps back 0.35 s before a voice starts
+and returns over 0.8 s after it ends. Shorter gaps stay down, so the music does not pump between phrases. A
+listening moment can ask for no music at all (`quiet`). Timeline builders swap it in for whole-person-01's
+envelope with `wp.music_envelope = music_ducking.envelope`. That older envelope raised the music only in pauses
+of 2.5 s or more, so through a stretch of narration it sat at one flat level and never seemed to give way.
+Films delivered before this rule (Fun Informatics 1 and 2, the whole-person films) keep their recorded mixes.
+
+Example: in Fun Informatics 3 ([FUN-INFORMATICS-03.md](./FUN-INFORMATICS-03.md)) the music in the gaps now sits
+about 8 dB higher than it did under the old envelope, and 3 dB lower under the voice. It stops completely around
+the walkie-talkie listening tests.
+
 ## Film endings
 
 The owner's rule (2026-10-07): every film **ends with an open-ended, inviting question**. It is the
