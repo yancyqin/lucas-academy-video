@@ -44,7 +44,10 @@
     "fi02:frames": "node scripts/fun-informatics-02/frames.cjs",
     "fi02:record": "node scripts/fun-informatics-02/record-bible.cjs",
     "fi02:check": "python3 scripts/fun-informatics-02/quality.py",
-    "fi02:package": "python3 scripts/fun-informatics-02/package.py"
+    "fi02:package": "python3 scripts/fun-informatics-02/package.py",
+    "fi03:narration": "python3 scripts/fun-informatics-03/narration.py",
+    "fi03:timeline": "python3 scripts/fun-informatics-03/build_timeline.py",
+    "fi03:cards": "python3 scripts/fun-informatics-03/twin_cards.py"
   },
   "dependencies": {
     "@remotion/cli": "^4.0.484",

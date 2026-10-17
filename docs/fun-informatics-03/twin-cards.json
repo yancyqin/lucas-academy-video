@@ -1,0 +1,21 @@
+{
+  "_note": "Word list for the twin-card Pictionary sheets (Fun Informatics 3). scripts/fun-informatics-03/twin_cards.py prints it. Each hint lists what the left thing has and the right one does not, then the other way round. The round-1 words are the twin that is easier to mistake for the other one, so round one goes wrong on its own and round two can draw the same things again.",
+  "pairs": [
+    {"zh": ["猫", "狗"], "en": ["cat", "dog"],
+     "zh_hint": ["胡子、尖耳朵", "垂下来的耳朵、伸出的舌头"],
+     "en_hint": ["whiskers, pointy ears", "floppy ears, tongue out"]},
+    {"zh": ["海星", "星星"], "en": ["starfish", "star"],
+     "zh_hint": ["身上的小点点、在海底", "在夜空里一闪一闪"],
+     "en_hint": ["little dots, on the sea floor", "in the night sky, twinkling"]},
+    {"zh": ["香蕉", "月亮"], "en": ["banana", "moon"],
+     "zh_hint": ["两头的小蒂、一串", "夜空、星星"],
+     "en_hint": ["stubby ends, a bunch", "night sky, stars"]},
+    {"zh": ["雨伞", "蘑菇"], "en": ["umbrella", "mushroom"],
+     "zh_hint": ["弯钩把手、雨点", "伞盖上的圆点、粗粗的柄"],
+     "en_hint": ["a hooked handle, raindrops", "spots, a thick stem"]}
+  ],
+  "free": {
+    "zh": ["猫", "海星", "香蕉", "蘑菇"],
+    "en": ["cat", "starfish", "banana", "mushroom"]
+  }
+}

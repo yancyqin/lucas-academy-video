@@ -70,3 +70,6 @@ public/whole-person-01/
 # says where each comes from and how to rebuild it.
 public/fun-informatics-01/
 public/fun-informatics-02/
+
+# Fun Informatics 3 working data (narration inputs, generated images, drawings, mixes) -- regenerated or kept in lucas-academy-video-data.
+public/fun-informatics-03/
