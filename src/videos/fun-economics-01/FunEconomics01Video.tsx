@@ -678,11 +678,15 @@ export const FadeIn: FC<{ d: number; children: ReactNode }> = ({ d, children }) 
 };
 
 // YouTube cover: one question, one picture (README "YouTube covers"). zh: big Chinese, small English; en flipped.
+// The picture shows opportunity cost itself (owner, 2026-10-16: realistic, for parents and educators first): what was
+// chosen in colour on the left (a girl at her school desk), what was given up as a cool ghost behind the title
+// (children playing football), the film's own rule for what you can't see. Pexels photos, see art/SOURCES.txt.
+const GHOST = "grayscale(1) sepia(0.2) hue-rotate(180deg) saturate(1.6) brightness(1.15)";
 const CoverFrame: FC<{ lang: Lang }> = ({ lang }) => {
   useFonts();
   const zh = (
     <LangCtx.Provider value="zh">
-      <Big size={lang === "zh" ? 168 : 80} style={{ textAlign: "left", lineHeight: 1.12, whiteSpace: "nowrap", textShadow: "0 4px 0 rgba(255,255,255,.9)" }}>
+      <Big size={lang === "zh" ? 154 : 80} style={{ textAlign: "left", lineHeight: 1.12, whiteSpace: "nowrap", textShadow: "0 4px 0 rgba(255,255,255,.9)" }}>
         一根<span style={{ color: C.orangeText }}>冰棍</span>，<br />要花<span style={{ color: C.green }}>多少钱</span>？
       </Big>
     </LangCtx.Provider>
@@ -694,13 +698,16 @@ const CoverFrame: FC<{ lang: Lang }> = ({ lang }) => {
     </div>
   );
   return (
-    <AbsoluteFill>
-      <Img src={file("images/icepop-hand.png")} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "20% 50%" }} />
-      <AbsoluteFill style={{ background: "linear-gradient(90deg, rgba(247,249,242,0) 30%, rgba(247,249,242,.88) 52%, rgba(247,249,242,.95) 100%)" }} />
-      <div style={{ position: "absolute", left: 930, top: 110, width: 960, display: "flex", flexDirection: "column", gap: 30 }}>
+    <AbsoluteFill style={{ background: C.paper }}>
+      <Img src={file("images/cover-play.jpg")} style={{ position: "absolute", left: 760, top: 0, width: 1620, height: 1080, objectFit: "cover", filter: GHOST, opacity: 0.5 }} />
+      <AbsoluteFill style={{ background: "linear-gradient(90deg, rgba(247,249,242,0) 40%, rgba(247,249,242,.6) 52%, rgba(247,249,242,.66) 100%)" }} />
+      <div style={{ position: "absolute", left: 0, top: 0, width: 1000, height: 1080, overflow: "hidden", WebkitMaskImage: "linear-gradient(90deg, #000 80%, transparent 100%)" }}>
+        <Img src={file("images/cover-desk.jpg")} style={{ position: "absolute", left: -502, top: 0, width: 1620, height: 1080, objectFit: "cover" }} />
+      </div>
+      <div style={{ position: "absolute", left: 940, top: 110, width: 940, display: "flex", flexDirection: "column", gap: 30 }}>
         {lang === "zh" ? <>{zh}{en}</> : <>{en}{zh}</>}
       </div>
-      <PriceTag x={1010} y={790} scale={1.0} at={-1} items={[{ text: MONEY[lang].price, kind: "solid", at: -1 }, { text: `+ ${MONEY[lang].chore}`, kind: "ghost", at: -1 }]} />
+      <PriceTag x={1060} y={790} scale={1.0} at={-1} items={[{ text: MONEY[lang].price, kind: "solid", at: -1 }, { text: `+ ${MONEY[lang].chore}`, kind: "ghost", at: -1 }]} />
     </AbsoluteFill>
   );
 };

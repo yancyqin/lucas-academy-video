@@ -64,6 +64,7 @@ Images (public domain, Wikimedia Commons):
 · Portrait of Frédéric Bastiat, drawn by Émile Desmaisons, lithograph by Léveillé (Bibliothèque nationale de France)
 · Modern transcription of Problem 41 of the Rhind Mathematical Papyrus (Bakha, after Chace, The Rhind Mathematical Papyrus)
 · Johannes Vermeer, Christ in the House of Martha and Mary (c. 1655)
+Cover photos: Max Fischer and zaid isaac (Pexels).
 
 Music:
 · Minuet in G major, BWV Anh. 114 (Christian Petzold), recording from Musopen (Aaron Dunn), public domain
@@ -97,6 +98,7 @@ At Lucas Academy, we care about what you learn, and we care even more that, whil
 · 巴斯夏肖像，Émile Desmaisons 画、Léveillé 石版（法国国家图书馆）
 · 莱因德数学纸草书第 41 题的现代誊写图（Bakha，据 Chace《The Rhind Mathematical Papyrus》）
 · 维米尔《基督在马大和马利亚家中》（约 1655 年）
+封面照片：Max Fischer、zaid isaac（Pexels）。
 
 音乐：
 · 《G 大调小步舞曲》BWV Anh. 114（Christian Petzold），录音来自 Musopen（Aaron Dunn），公有领域
