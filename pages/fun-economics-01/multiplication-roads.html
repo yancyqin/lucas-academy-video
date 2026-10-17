@@ -1,0 +1,650 @@
+<title>7 × 8 的四条路</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Andika:wght@400;700&family=Ma+Shan+Zheng&family=Noto+Sans+SC:wght@500;700&display=swap">
+<style>
+/* Layout: one 16:9 page from a squared maths exercise book is the stage; the teacher's controls sit in a strip beneath it.
+   Every road is drawn on the same dot array: red counters are what you start from, orange is the part a road moves,
+   splits off or takes away. What you can't see is a cool dashed ghost. The answer 56 is the one green. */
+:root {
+  --page: #E7ECE2;
+  --paper: #F7F9F2;
+  --grid: #DAE6D3;
+  --ink: #20322C;
+  --card: #FFFFFF;
+  --red: #E04A3A;
+  --red-deep: #B1352A;
+  --red-text: #C93A2B;
+  --orange: #F39B23;
+  --orange-deep: #C27311;
+  --orange-text: #B86603;
+  --answer: #11865B;
+  --ghost: #8D99AE;
+  --hl: #FFEC9E;
+  --skin: #F7DCCB;
+  --edge: #D2DBCC;
+  --shadow: rgba(32, 50, 44, .32);
+  --shade: rgba(0, 0, 0, .14);
+  --shine: rgba(255, 255, 255, .5);
+  --f-digit: "Andika";
+  --f-zh: "Ma Shan Zheng", "Kaiti SC", "STKaiti", "KaiTi", serif;
+  --f-num: "Andika", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --f-ui: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --page: #0F1714; --paper: #17221E; --grid: #24332D; --ink: #EAF1E6; --card: #1F2C27;
+    --red: #EE5E4E; --red-deep: #C2453A; --red-text: #FF8C7D;
+    --orange: #F5A83A; --orange-deep: #C98320; --orange-text: #FFB851;
+    --answer: #43CB91; --ghost: #7D8AA0; --hl: #4B4421; --skin: #6B5244;
+    --edge: #2B3A34; --shadow: rgba(0, 0, 0, .6); --shade: rgba(0, 0, 0, .18); --shine: rgba(255, 255, 255, .35);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --page: #0F1714; --paper: #17221E; --grid: #24332D; --ink: #EAF1E6; --card: #1F2C27;
+  --red: #EE5E4E; --red-deep: #C2453A; --red-text: #FF8C7D;
+  --orange: #F5A83A; --orange-deep: #C98320; --orange-text: #FFB851;
+  --answer: #43CB91; --ghost: #7D8AA0; --hl: #4B4421; --skin: #6B5244;
+  --edge: #2B3A34; --shadow: rgba(0, 0, 0, .6); --shade: rgba(0, 0, 0, .18); --shine: rgba(255, 255, 255, .35);
+  color-scheme: dark;
+}
+
+html, body { min-height: 100%; }
+body {
+  background: var(--page); color: var(--ink); font-family: var(--f-ui);
+  padding-inline: 16px; padding-block: 24px 40px; box-sizing: border-box;
+}
+.wrap { max-width: 1240px; margin-inline: auto; display: grid; gap: 18px; }
+.top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 20px; }
+h1 {
+  margin: 0; font-family: var(--f-digit), var(--f-zh); font-weight: 400; font-size: clamp(32px, 4.6vw, 54px);
+  line-height: 1.1; text-wrap: balance; letter-spacing: .02em;
+}
+:root.en h1 { font-family: var(--f-num); font-weight: 700; letter-spacing: 0; }
+.stage-box {
+  border-radius: 22px; overflow: hidden; background: var(--paper);
+  box-shadow: 0 0 0 2px var(--edge), 0 22px 44px -22px var(--shadow);
+}
+.stage { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; max-width: 100%; }
+
+.bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; }
+.group { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+button { font-family: inherit; }
+.btn {
+  min-height: 58px; padding: 0 24px; border-radius: 18px; border: 2px solid var(--ink);
+  background: var(--card); color: var(--ink); font-size: 21px; font-weight: 700; cursor: pointer;
+}
+.btn.primary { background: var(--ink); color: var(--paper); }
+.btn:disabled { opacity: .35; cursor: default; }
+.chip {
+  min-width: 58px; min-height: 58px; padding: 0 16px; border-radius: 29px; border: 2px solid var(--ink);
+  background: transparent; color: var(--ink); font: 700 22px/1 var(--f-num); cursor: pointer;
+}
+.chip.word { font-family: var(--f-ui); font-size: 19px; }
+.chip[aria-current="true"] { background: var(--ink); color: var(--paper); }
+.seg { display: inline-flex; border: 2px solid var(--ink); border-radius: 18px; overflow: hidden; }
+.seg button {
+  min-height: 54px; padding: 0 18px; border: 0; background: transparent; color: var(--ink);
+  font-size: 19px; font-weight: 700; cursor: pointer;
+}
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+.btn:focus-visible, .chip:focus-visible, .seg button:focus-visible { outline: 4px solid var(--orange); outline-offset: 3px; }
+.dots { display: flex; gap: 10px; align-items: center; min-height: 58px; }
+.dot { width: 16px; height: 16px; border-radius: 50%; background: var(--grid); box-shadow: inset 0 0 0 2px var(--edge); }
+.dot.on { background: var(--ink); box-shadow: none; }
+
+/* Recording mode (#clean): only the stage, edge to edge. */
+:root.clean, :root.clean body { background: var(--paper); }
+:root.clean body { padding: 0; }
+:root.clean .top, :root.clean .bar { display: none; }
+:root.clean .wrap { max-width: none; gap: 0; }
+:root.clean .stage-box { border-radius: 0; box-shadow: none; width: 100vw; height: 100vh; }
+:root.clean .stage { width: 100%; height: 100%; aspect-ratio: auto; }
+
+/* ---- stage ---- */
+.stage text { fill: var(--ink); white-space: pre; }
+.stage .num { font-family: var(--f-num); font-weight: 700; }
+.stage .w { font-family: var(--f-digit), var(--f-zh); font-weight: 400; font-synthesis: none; }
+:root.en .stage .w { font-family: var(--f-num); font-weight: 700; }
+.stage .t-r { fill: var(--red-text); }
+.stage .t-o { fill: var(--orange-text); }
+.stage .t-a { fill: var(--answer); }
+.stage .t-k { fill: var(--ink); }
+.stage .t-g { fill: var(--ghost); }
+.paper { fill: var(--paper); }
+.gridline { stroke: var(--grid); }
+
+.st { opacity: 0; transition: opacity .45s ease, transform .8s cubic-bezier(.3, .7, .2, 1); }
+.st.on { opacity: 1; transition-delay: var(--d, 0s); }
+.st.rise { transform: translateY(36px); }
+.st.rise.on { transform: none; }
+.st.zoom { transform-box: fill-box; transform-origin: center; transform: scale(.55); }
+.st.zoom.on { transform: none; }
+.mv { transition: opacity .45s ease, transform .9s cubic-bezier(.3, .7, .2, 1); transition-delay: 0s, var(--md, 0s); }
+.mv.st.on { transition-delay: var(--d, 0s), var(--md, 0s); }
+.draw { stroke-dasharray: 1; stroke-dashoffset: 1; transition: stroke-dashoffset .55s ease; }
+.draw.on { stroke-dashoffset: 0; transition-delay: var(--d, 0s); }
+
+.badge { fill: var(--ink); }
+.stage .badge-n { fill: var(--paper); }
+.hl { fill: var(--hl); }
+
+.ctr .c-body { stroke-width: 5; transition: fill .6s, fill-opacity .6s, stroke .6s; }
+.ctr.red .c-body { fill: var(--red); stroke: var(--red-deep); }
+.ctr.orange .c-body { fill: var(--orange); stroke: var(--orange-deep); }
+.stage .hot .c-body { fill: var(--orange); stroke: var(--orange-deep); }
+.stage .gone .c-body, .stage .gone2 .c-body { fill: transparent; stroke: var(--ghost); stroke-dasharray: 9 7; }
+.stage .twice .c-body { fill: var(--orange); fill-opacity: .45; stroke: var(--orange-deep); stroke-dasharray: 9 7; }
+.stage .gone .c-ring, .stage .gone .c-hi, .stage .gone2 .c-ring, .stage .gone2 .c-hi, .stage .twice .c-ring, .stage .twice .c-hi { opacity: 0; }
+/* #solo: a film made of one scene, so the path number badge goes (「你会算 7×8 吗？」) */
+:root.solo .hdr .badge, :root.solo .hdr .badge-n { display: none; }
+:root.solo .hdr text.w { transform: translateX(-140px); }
+.ctr .c-ring { fill: none; stroke: var(--shade); stroke-width: 3; transition: opacity .6s; }
+.ctr .c-hi { fill: var(--shine); transition: opacity .6s; }
+.ph { transform-box: fill-box; transform-origin: center; }
+.ctr.beat .ph { animation: beat .55s var(--pd, 0s) both; }
+@keyframes beat { 0% { transform: scale(1); } 40% { transform: scale(1.3); } 100% { transform: scale(1); } }
+.cut { fill: none; stroke: var(--ink); stroke-width: 8; stroke-linecap: round; }
+.slot { fill: none; stroke: var(--ghost); stroke-width: 4; stroke-dasharray: 9 8; }
+.band { fill: none; stroke: var(--ink); stroke-width: 6; }
+.band.o { stroke: var(--orange-deep); }
+.odd { fill: none; stroke: var(--orange); stroke-width: 8; }
+.rowhl { fill: var(--hl); }
+
+.h-out * { fill: var(--ink); stroke: var(--ink); stroke-width: 14; stroke-linejoin: round; }
+.h-fill * { fill: var(--skin); }
+.tip-up { fill: var(--red); }
+.tip-down { fill: var(--orange); }
+.hand .tip-up, .hand .tip-down { transform-box: fill-box; transform-origin: center; transition: fill .5s, opacity .5s; }
+.hand.p-down .tip-down, .hand.p-all .tip-down, .hand.p-up .tip-up, .hand.p-all .tip-up { animation: tip .8s both; }
+.hand.off-down .tip-down { fill: var(--ghost); opacity: .3; }
+@keyframes tip { 0% { transform: scale(1); } 35% { transform: scale(1.7); } 70% { transform: scale(.9); } 100% { transform: scale(1); } }
+
+.road, .road-l, .road-g, .short { fill: none; stroke-linecap: round; }
+.road { stroke: var(--ink); stroke-width: 22; }
+.road-l { stroke: var(--answer); stroke-width: 22; }
+.road.draw, .road-l.draw { transition: stroke-dashoffset .9s ease; }
+.road-g { stroke: var(--ghost); stroke-width: 15; stroke-dasharray: 28 24; }
+.short { stroke: var(--red); stroke-width: 14; }
+.short.draw { transition: stroke-dashoffset .35s ease-in; }
+.lab circle { fill: var(--ink); transition: fill .6s; }
+.stage .lab-n { fill: var(--paper); }
+.stage .lab-t { fill: var(--ink); transition: fill .6s; }
+.lab.dim circle { fill: var(--ghost); }
+.stage .lab.dim .lab-t { fill: var(--ghost); }
+.disk circle { fill: var(--ink); }
+.stage .disk-n { fill: var(--paper); }
+.check circle { fill: var(--answer); }
+.check path { fill: none; stroke: var(--paper); stroke-width: 12; stroke-linecap: round; stroke-linejoin: round; }
+
+.stage.instant *, .stage.instant { transition: none !important; animation: none !important; }
+@media (prefers-reduced-motion: reduce) {
+  .stage * { transition-duration: .01s !important; animation: none !important; }
+}
+</style>
+
+<main class="wrap">
+  <header class="top">
+    <h1 data-t="pageTitle">7 × 8，有几条路？</h1>
+    <div class="seg" role="group" aria-label="语言 / Language">
+      <button type="button" id="lang-zh" aria-pressed="true">中文</button>
+      <button type="button" id="lang-en" aria-pressed="false">English</button>
+    </div>
+  </header>
+
+  <div class="stage-box">
+    <svg class="stage" id="stage" viewBox="0 0 1920 1080" role="img" aria-label="7 × 8">
+      <defs>
+        <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+          <path d="M60 0H0V60" fill="none" class="gridline" stroke-width="2"/>
+        </pattern>
+      </defs>
+      <rect width="1920" height="1080" class="paper"/>
+      <rect width="1920" height="1080" fill="url(#grid)"/>
+      <g id="layer"></g>
+    </svg>
+  </div>
+
+  <nav class="bar" aria-label="播放控制">
+    <div class="group">
+      <button type="button" class="btn" id="prev" data-t="prev">上一步</button>
+      <button type="button" class="btn primary" id="play" data-t="play">播放</button>
+      <button type="button" class="btn" id="next" data-t="next">下一步</button>
+      <div class="dots" id="dots" aria-hidden="true"></div>
+    </div>
+    <div class="group" id="chips"></div>
+  </nav>
+</main>
+
+<script>
+(() => {
+  const T = {
+    zh: {
+      pageTitle: '7 × 8，有几条路？',
+      prev: '上一步', next: '下一步', play: '播放', pause: '暂停', start: '开始', map: '路线图', grid: '网格',
+      's0.rows': '8 行', 's0.cols': '每行 7 个',
+      's1.name': '连加', 's1.rows': '8 行', 's1.note': '练的是：乘法到底是什么',
+      's2.name': '拆开再合', 's2.note': '练的是：把难的，拆成好算的',
+      's3.name': '用手指', 's3.e100': '100 = 10 个十 = 10 根手指', 's3.eOff': '− {o:30} − {o:20}：去掉弯着的 {o:3+2} 根',
+      's3.eUp': '剩下伸出的 {r:5} 根 = {r:50}', 's3.eDown': '+ {o:3 × 2}：弯着的相乘', 's3.bx': '弯着 {o:x} 根', 's3.by': '弯着 {o:y} 根',
+      's3.xUp': '{r:10 − x − y} = 伸出的手指', 's3.xDown': '{o:x × y} = 弯着的相乘',
+      's3.note': '练的是：从 10 往回看', 's3.close': '复杂的步骤，每一步都简单',
+      's4.name': '翻倍和减半', 's4.half': '减半', 's4.double': '翻倍', 's4.note': '练的是：只用翻倍，也能拼出任何一个数',
+      's5.name': '路线图', 's5.a': '四条路，四种想法', 's5.b': '先背下答案，就不会再走这些路', 's5.c': '放下的，是四种想法', 's5.d': '先走路，再背口诀',
+      's5.l0': '乘法的意思', 's5.l1': '拆成好算的', 's5.l2': '从 10 往回看', 's5.l3': '用翻倍拼数', 's5.short': '七八五十六',
+      's6.name': '为什么加 3 × 2？', 's6.g100': '100 = 10 行 × 每行 10 个', 's6.g30': '− {o:30}：划掉 3 列', 's6.g20': '− {o:20}：划掉 2 行',
+      's6.twice': '右下角 {o:3 × 2}：划掉了两次', 's6.back': '+ {o:3 × 2}：加回来一次', 's6.left': '剩下 {r:8} 行 × 每行 {r:7} 个 = {a:56}',
+    },
+    en: {
+      pageTitle: '7 × 8: how many paths?',
+      prev: 'Back', next: 'Next', play: 'Play', pause: 'Pause', start: 'Start', map: 'Map', grid: 'Grid',
+      's0.rows': '8 rows', 's0.cols': '7 in each row',
+      's1.name': 'Add equal groups', 's1.rows': '8 rows', 's1.note': 'What multiplying really means',
+      's2.name': 'Split and join', 's2.note': 'Break a hard one into easy ones',
+      's3.name': 'Use your fingers', 's3.e100': '100 = ten tens = ten fingers', 's3.eOff': '− {o:30} − {o:20}: drop the {o:3 + 2} bent',
+      's3.eUp': '{r:5} raised are left = {r:50}', 's3.eDown': '+ {o:3 × 2}: bent times bent', 's3.bx': '{o:x} bent', 's3.by': '{o:y} bent',
+      's3.xUp': '{r:10 − x − y} = fingers up', 's3.xDown': '{o:x × y} = bent times bent',
+      's3.note': 'Count back from 10', 's3.close': 'Each step is simple',
+      's4.name': 'Double and halve', 's4.half': 'Halve', 's4.double': 'Double', 's4.note': 'Doubling alone can build any number',
+      's5.name': 'Map', 's5.a': 'Four paths, four ways of thinking', 's5.b': 'Learn the answer first, skip the paths', 's5.c': 'What you give up: four ways of thinking', 's5.d': 'Walk the paths first, then memorize',
+      's5.l0': 'meaning', 's5.l1': 'split & join', 's5.l2': 'back from 10', 's5.l3': 'doubling', 's5.short': '7 × 8 = 56',
+      's6.name': 'Why add 3 × 2?', 's6.g100': '100 = 10 rows of 10', 's6.g30': '− {o:30}: cross out 3 columns', 's6.g20': '− {o:20}: cross out 2 rows',
+      's6.twice': 'The corner {o:3 × 2}: crossed out twice', 's6.back': '+ {o:3 × 2}: add it back once', 's6.left': '{r:8} rows of {r:7} are left = {a:56}',
+    },
+  };
+
+  // ---- small SVG builders. Every animated element carries data-in / data-out (the steps it is shown in),
+  // optional data-tf (step -> CSS transform) and data-cls (step or "a-b" range -> class). ----
+  const dat = (o = {}) => {
+    let s = '';
+    if (o.in != null) s += ` data-in="${o.in}"`;
+    if (o.out != null) s += ` data-out="${o.out}"`;
+    if (o.tf) s += ` data-tf='${JSON.stringify(o.tf)}'`;
+    if (o.cls) s += ` data-cls='${JSON.stringify(o.cls)}'`;
+    const css = [];
+    if (o.d != null) css.push(`--d:${o.d}s`);
+    if (o.pd != null) css.push(`--pd:${o.pd}s`);
+    if (o.md != null) css.push(`--md:${o.md}s`);
+    return s + (css.length ? ` style="${css.join(';')}"` : '');
+  };
+  const ctl = (o, fallback) => (o.in != null || o.out != null) ? `st ${o.anim || fallback}` : '';
+  // "100 − {o:30}": a {c:...} run takes colour c (r red, o orange, a answer, g ghost, k ink); used by formulas and strings.
+  const rich = v => v.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/\{([roagk]):([^}]*)\}/g, '<tspan class="t-$1">$2</tspan>');
+
+  function txt(x, y, size, cls, content, o = {}) {
+    return `<text x="${x}" y="${y}" font-size="${size}" text-anchor="${o.anchor || 'middle'}" dominant-baseline="central" ` +
+      `class="${cls} ${ctl(o, 'rise')}"${dat(o)}${o.t ? ` data-t="${o.t}"` : ''}>${content || ''}</text>`;
+  }
+  // "7r × 8o = 56a": each token takes the colour of its suffix (r red, o orange, a answer, g ghost, k ink).
+  function eq(x, y, size, spec, o = {}) {
+    const parts = spec.split(' ').map((tok, i) => {
+      const m = tok.match(/^(.*?)([roagk])?$/);
+      return `<tspan class="t-${m[2] || 'k'}">${i ? ' ' : ''}${m[1]}</tspan>`;
+    }).join('');
+    return txt(x, y, size, 'num', parts, o);
+  }
+  function counter(x, y, col, o = {}) {
+    const r = o.r || 31, f = v => v.toFixed(1);
+    return `<g class="ctr ${col} ${ctl(o, 'zoom')} ${o.tf ? 'mv' : ''}"${dat(o)}><g transform="translate(${x} ${y})"><g class="ph">` +
+      `<circle class="c-body" r="${r}"/><circle class="c-ring" r="${f(r * .6)}"/>` +
+      `<ellipse class="c-hi" cx="${f(-r * .3)}" cy="${f(-r * .42)}" rx="${f(r * .28)}" ry="${f(r * .13)}" transform="rotate(-28 ${f(-r * .3)} ${f(-r * .42)})"/>` +
+      `</g></g></g>`;
+  }
+  // The dot array: `rows` rows of `cols` counters, g apart; fn(r, c) gives each counter's options.
+  function grid(x0, y0, rows, cols, g, r, fn, col = 'red') {
+    let s = '';
+    for (let i = 0; i < rows; i++) for (let j = 0; j < cols; j++) s += counter(x0 + j * g, y0 + i * g, col, { r, ...(fn(i, j) || {}) });
+    return s;
+  }
+  // A hand seen from the back, fingers [thumb, index, middle, ring, little]; the right hand has its thumb on the left.
+  function hand(cx, base, up, mirror, scale, o = {}) {
+    const F = [[-99, -480], [-33, -510], [33, -490], [99, -440]];
+    const fingers = F.map(([x, t], i) => up[i + 1]
+      ? `<rect x="${x - 30}" y="${t}" width="60" height="${-230 - t}" rx="30"/>`
+      : `<rect x="${x - 30}" y="-330" width="60" height="100" rx="30"/>`).join('');
+    const thumb = up[0] ? `<g transform="translate(-118 -95) rotate(-42)"><rect x="-33" y="-190" width="66" height="190" rx="33"/></g>` : '';
+    const shapes = `<rect x="-140" y="-270" width="280" height="270" rx="60"/>` + fingers + thumb;
+    const tips = F.map(([x, t], i) => up[i + 1]
+      ? `<circle cx="${x}" cy="${t + 36}" r="22" class="tip-up"/>`
+      : `<circle cx="${x}" cy="-298" r="22" class="tip-down"/>`).join('') +
+      (up[0] ? `<g transform="translate(-118 -95) rotate(-42)"><circle cx="0" cy="-154" r="23" class="tip-up"/></g>` : '');
+    return `<g class="hand ${ctl(o, 'rise')}"${dat(o)}><g transform="translate(${cx} ${base}) scale(${mirror ? -scale : scale} ${scale})">` +
+      `<g class="h-out">${shapes}</g><g class="h-fill">${shapes}</g>${tips}</g></g>`;
+  }
+  // Where hand(...) draws each fingertip on the stage, raised or bent (the thumb's tip after its -42° turn).
+  function tipsOf(cx, base, up, mirror, scale) {
+    const F = [[-99, -480], [-33, -510], [33, -490], [99, -440]], k = mirror ? -scale : scale;
+    const tips = F.map(([x, t], i) => ({ x: cx + k * x, y: base + scale * (up[i + 1] ? t + 36 : -298), up: !!up[i + 1], finger: i + 1 }));
+    if (up[0]) tips.push({ x: cx - k * 221, y: base - scale * 209, up: true, finger: 0 });
+    return tips;
+  }
+  const header = (n, key) =>
+    `<g class="hdr"><circle cx="170" cy="138" r="60" class="badge"/>` +
+    `<text x="170" y="141" font-size="72" text-anchor="middle" dominant-baseline="central" class="num badge-n">${n}</text>` +
+    `<text x="262" y="138" font-size="104" dominant-baseline="central" class="w t-k" data-t="${key}"></text></g>`;
+  const chip = ans =>
+    `<text x="1650" y="138" font-size="96" text-anchor="end" dominant-baseline="central" class="num">` +
+    `<tspan class="t-r">7</tspan><tspan class="t-k"> × </tspan><tspan class="t-o">8</tspan><tspan class="t-k"> =</tspan></text>` +
+    txt(1682, 138, 96, 'num t-g', '?', { in: 0, out: ans, anim: 'fade', anchor: 'start' }) +
+    txt(1682, 138, 96, 'num t-a', '56', { in: ans, anim: 'zoom', anchor: 'start' });
+  const note = (key, at, out, cx = 960) =>
+    `<g class="note ${ctl({ in: at }, 'rise')}"${dat({ in: at, out })} data-cx="${cx}"><rect class="hl" x="${cx - 300}" y="916" width="600" height="124" rx="62"/>` +
+    `<text x="${cx}" y="979" font-size="78" text-anchor="middle" dominant-baseline="central" class="w t-k" data-t="${key}"></text></g>`;
+  const band = (x, y, w, h, o, extra = '') =>
+    `<rect class="band ${extra} ${ctl(o, 'fade')}" x="${x}" y="${y}" width="${w}" height="${h}" rx="${Math.min(40, h / 2)}"${dat(o)}/>`;
+
+  // steps: seconds each step holds when playing.
+  const SCENES = [
+    // 0. The question and the dot array every road is drawn on: 8 rows of 7.
+    { key: 'start', steps: [2.2, 3.4], build() {
+      const g = 72, x0 = 960 - 3 * g, y0 = 330;
+      return eq(960, 170, 170, '7r × 8o = ?g', { in: 0, anim: 'zoom' }) +
+        grid(x0, y0, 8, 7, g, 28, (r, c) => ({ in: 1, d: .05 * r + .01 * c })) +
+        txt(x0 - 60, y0 + 3.5 * g, 80, 'w t-k', '', { in: 1, d: .6, t: 's0.rows', anchor: 'end' }) +
+        txt(x0 + 6 * g + 90, y0 + 3.5 * g, 80, 'w t-k', '', { in: 1, d: .8, t: 's0.cols', anchor: 'start' });
+    } },
+    // 1. Repeated addition: eight rows of 7, added row by row.
+    { key: '1', steps: [2.2, 5.8, 3.4], build() {
+      const x0 = 640, y0 = 270, g = 80;
+      let s = header(1, 's1.name') + chip(2);
+      s += txt(x0 - 60, y0 + 3.5 * g, 80, 'w t-k', '', { in: 0, d: 1, t: 's1.rows', anchor: 'end' });
+      s += grid(x0, y0, 8, 7, g, 31, (r, c) => ({ in: 0, d: .02 * (r * 7 + c), cls: { 1: 'beat' }, pd: .3 + .62 * r }));
+      for (let r = 0; r < 8; r++) {
+        s += txt(x0 + 6 * g + 70, y0 + r * g, 72, 'num ' + (r === 7 ? 't-a' : 't-k'), String(7 * (r + 1)),
+          { in: 1, d: .3 + .62 * r, anchor: 'start', anim: 'zoom' });
+      }
+      return s + note('s1.note', 2);
+    } },
+    // 2. Distributive: cut the 8 × 7 array into 8 × 5 and 8 × 2.
+    { key: '2', steps: [2.2, 3.4, 2.4, 3.4], build() {
+      const x0 = 440, y0 = 270, g = 80;
+      let s = header(2, 's2.name') + chip(2);
+      s += grid(x0, y0, 8, 5, g, 31, (r, c) => ({ in: 0, d: .015 * (r * 7 + c) }));
+      s += `<g class="mv"${dat({ tf: { 0: 'translate(0px,0px)', 1: 'translate(50px,0px)' }, cls: { 1: 'hot' } })}>` +
+        grid(x0 + 5 * g, y0, 8, 2, g, 31, (r, c) => ({ in: 0, d: .015 * (r * 7 + c + 5) })) + `</g>`;
+      s += `<path class="cut draw" pathLength="1" d="M${x0 + 4.5 * g + 25} 225 V875"${dat({ in: 1, d: .3 })}/>`;
+      s += eq(1120, 420, 112, '8k × 5r = 40r', { in: 1, d: .7, anchor: 'start' });
+      s += eq(1120, 590, 112, '8k × 2o = 16o', { in: 1, d: 1.2, anchor: 'start' });
+      s += eq(1120, 760, 112, '40r + 16o = 56a', { in: 2, anchor: 'start', anim: 'zoom' });
+      return s + note('s2.note', 3);
+    } },
+    // 3. Why the finger trick works, in Yancy's formula: 7 × 8 = (10 − 3) × (10 − 2) = 100 − 30 − 20 + 3 × 2 = 50 + 6.
+    //    Bent fingers are how far each number is from 10. 100 is ten fingers, a ten each; − 30 − 20 takes the bent ones
+    //    away and leaves the 5 raised: 50. + 3 × 2 is bent times bent. Then the same for any two numbers, with x and y.
+    { key: '3', steps: [2.4, 3, 3, 3, 3.4, 3.4, 3.4, 3, 3.4, 3.4, 4, 3.4, 3, 4], build() {
+      const S = 1.1, B = 800, LX = 180, RX = 790, FX = 970, L = [1, 1, 0, 0, 0], R = [1, 1, 1, 0, 0];
+      const pulses = { '5-6': 'p-all', '6-8': 'off-down', '7-8': 'p-up', '8-9': 'p-down' };
+      let s = header(3, 's3.name') + chip(8);
+      s += hand(LX, B, L, true, S, { in: 0, cls: { '1-2': 'p-down', ...pulses } });
+      s += hand(RX, B, R, false, S, { in: 0, d: .2, cls: { '2-3': 'p-down', ...pulses } });
+      // one ten on every finger (on bent middle and little fingers the label sits higher, so neighbours don't run
+      // together); the bent ones are taken away
+      [[LX, L, true], [RX, R, false]].forEach(([cx, up, mirror]) => tipsOf(cx, B, up, mirror, S).forEach((p, i) => {
+        const y = p.y - 60 - (!p.up && p.finger % 2 === 0 ? 50 : 0);
+        const x = p.x + (p.up && p.finger === 1 ? -14 : p.up && p.finger === 2 ? 14 : 0);  // raised index and middle sit close
+        s += txt(x, y, 58, 'num ' + (p.up ? 't-r' : 't-o'), '10', { in: 5, out: p.up ? 9 : 6, d: .08 * i, anim: 'zoom' });
+      }));
+      const fx = (x, y, size, spec, o) => txt(x, y, size, 'num', rich(spec), o);
+      s += fx(LX + 40, 880, 76, '7 = 5 + {r:2}', { in: 1, out: 9 }) + fx(LX + 40, 970, 76, '= 10 − {o:3}', { in: 1, out: 9, d: .9 });
+      s += fx(RX - 40, 880, 76, '8 = 5 + {r:3}', { in: 2, out: 9 }) + fx(RX - 40, 970, 76, '= 10 − {o:2}', { in: 2, out: 9, d: .6 });
+      s += txt(LX + 40, 880, 72, 'w t-k', '', { in: 9, t: 's3.bx' }) + txt(RX - 40, 880, 72, 'w t-k', '', { in: 9, d: .2, t: 's3.by' });
+      // the formula, then the same with x and y
+      s += fx(FX, 330, 72, '7 × 8 = (10 − {o:3}) × (10 − {o:2})', { in: 3, out: 9, anchor: 'start' });
+      s += fx(FX, 470, 72, '= 100 − {o:30} − {o:20} + {o:3 × 2}', { in: 4, out: 9, anchor: 'start' });
+      s += fx(FX, 610, 72, '= {r:50} + {o:6} = {a:56}', { in: 8, out: 9, d: .6, anchor: 'start' });
+      s += fx(FX, 330, 72, '(10 − {o:x}) × (10 − {o:y})', { in: 9, d: .4, anchor: 'start' });
+      s += fx(FX, 470, 72, '= 100 − 10{o:x} − 10{o:y} + {o:xy}', { in: 10, anchor: 'start' });
+      s += fx(FX, 610, 72, '= 10 × ({r:10 − x − y}) + {o:x × y}', { in: 10, d: 1.2, anchor: 'start' });
+      // what each piece is on the hands
+      const say = (y, key, o) => txt(FX, y, 64, 'w t-k', '', { anchor: 'start', t: key, ...o });
+      s += say(760, 's3.e100', { in: 5, out: 6 }) + say(760, 's3.eOff', { in: 6, out: 7 }) + say(760, 's3.eUp', { in: 7, out: 8 });
+      s += say(760, 's3.eDown', { in: 8, out: 9 }) + say(760, 's3.xUp', { in: 11 }) + say(860, 's3.xDown', { in: 11, d: .8 });
+      return s + note('s3.note', 12, 13, 1380) + note('s3.close', 13, undefined, 1380);
+    } },
+    // 4. Double and halve: 7 | 8, 3 | 16, 1 | 32; then the 7 × 8 array shows why the odd rows are taken.
+    { key: '4', steps: [2.4, 2.6, 3, 2.4, 2.8, 2.6, 2.6, 2.8, 2.6, 3.4], build() {
+      const g = 66, r0 = 25, x0 = 220, y0 = 310;
+      const off = (r, step) => {
+        let o = 0;
+        if (step >= 4 && r >= 1) o += 30;
+        if (step >= 5 && r >= 3) o += 20;
+        if (step >= 5 && step < 7 && r >= 5) o += 20;
+        return o;
+      };
+      const Y = (r, step) => y0 + r * g + off(r, step);
+      let s = header(4, 's4.name') + chip(2);
+      // the table
+      const TX = [1360, 1640], TY = [390, 520, 650];
+      [[4, 0], [6, 1], [7, 2]].forEach(([step, i]) => {
+        s += `<rect class="rowhl ${ctl({ in: step }, 'fade')}" x="1220" y="${TY[i] - 55}" width="560" height="110" rx="55"${dat({ in: step })}/>`;
+      });
+      s += txt(TX[0], 270, 72, 'w t-k', '', { in: 0, t: 's4.half' }) + txt(TX[1], 270, 72, 'w t-k', '', { in: 0, t: 's4.double' });
+      [[7, 8], [3, 16], [1, 32]].forEach(([a, b], i) => {
+        const o = { in: i === 0 ? 0 : 1, d: i === 0 ? .3 : .6 * (i - 1) };
+        s += txt(TX[0], TY[i], 110, 'num t-r', String(a), o) + txt(TX[1], TY[i], 110, 'num t-k', String(b), o);
+        s += `<circle class="odd ${ctl({ in: 2 }, 'zoom')}" cx="${TX[0]}" cy="${TY[i]}" r="66"${dat({ in: 2, d: .35 * i })}/>`;
+      });
+      s += eq(1500, 790, 96, '8k + 16k + 32k = 56a', { in: 2, d: 1.2 });
+      // the array, turned: 7 rows of 8
+      for (let r = 0; r < 7; r++) {
+        const tf = {}; [3, 4, 5, 7].forEach(st => { tf[st] = `translate(0px,${off(r, st)}px)`; });
+        const hotAt = r === 0 ? 4 : r <= 2 ? 6 : 7;
+        s += `<g class="mv"${dat({ tf, cls: { [hotAt]: 'hot' } })}>` +
+          grid(x0, y0 + r * g, 1, 8, g, r0, (_, c) => ({ in: 3, d: .05 * r + .01 * c })) + `</g>`;
+      }
+      const box = (a, b, step, o, extra = '') =>
+        band(x0 - 40, Y(a, step) - 40, 7 * g + 80, Y(b, step) - Y(a, step) + 80, o, extra);
+      const lab = (a, b, step, n, o) => txt(x0 + 7 * g + 70, (Y(a, step) + Y(b, step)) / 2, 84, 'num t-o', n, { anchor: 'start', anim: 'zoom', ...o });
+      s += box(0, 0, 4, { in: 4 }, 'o') + lab(0, 0, 4, '8', { in: 4, d: .3 });
+      s += box(1, 2, 5, { in: 5 }) + lab(1, 2, 5, '16', { in: 5, d: .3, out: 6 });
+      s += box(1, 2, 5, { in: 6 }, 'o') + lab(1, 2, 5, '16', { in: 6 });
+      s += box(3, 4, 5, { in: 5, out: 7, d: .15 }) + lab(3, 4, 5, '16', { in: 5, out: 7, d: .45 });
+      s += box(5, 6, 5, { in: 5, out: 7, d: .3 }) + lab(5, 6, 5, '16', { in: 5, out: 7, d: .6 });
+      s += box(3, 6, 7, { in: 7, d: .6 }, 'o') + lab(3, 6, 7, '32', { in: 7, d: .9 });
+      s += `<rect class="rowhl ${ctl({ in: 8 }, 'fade')}" x="1120" y="735" width="760" height="110" rx="55"${dat({ in: 8 })}/>`;
+      s += eq(1500, 790, 96, '8k + 16k + 32k = 56a', { in: 8, anim: 'zoom' });
+      return s + note('s4.note', 9);
+    } },
+    // 5. The map: four winding roads, the 口诀 shortcut, the roads turning into ghosts, and lighting up again.
+    { key: 'map', steps: [4, 2.6, 3, 4.6], build() {
+      const hdr = ['s5.a', 's5.b', 's5.c', 's5.d'];
+      let s = hdr.map((k, i) => txt(960, 100, 84, 'w ' + (i === 2 ? 't-g' : i === 3 ? 't-a' : 't-k'), '',
+        { in: i, out: i < 3 ? i + 1 : undefined, t: k, anim: 'fade' })).join('');
+      for (let i = 0; i < 4; i++) {
+        const y = 330 + i * 150, ye = 560 + (i - 1.5) * 50;
+        const d = `M800 ${y} C1120 ${y} 1220 ${ye} 1480 ${ye}`;
+        s += `<path class="road-g ${ctl({ in: 2 }, 'fade')}" d="${d}"${dat({ in: 2, out: 3, d: .06 * i })}/>`;
+        s += `<path class="road draw" pathLength="1" d="${d}"${dat({ in: 0, out: 2, d: .5 * i })}/>`;
+        s += `<path class="road-l draw" pathLength="1" d="${d}"${dat({ in: 3, d: .6 * i })}/>`;
+        s += `<g class="lab ${ctl({ in: 0 }, 'rise')}"${dat({ in: 0, d: .5 * i, cls: { '2-3': 'dim' } })}>` +
+          `<circle cx="150" cy="${y}" r="48"/><text x="150" y="${y + 2}" font-size="60" text-anchor="middle" dominant-baseline="central" class="num lab-n">${i + 1}</text>` +
+          `<text x="222" y="${y}" font-size="66" dominant-baseline="central" class="w lab-t" data-t="s5.l${i}"></text></g>`;
+      }
+      s += txt(222, 205, 66, 'w t-r', '', { in: 1, t: 's5.short', anchor: 'start' });
+      s += `<path class="short draw" pathLength="1" d="M800 205 L1450 470"${dat({ in: 1, d: .3 })}/>`;
+      s += `<g class="disk"><circle cx="1590" cy="560" r="150"/>` +
+        `<text x="1590" y="567" font-size="170" text-anchor="middle" dominant-baseline="central" class="num disk-n">56</text></g>`;
+      s += `<g class="check ${ctl({ in: 3 }, 'zoom')}"${dat({ in: 3, d: 2.4 })}><circle cx="1705" cy="435" r="52"/><path d="M1681 436 L1699 454 L1731 418"/></g>`;
+      return s;
+    } },
+    // 6. Why the finger formula adds 3 × 2 back (for 「你会算 7×8 吗？」): 100 drawn as 10 rows of 10; − 30 crosses out
+    //    3 columns, − 20 crosses out 2 rows, the 3 × 2 corner is crossed out twice, so it is added back once.
+    //    What is left is 8 rows of 7: the dot picture of the first scene.
+    { key: 'grid', steps: [2.6, 2.6, 2.6, 2.6, 2.6, 3.4], build() {
+      const g = 62, r0 = 24, x0 = 230, y0 = 300, FX = 970;
+      const X = c => x0 + c * g, Y = r => y0 + r * g;
+      let s = header(3, 's6.name') + chip(5);
+      for (let r = 0; r < 10; r++) for (let c = 0; c < 10; c++) {
+        const col = c >= 7, row = r >= 8;
+        const cls = col && row ? { '1-2': 'gone', '2-4': 'twice', '4': 'gone2' } : col ? { 1: 'gone' } : row ? { 2: 'gone' } : {};
+        s += counter(X(c), Y(r), 'red', { r: r0, in: 0, d: .006 * (r * 10 + c), cls });
+      }
+      s += band(X(7) - 36, Y(0) - 36, X(9) - X(7) + 72, Y(9) - Y(0) + 72, { in: 1, out: 2 }, 'o');
+      s += band(X(0) - 36, Y(8) - 36, X(9) - X(0) + 72, Y(9) - Y(8) + 72, { in: 2, out: 3 }, 'o');
+      s += band(X(7) - 36, Y(8) - 36, X(9) - X(7) + 72, Y(9) - Y(8) + 72, { in: 3, out: 5 }, 'o');
+      s += band(X(0) - 36, Y(0) - 36, X(6) - X(0) + 72, Y(7) - Y(0) + 72, { in: 5 });
+      const fx = (y, spec, o) => txt(FX, y, 72, 'num', rich(spec), { anchor: 'start', ...o });
+      s += fx(330, '7 × 8 = (10 − {o:3}) × (10 − {o:2})', { in: 0 }) + fx(450, '= 100 − {o:30} − {o:20} + {o:3 × 2}', { in: 0, d: .3 });
+      s += fx(570, '= {a:56}', { in: 5, d: .4 });
+      const say = (y, key, o) => txt(FX, y, 64, 'w t-k', '', { anchor: 'start', t: key, ...o });
+      s += say(700, 's6.g100', { in: 0, d: .6, out: 1 }) + say(700, 's6.g30', { in: 1, out: 2 }) + say(700, 's6.g20', { in: 2, out: 3 });
+      s += say(700, 's6.twice', { in: 3, out: 4 }) + say(700, 's6.back', { in: 4, out: 5 }) + say(700, 's6.left', { in: 5 });
+      return s;
+    } },
+  ];
+
+  const root = document.documentElement;
+  const stage = document.getElementById('stage');
+  const layer = document.getElementById('layer');
+  const state = { scene: -1, step: 0, lang: 'zh', playing: false, timer: 0 };
+
+  function apply(step) {
+    layer.querySelectorAll('[data-in],[data-out]').forEach(el => {
+      const a = +(el.dataset.in || 0), b = el.dataset.out != null ? +el.dataset.out : Infinity;
+      el.classList.toggle('on', step >= a && step < b);
+    });
+    layer.querySelectorAll('[data-tf]').forEach(el => {
+      const m = JSON.parse(el.dataset.tf);
+      let t = '';
+      Object.keys(m).map(Number).sort((x, y) => x - y).forEach(k => { if (step >= k) t = m[k]; });
+      el.style.transform = t;
+    });
+    layer.querySelectorAll('[data-cls]').forEach(el => {
+      Object.entries(JSON.parse(el.dataset.cls)).forEach(([k, c]) => {
+        const [a, b] = k.split('-').map(Number);
+        el.classList.toggle(c, step >= a && (b === undefined || step < b));
+      });
+    });
+  }
+  function fillText() {
+    const d = T[state.lang];
+    document.querySelectorAll('[data-t]').forEach(el => {
+      const v = d[el.dataset.t];
+      if (v == null) return;
+      if (v.includes('{')) el.innerHTML = rich(v); else el.textContent = v;
+    });
+    const name = d[`s${state.scene}.name`];
+    stage.setAttribute('aria-label', name ? `${d.pageTitle} · ${name}` : d.pageTitle);
+  }
+  function fitNotes() {
+    layer.querySelectorAll('.note').forEach(g => {
+      const t = g.querySelector('text'), r = g.querySelector('rect');
+      let w = 0;
+      try { w = t.getBBox().width; } catch (e) { w = 0; }
+      if (!w) return;
+      const W = w + 140;
+      r.setAttribute('width', W);
+      r.setAttribute('x', +(g.dataset.cx || 960) - W / 2);
+    });
+  }
+  function go(scene, step = 0, opt = {}) {
+    scene = Math.max(0, Math.min(SCENES.length - 1, scene));
+    step = Math.max(0, Math.min(SCENES[scene].steps.length - 1, step));
+    const fresh = scene !== state.scene;
+    state.scene = scene; state.step = step;
+    if (fresh) {
+      layer.innerHTML = SCENES[scene].build();
+      fillText(); fitNotes();
+      layer.getBoundingClientRect();
+    }
+    if (opt.instant) stage.classList.add('instant');
+    requestAnimationFrame(() => {
+      apply(step);
+      if (opt.instant) requestAnimationFrame(() => requestAnimationFrame(() => stage.classList.remove('instant')));
+    });
+    updateUI();
+  }
+  const atEnd = () => state.scene === SCENES.length - 1 && state.step === SCENES[state.scene].steps.length - 1;
+  function next() {
+    if (state.step < SCENES[state.scene].steps.length - 1) go(state.scene, state.step + 1);
+    else if (state.scene < SCENES.length - 1) go(state.scene + 1, 0);
+  }
+  function prev() {
+    if (state.step > 0) go(state.scene, state.step - 1);
+    else if (state.scene > 0) go(state.scene - 1, SCENES[state.scene - 1].steps.length - 1, { instant: true });
+  }
+  function stop() { state.playing = false; clearTimeout(state.timer); updateUI(); }
+  function tick() {
+    state.timer = setTimeout(() => {
+      if (!state.playing) return;
+      if (atEnd()) { stop(); return; }
+      next(); tick();
+    }, SCENES[state.scene].steps[state.step] * 1000);
+  }
+  function play() {
+    if (state.playing) { stop(); return; }
+    if (atEnd()) go(0, 0);
+    state.playing = true; updateUI(); tick();
+  }
+  function setLang(lang) {
+    state.lang = lang === 'en' ? 'en' : 'zh';
+    root.classList.toggle('en', state.lang === 'en');
+    root.lang = state.lang === 'en' ? 'en' : 'zh-Hans';
+    document.getElementById('lang-zh').setAttribute('aria-pressed', String(state.lang === 'zh'));
+    document.getElementById('lang-en').setAttribute('aria-pressed', String(state.lang === 'en'));
+    try { localStorage.setItem('math-roads-lang', state.lang); } catch (e) { /* storage unavailable */ }
+    fillText(); fitNotes(); updateUI();
+  }
+  function setClean(on) { root.classList.toggle('clean', !!on); }
+
+  const chips = document.getElementById('chips');
+  SCENES.forEach((sc, i) => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'chip' + (/^\d$/.test(sc.key) ? '' : ' word');
+    if (/^\d$/.test(sc.key)) b.textContent = sc.key; else b.dataset.t = sc.key;
+    b.addEventListener('click', () => { stop(); go(i, 0); });
+    chips.appendChild(b);
+  });
+  function updateUI() {
+    const d = T[state.lang];
+    [...chips.children].forEach((b, i) => {
+      b.setAttribute('aria-current', String(i === state.scene));
+      const name = d[`s${i}.name`];
+      if (name) b.title = name;
+    });
+    const dots = document.getElementById('dots');
+    dots.innerHTML = SCENES[Math.max(0, state.scene)].steps.map((_, i) => `<span class="dot${i <= state.step ? ' on' : ''}"></span>`).join('');
+    document.getElementById('play').textContent = state.playing ? d.pause : d.play;
+    document.getElementById('prev').disabled = state.scene <= 0 && state.step === 0;
+    document.getElementById('next').disabled = atEnd();
+  }
+
+  document.getElementById('prev').addEventListener('click', () => { stop(); prev(); });
+  document.getElementById('next').addEventListener('click', () => { stop(); next(); });
+  document.getElementById('play').addEventListener('click', play);
+  document.getElementById('lang-zh').addEventListener('click', () => setLang('zh'));
+  document.getElementById('lang-en').addEventListener('click', () => setLang('en'));
+  document.addEventListener('keydown', e => {
+    if (e.metaKey || e.ctrlKey || e.altKey) return;
+    const onButton = e.target instanceof HTMLButtonElement;
+    if (e.key === 'ArrowRight' || e.key === 'PageDown' || (e.key === ' ' && !onButton)) { e.preventDefault(); stop(); next(); }
+    else if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); stop(); prev(); }
+    else if (/^[0-6]$/.test(e.key)) { stop(); go(+e.key, 0); }
+    else if (e.key === 'p') play();
+  });
+
+  // #en, #s4, #clean (or combined, e.g. #en-s4-clean) pick the language, the scene and the recording mode.
+  const tokens = (location.hash || '').replace(/^#/, '').split('-');
+  let lang = 'zh';
+  try { lang = localStorage.getItem('math-roads-lang') || 'zh'; } catch (e) { /* storage unavailable */ }
+  if (tokens.includes('en')) lang = 'en';
+  if (tokens.includes('zh')) lang = 'zh';
+  const sTok = tokens.find(t => /^s\d$/.test(t));
+  setClean(tokens.includes('clean'));
+  root.classList.toggle('solo', tokens.includes('solo'));
+  setLang(lang);
+  go(sTok ? +sTok.slice(1) : 0, 0);
+  if (document.fonts) {
+    document.fonts.load('78px "Ma Shan Zheng"', '练的是答案口诀').then(fitNotes, () => {});
+    document.fonts.ready.then(fitNotes);
+  }
+
+  // For the film's recording script (Playwright): window.mathRoads.go(scene, step, {instant}).
+  window.mathRoads = {
+    go, next, prev, play, stop, setLang, setClean,
+    scenes: SCENES.map(s => ({ key: s.key, steps: s.steps.length, hold: s.steps.slice() })),
+  };
+})();
+</script>

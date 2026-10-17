@@ -1,8 +1,8 @@
 {
  "data": "/Users/yqin/repo/playground/lucas-academy-video-data/jesu",
  "journey": "/Users/yqin/repo/playground/lucas-academy-video-data/journey",
- "music": "music/jesu-gli-armonici-novocals-ft.wav",
- "music_note": "Bach BWV 147/10, Orchestra Gli Armonici (CC0, via Musopen/Commons); choir removed with demucs htdemucs_ft. Phrase starts (beat-snapped): 22.9 35.1 44.7 61.3 74.4 84.1 102.9 119.1 128.9 135.1 148.1 160.2; end 202.3",
+ "music": "music/jesu-gli-armonici-novocals-ft-noapplause.wav",
+ "music_note": "Bach BWV 147/10, Orchestra Gli Armonici (CC0, via Musopen/Commons); choir removed with demucs htdemucs_ft. Phrase starts (beat-snapped): 22.9 35.1 44.7 61.3 74.4 84.1 102.9 119.1 128.9 135.1 148.1 160.2; the music ends 192.5, the recording's applause (193.5-202.3) is cut: -noapplause.wav = trimmed at 193.0 with a 0.7 s fade, padded to 196.0 (owner, 2026-10-12)",
  "dissolve": 1.6,
  "fade_in": 3.0,
  "fade_out": 4.0,
@@ -103,10 +103,11 @@
   },
   {
    "id": "L2-flower",
-   "src": "jesu:X/L2-flowers-blooming-pexels-856030.mp4",
-   "best_in_s": 0.9,
-   "best_out_s": 11.0,
-   "desc": "a hibiscus opening (Pexels, Pixabay)",
+   "src": "jesu:X/L2-daffodil-pexels-11396868.mp4",
+   "best_in_s": 0.0,
+   "best_out_s": 7.6,
+   "interp": true,
+   "desc": "a yellow daffodil opening on black (Pexels, Ross Harrison) - owner's pick 2026-10-12, replaces the hibiscus",
    "beat": 103.21,
    "at": 102.96,
    "cut_on": "phrase"

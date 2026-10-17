@@ -1,0 +1,271 @@
+{
+  "note": "Codex 生成的插图，文件在 public/fun-economics-01/images/（不提交）。提示词见 FUN-ECONOMICS-01.md 第 4 节；Mary 的定妆图是 icepop-hand。",
+  "assets": [
+    {
+      "path": "images/icepop-hand.png",
+      "tool": "codex exec · image_generation",
+      "created": "2026-10-15",
+      "intent": "小卖部门口，Mary 举着橙色冰棍；右边三分之一留空放价签。定妆图，也是封面底图。",
+      "reference": null,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "901afd1776b62b0c9a149b90b06ab64029ac8f0e8344ea95a1aa4e0f35ff9e75",
+      "bytes": 2155841,
+      "label": "AI 生成"
+    },
+    {
+      "path": "images/shop.png",
+      "tool": "codex exec · image_generation",
+      "created": "2026-10-15",
+      "intent": "同一家小卖部，冰柜里一排冰棍，Mary 踮脚往里看；右边留空。",
+      "reference": "images/icepop-hand.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "09916de34adcf93dfb9817798c5baddc2b4bcf846edc840bc915711c3ddceac4",
+      "bytes": 2098507,
+      "label": "AI 生成"
+    },
+    {
+      "path": "images/walk.png",
+      "tool": "codex exec · image_generation",
+      "created": "2026-10-15",
+      "intent": "Mary 顶着太阳走在长长的林荫路上，小卖部远远在身后。",
+      "reference": "images/icepop-hand.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "b62db82ac9fa281fdfc6f16560708b0a8eb5efcec5f6d79c0fb9b9655c1267a1",
+      "bytes": 2531702,
+      "label": "AI 生成"
+    },
+    {
+      "path": "images/chores.png",
+      "tool": "codex exec · image_generation",
+      "created": "2026-10-15",
+      "intent": "家里，妈妈指着要叠的衣服，桌上两枚硬币，Mary 在听。",
+      "reference": "images/icepop-hand.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "506c490043ae762e2e6381effe1e7e12532c6048e9f7c4683581537cc26608aa",
+      "bytes": 2195579,
+      "label": "AI 生成"
+    },
+    {
+      "path": "images/town.png",
+      "tool": "codex exec · image_generation",
+      "created": "2026-10-15",
+      "intent": "小镇鸟瞰：小卖部、紧挨着的一栋房子、长路尽头远处的一栋房子。",
+      "reference": "images/icepop-hand.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "16da611b278fdc44d9b5db16664446cceed8ba4a9a4dc89f7c044d68df2273b6",
+      "bytes": 2596229,
+      "label": "AI 生成"
+    },
+    {
+      "path": "images/choice-reading.png",
+      "tool": "codex exec · image_generation",
+      "created": "2026-10-15",
+      "intent": "方图：Mary 在大树下看书。",
+      "reference": "images/icepop-hand.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "569635070ad261737fcb4dd599bf7d7487543e4c743db88b6df7a213a39621d3",
+      "bytes": 2516858,
+      "label": "AI 生成"
+    },
+    {
+      "path": "images/choice-nap.png",
+      "tool": "codex exec · image_generation",
+      "created": "2026-10-15",
+      "intent": "方图：Mary 在沙发上睡午觉。",
+      "reference": "images/icepop-hand.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "106acb5f0c4fabb60e8f34bac40d0837f05d3f601a36b6a8878ed6f373bb4f81",
+      "bytes": 2247510,
+      "label": "AI 生成"
+    },
+    {
+      "path": "images/choice-soccer.png",
+      "tool": "codex exec · image_generation",
+      "created": "2026-10-15",
+      "intent": "方图：Mary 在草地上踢球。",
+      "reference": "images/icepop-hand.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "e706b33454ee35a04e6954b3b8fd4fbac1569ffd2d7102f48a1c74bd048f9be4",
+      "bytes": 2149350,
+      "label": "AI 生成"
+    },
+    {
+      "path": "images/piano-hour.png",
+      "tool": "codex exec · image_generation",
+      "created": "2026-10-15",
+      "intent": "Mary 在阳光客厅里弹立式钢琴，背侧面，坐在画面左半边。",
+      "reference": "images/icepop-hand.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "bda3e3cba8695f3096f0bb4eb6ec695d4deca7af76eda54aa5030690ed883dc3",
+      "bytes": 2171671,
+      "label": "AI 生成"
+    },
+    {
+      "path": "images/soccer-hour.png",
+      "tool": "codex exec · image_generation",
+      "created": "2026-10-15",
+      "intent": "与 piano-hour 同构图：Mary 同一位置、同样大小，在草地上踢球，可叠成影子。",
+      "reference": "images/icepop-hand.png, images/piano-hour.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "4e8974bf5a13339c3331bb4a532248a7d5c4b6f92252049e8d867b92335ed166",
+      "bytes": 2430936,
+      "label": "AI 生成"
+    },
+    {
+      "path": "images/recital.png",
+      "tool": "codex exec · image_generation",
+      "created": "2026-10-15",
+      "intent": "爸爸妈妈坐在沙发上听 Mary 弹琴。",
+      "reference": "images/icepop-hand.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "6d75dcab16dbbdfe07b42c316a87585adb0da1d153a232502e0766b72986974e",
+      "bytes": 2258968,
+      "label": "AI 生成"
+    },
+    {
+      "path": "images/free-play.png",
+      "tool": "codex exec · image_generation",
+      "created": "2026-10-15",
+      "intent": "傍晚公园里孩子们自由地跑、爬，远景，Mary 在其中。",
+      "reference": "images/icepop-hand.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "15d0ac1b4c09ad1b5a3eb6a6dd28c5c4070ae0a498ee8f575972cd5cd177f0ab",
+      "bytes": 2596899,
+      "label": "AI 生成"
+    },
+    {
+      "path": "images/family-dinner.png",
+      "tool": "codex exec · image_generation",
+      "created": "2026-10-15",
+      "intent": "一家三口围着圆桌吃晚饭，暖色灯光。",
+      "reference": "images/icepop-hand.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "6c686145db38710b67004d6e7126eb0c8cffd5d9ed5b753012ef6dd841b1c424",
+      "bytes": 2207743,
+      "label": "AI 生成"
+    },
+    {
+      "path": "images/desk-thinking.png",
+      "tool": "codex exec · image_generation",
+      "created": "2026-10-15",
+      "intent": "Mary 在书桌前咬着铅笔想题，纸上画满点和圈，没有数字。",
+      "reference": "images/icepop-hand.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "d2253bc1db6abb7fba0cb364da31d694c745d3f973eb2adf3c67f7c3f0c14193",
+      "bytes": 2062238,
+      "label": "AI 生成"
+    },
+    {
+      "path": "images/times-chart.png",
+      "tool": "codex exec · image_generation",
+      "created": "2026-10-15",
+      "intent": "Mary 闭着眼对着墙上像乘法表的彩色方格海报背口诀，没有数字。",
+      "reference": "images/icepop-hand.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "cb5febb4bb06b30d7884fecda4d3960afd351ca197802cea8842ce941b74e178",
+      "bytes": 2113345,
+      "label": "AI 生成"
+    },
+    {
+      "path": "images/classroom.png",
+      "tool": "codex exec · image_generation",
+      "created": "2026-10-15",
+      "intent": "二年级教室，老师弯腰问 Mary，Mary 举手；黑板上只有粉笔涂鸦。",
+      "reference": "images/icepop-hand.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "fbc78f9ef9e2b82a8cf20c76ec6c511b1e9fdcd83910619e270c2c9ed6469eeb",
+      "bytes": 2016956,
+      "label": "AI 生成"
+    },
+    {
+      "path": "images/ending-words.png",
+      "tool": "codex exec · image_generation",
+      "created": "2026-10-15",
+      "intent": "Mary 面对一大摞空白单词卡，有点发愁。",
+      "reference": "images/icepop-hand.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "930c3b207fbcc008595c4d882bdf9a138981d9b001a6ae929688d8bcae70a1f8",
+      "bytes": 1931897,
+      "label": "AI 生成"
+    },
+    {
+      "path": "images/ending-formula.png",
+      "tool": "codex exec · image_generation",
+      "created": "2026-10-15",
+      "intent": "Mary 站在写满公式样粉笔涂鸦的黑板前，没有可读的字。",
+      "reference": "images/icepop-hand.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "d7494bbfb7ace437063183e7cb33af27c972269604c471c02549d26464f84c93",
+      "bytes": 2311429,
+      "label": "AI 生成"
+    },
+    {
+      "path": "images/ending-ai.png",
+      "tool": "codex exec · image_generation",
+      "created": "2026-10-15",
+      "intent": "Mary 托着下巴看电脑，屏幕上的对话框一下子吐出一行行彩色代码条。",
+      "reference": "images/icepop-hand.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "6bde62c541846c590db41e9f7682c0598c4564a1fa9b644e1cd4b614149dc96d",
+      "bytes": 2166349,
+      "label": "AI 生成"
+    }
+  ]
+}
