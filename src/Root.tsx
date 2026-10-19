@@ -7,6 +7,7 @@ import {FunInformatics02Video, FunInformatics02Cover, FunInformatics02EnglishCov
 import {FunInformatics03Video, calculateNoiseMetadata} from './videos/fun-informatics-03/FunInformatics03Video';
 import {FunEconomics01Video, FunEconomics01Cover, FunEconomics01CoverEn, calculateEconMetadata} from './videos/fun-economics-01/FunEconomics01Video';
 import {FunEconomics01ExtraVideo, FunEconomics01ExtraCover, FunEconomics01ExtraCoverEn, calculateExtraMetadata} from './videos/fun-economics-01-7x8/FunEconomics01ExtraVideo';
+import {FunEconomics02Video, FunEconomics02Cover, FunEconomics02CoverEn, calculateFe02Metadata} from './videos/fun-economics-02/FunEconomics02Video';
 import type {FC} from 'react';
 import {MonkeySocietyVideo} from './MonkeySocietyVideo';
 import {MonkeyIntroVideo} from './videos/MonkeyIntroVideo';
@@ -312,6 +313,11 @@ export const Root: FC = () => {
       <Composition id="FunEconomics01ExtraEn" component={FunEconomics01ExtraVideo} durationInFrames={3600} fps={30} width={1920} height={1080} defaultProps={{tl:null,lang:"en"}} calculateMetadata={calculateExtraMetadata} />
       <Composition id="FunEconomics01ExtraCoverZh" component={FunEconomics01ExtraCover} durationInFrames={1} fps={30} width={1920} height={1080} />
       <Composition id="FunEconomics01ExtraCoverEn" component={FunEconomics01ExtraCoverEn} durationInFrames={1} fps={30} width={1920} height={1080} />
+      {/* Education Economics 2 (folders keep the fun-economics-02 name): one film per language, same shot list. */}
+      <Composition id="FunEconomics02Zh" component={FunEconomics02Video} durationInFrames={18000} fps={30} width={1920} height={1080} defaultProps={{tl:null,lang:"zh"}} calculateMetadata={calculateFe02Metadata} />
+      <Composition id="FunEconomics02En" component={FunEconomics02Video} durationInFrames={18000} fps={30} width={1920} height={1080} defaultProps={{tl:null,lang:"en"}} calculateMetadata={calculateFe02Metadata} />
+      <Composition id="FunEconomics02Cover" component={FunEconomics02Cover} durationInFrames={1} fps={30} width={1920} height={1080} />
+      <Composition id="FunEconomics02CoverEn" component={FunEconomics02CoverEn} durationInFrames={1} fps={30} width={1920} height={1080} />
     </>
   );
 };
