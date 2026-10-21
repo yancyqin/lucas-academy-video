@@ -1,0 +1,124 @@
+{
+ "piece": "mer1",
+ "title": "大海·从黎明到正午",
+ "music": "music/normalized/la-mer-1-usaf-band-pd.wav",
+ "end": 556.0,
+ "fade_in": 2.5,
+ "fade_out": 5.0,
+ "xfade": 2.0,
+ "push_per_min": 0.06,
+ "notes": "Cuts on the section changes of La mer I (novelty peaks): dawn intro 0:00-1:22, swell 1:41, middle, build 3:58-4:43, near-silence 5:00-5:12, first climax 6:20, quiet 7:02-8:12, noon chorale 8:20-9:10.",
+ "shots": [
+  {
+   "id": "sea-1",
+   "at": 0.0,
+   "zh": "印象·日出",
+   "photo_hold": 4.0,
+   "focus": [
+    0.66,
+    0.42
+   ],
+   "anim": "minimax/sea-1/v1/anim.mp4"
+  },
+  {
+   "id": "sea-4",
+   "at": 66.7,
+   "zh": "日出（海景）",
+   "focus": [
+    0.55,
+    0.45
+   ]
+  },
+  {
+   "id": "sail-3",
+   "at": 101.5,
+   "zh": "阿让特伊"
+  },
+  {
+   "id": "sail-1",
+   "at": 159.7,
+   "zh": "阿让特伊的桥",
+   "focus": [
+    0.4,
+    0.6
+   ]
+  },
+  {
+   "id": "isle-5",
+   "at": 201.7,
+   "zh": "阿让特伊的帆船赛",
+   "focus": [
+    0.4,
+    0.55
+   ],
+   "anim": "minimax/isle-5/v1/anim.mp4"
+  },
+  {
+   "id": "sail-2",
+   "at": 238.5,
+   "zh": "阿让特伊的帆船（卡耶博特）"
+  },
+  {
+   "id": "sea-2",
+   "at": 283.0,
+   "zh": "特鲁维尔海滩上的卡米耶",
+   "focus": [
+    0.35,
+    0.4
+   ],
+   "anim": "minimax/sea-2/v1/anim.mp4",
+   "reveal": 10.0
+  },
+  {
+   "id": "sea-6",
+   "at": 312.0,
+   "zh": "圣阿德雷斯的海滩"
+  },
+  {
+   "id": "sea-5",
+   "at": 357.2,
+   "zh": "曼纳波特（埃特勒塔）",
+   "focus": [
+    0.45,
+    0.55
+   ],
+   "anim": "minimax/sea-5/v1/anim.mp4"
+  },
+  {
+   "id": "sea-3",
+   "at": 422.2,
+   "zh": "普尔维尔的悬崖步道",
+   "focus": [
+    0.55,
+    0.45
+   ],
+   "anim": "minimax/sea-3/v1/anim.mp4"
+  },
+  {
+   "id": "sea-7",
+   "at": 500.2,
+   "zh": "圣阿德雷斯的花园",
+   "focus": [
+    0.5,
+    0.35
+   ],
+   "anim": "minimax/sea-7/v1/anim.mp4",
+   "anim_note": "source cut at 4.0 s: after that the French flag drifts to green"
+  }
+ ],
+ "photo_hold_frac": 0.06,
+ "photo_hold_range": [
+  2,
+  4
+ ],
+ "reveal_frac": 0.5,
+ "reveal_range": [
+  8,
+  36
+ ],
+ "rhythm_note": "owner 2026-10-14 after preview v1: longer transformation, shorter final still. Reveal = half of each shot (8-36 s); photo hold 6 % (2-4 s).",
+ "minimax_note": "2026-10-14 owner: keep the drifting sea-1 and sea-3 v1 clips as they are (反正是印象派，印象一下就行).",
+ "anim_freeze": 4.0,
+ "anim_min_still": 2.0,
+ "anim_note": "owner 2026-10-14: MiniMax clip holds its last frame ~4 s before the next cut; the painting still before it is shorter by the same amount."
+}

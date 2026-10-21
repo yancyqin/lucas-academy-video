@@ -1,0 +1,25 @@
+{
+ "piece": "cathedrale",
+ "title": "沉没的教堂",
+ "music": "music/normalized/cathedrale-engloutie-ilic-ccby3.wav",
+ "end": 324.0,
+ "fade_in": 3.0,
+ "fade_out": 6.0,
+ "xfade": 2.0,
+ "photo_hold_frac": 0.06,
+ "photo_hold_range": [2, 4],
+ "reveal_frac": 0.5,
+ "reveal_range": [8, 36],
+ "push_per_min": 0.06,
+ "notes": "Ivan Ilić recording. Mist 0:00-1:05, rising 1:05-1:25, ff chorale 1:25-2:29, sinking 2:29-2:50, middle with a surge at 3:35, echo chorale 3:57-4:56, fading 4:56-5:15. The cathedral rises with the light and sinks at sunset.",
+ "shots": [
+  {"id": "rouen-1", "at": 0.0,   "zh": "鲁昂大教堂：清晨（雾）", "photo_hold": 4.0, "focus": [0.5, 0.35], "mm": "动画待做（晨雾飘动）"},
+  {"id": "rouen-8", "at": 49.5,  "zh": "晨光中的正门（盖蒂）", "focus": [0.5, 0.35]},
+  {"id": "rouen-4", "at": 84.7,  "zh": "西立面，阳光（华盛顿）", "no_photo": true, "focus": [0.5, 0.4]},
+  {"id": "rouen-7", "at": 118.5, "zh": "正门，阳光（大都会）", "focus": [0.5, 0.4]},
+  {"id": "rouen-2", "at": 149.2, "zh": "正门，阴天（奥赛）", "no_photo": true, "focus": [0.5, 0.45]},
+  {"id": "rouen-5", "at": 196.7, "zh": "蓝与金的和谐（奥赛）", "no_photo": true, "focus": [0.5, 0.4]},
+  {"id": "rouen-3", "at": 237.0, "zh": "蓝色和谐（奥赛）", "no_photo": true, "focus": [0.5, 0.4]},
+  {"id": "rouen-6", "at": 296.5, "zh": "日落（玛摩丹）", "no_photo": true, "focus": [0.5, 0.45]}
+ ]
+}
