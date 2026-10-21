@@ -1,0 +1,769 @@
+{
+ "data": "/Users/yqin/repo/playground/lucas-academy-video-data/bach-suite",
+ "note": "v0.5 (2026-10-14): the cello ends on a wall of High Renaissance paintings popping in on the climax's accents (Friedrich dropped), held 2 s past the music; the gap after it is 2 s. v0.4 (2026-10-13): the Prelude's time-lapses run on speed curves that follow the music (steady, slower in the dark bars and the rain, gathering through the held G of bars 24-31, easing into the homecoming); the Air fades slowly from the twilight shot (11:03) to black at 11:20. v0.3 prelude (2026-10-13): the middle of the Prelude is city time-lapses, morning to evening, hurrying people; the people-free opening and the reversed-sunrise homecoming stay. v0.2 (2026-10-12, owner's notes on v0.1). Each shot's `at` is seconds from its piece's first note (build/timings.json places the pieces); a shot runs to the next shot's `at` or the piece's end. Cuts: Prelude on bar lines (bar = 4.3 s); cello on its breaths; Gavotte on the refrain's returns (hard cuts); Air on the melody's measured note entries (air_phrases), two bars per shot in A, three-to-four in B. Every clip is used once (the reversed sunrise for the homecoming is the owner's idea). Slow-downs of 50/60 fps sources are real frames (window = speed x shot); `interp` only where a 24-30 fps clip has to stretch. `src` is relative to DATA/footage.",
+ "fade_in": 2.0,
+ "fade_out": 3.0,
+ "pieces": {
+  "prelude": {
+   "dissolve": 0.8,
+   "shots": [
+    {
+     "id": "P1-home-dawn",
+     "at": 0.0,
+     "src": "prelude/P1-30541076.mp4",
+     "best_in_s": 0.0,
+     "best_out_s": 8.0,
+     "interp": true,
+     "desc": "home: the lone tree in the fog before sunrise"
+    },
+    {
+     "id": "P2-horizon",
+     "at": 17.4,
+     "src": "prelude/P2-31673762.mp4",
+     "best_in_s": 2.0,
+     "best_out_s": 22.0,
+     "desc": "first glow on the horizon"
+    },
+    {
+     "id": "P3-city-wakes",
+     "at": 34.5,
+     "src": "prelude/P3c-6716372.mp4",
+     "best_in_s": 32.0,
+     "best_out_s": 46.0,
+     "desc": "morning: the city at sunrise (time-lapse)"
+    },
+    {
+     "id": "P4-tokyo-rush",
+     "at": 47.5,
+     "src": "prelude/P4c-35488300.mp4",
+     "best_in_s": 0.0,
+     "speed": [
+      [
+       0,
+       0.26
+      ],
+      [
+       1,
+       0.3
+      ]
+     ],
+     "desc": "morning rush: a Tokyo crossing, crowds hurrying (time-lapse)"
+    },
+    {
+     "id": "P5-square",
+     "at": 65.0,
+     "src": "prelude/P5c-3796984.mp4",
+     "best_in_s": 0.0,
+     "speed": [
+      [
+       0,
+       0.3
+      ],
+      [
+       1,
+       0.3
+      ]
+     ],
+     "desc": "midday: a crowded square (time-lapse)"
+    },
+    {
+     "id": "P6-clouds",
+     "at": 78.2,
+     "src": "prelude/P6c-39501903.mp4",
+     "best_in_s": 2.0,
+     "best_out_s": 27.0,
+     "desc": "the colour darkens: traffic under heavy cloud (time-lapse)"
+    },
+    {
+     "id": "P7-umbrellas",
+     "at": 91.3,
+     "src": "prelude/P7c-39488108.mp4",
+     "best_in_s": 6.0,
+     "speed": [
+      [
+       0,
+       0.42
+      ],
+      [
+       1,
+       0.38
+      ]
+     ],
+     "desc": "darkest: umbrellas crossing in the rain, from above"
+    },
+    {
+     "id": "P8-day-to-golden",
+     "at": 100.6,
+     "src": "prelude/P8c-3963614.mp4",
+     "best_in_s": 0.0,
+     "speed": [
+      [
+       0,
+       0.3
+      ],
+      [
+       1,
+       0.5
+      ]
+     ],
+     "desc": "afternoon into golden light, people streaming across the square (time-lapse)"
+    },
+    {
+     "id": "P9-dusk-road",
+     "at": 118.3,
+     "src": "prelude/P9c-5070342.mp4",
+     "best_in_s": 0.0,
+     "speed": [
+      [
+       0,
+       0.95
+      ],
+      [
+       1,
+       0.4
+      ]
+     ],
+     "desc": "sunset rush: the road fills, lights come on (time-lapse)"
+    },
+    {
+     "id": "P10-home-sunset",
+     "at": 136.4,
+     "src": "prelude/P10-30541076-reversed.mp4",
+     "best_in_s": 0.0,
+     "best_out_s": 21.8,
+     "interp": true,
+     "desc": "home: the lone tree again, the sunrise played backwards becomes the sunset"
+    }
+   ]
+  },
+  "cello": {
+   "dissolve": 1.0,
+   "note": "v0.3: walking-while-thinking through Western art, in art-historical order (owner, 2026-10-13). Stills from DATA/art (art/sources.json); the camera always drifts at a walking pace, stops once - on Antonello's Jerome at the 4:03 pause - and School of Athens runs over three shots as one climb.",
+   "shots": [
+    {
+     "id": "C1-athena",
+     "at": 0.0,
+     "src": "art:01-athena.jpg",
+     "kenburns": {
+      "from": [
+       0.3,
+       0.1,
+       0.42,
+       0.148
+      ],
+      "to": [
+       0.1,
+       0.42,
+       0.8,
+       0.282
+      ],
+      "ease": "inout"
+     },
+     "desc": "Mourning Athena (c.460 BC): lingers on her bowed head, then drifts down the spear towards the stele"
+    },
+    {
+     "id": "C2-academy",
+     "at": 19.4,
+     "src": "art:02-academy-mosaic.jpg",
+     "kenburns": {
+      "from": [
+       0.12,
+       0.32,
+       0.58,
+       0.32
+      ],
+      "to": [
+       0.3,
+       0.32,
+       0.58,
+       0.32
+      ]
+     },
+     "desc": "Plato's Academy mosaic (1st c. BC): walking past the seven philosophers"
+    },
+    {
+     "id": "C3-joachim",
+     "at": 33.2,
+     "src": "art:03-giotto-joachim.jpg",
+     "kenburns": {
+      "from": [
+       0.14,
+       0.42,
+       0.5,
+       0.342
+      ],
+      "to": [
+       0.4,
+       0.4,
+       0.5,
+       0.342
+      ]
+     },
+     "desc": "Giotto, Joachim among the Shepherds (1305): with him into the wilderness"
+    },
+    {
+     "id": "C4-dante",
+     "at": 48.0,
+     "src": "art:04-michelino-dante.jpg",
+     "kenburns": {
+      "from": [
+       0.3,
+       0.2,
+       0.7,
+       0.5
+      ],
+      "to": [
+       0.1,
+       0.04,
+       0.7,
+       0.5
+      ]
+     },
+     "desc": "Michelino, Dante and the Three Kingdoms (1465): from Dante up the mountain path"
+    },
+    {
+     "id": "C5-jerome",
+     "at": 62.9,
+     "src": "art:05-antonello-jerome.jpg",
+     "kenburns": {
+      "from": [
+       0.0,
+       0.22,
+       1.0,
+       0.4435
+      ],
+      "to": [
+       0.36,
+       0.53,
+       0.4,
+       0.177
+      ],
+      "ease": "out",
+      "hold": 2.0
+     },
+     "desc": "Antonello, St Jerome in his Study (1475): through the arch to the reader; stands still at the 4:03 pause"
+    },
+    {
+     "id": "C6-wayfarer",
+     "at": 78.8,
+     "src": "art:06-bosch-wayfarer.jpg",
+     "kenburns": {
+      "from": [
+       0.45,
+       0.25,
+       0.3,
+       0.167
+      ],
+      "to": [
+       0.55,
+       0.35,
+       0.42,
+       0.233
+      ]
+     },
+     "desc": "Bosch, The Wayfarer (c.1500): his backward glance, then on towards the gate"
+    },
+    {
+     "id": "C7-philosophers",
+     "at": 90.9,
+     "src": "art:07-giorgione-philosophers.jpg",
+     "kenburns": {
+      "from": [
+       0.55,
+       0.22,
+       0.45,
+       0.297
+      ],
+      "to": [
+       0.25,
+       0.42,
+       0.45,
+       0.297
+      ]
+     },
+     "desc": "Giorgione, Three Philosophers (c.1509): from the old man along the young one's gaze to the cave and the light"
+    },
+    {
+     "id": "C8-athens-heraclitus",
+     "at": 103.1,
+     "src": "art:08-athens-pd.jpg",
+     "kenburns": {
+      "from": [
+       0.3,
+       0.57,
+       0.3,
+       0.2175
+      ],
+      "to": [
+       0.32,
+       0.47,
+       0.3,
+       0.2175
+      ]
+     },
+     "desc": "Raphael, School of Athens (1509-11): Heraclitus alone, then up the steps"
+    },
+    {
+     "id": "C9-athens-steps",
+     "at": 115.5,
+     "src": "art:08-athens-pd.jpg",
+     "kenburns": {
+      "from": [
+       0.32,
+       0.47,
+       0.3,
+       0.2175
+      ],
+      "to": [
+       0.36,
+       0.39,
+       0.3,
+       0.2175
+      ]
+     },
+     "desc": "School of Athens: climbing past the arguing groups"
+    },
+    {
+     "id": "C10-athens-centre",
+     "at": 123.3,
+     "src": "art:08-athens-pd.jpg",
+     "kenburns": {
+      "from": [
+       0.36,
+       0.39,
+       0.3,
+       0.2175
+      ],
+      "to": [
+       0.05,
+       0.03,
+       0.9,
+       0.652
+      ],
+      "ease": "inout"
+     },
+     "desc": "School of Athens, brightest: Plato and Aristotle walking towards us, then the whole hall opens"
+    },
+    {
+     "id": "C11-renaissance",
+     "at": 134.3,
+     "popwall": true,
+     "pops": [
+      {
+       "src": "art:pop/r01-botticelli-venus.jpg",
+       "at": 0.49,
+       "x": 0.22,
+       "y": 0.26,
+       "h": 0.3,
+       "rot": -3
+      },
+      {
+       "src": "art:pop/r02-vitruvian.jpg",
+       "at": 2.22,
+       "x": 0.8,
+       "y": 0.3,
+       "h": 0.42,
+       "rot": 4
+      },
+      {
+       "src": "art:pop/r03-last-supper.jpg",
+       "at": 3.96,
+       "x": 0.5,
+       "y": 0.145,
+       "h": 0.24,
+       "rot": 0
+      },
+      {
+       "src": "art:pop/r04-durer-1500.jpg",
+       "at": 5.75,
+       "x": 0.12,
+       "y": 0.66,
+       "h": 0.44,
+       "rot": 2
+      },
+      {
+       "src": "art:pop/r05-mona-lisa.jpg",
+       "at": 7.5,
+       "x": 0.88,
+       "y": 0.7,
+       "h": 0.46,
+       "rot": -2
+      },
+      {
+       "src": "art:pop/r06-creation-of-adam.jpg",
+       "at": 9.26,
+       "x": 0.5,
+       "y": 0.865,
+       "h": 0.24,
+       "rot": -1
+      },
+      {
+       "src": "art:pop/r07-sistine-madonna.jpg",
+       "at": 11.02,
+       "x": 0.33,
+       "y": 0.58,
+       "h": 0.44,
+       "rot": 3
+      },
+      {
+       "src": "art:pop/r08-castiglione.jpg",
+       "at": 12.79,
+       "x": 0.67,
+       "y": 0.58,
+       "h": 0.42,
+       "rot": -3
+      },
+      {
+       "src": "art:pop/r10-transfiguration.jpg",
+       "at": 14.64,
+       "x": 0.5,
+       "y": 0.47,
+       "h": 0.5,
+       "rot": 0,
+       "hold": 1.6,
+       "shrink": 2.6
+      }
+     ],
+     "desc": "on black: nine High Renaissance masterpieces, one per half-bar accent (134.79 ... 148.94, the last on the final chord) - each fades in 0.3 s early, is full-screen on the accent, holds a beat, then shrinks on the next beat into its place; the wall dims behind each new one; the Transfiguration settles in the centre as the chord dies away",
+     "lead": 0.3
+    }
+   ]
+  },
+  "gavotte": {
+   "dissolve": 0.0,
+   "note": "v0.5 (owner 2026-10-14: picture pace should follow the dance). Each refrain is cut in two at its second phrase (aligned by chroma to the first refrain: +5.40/17.58/42.47/79.71/117.63/165.05), so refrain shots are ~5-7 s; clips are set on constant speed curves from their measured motion (~60-170 units/s), the kittens slowed (60 fps), the hare left calm for the cadence. Hard cuts on the phrase downbeats; every clip once.",
+   "shots": [
+    {
+     "id": "G1-goat",
+     "at": 0.0,
+     "src": "gavotte/goat-7377022.mp4",
+     "best_in_s": 4.5,
+     "speed": [
+      [
+       0,
+       3.0
+      ],
+      [
+       0.5,
+       3.0
+      ],
+      [
+       0.55,
+       2.0
+      ],
+      [
+       1,
+       2.0
+      ]
+     ],
+     "desc": "refrain: the kid goat - its wait on the rock at 3x, the leap at 2x"
+    },
+    {
+     "id": "G2-puppies",
+     "at": 5.4,
+     "src": "gavotte/puppies-3045714.mp4",
+     "best_in_s": 0.0,
+     "speed": [
+      [
+       0,
+       1.2
+      ],
+      [
+       1,
+       1.2
+      ]
+     ],
+     "desc": "refrain, 2nd phrase: puppies wrestling"
+    },
+    {
+     "id": "G3-jackrussell",
+     "at": 12.5,
+     "src": "gavotte/dog2-35199742.mp4",
+     "best_in_s": 2.0,
+     "speed": [
+      [
+       0,
+       1.5
+      ],
+      [
+       1,
+       1.5
+      ]
+     ],
+     "desc": "refrain again: a Jack Russell bounding through long grass"
+    },
+    {
+     "id": "G4-monkey",
+     "at": 17.58,
+     "src": "gavotte/monkey-29808286.mp4",
+     "best_in_s": 2.0,
+     "best_out_s": 16.0,
+     "desc": "2nd phrase: a baby monkey playing with a leaf"
+    },
+    {
+     "id": "G5-butterfly",
+     "at": 24.4,
+     "src": "gavotte/butterfly-34574894.mp4",
+     "best_in_s": 2.0,
+     "speed": [
+      [
+       0,
+       1.3
+      ],
+      [
+       1,
+       1.3
+      ]
+     ],
+     "desc": "out 1 (near): a butterfly on a yellow flower"
+    },
+    {
+     "id": "G6-cats",
+     "at": 37.9,
+     "src": "gavotte/cats-33638635.mp4",
+     "best_in_s": 0.0,
+     "speed": [
+      [
+       0,
+       1.3
+      ],
+      [
+       1,
+       1.3
+      ]
+     ],
+     "desc": "refrain: two cats wrestling"
+    },
+    {
+     "id": "G7-lions",
+     "at": 42.47,
+     "src": "gavotte/lions-37297867.mp4",
+     "best_in_s": 0.0,
+     "speed": [
+      [
+       0,
+       1.3
+      ],
+      [
+       1,
+       1.3
+      ]
+     ],
+     "desc": "2nd phrase: lion cubs tumbling on a rock"
+    },
+    {
+     "id": "G8-duckling",
+     "at": 49.4,
+     "src": "gavotte/duckling-7520246.mp4",
+     "desc": "out 2: a duckling running across the water"
+    },
+    {
+     "id": "G9-bears",
+     "at": 62.6,
+     "src": "gavotte/bears-31960532.mp4",
+     "best_in_s": 5.0,
+     "best_out_s": 40.0,
+     "desc": "out 2: brown bears splashing"
+    },
+    {
+     "id": "G10-kittens",
+     "at": 74.7,
+     "src": "gavotte/kittens-12596743.mp4",
+     "best_in_s": 1.0,
+     "speed": [
+      [
+       0,
+       0.6
+      ],
+      [
+       1,
+       0.6
+      ]
+     ],
+     "desc": "refrain: kittens tumbling in a planter (60 fps at 0.6x)"
+    },
+    {
+     "id": "G11-goatsteps",
+     "at": 79.71,
+     "src": "gavotte/goatsteps-35280443.mp4",
+     "best_in_s": 0.0,
+     "best_out_s": 17.0,
+     "desc": "2nd phrase: goat kids hopping up stone steps"
+    },
+    {
+     "id": "G12-dolphins",
+     "at": 87.0,
+     "src": "gavotte/dolphins-4328539.mp4",
+     "desc": "out 3 (further): a pod of dolphins from above"
+    },
+    {
+     "id": "G13-seal",
+     "at": 98.9,
+     "src": "gavotte/seal-36973800.mp4",
+     "desc": "out 3: a fur seal playing in the shallows"
+    },
+    {
+     "id": "G14-ibex",
+     "at": 112.7,
+     "src": "gavotte/ibex-26612570.mp4",
+     "best_in_s": 0.0,
+     "speed": [
+      [
+       0,
+       1.5
+      ],
+      [
+       1,
+       1.5
+      ]
+     ],
+     "desc": "refrain: young ibex sparring in the Alps"
+    },
+    {
+     "id": "G15-whitedog",
+     "at": 117.63,
+     "src": "gavotte/dog-28841567.mp4",
+     "desc": "2nd phrase: a white dog pouncing in the meadow"
+    },
+    {
+     "id": "G16-gulls",
+     "at": 124.0,
+     "src": "gavotte/gulls2-28077187.mp4",
+     "best_in_s": 0.0,
+     "speed": [
+      [
+       0,
+       1.6
+      ],
+      [
+       1,
+       1.6
+      ]
+     ],
+     "desc": "out 4 (furthest, the sky): seagulls wheeling"
+    },
+    {
+     "id": "G17-starlings",
+     "at": 134.8,
+     "src": "gavotte/starlings-3851642.mp4",
+     "best_in_s": 0.0,
+     "best_out_s": 27.0,
+     "desc": "out 4: a starling murmuration swirling (from the breath at 134.8)"
+    },
+    {
+     "id": "G18-goslings",
+     "at": 160.2,
+     "src": "gavotte/goslings-32296899.mp4",
+     "best_in_s": 0.0,
+     "best_out_s": 10.0,
+     "desc": "last refrain: goslings on a sunlit lawn"
+    },
+    {
+     "id": "G19-deer",
+     "at": 165.05,
+     "src": "gavotte/deer-37657054.mp4",
+     "best_in_s": 0.0,
+     "speed": [
+      [
+       0,
+       0.9
+      ],
+      [
+       1,
+       0.75
+      ]
+     ],
+     "desc": "last phrase, the cadence: a deer lowers its head to graze in golden forest light (60 fps, slowing 0.9 -> 0.75x)"
+    }
+   ]
+  },
+  "air": {
+   "dissolve": 1.8,
+   "fade_out": 17.0,
+   "black_at": 173.6,
+   "shots": [
+    {
+     "id": "A1-dappled",
+     "at": 0.0,
+     "src": "air/A1-6093286.mp4",
+     "best_in_s": 2.0,
+     "best_out_s": 30.0,
+     "desc": "A: light flickering through leaves"
+    },
+    {
+     "id": "A2-tyndall",
+     "at": 15.1,
+     "src": "air/A2-6554123.mp4",
+     "best_in_s": 2.0,
+     "best_out_s": 24.0,
+     "desc": "A: sunbeams through a misty forest"
+    },
+    {
+     "id": "A3-glitter",
+     "at": 29.1,
+     "src": "air/A3-38609494.mp4",
+     "best_in_s": 0.0,
+     "best_out_s": 8.2,
+     "desc": "A: sun glitter on the sea (60 fps at half speed)"
+    },
+    {
+     "id": "A4-autumn-leaves",
+     "at": 43.6,
+     "src": "air/A4-6133967.mp4",
+     "best_in_s": 2.0,
+     "best_out_s": 28.0,
+     "desc": "A again: later, warmer - backlit autumn leaves"
+    },
+    {
+     "id": "A5-mist-beams",
+     "at": 57.7,
+     "src": "air/A5b-33237395.mp4",
+     "best_in_s": 10.0,
+     "best_out_s": 17.9,
+     "desc": "A again: shafts of light moving through the misty forest (Tyndall, 60 fps at half speed)"
+    },
+    {
+     "id": "A6-gold-water",
+     "at": 71.8,
+     "src": "air/A6-39656209.mp4",
+     "desc": "A again: dark gold sparkle on water"
+    },
+    {
+     "id": "B1-rays",
+     "at": 85.9,
+     "src": "air/B1-39527006.mp4",
+     "best_in_s": 5.0,
+     "best_out_s": 40.0,
+     "desc": "B: low sun, rays under the clouds"
+    },
+    {
+     "id": "B2-reflection",
+     "at": 113.5,
+     "src": "air/B3-32717564.mp4",
+     "best_in_s": 10.0,
+     "best_out_s": 25.4,
+     "desc": "B: the sunset's path on the waves (50 fps at half speed)"
+    },
+    {
+     "id": "B3-sun-sets",
+     "at": 142.4,
+     "src": "air/B3b-5538242.mp4",
+     "best_in_s": 20.0,
+     "best_out_s": 40.0,
+     "desc": "B, fullest: the sun sinks behind the hill, real time (gone by ~35 s)"
+    },
+    {
+     "id": "B4-twilight",
+     "at": 156.7,
+     "src": "air/B4b-29073507.mp4",
+     "best_in_s": 0.0,
+     "best_out_s": 25.0,
+     "desc": "deep blue twilight over the mountains, fading to dark"
+    }
+   ]
+  },
+  "jesu": {
+   "picture": "/Users/yqin/repo/playground/lucas-academy-video-data/jesu/build/picture.mp4"
+  }
+ }
+}

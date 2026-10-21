@@ -1,0 +1,169 @@
+{
+  "assets": [
+    {
+      "path": "images/walkie-talkie.png",
+      "tool": "codex exec · image_generation",
+      "created": "2026-10-15",
+      "use": "NS01 对讲机试听；片名卡；封面",
+      "intent": "a chunky yellow walkie-talkie standing upright with its antenna up; little zig-zag sound waves and scribbly static sparks burst from its speaker. Centered. Landscape 16:9.",
+      "style": "Children's picture-book illustration in a hand-drawn marker style: bold, slightly wobbly black marker outlines on warm off-white paper, flat colour fills in a small palette (teal, orange, warm yellow, soft sky blue), a little paper texture, generous empty space, friendly and simple. Absolutely no text, letters, numbers or logos anywhere in the image.",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "b896f502ee6bb8c7a1bdcbfb933240ec032d8970430839245ba842e99c8806c1",
+      "bytes": 2209203,
+      "label": "AI 生成"
+    },
+    {
+      "path": "images/pilot-radio.png",
+      "tool": "codex exec · image_generation",
+      "created": "2026-10-15",
+      "use": "zh ns00-03；en ns00-01–ns00-03",
+      "intent": "a friendly pilot in a small cockpit, seen from the side, wearing a headset and speaking into its little microphone; clouds and blue sky through the window; a few zig-zag radio waves leave the headset. Landscape 16:9.",
+      "style": "Children's picture-book illustration in a hand-drawn marker style: bold, slightly wobbly black marker outlines on warm off-white paper, flat colour fills in a small palette (teal, orange, warm yellow, soft sky blue), a little paper texture, generous empty space, friendly and simple. Absolutely no text, letters, numbers or logos anywhere in the image.",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "7c850c7ff28beaa5d5ac8650117bc88dfb54637da821ff71aa905575cea9b253",
+      "bytes": 2594637,
+      "label": "AI 生成"
+    },
+    {
+      "path": "images/noisy-classroom.png",
+      "tool": "codex exec · image_generation",
+      "created": "2026-10-15",
+      "use": "ns01-01 教室里太吵",
+      "intent": "a lively classroom seen from the back of the room: children chatting, laughing and waving, a paper plane in the air; at the front a teacher is talking, and the teacher's empty speech bubble is half scribbled over by messy zig-zag lines. Landscape 16:9.",
+      "style": "Children's picture-book illustration in a hand-drawn marker style: bold, slightly wobbly black marker outlines on warm off-white paper, flat colour fills in a small palette (teal, orange, warm yellow, soft sky blue), a little paper texture, generous empty space, friendly and simple. Absolutely no text, letters, numbers or logos anywhere in the image.",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "2e7f2647a3dd2ed99875bf73c38bd940352d1411a25e790abe96c4b06a716e76",
+      "bytes": 2649863,
+      "label": "AI 生成"
+    },
+    {
+      "path": "images/crackly-phone.png",
+      "tool": "codex exec · image_generation",
+      "created": "2026-10-15",
+      "use": "ns01-01 电话里沙沙响",
+      "intent": "a child holding an old-fashioned telephone receiver to one ear, looking puzzled; the curly cord turns into scribbly zig-zag static lines as it runs off the side of the picture. Landscape 16:9.",
+      "style": "Children's picture-book illustration in a hand-drawn marker style: bold, slightly wobbly black marker outlines on warm off-white paper, flat colour fills in a small palette (teal, orange, warm yellow, soft sky blue), a little paper texture, generous empty space, friendly and simple. Absolutely no text, letters, numbers or logos anywhere in the image.",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "1ac7732217bb09af155fe74fec8cf30ea7514f9b43ab9ad627e62e4e46b63b9f",
+      "bytes": 2312068,
+      "label": "AI 生成"
+    },
+    {
+      "path": "images/dice-one.png",
+      "tool": "codex exec · image_generation",
+      "created": "2026-10-15",
+      "use": "zh ns01-08 骰子上的一个点叫「幺」",
+      "intent": "a single white six-sided die in a three-quarter view; its top face shows one large round red dot and nothing else; a soft shadow. Centered, lots of empty paper. Landscape 16:9.",
+      "style": "Children's picture-book illustration in a hand-drawn marker style: bold, slightly wobbly black marker outlines on warm off-white paper, flat colour fills in a small palette (teal, orange, warm yellow, soft sky blue), a little paper texture, generous empty space, friendly and simple. Absolutely no text, letters, numbers or logos anywhere in the image.",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "7824102548717f8a89debb3934a787991cd7604a96993670ae85ea7dd6792fe0",
+      "bytes": 2095724,
+      "label": "AI 生成"
+    },
+    {
+      "path": "images/cane-seven.png",
+      "tool": "codex exec · image_generation",
+      "created": "2026-10-15",
+      "use": "zh ns01-08 七像根拐杖",
+      "intent": "an old wooden walking cane drawn alone, tilted so that its short handle runs straight across the top and its long shaft slants down to the lower left, the whole cane making the shape of a seven (but do not draw any digit). Centered, lots of empty paper. Landscape 16:9.",
+      "style": "Children's picture-book illustration in a hand-drawn marker style: bold, slightly wobbly black marker outlines on warm off-white paper, flat colour fills in a small palette (teal, orange, warm yellow, soft sky blue), a little paper texture, generous empty space, friendly and simple. Absolutely no text, letters, numbers or logos anywhere in the image.",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "1d3e6ce7f1378bb6172f707b94f5dab92aaca3d6513382702ff715af136cfb5a",
+      "bytes": 1762949,
+      "label": "AI 生成"
+    },
+    {
+      "path": "images/hole-zero.png",
+      "tool": "codex exec · image_generation",
+      "created": "2026-10-15",
+      "use": "zh ns01-08 零像个洞",
+      "intent": "a tall oval dark hole in a small patch of grass, seen from slightly above; a curious little mole peeks out from the rim. Centered, lots of empty paper. Landscape 16:9.",
+      "style": "Children's picture-book illustration in a hand-drawn marker style: bold, slightly wobbly black marker outlines on warm off-white paper, flat colour fills in a small palette (teal, orange, warm yellow, soft sky blue), a little paper texture, generous empty space, friendly and simple. Absolutely no text, letters, numbers or logos anywhere in the image.",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "c586a32760a26c0393ee0e8165a8a756438944e1188b95166366be92ece20388",
+      "bytes": 2317009,
+      "label": "AI 生成"
+    },
+    {
+      "path": "images/buildings-wrong-door.png",
+      "tool": "codex exec · image_generation",
+      "created": "2026-10-15",
+      "use": "zh ns01-05 七号楼听成一号楼",
+      "intent": "two apartment buildings side by side, each with one big blank white square plaque on its front wall near the top; a delivery courier on a little scooter, holding a parcel, has stopped in front of the left building and scratches their head. The plaques are empty. Landscape 16:9.",
+      "style": "Children's picture-book illustration in a hand-drawn marker style: bold, slightly wobbly black marker outlines on warm off-white paper, flat colour fills in a small palette (teal, orange, warm yellow, soft sky blue), a little paper texture, generous empty space, friendly and simple. Absolutely no text, letters, numbers or logos anywhere in the image.",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "f4571344fb7898d2313703b5c42d0420d8051a4c76ff46ec1cc51b8f5dd0fc0b",
+      "bytes": 2162030,
+      "label": "AI 生成"
+    },
+    {
+      "path": "images/taxiway-fork.png",
+      "tool": "codex exec · image_generation",
+      "created": "2026-10-15",
+      "use": "en ns01-05 wrong road at the airport",
+      "intent": "a small friendly passenger plane rolling along an airport taxiway that splits into two at a fork; at the fork stand two blank yellow signboards on short posts, one by each branch, both empty. Seen from slightly above. Landscape 16:9.",
+      "style": "Children's picture-book illustration in a hand-drawn marker style: bold, slightly wobbly black marker outlines on warm off-white paper, flat colour fills in a small palette (teal, orange, warm yellow, soft sky blue), a little paper texture, generous empty space, friendly and simple. Absolutely no text, letters, numbers or logos anywhere in the image.",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "6df9fa5b6e510b11c3db4eab8630c720b16b257386408356bb1d28e00cd88386",
+      "bytes": 2316736,
+      "label": "AI 生成"
+    },
+    {
+      "path": "images/tin-can-phone.png",
+      "tool": "codex exec · image_generation",
+      "created": "2026-10-15",
+      "use": "NS03 收尾和开放问题",
+      "intent": "two children in a sunny garden talking through a tin-can telephone, one speaking into a can and the other listening with a big smile; the string between the cans has a few small scribbly zig-zag kinks in the middle. Landscape 16:9.",
+      "style": "Children's picture-book illustration in a hand-drawn marker style: bold, slightly wobbly black marker outlines on warm off-white paper, flat colour fills in a small palette (teal, orange, warm yellow, soft sky blue), a little paper texture, generous empty space, friendly and simple. Absolutely no text, letters, numbers or logos anywhere in the image.",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "1254bb9375217ed768b407e1bf91cab64914d51290ca7902404d17a8502a053c",
+      "bytes": 2811139,
+      "label": "AI 生成"
+    },
+    {
+      "path": "images/cover-photo-desk.png",
+      "tool": "codex exec · image_generation",
+      "created": "2026-10-16",
+      "use": "YouTube cover (cover.py desk)",
+      "intent": "A realistic photograph (not an illustration): a yellow-and-black handheld walkie-talkie lying on a light wooden table, next to a sheet of white paper with a child's simple pencil drawing of a star, two pencils, a coin and a small printed word card that is blank. Soft natural window light from the left, shallow depth of field, calm and warm, the feel of a thoughtful home or classroom learning moment. The objects sit in the right half of the frame; the left half is calm, softly blurred table and wall, good for a title. No people, no hands, no text, no letters, no numbers, no logos anywhere. Landscape 16:9.",
+      "style": "photographic (in intent)",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "ec01455266a6ffa4e2340ba0848d76c5614a73419cdb40a5e770002a5206d159",
+      "bytes": 1815366,
+      "label": "AI 生成"
+    }
+  ]
+}
