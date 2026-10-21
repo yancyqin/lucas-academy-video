@@ -1,0 +1,35 @@
+{
+ "title": {
+  "zh": "一个小小的想法，能长成一个世界吗？｜好奇新世界 第 1 期",
+  "en": "Can a Small Idea Grow into a World? | Curious Worlds, Episode 1"
+ },
+ "description": {
+  "zh": "好奇新世界是 Lucas Academy 每周五的项目展示。第 1 期把九月、十月的前三期（Weekly 001–003）补上：走进深空博物馆的梵高房间和 Manifold 过山车，认识太空宝宝 Avi，看 Lucas 的 3D 国际象棋从一个想法长出 Comeback 和 Underground 两条新规则，玩 Bible Sequence 的接字、接词，读语言的桥的课堂和周记，上编程课（Glitch Arcade 和第一道 Python 作业），再看看物理、信息学和生物的新项目。",
+  "en": "Curious Worlds is Lucas Academy's Friday show and tell. Episode 1 catches up on our first three shows (Weekly 001–003, September and October): the Van Gogh room and the Golden Funnel roller coaster in our deep-space museum, Space Baby Avi, Lucas's 3D chess growing two new rules (Comeback and Underground), Bible Sequence's new sentence games, Language Bridge's classroom and weekly journal, coding class (the Glitch Arcade and a first Python homework), and new projects in physics, informatics and biology."
+ },
+ "tags": [
+  "curiousworlds",
+  "kidscoding",
+  "showandtell",
+  "3dchess",
+  "biblememory"
+ ],
+ "links": [
+  [
+   "The Weekly pages / 每期图文",
+   "https://lucasacademy.org/weekly/"
+  ],
+  [
+   "Inception Space / 深空博物馆",
+   "https://is.lucasacademy.org/"
+  ],
+  [
+   "Bible Sequence",
+   "https://bible.lucasacademy.org/"
+  ],
+  [
+   "Language Bridge / 语言的桥",
+   "https://lang.lucasacademy.org/"
+  ]
+ ]
+}

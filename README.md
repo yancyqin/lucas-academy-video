@@ -19,6 +19,9 @@ a sentence. Both run locally on this Mac.
 - [`LYRIC-VIDEO.md`](./LYRIC-VIDEO.md) -- the lyric-video pipeline: forced
   alignment of the lyrics, generated and stock footage through one grade, and the
   failures worth knowing about before repeating any of it.
+- [`WEEKLY-VIDEO.md`](./WEEKLY-VIDEO.md) -- 好奇新世界, the weekly film of Curious Worlds
+  Weekly: one Chinese film with an English dub track, live product recordings
+  (`scripts/weekly/capture.cjs`), a shot list per episode, and the weekly steps.
 - [`MINIMAX-VIDEO-EXPERIENCE.md`](./MINIMAX-VIDEO-EXPERIENCE.md) -- reusable
   MiniMax video-generation experience: credential location (no secrets), API
   workflow, reference-frame geometry, prompting, quota safeguards, and real
@@ -37,6 +40,10 @@ Example: `VgWhyCover` puts 「梵高为什么 / 画他们？」 and "Why Did Van
 film's first painting ([VG-WHY-PAINT-THEM.md](./VG-WHY-PAINT-THEM.md)). The re-made whole-person
 films (2026-10-06) follow the rule too: the cover asks 「孩子说“不”，你怎么办？」, and the film opens on the
 same question with Lucas Academy, the film's name and the byline added.
+
+A series cover adds one thing (owner, 2026-10-20): the series name on a diagonal ribbon across the
+top-right corner, on the cover only, never inside the film. 好奇新世界 / Curious Worlds is the first
+(`WeeklyCover`, [WEEKLY-VIDEO.md](./WEEKLY-VIDEO.md)).
 
 ## Continuous footage and speed curves
 
