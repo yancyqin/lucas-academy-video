@@ -43,7 +43,18 @@ same question with Lucas Academy, the film's name and the byline added.
 
 A series cover adds one thing (owner, 2026-10-20): the series name on a diagonal ribbon across the
 top-right corner, on the cover only, never inside the film. 好奇新世界 / Curious Worlds is the first
-(`WeeklyCover`, [WEEKLY-VIDEO.md](./WEEKLY-VIDEO.md)).
+(`WeeklyCover`, [WEEKLY-VIDEO.md](./WEEKLY-VIDEO.md)); 从新闻看教育 / Lessons from the Headlines is the
+second (`Ribbon` in `src/videos/news-education-01/NewsEducation01Video.tsx`, whose `a` prop moves the
+band along the corner so longer names fit).
+
+Updated 2026-10-21:
+
+- **One language per cover.** The zh cover is all Chinese and the en cover is all English; a
+  film for both audiences gets two covers, never one bilingual cover. This replaces the
+  "same question small in English" line above. The series ribbon follows the cover's language
+  too: 「从新闻看教育」 on the zh cover, "Lessons from the Headlines" on the en cover.
+- **Series are not numbered.** 从新闻看教育 never carries 1, 2, 3, on the cover, the title card,
+  the YouTube title or the description. The `-01` in file names is an internal id only.
 
 ## Continuous footage and speed curves
 
@@ -96,6 +107,11 @@ delivery. A default fixes the style, not the
 reading of every word: a polyphone (落 read là, 量 read liàng) still needs the film's own spoken
 respelling (洛, 梁), and every take still gets a Whisper check.
 
+Numbers for a Chinese voice are written out in 汉字, and **a zero is always 零, never 〇** (owner, 2026-10-20). The
+voices do not know 〇: 「二〇二六年十月」 came out garbled and was heard as 「这课 26 年」. A script and its captions may
+keep 〇 (二〇二六年); the film's narration builder swaps in 零 for what the voice reads, as it does for any other
+spoken respelling. Years are read digit by digit (二零二六年, 一九九一年), other numbers as quantities (一千四百).
+
 ## Music under narration
 
 The owner's rule (2026-10-16): the music **audibly makes room whenever a voice comes in**, and comes back
@@ -107,6 +123,11 @@ listening moment can ask for no music at all (`quiet`). Timeline builders swap i
 envelope with `wp.music_envelope = music_ducking.envelope`. That older envelope raised the music only in pauses
 of 2.5 s or more, so through a stretch of narration it sat at one flat level and never seemed to give way.
 Films delivered before this rule (Fun Informatics 1 and 2, the whole-person films) keep their recorded mixes.
+
+The rule covers **every mix the owner hears**, not only the delivered film: a listening preview, a voice test
+with music, a part of the film sent for checking (owner, 2026-10-20, after a preview went out with the music at
+one flat level: 「背景音乐怎么不因为人声减弱？」). Build any such mix from the film's timeline builder, or at least run
+its cues through `music_ducking.envelope`; never lay a music bed under a voice at a fixed gain.
 
 Example: in Fun Informatics 3 ([FUN-INFORMATICS-03.md](./FUN-INFORMATICS-03.md)) the music in the gaps now sits
 about 8 dB higher than it did under the old envelope, and 3 dB lower under the voice. It stops completely around
