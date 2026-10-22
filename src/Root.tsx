@@ -9,6 +9,7 @@ import {FunEconomics01Video, FunEconomics01Cover, FunEconomics01CoverEn, calcula
 import {FunEconomics01ExtraVideo, FunEconomics01ExtraCover, FunEconomics01ExtraCoverEn, calculateExtraMetadata} from './videos/fun-economics-01-7x8/FunEconomics01ExtraVideo';
 import {FunEconomics02Video, FunEconomics02Cover, FunEconomics02CoverEn, calculateFe02Metadata} from './videos/fun-economics-02/FunEconomics02Video';
 import {NewsEducation01Video, NewsEducation01Cover, NewsEducation01CoverEn, calculateNe01Metadata} from './videos/news-education-01/NewsEducation01Video';
+import {WeeklyCover, WeeklyEpisode, calculateWeeklyMetadata} from './videos/weekly/WeeklyEpisode';
 import type {FC} from 'react';
 import {MonkeySocietyVideo} from './MonkeySocietyVideo';
 import {MonkeyIntroVideo} from './videos/MonkeyIntroVideo';
@@ -322,6 +323,13 @@ export const Root: FC = () => {
       <Composition id="NewsEducation01" component={NewsEducation01Video} durationInFrames={18000} fps={30} width={1920} height={1080} defaultProps={{tl:null,maps:null}} calculateMetadata={calculateNe01Metadata} />
       <Composition id="NewsEducation01Cover" component={NewsEducation01Cover} durationInFrames={1} fps={30} width={1280} height={720} />
       <Composition id="NewsEducation01CoverEn" component={NewsEducation01CoverEn} durationInFrames={1} fps={30} width={1280} height={720} />
+      {/* 好奇新世界 / Curious Worlds (WEEKLY-VIDEO.md): a Chinese film and an English film per episode, and a cover for each */}
+      <Composition id="Weekly001" component={WeeklyEpisode} durationInFrames={27000} fps={30} width={1920} height={1080} defaultProps={{episode: '001', lang: 'zh' as const, tl: null}} calculateMetadata={calculateWeeklyMetadata} />
+      <Composition id="Weekly001En" component={WeeklyEpisode} durationInFrames={27000} fps={30} width={1920} height={1080} defaultProps={{episode: '001', lang: 'en' as const, tl: null}} calculateMetadata={calculateWeeklyMetadata} />
+      <Composition id="Weekly001Cover" component={WeeklyCover} durationInFrames={1} fps={30} width={1920} height={1080}
+        defaultProps={{episode: '001', lang: 'zh' as const, zh: '一个小小的想法，\n能长成一个世界吗？', en: 'Can a small idea grow into a world?', bg: 'captures/zh/van-gogh-room.mp4', at: 47, focus: '60% 50%'}} />
+      <Composition id="Weekly001CoverEn" component={WeeklyCover} durationInFrames={1} fps={30} width={1920} height={1080}
+        defaultProps={{episode: '001', lang: 'en' as const, zh: '一个小小的想法，能长成一个世界吗？', en: 'Can a small idea\ngrow into a world?', bg: 'captures/zh/van-gogh-room.mp4', at: 47, focus: '60% 50%'}} />
     </>
   );
 };

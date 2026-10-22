@@ -19,6 +19,9 @@ a sentence. Both run locally on this Mac.
 - [`LYRIC-VIDEO.md`](./LYRIC-VIDEO.md) -- the lyric-video pipeline: forced
   alignment of the lyrics, generated and stock footage through one grade, and the
   failures worth knowing about before repeating any of it.
+- [`WEEKLY-VIDEO.md`](./WEEKLY-VIDEO.md) -- 好奇新世界, the weekly film of Curious Worlds
+  Weekly: one Chinese film with an English dub track, live product recordings
+  (`scripts/weekly/capture.cjs`), a shot list per episode, and the weekly steps.
 - [`MINIMAX-VIDEO-EXPERIENCE.md`](./MINIMAX-VIDEO-EXPERIENCE.md) -- reusable
   MiniMax video-generation experience: credential location (no secrets), API
   workflow, reference-frame geometry, prompting, quota safeguards, and real
@@ -38,17 +41,18 @@ film's first painting ([VG-WHY-PAINT-THEM.md](./VG-WHY-PAINT-THEM.md)). The re-m
 films (2026-10-06) follow the rule too: the cover asks 「孩子说“不”，你怎么办？」, and the film opens on the
 same question with Lucas Academy, the film's name and the byline added.
 
+A series cover adds one thing (owner, 2026-10-20): the series name on a diagonal ribbon across the
+top-right corner, on the cover only, never inside the film. 好奇新世界 / Curious Worlds is the first
+(`WeeklyCover`, [WEEKLY-VIDEO.md](./WEEKLY-VIDEO.md)); 从新闻看教育 / Lessons from the Headlines is the
+second (`Ribbon` in `src/videos/news-education-01/NewsEducation01Video.tsx`, whose `a` prop moves the
+band along the corner so longer names fit).
+
 Updated 2026-10-21:
 
 - **One language per cover.** The zh cover is all Chinese and the en cover is all English; a
   film for both audiences gets two covers, never one bilingual cover. This replaces the
-  "same question small in English" line above.
-- **Series ribbon (从新闻看教育).** Covers in this series wear a gold ribbon across the top-right
-  corner carrying the series name in the cover's language: 「从新闻看教育」 / "Lessons from the
-  Headlines". It is the one thing besides the question allowed on these covers. Other series
-  have no ribbon unless the owner asks (the Fun Informatics 3 series tag was removed on
-  2026-10-16). Reuse `Ribbon` in `src/videos/news-education-01/NewsEducation01Video.tsx`; its
-  `a` prop moves the band along the corner so longer names fit.
+  "same question small in English" line above. The series ribbon follows the cover's language
+  too: 「从新闻看教育」 on the zh cover, "Lessons from the Headlines" on the en cover.
 - **Series are not numbered.** 从新闻看教育 never carries 1, 2, 3, on the cover, the title card,
   the YouTube title or the description. The `-01` in file names is an internal id only.
 
