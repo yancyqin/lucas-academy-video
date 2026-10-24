@@ -7,6 +7,9 @@ One line: **3.6 million scrambles, one little move and two algorithms, three ste
 
 Reading vs captions (the voice's spellings go in SPOKEN):
 - Notation: R′ is read "R prime", U2 "U two", B2 "B two", R2 "R two".
+- v0.1 takes: "let it teach you" was heard as "let it tissue" (cb05-02 now says "let it show you how"); cb04-04's
+  "do the algorithm once" ran together ("duty algorithm wants"), so the voice reads it with a pause.
+- The three lines that read a whole algorithm (cb02-05, cb03-02, cb04-03) are voiced at 0.85× so every letter is heard.
 
 Overall tone: curious, unhurried, discovering together with a child (README default, louise/en).
 
@@ -61,7 +64,7 @@ Overall tone: curious, unhurried, discovering together with a child (README defa
 ## CB05 · Once more
 
 - cb05-01 | Once more, all the way through: step one, the white layer; step two, a yellow top; step three, the last corners.
-- cb05-02 | One little move and two algorithms. You can also open this cube on the Lucas Academy website and let it teach you, one step at a time.
+- cb05-02 | One little move and two algorithms. You can also open this cube on the Lucas Academy website, and let it show you how, one step at a time.
 
 ## CB06 · Ending
 

@@ -254,8 +254,11 @@ const solveAt = (take: Take, plan: PlanStage[], src: number) => {
   const turning = take.moves.find((m) => m.start < frame && frame < m.end);
   const next = turning ?? take.moves.find((m) => m.start >= frame);
   const lastDone = [...take.moves].reverse().find((m) => m.end <= frame);
-  // Between steps, the step just finished stays on screen until the next one's first move begins.
-  const ref = turning ?? (lastDone && next && lastDone.step === next.step && lastDone.stage === next.stage ? next : lastDone ?? next);
+  // Between steps, the step just finished stays on screen through its rest; once the cube has moved on (a new
+  // stage's camera move, a held picture), the next step is shown, still to come.
+  const sameStep = lastDone && next && lastDone.step === next.step && lastDone.stage === next.stage;
+  const resting = lastDone && frame - lastDone.end <= 18;
+  const ref = turning ?? (sameStep ? next : resting ? lastDone : next ?? lastDone);
   if (!ref || ref.stage === undefined || ref.step === undefined) return null;
   const stage = ref.stage;
   const step = plan[stage].steps[ref.step];
@@ -573,7 +576,7 @@ export const Cube2x2Video: FC<CubeProps> = ({ tl }) => {
       {/* The solve */}
       {inSolve && !recap && at && (
         <>
-          <StageBar lang={lang} stage={at.stage} t={t} from={firstSolve.start} />
+          <StageBar lang={lang} stage={{ cb02: 0, cb03: 1, cb04: 2 }[c.section] ?? at.stage} t={t} from={firstSolve.start} />
           {!["cb02-03", "cb02-09", "cb03-02", "cb03-03", "cb03-04"].includes(c.id) && <StepStrip lang={lang} at={at} opacity={rise(t, firstSolve.start + 1, firstSolve.start + 1.5)} />}
         </>
       )}
