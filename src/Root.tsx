@@ -10,6 +10,7 @@ import {FunEconomics01ExtraVideo, FunEconomics01ExtraCover, FunEconomics01ExtraC
 import {FunEconomics02Video, FunEconomics02Cover, FunEconomics02CoverEn, calculateFe02Metadata} from './videos/fun-economics-02/FunEconomics02Video';
 import {NewsEducation01Video, NewsEducation01Cover, NewsEducation01CoverEn, calculateNe01Metadata} from './videos/news-education-01/NewsEducation01Video';
 import {WeeklyCover, WeeklyEpisode, calculateWeeklyMetadata} from './videos/weekly/WeeklyEpisode';
+import {Cube2x2Cover, Cube2x2Video, calculateCubeMetadata} from './videos/cube-2x2/Cube2x2Video';
 import type {FC} from 'react';
 import {MonkeySocietyVideo} from './MonkeySocietyVideo';
 import {MonkeyIntroVideo} from './videos/MonkeyIntroVideo';
@@ -307,6 +308,11 @@ export const Root: FC = () => {
       <Composition id="FunInformatics02CoverEn" component={FunInformatics02EnglishCover} durationInFrames={1} fps={30} width={1920} height={1080} />
       <Composition id="FunInformatics03Zh" component={FunInformatics03Video} durationInFrames={12000} fps={30} width={1920} height={1080} defaultProps={{tl:null,lang:"zh"}} calculateMetadata={calculateNoiseMetadata} />
       <Composition id="FunInformatics03En" component={FunInformatics03Video} durationInFrames={12000} fps={30} width={1920} height={1080} defaultProps={{tl:null,lang:"en"}} calculateMetadata={calculateNoiseMetadata} />
+      {/* 「二阶魔方怎么还原？」 / "How Do You Solve a 2×2 Cube?" (CUBE-2X2.md) */}
+      <Composition id="Cube2x2Zh" component={Cube2x2Video} durationInFrames={9000} fps={30} width={1920} height={1080} defaultProps={{tl:null,lang:"zh"}} calculateMetadata={calculateCubeMetadata} />
+      <Composition id="Cube2x2En" component={Cube2x2Video} durationInFrames={9000} fps={30} width={1920} height={1080} defaultProps={{tl:null,lang:"en"}} calculateMetadata={calculateCubeMetadata} />
+      <Composition id="Cube2x2CoverZh" component={Cube2x2Cover} durationInFrames={1} fps={30} width={1920} height={1080} defaultProps={{lang:"zh" as const}} />
+      <Composition id="Cube2x2CoverEn" component={Cube2x2Cover} durationInFrames={1} fps={30} width={1920} height={1080} defaultProps={{lang:"en" as const}} />
       <Composition id="FunEconomics01Zh" component={FunEconomics01Video} durationInFrames={18000} fps={30} width={1920} height={1080} defaultProps={{tl:null,lang:"zh"}} calculateMetadata={calculateEconMetadata} />
       <Composition id="FunEconomics01En" component={FunEconomics01Video} durationInFrames={18000} fps={30} width={1920} height={1080} defaultProps={{tl:null,lang:"en"}} calculateMetadata={calculateEconMetadata} />
       <Composition id="FunEconomics01CoverZh" component={FunEconomics01Cover} durationInFrames={1} fps={30} width={1920} height={1080} />
