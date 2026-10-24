@@ -81,10 +81,11 @@ SHOTS = [
     ("cb02-05", "cb02-05", "solve", ("move", 0, 1, 0, "end"), ("move", 0, 1, 8, "end"), 1.6),
     ("cb02-06", "cb02-06", "solve", ("move", 0, 1, 8, "end"), ("step", 0, 2), 1.2),
     ("cb02-07", "cb02-07", "solve", ("step", 0, 2), ("step", 0, 3), 2.2),
-    ("cb02-08", "cb02-08", "solve", ("step", 0, 3), ("stage", 1, -0.6), 1.5),
-    ("cb02-09", "cb02-09", "solve", ("stage", 1, -0.6), ("stage", 1, -0.59), 1.0),
-    # Back above for the yellow face.
-    ("cb03-01", "cb03-01", "solve", ("stage", 1, -0.59), ("step", 1, 0), 1.0),
+    # The finished white layer stays in view (from below) through "the first layer is done" and the tip...
+    ("cb02-08", "cb02-08", "solve", ("step", 0, 3), ("move", 0, 3, 4, "end", 0.5), 1.5),
+    ("cb02-09", "cb02-09", "solve", ("move", 0, 3, 4, "end", 0.5), ("move", 0, 3, 4, "end", 0.51), 1.0),
+    # ...and the camera rises to the yellow top on "white is on the bottom, so yellow is on top".
+    ("cb03-01", "cb03-01", "solve", ("move", 0, 3, 4, "end", 0.51), ("step", 1, 0), 1.0),
     ("cb03-02", "cb03-04", "solve", ("step", 1, 0), ("step", 1, 0, 0.01), 1.0),
     ("cb03-05", "cb03-05", "solve", ("step", 1, 0), ("step", 1, 1), 1.5),
     ("cb03-06", "cb03-06", "solve", ("step", 1, 1), ("stage", 2), 1.5),

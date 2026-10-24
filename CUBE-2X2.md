@@ -90,3 +90,16 @@ python3 scripts/cube-2x2/package.py
 - **Byline and series.** The cards say "By Lucas Academy Team" (README default); the series has no name yet.
 - **When to publish.** The film sends viewers to is.lucasacademy.org/cube and its "Solve it for me" button, which
   goes live when the inception-space-ui cube PR is merged and deployed.
+
+## 6. v0.1 (2026-10-23): rendered, waiting for the owner's review
+
+- `out/cube-2x2/delivery/`: `cube-2x2.zh.mp4` (5:54) and `cube-2x2.en.mp4` (5:30), 1920×1080, 30 fps,
+  −16.0 LUFS, true peak −2.0 / −1.5 dBTP, no black frames (`delivery-check.{zh,en}.json`); two SRTs per film;
+  `cover.{zh,en}.jpg` (1280×720); `upload.{zh,en}.txt` (title, description with chapters and the music credit,
+  tags, upload settings).
+- Narration: every take Whisper-checked. Retakes, with the old takes kept in `…/cube-2x2-v1/replaced/`:
+  zh cb01-04 (反着 → 反过来), cb02-05, cb03-02 and cb04-03 (R2 read 「R 两下」, at 0.85×); en cb02-05,
+  cb03-02 and cb04-03 (0.85×), cb02-09 ("lift it out"), cb04-04 (a pause), cb05-02 ("teach you" heard as
+  "tissue" → "show you how"). What Whisper still flags is its own spelling (centerpieces, corner's, "Sune"
+  heard as "soon", which is how it is said; R heard as 二).
+- Working files (`public/cube-2x2/`, the takes, `out/`) are local and gitignored, as for the other films.

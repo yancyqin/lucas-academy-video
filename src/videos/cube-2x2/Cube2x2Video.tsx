@@ -671,7 +671,8 @@ export const Cube2x2Video: FC<CubeProps> = ({ tl }) => {
           <Title lang={lang} t={t} from={tl.endCardStart} />
         </AbsoluteFill>
       )}
-      {t < tl.leadIn && <AbsoluteFill style={{ background: NIGHT, opacity: 1 - rise(t, 0, tl.leadIn) }} />}
+      {/* The film opens on a dim cube rather than black (the delivery check allows no black frames). */}
+      {t < tl.leadIn && <AbsoluteFill style={{ background: NIGHT, opacity: 0.8 * (1 - rise(t, 0, tl.leadIn)) }} />}
       {tl.draft && (
         <div style={{ position: "absolute", right: 24, bottom: 16, fontFamily: MONO, fontSize: 22, color: AMBER, opacity: 0.8 }}>DRAFT timeline</div>
       )}
@@ -679,15 +680,15 @@ export const Cube2x2Video: FC<CubeProps> = ({ tl }) => {
   );
 };
 
-/** The YouTube cover: the question and the cube, nothing else (README "YouTube covers"; one language each). */
+/** The YouTube cover: the question and a scrambled cube, nothing else (README "YouTube covers"; one language each). */
 export const Cube2x2Cover: FC<{ lang: Lang }> = ({ lang }) => (
   <AbsoluteFill style={{ background: NIGHT }}>
-    <AbsoluteFill style={{ left: 760 }}>
-      <Img src={file("footage/meet.jpg")} style={{ width: 1920, height: 1080, objectFit: "cover", transform: "translateX(-420px) scale(1.25)" }} />
+    <AbsoluteFill style={{ transform: "translateX(430px) scale(1.08)" }}>
+      <Img src={file("footage/hero.jpg")} style={{ width: 1920, height: 1080 }} />
     </AbsoluteFill>
-    <AbsoluteFill style={{ background: "linear-gradient(90deg, rgba(4,7,13,.96) 0%, rgba(4,7,13,.85) 42%, rgba(4,7,13,0) 70%)" }} />
+    <AbsoluteFill style={{ background: "linear-gradient(90deg, rgba(4,7,13,1) 0%, rgba(4,7,13,.92) 38%, rgba(4,7,13,0) 58%)" }} />
     <AbsoluteFill style={{ justifyContent: "center", paddingLeft: 120 }}>
-      <Words lang={lang} size={lang === "zh" ? 150 : 124} weight={800} style={{ maxWidth: 1000 }}>
+      <Words lang={lang} size={lang === "zh" ? 150 : 118} weight={800} style={{ maxWidth: lang === "zh" ? 760 : 900 }}>
         {say(
           lang,
           <>
