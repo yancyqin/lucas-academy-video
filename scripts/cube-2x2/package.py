@@ -22,7 +22,19 @@ PUB = ROOT / "public/cube-2x2"
 OUT = ROOT / "out/cube-2x2"
 DELIVERY = OUT / "delivery"
 sys.path.insert(0, str(ROOT / "scripts"))
-from youtube_tags import hashtags, tags  # noqa: E402
+# The cube series' own set (owner, 2026-10-25), in place of youtube_tags' defaults: 14, in this order.
+SERIES_TAGS = ["education", "parenting", "art", "arthistory", "stem", "bilingual", "bilingualchildren", "lucas_academy",
+               "rubikscube", "2x2", "cubing", "puzzle", "howtosolvepuzzles", "魔方"]
+
+
+def hashtags(_own=None):
+    return " ".join(f"#{tag}" for tag in SERIES_TAGS)
+
+
+def tags(_own=None):
+    text = ", ".join(SERIES_TAGS)
+    assert len(text) <= 500
+    return text
 
 spec = importlib.util.spec_from_file_location("fi03_package", ROOT / "scripts/fun-informatics-03/package.py")
 fi03 = importlib.util.module_from_spec(spec)

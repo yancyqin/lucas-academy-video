@@ -465,33 +465,68 @@ const repetition = (labels: string[], done: number, turning: number) => {
 const plainStep = (labels: string[]): [string, string] | null =>
   labels.every((l) => /^[xyz]/.test(l)) ? ["Turn the whole cube", "转动整个魔方"] : labels.every((l) => /^U/.test(l)) ? ["Turn the top", "转动顶层"] : null;
 
-/** The two big parts, and the top layer's two steps. */
-const ChapterBar: FC<{ part: 1 | 2; step?: 1 | 2; t: number; from: number }> = ({ part, step, t, from }) => {
-  const pill = (on: boolean, done: boolean, en: string, zh: string, key: string) => (
-    <div
-      key={key}
-      style={{
-        padding: "10px 22px",
-        borderRadius: 18,
-        border: `2px solid ${on ? MINT : LINE}`,
-        background: on ? "rgba(158,215,189,.2)" : done ? "rgba(158,215,189,.1)" : "rgba(10,18,30,.6)",
-        opacity: on || done ? 1 : 0.75,
-      }}
-    >
-      <Bi en={`${en}${done ? " ✓" : ""}`} zh={zh} size={28} color={on ? INK : done ? MINT : MUTED} weight={700} />
-    </div>
-  );
+/** The film's chapters, as YouTube shows them (package.py writes the same starts into the description). */
+const CHAPTER_NAMES: Record<string, [string, string]> = {
+  cb00: ["The challenge", "挑战"],
+  cb01: ["Letters", "字母"],
+  cb02: ["Part 1 · First layer", "第一部分 · 第一层"],
+  cb03: ["Part 2 · Yellow top", "第二部分 · 顶面全黄"],
+  cb04: ["Part 2 · Corners", "第二部分 · 换好四个角"],
+  cb05: ["Replay", "再看一遍"],
+  cb06: ["Try online", "网上练"],
+};
+const chaptersOf = (tl: CubeTimeline) => {
+  const starts: [string, number][] = [];
+  for (const c of tl.cues) if (!starts.some(([s]) => s === c.section)) starts.push([c.section, starts.length ? c.start : 0]);
+  return starts.map(([section, start], i) => ({ section, start, end: i + 1 < starts.length ? starts[i + 1][1] : tl.durationSeconds }));
+};
+
+/**
+ * The chapter bar along the bottom, segmented exactly as YouTube segments its own bar from the description's
+ * chapters (same starts, same proportions, the same small gaps), so a viewer can see where each part is and jump
+ * there with YouTube's bar just below. A ▼ rides above the playing point; at the start, ↓ arrows over every
+ * chapter say "jump to any part".
+ */
+const ChapterTrack: FC<{ tl: CubeTimeline; t: number; hint: number }> = ({ tl, t, hint }) => {
+  const chapters = chaptersOf(tl);
+  const inset = 18;
+  const width = 1920 - inset * 2;
+  const x = (time: number) => inset + (time / tl.durationSeconds) * width;
+  const gap = 4;
+  const current = chapters.findIndex((ch) => t >= ch.start && t < ch.end);
   return (
-    <div style={{ position: "absolute", left: 56, top: 48, display: "flex", gap: 14, alignItems: "stretch", opacity: rise(t, from, from + 0.5) }}>
-      {pill(part === 1, part > 1, "Part 1 · First layer", "第一部分 · 拼第一层", "p1")}
-      {pill(part === 2, false, "Part 2 · Top layer", "第二部分 · 拼顶层", "p2")}
-      {part === 2 && (
-        <>
-          {pill(step === 1, (step ?? 0) > 1, "① Yellow top", "顶面全黄", "s1")}
-          {pill(step === 2, false, "② Corners", "换好四个角", "s2")}
-        </>
+    <AbsoluteFill style={{ pointerEvents: "none" }}>
+      {hint > 0 && (
+        <div style={{ position: "absolute", left: 0, right: 0, bottom: 176, textAlign: "center", opacity: hint }}>
+          <Bi en="Jump to any part with the progress bar ↓" zh="点下面的进度条，跳到任意部分" size={34} color={AMBER} weight={800} align="center" />
+        </div>
       )}
-    </div>
+      {chapters.map((ch, i) => {
+        const left = x(ch.start) + (i ? gap / 2 : 0);
+        const right = x(ch.end) - (i < chapters.length - 1 ? gap / 2 : 0);
+        const w = right - left;
+        const on = i === current;
+        const played = Math.max(0, Math.min(1, (t - ch.start) / (ch.end - ch.start)));
+        const [en, zh] = CHAPTER_NAMES[ch.section] ?? [ch.section, ""];
+        return (
+          <div key={ch.section}>
+            {hint > 0 && (
+              <div style={{ position: "absolute", left, width: w, bottom: 100, textAlign: "center", opacity: hint, fontSize: 40, color: AMBER, transform: `translateY(${Math.sin(t * 5 + i) * 4}px)` }}>↓</div>
+            )}
+            <div style={{ position: "absolute", left, width: w, bottom: 38, textAlign: "center", overflow: "hidden", whiteSpace: "nowrap" }}>
+              <div style={{ fontFamily: EN, fontSize: w < 130 ? 19 : 22, fontWeight: on ? 800 : 600, color: on ? INK : MUTED, opacity: on ? 1 : 0.8 }}>{en}</div>
+              {w >= 90 && <div style={{ fontFamily: ZH, fontSize: 15, color: on ? MINT : MUTED, opacity: on ? 1 : 0.7 }}>{zh}</div>}
+            </div>
+            <div style={{ position: "absolute", left, width: w, bottom: 12, height: 8, borderRadius: 4, background: "rgba(255,255,255,.22)", overflow: "hidden" }}>
+              <div style={{ width: `${played * 100}%`, height: "100%", background: on ? MINT : "rgba(158,215,189,.75)" }} />
+            </div>
+          </div>
+        );
+      })}
+      {current >= 0 && (
+        <div style={{ position: "absolute", left: x(t) - 11, bottom: 19, width: 0, height: 0, borderLeft: "11px solid transparent", borderRight: "11px solid transparent", borderTop: `14px solid ${AMBER}` }} />
+      )}
+    </AbsoluteFill>
   );
 };
 
@@ -651,10 +686,6 @@ const Headlights: FC<{ t: number; c: Cue }> = ({ t, c }) => (
 
 // ------------------------------------------------------------------ the film
 
-/** Which big part (and which step of part two) a section belongs to. */
-const partOf = (section: string): { part: 1 | 2; step?: 1 | 2 } | null =>
-  section === "cb02" ? { part: 1 } : section === "cb03" ? { part: 2, step: 1 } : section === "cb04" ? { part: 2, step: 2 } : null;
-
 export const Cube2x2Video: FC<CubeProps> = ({ tl, track = "en" }) => {
   const frame = useCurrentFrame(),
     { fps } = useVideoConfig();
@@ -674,8 +705,6 @@ export const Cube2x2Video: FC<CubeProps> = ({ tl, track = "en" }) => {
   const inSolve = shot.take === "solve" && t < tl.endCardStart;
   const recap = c.section === "cb05";
   const at = inSolve ? solveAt(solve, tl.plan, src) : null;
-  const recapStage = recap && inSolve ? solveAt(solve, tl.plan, src)?.stage ?? 0 : 0;
-  const part = partOf(c.section);
   const firstSolve = byId["cb02-01"];
   const ending = c.id === "cb06-02" || t >= tl.endCardStart;
   const layout = t >= tl.endCardStart ? CENTRE : shot.take === "page" ? PAGE : layoutAt(tl.cues, t);
@@ -714,7 +743,6 @@ export const Cube2x2Video: FC<CubeProps> = ({ tl, track = "en" }) => {
       )}
 
       {/* The two big parts */}
-      {part && t >= firstSolve.start && <ChapterBar part={part.part} step={part.step} t={t} from={firstSolve.start} />}
       {c.id === "cb02-01" && <ChapterCard t={t} from={c.start} number="PART 1" en="The First Layer" zh="第一部分 · 拼第一层" />}
       {c.id === "cb03-01" && <ChapterCard t={t} from={c.start} number="PART 2" en="The Top Layer" zh="第二部分 · 拼顶层" />}
       {inSolve && !recap && at && !["cb02-03", "cb02-09", "cb03-02", "cb03-03", "cb03-04"].includes(c.id) && (
@@ -789,7 +817,6 @@ export const Cube2x2Video: FC<CubeProps> = ({ tl, track = "en" }) => {
       {/* Once more */}
       {recap && inSolve && (
         <>
-          <ChapterBar part={recapStage === 0 ? 1 : 2} step={recapStage === 2 ? 2 : 1} t={t} from={byId["cb05-01"].start} />
           <div style={{ position: "absolute", right: 80, top: 56, opacity: rise(t, byId["cb05-01"].start, byId["cb05-01"].start + 0.5) }}>
             <Bi en={`Fast replay ×${((shot.to - shot.from) / (shot.end - shot.start)).toFixed(1)}`} zh="快放" size={34} color={MUTED} align="right" />
           </div>
@@ -812,6 +839,11 @@ export const Cube2x2Video: FC<CubeProps> = ({ tl, track = "en" }) => {
             ))}
           </Panel>
         </Side>
+      )}
+
+      {/* The chapter bar along the bottom, all film long; at the title, a pointer to it */}
+      {t < tl.endCardStart && (
+        <ChapterTrack tl={tl} t={t} hint={c.id === "cb00-03" ? window_(t, c.start + 0.4, c.end, 0.5, 0.5) : 0} />
       )}
 
       {/* Ending: the link again, the question, the end card */}
