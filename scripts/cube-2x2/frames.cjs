@@ -23,8 +23,8 @@ const OUT = path.join(ROOT, `out/cube-2x2/frames${lang === "en" ? ".en" : ""}`);
   const serveUrl = await bundle({ entryPoint: path.join(ROOT, "src/index.ts"), rootDir: ROOT });
   const browser = await openBrowser("chrome");
   try {
-    const id = `Cube2x2${lang === "en" ? "En" : "Zh"}`;
-    const composition = await selectComposition({ serveUrl, id, puppeteerInstance: browser, inputProps: { lang } });
+    const id = lang === "en" ? "Cube2x2" : "Cube2x2ZhTrack";
+    const composition = await selectComposition({ serveUrl, id, puppeteerInstance: browser, inputProps: {} });
     const tl = composition.props.tl;
     const jobs = [];
     for (const cue of tl.cues) {
@@ -35,7 +35,7 @@ const OUT = path.join(ROOT, `out/cube-2x2/frames${lang === "en" ? ".en" : ""}`);
     if (!only.size) jobs.push(["end-card", tl.endCardStart + 2]);
     for (const [name, t] of jobs) {
       const frame = Math.min(composition.durationInFrames - 1, Math.round(t * tl.fps));
-      await renderStill({ composition, serveUrl, frame, output: path.join(OUT, `${name}.png`), puppeteerInstance: browser, inputProps: { lang } });
+      await renderStill({ composition, serveUrl, frame, output: path.join(OUT, `${name}.png`), puppeteerInstance: browser, inputProps: {} });
       console.log(name, frame);
     }
   } finally {

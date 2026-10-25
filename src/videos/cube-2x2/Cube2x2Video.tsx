@@ -1,8 +1,9 @@
-// 「二阶魔方怎么还原？」 / "How Do You Solve a 2×2 Cube?" (CUBE-2X2.md §4).
-// Every picture is the cube page itself (inception-space-ui /cube/, "Solve it for me"), recorded frame by
-// frame by scripts/cube-2x2/capture.mjs: one continuous solve and three short takes. The film runs each take
-// on an eased curve under its lines (build_timeline.py's shots) and draws on top what a learner needs: the
-// three stages, the step's moves with the turning one lit, the algorithm's name, how many times round.
+// "How Do You Solve a 2×2 Cube?" / 「二阶魔方怎么还原？」 (CUBE-2X2.md §4), v0.2: one picture, English first, with a
+// Chinese audio track. Every picture is the cube page itself (inception-space-ui /cube/, "Solve it for me"),
+// recorded frame by frame by scripts/cube-2x2/capture.mjs. On screen, English leads and Chinese follows in small
+// type; the cube sits small on the left, and the right-hand column carries the cards: what each move means (every
+// time one is used), the step's moves with the turning one lit, the algorithm's name, and the two big parts —
+// the first layer, then the top layer.
 import type { CSSProperties, FC, ReactNode } from "react";
 import {
   AbsoluteFill,
@@ -15,9 +16,11 @@ import {
   useVideoConfig,
   type CalculateMetadataFunction,
 } from "remotion";
+import { CUBE_URL, QR_ROWS } from "./qr";
 
 type Lang = "zh" | "en";
-type Cue = { id: string; section: string; zh: string; en: string; start: number; end: number; speech: { start: number; end: number } };
+type Span = { start: number; end: number };
+type Cue = { id: string; section: string; zh: string; en: string; start: number; end: number; speech: Span; speeches: Record<Lang, Span> };
 type Shot = { take: string; cues: [string, string]; start: number; end: number; from: number; to: number };
 type CubeMove = { axis: number; lo: number; hi: number; quarter: number };
 type TakeMove = { stage?: number; step?: number; index?: number; move?: CubeMove; label?: string; start: number; end: number };
@@ -32,7 +35,6 @@ type Take = {
 };
 type PlanStage = { key: string; title: string; steps: { text: string; alg: string | null; moves: CubeMove[] }[] };
 export type CubeTimeline = {
-  lang: Lang;
   fps: number;
   durationSeconds: number;
   endCardStart: number;
@@ -44,7 +46,8 @@ export type CubeTimeline = {
   footageSeconds: Record<string, number>;
   draft: boolean;
 };
-export type CubeProps = { tl?: CubeTimeline | null; lang?: Lang };
+/** `track`: which narration plays (the render mutes it and muxes both tracks; the studio preview plays one). */
+export type CubeProps = { tl?: CubeTimeline | null; track?: Lang };
 
 const DIR = "cube-2x2";
 const file = (p: string) => staticFile(`${DIR}/${p}`);
@@ -55,7 +58,7 @@ const NIGHT = "#04070d",
   LINE = "rgba(193, 220, 241, 0.22)",
   MINT = "#9ed7bd",
   AMBER = "#f3c46b",
-  PANEL = "rgba(10, 18, 30, 0.82)";
+  PANEL = "rgba(10, 18, 30, 0.84)";
 /** R L U D F B: red, orange, white, yellow, green, blue (cube/src/view.js). */
 const STICKER = ["#d4202f", "#ff7f11", "#f4f6f8", "#ffd60a", "#13a453", "#1565e0"];
 const ZH = '"PingFang SC", "Hiragino Sans GB", sans-serif';
@@ -64,8 +67,8 @@ const MONO = '"SF Mono", Menlo, monospace';
 const XFADE = 0.35;
 /** Captions sit in YouTube's bottom band; nothing important goes below this. */
 const SAFE_BOTTOM = 150;
-/** The right-hand column beside the cube: cards on top, the step's moves below. */
-const COLUMN = { right: 80, width: 640 };
+/** The right-hand column beside the cube. */
+const COLUMN = { right: 70, width: 820 };
 
 const ease = (x: number) => {
   const t = Math.max(0, Math.min(1, x));
@@ -77,7 +80,7 @@ const rise = (t: number, a: number, b: number) => ease((t - a) / Math.max(0.001,
 const window_ = (t: number, a: number, b: number, inn = 0.4, out = 0.3) => Math.min(rise(t, a, a + inn), 1 - rise(t, b - out, b));
 
 export const calculateCubeMetadata: CalculateMetadataFunction<CubeProps> = async ({ props, abortSignal }) => {
-  const response = await fetch(file(`timeline.${props.lang ?? "zh"}.json`), { signal: abortSignal });
+  const response = await fetch(file("timeline.json"), { signal: abortSignal });
   if (!response.ok) throw Error("Run c2:timeline first");
   const tl = (await response.json()) as CubeTimeline;
   return { props: { ...props, tl }, fps: tl.fps, durationInFrames: Math.ceil(tl.durationSeconds * tl.fps) };
@@ -115,10 +118,10 @@ const sourceAt = (shot: Shot, t: number) => {
 };
 
 type Layout = { x: number; y: number; s: number };
-/** The cube in the middle (title, closing question) or to the left, leaving the right for cards and moves. */
+/** The cube in the middle (title, closing question, end card) or small on the left, beside the cards. */
 const CENTRE: Layout = { x: 0, y: 0, s: 1 };
-const LEFT: Layout = { x: -270, y: -30, s: 0.82 };
-const CENTRED = new Set(["cb00-03", "cb06-01"]);
+const LEFT: Layout = { x: -400, y: 10, s: 0.62 };
+const CENTRED = new Set(["cb00-04", "cb06-02"]);
 const layoutAt = (cues: Cue[], t: number): Layout => {
   const i = Math.max(0, cues.findIndex((c) => c.start <= t && t < c.end));
   const target = (k: number) => (k < 0 ? LEFT : CENTRED.has(cues[k].id) ? CENTRE : LEFT);
@@ -135,7 +138,7 @@ const Footage: FC<{ tl: CubeTimeline; shot: Shot; t: number; dim?: number; layou
   // stands dead still and the next shot starts from the same framing.
   const still = shot.to - shot.from <= 0.05;
   const u = Math.max(0, Math.min(1, (t - shot.start) / Math.max(1, shot.end - shot.start)));
-  const drift = still ? 1 + 0.04 * (1 - Math.cos(2 * Math.PI * u)) / 2 : 1;
+  const drift = still ? 1 + (0.04 * (1 - Math.cos(2 * Math.PI * u))) / 2 : 1;
   return (
     <AbsoluteFill>
       <AbsoluteFill style={{ transform: `translate(${layout.x}px, ${layout.y}px) scale(${layout.s * drift})` }}>
@@ -175,13 +178,28 @@ const Panel: FC<{ children: ReactNode; style?: CSSProperties }> = ({ children, s
       background: PANEL,
       border: `1px solid ${LINE}`,
       borderRadius: 28,
-      padding: "28px 36px",
+      padding: "24px 32px",
       boxShadow: "0 24px 60px rgba(0,0,0,.45)",
-      backdropFilter: "blur(6px)",
       ...style,
     }}
   >
     {children}
+  </div>
+);
+
+/** English first, Chinese under it, smaller (owner, 2026-10-25). */
+const Bi: FC<{ en: ReactNode; zh: ReactNode; size?: number; color?: string; weight?: number; align?: CSSProperties["textAlign"]; style?: CSSProperties }> = ({
+  en,
+  zh,
+  size = 40,
+  color = INK,
+  weight = 650,
+  align,
+  style,
+}) => (
+  <div style={{ textAlign: align, ...style }}>
+    <div style={{ fontFamily: EN, fontSize: size, color, fontWeight: weight, lineHeight: 1.25 }}>{en}</div>
+    <div style={{ fontFamily: ZH, fontSize: Math.round(size * 0.66), color: MUTED, fontWeight: 500, lineHeight: 1.4, marginTop: Math.round(size * 0.1) }}>{zh}</div>
   </div>
 );
 
@@ -219,33 +237,155 @@ const Sticker: FC<{ colour: number; size?: number; glow?: boolean; style?: CSSPr
       background: STICKER[colour],
       boxShadow: glow ? `0 0 ${size * 0.5}px ${STICKER[colour]}, inset 0 0 0 3px rgba(0,0,0,.25)` : "inset 0 0 0 3px rgba(0,0,0,.25)",
       verticalAlign: "middle",
+      flexShrink: 0,
       ...style,
     }}
   />
 );
 
-const Words: FC<{ lang: Lang; size?: number; color?: string; weight?: number; style?: CSSProperties; children: ReactNode }> = ({
-  lang,
-  size = 44,
-  color = INK,
-  weight = 600,
-  style,
-  children,
-}) => <div style={{ fontFamily: lang === "zh" ? ZH : EN, fontSize: size, color, fontWeight: weight, lineHeight: 1.35, ...style }}>{children}</div>;
+/** A card in the right-hand column; `top` places it, it fades in and out with its lines. */
+const Side: FC<{ children: ReactNode; t: number; from: number; to: number; top: number }> = ({ children, t, from, to, top }) => (
+  <div
+    style={{
+      position: "absolute",
+      top,
+      right: COLUMN.right,
+      width: COLUMN.width,
+      display: "flex",
+      justifyContent: "center",
+      opacity: window_(t, from, to),
+      transform: `translateY(${(1 - rise(t, from, from + 0.5)) * 18}px)`,
+    }}
+  >
+    {children}
+  </div>
+);
 
-const say = (lang: Lang, zh: ReactNode, en: ReactNode) => (lang === "zh" ? zh : en);
+const Note: FC<{ t: number; from: number; to: number; title?: [ReactNode, ReactNode]; children: [ReactNode, ReactNode]; top?: number; width?: number }> = ({
+  t,
+  from,
+  to,
+  title,
+  children,
+  top = 150,
+  width = 760,
+}) => (
+  <Side t={t} from={from} to={to} top={top}>
+    <Panel style={{ width }}>
+      {title && <Bi en={title[0]} zh={title[1]} size={30} color={AMBER} weight={800} style={{ marginBottom: 12 }} />}
+      <Bi en={children[0]} zh={children[1]} size={36} weight={600} />
+    </Panel>
+  </Side>
+);
+
+// ------------------------------------------------------------------ the move card
+
+/** What each move means, in both languages (the page's notation, cube/README.md). */
+const MEANING: Record<string, [string, string]> = {
+  R: ["Right face", "右面"],
+  L: ["Left face", "左面"],
+  U: ["Top face (Up)", "上面"],
+  D: ["Bottom face (Down)", "下面"],
+  F: ["Front face", "前面"],
+  B: ["Back face", "后面"],
+  y: ["The whole cube", "整个魔方"],
+};
+const meaning = (label: string): [string, string] => {
+  const face = label[0];
+  const turn = label.slice(1);
+  const [en, zh] = MEANING[face] ?? [face, face];
+  if (face === "y") {
+    return turn === "′" ? [`${en}, turned like U′`, `${zh}，像 U′ 一样转`] : turn === "2" ? [`${en}, a half turn`, `${zh}，转半圈`] : [`${en}, turned like U`, `${zh}，像 U 一样转`];
+  }
+  const seen = face === "B" ? [" (seen from behind)", "（从后面看）"] : face === "L" ? [" (seen from the left)", "（从左边看）"] : face === "D" ? [" (seen from below)", "（从下面看）"] : ["", ""];
+  if (turn === "2") return [`${en} · a half turn`, `${zh} · 转半圈`];
+  if (turn === "′") return [`${en} · counterclockwise${seen[0]}`, `${zh} · 逆时针${seen[1]}`];
+  return [`${en} · clockwise${seen[0]}`, `${zh} · 顺时针${seen[1]}`];
+};
+
+/**
+ * A little 2×2 drawn from above-front-right (top white, front green, right red): the turning layer lit, the
+ * rest dimmed, and an arrow showing which way the front (or top) stickers travel.
+ */
+const MoveIcon: FC<{ label: string; size?: number }> = ({ label, size = 230 }) => {
+  const face = label[0];
+  const turn = label.slice(1);
+  const k = size / 4.4;
+  const P = (x: number, y: number, z: number) => [size / 2 + (x - z) * 0.866 * k, size / 2 + ((x + z) * 0.5 - y) * k];
+  const poly = (pts: number[][]) => pts.map(([x, y]) => `${x.toFixed(1)},${y.toFixed(1)}`).join(" ");
+  const inLayer = (x: number, y: number, z: number) =>
+    face === "y" || (face === "R" && x > 0) || (face === "L" && x < 0) || (face === "U" && y > 0) || (face === "D" && y < 0) || (face === "F" && z > 0) || (face === "B" && z < 0);
+  const stickers: { pts: number[][]; colour: number; lit: boolean }[] = [];
+  const g = 0.08;
+  for (const a of [-1, 0]) {
+    for (const b of [-1, 0]) {
+      // top (y = 1): x across, z along
+      stickers.push({ pts: [P(a + g, 1, b + g), P(a + 1 - g, 1, b + g), P(a + 1 - g, 1, b + 1 - g), P(a + g, 1, b + 1 - g)], colour: 2, lit: inLayer(a + 0.5, 1, b + 0.5) });
+      // front (z = 1): x across, y up
+      stickers.push({ pts: [P(a + g, b + g, 1), P(a + 1 - g, b + g, 1), P(a + 1 - g, b + 1 - g, 1), P(a + g, b + 1 - g, 1)], colour: 4, lit: inLayer(a + 0.5, b + 0.5, 1) });
+      // right (x = 1): z across, y up
+      stickers.push({ pts: [P(1, b + g, a + g), P(1, b + g, a + 1 - g), P(1, b + 1 - g, a + 1 - g), P(1, b + 1 - g, a + g)], colour: 0, lit: inLayer(1, b + 0.5, a + 0.5) });
+    }
+  }
+  // The arrow: where the stickers on a visible face go when the layer turns clockwise (seen from that face).
+  const arrows: Record<string, [number[], number[]]> = {
+    R: [[0.5, -0.75, 1.02], [0.5, 0.75, 1.02]],
+    L: [[-0.5, 0.75, 1.02], [-0.5, -0.75, 1.02]],
+    U: [[0.75, 0.5, 1.02], [-0.75, 0.5, 1.02]],
+    D: [[-0.75, -0.5, 1.02], [0.75, -0.5, 1.02]],
+    F: [[-0.75, 1.02, 0.5], [0.75, 1.02, 0.5]],
+    B: [[0.75, 1.02, -0.5], [-0.75, 1.02, -0.5]],
+    y: [[0.75, 0, 1.02], [-0.75, 0, 1.02]],
+  };
+  let [from, to] = arrows[face] ?? arrows.R;
+  if (turn === "′") [from, to] = [to, from];
+  const [x0, y0] = P(from[0], from[1], from[2]);
+  const [x1, y1] = P(to[0], to[1], to[2]);
+  const angle = Math.atan2(y1 - y0, x1 - x0);
+  const head = k * 0.42;
+  const tip = (da: number) => [x1 - head * Math.cos(angle + da), y1 - head * Math.sin(angle + da)];
+  return (
+    <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`}>
+      {stickers.map((s, i) => (
+        <polygon key={i} points={poly(s.pts)} fill={STICKER[s.colour]} opacity={s.lit ? 1 : 0.22} stroke="#0b0e13" strokeWidth={2} />
+      ))}
+      <line x1={x0} y1={y0} x2={x1} y2={y1} stroke={AMBER} strokeWidth={k * 0.2} strokeLinecap="round" />
+      <polygon points={poly([[x1, y1], tip(0.55), tip(-0.55)])} fill={AMBER} stroke={AMBER} strokeWidth={4} strokeLinejoin="round" />
+      {turn === "2" && (
+        <text x={x1 + 8} y={y1 - 14} fill={AMBER} fontFamily={MONO} fontWeight={800} fontSize={k * 0.62}>
+          ×2
+        </text>
+      )}
+    </svg>
+  );
+};
+
+/** The move card: the letter, what it means in both languages, and the little cube. */
+const MoveCard: FC<{ label: string; opacity: number; top: number; big?: boolean }> = ({ label, opacity, top, big }) => {
+  const [en, zh] = meaning(label);
+  return (
+    <div style={{ position: "absolute", top, right: COLUMN.right, width: COLUMN.width, display: "flex", justifyContent: "center", opacity }}>
+      <Panel style={{ width: COLUMN.width - 60, display: "flex", alignItems: "center", gap: 28, padding: "18px 28px" }}>
+        <MoveIcon label={label} size={big ? 230 : 180} />
+        <div>
+          <div style={{ fontFamily: MONO, fontSize: big ? 130 : 96, fontWeight: 800, color: AMBER, lineHeight: 1 }}>{label}</div>
+          <Bi en={en} zh={zh} size={big ? 36 : 30} weight={650} style={{ marginTop: 10 }} />
+        </div>
+      </Panel>
+    </div>
+  );
+};
+
+/** The move of a take turning at frame f, or (for `linger` frames after) the one that just turned. */
+const moveAt = (take: Take, frame: number, linger: number) => [...take.moves].reverse().find((m) => m.start < frame && frame < m.end + linger) ?? null;
 
 // ------------------------------------------------------------------ the solve's overlays
 
-const STAGES = {
-  zh: ["白色的一层", "顶面全黄", "换好四个角"],
-  en: ["The white layer", "A yellow top", "The last corners"],
+const ALG: Record<string, [string, string]> = {
+  "R U R' U'": ["The little move", "小动作"],
+  "R U R' U R U2 R'": ["Sune", "小鱼公式"],
+  "R' F R' B2 R F' R' B2 R2": ["The corner algorithm", "换角公式"],
 };
-const ALG = {
-  "R U R' U'": { zh: "小动作", en: "The little move" },
-  "R U R' U R U2 R'": { zh: "小鱼公式 · Sune", en: "Sune" },
-  "R' F R' B2 R F' R' B2 R2": { zh: "换角公式", en: "The corner algorithm" },
-} as Record<string, { zh: string; en: string }>;
 
 /** What the solve take shows at a source time: the stage, the step and how far into it. */
 const solveAt = (take: Take, plan: PlanStage[], src: number) => {
@@ -277,52 +417,51 @@ const repetition = (labels: string[], done: number, turning: number) => {
   return { now: Math.min(count, Math.floor((at - first) / 4) + 1), count };
 };
 
-const StageBar: FC<{ lang: Lang; stage: number; t: number; from: number }> = ({ lang, stage, t, from }) => (
-  <div style={{ position: "absolute", left: 60, top: 54, display: "flex", gap: 14, opacity: rise(t, from, from + 0.5) }}>
-    {STAGES[lang].map((name, i) => (
-      <div
-        key={name}
-        style={{
-          padding: "10px 22px",
-          borderRadius: 999,
-          border: `2px solid ${i === stage ? MINT : LINE}`,
-          background: i < stage ? "rgba(158,215,189,.14)" : i === stage ? "rgba(158,215,189,.22)" : "rgba(10,18,30,.6)",
-          color: i === stage ? INK : i < stage ? MINT : MUTED,
-          fontFamily: lang === "zh" ? ZH : EN,
-          fontWeight: 700,
-          fontSize: 30,
-        }}
-      >
-        {i + 1} · {name}
-        {i < stage ? " ✓" : ""}
-      </div>
-    ))}
-  </div>
-);
-
 /** A step with no algorithm is either holding the cube a new way or lining up the top. */
-const plainStep = (labels: string[], lang: Lang) =>
-  labels.every((l) => /^[xyz]/.test(l))
-    ? { zh: "转动整个魔方", en: "Turn the whole cube" }[lang]
-    : labels.every((l) => /^U/.test(l))
-      ? { zh: "转动顶层", en: "Turn the top" }[lang]
-      : null;
+const plainStep = (labels: string[]): [string, string] | null =>
+  labels.every((l) => /^[xyz]/.test(l)) ? ["Turn the whole cube", "转动整个魔方"] : labels.every((l) => /^U/.test(l)) ? ["Turn the top", "转动顶层"] : null;
 
-const StepStrip: FC<{ lang: Lang; at: NonNullable<ReturnType<typeof solveAt>>; opacity: number }> = ({ lang, at, opacity }) => {
-  const name = at.step.alg ? ALG[at.step.alg]?.[lang] : plainStep(at.labels, lang);
-  const rep = repetition(at.labels, at.done, at.turning);
-  const size = at.labels.length > 16 ? 36 : at.labels.length > 8 ? 40 : 50;
+/** The two big parts, and the top layer's two steps. */
+const ChapterBar: FC<{ part: 1 | 2; step?: 1 | 2; t: number; from: number }> = ({ part, step, t, from }) => {
+  const pill = (on: boolean, done: boolean, en: string, zh: string, key: string) => (
+    <div
+      key={key}
+      style={{
+        padding: "10px 22px",
+        borderRadius: 18,
+        border: `2px solid ${on ? MINT : LINE}`,
+        background: on ? "rgba(158,215,189,.2)" : done ? "rgba(158,215,189,.1)" : "rgba(10,18,30,.6)",
+        opacity: on || done ? 1 : 0.75,
+      }}
+    >
+      <Bi en={`${en}${done ? " ✓" : ""}`} zh={zh} size={28} color={on ? INK : done ? MINT : MUTED} weight={700} />
+    </div>
+  );
   return (
-    <div style={{ position: "absolute", right: COLUMN.right, width: COLUMN.width, bottom: SAFE_BOTTOM + 30, display: "flex", justifyContent: "center", opacity }}>
-      <Panel style={{ width: "100%", padding: "18px 24px", textAlign: "center" }}>
+    <div style={{ position: "absolute", left: 56, top: 48, display: "flex", gap: 14, alignItems: "stretch", opacity: rise(t, from, from + 0.5) }}>
+      {pill(part === 1, part > 1, "Part 1 · First layer", "第一部分 · 拼第一层", "p1")}
+      {pill(part === 2, false, "Part 2 · Top layer", "第二部分 · 拼顶层", "p2")}
+      {part === 2 && (
+        <>
+          {pill(step === 1, (step ?? 0) > 1, "① Yellow top", "顶面全黄", "s1")}
+          {pill(step === 2, false, "② Corners", "换好四个角", "s2")}
+        </>
+      )}
+    </div>
+  );
+};
+
+const StepStrip: FC<{ at: NonNullable<ReturnType<typeof solveAt>>; opacity: number }> = ({ at, opacity }) => {
+  const name = at.step.alg ? ALG[at.step.alg] ?? null : plainStep(at.labels);
+  const rep = repetition(at.labels, at.done, at.turning);
+  const size = at.labels.length > 16 ? 34 : at.labels.length > 8 ? 40 : 48;
+  return (
+    <div style={{ position: "absolute", right: COLUMN.right, width: COLUMN.width, bottom: SAFE_BOTTOM + 20, display: "flex", justifyContent: "center", opacity }}>
+      <Panel style={{ width: COLUMN.width - 60, padding: "16px 24px", textAlign: "center" }}>
         {(name || rep) && (
-          <div style={{ display: "flex", justifyContent: "center", gap: 24, marginBottom: 6 }}>
-            {name && <Words lang={lang} size={30} color={AMBER} weight={700}>{name}</Words>}
-            {rep && rep.now > 0 && (
-              <Words lang={lang} size={30} color={MINT} weight={800}>
-                {lang === "zh" ? `第 ${rep.now} 次` : `× ${rep.now}`}
-              </Words>
-            )}
+          <div style={{ display: "flex", justifyContent: "center", alignItems: "flex-end", gap: 26, marginBottom: 6 }}>
+            {name && <Bi en={name[0]} zh={name[1]} size={30} color={AMBER} weight={800} />}
+            {rep && rep.now > 0 && <Bi en={`× ${rep.now}`} zh={`第 ${rep.now} 次`} size={30} color={MINT} weight={800} />}
           </div>
         )}
         <div>
@@ -339,87 +478,108 @@ const StepStrip: FC<{ lang: Lang; at: NonNullable<ReturnType<typeof solveAt>>; o
 
 // ------------------------------------------------------------------ cards
 
-const Title: FC<{ lang: Lang; t: number; from: number }> = ({ lang, t, from }) => (
+const QR: FC<{ size: number }> = ({ size }) => {
+  const n = QR_ROWS.length;
+  const quiet = 3;
+  const cell = size / (n + quiet * 2);
+  return (
+    <svg width={size} height={size} viewBox={`0 0 ${n + quiet * 2} ${n + quiet * 2}`} shapeRendering="crispEdges" style={{ borderRadius: cell * 2, display: "block", flexShrink: 0 }}>
+      <rect width={n + quiet * 2} height={n + quiet * 2} fill="#ffffff" />
+      {QR_ROWS.flatMap((row, y) => [...row].map((bit, x) => (bit === "1" ? <rect key={`${x}-${y}`} x={x + quiet} y={y + quiet} width={1} height={1} fill="#04070d" /> : null)))}
+    </svg>
+  );
+};
+
+/** The cube page's address and QR code: "no cube? practise online". */
+const LinkCard: FC<{ t: number; from: number; to: number; end?: boolean }> = ({ t, from, to, end }) => (
+  <Side t={t} from={from} to={to} top={170}>
+    <Panel style={{ width: COLUMN.width - 60, padding: "30px 36px" }}>
+      <Bi en="No cube? Practise online." zh="没有魔方？在网上也能练。" size={48} weight={800} />
+      <div style={{ display: "flex", gap: 32, alignItems: "center", margin: "26px 0 22px" }}>
+        <QR size={270} />
+        <Bi
+          en={end ? "Press “Solve it for me” and it walks you through every step." : "Turn it, scramble it, and let it solve step by step."}
+          zh={end ? "点「Solve it for me」，它会一步一步带你还原。" : "转一转、打乱，再让它一步一步还原。"}
+          size={32}
+          weight={600}
+        />
+      </div>
+      <div style={{ fontFamily: MONO, fontSize: 40, color: MINT, fontWeight: 700, textAlign: "center" }}>{CUBE_URL}</div>
+    </Panel>
+  </Side>
+);
+
+const Title: FC<{ t: number; from: number; qr?: boolean }> = ({ t, from, qr }) => (
   <AbsoluteFill style={{ alignItems: "center", justifyContent: "center", opacity: rise(t, from, from + 0.7) }}>
     <div style={{ textAlign: "center", transform: `translateY(${(1 - rise(t, from, from + 0.9)) * 24}px)` }}>
       <div style={{ fontFamily: EN, fontSize: 30, letterSpacing: "0.32em", color: MINT, fontWeight: 700, marginBottom: 28 }}>LUCAS ACADEMY</div>
-      <Words lang={lang} size={lang === "zh" ? 136 : 108} weight={800}>
-        {say(
-          lang,
-          <>
-            <span style={{ color: AMBER }}>二阶魔方</span>怎么还原？
-          </>,
-          <>
-            How Do You Solve a <span style={{ color: AMBER }}>2×2 Cube</span>?
-          </>,
-        )}
-      </Words>
-      <div style={{ display: "flex", justifyContent: "center", gap: 14, margin: "40px 0 36px" }}>
+      <div style={{ fontFamily: EN, fontSize: 112, fontWeight: 800, color: INK, lineHeight: 1.1 }}>
+        How Do You Solve a <span style={{ color: AMBER }}>2×2 Cube</span>?
+      </div>
+      <div style={{ fontFamily: ZH, fontSize: 58, fontWeight: 600, color: MUTED, marginTop: 18 }}>二阶魔方怎么还原？</div>
+      <div style={{ display: "flex", justifyContent: "center", gap: 14, margin: "36px 0 30px" }}>
         {[2, 4, 0, 3, 5, 1].map((c) => (
-          <Sticker key={c} colour={c} size={34} />
+          <Sticker key={c} colour={c} size={30} />
         ))}
       </div>
-      <Words lang={lang} size={34} color={MUTED} weight={500}>
-        {say(lang, "作者 Lucas Academy Team", "By Lucas Academy Team")}
-      </Words>
+      <div style={{ fontFamily: EN, fontSize: 32, color: MUTED }}>By Lucas Academy Team</div>
+      {qr && (
+        <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: 24, marginTop: 40 }}>
+          <QR size={170} />
+          <div style={{ textAlign: "left" }}>
+            <div style={{ fontFamily: MONO, fontSize: 30, color: MINT, fontWeight: 700 }}>{CUBE_URL}</div>
+            <Bi en="Practise online" zh="在网上练" size={26} color={MUTED} weight={500} style={{ marginTop: 6 }} />
+          </div>
+        </div>
+      )}
     </div>
   </AbsoluteFill>
 );
 
-const Side: FC<{ children: ReactNode; t: number; from: number; to: number; top?: number }> = ({ children, t, from, to, top = 200 }) => (
-  <div
-    style={{
-      position: "absolute",
-      top,
-      right: COLUMN.right,
-      width: COLUMN.width,
-      display: "flex",
-      justifyContent: "center",
-      opacity: window_(t, from, to),
-      transform: `translateY(${(1 - rise(t, from, from + 0.5)) * 18}px)`,
-    }}
-  >
-    {children}
-  </div>
-);
+/** A big part begins: its name fills the screen for a moment, then settles into the bar at the top. */
+const ChapterCard: FC<{ t: number; from: number; number: string; en: string; zh: string }> = ({ t, from, number, en, zh }) => {
+  const opacity = Math.min(rise(t, from, from + 0.5), 1 - rise(t, from + 2.6, from + 3.2));
+  if (opacity <= 0) return null;
+  return (
+    <AbsoluteFill style={{ alignItems: "center", justifyContent: "center", background: `rgba(4,7,13,${0.82 * opacity})`, opacity }}>
+      <div style={{ textAlign: "center", transform: `scale(${0.96 + 0.04 * rise(t, from, from + 0.8)})` }}>
+        <div style={{ fontFamily: EN, fontSize: 40, letterSpacing: "0.3em", color: MINT, fontWeight: 800 }}>{number}</div>
+        <div style={{ fontFamily: EN, fontSize: 120, fontWeight: 800, color: INK, marginTop: 10 }}>{en}</div>
+        <div style={{ fontFamily: ZH, fontSize: 60, color: MUTED, fontWeight: 600, marginTop: 10 }}>{zh}</div>
+      </div>
+    </AbsoluteFill>
+  );
+};
 
-const CountUp: FC<{ lang: Lang; t: number; c: Cue }> = ({ lang, t, c }) => {
+const CountUp: FC<{ t: number; c: Cue }> = ({ t, c }) => {
   const k = rise(t, c.speech.start + 1.0, c.speech.end - 0.4);
   const value = Math.round(3674160 * k * k);
   return (
-    <Side t={t} from={c.speech.start + 0.6} to={c.end} top={360}>
-      <Panel style={{ textAlign: "right" }}>
-        <div style={{ fontFamily: MONO, fontSize: 96, fontWeight: 800, color: AMBER }}>{value.toLocaleString("en-US")}</div>
-        <Words lang={lang} size={38} color={MUTED}>
-          {say(lang, "种打乱的样子", "ways to be scrambled")}
-        </Words>
+    <Side t={t} from={c.speech.start + 0.6} to={c.end} top={330}>
+      <Panel style={{ textAlign: "center", width: 640 }}>
+        <div style={{ fontFamily: MONO, fontSize: 104, fontWeight: 800, color: AMBER }}>{value.toLocaleString("en-US")}</div>
+        <Bi en="ways to scramble it" zh="种打乱的样子" size={40} color={INK} />
       </Panel>
     </Side>
   );
 };
 
-const Pairs: FC<{ lang: Lang; t: number; c: Cue }> = ({ lang, t, c }) => {
-  const names = { zh: ["白", "黄", "绿", "蓝", "红", "橙"], en: ["white", "yellow", "green", "blue", "red", "orange"] }[lang];
+const Pairs: FC<{ t: number; c: Cue }> = ({ t, c }) => {
+  const names: Record<number, [string, string]> = { 2: ["white", "白"], 3: ["yellow", "黄"], 4: ["green", "绿"], 5: ["blue", "蓝"], 0: ["red", "红"], 1: ["orange", "橙"] };
   return (
-    <Side t={t} from={c.speech.start} to={c.end} top={300}>
-      <Panel>
+    <Side t={t} from={c.speech.start} to={c.end} top={250}>
+      <Panel style={{ width: 640 }}>
         {[
           [2, 3],
           [4, 5],
           [0, 1],
         ].map(([a, b], i) => (
-          <div key={i} style={{ display: "flex", alignItems: "center", gap: 18, margin: "14px 0", opacity: rise(t, c.speech.start + 0.6 + i * 0.9, c.speech.start + 1.1 + i * 0.9) }}>
+          <div key={i} style={{ display: "flex", alignItems: "center", gap: 20, margin: "16px 0", opacity: rise(t, c.speech.start + 0.6 + i * 0.9, c.speech.start + 1.1 + i * 0.9) }}>
             <Sticker colour={a} />
-            <Words lang={lang} size={34} style={{ width: 110 }}>
-              {names[[2, 3, 4, 5, 0, 1].indexOf(a)]}
-            </Words>
-            <Words lang={lang} size={40} color={MUTED}>
-              ⟷
-            </Words>
+            <Bi en={names[a][0]} zh={names[a][1]} size={34} style={{ width: 140 }} />
+            <div style={{ fontFamily: EN, fontSize: 40, color: MUTED }}>⟷</div>
             <Sticker colour={b} />
-            <Words lang={lang} size={34} style={{ width: 120 }}>
-              {names[[2, 3, 4, 5, 0, 1].indexOf(b)]}
-            </Words>
+            <Bi en={names[b][0]} zh={names[b][1]} size={34} style={{ width: 150 }} />
           </div>
         ))}
       </Panel>
@@ -427,59 +587,7 @@ const Pairs: FC<{ lang: Lang; t: number; c: Cue }> = ({ lang, t, c }) => {
   );
 };
 
-const NOTATION: Record<string, { zh: string; en: string }> = {
-  R: { zh: "右边这一层 · 顺时针", en: "the right layer · clockwise" },
-  "R'": { zh: "反着转回来", en: "back the other way" },
-  U: { zh: "上面这一层", en: "the top layer" },
-  "U'": { zh: "反着转", en: "turned back" },
-  R2: { zh: "转半圈", en: "a half turn" },
-  y: { zh: "整个魔方一起转", en: "the whole cube turns" },
-  "y'": { zh: "整个魔方转回来", en: "and back" },
-};
-
-const Letter: FC<{ lang: Lang; take: Take; src: number; t: number; c: Cue }> = ({ lang, take, src, t, c }) => {
-  const frame = Math.round(src * take.fps);
-  // The move turning now, or the last one turned (it stays up while it rests).
-  const move = [...take.moves].reverse().find((m) => m.start < frame) ?? null;
-  if (!move?.label) return null;
-  const info = NOTATION[move.label];
-  return (
-    <Side t={t} from={c.start} to={c.end} top={320}>
-      <Panel style={{ textAlign: "center", minWidth: 380 }}>
-        <div style={{ fontFamily: MONO, fontSize: 170, fontWeight: 800, color: AMBER, lineHeight: 1 }}>{prime(move.label)}</div>
-        <Words lang={lang} size={36} color={INK} style={{ marginTop: 14 }}>
-          {info?.[lang]}
-        </Words>
-      </Panel>
-    </Side>
-  );
-};
-
-const Note: FC<{ lang: Lang; t: number; from: number; to: number; title?: ReactNode; children: ReactNode; top?: number; width?: number }> = ({
-  lang,
-  t,
-  from,
-  to,
-  title,
-  children,
-  top = 200,
-  width = 600,
-}) => (
-  <Side t={t} from={from} to={to} top={top}>
-    <Panel style={{ width }}>
-      {title && (
-        <Words lang={lang} size={30} color={AMBER} weight={800} style={{ marginBottom: 10 }}>
-          {title}
-        </Words>
-      )}
-      <Words lang={lang} size={38}>
-        {children}
-      </Words>
-    </Panel>
-  </Side>
-);
-
-/** A 2×2 seen from above: four top stickers, each corner's side stickers drawn as bars at its edges. */
+/** A 2×2 seen from above: four top stickers, a corner's side sticker drawn as a bar at its edge. */
 const TopView: FC<{ yellow: boolean[]; sides?: Record<number, "left" | "front">; mark?: number; size?: number }> = ({ yellow, sides = {}, mark, size = 200 }) => {
   const cell = size / 2;
   const at = [
@@ -489,7 +597,7 @@ const TopView: FC<{ yellow: boolean[]; sides?: Record<number, "left" | "front">;
     [1, 1],
   ]; // back-left, back-right, front-left, front-right
   return (
-    <svg width={size + 60} height={size + 60} viewBox={`-30 -30 ${size + 60} ${size + 60}`}>
+    <svg width={size + 60} height={size + 70} viewBox={`-30 -30 ${size + 60} ${size + 70}`} style={{ flexShrink: 0 }}>
       {at.map(([x, y], i) => (
         <rect key={i} x={x * cell + 6} y={y * cell + 6} width={cell - 12} height={cell - 12} rx={12} fill={yellow[i] ? STICKER[3] : "#3a4352"} stroke={i === mark ? MINT : "none"} strokeWidth={8} />
       ))}
@@ -501,39 +609,40 @@ const TopView: FC<{ yellow: boolean[]; sides?: Record<number, "left" | "front">;
           <rect key={`s${i}`} x={x * cell + 14} y={size + 10} width={cell - 28} height={14} rx={6} fill={STICKER[3]} />
         );
       })}
-      <text x={size / 2} y={size + 52} textAnchor="middle" fill={MUTED} fontSize={22} fontFamily={EN}>
-        front
+      <text x={size / 2} y={size + 34} textAnchor="middle" fill={MUTED} fontSize={22} fontFamily={EN}>
+        front · 前
       </text>
     </svg>
   );
 };
 
-const Headlights: FC<{ lang: Lang; t: number; c: Cue }> = ({ lang, t, c }) => (
+const Headlights: FC<{ t: number; c: Cue }> = ({ t, c }) => (
   <Side t={t} from={c.speech.start + 0.8} to={c.end} top={150}>
-    <Panel style={{ textAlign: "center" }}>
+    <Panel style={{ textAlign: "center", width: 640 }}>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 96px)", gap: 10, justifyContent: "center" }}>
         <Sticker colour={0} size={96} glow />
         <Sticker colour={0} size={96} glow />
         <Sticker colour={4} size={96} style={{ opacity: 0.55 }} />
         <Sticker colour={5} size={96} style={{ opacity: 0.55 }} />
       </div>
-      <Words lang={lang} size={36} style={{ marginTop: 18 }}>
-        {say(lang, "上面两个角一样 = 车头灯", "Two matching top corners = headlights")}
-      </Words>
+      <Bi en="Two matching top corners = headlights" zh="上面两个角一样 = 车头灯" size={34} style={{ marginTop: 18 }} />
     </Panel>
   </Side>
 );
 
 // ------------------------------------------------------------------ the film
 
-export const Cube2x2Video: FC<CubeProps> = ({ tl }) => {
+/** Which big part (and which step of part two) a section belongs to. */
+const partOf = (section: string): { part: 1 | 2; step?: 1 | 2 } | null =>
+  section === "cb02" ? { part: 1 } : section === "cb03" ? { part: 2, step: 1 } : section === "cb04" ? { part: 2, step: 2 } : null;
+
+export const Cube2x2Video: FC<CubeProps> = ({ tl, track = "en" }) => {
   const frame = useCurrentFrame(),
     { fps } = useVideoConfig();
   if (!tl) return null;
   const t = frame / fps;
-  const lang = tl.lang;
   const byId = Object.fromEntries(tl.cues.map((c) => [c.id, c]));
-  const cue = tl.cues.find((c) => c.start <= t && t < c.end) ?? (t < tl.cues[0].start ? tl.cues[0] : tl.cues[tl.cues.length - 1]);
+  const c = tl.cues.find((x) => x.start <= t && t < x.end) ?? (t < tl.cues[0].start ? tl.cues[0] : tl.cues[tl.cues.length - 1]);
   const shotIndex = Math.max(
     0,
     tl.shots.findIndex((s) => s.start <= t && t < s.end),
@@ -544,131 +653,164 @@ export const Cube2x2Video: FC<CubeProps> = ({ tl }) => {
   const src = sourceAt(shot, t);
   const solve = tl.takes.solve;
   const inSolve = shot.take === "solve" && t < tl.endCardStart;
-  const recap = cue.section === "cb05";
+  const recap = c.section === "cb05";
   const at = inSolve ? solveAt(solve, tl.plan, src) : null;
+  const recapStage = recap && inSolve ? solveAt(solve, tl.plan, src)?.stage ?? 0 : 0;
+  const part = partOf(c.section);
   const firstSolve = byId["cb02-01"];
-  const c = cue;
-  const card = (id: string) => byId[id];
-  const ending = cue.section === "cb06" || t >= tl.endCardStart;
+  const ending = c.id === "cb06-02" || t >= tl.endCardStart;
   const layout = t >= tl.endCardStart ? CENTRE : layoutAt(tl.cues, t);
+  // The move card: whenever a take is turning a move (and for a moment after), in the letters and in the solve.
+  const take = tl.takes[shot.take];
+  const notationPart = shot.take === "notation";
+  const srcFrame = Math.round(src * (take?.fps ?? 30));
+  const turningNow = take && (notationPart || (inSolve && !recap)) ? moveAt(take, srcFrame, notationPart ? 40 : 14) : null;
+  const cardLabel = turningNow ? (turningNow.label ? prime(turningNow.label) : turningNow.move ? moveName(turningNow.move) : null) : null;
 
   return (
-    <AbsoluteFill style={{ background: NIGHT, color: INK, fontFamily: lang === "zh" ? ZH : EN }}>
-      <Audio src={file(`audio/${lang}.mix.wav`)} />
+    <AbsoluteFill style={{ background: NIGHT, color: INK, fontFamily: EN }}>
+      <Audio src={file(`audio/${track}.mix.wav`)} />
       {crossing && previous && <Footage tl={tl} shot={previous} t={previous.end - 0.01} layout={layout} />}
       <AbsoluteFill style={{ opacity: crossing ? rise(t, shot.start, shot.start + XFADE) : 1 }}>
-        <Footage tl={tl} shot={shot} t={t} layout={layout} dim={c.id === "cb00-03" ? 0.72 * rise(t, c.start, c.start + 0.6) : ending ? 0.78 * rise(t, c.start, c.start + 0.8) : 0} />
+        <Footage
+          tl={tl}
+          shot={shot}
+          t={t}
+          layout={layout}
+          dim={c.id === "cb00-04" ? 0.72 * rise(t, c.start, c.start + 0.6) : ending ? 0.78 * rise(t, c.start, c.start + 0.8) : 0}
+        />
       </AbsoluteFill>
 
-      {/* Opening */}
-      {c.id === "cb00-01" && <CountUp lang={lang} t={t} c={c} />}
-      {c.id === "cb00-03" && <Title lang={lang} t={t} from={c.start + 0.3} />}
+      {/* Opening: the count, the link, the title */}
+      {c.id === "cb00-01" && <CountUp t={t} c={c} />}
+      {c.id === "cb00-03" && <LinkCard t={t} from={c.speech.start} to={c.end} />}
+      {c.id === "cb00-04" && <Title t={t} from={c.start + 0.3} />}
 
-      {/* Meet the cube */}
+      {/* Meet the cube, and the letters */}
       {c.id === "cb01-01" && (
-        <Note lang={lang} t={t} from={c.speech.start + 1.5} to={c.end}>
-          {say(lang, "没有中心块：8 个角块，每块 3 种颜色", "No centres: 8 corners, 3 colours each")}
+        <Note t={t} from={c.speech.start + 1.5} to={c.end} top={330}>
+          {["No centre pieces: 8 corners, 3 colours each", "没有中心块：8 个角块，每块 3 种颜色"]}
         </Note>
       )}
-      {c.id === "cb01-02" && <Pairs lang={lang} t={t} c={c} />}
-      {shot.take === "notation" && <Letter lang={lang} take={tl.takes.notation} src={src} t={t} c={{ ...c, start: card("cb01-03").start, end: card("cb01-05").end }} />}
-
-      {/* The solve */}
-      {inSolve && !recap && at && (
-        <>
-          <StageBar lang={lang} stage={{ cb02: 0, cb03: 1, cb04: 2 }[c.section] ?? at.stage} t={t} from={firstSolve.start} />
-          {!["cb02-03", "cb02-09", "cb03-02", "cb03-03", "cb03-04"].includes(c.id) && <StepStrip lang={lang} at={at} opacity={rise(t, firstSolve.start + 1, firstSolve.start + 1.5)} />}
-        </>
+      {c.id === "cb01-02" && <Pairs t={t} c={c} />}
+      {c.id === "cb01-06" && (
+        <Note t={t} from={c.speech.start} to={c.end} top={330} title={["Every move gets its card", "每个转动都有卡片"]}>
+          {["Whenever a move is used, its card shows up here.", "每用到一个转动，它的卡片就出现在这里。"]}
+        </Note>
       )}
-      {inSolve && !recap && !at && c.id === "cb02-01" && <StageBar lang={lang} stage={0} t={t} from={firstSolve.start} />}
+
+      {/* The two big parts */}
+      {part && t >= firstSolve.start && <ChapterBar part={part.part} step={part.step} t={t} from={firstSolve.start} />}
+      {c.id === "cb02-01" && <ChapterCard t={t} from={c.start} number="PART 1" en="The First Layer" zh="第一部分 · 拼第一层" />}
+      {c.id === "cb03-01" && <ChapterCard t={t} from={c.start} number="PART 2" en="The Top Layer" zh="第二部分 · 拼顶层" />}
+      {inSolve && !recap && at && !["cb02-03", "cb02-09", "cb03-02", "cb03-03", "cb03-04"].includes(c.id) && (
+        <StepStrip at={at} opacity={rise(t, firstSolve.start + 1, firstSolve.start + 1.5)} />
+      )}
+      {cardLabel && (
+        <MoveCard label={cardLabel} top={notationPart ? 330 : 380} big={notationPart} opacity={notationPart ? window_(t, byId["cb01-03"].start, byId["cb01-05"].end) : 1} />
+      )}
       {c.id === "cb02-03" && (
-        <Note lang={lang} t={t} from={c.speech.start + 1.2} to={c.end} title={say(lang, "第一块角定下颜色", "The first corner decides")}>
-          <div style={{ display: "flex", flexDirection: "column", gap: 14, marginTop: 8 }}>
-            <span>
-              <Sticker colour={4} size={46} /> {say(lang, "前面：绿色", "Front: green")}
-            </span>
-            <span>
-              <Sticker colour={1} size={46} /> {say(lang, "右边：橙色", "Right: orange")}
-            </span>
-          </div>
+        <Note t={t} from={c.speech.start + 1.2} to={c.end} title={["The first corner decides", "第一块角定下颜色"]}>
+          {[
+            <div key="en" style={{ display: "flex", flexDirection: "column", gap: 12, marginTop: 6 }}>
+              <span>
+                <Sticker colour={4} size={44} /> Front: green
+              </span>
+              <span>
+                <Sticker colour={1} size={44} /> Right: orange
+              </span>
+            </div>,
+            "前面：绿色 · 右边：橙色",
+          ]}
         </Note>
       )}
       {c.id === "cb02-09" && (
-        <Note lang={lang} t={t} from={c.start + 0.3} to={c.end} title={say(lang, "小提示", "A tip")} width={700}>
-          {say(lang, "白色角卡在下面不对的位置？转到右前方，先做一次 R U R′ 把它请出来。", "A white corner stuck in the wrong bottom spot? Turn it to the front right and do R U R′ once to lift it out.")}
+        <Note t={t} from={c.start + 0.3} to={c.end} title={["A tip", "小提示"]}>
+          {["A white corner stuck in the wrong bottom spot? Turn it to the front right and do R U R′ once to lift it out.", "白色角卡在下面不对的位置？转到右前方，先做一次 R U R′ 把它请出来。"]}
         </Note>
       )}
       {c.id === "cb03-02" && (
-        <div style={{ position: "absolute", right: COLUMN.right, width: COLUMN.width, top: 360, display: "flex", justifyContent: "center", opacity: window_(t, c.speech.start, c.end) }}>
-          <Panel style={{ textAlign: "center", width: "100%" }}>
-            <Words lang={lang} size={34} color={AMBER} weight={800}>
-              {say(lang, "小鱼公式 · Sune", "Sune")}
-            </Words>
-            <div style={{ marginTop: 8 }}>
+        <Side t={t} from={c.speech.start} to={c.end} top={250}>
+          <Panel style={{ textAlign: "center", width: COLUMN.width - 60 }}>
+            <Bi en="Sune" zh="小鱼公式" size={40} color={AMBER} weight={800} />
+            <div style={{ marginTop: 12 }}>
               {"R U R′ U R U2 R′".split(" ").map((m, i) => (
-                <Chip key={i} size={52}>
+                <Chip key={i} size={54}>
                   {m}
                 </Chip>
               ))}
             </div>
           </Panel>
-        </div>
+        </Side>
       )}
       {c.id === "cb03-03" && (
-        <Note lang={lang} t={t} from={c.speech.start} to={c.end} title={say(lang, "顶上只有一块黄色", "Exactly one yellow on top")} width={560}>
-          <div style={{ display: "flex", alignItems: "center", gap: 24 }}>
-            <TopView yellow={[false, false, true, false]} mark={2} size={180} />
-            <span>{say(lang, "放在左前方", "put it front-left")}</span>
-          </div>
+        <Note t={t} from={c.speech.start} to={c.end} title={["Exactly one yellow on top", "顶上只有一块黄色"]} top={200}>
+          {[
+            <div key="en" style={{ display: "flex", alignItems: "center", gap: 24 }}>
+              <TopView yellow={[false, false, true, false]} mark={2} size={180} />
+              <span>Put it at the front left.</span>
+            </div>,
+            "把它转到左前方",
+          ]}
         </Note>
       )}
       {c.id === "cb03-04" && (
-        <Note lang={lang} t={t} from={c.speech.start} to={c.end} title={say(lang, "没有，或者有两块", "None, or two")} width={560}>
-          <div style={{ display: "flex", alignItems: "center", gap: 24 }}>
-            <TopView yellow={[false, false, false, false]} sides={{ 2: "left" }} mark={2} size={180} />
-            <span>{say(lang, "左前角的黄色朝左", "front-left corner's yellow faces left")}</span>
-          </div>
+        <Note t={t} from={c.speech.start} to={c.end} title={["None, or two", "没有，或者有两块"]} top={200}>
+          {[
+            <div key="en" style={{ display: "flex", alignItems: "center", gap: 24 }}>
+              <TopView yellow={[false, false, false, false]} sides={{ 2: "left" }} mark={2} size={180} />
+              <span>The front-left corner&apos;s yellow faces left.</span>
+            </div>,
+            "左前角的黄色朝左",
+          ]}
         </Note>
       )}
-      {c.id === "cb04-02" && <Headlights lang={lang} t={t} c={c} />}
+      {c.id === "cb04-02" && <Headlights t={t} c={c} />}
       {c.id === "cb04-04" && (
-        <Note lang={lang} t={t} from={c.speech.start} to={c.end} title={say(lang, "没有车头灯？", "No headlights?")}>
-          {say(lang, "先在随便哪一面做一次换角公式，车头灯就出来了。", "Do the corner algorithm once from anywhere, and they appear.")}
+        <Note t={t} from={c.speech.start} to={c.end} title={["No headlights?", "没有车头灯？"]}>
+          {["Do the corner algorithm once from anywhere, and they appear.", "先在随便哪一面做一次换角公式，车头灯就出来了。"]}
         </Note>
       )}
 
       {/* Once more */}
       {recap && inSolve && (
         <>
-          <StageBar lang={lang} stage={solveAt(solve, tl.plan, src)?.stage ?? 0} t={t} from={byId["cb05-01"].start} />
-          <div style={{ position: "absolute", right: 70, top: 60, fontFamily: MONO, fontSize: 40, color: MUTED, opacity: rise(t, byId["cb05-01"].start, byId["cb05-01"].start + 0.5) }}>
-            {lang === "zh" ? "快放" : "fast"} ×{((shot.to - shot.from) / (shot.end - shot.start)).toFixed(1)}
+          <ChapterBar part={recapStage === 0 ? 1 : 2} step={recapStage === 2 ? 2 : 1} t={t} from={byId["cb05-01"].start} />
+          <div style={{ position: "absolute", right: 80, top: 56, opacity: rise(t, byId["cb05-01"].start, byId["cb05-01"].start + 0.5) }}>
+            <Bi en={`Fast replay ×${((shot.to - shot.from) / (shot.end - shot.start)).toFixed(1)}`} zh="快放" size={34} color={MUTED} align="right" />
           </div>
         </>
       )}
       {c.id === "cb05-02" && (
-        <div style={{ position: "absolute", right: COLUMN.right, width: COLUMN.width, top: 420, display: "flex", justifyContent: "center", opacity: window_(t, c.speech.start + 2, c.end) }}>
-          <Panel style={{ textAlign: "center", width: "100%" }}>
-            <div style={{ fontFamily: MONO, fontSize: 44, color: MINT, fontWeight: 700 }}>is.lucasacademy.org/cube</div>
-            <Words lang={lang} size={30} color={MUTED} style={{ marginTop: 6 }}>
-              {say(lang, "点「Solve it for me」，一步一步看", "Press “Solve it for me” and watch it step by step")}
-            </Words>
+        <Side t={t} from={c.speech.start} to={c.end} top={250}>
+          <Panel style={{ width: COLUMN.width - 60 }}>
+            {(
+              [
+                ["The little move", "小动作", "R U R′ U′"],
+                ["Sune", "小鱼公式", "R U R′ U R U2 R′"],
+                ["The corner algorithm", "换角公式", "R′ F R′ B2 R F′ R′ B2 R2"],
+              ] as const
+            ).map(([en, zh, alg]) => (
+              <div key={en} style={{ margin: "10px 0 18px" }}>
+                <Bi en={en} zh={zh} size={28} color={AMBER} weight={800} />
+                <div style={{ fontFamily: MONO, fontSize: 40, fontWeight: 700, marginTop: 4 }}>{alg}</div>
+              </div>
+            ))}
           </Panel>
-        </div>
+        </Side>
       )}
 
-      {/* The question that ends the film */}
-      {c.id === "cb06-01" && t < tl.endCardStart && (
-        <AbsoluteFill style={{ alignItems: "center", justifyContent: "center", padding: "0 300px", opacity: window_(t, c.speech.start, tl.endCardStart, 0.8, 0.5) }}>
-          <Words lang={lang} size={lang === "zh" ? 58 : 50} weight={700} style={{ textAlign: "center", textShadow: "0 4px 24px rgba(0,0,0,.8)" }}>
-            {c[lang]}
-          </Words>
+      {/* Ending: the link again, the question, the end card */}
+      {c.id === "cb06-01" && <LinkCard t={t} from={c.start + 0.2} to={c.end} end />}
+      {c.id === "cb06-02" && t < tl.endCardStart && (
+        <AbsoluteFill style={{ alignItems: "center", justifyContent: "center", padding: "0 260px", opacity: window_(t, c.speech.start, tl.endCardStart, 0.8, 0.5) }}>
+          <Bi en={c.en} zh={c.zh} size={52} weight={700} align="center" style={{ textShadow: "0 4px 24px rgba(0,0,0,.8)" }} />
         </AbsoluteFill>
       )}
       {t >= tl.endCardStart && (
         <AbsoluteFill style={{ opacity: rise(t, tl.endCardStart, tl.endCardStart + 0.6) }}>
-          <AbsoluteFill style={{ background: NIGHT, opacity: 0.7 }} />
-          <Title lang={lang} t={t} from={tl.endCardStart} />
+          <AbsoluteFill style={{ background: NIGHT, opacity: 0.75 }} />
+          <Title t={t} from={tl.endCardStart} qr />
         </AbsoluteFill>
       )}
       {/* The film opens on a dim cube rather than black (the delivery check allows no black frames). */}
@@ -680,27 +822,18 @@ export const Cube2x2Video: FC<CubeProps> = ({ tl }) => {
   );
 };
 
-/** The YouTube cover: the question and a scrambled cube, nothing else (README "YouTube covers"; one language each). */
-export const Cube2x2Cover: FC<{ lang: Lang }> = ({ lang }) => (
+/** The YouTube cover: the question, English first with the Chinese small under it, and a scrambled cube. */
+export const Cube2x2Cover: FC = () => (
   <AbsoluteFill style={{ background: NIGHT }}>
     <AbsoluteFill style={{ transform: "translateX(430px) scale(1.08)" }}>
       <Img src={file("footage/hero.jpg")} style={{ width: 1920, height: 1080 }} />
     </AbsoluteFill>
-    <AbsoluteFill style={{ background: "linear-gradient(90deg, rgba(4,7,13,1) 0%, rgba(4,7,13,.92) 38%, rgba(4,7,13,0) 58%)" }} />
+    <AbsoluteFill style={{ background: "linear-gradient(90deg, rgba(4,7,13,1) 0%, rgba(4,7,13,.92) 40%, rgba(4,7,13,0) 60%)" }} />
     <AbsoluteFill style={{ justifyContent: "center", paddingLeft: 120 }}>
-      <Words lang={lang} size={lang === "zh" ? 150 : 118} weight={800} style={{ maxWidth: lang === "zh" ? 760 : 900 }}>
-        {say(
-          lang,
-          <>
-            <span style={{ color: AMBER }}>二阶魔方</span>
-            <br />
-            怎么还原？
-          </>,
-          <>
-            How Do You Solve a <span style={{ color: AMBER }}>2×2 Cube</span>?
-          </>,
-        )}
-      </Words>
+      <div style={{ fontFamily: EN, fontSize: 122, fontWeight: 800, color: INK, lineHeight: 1.08, maxWidth: 900 }}>
+        How Do You Solve a <span style={{ color: AMBER }}>2×2 Cube</span>?
+      </div>
+      <div style={{ fontFamily: ZH, fontSize: 64, fontWeight: 600, color: MUTED, marginTop: 30 }}>二阶魔方怎么还原？</div>
     </AbsoluteFill>
   </AbsoluteFill>
 );

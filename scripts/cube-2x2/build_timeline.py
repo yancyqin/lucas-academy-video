@@ -1,4 +1,8 @@
-"""Timelines for 「二阶魔方怎么还原？」 / "How Do You Solve a 2×2 Cube?" (CUBE-2X2.md §4).
+"""The timeline for "How Do You Solve a 2×2 Cube?" / 「二阶魔方怎么还原？」 (CUBE-2X2.md §4).
+
+One picture, two soundtracks (v0.2, Yancy 2026-10-25): English first, with a Chinese audio track for YouTube's
+multi-language audio. Every line gets the time of the LONGER of its two takes, both takes start at the same
+moment, so either track matches the picture; each track gets its own mix and its own captions.
 
 Episode 1 of Fun Informatics does the voice work (scripts/fun-informatics-01/build_timeline.py): it trims and
 levels each Louise take and writes the narration track and the SRT captions; Fun Informatics 3's builder adds
@@ -14,13 +18,13 @@ the caption splitting this film reuses. On top of that this film needs:
   - the music: Mozart's Twinkle Variations, K. 265 (Simone Renzi, CC BY 3.0), the recording Fun Informatics 3
     uses, one variation per section, ending on the theme's own final cadence.
 
-Writes, for each language:
-  public/cube-2x2/timeline.LANG.json   cues, shots and the takes' events, which Remotion loads before rendering
-  public/cube-2x2/audio/LANG.wav       narration
-  public/cube-2x2/audio/LANG.mix.wav   narration over the music, ducked (scripts/music_ducking.py)
-  out/cube-2x2/delivery/cube-2x2.LANG.{zh-Hans,en}.srt
+Writes:
+  public/cube-2x2/timeline.json        cues (both languages' speech), shots and the takes' events, for Remotion
+  public/cube-2x2/audio/LANG.wav       each track's narration
+  public/cube-2x2/audio/LANG.mix.wav   each track's narration over the music, ducked (scripts/music_ducking.py)
+  out/cube-2x2/delivery/cube-2x2.{en,zh-Hans}.srt   each language's captions, timed to its own track
 
-  python3 scripts/cube-2x2/build_timeline.py [zh|en] [--captions-only]
+  python3 scripts/cube-2x2/build_timeline.py [--captions-only]
 """
 import array
 import importlib.util
@@ -45,21 +49,21 @@ wp = shared.wp
 PUB = shared.PUB = ROOT / "public/cube-2x2"
 FILM_NAME = "cube-2x2"
 DELIVERY = ROOT / "out/cube-2x2/delivery"
-VOICES = {lang: shared.MEDIA / f"outputs/louise/{lang}/cube-2x2-v1" for lang in ("zh", "en")}
+VOICES = {lang: shared.MEDIA / f"outputs/louise/{lang}/cube-2x2-v2" for lang in ("zh", "en")}
 TITLE = {"zh": "二阶魔方怎么还原？", "en": "How Do You Solve a 2×2 Cube?"}
 FPS, RATE = shared.FPS, wp.RATE
 LEAD_IN, ONSET, GAP, SECTION_GAP, END_CARD = 1.2, 0.15, 0.4, 0.9, 8.0
-TRANSLATIONS = json.loads((ROOT / "docs/cube-2x2/translations.json").read_text())
+LANGS = ("en", "zh")  # English first; Chinese is the second audio track
 
 # Extra seconds after a line, for a card to read or a result to look at (shots may add more: see SHOTS).
 HOLD = {
-    "cb00-02": 0.6, "cb00-03": 3.0,
-    "cb01-02": 1.2, "cb01-05": 0.6,
+    "cb00-02": 0.6, "cb00-03": 2.0, "cb00-04": 3.0,
+    "cb01-02": 1.2, "cb01-05": 0.6, "cb01-06": 1.0,
     "cb02-03": 1.0, "cb02-06": 1.0, "cb02-08": 1.2, "cb02-09": 1.5,
     "cb03-02": 1.5, "cb03-04": 1.0, "cb03-06": 1.5,
     "cb04-02": 1.0, "cb04-03": 0.5, "cb04-05": 2.0,
-    "cb05-02": 1.5,
-    "cb06-01": 2.5,
+    "cb05-02": 1.0,
+    "cb06-01": 2.0, "cb06-02": 2.5,
 }
 
 # Shots: (first cue, last cue, take, source from, source to, fastest playback). Source points are events of the
@@ -68,11 +72,12 @@ HOLD = {
 # the footage over it on an eased curve, so the picture settles between shots instead of jumping.
 SHOTS = [
     ("cb00-01", "cb00-02", "hero", ("start",), ("end",), 1.5),
-    ("cb00-03", "cb00-03", "hero", ("end", -0.1), ("end",), 1.0),
+    ("cb00-03", "cb00-04", "hero", ("end", -0.1), ("end",), 1.0),
     ("cb01-01", "cb01-02", "meet", ("start",), ("end",), 1.5),
-    ("cb01-03", "cb01-03", "notation", ("start",), ("mark", "R'"), 1.2),
-    ("cb01-04", "cb01-04", "notation", ("mark", "R'"), ("mark", "R2"), 1.2),
-    ("cb01-05", "cb01-05", "notation", ("mark", "R2"), ("end",), 1.4),
+    ("cb01-03", "cb01-03", "notation", ("start",), ("mark", "U"), 1.3),
+    ("cb01-04", "cb01-04", "notation", ("mark", "U"), ("mark", "U2"), 1.4),
+    ("cb01-05", "cb01-05", "notation", ("mark", "U2"), ("end", -0.02), 1.4),
+    ("cb01-06", "cb01-06", "notation", ("end", -0.02), ("end",), 1.0),
     # The solve, one take. The first layer is filmed from below.
     ("cb02-01", "cb02-01", "solve", ("start",), ("step", 0, 0), 1.5),
     ("cb02-02", "cb02-02", "solve", ("step", 0, 0), ("step", 0, 1), 1.0),
@@ -95,7 +100,7 @@ SHOTS = [
     ("cb04-05", "cb04-05", "solve", ("step", 2, 1), ("end",), 2.5),
     # Once more, the whole solve, quickly.
     ("cb05-01", "cb05-02", "solve", ("step", 0, 0), ("mark", "solved", 0.7), 7.0),
-    ("cb06-01", "cb06-01", "meet", ("start",), ("end",), 1.2),
+    ("cb06-01", "cb06-02", "meet", ("start",), ("end",), 1.2),
 ]
 
 # Music: K. 265 in Simone Renzi's recording (public/cube-2x2/music/SOURCES.txt), the variations as cut for
@@ -195,7 +200,7 @@ def music_bed(lang, cues, total) -> Path:
     return out
 
 
-def build(langs):
+def build():
     cue_text = json.loads((PUB / "narration/cues.json").read_text())
     ids = [c["id"] for c in cue_text]
     takes = {name: take(name) for name in ("hero", "meet", "notation", "solve")}
@@ -209,66 +214,71 @@ def build(langs):
     covered = {cid for w in windows for cid in ids[ids.index(w["first"]):ids.index(w["last"]) + 1]}
     assert covered == set(ids), f"cues without a shot: {sorted(set(ids) - covered)}"
 
-    for lang in langs:
-        missing, clips = [], {}
+    missing, clips = [], {"en": {}, "zh": {}}
+    for lang in LANGS:
         for c in cue_text:
             path = VOICES[lang] / f"{c['id']}.wav"
             if path.is_file():
-                clips[c["id"]] = wp.level(wp.trim(wp.read_wav(path)))
+                clips[lang][c["id"]] = wp.level(wp.trim(wp.read_wav(path)))
             else:
-                missing.append(c["id"])
-                clips[c["id"]] = wp.estimate(lang, c[lang])
-        # A shot's cues need at least (source length / fastest) seconds; the shortfall goes on its last cue.
-        slot = {}
-        for n, c in enumerate(cue_text):
-            last_in_section = n + 1 == len(ids) or ids[n + 1][:4] != c["id"][:4]
-            speech = len(clips[c["id"]]) / RATE
-            slot[c["id"]] = ONSET + speech + GAP + HOLD.get(c["id"], 0) + (SECTION_GAP if last_in_section else 0)
-        extra = {}
-        for w in windows:
-            span = ids[ids.index(w["first"]):ids.index(w["last"]) + 1]
-            need = (w["to"] - w["from"]) / w["fastest"]
-            have = sum(slot[cid] for cid in span)
-            if need > have:
-                extra[w["last"]] = round(need - have + 0.2, 3)
-        t, cues, sounds = LEAD_IN, [], []
-        for c in cue_text:
-            speech = len(clips[c["id"]]) / RATE
-            end = t + slot[c["id"]] + extra.get(c["id"], 0)
-            cues.append({"id": c["id"], "section": c["section"], "zh": c["zh"], "en": c["en"],
-                         "start": round(t, 3), "end": round(end, 3),
-                         "speech": {"start": round(t + ONSET, 3), "end": round(t + ONSET + speech, 3)}})
-            sounds.append((t + ONSET, clips[c["id"]]))
-            t = end
-        total = t + END_CARD
-        by_id = {c["id"]: c for c in cues}
-        shots = [{"take": w["take"], "cues": [w["first"], w["last"]], "start": by_id[w["first"]]["start"],
-                  "end": by_id[w["last"]]["end"], "from": w["from"], "to": w["to"]} for w in windows]
-        audio = PUB / "audio"
-        audio.mkdir(parents=True, exist_ok=True)
+                missing.append(f"{lang}:{c['id']}")
+                clips[lang][c["id"]] = wp.estimate(lang, c[lang])
+    length = {lang: {cid: len(clip) / RATE for cid, clip in clips[lang].items()} for lang in LANGS}
+    # A line lasts as long as the longer of its two takes.
+    slot = {}
+    for n, c in enumerate(cue_text):
+        last_in_section = n + 1 == len(ids) or ids[n + 1][:4] != c["id"][:4]
+        speech = max(length[lang][c["id"]] for lang in LANGS)
+        slot[c["id"]] = ONSET + speech + GAP + HOLD.get(c["id"], 0) + (SECTION_GAP if last_in_section else 0)
+    # A shot's cues need at least (source length / fastest) seconds; the shortfall goes on its last cue.
+    extra = {}
+    for w in windows:
+        span = ids[ids.index(w["first"]):ids.index(w["last"]) + 1]
+        need = (w["to"] - w["from"]) / w["fastest"]
+        have = sum(slot[cid] for cid in span)
+        if need > have:
+            extra[w["last"]] = round(need - have + 0.2, 3)
+    t, cues = LEAD_IN, []
+    for c in cue_text:
+        end = t + slot[c["id"]] + extra.get(c["id"], 0)
+        speeches = {lang: {"start": round(t + ONSET, 3), "end": round(t + ONSET + length[lang][c["id"]], 3)} for lang in LANGS}
+        cues.append({"id": c["id"], "section": c["section"], "zh": c["zh"], "en": c["en"], "start": round(t, 3), "end": round(end, 3),
+                     "speech": {"start": round(t + ONSET, 3), "end": round(t + ONSET + max(length[l][c["id"]] for l in LANGS), 3)},
+                     "speeches": speeches})
+        t = end
+    total = t + END_CARD
+    by_id = {c["id"]: c for c in cues}
+    shots = [{"take": w["take"], "cues": [w["first"], w["last"]], "start": by_id[w["first"]]["start"],
+              "end": by_id[w["last"]]["end"], "from": w["from"], "to": w["to"]} for w in windows]
+    audio = PUB / "audio"
+    audio.mkdir(parents=True, exist_ok=True)
+    bed = music_bed("both", cues, total) if MUSIC_SOURCE.is_file() else None  # one bed under both tracks
+    for lang in LANGS:
         track = array.array("h", bytes(2 * round(total * RATE)))
-        for start, clip in sounds:
-            k = round(start * RATE)
+        for c in cues:
+            k = round(c["speeches"][lang]["start"] * RATE)
+            clip = clips[lang][c["id"]]
             track[k:k + len(clip)] = clip
         wp.write_wav(audio / f"{lang}.wav", track, RATE)
-        if MUSIC_SOURCE.is_file():
-            wp.MUSIC = music_bed(lang, cues, total)
-        wp.mix_with_music(audio / f"{lang}.wav", audio / f"{lang}.mix.wav", cues, total)
+        if bed:
+            wp.MUSIC = bed
+        own = [{**c, "speech": c["speeches"][lang]} for c in cues]
+        wp.mix_with_music(audio / f"{lang}.wav", audio / f"{lang}.mix.wav", own, total)
         finish(audio / f"{lang}.mix.wav")
-        write_captions(lang, cues)
-        data = {"fps": FPS, "leadIn": LEAD_IN, "title": TITLE, "footage": footage,
-                "footageSeconds": {name: shared.seconds(PUB / "footage" / name) for name in footage},
-                "lang": lang, "durationSeconds": round(total, 3), "endCardStart": round(t, 3),
-                "cues": cues, "shots": shots,
-                "takes": {name: {k: v for k, v in record.items() if k != "plan"} for name, record in takes.items()},
-                "plan": takes["solve"].get("plan"),
-                "draft": bool(missing)}
-        (PUB / f"timeline.{lang}.json").write_text(json.dumps(data, ensure_ascii=False, indent=1) + "\n")
-        added = ", ".join(f"{cid} +{s:.1f}s" for cid, s in extra.items())
-        print(f"{lang}: {len(cues)} cues, {len(shots)} shots, {total:.1f}s ({total / 60:.1f} min)"
-              + (f"; held for footage: {added}" if added else ""))
-        if missing:
-            print(f"  ESTIMATED (no take yet): {', '.join(missing)}")
+    write_captions(cues)
+    data = {"fps": FPS, "leadIn": LEAD_IN, "title": TITLE, "footage": footage,
+            "footageSeconds": {name: shared.seconds(PUB / "footage" / name) for name in footage},
+            "lang": "en", "langs": list(LANGS), "durationSeconds": round(total, 3), "endCardStart": round(t, 3),
+            "cues": cues, "shots": shots,
+            "takes": {name: {k: v for k, v in record.items() if k != "plan"} for name, record in takes.items()},
+            "plan": takes["solve"].get("plan"),
+            "draft": bool(missing)}
+    (PUB / "timeline.json").write_text(json.dumps(data, ensure_ascii=False, indent=1) + "\n")
+    added = ", ".join(f"{cid} +{s:.1f}s" for cid, s in extra.items())
+    print(f"{len(cues)} cues, {len(shots)} shots, {total:.1f}s ({total / 60:.1f} min)"
+          + (f"; held for footage: {added}" if added else ""))
+    if missing:
+        print(f"  ESTIMATED (no take yet): {', '.join(missing)}")
 
 
 def finish(mix: Path) -> None:
@@ -285,15 +295,26 @@ def finish(mix: Path) -> None:
     raw.unlink()
 
 
-def write_captions(lang, cues):
-    fi03.DELIVERY, fi03.FILM_NAME, fi03.TRANSLATIONS = DELIVERY, FILM_NAME, TRANSLATIONS
-    fi03.write_captions(lang, cues)
+def write_captions(cues):
+    """Each language's own words, timed to its own track (Fun Informatics 3's caption splitting)."""
+    DELIVERY.mkdir(parents=True, exist_ok=True)
+    for name, key in (("en", "en"), ("zh-Hans", "zh")):
+        blocks, n = [], 0
+        for c in cues:
+            parts = fi03.pieces(c[key], key)
+            a, b = c["speeches"][key]["start"], c["speeches"][key]["end"]
+            total = sum(len(p) for p in parts)
+            t = a
+            for k, part in enumerate(parts):
+                end = b + 0.6 if k == len(parts) - 1 else t + (b - a) * len(part) / total
+                n += 1
+                blocks.append(f"{n}\n{wp.srt_time(t)} --> {wp.srt_time(end)}\n{part}\n")
+                t = end
+        (DELIVERY / f"{FILM_NAME}.{name}.srt").write_text("\n".join(blocks), encoding="utf-8")
 
 
 if __name__ == "__main__":
-    langs = [a for a in sys.argv[1:] if a in ("zh", "en")] or ["zh", "en"]
     if "--captions-only" in sys.argv:
-        for lang in langs:
-            write_captions(lang, json.loads((PUB / f"timeline.{lang}.json").read_text())["cues"])
+        write_captions(json.loads((PUB / "timeline.json").read_text())["cues"])
     else:
-        build(langs)
+        build()

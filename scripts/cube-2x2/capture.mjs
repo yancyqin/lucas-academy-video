@@ -11,7 +11,7 @@
 // Takes:
 //   hero      the scrambled cube from the usual view, one slow turn round (the opening), 20 s
 //   meet      a solved cube turning slowly, tilted to show top and bottom (meet the cube), 20 s
-//   notation  R, R′, U, U′, R2 and y on a solved cube, each held a moment (the letters)
+//   notation  R, R′, U, U′, F, F′, B, B′, U2 (and back), y, y′ on a solved cube, each held a moment
 //   solve     the whole guided solve of the scramble, one take: the first layer seen from below, the rest from
 //             above, a turn round at the end
 
@@ -179,7 +179,8 @@ const SCRIPTS = {
 
   async notation(r) {
     await r.hold(20);
-    for (const [text, rest] of [["R", 30], ["R'", 30], ["U", 30], ["U'", 30], ["R2", 30], ["R2", 20], ["y", 30], ["y'", 20]]) {
+    // In the narration's order: R, R′ (cb01-03); U, U′, F, F′, B, B′ (cb01-04); U2 and back, y, y′ (cb01-05).
+    for (const [text, rest] of [["R", 26], ["R'", 30], ["U", 22], ["U'", 22], ["F", 22], ["F'", 22], ["B", 22], ["B'", 30], ["U2", 22], ["U2", 22], ["y", 26], ["y'", 20]]) {
       r.mark(text);
       await r.play(text, rest);
     }

@@ -308,11 +308,10 @@ export const Root: FC = () => {
       <Composition id="FunInformatics02CoverEn" component={FunInformatics02EnglishCover} durationInFrames={1} fps={30} width={1920} height={1080} />
       <Composition id="FunInformatics03Zh" component={FunInformatics03Video} durationInFrames={12000} fps={30} width={1920} height={1080} defaultProps={{tl:null,lang:"zh"}} calculateMetadata={calculateNoiseMetadata} />
       <Composition id="FunInformatics03En" component={FunInformatics03Video} durationInFrames={12000} fps={30} width={1920} height={1080} defaultProps={{tl:null,lang:"en"}} calculateMetadata={calculateNoiseMetadata} />
-      {/* 「二阶魔方怎么还原？」 / "How Do You Solve a 2×2 Cube?" (CUBE-2X2.md) */}
-      <Composition id="Cube2x2Zh" component={Cube2x2Video} durationInFrames={9000} fps={30} width={1920} height={1080} defaultProps={{tl:null,lang:"zh"}} calculateMetadata={calculateCubeMetadata} />
-      <Composition id="Cube2x2En" component={Cube2x2Video} durationInFrames={9000} fps={30} width={1920} height={1080} defaultProps={{tl:null,lang:"en"}} calculateMetadata={calculateCubeMetadata} />
-      <Composition id="Cube2x2CoverZh" component={Cube2x2Cover} durationInFrames={1} fps={30} width={1920} height={1080} defaultProps={{lang:"zh" as const}} />
-      <Composition id="Cube2x2CoverEn" component={Cube2x2Cover} durationInFrames={1} fps={30} width={1920} height={1080} defaultProps={{lang:"en" as const}} />
+      {/* "How Do You Solve a 2×2 Cube?" (CUBE-2X2.md): one picture; English narration, and the Chinese track to preview */}
+      <Composition id="Cube2x2" component={Cube2x2Video} durationInFrames={12000} fps={30} width={1920} height={1080} defaultProps={{tl:null,track:"en" as const}} calculateMetadata={calculateCubeMetadata} />
+      <Composition id="Cube2x2ZhTrack" component={Cube2x2Video} durationInFrames={12000} fps={30} width={1920} height={1080} defaultProps={{tl:null,track:"zh" as const}} calculateMetadata={calculateCubeMetadata} />
+      <Composition id="Cube2x2Cover" component={Cube2x2Cover} durationInFrames={1} fps={30} width={1920} height={1080} />
       <Composition id="FunEconomics01Zh" component={FunEconomics01Video} durationInFrames={18000} fps={30} width={1920} height={1080} defaultProps={{tl:null,lang:"zh"}} calculateMetadata={calculateEconMetadata} />
       <Composition id="FunEconomics01En" component={FunEconomics01Video} durationInFrames={18000} fps={30} width={1920} height={1080} defaultProps={{tl:null,lang:"en"}} calculateMetadata={calculateEconMetadata} />
       <Composition id="FunEconomics01CoverZh" component={FunEconomics01Cover} durationInFrames={1} fps={30} width={1920} height={1080} />

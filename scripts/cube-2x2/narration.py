@@ -1,8 +1,7 @@
 """Narration inputs for 「二阶魔方怎么还原？」 / "How Do You Solve a 2×2 Cube?" (CUBE-2X2.md).
 
-docs/cube-2x2/{zh,en}-edit.md are the source of truth: the same cue ids in both, the same footage and the same
-examples, so one cues.json carries both captions and translations.json (each film's other-language SRT) is
-the other edit file. This writes public/cube-2x2/narration/{zh,en}.json in lucas-narrate's line format (what
+docs/cube-2x2/{en,zh}-edit.md are the source of truth: the English narration and the Chinese track, the same cue
+ids in both, the same footage and the same examples, so one cues.json carries both captions. This writes public/cube-2x2/narration/{zh,en}.json in lucas-narrate's line format (what
 the voice READS: cube notation spelled out, R′ as "R 撇" / "R prime", R2 as "R 两下" / "R two", runs of moves
 separated so each letter is heard, the algorithm lines a little slower) and cues.json (what the captions SHOW). Each line gets its voice's default
 delivery from scripts/voice_defaults.py.
@@ -37,10 +36,10 @@ JOIN = {"zh": "，", "en": ", "}
 # Line-specific readings, as (caption, spoken) swaps applied before the notation is spelled out.
 SPOKEN = {
     "zh": {
-        "cb01-05": [("后面跟一个 2，", "后面跟一个二，")],
+        "cb01-05": [("跟一个数字 2，", "跟一个数字二，")],
     },
     "en": {
-        "cb01-05": [("A 2 after a letter", "A two after a letter")],
+        "cb01-05": [("A 2 means", "A two means")],
         # The v0.1 take dropped "it" ("to lift out first").
         "cb02-09": [("once to lift it out first", "once, to lift it out first")],
         # The v0.1 take ran "do the algorithm once" together ("duty algorithm wants").
@@ -80,9 +79,6 @@ def main():
     cues = [{"id": cid, "section": zh[cid]["section"], "zh": shared.plain(zh[cid]["text"]),
              "en": shared.plain(en[cid]["text"])} for cid in zh]
     (OUT / "cues.json").write_text(json.dumps(cues, ensure_ascii=False, indent=2) + "\n")
-    # Both films show the same thing, so each one's other-language captions are the other edit file.
-    translations = {"zh-film-en": {c["id"]: c["en"] for c in cues}, "en-film-zh": {c["id"]: c["zh"] for c in cues}}
-    (SRC / "translations.json").write_text(json.dumps(translations, ensure_ascii=False, indent=1) + "\n")
     print(f"{len(cues)} cues per language -> {OUT}")
 
 
