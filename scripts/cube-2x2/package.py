@@ -31,10 +31,10 @@ spec.loader.exec_module(fi03)
 TITLE = {"en": "How Do You Solve a 2×2 Cube?", "zh": "二阶魔方怎么还原？"}
 TOPICS = ["rubikscube", "2x2", "cubing", "puzzle", "howtosolve", "魔方"]
 CHAPTERS = {
-    "en": {"cb00": "Only eight pieces", "cb01": "Meet the cube: colours and letters", "cb02": "Part 1: the first layer",
+    "en": {"cb00": "The challenge, and the online cube", "cb01": "The letters", "cb02": "Part 1: the first layer",
            "cb03": "Part 2: the top layer, step 1: a yellow top", "cb04": "Part 2, step 2: the corners", "cb05": "Once more",
            "cb06": "Practise online, and one last question"},
-    "zh": {"cb00": "只有八块", "cb01": "先认识它：颜色和字母", "cb02": "第一部分：拼第一层", "cb03": "第二部分：拼顶层，第一步：顶面全黄",
+    "zh": {"cb00": "挑战，和网页魔方", "cb01": "字母", "cb02": "第一部分：拼第一层", "cb03": "第二部分：拼顶层，第一步：顶面全黄",
            "cb04": "第二部分，第二步：换好四个角", "cb05": "再看一遍", "cb06": "在网上练，和最后一个问题"},
 }
 MUSIC = """W. A. Mozart, 12 Variations on "Ah vous dirai-je, Maman", K. 265 — Simone Renzi, piano. CC BY 3.0.
@@ -103,10 +103,10 @@ def chapters(tl, lang):
 
 def text(tl, report):
     ending = {lang: next(c for c in tl["cues"] if c["id"] == "cb06-02")[lang] for lang in ("en", "zh")}
-    en = f"""A 2×2 cube has only eight pieces, yet it can be scrambled more than three and a half million ways. Can every one be solved? Yes!
+    en = f"""Three and a half million ways to scramble a 2×2 cube. Most people never solve one. By the end of this video, you will.
 This film solves it the beginner's way, in two parts: the first layer (one little move, R U R′ U′), then the top layer: a yellow top (Sune, R U R′ U R U2 R′) and the last corners (R′ F R′ B2 R F′ R′ B2 R2). Every move gets a card on screen, every time it is used.
 
-No cube? Practise online: https://is.lucasacademy.org/cube/ — turn it, scramble it, and press "Solve it for me" to be walked through every step, on any cube from 2×2 to 11×11.
+Try it online, right now: https://is.lucasacademy.org/cube/ — free. Press "Step by step" and it walks you through every move, on any cube from 2×2 to 11×11.
 
 中文配音：在音轨设置里选「中文」。
 
@@ -122,10 +122,10 @@ The recording was excerpted, joined, crossfaded and levelled for this film.
 
 {hashtags(TOPICS)}
 """
-    zh = f"""二阶魔方只有八块，却能打乱成三百六十七万多种样子。每一种都能还原吗？能！
+    zh = f"""二阶魔方能打乱成三百六十七万多种样子，大多数人一次都没还原过。看完这个视频，你就会了。
 这一集用初学者的方法，分两部分还原：先拼第一层（一个小动作 R U R′ U′），再拼顶层：顶面全黄（小鱼公式 R U R′ U R U2 R′）、换好四个角（R′ F R′ B2 R F′ R′ B2 R2）。每用到一个转动，屏幕上都有它的卡片。
 
-没有魔方？在网上也能练：https://is.lucasacademy.org/cube/ 点「Solve it for me」，它会一步一步带你还原，二阶到十一阶都可以。
+现在就能在网上试：https://is.lucasacademy.org/cube/ 免费。点 Step by step，它会一步一步带你还原，二阶到十一阶都可以。
 
 作者 Lucas Academy Team
 配音为 AI 合成，使用 Louise 的授权声线（英文原声，另有中文音轨）。

@@ -21,7 +21,8 @@ import { CUBE_URL, QR_ROWS } from "./qr";
 type Lang = "zh" | "en";
 type Span = { start: number; end: number };
 type Cue = { id: string; section: string; zh: string; en: string; start: number; end: number; speech: Span; speeches: Record<Lang, Span> };
-type Shot = { take: string; cues: [string, string]; start: number; end: number; from: number; to: number };
+/** `keys`: [film seconds, source seconds] points to follow instead of the eased curve (the letters, timed to the words). */
+type Shot = { take: string; cues: [string, string]; start: number; end: number; from: number; to: number; keys?: [number, number][] };
 type CubeMove = { axis: number; lo: number; hi: number; quarter: number };
 type TakeMove = { stage?: number; step?: number; index?: number; move?: CubeMove; label?: string; start: number; end: number };
 type Take = {
@@ -104,6 +105,14 @@ const profile = (u: number, r: number) => {
   return 0.5 * v * r + v * (x - r);
 };
 const sourceAt = (shot: Shot, t: number) => {
+  if (shot.keys) {
+    const k = shot.keys;
+    if (t <= k[0][0]) return k[0][1];
+    for (let i = 1; i < k.length; i += 1) {
+      if (t <= k[i][0]) return k[i - 1][1] + ((k[i][1] - k[i - 1][1]) * (t - k[i - 1][0])) / (k[i][0] - k[i - 1][0]);
+    }
+    return k[k.length - 1][1];
+  }
   const length = shot.to - shot.from;
   const span = shot.end - shot.start;
   if (length <= 0.02) return shot.from;
@@ -121,7 +130,9 @@ type Layout = { x: number; y: number; s: number };
 /** The cube in the middle (title, closing question, end card) or small on the left, beside the cards. */
 const CENTRE: Layout = { x: 0, y: 0, s: 1 };
 const LEFT: Layout = { x: -400, y: 10, s: 0.62 };
-const CENTRED = new Set(["cb00-04", "cb06-02"]);
+const CENTRED = new Set(["cb00-03", "cb06-02"]);
+/** The real page (take "page") sits in a browser window on the left, its address bar above it. */
+const PAGE: Layout = { x: -330, y: 40, s: 0.6 };
 const layoutAt = (cues: Cue[], t: number): Layout => {
   const i = Math.max(0, cues.findIndex((c) => c.start <= t && t < c.end));
   const target = (k: number) => (k < 0 ? LEFT : CENTRED.has(cues[k].id) ? CENTRE : LEFT);
@@ -141,6 +152,7 @@ const Footage: FC<{ tl: CubeTimeline; shot: Shot; t: number; dim?: number; layou
   const drift = still ? 1 + (0.04 * (1 - Math.cos(2 * Math.PI * u))) / 2 : 1;
   return (
     <AbsoluteFill>
+      {shot.take === "page" ? <BrowserFrame /> : null}
       <AbsoluteFill style={{ transform: `translate(${layout.x}px, ${layout.y}px) scale(${layout.s * drift})` }}>
         <Freeze frame={0}>
           <OffthreadVideo src={file(`footage/${shot.take}.mp4`)} muted trimBefore={Math.round(src * tl.fps)} style={{ width: "100%", height: "100%" }} />
@@ -148,6 +160,38 @@ const Footage: FC<{ tl: CubeTimeline; shot: Shot; t: number; dim?: number; layou
       </AbsoluteFill>
       {dim > 0 && <AbsoluteFill style={{ background: NIGHT, opacity: dim }} />}
     </AbsoluteFill>
+  );
+};
+
+/** The window around the page take: a rounded frame and an address bar reading the page's address. */
+const BrowserFrame: FC = () => {
+  const width = 1920 * PAGE.s;
+  const height = 1080 * PAGE.s;
+  const left = 960 + PAGE.x - width / 2;
+  const top = 540 + PAGE.y - height / 2;
+  return (
+    <div
+      style={{
+        position: "absolute",
+        left: left - 10,
+        top: top - 58,
+        width: width + 20,
+        height: height + 68,
+        borderRadius: 22,
+        background: "#1b2533",
+        border: `1px solid ${LINE}`,
+        boxShadow: "0 30px 80px rgba(0,0,0,.55)",
+      }}
+    >
+      <div style={{ display: "flex", alignItems: "center", gap: 10, height: 48, padding: "0 18px" }}>
+        {["#ff5f57", "#febc2e", "#28c840"].map((colour) => (
+          <span key={colour} style={{ width: 14, height: 14, borderRadius: 7, background: colour }} />
+        ))}
+        <div style={{ marginLeft: 16, flex: 1, height: 30, borderRadius: 15, background: "rgba(255,255,255,.08)", display: "flex", alignItems: "center", padding: "0 16px", fontFamily: MONO, fontSize: 20, color: INK }}>
+          🔒 {CUBE_URL}
+        </div>
+      </div>
+    </div>
   );
 };
 
@@ -490,23 +534,18 @@ const QR: FC<{ size: number }> = ({ size }) => {
   );
 };
 
-/** The cube page's address and QR code: "no cube? practise online". */
+/** The cube page's address and QR code, beside the page itself: try it online, right now. */
 const LinkCard: FC<{ t: number; from: number; to: number; end?: boolean }> = ({ t, from, to, end }) => (
-  <Side t={t} from={from} to={to} top={170}>
-    <Panel style={{ width: COLUMN.width - 60, padding: "30px 36px" }}>
-      <Bi en="No cube? Practise online." zh="没有魔方？在网上也能练。" size={48} weight={800} />
-      <div style={{ display: "flex", gap: 32, alignItems: "center", margin: "26px 0 22px" }}>
-        <QR size={270} />
-        <Bi
-          en={end ? "Press “Solve it for me” and it walks you through every step." : "Turn it, scramble it, and let it solve step by step."}
-          zh={end ? "点「Solve it for me」，它会一步一步带你还原。" : "转一转、打乱，再让它一步一步还原。"}
-          size={32}
-          weight={600}
-        />
+  <div style={{ position: "absolute", top: 200, right: 60, width: 620, opacity: window_(t, from, to), transform: `translateY(${(1 - rise(t, from, from + 0.5)) * 18}px)` }}>
+    <Panel style={{ padding: "28px 32px", textAlign: "center" }}>
+      <Bi en={end ? "No cube yet? Practise online." : "Try it online, right now."} zh={end ? "还没有魔方？在网上练。" : "现在就能在网上试。"} size={44} weight={800} />
+      <div style={{ display: "flex", justifyContent: "center", margin: "22px 0 18px" }}>
+        <QR size={250} />
       </div>
-      <div style={{ fontFamily: MONO, fontSize: 40, color: MINT, fontWeight: 700, textAlign: "center" }}>{CUBE_URL}</div>
+      <div style={{ fontFamily: MONO, fontSize: 36, color: MINT, fontWeight: 700 }}>{CUBE_URL}</div>
+      <Bi en="Free · press “Step by step” and it walks you through every move" zh="免费 · 点 Step by step，一步一步带你还原" size={26} color={MUTED} weight={500} style={{ marginTop: 14 }} />
     </Panel>
-  </Side>
+  </div>
 );
 
 const Title: FC<{ t: number; from: number; qr?: boolean }> = ({ t, from, qr }) => (
@@ -559,29 +598,9 @@ const CountUp: FC<{ t: number; c: Cue }> = ({ t, c }) => {
       <Panel style={{ textAlign: "center", width: 640 }}>
         <div style={{ fontFamily: MONO, fontSize: 104, fontWeight: 800, color: AMBER }}>{value.toLocaleString("en-US")}</div>
         <Bi en="ways to scramble it" zh="种打乱的样子" size={40} color={INK} />
-      </Panel>
-    </Side>
-  );
-};
-
-const Pairs: FC<{ t: number; c: Cue }> = ({ t, c }) => {
-  const names: Record<number, [string, string]> = { 2: ["white", "白"], 3: ["yellow", "黄"], 4: ["green", "绿"], 5: ["blue", "蓝"], 0: ["red", "红"], 1: ["orange", "橙"] };
-  return (
-    <Side t={t} from={c.speech.start} to={c.end} top={250}>
-      <Panel style={{ width: 640 }}>
-        {[
-          [2, 3],
-          [4, 5],
-          [0, 1],
-        ].map(([a, b], i) => (
-          <div key={i} style={{ display: "flex", alignItems: "center", gap: 20, margin: "16px 0", opacity: rise(t, c.speech.start + 0.6 + i * 0.9, c.speech.start + 1.1 + i * 0.9) }}>
-            <Sticker colour={a} />
-            <Bi en={names[a][0]} zh={names[a][1]} size={34} style={{ width: 140 }} />
-            <div style={{ fontFamily: EN, fontSize: 40, color: MUTED }}>⟷</div>
-            <Sticker colour={b} />
-            <Bi en={names[b][0]} zh={names[b][1]} size={34} style={{ width: 150 }} />
-          </div>
-        ))}
+        <div style={{ opacity: rise(t, c.speech.start + (c.speech.end - c.speech.start) * 0.45, c.speech.start + (c.speech.end - c.speech.start) * 0.55), marginTop: 22 }}>
+          <Bi en="Most people never solve one." zh="大多数人一次都没还原过。" size={36} color={AMBER} weight={800} />
+        </div>
       </Panel>
     </Side>
   );
@@ -659,43 +678,38 @@ export const Cube2x2Video: FC<CubeProps> = ({ tl, track = "en" }) => {
   const part = partOf(c.section);
   const firstSolve = byId["cb02-01"];
   const ending = c.id === "cb06-02" || t >= tl.endCardStart;
-  const layout = t >= tl.endCardStart ? CENTRE : layoutAt(tl.cues, t);
+  const layout = t >= tl.endCardStart ? CENTRE : shot.take === "page" ? PAGE : layoutAt(tl.cues, t);
   // The move card: whenever a take is turning a move (and for a moment after), in the letters and in the solve.
   const take = tl.takes[shot.take];
-  const notationPart = shot.take === "notation";
+  const notationPart = shot.take === "letters";
   const srcFrame = Math.round(src * (take?.fps ?? 30));
-  const turningNow = take && (notationPart || (inSolve && !recap)) ? moveAt(take, srcFrame, notationPart ? 40 : 14) : null;
+  // Not in the opening's fast replay (cb00) or the recap: there the moves fly past too quickly to read.
+  const turningNow = take && (notationPart || (inSolve && !recap && c.section !== "cb00")) ? moveAt(take, srcFrame, notationPart ? 40 : 14) : null;
   const cardLabel = turningNow ? (turningNow.label ? prime(turningNow.label) : turningNow.move ? moveName(turningNow.move) : null) : null;
 
   return (
     <AbsoluteFill style={{ background: NIGHT, color: INK, fontFamily: EN }}>
       <Audio src={file(`audio/${track}.mix.wav`)} />
-      {crossing && previous && <Footage tl={tl} shot={previous} t={previous.end - 0.01} layout={layout} />}
+      {crossing && previous && <Footage tl={tl} shot={previous} t={previous.end - 0.01} layout={previous.take === "page" ? PAGE : layoutAt(tl.cues, previous.end - 0.01)} />}
       <AbsoluteFill style={{ opacity: crossing ? rise(t, shot.start, shot.start + XFADE) : 1 }}>
         <Footage
           tl={tl}
           shot={shot}
           t={t}
           layout={layout}
-          dim={c.id === "cb00-04" ? 0.72 * rise(t, c.start, c.start + 0.6) : ending ? 0.78 * rise(t, c.start, c.start + 0.8) : 0}
+          dim={c.id === "cb00-03" ? 0.72 * rise(t, c.start, c.start + 0.6) : ending ? 0.78 * rise(t, c.start, c.start + 0.8) : 0}
         />
       </AbsoluteFill>
 
-      {/* Opening: the count, the link, the title */}
+      {/* Opening: the payoff and the challenge, the page and its guide, the title */}
       {c.id === "cb00-01" && <CountUp t={t} c={c} />}
-      {c.id === "cb00-03" && <LinkCard t={t} from={c.speech.start} to={c.end} />}
-      {c.id === "cb00-04" && <Title t={t} from={c.start + 0.3} />}
+      {c.id === "cb00-02" && <LinkCard t={t} from={c.start + 0.2} to={c.end} />}
+      {c.id === "cb00-03" && <Title t={t} from={c.start + 0.2} />}
 
-      {/* Meet the cube, and the letters */}
+      {/* The letters: one line, a card for each move as it turns */}
       {c.id === "cb01-01" && (
-        <Note t={t} from={c.speech.start + 1.5} to={c.end} top={330}>
-          {["No centre pieces: 8 corners, 3 colours each", "没有中心块：8 个角块，每块 3 种颜色"]}
-        </Note>
-      )}
-      {c.id === "cb01-02" && <Pairs t={t} c={c} />}
-      {c.id === "cb01-06" && (
-        <Note t={t} from={c.speech.start} to={c.end} top={330} title={["Every move gets its card", "每个转动都有卡片"]}>
-          {["Whenever a move is used, its card shows up here.", "每用到一个转动，它的卡片就出现在这里。"]}
+        <Note t={t} from={c.speech.start + 0.5} to={c.end} top={130} title={["Every move gets its card", "每个转动都有卡片"]}>
+          {["No need to memorise: it shows up every time.", "不用背：每次用到都会出现。"]}
         </Note>
       )}
 
@@ -707,7 +721,7 @@ export const Cube2x2Video: FC<CubeProps> = ({ tl, track = "en" }) => {
         <StepStrip at={at} opacity={rise(t, firstSolve.start + 1, firstSolve.start + 1.5)} />
       )}
       {cardLabel && (
-        <MoveCard label={cardLabel} top={notationPart ? 330 : 380} big={notationPart} opacity={notationPart ? window_(t, byId["cb01-03"].start, byId["cb01-05"].end) : 1} />
+        <MoveCard label={cardLabel} top={notationPart ? 400 : 380} big={notationPart} opacity={notationPart ? window_(t, byId["cb01-01"].start, byId["cb01-01"].end) : 1} />
       )}
       {c.id === "cb02-03" && (
         <Note t={t} from={c.speech.start + 1.2} to={c.end} title={["The first corner decides", "第一块角定下颜色"]}>

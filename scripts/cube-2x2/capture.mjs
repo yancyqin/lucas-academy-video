@@ -12,6 +12,8 @@
 //   hero      the scrambled cube from the usual view, one slow turn round (the opening), 20 s
 //   meet      a solved cube turning slowly, tilted to show top and bottom (meet the cube), 20 s
 //   notation  R, R′, U, U′, F, F′, B, B′, U2 (and back), y, y′ on a solved cube, each held a moment
+//   letters   R, U, F, R′, U2 on a solved cube, the order the letters line names them (v0.3)
+//   page      the real page, panel and all: "Step by step", "Next move" ×4, "Next step", "Play" (v0.3)
 //   solve     the whole guided solve of the scramble, one take: the first layer seen from below, the rest from
 //             above, a turn round at the end
 
@@ -42,6 +44,9 @@ const BELOW = -0.72;
 mkdirSync(OUT, { recursive: true });
 const browser = await chromium.launch({ headless: true, channel: "chrome" });
 
+/** Takes of the real page, panel and all, as a visitor sees it: no extra light, nothing hidden. */
+const REAL_PAGE = new Set(["page"]);
+
 async function take(name, script) {
   const page = await browser.newPage({ viewport: { width: 1920, height: 1080 }, deviceScaleFactor: 1 });
   await page.addInitScript(() => {
@@ -54,13 +59,24 @@ async function take(name, script) {
   page.on("pageerror", error => console.error(`${name}: page error: ${error.message}`));
   await page.goto(`${BASE}?size=2&debug`);
   await page.waitForFunction(() => window.__cube);
-  // The cube alone, full frame: the panel and every overlay go.
-  await page.addStyleTag({
-    content: ".panel,.hud,.facing,.stage-tools,.guide-hud,.layer-chip,.toast{display:none!important}.app{grid-template-columns:1fr!important}",
-  });
+  // The cube alone, full frame: the panel and every overlay go (except for a take of the real page).
+  const real = REAL_PAGE.has(name);
+  if (!real) {
+    await page.addStyleTag({
+      content: ".panel,.hud,.facing,.stage-tools,.guide-hud,.layer-chip,.toast{display:none!important}.app{grid-template-columns:1fr!important}",
+    });
+  }
   await page.waitForTimeout(400);
-  await page.evaluate(() => {
+  await page.evaluate(real => {
     const c = window.__cube;
+    if (real) {
+      c.manual(true);
+      c.reset();
+      c.reset();
+      c.view.resetView();
+      c.setSpeed(2);
+      return;
+    }
     // The page lights the cube from above, so a white bottom reads grey. The first layer is built on the
     // bottom and filmed from below, so the film adds one light from underneath (the page itself is unchanged).
     const key = c.view.scene.children.find(object => object.isDirectionalLight);
@@ -74,7 +90,7 @@ async function take(name, script) {
     c.reset();
     c.view.resetView();
     c.setSpeed(1); // one move a second: a quarter turn animates for 0.6 s, a half turn 0.75 s
-  });
+  }, real);
 
   const ffmpeg = spawn("ffmpeg", ["-v", "error", "-y", "-f", "image2pipe", "-framerate", `${FPS}`, "-i", "-",
     "-c:v", "libx264", "-crf", "16", "-preset", "slow", "-pix_fmt", "yuv420p", "-g", "15", join(OUT, `${name}.mp4`)], { stdio: ["pipe", "inherit", "inherit"] });
@@ -139,6 +155,65 @@ async function take(name, script) {
     mark(name) {
       record.marks.push({ name, frame });
     },
+    /** A drawn pointer glides to an element over `count` frames, then presses it (a ring shows the press). */
+    async press(selector, count = 18) {
+      await page.evaluate(() => {
+        if (document.getElementById("cap-cursor")) return;
+        const cursor = document.createElement("div");
+        cursor.id = "cap-cursor";
+        cursor.style.cssText = "position:fixed;left:1500px;top:900px;width:46px;height:46px;z-index:99999;pointer-events:none;" +
+          "background:url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M4 2 L4 19 L8.5 15 L11.5 22 L14.5 20.7 L11.5 14 L18 14 Z' fill='white' stroke='black' stroke-width='1.4' stroke-linejoin='round'/></svg>\") no-repeat;";
+        const ring = document.createElement("div");
+        ring.id = "cap-ring";
+        ring.style.cssText = "position:fixed;width:20px;height:20px;border:4px solid #9ed7bd;border-radius:50%;z-index:99998;pointer-events:none;opacity:0;";
+        document.body.append(cursor, ring);
+      });
+      const target = await page.evaluate(selector => {
+        const element = document.querySelector(selector);
+        element.scrollIntoView({ block: "nearest" });
+        const box = element.getBoundingClientRect();
+        const cursor = document.getElementById("cap-cursor");
+        return { x: box.left + box.width / 2, y: box.top + box.height / 2, fromX: parseFloat(cursor.style.left), fromY: parseFloat(cursor.style.top) };
+      }, selector);
+      const ease = t => (t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2);
+      for (let at = 1; at <= count; at += 1) {
+        const t = ease(at / count);
+        await page.evaluate(({ x, y }) => {
+          const cursor = document.getElementById("cap-cursor");
+          cursor.style.left = `${x}px`;
+          cursor.style.top = `${y}px`;
+        }, { x: target.fromX + (target.x - target.fromX) * t, y: target.fromY + (target.y - target.fromY) * t });
+        await rec.tick();
+      }
+      await page.evaluate(({ selector, x, y }) => {
+        document.querySelector(selector).click();
+        const ring = document.getElementById("cap-ring");
+        ring.style.left = `${x - 10}px`;
+        ring.style.top = `${y - 10}px`;
+        ring.dataset.age = "0";
+      }, { selector, ...target });
+      record.marks.push({ name: `press ${selector}`, frame });
+    },
+    /** Moves the page on `count` frames, growing and fading the press ring. */
+    async run(count) {
+      for (let at = 0; at < count; at += 1) {
+        await page.evaluate(() => {
+          const ring = document.getElementById("cap-ring");
+          if (!ring || ring.dataset.age === undefined) return;
+          const age = Number(ring.dataset.age) + 1;
+          ring.dataset.age = String(age);
+          const size = 20 + age * 5;
+          const x = parseFloat(ring.style.left) + 10;
+          const y = parseFloat(ring.style.top) + 10;
+          ring.style.width = ring.style.height = `${size}px`;
+          ring.style.left = `${x - size / 2}px`;
+          ring.style.top = `${y - size / 2}px`;
+          ring.style.opacity = String(Math.max(0, 1 - age / 12));
+          if (age > 12) delete ring.dataset.age;
+        });
+        await rec.tick();
+      }
+    },
   };
 
   await script(rec);
@@ -175,6 +250,38 @@ const SCRIPTS = {
     await r.swing(yaw + Math.PI * 2, pitch, 270);
     r.mark("top");
     await r.hold(20);
+  },
+
+  /** The real page: "Step by step", a few "Next move"s, "Next step", then "Play" (the film's opening and ending). */
+  async page(r) {
+    r.record.scramble = SCRAMBLE;
+    await r.page.evaluate(scramble => {
+      window.__cube.play(scramble);
+      window.__cube.flush();
+    }, SCRAMBLE);
+    await r.run(20);
+    await r.press("#guide-start-step", 20);
+    await r.page.waitForFunction(() => window.__cube.guide);
+    // Bring the guide's card into view in the panel, as a visitor would scroll to it.
+    await r.page.evaluate(() => document.querySelector(".guide").scrollIntoView({ block: "start" }));
+    await r.run(14);
+    for (let k = 0; k < 4; k += 1) {
+      await r.press("#guide-move", k === 0 ? 18 : 8);
+      await r.run(26);
+    }
+    await r.press("#guide-step-button", 10);
+    await r.run(70);
+    await r.press("#guide-toggle", 12);
+    await r.run(110);
+  },
+
+  /** R, U, F, R′, U2 on a solved cube: the letters line (cb01-01), in its order. */
+  async letters(r) {
+    await r.hold(8);
+    for (const [text, rest] of [["R", 8], ["U", 8], ["F", 10], ["R'", 10], ["U2", 18]]) {
+      r.mark(text);
+      await r.play(text, rest);
+    }
   },
 
   async notation(r) {

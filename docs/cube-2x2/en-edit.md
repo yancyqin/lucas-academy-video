@@ -1,4 +1,4 @@
-# How Do You Solve a 2×2 Cube? — narration (v0.2 · 2026-10-25 · outline approved by Yancy)
+# How Do You Solve a 2×2 Cube? — narration (v0.3 · 2026-10-25 · new opening approved by Yancy)
 
 Cube series, episode 1. By Lucas Academy Team. Plan: [CUBE-2X2.md](../../CUBE-2X2.md).
 
@@ -11,7 +11,11 @@ One line: **3.6 million scrambles, one little move and two algorithms, two layer
 v0.2 (Yancy 2026-10-25): English first with a Chinese track; English labels with small Chinese under them; a card
 for every move each time it is used; a smaller cube; two big parts (the first layer, then the top layer in two
 steps); the cube page's link and QR code at the start and at the end ("no cube? practise online").
-Lines carried over from v0.1 keep their takes: cb00-04 was cb00-03, cb06-02 was cb06-01.
+v0.3 (Yancy 2026-10-25): the opening was too slow and wordy and its hook too weak. It now opens on the payoff and a
+challenge ("Most people never solve one. By the end of this video, you will."), says it can be tried online right now
+with the page's "Step by step" guide, and gets the letters into one line: Part 1 starts at about 0:45, not 1:47.
+The voice runs at about 1.25× (1.0 has been too slow in every film), with the tone set per section (narration.py
+TONE): a lively hook, brisk teaching, the algorithm lines a little slower, a warmer closing question.
 
 Reading vs captions (the voice's spellings go in SPOKEN):
 - Notation: R′ is read "R prime", U2 "U two", B2 "B two", R2 "R two".
@@ -22,27 +26,19 @@ Reading vs captions (the voice's spellings go in SPOKEN):
 
 Overall tone: curious, unhurried, discovering together with a child (README default, louise/en).
 
-## CB00 · Opening: only eight pieces
+## CB00 · Opening: the challenge
 
-- cb00-01 | This is a two-by-two cube. It has only eight little pieces, but scrambled, it can end up in more than three and a half million different ways.
-  Picture: the scrambled cube turns slowly; the number counts up to 3,674,160
-- cb00-02 | Can every single one of them be solved? Yes. And all you need is one little move and two algorithms.
-- cb00-03 | No cube at home? You can practise right on our website: scan the code on the screen, and the cube is ready in your browser.
-  Picture: the link card, is.lucasacademy.org/cube, with its QR code
-- cb00-04 | So let's try it together: <strong>how do you solve a two-by-two cube?</strong>
+- cb00-01 | Three and a half million ways to scramble this cube. Most people never solve one. By the end of this video, <strong>you will</strong>.
+  Picture: the scrambled cube solves itself at high speed; the count runs up to 3,674,160
+- cb00-02 | And you can try it right now, online. Scan the code: our free web cube has a step-by-step guide that walks you through every move.
+  Picture: the real page, "Step by step" and "Next move" pressed; the link and QR code beside it
+- cb00-03 | So, let's go: <strong>how do you solve a two-by-two cube?</strong>
   Picture: title card
 
-## CB01 · Meet the cube
+## CB01 · The letters
 
-- cb01-01 | First, let's meet it. A two-by-two has no centre pieces. All eight pieces are corners, and each one has three colours.
-- cb01-02 | The colours come in pairs: white is opposite yellow, green is opposite blue, and red is opposite orange.
-- cb01-03 | Now the letters. R is the right face: look at it from the right, and turn it clockwise. With a little mark, R′, it turns back the other way.
-  Picture: R, R′, each with its card
-- cb01-04 | U is the top, F is the front, and B is the back: each one turns clockwise as you look straight at that face.
-  Picture: U, U′, F, F′, B, B′
-- cb01-05 | A 2 means a half turn. And a small y turns the whole cube in your hands.
-  Picture: U2, U2, y, y′
-- cb01-06 | Don't worry about remembering them all: whenever a move is used, its card appears on the right.
+- cb01-01 | Moves have letters: R is the right face, U the top, F the front. Turn it clockwise as you look at it; a little mark means the other way, and a 2 means twice. No need to memorise: a card shows up every time.
+  Picture: R, U, F, R′, U2, each with its card
 
 ## CB02 · Part one: the first layer
 
@@ -82,6 +78,6 @@ Overall tone: curious, unhurried, discovering together with a child (README defa
 
 ## CB06 · Ending
 
-- cb06-01 | No cube yet? Scan the code and practise online. Press "Solve it for me", and it walks you through every step.
-  Picture: the link card and QR code again
+- cb06-01 | No cube yet? Scan the code, press "Step by step", and the online cube walks you through every move.
+  Picture: the page and its QR code again
 - cb06-02 | More than three and a half million scrambles, and the same three steps solve every one. So: is there something around you that looks messy and hard, that you could break into small steps and do one at a time? That's what we learn and think about together at Lucas Academy.

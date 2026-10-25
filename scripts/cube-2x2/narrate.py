@@ -25,5 +25,5 @@ torch.set_num_interop_threads(2)
 from lucas_media.narrate import main
 sys.argv = ["lucas-narrate", str(ROOT / f"public/cube-2x2/narration/{lang}.json"),
             "--profile", f"louise/{lang}", "--language", lang, "--speed", "1.0",
-            "--output-dir", f"outputs/louise/{lang}/cube-2x2-v2"]
+            "--output-dir", f"outputs/louise/{lang}/cube-2x2-v3"]
 main()

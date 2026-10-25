@@ -36,7 +36,7 @@ def main():
     ap.add_argument("--only", default="")
     args = ap.parse_args()
     base.LANG = args.lang
-    base.VOICES = base.MEDIA / f"outputs/louise/{args.lang}/cube-2x2-v2"
+    base.VOICES = base.MEDIA / f"outputs/louise/{args.lang}/cube-2x2-v3"
     base.OUT = ROOT / f"out/cube-2x2/narration-check{'.en' if args.lang == 'en' else ''}.json"
     base.OUT.parent.mkdir(parents=True, exist_ok=True)
     base.shared.units = base.units

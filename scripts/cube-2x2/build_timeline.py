@@ -49,7 +49,7 @@ wp = shared.wp
 PUB = shared.PUB = ROOT / "public/cube-2x2"
 FILM_NAME = "cube-2x2"
 DELIVERY = ROOT / "out/cube-2x2/delivery"
-VOICES = {lang: shared.MEDIA / f"outputs/louise/{lang}/cube-2x2-v2" for lang in ("zh", "en")}
+VOICES = {lang: shared.MEDIA / f"outputs/louise/{lang}/cube-2x2-v3" for lang in ("zh", "en")}
 TITLE = {"zh": "二阶魔方怎么还原？", "en": "How Do You Solve a 2×2 Cube?"}
 FPS, RATE = shared.FPS, wp.RATE
 LEAD_IN, ONSET, GAP, SECTION_GAP, END_CARD = 1.2, 0.15, 0.4, 0.9, 8.0
@@ -57,13 +57,12 @@ LANGS = ("en", "zh")  # English first; Chinese is the second audio track
 
 # Extra seconds after a line, for a card to read or a result to look at (shots may add more: see SHOTS).
 HOLD = {
-    "cb00-02": 0.6, "cb00-03": 2.0, "cb00-04": 3.0,
-    "cb01-02": 1.2, "cb01-05": 0.6, "cb01-06": 1.0,
+    "cb00-01": 0.2, "cb00-02": 0.6, "cb00-03": 1.5, "cb01-01": 0.5,
     "cb02-03": 1.0, "cb02-06": 1.0, "cb02-08": 1.2, "cb02-09": 1.5,
     "cb03-02": 1.5, "cb03-04": 1.0, "cb03-06": 1.5,
     "cb04-02": 1.0, "cb04-03": 0.5, "cb04-05": 2.0,
     "cb05-02": 1.0,
-    "cb06-01": 2.0, "cb06-02": 2.5,
+    "cb06-01": 1.0, "cb06-02": 2.5,
 }
 
 # Shots: (first cue, last cue, take, source from, source to, fastest playback). Source points are events of the
@@ -71,13 +70,11 @@ HOLD = {
 # step, index, "start" | "end"); a number adds seconds. A shot spans its cues' whole time; the composition runs
 # the footage over it on an eased curve, so the picture settles between shots instead of jumping.
 SHOTS = [
-    ("cb00-01", "cb00-02", "hero", ("start",), ("end",), 1.5),
-    ("cb00-03", "cb00-04", "hero", ("end", -0.1), ("end",), 1.0),
-    ("cb01-01", "cb01-02", "meet", ("start",), ("end",), 1.5),
-    ("cb01-03", "cb01-03", "notation", ("start",), ("mark", "U"), 1.3),
-    ("cb01-04", "cb01-04", "notation", ("mark", "U"), ("mark", "U2"), 1.4),
-    ("cb01-05", "cb01-05", "notation", ("mark", "U2"), ("end", -0.02), 1.4),
-    ("cb01-06", "cb01-06", "notation", ("end", -0.02), ("end",), 1.0),
+    # v0.3's opening: the payoff first (the whole solve, fast), the real page and its guide, the title, the letters.
+    ("cb00-01", "cb00-01", "solve", ("start",), ("mark", "solved", 0.5), 12.0),
+    ("cb00-02", "cb00-02", "page", ("start",), ("end",), 1.6),
+    ("cb00-03", "cb00-03", "hero", ("end", -0.1), ("end",), 1.0),
+    ("cb01-01", "cb01-01", "letters", ("start",), ("end",), 1.4),
     # The solve, one take. The first layer is filmed from below.
     ("cb02-01", "cb02-01", "solve", ("start",), ("step", 0, 0), 1.5),
     ("cb02-02", "cb02-02", "solve", ("step", 0, 0), ("step", 0, 1), 1.0),
@@ -100,8 +97,15 @@ SHOTS = [
     ("cb04-05", "cb04-05", "solve", ("step", 2, 1), ("end",), 2.5),
     # Once more, the whole solve, quickly.
     ("cb05-01", "cb05-02", "solve", ("step", 0, 0), ("mark", "solved", 0.7), 7.0),
-    ("cb06-01", "cb06-02", "meet", ("start",), ("end",), 1.2),
+    # The page again (from its first "Next move"), then the question over a solved cube.
+    ("cb06-01", "cb06-01", "page", ("mark", "press #guide-move"), ("end",), 1.8),
+    ("cb06-02", "cb06-02", "meet", ("start",), ("end",), 1.2),
 ]
+
+# The letters line (cb01-01) names R, U, F, then "a little mark" (R′) and "a 2" (U2): each move of the letters take
+# starts as its word is said. Seconds into the raw English take, from Whisper's word times (the Chinese take says
+# each within 0.3 s of these): R 2.02, U 3.30, F 4.42, "mark" 8.00, "two" 9.50.
+LETTER_WORDS = {"R": 2.02, "U": 3.30, "F": 4.42, "R'": 8.00, "U2": 9.50}
 
 # Music: K. 265 in Simone Renzi's recording (public/cube-2x2/music/SOURCES.txt), the variations as cut for
 # Fun Informatics 3. Each section starts its own; the ending is the last stretch of the theme, so the film
@@ -203,7 +207,7 @@ def music_bed(lang, cues, total) -> Path:
 def build():
     cue_text = json.loads((PUB / "narration/cues.json").read_text())
     ids = [c["id"] for c in cue_text]
-    takes = {name: take(name) for name in ("hero", "meet", "notation", "solve")}
+    takes = {name: take(name) for name in ("hero", "meet", "letters", "page", "solve")}
     footage = shared.listing("footage", (".mp4",))
     # Each shot's source window, and what it asks of its cues' time.
     windows = []
@@ -250,6 +254,18 @@ def build():
     by_id = {c["id"]: c for c in cues}
     shots = [{"take": w["take"], "cues": [w["first"], w["last"]], "start": by_id[w["first"]]["start"],
               "end": by_id[w["last"]]["end"], "from": w["from"], "to": w["to"]} for w in windows]
+    # The letters: each move turns when its letter is said (the film holds the take between them).
+    letters = next(shot for shot in shots if shot["take"] == "letters")
+    raw = wp.read_wav(VOICES["en"] / "cb01-01.wav")
+    lead = raw.tobytes().find(clips["en"]["cb01-01"][:400].tobytes()) / 2 / RATE  # silence the trim removed
+    said = by_id["cb01-01"]["speeches"]["en"]["start"] - lead
+    record, keys = takes["letters"], [[letters["start"], 0.0]]
+    for move in record["moves"]:
+        at = round(said + LETTER_WORDS[move["label"]], 3)
+        keys += [[at, round(move["start"] / record["fps"], 3)], [round(at + (move["end"] - move["start"]) / record["fps"], 3), round(move["end"] / record["fps"], 3)]]
+    keys.append([letters["end"], round((record["frames"] - 1) / record["fps"], 3)])
+    assert all(b[0] > a[0] and b[1] >= a[1] for a, b in zip(keys, keys[1:])), keys
+    letters["keys"] = keys
     audio = PUB / "audio"
     audio.mkdir(parents=True, exist_ok=True)
     bed = music_bed("both", cues, total) if MUSIC_SOURCE.is_file() else None  # one bed under both tracks

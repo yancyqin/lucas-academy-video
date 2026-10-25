@@ -42,7 +42,7 @@ def checked():
             record = check["cues"].get(cid)
             if not record or record["spoken"] != line["text"]:
                 raise SystemExit(f"{lang} {cid}: not checked since its script changed; re-voice and re-check it")
-            take = MEDIA / f"outputs/louise/{lang}/cube-2x2-v2/{cid}.wav"
+            take = MEDIA / f"outputs/louise/{lang}/cube-2x2-v3/{cid}.wav"
             if hashlib.sha256(take.read_bytes()).hexdigest() != record["sha256"]:
                 raise SystemExit(f"{lang} {cid}: the take changed after check.py; run it again")
 
