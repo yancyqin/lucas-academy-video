@@ -18,14 +18,14 @@ import {
 } from "remotion";
 import { CUBE_URL, QR_ROWS } from "./qr";
 
-type Lang = "zh" | "en";
+export type Lang = "zh" | "en";
 type Span = { start: number; end: number };
-type Cue = { id: string; section: string; zh: string; en: string; start: number; end: number; speech: Span; speeches: Record<Lang, Span> };
+export type Cue = { id: string; section: string; zh: string; en: string; start: number; end: number; speech: Span; speeches: Record<Lang, Span> };
 /** `keys`: [film seconds, source seconds] points to follow instead of the eased curve (the letters, timed to the words). */
-type Shot = { take: string; cues: [string, string]; start: number; end: number; from: number; to: number; keys?: [number, number][] };
-type CubeMove = { axis: number; lo: number; hi: number; quarter: number };
-type TakeMove = { stage?: number; step?: number; index?: number; move?: CubeMove; label?: string; start: number; end: number };
-type Take = {
+export type Shot = { take: string; cues: [string, string]; start: number; end: number; from: number; to: number; keys?: [number, number][] };
+export type CubeMove = { axis: number; lo: number; hi: number; quarter: number };
+export type TakeMove = { stage?: number; step?: number; index?: number; move?: CubeMove; label?: string; start: number; end: number };
+export type Take = {
   fps: number;
   take: string;
   frames: number;
@@ -34,7 +34,7 @@ type Take = {
   steps: { stage: number; step: number; frame: number }[];
   marks: { name: string; frame: number }[];
 };
-type PlanStage = { key: string; title: string; steps: { text: string; alg: string | null; moves: CubeMove[] }[] };
+export type PlanStage = { key: string; title: string; steps: { text: string; alg: string | null; moves: CubeMove[] }[] };
 export type CubeTimeline = {
   fps: number;
   durationSeconds: number;
@@ -53,7 +53,7 @@ export type CubeProps = { tl?: CubeTimeline | null; track?: Lang };
 const DIR = "cube-2x2";
 const file = (p: string) => staticFile(`${DIR}/${p}`);
 // The cube page's own palette (inception-space-ui cube/styles/cube.css), so the film and the page look alike.
-const NIGHT = "#04070d",
+export const NIGHT = "#04070d",
   INK = "#f6f8fb",
   MUTED = "#a9b7c8",
   LINE = "rgba(193, 220, 241, 0.22)",
@@ -61,24 +61,24 @@ const NIGHT = "#04070d",
   AMBER = "#f3c46b",
   PANEL = "rgba(10, 18, 30, 0.84)";
 /** R L U D F B: red, orange, white, yellow, green, blue (cube/src/view.js). */
-const STICKER = ["#d4202f", "#ff7f11", "#f4f6f8", "#ffd60a", "#13a453", "#1565e0"];
-const ZH = '"PingFang SC", "Hiragino Sans GB", sans-serif';
-const EN = '"Avenir Next", "Helvetica Neue", sans-serif';
-const MONO = '"SF Mono", Menlo, monospace';
-const XFADE = 0.35;
+export const STICKER = ["#d4202f", "#ff7f11", "#f4f6f8", "#ffd60a", "#13a453", "#1565e0"];
+export const ZH = '"PingFang SC", "Hiragino Sans GB", sans-serif';
+export const EN = '"Avenir Next", "Helvetica Neue", sans-serif';
+export const MONO = '"SF Mono", Menlo, monospace';
+export const XFADE = 0.35;
 /** Captions sit in YouTube's bottom band; nothing important goes below this. */
-const SAFE_BOTTOM = 150;
+export const SAFE_BOTTOM = 150;
 /** The right-hand column beside the cube. */
-const COLUMN = { right: 70, width: 820 };
+export const COLUMN = { right: 70, width: 820 };
 
-const ease = (x: number) => {
+export const ease = (x: number) => {
   const t = Math.max(0, Math.min(1, x));
   return t * t * (3 - 2 * t);
 };
 /** 0 → 1 between a and b, eased. */
-const rise = (t: number, a: number, b: number) => ease((t - a) / Math.max(0.001, b - a));
+export const rise = (t: number, a: number, b: number) => ease((t - a) / Math.max(0.001, b - a));
 /** In over `inn` seconds from a, out over `out` seconds before b. */
-const window_ = (t: number, a: number, b: number, inn = 0.4, out = 0.3) => Math.min(rise(t, a, a + inn), 1 - rise(t, b - out, b));
+export const window_ = (t: number, a: number, b: number, inn = 0.4, out = 0.3) => Math.min(rise(t, a, a + inn), 1 - rise(t, b - out, b));
 
 export const calculateCubeMetadata: CalculateMetadataFunction<CubeProps> = async ({ props, abortSignal }) => {
   const response = await fetch(file("timeline.json"), { signal: abortSignal });
@@ -104,7 +104,9 @@ const profile = (u: number, r: number) => {
   if (x > 1 - r) return 1 - (0.5 * v * (1 - x) * (1 - x)) / r;
   return 0.5 * v * r + v * (x - r);
 };
-const sourceAt = (shot: Shot, t: number) => {
+/** Takes that always fill their shot: slow camera turns. */
+const STRETCH = new Set(["hero", "meet"]);
+export const sourceAt = (shot: Shot, t: number, stretchTakes: Set<string> = STRETCH) => {
   if (shot.keys) {
     const k = shot.keys;
     if (t <= k[0][0]) return k[0][1];
@@ -116,7 +118,7 @@ const sourceAt = (shot: Shot, t: number) => {
   const length = shot.to - shot.from;
   const span = shot.end - shot.start;
   if (length <= 0.02) return shot.from;
-  const stretch = shot.take === "hero" || shot.take === "meet";
+  const stretch = stretchTakes.has(shot.take);
   let from = shot.start;
   let run = span;
   if (!stretch && length + RAMP < span) {
@@ -126,13 +128,13 @@ const sourceAt = (shot: Shot, t: number) => {
   return shot.from + length * profile((t - from) / run, Math.min(0.45, RAMP / run));
 };
 
-type Layout = { x: number; y: number; s: number };
+export type Layout = { x: number; y: number; s: number };
 /** The cube in the middle (title, closing question, end card) or small on the left, beside the cards. */
-const CENTRE: Layout = { x: 0, y: 0, s: 1 };
-const LEFT: Layout = { x: -400, y: 10, s: 0.62 };
+export const CENTRE: Layout = { x: 0, y: 0, s: 1 };
+export const LEFT: Layout = { x: -400, y: 10, s: 0.62 };
 const CENTRED = new Set(["cb00-03", "cb06-02"]);
 /** The real page (take "page") sits in a browser window on the left, its address bar above it. */
-const PAGE: Layout = { x: -330, y: 40, s: 0.6 };
+export const PAGE: Layout = { x: -330, y: 40, s: 0.6 };
 const layoutAt = (cues: Cue[], t: number): Layout => {
   const i = Math.max(0, cues.findIndex((c) => c.start <= t && t < c.end));
   const target = (k: number) => (k < 0 ? LEFT : CENTRED.has(cues[k].id) ? CENTRE : LEFT);
@@ -142,9 +144,17 @@ const layoutAt = (cues: Cue[], t: number): Layout => {
   return { x: before.x + (now.x - before.x) * w, y: before.y + (now.y - before.y) * w, s: before.s + (now.s - before.s) * w };
 };
 
-const Footage: FC<{ tl: CubeTimeline; shot: Shot; t: number; dim?: number; layout: Layout }> = ({ tl, shot, t, dim = 0, layout }) => {
+export const Footage: FC<{ tl: CubeTimeline; shot: Shot; t: number; dim?: number; layout: Layout; dir?: string; stretch?: Set<string> }> = ({
+  tl,
+  shot,
+  t,
+  dim = 0,
+  layout,
+  dir = DIR,
+  stretch = STRETCH,
+}) => {
   const seconds = tl.footageSeconds[`${shot.take}.mp4`] ?? 1;
-  const src = Math.max(0, Math.min(seconds - 0.07, sourceAt(shot, t)));
+  const src = Math.max(0, Math.min(seconds - 0.07, sourceAt(shot, t, stretch)));
   // A shot that holds one picture (the cards explain it) drifts slowly closer and back, so the frame never
   // stands dead still and the next shot starts from the same framing.
   const still = shot.to - shot.from <= 0.05;
@@ -155,7 +165,7 @@ const Footage: FC<{ tl: CubeTimeline; shot: Shot; t: number; dim?: number; layou
       {shot.take === "page" ? <BrowserFrame /> : null}
       <AbsoluteFill style={{ transform: `translate(${layout.x}px, ${layout.y}px) scale(${layout.s * drift})` }}>
         <Freeze frame={0}>
-          <OffthreadVideo src={file(`footage/${shot.take}.mp4`)} muted trimBefore={Math.round(src * tl.fps)} style={{ width: "100%", height: "100%" }} />
+          <OffthreadVideo src={staticFile(`${dir}/footage/${shot.take}.mp4`)} muted trimBefore={Math.round(src * tl.fps)} style={{ width: "100%", height: "100%" }} />
         </Freeze>
       </AbsoluteFill>
       {dim > 0 && <AbsoluteFill style={{ background: NIGHT, opacity: dim }} />}
@@ -164,7 +174,7 @@ const Footage: FC<{ tl: CubeTimeline; shot: Shot; t: number; dim?: number; layou
 };
 
 /** The window around the page take: a rounded frame and an address bar reading the page's address. */
-const BrowserFrame: FC = () => {
+export const BrowserFrame: FC = () => {
   const width = 1920 * PAGE.s;
   const height = 1080 * PAGE.s;
   const left = 960 + PAGE.x - width / 2;
@@ -197,7 +207,7 @@ const BrowserFrame: FC = () => {
 
 // ------------------------------------------------------------------ notation (cube.js formatMove, home frame)
 
-const faceSign = (face: number) => (face & 1 ? -1 : 1);
+export const faceSign = (face: number) => (face & 1 ? -1 : 1);
 /** A move's name as the cube page writes it in its own frame (R = +x), with a real prime. */
 const moveName = (m: CubeMove, n = 2) => {
   const outer = n - 1;
@@ -212,11 +222,11 @@ const moveName = (m: CubeMove, n = 2) => {
   const layer = depth(face, m.lo);
   return `${layer > 1 ? layer : ""}${(face === near ? "RUF" : "LDB")[index]}${suffix(face)}`;
 };
-const prime = (label: string) => label.replace(/'/g, "′");
+export const prime = (label: string) => label.replace(/'/g, "′");
 
 // ------------------------------------------------------------------ building blocks
 
-const Panel: FC<{ children: ReactNode; style?: CSSProperties }> = ({ children, style }) => (
+export const Panel: FC<{ children: ReactNode; style?: CSSProperties }> = ({ children, style }) => (
   <div
     style={{
       background: PANEL,
@@ -232,7 +242,7 @@ const Panel: FC<{ children: ReactNode; style?: CSSProperties }> = ({ children, s
 );
 
 /** English first, Chinese under it, smaller (owner, 2026-10-25). */
-const Bi: FC<{ en: ReactNode; zh: ReactNode; size?: number; color?: string; weight?: number; align?: CSSProperties["textAlign"]; style?: CSSProperties }> = ({
+export const Bi: FC<{ en: ReactNode; zh: ReactNode; size?: number; color?: string; weight?: number; align?: CSSProperties["textAlign"]; style?: CSSProperties }> = ({
   en,
   zh,
   size = 40,
@@ -247,7 +257,7 @@ const Bi: FC<{ en: ReactNode; zh: ReactNode; size?: number; color?: string; weig
   </div>
 );
 
-const Chip: FC<{ children: ReactNode; state?: "done" | "now" | "next"; size?: number }> = ({ children, state = "next", size = 46 }) => (
+export const Chip: FC<{ children: ReactNode; state?: "done" | "now" | "next"; size?: number }> = ({ children, state = "next", size = 46 }) => (
   <span
     style={{
       display: "inline-block",
@@ -271,7 +281,7 @@ const Chip: FC<{ children: ReactNode; state?: "done" | "now" | "next"; size?: nu
   </span>
 );
 
-const Sticker: FC<{ colour: number; size?: number; glow?: boolean; style?: CSSProperties }> = ({ colour, size = 64, glow, style }) => (
+export const Sticker: FC<{ colour: number; size?: number; glow?: boolean; style?: CSSProperties }> = ({ colour, size = 64, glow, style }) => (
   <span
     style={{
       display: "inline-block",
@@ -288,7 +298,7 @@ const Sticker: FC<{ colour: number; size?: number; glow?: boolean; style?: CSSPr
 );
 
 /** A card in the right-hand column; `top` places it, it fades in and out with its lines. */
-const Side: FC<{ children: ReactNode; t: number; from: number; to: number; top: number }> = ({ children, t, from, to, top }) => (
+export const Side: FC<{ children: ReactNode; t: number; from: number; to: number; top: number }> = ({ children, t, from, to, top }) => (
   <div
     style={{
       position: "absolute",
@@ -305,7 +315,7 @@ const Side: FC<{ children: ReactNode; t: number; from: number; to: number; top: 
   </div>
 );
 
-const Note: FC<{ t: number; from: number; to: number; title?: [ReactNode, ReactNode]; children: [ReactNode, ReactNode]; top?: number; width?: number }> = ({
+export const Note: FC<{ t: number; from: number; to: number; title?: [ReactNode, ReactNode]; children: [ReactNode, ReactNode]; top?: number; width?: number }> = ({
   t,
   from,
   to,
@@ -421,7 +431,7 @@ const MoveCard: FC<{ label: string; opacity: number; top: number; big?: boolean 
 };
 
 /** The move of a take turning at frame f, or (for `linger` frames after) the one that just turned. */
-const moveAt = (take: Take, frame: number, linger: number) => [...take.moves].reverse().find((m) => m.start < frame && frame < m.end + linger) ?? null;
+export const moveAt = (take: Take, frame: number, linger: number) => [...take.moves].reverse().find((m) => m.start < frame && frame < m.end + linger) ?? null;
 
 // ------------------------------------------------------------------ the solve's overlays
 
@@ -475,7 +485,7 @@ const CHAPTER_NAMES: Record<string, [string, string]> = {
   cb05: ["Replay", "再看一遍"],
   cb06: ["Try online", "网上练"],
 };
-const chaptersOf = (tl: CubeTimeline) => {
+export const chaptersOf = (tl: CubeTimeline) => {
   const starts: [string, number][] = [];
   for (const c of tl.cues) if (!starts.some(([s]) => s === c.section)) starts.push([c.section, starts.length ? c.start : 0]);
   return starts.map(([section, start], i) => ({ section, start, end: i + 1 < starts.length ? starts[i + 1][1] : tl.durationSeconds }));
@@ -487,7 +497,15 @@ const chaptersOf = (tl: CubeTimeline) => {
  * there with YouTube's bar just below. A ▼ rides above the playing point; at the start, ↓ arrows over every
  * chapter say "jump to any part".
  */
-const ChapterTrack: FC<{ tl: CubeTimeline; t: number; hint: number }> = ({ tl, t, hint }) => {
+export const ChapterTrack: FC<{
+  tl: CubeTimeline;
+  t: number;
+  hint: number;
+  names?: Record<string, [string, string]>;
+  /** The hint's words, and the chapters its arrows point at (all of them unless given). */
+  hintText?: [string, string];
+  hintAt?: string[];
+}> = ({ tl, t, hint, names = CHAPTER_NAMES, hintText = ["Jump to any part with the progress bar ↓", "点下面的进度条，跳到任意部分"], hintAt }) => {
   const chapters = chaptersOf(tl);
   const inset = 18;
   const width = 1920 - inset * 2;
@@ -498,7 +516,7 @@ const ChapterTrack: FC<{ tl: CubeTimeline; t: number; hint: number }> = ({ tl, t
     <AbsoluteFill style={{ pointerEvents: "none" }}>
       {hint > 0 && (
         <div style={{ position: "absolute", left: 0, right: 0, bottom: 176, textAlign: "center", opacity: hint }}>
-          <Bi en="Jump to any part with the progress bar ↓" zh="点下面的进度条，跳到任意部分" size={34} color={AMBER} weight={800} align="center" />
+          <Bi en={hintText[0]} zh={hintText[1]} size={34} color={AMBER} weight={800} align="center" />
         </div>
       )}
       {chapters.map((ch, i) => {
@@ -507,15 +525,28 @@ const ChapterTrack: FC<{ tl: CubeTimeline; t: number; hint: number }> = ({ tl, t
         const w = right - left;
         const on = i === current;
         const played = Math.max(0, Math.min(1, (t - ch.start) / (ch.end - ch.start)));
-        const [en, zh] = CHAPTER_NAMES[ch.section] ?? [ch.section, ""];
+        const [en, zh] = names[ch.section] ?? [ch.section, ""];
         return (
           <div key={ch.section}>
-            {hint > 0 && (
+            {hint > 0 && (!hintAt || hintAt.includes(ch.section)) && (
               <div style={{ position: "absolute", left, width: w, bottom: 100, textAlign: "center", opacity: hint, fontSize: 40, color: AMBER, transform: `translateY(${Math.sin(t * 5 + i) * 4}px)` }}>↓</div>
             )}
             <div style={{ position: "absolute", left, width: w, bottom: 38, textAlign: "center", overflow: "hidden", whiteSpace: "nowrap" }}>
-              <div style={{ fontFamily: EN, fontSize: w < 130 ? 19 : 22, fontWeight: on ? 800 : 600, color: on ? INK : MUTED, opacity: on ? 1 : 0.8 }}>{en}</div>
-              {w >= 90 && <div style={{ fontFamily: ZH, fontSize: 15, color: on ? MINT : MUTED, opacity: on ? 1 : 0.7 }}>{zh}</div>}
+              {/* A name with a line break ("Yellow\ncorners") is set small on two lines, for a narrow chapter. */}
+              <div
+                style={{
+                  fontFamily: EN,
+                  fontSize: en.includes("\n") ? 17 : w < 130 ? 19 : 22,
+                  lineHeight: en.includes("\n") ? 1.05 : undefined,
+                  whiteSpace: en.includes("\n") ? "pre" : undefined,
+                  fontWeight: on ? 800 : 600,
+                  color: on ? INK : MUTED,
+                  opacity: on ? 1 : 0.8,
+                }}
+              >
+                {en}
+              </div>
+              {w >= (en.includes("\n") ? 60 : 90) && <div style={{ fontFamily: ZH, fontSize: en.includes("\n") ? 13 : 15, color: on ? MINT : MUTED, opacity: on ? 1 : 0.7 }}>{zh}</div>}
             </div>
             <div style={{ position: "absolute", left, width: w, bottom: 12, height: 8, borderRadius: 4, background: "rgba(255,255,255,.22)", overflow: "hidden" }}>
               <div style={{ width: `${played * 100}%`, height: "100%", background: on ? MINT : "rgba(158,215,189,.75)" }} />
@@ -557,7 +588,7 @@ const StepStrip: FC<{ at: NonNullable<ReturnType<typeof solveAt>>; opacity: numb
 
 // ------------------------------------------------------------------ cards
 
-const QR: FC<{ size: number }> = ({ size }) => {
+export const QR: FC<{ size: number }> = ({ size }) => {
   const n = QR_ROWS.length;
   const quiet = 3;
   const cell = size / (n + quiet * 2);
@@ -570,7 +601,7 @@ const QR: FC<{ size: number }> = ({ size }) => {
 };
 
 /** The cube page's address and QR code, beside the page itself: try it online, right now. */
-const LinkCard: FC<{ t: number; from: number; to: number; end?: boolean }> = ({ t, from, to, end }) => (
+export const LinkCard: FC<{ t: number; from: number; to: number; end?: boolean }> = ({ t, from, to, end }) => (
   <div style={{ position: "absolute", top: 200, right: 60, width: 620, opacity: window_(t, from, to), transform: `translateY(${(1 - rise(t, from, from + 0.5)) * 18}px)` }}>
     <Panel style={{ padding: "28px 32px", textAlign: "center" }}>
       <Bi en={end ? "No cube yet? Practise online." : "Try it online, right now."} zh={end ? "还没有魔方？在网上练。" : "现在就能在网上试。"} size={44} weight={800} />
@@ -583,14 +614,14 @@ const LinkCard: FC<{ t: number; from: number; to: number; end?: boolean }> = ({ 
   </div>
 );
 
-const Title: FC<{ t: number; from: number; qr?: boolean }> = ({ t, from, qr }) => (
+export const Title: FC<{ t: number; from: number; qr?: boolean; size?: number; zh?: string }> = ({ t, from, qr, size = 2, zh = "二阶魔方怎么还原？" }) => (
   <AbsoluteFill style={{ alignItems: "center", justifyContent: "center", opacity: rise(t, from, from + 0.7) }}>
     <div style={{ textAlign: "center", transform: `translateY(${(1 - rise(t, from, from + 0.9)) * 24}px)` }}>
       <div style={{ fontFamily: EN, fontSize: 30, letterSpacing: "0.32em", color: MINT, fontWeight: 700, marginBottom: 28 }}>LUCAS ACADEMY</div>
       <div style={{ fontFamily: EN, fontSize: 112, fontWeight: 800, color: INK, lineHeight: 1.1 }}>
-        How Do You Solve a <span style={{ color: AMBER }}>2×2 Cube</span>?
+        How Do You Solve a <span style={{ color: AMBER }}>{`${size}×${size} Cube`}</span>?
       </div>
-      <div style={{ fontFamily: ZH, fontSize: 58, fontWeight: 600, color: MUTED, marginTop: 18 }}>二阶魔方怎么还原？</div>
+      <div style={{ fontFamily: ZH, fontSize: 58, fontWeight: 600, color: MUTED, marginTop: 18 }}>{zh}</div>
       <div style={{ display: "flex", justifyContent: "center", gap: 14, margin: "36px 0 30px" }}>
         {[2, 4, 0, 3, 5, 1].map((c) => (
           <Sticker key={c} colour={c} size={30} />
@@ -611,7 +642,7 @@ const Title: FC<{ t: number; from: number; qr?: boolean }> = ({ t, from, qr }) =
 );
 
 /** A big part begins: its name fills the screen for a moment, then settles into the bar at the top. */
-const ChapterCard: FC<{ t: number; from: number; number: string; en: string; zh: string }> = ({ t, from, number, en, zh }) => {
+export const ChapterCard: FC<{ t: number; from: number; number: string; en: string; zh: string }> = ({ t, from, number, en, zh }) => {
   const opacity = Math.min(rise(t, from, from + 0.5), 1 - rise(t, from + 2.6, from + 3.2));
   if (opacity <= 0) return null;
   return (

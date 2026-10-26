@@ -18,6 +18,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
+FILM, COVER = "cube-2x2", "Cube2x2Cover"  # the 5×5 film's package.py sets its own
 PUB = ROOT / "public/cube-2x2"
 OUT = ROOT / "out/cube-2x2"
 DELIVERY = OUT / "delivery"
@@ -63,8 +64,8 @@ def loudness(path, stream="a:0"):
 def check():
     """Fun Informatics 3's delivery check (package.py), on this film and on its Chinese track."""
     tl = json.loads((PUB / "timeline.json").read_text())
-    film = DELIVERY / "cube-2x2.mp4"
-    track = DELIVERY / "cube-2x2.zh-track.wav"
+    film = DELIVERY / f"{FILM}.mp4"
+    track = DELIVERY / f"{FILM}.zh-track.wav"
     assert not tl["draft"], "the timeline still has estimated lines"
     probe = json.loads(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration:stream=codec_type,width,height,r_frame_rate:stream_tags=language",
                                        "-of", "json", str(film)], capture_output=True, text=True, check=True).stdout)
@@ -107,9 +108,9 @@ def check():
 
 def chapters(tl, lang):
     lines = []
-    for prefix, title in CHAPTERS[lang].items():
+    for i, (prefix, title) in enumerate(CHAPTERS[lang].items()):
         cue = next(c for c in tl["cues"] if c["id"].startswith(prefix))
-        lines.append(f"{'00:00' if prefix == 'cb00' else fi03.stamp(cue['start'])} {title}")
+        lines.append(f"{'00:00' if i == 0 else fi03.stamp(cue['start'])} {title}")
     return "\n".join(lines)
 
 
@@ -175,7 +176,7 @@ The recording was excerpted, joined, crossfaded and levelled for this film.
 
 def cover():
     png = DELIVERY / "cover.png"
-    subprocess.run(["npx", "remotion", "still", "src/index.ts", "Cube2x2Cover", str(png), "--log=error"], cwd=ROOT, check=True)
+    subprocess.run(["npx", "remotion", "still", "src/index.ts", COVER, str(png), "--log=error"], cwd=ROOT, check=True)
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(png), "-vf", "scale=1280:720", "-q:v", "2", str(png.with_suffix(".jpg"))], check=True)
     png.unlink()
 

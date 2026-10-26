@@ -1,9 +1,9 @@
-/** Stills for checking a 2×2 cube film timeline (CUBE-2X2.md): one bundle, one browser, a frame per moment asked for.
+/** Stills for checking a cube film's timeline (CUBE-2X2.md, CUBE-5X5.md): one bundle, one browser, a frame per moment asked for.
  *
- *    node scripts/cube-2x2/frames.cjs [zh|en] [cb02-05,cb03-02 ...] [--at 0.3,0.9]
+ *    node scripts/cube-2x2/frames.cjs [zh|en] [cb02-05,cb03-02 ...] [--at 0.3,0.9] [--film cube-5x5]
  *
  * For every cue (or only those listed) it renders the frames at the given fractions of the cue's speech
- * (default 0.8), Writes out/cube-2x2/frames[.en]/.
+ * (default 0.8), Writes out/<film>/frames[.en]/. The 5×5 film's picture is the same for both tracks.
  */
 const fs = require("node:fs");
 const path = require("node:path");
@@ -15,15 +15,16 @@ const args = process.argv.slice(2);
 const lang = args.includes("en") ? "en" : "zh";
 const atIndex = args.indexOf("--at");
 const fractions = atIndex >= 0 ? args[atIndex + 1].split(",").map(Number) : [0.8];
-const only = new Set(args.filter((a, i) => /^cb\d\d-\d\d/.test(a) && args[i - 1] !== "--at").flatMap((a) => a.split(",")));
-const OUT = path.join(ROOT, `out/cube-2x2/frames${lang === "en" ? ".en" : ""}`);
+const film = args.includes("--film") ? args[args.indexOf("--film") + 1] : "cube-2x2";
+const only = new Set(args.filter((a, i) => /^c[bf]\d\d-\d\d/.test(a) && args[i - 1] !== "--at").flatMap((a) => a.split(",")));
+const OUT = path.join(ROOT, `out/${film}/frames${lang === "en" ? ".en" : ""}`);
 
 (async () => {
   fs.mkdirSync(OUT, { recursive: true });
   const serveUrl = await bundle({ entryPoint: path.join(ROOT, "src/index.ts"), rootDir: ROOT });
   const browser = await openBrowser("chrome");
   try {
-    const id = lang === "en" ? "Cube2x2" : "Cube2x2ZhTrack";
+    const id = film === "cube-5x5" ? "Cube5x5" : lang === "en" ? "Cube2x2" : "Cube2x2ZhTrack";
     const composition = await selectComposition({ serveUrl, id, puppeteerInstance: browser, inputProps: {} });
     const tl = composition.props.tl;
     const jobs = [];
