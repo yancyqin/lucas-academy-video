@@ -23,7 +23,9 @@ Narration: [docs/cube-2x2/en-edit.md](docs/cube-2x2/en-edit.md) (English, the fi
   - The ending says "Step by step" (the page's button) instead of "Solve it for me".
 - **v0.2 (owner, 2026-10-25, after v0.1; the outline below was approved before the film was made):**
   - **One film, English first, with a Chinese audio track** (the channel has YouTube's multi-language audio).
-  - **Labels in English, Chinese smaller underneath.** The cover too: the question in English, the Chinese small.
+  - **Labels in English, Chinese smaller underneath.** The cover too: the question in English, the Chinese small,
+    and (owner, 2026-10-25, the one addition to the README's question-only cover) a badge: "✓ Free online cube
+    included / 附免费网页魔方".
   - **A card for every move, every time it is used**: the letter, what it means in both languages, and a little
     cube with the turning layer lit and an arrow for the direction.
   - **A smaller cube**, on the left; the cards have a column of their own on the right.

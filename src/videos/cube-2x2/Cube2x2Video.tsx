@@ -868,7 +868,8 @@ export const Cube2x2Video: FC<CubeProps> = ({ tl, track = "en" }) => {
   );
 };
 
-/** The YouTube cover: the question, English first with the Chinese small under it, and a scrambled cube. */
+/** The YouTube cover: the question, English first with the Chinese small under it, a scrambled cube, and (owner,
+ * 2026-10-25) a badge saying the free online cube comes with it. */
 export const Cube2x2Cover: FC = () => (
   <AbsoluteFill style={{ background: NIGHT }}>
     <AbsoluteFill style={{ transform: "translateX(430px) scale(1.08)" }}>
@@ -880,6 +881,11 @@ export const Cube2x2Cover: FC = () => (
         How Do You Solve a <span style={{ color: AMBER }}>2×2 Cube</span>?
       </div>
       <div style={{ fontFamily: ZH, fontSize: 64, fontWeight: 600, color: MUTED, marginTop: 30 }}>二阶魔方怎么还原？</div>
+      {/* The owner's one addition to the question (2026-10-25): the film comes with the free web cube. */}
+      <div style={{ alignSelf: "flex-start", marginTop: 44, padding: "16px 34px 18px", borderRadius: 30, background: MINT, color: "#06120c" }}>
+        <div style={{ fontFamily: EN, fontSize: 46, fontWeight: 800 }}>✓ Free online cube included</div>
+        <div style={{ fontFamily: ZH, fontSize: 30, fontWeight: 700, opacity: 0.8, marginTop: 2 }}>附免费网页魔方</div>
+      </div>
     </AbsoluteFill>
   </AbsoluteFill>
 );
