@@ -103,9 +103,10 @@ SHOTS = [
 ]
 
 # The letters line (cb01-01) names R, U, F, then "a little mark" (R′) and "a 2" (U2): each move of the letters take
-# starts as its word is said. Seconds into the raw English take, from Whisper's word times (the Chinese take says
-# each within 0.3 s of these): R 2.02, U 3.30, F 4.42, "mark" 8.00, "two" 9.50.
-LETTER_WORDS = {"R": 2.02, "U": 3.30, "F": 4.42, "R'": 8.00, "U2": 9.50}
+# starts as its word is said. Per line, seconds into its raw English take, from Whisper's word times (the Chinese
+# take says each within 0.3 s of these): R 2.02, U 3.30, F 4.42, "mark" 8.00, "two" 9.50.
+LETTER_WORDS = {"cb01-01": {"R": 2.02, "U": 3.30, "F": 4.42, "R'": 8.00, "U2": 9.50}}
+TAKES = ("hero", "meet", "letters", "page", "solve")
 
 # Music: K. 265 in Simone Renzi's recording (public/cube-2x2/music/SOURCES.txt), the variations as cut for
 # Fun Informatics 3. Each section starts its own; the ending is the last stretch of the theme, so the film
@@ -162,7 +163,7 @@ def music_bed(lang, cues, total) -> Path:
     """Each section's variations, cut to the section and crossfaded into the next; the last section gets the
     theme's closing bars, timed to end with the film."""
     prefixes = list(MUSIC_PLAN)
-    starts = [0.0 if p == "cb00" else next(c["start"] for c in cues if c["id"].startswith(p)) for p in prefixes]
+    starts = [0.0 if i == 0 else next(c["start"] for c in cues if c["id"].startswith(p)) for i, p in enumerate(prefixes)]
     graph, k, sections = [], 0, []
     names = [n for plan in MUSIC_PLAN.values() for n in plan] + ["theme"]
     graph.append(f"[0:a]aresample=48000,aformat=sample_fmts=flt:channel_layouts=stereo,asplit={len(names)}"
@@ -182,6 +183,8 @@ def music_bed(lang, cues, total) -> Path:
             parts = seg(max(a, b - length), b)
             graph.append(f"{parts}apad=whole_dur={length:.3f},atrim=0:{length:.3f},asetpts=PTS-STARTPTS[sec{i}]")
         else:
+            have = sum(K265[n][1] - K265[n][0] for n in MUSIC_PLAN[prefix])
+            assert have >= length - SECTION_XF, f"{prefix}: {have:.1f}s of music for {length:.1f}s"
             parts = "".join(seg(*K265[n]) for n in MUSIC_PLAN[prefix])
             count = len(MUSIC_PLAN[prefix])
             graph.append(f"{parts}concat=n={count}:v=0:a=1,apad=whole_dur={length:.3f},atrim=0:{length:.3f},"
@@ -207,7 +210,7 @@ def music_bed(lang, cues, total) -> Path:
 def build():
     cue_text = json.loads((PUB / "narration/cues.json").read_text())
     ids = [c["id"] for c in cue_text]
-    takes = {name: take(name) for name in ("hero", "meet", "letters", "page", "solve")}
+    takes = {name: take(name) for name in TAKES}
     footage = shared.listing("footage", (".mp4",))
     # Each shot's source window, and what it asks of its cues' time.
     windows = []
@@ -255,17 +258,21 @@ def build():
     shots = [{"take": w["take"], "cues": [w["first"], w["last"]], "start": by_id[w["first"]]["start"],
               "end": by_id[w["last"]]["end"], "from": w["from"], "to": w["to"]} for w in windows]
     # The letters: each move turns when its letter is said (the film holds the take between them).
-    letters = next(shot for shot in shots if shot["take"] == "letters")
-    raw = wp.read_wav(VOICES["en"] / "cb01-01.wav")
-    lead = raw.tobytes().find(clips["en"]["cb01-01"][:400].tobytes()) / 2 / RATE  # silence the trim removed
-    said = by_id["cb01-01"]["speeches"]["en"]["start"] - lead
-    record, keys = takes["letters"], [[letters["start"], 0.0]]
-    for move in record["moves"]:
-        at = round(said + LETTER_WORDS[move["label"]], 3)
-        keys += [[at, round(move["start"] / record["fps"], 3)], [round(at + (move["end"] - move["start"]) / record["fps"], 3), round(move["end"] / record["fps"], 3)]]
-    keys.append([letters["end"], round((record["frames"] - 1) / record["fps"], 3)])
-    assert all(b[0] > a[0] and b[1] >= a[1] for a, b in zip(keys, keys[1:])), keys
-    letters["keys"] = keys
+    if all((VOICES["en"] / f"{cid}.wav").is_file() for cid in LETTER_WORDS):
+        letters = next(shot for shot in shots if shot["take"] == "letters")
+        said = {}
+        for cid in LETTER_WORDS:
+            raw = wp.read_wav(VOICES["en"] / f"{cid}.wav")
+            lead = raw.tobytes().find(clips["en"][cid][:400].tobytes()) / 2 / RATE  # silence the trim removed
+            said[cid] = by_id[cid]["speeches"]["en"]["start"] - lead
+        words = {label: round(said[cid] + seconds, 3) for cid, labels in LETTER_WORDS.items() for label, seconds in labels.items()}
+        record, keys = takes["letters"], [[letters["start"], 0.0]]
+        for move in record["moves"]:
+            at = words[move["label"]]
+            keys += [[at, round(move["start"] / record["fps"], 3)], [round(at + (move["end"] - move["start"]) / record["fps"], 3), round(move["end"] / record["fps"], 3)]]
+        keys.append([letters["end"], round((record["frames"] - 1) / record["fps"], 3)])
+        assert all(b[0] > a[0] and b[1] >= a[1] for a, b in zip(keys, keys[1:])), keys
+        letters["keys"] = keys
     audio = PUB / "audio"
     audio.mkdir(parents=True, exist_ok=True)
     bed = music_bed("both", cues, total) if MUSIC_SOURCE.is_file() else None  # one bed under both tracks

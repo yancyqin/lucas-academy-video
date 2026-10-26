@@ -1,10 +1,11 @@
-// Records the cube page's footage for 「二阶魔方怎么还原？」 (CUBE-2X2.md) frame by frame in headless Chrome.
+// Records the cube page's footage for the cube films (CUBE-2X2.md, CUBE-5X5.md) frame by frame in headless Chrome.
 //
-//   node scripts/cube-2x2/capture.mjs [solve|hero|meet|notation ...] [--url http://127.0.0.1:8133/cube/]
+//   node scripts/cube-2x2/capture.mjs [solve|hero|meet|anatomy|letters|page|notation ...] [--film cube-5x5]
+//        [--url http://127.0.0.1:8133/cube/]
 //
 // The page is inception-space-ui's /cube/ with ?debug: its manual clock (__cube.manual / tick) moves the page
 // exactly 1/30 s per frame whatever the machine does, and its guide ("Solve it for me") plays the solve stage
-// by stage. Each take becomes public/cube-2x2/footage/<take>.mp4, its last frame <take>.jpg, and <take>.json:
+// by stage. Each take becomes public/<film>/footage/<take>.mp4, its last frame <take>.jpg, and <take>.json:
 // for every move, the frames it turns between, and where each stage and step starts, so the film can show the
 // move that is turning and run the footage on a speed curve keyed to the narration.
 //
@@ -14,8 +15,10 @@
 //   notation  R, R′, U, U′, F, F′, B, B′, U2 (and back), y, y′ on a solved cube, each held a moment
 //   letters   R, U, F, R′, U2 on a solved cube, the order the letters line names them (v0.3)
 //   page      the real page, panel and all: "Step by step", "Next move" ×4, "Next step", "Play" (v0.3)
+//   anatomy   (5×5) a solved cube turning, its piece kinds lit in turn: the 3×3 frame, the edge wings, the centres
 //   solve     the whole guided solve of the scramble, one take: the first layer seen from below, the rest from
-//             above, a turn round at the end
+//             above, a turn round at the end. On a big cube the frame is built with the rest stepped back, every
+//             commutator step lights the pieces it moves, and each centre stage looks at the face it fills.
 
 import { createRequire } from "node:module";
 import { spawn } from "node:child_process";
@@ -24,7 +27,6 @@ import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = join(fileURLToPath(import.meta.url), "../../..");
-const OUT = join(ROOT, "public/cube-2x2/footage");
 const PLAYWRIGHT = process.env.PLAYWRIGHT_DIR
   ? join(process.env.PLAYWRIGHT_DIR, "package.json")
   : "/Users/yqin/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/package.json";
@@ -34,8 +36,28 @@ const args = process.argv.slice(2);
 const flag = (name, fallback) => (args.includes(`--${name}`) ? args[args.indexOf(`--${name}`) + 1] : fallback);
 const BASE = flag("url", "http://127.0.0.1:8133/cube/");
 const TAKES = args.filter((arg, at) => !arg.startsWith("--") && !(at > 0 && args[at - 1].startsWith("--")));
-/** The film's scramble (a 67-move beginner's solve that shows every rule once: CUBE-2X2.md §2). */
-const SCRAMBLE = "F' U' B' R D F R2 F D R2 B2 L";
+/**
+ * Each film's cube: its size, its scramble (found by searching the solver's plans for one solve that shows every
+ * rule: CUBE-2X2.md §3, CUBE-5X5.md §3), the letters its letters line names, and the stages filmed from below.
+ */
+const FILMS = {
+  "cube-2x2": {
+    size: 2,
+    scramble: "F' U' B' R D F R2 F D R2 B2 L",
+    letters: [["R", 8], ["U", 8], ["F", 10], ["R'", 10], ["U2", 18]],
+    below: new Set(["layer"]),
+  },
+  "cube-5x5": {
+    size: 5,
+    scramble:
+      "D2 B2 2L' U 2F' D L 2B' U R2 D2 2F' 2D' M2 2F2 R' 2B2 L F' 2U' R 2B' E' 2R2 2D 2F 2U B2 2L2 2B2 D 2L2 F M2 F2 R' B' U 2R2 F U 2R' S 2D2 S2 L2 2U2 B' M2 2D' 2R2 2U2 M' D' 2F 2L 2U2 2F2 2D2 2F'",
+    letters: [["R", 8], ["U", 8], ["F", 10], ["R'", 10], ["U2", 12], ["2R", 12], ["M", 18]],
+    below: new Set(["frame-cross", "frame-corners"]),
+  },
+};
+const FILM = flag("film", "cube-2x2");
+const { size: SIZE, scramble: SCRAMBLE, letters: LETTERS, below: FROM_BELOW } = FILMS[FILM];
+const OUT = join(ROOT, `public/${FILM}/footage`);
 const FPS = 30;
 const FRAME_MS = 1000 / FPS;
 /** Camera pitch for the first layer: from below, so the white layer is in view while it is built. */
@@ -57,7 +79,7 @@ async function take(name, script) {
     } catch {}
   });
   page.on("pageerror", error => console.error(`${name}: page error: ${error.message}`));
-  await page.goto(`${BASE}?size=2&debug`);
+  await page.goto(`${BASE}?size=${SIZE}&debug`);
   await page.waitForFunction(() => window.__cube);
   // The cube alone, full frame: the panel and every overlay go (except for a take of the real page).
   const real = REAL_PAGE.has(name);
@@ -145,7 +167,7 @@ async function take(name, script) {
       for (const label of moves) {
         const start = frame;
         await page.evaluate(label => window.__cube.play(label), label);
-        const half = label.includes("2");
+        const half = /2'?$/.test(label); // a half turn ends in 2 ("U2"); "2R" is the second layer, a quarter turn
         const frames = half ? 26 : 18;
         for (let at = 0; at < frames; at += 1) await rec.tick(null, (half ? 220 : 150) / (frames - 2));
         record.moves.push({ label, start, end: frame });
@@ -154,6 +176,29 @@ async function take(name, script) {
     },
     mark(name) {
       record.marks.push({ name, frame });
+    },
+    /**
+     * Lights pieces: `lit` (a list of piece indices) glow amber; `dim` fades pieces, either a list of indices (to
+     * `level`) or an object of index → level. null clears either. Works on the page's own meshes (one per piece,
+     * view.pieces), giving each a material of its own once.
+     */
+    async light(lit, dim = null, { glow = 0.22, level = 0.22 } = {}) {
+      await page.evaluate(({ lit, dim, glow, level: low }) => {
+        const view = window.__cube.view;
+        if (!view.__own) {
+          for (const mesh of view.pieces) mesh.material = mesh.material.clone();
+          view.__own = true;
+        }
+        const faded = Array.isArray(dim) ? Object.fromEntries(dim.map(index => [index, low])) : (dim ?? {});
+        const on = new Set(lit ?? []);
+        view.pieces.forEach((mesh, index) => {
+          const k = on.has(index) ? glow : 0;
+          mesh.material.emissive.setRGB(k, k * 0.68, k * 0.1);
+          const level = faded[index] ?? 1;
+          mesh.material.color.setRGB(level, level, level);
+        });
+        view.dirty = true;
+      }, { lit, dim, glow, level });
     },
     /** A drawn pointer glides to an element over `count` frames, then presses it (a ring shows the press). */
     async press(selector, count = 18) {
@@ -228,6 +273,58 @@ async function take(name, script) {
 
 const home = async page => page.evaluate(() => ({ yaw: window.__cube.view.yaw, pitch: window.__cube.view.pitch }));
 
+/** A big cube's pieces by kind (they keep it wherever they go): the 3×3 frame, the edge wings, the centres. */
+const kindsOf = async page =>
+  page.evaluate(() => {
+    const cube = window.__cube.cube;
+    const outer = cube.n - 1;
+    const out = { frame: [], wings: [], centres: [] };
+    cube.homes.forEach((home, index) => {
+      const outside = home.filter(v => Math.abs(v) === outer).length;
+      const zeros = home.filter(v => v === 0).length;
+      if (outside === 3 || (outside === 2 && zeros === 1) || (outside === 1 && zeros === 2)) out.frame.push(index);
+      else if (outside === 2) out.wings.push(index);
+      else out.centres.push(index);
+    });
+    return out;
+  });
+
+/**
+ * What the solve take lights in each part of a big cube's solve (CUBE-5X5.md §3): the frame alone while it is
+ * built as a 3×3 (wings and centres step back); then the edges, the centres still back and each commutator's
+ * pieces glowing; then the centres, each commutator's pieces glowing. `moved`: the pieces a step moves.
+ */
+function lighting(key, moved, kinds) {
+  const levels = (base, overrides) => {
+    const out = {};
+    for (const index of [...kinds.frame, ...kinds.wings, ...kinds.centres]) out[index] = base;
+    for (const [indices, level] of overrides) for (const index of indices) out[index] = level;
+    for (const index of moved ?? []) delete out[index];
+    return out;
+  };
+  // The page's lighting and tone mapping keep a dimmed sticker's colour readable down to about 0.3, which on a
+  // scrambled cube is no step back at all: "back" is 0.05 (dark, still a sticker), "aside" 0.45.
+  const BACK = 0.05;
+  const ASIDE = 0.45;
+  if (key.startsWith("frame-")) return { lit: null, dim: levels(1, [[kinds.wings, BACK], [kinds.centres, BACK]]) };
+  if (key === "parity" || key === "edges") {
+    const lit = (moved ?? []).filter(index => kinds.wings.includes(index));
+    return { lit, dim: { ...levels(ASIDE, [[kinds.centres, BACK]]), ...Object.fromEntries((moved ?? []).filter(index => !lit.includes(index)).map(index => [index, BACK])) } };
+  }
+  if (key.startsWith("centre")) return { lit: moved, dim: levels(moved ? ASIDE : 1, []) };
+  return { lit: null, dim: null };
+}
+
+/** Where to look at a face, from the usual view (yaw0, pitch0): the top a little higher, the bottom from below. */
+const AIM = {
+  U: (yaw, pitch) => [yaw, 0.85],
+  D: (yaw, pitch) => [yaw, BELOW],
+  F: (yaw, pitch) => [yaw, pitch],
+  R: (yaw, pitch) => [yaw, pitch],
+  L: (yaw, pitch) => [yaw + Math.PI / 2, pitch],
+  B: (yaw, pitch) => [yaw + Math.PI, pitch],
+};
+
 const SCRIPTS = {
   async hero(r) {
     r.record.scramble = SCRAMBLE;
@@ -275,10 +372,38 @@ const SCRIPTS = {
     await r.run(110);
   },
 
-  /** R, U, F, R′, U2 on a solved cube: the letters line (cb01-01), in its order. */
+  /** A solved big cube turning slowly, its piece kinds lit in turn: the 3×3 frame, the edge wings, the centres. */
+  async anatomy(r) {
+    const kinds = await kindsOf(r.page);
+    const all = [...kinds.frame, ...kinds.wings, ...kinds.centres];
+    const { yaw, pitch } = await home(r.page);
+    const others = keep => all.filter(index => !keep.includes(index));
+    await r.hold(15);
+    let turned = 0;
+    const turn = async (count, toPitch) => {
+      const from = await r.page.evaluate(() => ({ yaw: window.__cube.view.yaw, pitch: window.__cube.view.pitch }));
+      for (let at = 1; at <= count; at += 1) {
+        turned += 1;
+        const target = { yaw: yaw + (turned / 600) * Math.PI * 2, pitch: from.pitch + (toPitch - from.pitch) * (at / count) };
+        const now = await r.page.evaluate(() => ({ yaw: window.__cube.view.yaw, pitch: window.__cube.view.pitch }));
+        await r.tick([target.yaw - now.yaw, target.pitch - now.pitch]);
+      }
+    };
+    for (const [name, keep] of [["frame", kinds.frame], ["wings", kinds.wings], ["centres", kinds.centres]]) {
+      r.mark(name);
+      await r.light(null, others(keep));
+      await turn(150, name === "wings" ? -0.35 : pitch);
+    }
+    r.mark("whole");
+    await r.light(null);
+    await turn(150, pitch);
+    r.record.kinds = { frame: kinds.frame.length, wings: kinds.wings.length, centres: kinds.centres.length };
+  },
+
+  /** The film's letters on a solved cube: its letters line, in its order. */
   async letters(r) {
     await r.hold(8);
-    for (const [text, rest] of [["R", 8], ["U", 8], ["F", 10], ["R'", 10], ["U2", 18]]) {
+    for (const [text, rest] of LETTERS) {
       r.mark(text);
       await r.play(text, rest);
     }
@@ -310,6 +435,7 @@ const SCRIPTS = {
     );
     r.record.plan = plan;
     const { yaw, pitch } = await home(r.page);
+    const kinds = SIZE > 3 ? await kindsOf(r.page) : null;
     await r.hold(30);
     let stageAt = -1;
     for (;;) {
@@ -323,13 +449,47 @@ const SCRIPTS = {
       if (at.stage !== stageAt) {
         if (stageAt >= 0) await r.hold(24);
         stageAt = at.stage;
-        const want = plan[at.stage].key === "layer" ? BELOW : pitch;
-        const now = await r.page.evaluate(() => window.__cube.view.pitch);
-        if (Math.abs(now - want) > 0.01) await r.swing(yaw, want, 40);
-        r.record.stages.push({ stage: at.stage, key: plan[at.stage].key, frame: r.frame });
+        const key = plan[at.stage].key;
+        if (kinds) {
+          const { lit, dim } = lighting(key, null, kinds);
+          await r.light(lit, dim);
+        }
+        // A centre stage looks at the face it fills: its key names that face (centre-4 is the front, whatever
+        // colour it holds), in the cube's face order R L U D F B.
+        const face = key.startsWith("centre") ? "RLUDFB"[Number(key.split("-")[1])] : null;
+        const [wantYaw, want] = face ? AIM[face](yaw, pitch) : [yaw, FROM_BELOW.has(key) ? BELOW : pitch];
+        const now = await r.page.evaluate(() => ({ yaw: window.__cube.view.yaw, pitch: window.__cube.view.pitch }));
+        if (Math.abs(now.pitch - want) > 0.01 || Math.abs(now.yaw - wantYaw) > 0.01) await r.swing(wantYaw, want, face === "B" || face === "L" ? 60 : 40);
+        r.record.stages.push({ stage: at.stage, key, frame: r.frame, ...(face ? { face } : {}) });
         await r.hold(10);
       }
-      if (at.into === 0) r.record.steps.push({ stage: at.stage, step: at.step, frame: r.frame });
+      if (at.into === 0) {
+        r.record.steps.push({ stage: at.stage, step: at.step, frame: r.frame });
+        // A commutator step (a big cube's edges and centres) lights the pieces it moves, for the whole step.
+        const key = plan[at.stage].key;
+        const commutator = key === "parity" || key === "edges" || key.startsWith("centre");
+        const moved = commutator
+          ? await r.page.evaluate(({ stage, step }) => {
+              const c = window.__cube;
+              const moves = c.guide.model.stages[stage].steps[step].moves;
+              const copy = c.cube.constructor.deserialize(c.cube.serialize());
+              for (const move of moves) copy.turn(move);
+              const out = [];
+              for (let index = 0; index < copy.count; index += 1) {
+                const a = copy.position(index);
+                const b = c.cube.position(index);
+                if (a[0] !== b[0] || a[1] !== b[1] || a[2] !== b[2]) out.push(index);
+              }
+              return out;
+            }, { stage: at.stage, step: at.step })
+          : null;
+        // The rest of the cube steps back a little, so the moving pieces stand out with their colours intact.
+        if (kinds) {
+          const { lit, dim } = lighting(key, moved, kinds);
+          await r.light(lit, dim, { glow: 0.18 });
+          if (lit) r.record.steps[r.record.steps.length - 1].lit = lit.length;
+        }
+      }
       await r.page.evaluate(() => window.__cube.guidePlay("move"));
       const start = r.frame;
       for (let guard = 0; guard < 120; guard += 1) {
@@ -341,6 +501,8 @@ const SCRIPTS = {
       await r.hold(at.into === step.moves.length - 1 ? 16 : 3);
       if (await r.page.evaluate(() => !window.__cube.guide)) break;
     }
+    // Solved: the whole cube in full colour again.
+    if (kinds) await r.light(null);
     r.mark("solved");
     await r.hold(20);
     await r.swing(yaw + Math.PI * 2, pitch, 150);
