@@ -90,3 +90,7 @@ public/cube-5x5/
 # 好奇新世界 (WEEKLY-DEMO-PLAN.md): captures, narration, timelines and mixes live in lucas-academy-video-data/weekly
 public/weekly
 out/weekly/
+
+# 跨越中等收入陷阱 (从新闻看教育): Codex illustrations, Li Lu clips and stills, timelines and narration are local working
+# copies -- scripts/middle-income-trap/assets.py rebuilds them from lucas-academy-video-data/middle-income-trap.
+public/middle-income-trap/
