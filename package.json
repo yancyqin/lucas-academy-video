@@ -51,7 +51,10 @@
     "c2:capture": "node scripts/cube-2x2/capture.mjs",
     "c2:narration": "python3 scripts/cube-2x2/narration.py",
     "c2:timeline": "python3 scripts/cube-2x2/build_timeline.py",
-    "c2:render": "python3 scripts/cube-2x2/render.py"
+    "c2:render": "python3 scripts/cube-2x2/render.py",
+    "c5:narration": "python3 scripts/cube-5x5/narration.py",
+    "c5:timeline": "python3 scripts/cube-5x5/build_timeline.py",
+    "c5:render": "python3 scripts/cube-2x2/render.py --film cube-5x5"
   },
   "dependencies": {
     "@remotion/cli": "^4.0.484",

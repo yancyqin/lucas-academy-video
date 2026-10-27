@@ -1,10 +1,10 @@
-"""Whisper check of every take of 「二阶魔方怎么还原？」 (CUBE-2X2.md).
+"""Whisper check of every take of a cube film: 「二阶魔方怎么还原？」 (CUBE-2X2.md), 「五阶魔方怎么还原？」 (CUBE-5X5.md).
 
-    ../lucas-academy-media/.conda/bin/python scripts/cube-2x2/check.py --lang zh [--model medium] [--only cb02-05]
+    ../lucas-academy-media/.conda/bin/python scripts/cube-2x2/check.py --lang zh [--model medium] [--only cb02-05] [--film cube-5x5]
 
 Episode 2's check (scripts/fun-informatics-02/check.py) does the work: its text normalisation, its
-Latin-word joining and its report writer. This only points it at this film's takes, report and
-vocabulary. Checks never alter a take. Report: out/cube-2x2/narration-check[.en].json.
+Latin-word joining and its report writer. This only points it at a film's takes, report and
+vocabulary. Checks never alter a take. Report: out/<film>/narration-check[.en].json.
 """
 import argparse
 import hashlib
@@ -24,9 +24,16 @@ base = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(base)
 
 PROMPT = {
-    "zh": "以下是普通话魔方教学旁白。词语：二阶魔方、角块、中心块、顺时针、R撇、U撇、小鱼公式、车头灯、顶层、Lucas Academy。",
-    "en": "English cube-solving narration. Two-by-two cube, corners, clockwise, R prime, U prime, Sune, algorithm, headlights, Lucas Academy.",
+    "cube-2x2": {
+        "zh": "以下是普通话魔方教学旁白。词语：二阶魔方、角块、中心块、顺时针、R撇、U撇、小鱼公式、车头灯、顶层、Lucas Academy。",
+        "en": "English cube-solving narration. Two-by-two cube, corners, clockwise, R prime, U prime, Sune, algorithm, headlights, Lucas Academy.",
+    },
+    "cube-5x5": {
+        "zh": "以下是普通话魔方教学旁白。词语：五阶魔方、三阶、骨架、边翼、中心块、交换子、顺时针、R撇、U撇、小鱼公式、车头灯、顶层、Lucas Academy。",
+        "en": "English cube-solving narration. Five-by-five cube, three-by-three, frame, edge wings, centre pieces, commutator, R prime, U prime, Sune, algorithm, headlights, Lucas Academy.",
+    },
 }
+TAKES = {"cube-2x2": "cube-2x2-v3", "cube-5x5": "cube-5x5-v1"}  # as narrate.py
 
 
 def main():
@@ -34,13 +41,14 @@ def main():
     ap.add_argument("--lang", choices=("zh", "en"), default="zh")
     ap.add_argument("--model", choices=("small", "medium"), default="small")
     ap.add_argument("--only", default="")
+    ap.add_argument("--film", choices=tuple(TAKES), default="cube-2x2")
     args = ap.parse_args()
     base.LANG = args.lang
-    base.VOICES = base.MEDIA / f"outputs/louise/{args.lang}/cube-2x2-v3"
-    base.OUT = ROOT / f"out/cube-2x2/narration-check{'.en' if args.lang == 'en' else ''}.json"
+    base.VOICES = base.MEDIA / f"outputs/louise/{args.lang}/{TAKES[args.film]}"
+    base.OUT = ROOT / f"out/{args.film}/narration-check{'.en' if args.lang == 'en' else ''}.json"
     base.OUT.parent.mkdir(parents=True, exist_ok=True)
     base.shared.units = base.units
-    lines = json.loads((ROOT / f"public/cube-2x2/narration/{args.lang}.json").read_text())["lines"]
+    lines = json.loads((ROOT / f"public/{args.film}/narration/{args.lang}.json").read_text())["lines"]
     wanted = set(args.only.split(",")) - {""}
     report = json.loads(base.OUT.read_text())["cues"] if base.OUT.exists() else {}
     import torch
@@ -59,7 +67,7 @@ def main():
         if old and old["sha256"] == digest and old.get("spoken") == line["text"] and args.model in old["analyses"]:
             continue
         analyses = old["analyses"] if old and old["sha256"] == digest and old.get("spoken") == line["text"] else {}
-        analyses[args.model] = base.shared.analyse(model, path, line["text"], args.lang, PROMPT[args.lang])
+        analyses[args.model] = base.shared.analyse(model, path, line["text"], args.lang, PROMPT[args.film][args.lang])
         report[cid] = {"sha256": digest, "spoken": line["text"], "analyses": analyses}
         base.save(report, lines)
         r = analyses[args.model]
