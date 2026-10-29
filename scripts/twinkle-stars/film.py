@@ -414,31 +414,18 @@ def main():
     for i, s in enumerate(secs):
         s.land = 0.2 if i == 0 else min(max(secs[i - 1].P.get("cadence", secs[i - 1].finish) + 0.25, s.start - C.get("approach", 1.6)), s.start - 1.6)   # after the last note
         s.ready = s.land + (0.8 if i == 0 else C.get("slide", 1.25))               # ...and has landed
+    loop = C.get("loop")            # a short that loops: {"glide", "off": [t0, t1], "end"}, one sheet (see the frame loop)
+    if loop: secs[0].land, secs[0].ready = -2.0, -loop["glide"]     # the blank sheet is already down at frame 0
     for i, s in enumerate(secs):
         s.leave = secs[i + 1].land if i + 1 < len(secs) else s.end
         M, _ = sheet_matrix(s.pw, s.ph, *poses[i % len(poses)])
         Mi = cv2.invertAffineTransform(M)
         s.rest = Mi[:, :2] @ REST + Mi[:, 2] - SHEET_MARGIN
-    t1 = g.t1 if g.t1 is not None else secs[-1].end + 2
-    ff = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(g.fps), "-i", "-",
-                           "-ss", str(g.t0), "-t", str(t1 - g.t0), "-i", C["music"],
-                           "-af", (f"adelay={int(C.get('lead_in', 0) * 1000)}:all=1," if C.get("lead_in") else "") + (C["audio_filter"] + "," if C.get("audio_filter") else "") + f"afade=t=out:st={t1 - g.t0 - C.get('fade_out', 1.0)}:d={C.get('fade_out', 1.0)},apad",
-                           "-c:v", "libx264", "-preset", "medium", "-crf", "17", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "256k",
-                           "-shortest", g.out], stdin=subprocess.PIPE)
-    n = int(round((t1 - g.t0) * g.fps)); next_still = 0.0
-    for f in range(n):
-        t = g.t0 + f / g.fps
-        frame = desk.copy()
+
+    def with_tool(frame, t):
+        """A copy of the frame with the tool drawn as it is at time t."""
+        frame = frame.copy()
         k = max([i for i, s in enumerate(secs) if t >= s.land] or [0])
-        # the previous sheet stays under the new one until the new one has landed
-        for i in ([k - 1] if k > 0 else []) + [k]:
-            s = secs[i]; ang, off = poses[i % len(poses)]
-            M0, size = sheet_matrix(s.pw, s.ph, ang, off)
-            u = smooth((t - s.land) / (s.ready - s.land)) if i == k else 1.0
-            if u <= 0: continue
-            if i == k - 1 and t > secs[k].ready: continue
-            M = M0.copy(); M[0, 2] += (1 - u) * 1500; M[1, 2] += (1 - u) * 260
-            put_sheet(frame, s.picture(t) if i == k else s.picture(min(t, s.end)), M, size, s.paper[0, 0])
         s = secs[k]; ang, off = poses[k % len(poses)]
         M, _ = sheet_matrix(s.pw, s.ph, ang, off)
         if k > 0 and t < s.ready:                               # sheet change: the crayon waits at the side
@@ -451,6 +438,39 @@ def main():
         sketching = ts_.line_sprite is not None and t < ts_.P["stages"]["BA"] - 0.25
         spr, tnt = (ts_.line_sprite, ts_.line_tint) if sketching else (ts_.tool_sprite, ts_.tint)
         draw_crayon(frame, spr, ftip, col, float(lift), ang + speed_sway, 1.0, tnt)
+        return frame
+    t1 = g.t1 if g.t1 is not None else secs[-1].end + 2
+    ff = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(g.fps), "-i", "-",
+                           "-ss", str(g.t0), "-t", str(t1 - g.t0), "-i", C["music"],
+                           "-af", (f"adelay={int(C.get('lead_in', 0) * 1000)}:all=1," if C.get("lead_in") else "") + (C["audio_filter"] + "," if C.get("audio_filter") else "") + f"afade=t=out:st={t1 - g.t0 - C.get('fade_out', 1.0)}:d={C.get('fade_out', 1.0)},apad",
+                           "-c:v", "libx264", "-preset", "medium", "-crf", "17", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "256k",
+                           "-shortest", g.out], stdin=subprocess.PIPE)
+    n = int(round((t1 - g.t0) * g.fps)); next_still = 0.0
+    for f in range(n):
+        t = g.t0 + f / g.fps
+        frame = desk.copy()
+        k = max([i for i, s in enumerate(secs) if t >= s.land] or [0])
+        if loop and t > loop["off"][0]:                         # after the last note the finished sheet slides off the pad
+            s = secs[0]; M0, size = sheet_matrix(s.pw, s.ph, *poses[0])
+            put_sheet(frame, s.paper, M0, size, s.paper[0, 0])  # ...onto the blank sheet the next loop starts on
+            u = smooth((t - loop["off"][0]) / (loop["off"][1] - loop["off"][0]))
+            M = M0.copy(); M[0, 2] += u * 1500; M[1, 2] += u * 260
+            if u < 1: put_sheet(frame, s.picture(t), M, size, s.paper[0, 0])
+        else:                       # the previous sheet stays under the new one until the new one has landed
+            for i in ([k - 1] if k > 0 else []) + [k]:
+                s = secs[i]; ang, off = poses[i % len(poses)]
+                M0, size = sheet_matrix(s.pw, s.ph, ang, off)
+                u = smooth((t - s.land) / (s.ready - s.land)) if i == k else 1.0
+                if u <= 0: continue
+                if i == k - 1 and t > secs[k].ready: continue
+                M = M0.copy(); M[0, 2] += (1 - u) * 1500; M[1, 2] += (1 - u) * 260
+                put_sheet(frame, s.picture(t) if i == k else s.picture(min(t, s.end)), M, size, s.paper[0, 0])
+        if loop:                    # resting after the music, the tool turns into the next loop's (its time t - end), then sets off
+            w = smooth((t - (loop["end"] - loop["glide"] - 0.5)) / 0.5)
+            frame = with_tool(frame, t) * (1 - w) + with_tool(frame, t - loop["end"]) * w if 0 < w < 1 else \
+                with_tool(frame, t - loop["end"] if w >= 1 else t)
+        else:
+            frame = with_tool(frame, t)
         if C.get("outro"):                                      # after the music: hold the last picture, then the empty desk
             u = smooth((t - secs[-1].end - C["outro"][0]) / C["outro"][1])
             if u > 0: frame = frame * (1 - u) + desk * u

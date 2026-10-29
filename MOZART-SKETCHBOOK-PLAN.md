@@ -6,7 +6,14 @@ owner 2026-10-28 选了 10 首（编号是试听页上的），《小星星变�
 **完成（2026-10-29）：** 全片 71:44（1080p30，−18.7 LUFS），54 幅画；每首结尾停在画上再淡回空书桌，首与首之间是 1 秒
 没有声音的书桌换光（不是原计划的 2 秒）。上传包在桌面「小星星的莫扎特画本-上传」（片子、youtube-description.txt、
 中英文封面）；每首的单独文件在 `mozart-sketchbook/segments/standalone/`。生成脚本：`scripts/twinkle-stars/`
-（`run_all.py` → `assemble.py` → `sketchbook_youtube.py`、`sketchbook_cover.py`）。下面是当初的计划。
+（`run_all.py` → `assemble.py` → `sketchbook_youtube.py`、`sketchbook_cover.py`）。
+
+**竖屏循环短视频（owner 2026-10-29：「除了小星星 每个歌再做一个竖屏loop短视频」）：** 九首各挑一幅画（05①、20①、06③、10③、
+16③、01①、27①、15①、07②：大多是开头那段最熟悉的旋律；魔笛选王子吹魔笛那幅，终曲选结尾那幅，因为第①幅没有闪星星），
+照片子里同样的笔路画，排成小星星竖屏的样子（画纸在上，下面中英文问句「X，能画出来吗？」）。音乐从第一个音前 0.4 秒到最后一个音
+之后最安静的地方，余音淡出，每个都调到 −18 LUFS；画完以后整张画从本子上滑走，下面还是一张白纸，笔回到开头的位置，
+最后一帧接回第一帧。49–113 秒，上传包在桌面「小星星的莫扎特画本-竖屏短视频-上传」（9 个 mp4 + youtube-description.shorts.txt）。
+`sketchbook_shorts.py prepare | render KEY | finish | check | texts`；`film.py` 加了 `loop`。下面是当初的计划。
 
 ## 怎么画（和《小星星变奏曲》样片一样）
 
