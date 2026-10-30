@@ -9,9 +9,12 @@ import {FunEconomics01Video, FunEconomics01Cover, FunEconomics01CoverEn, calcula
 import {FunEconomics01ExtraVideo, FunEconomics01ExtraCover, FunEconomics01ExtraCoverEn, calculateExtraMetadata} from './videos/fun-economics-01-7x8/FunEconomics01ExtraVideo';
 import {FunEconomics02Video, FunEconomics02Cover, FunEconomics02CoverEn, calculateFe02Metadata} from './videos/fun-economics-02/FunEconomics02Video';
 import {NewsEducation01Video, NewsEducation01Cover, NewsEducation01CoverEn, calculateNe01Metadata} from './videos/news-education-01/NewsEducation01Video';
+import {MiddleIncomeTrapVideo, calculateMitMetadata} from './videos/middle-income-trap/MiddleIncomeTrapVideo';
+import {MiddleIncomeTrapCover, MiddleIncomeTrapCoverEn} from './videos/middle-income-trap/Cover';
 import {WeeklyCover, WeeklyEpisode, calculateWeeklyMetadata} from './videos/weekly/WeeklyEpisode';
 import {Cube2x2Cover, Cube2x2Video, calculateCubeMetadata} from './videos/cube-2x2/Cube2x2Video';
 import {ZhongYingCover, ZhongYingSeal, ZhongYingVideo, calculateZhongYingMetadata} from './videos/zhong-ying/ZhongYingVideo';
+import {Cube5x5Cover, Cube5x5Video, calculateCube5x5Metadata} from './videos/cube-5x5/Cube5x5Video';
 import type {FC} from 'react';
 import {MonkeySocietyVideo} from './MonkeySocietyVideo';
 import {MonkeyIntroVideo} from './videos/MonkeyIntroVideo';
@@ -318,6 +321,8 @@ export const Root: FC = () => {
       <Composition id="ZhongYingCanBeautyLast" component={ZhongYingVideo} durationInFrames={9000} fps={30} width={1920} height={1080} defaultProps={{film:"can-beauty-last",tl:null}} calculateMetadata={calculateZhongYingMetadata} />
       <Composition id="ZhongYingSeal" component={ZhongYingSeal} durationInFrames={1} fps={30} width={1920} height={1080} />
       <Composition id="ZhongYingCover" component={ZhongYingCover} durationInFrames={1} fps={30} width={1920} height={1080} defaultProps={{film: "climb-higher" as const, lang: "zh" as const, layout: "a" as const}} />
+      <Composition id="Cube5x5" component={Cube5x5Video} durationInFrames={18000} fps={30} width={1920} height={1080} defaultProps={{tl:null,track:"en" as const}} calculateMetadata={calculateCube5x5Metadata} />
+      <Composition id="Cube5x5Cover" component={Cube5x5Cover} durationInFrames={1} fps={30} width={1920} height={1080} />
       <Composition id="FunEconomics01Zh" component={FunEconomics01Video} durationInFrames={18000} fps={30} width={1920} height={1080} defaultProps={{tl:null,lang:"zh"}} calculateMetadata={calculateEconMetadata} />
       <Composition id="FunEconomics01En" component={FunEconomics01Video} durationInFrames={18000} fps={30} width={1920} height={1080} defaultProps={{tl:null,lang:"en"}} calculateMetadata={calculateEconMetadata} />
       <Composition id="FunEconomics01CoverZh" component={FunEconomics01Cover} durationInFrames={1} fps={30} width={1920} height={1080} />
@@ -332,6 +337,9 @@ export const Root: FC = () => {
       <Composition id="FunEconomics02Cover" component={FunEconomics02Cover} durationInFrames={1} fps={30} width={1920} height={1080} />
       <Composition id="FunEconomics02CoverEn" component={FunEconomics02CoverEn} durationInFrames={1} fps={30} width={1920} height={1080} />
       <Composition id="NewsEducation01" component={NewsEducation01Video} durationInFrames={18000} fps={30} width={1920} height={1080} defaultProps={{tl:null,maps:null}} calculateMetadata={calculateNe01Metadata} />
+      <Composition id="MiddleIncomeTrap" component={MiddleIncomeTrapVideo} durationInFrames={18000} fps={30} width={1920} height={1080} defaultProps={{tl:null}} calculateMetadata={calculateMitMetadata} />
+      <Composition id="MiddleIncomeTrapCover" component={MiddleIncomeTrapCover} durationInFrames={1} fps={30} width={1280} height={720} />
+      <Composition id="MiddleIncomeTrapCoverEn" component={MiddleIncomeTrapCoverEn} durationInFrames={1} fps={30} width={1280} height={720} />
       <Composition id="NewsEducation01Cover" component={NewsEducation01Cover} durationInFrames={1} fps={30} width={1280} height={720} />
       <Composition id="NewsEducation01CoverEn" component={NewsEducation01CoverEn} durationInFrames={1} fps={30} width={1280} height={720} />
       {/* 好奇新世界 / Curious Worlds (WEEKLY-VIDEO.md): a Chinese film and an English film per episode, and a cover for each */}

@@ -85,6 +85,7 @@ public/fun-economics-02/
 public/news-education-01/
 # 「二阶魔方怎么还原？」 (CUBE-2X2.md): footage, narration, audio and timelines are rebuilt by its scripts.
 public/cube-2x2/
+public/cube-5x5/
 
 # 好奇新世界 (WEEKLY-DEMO-PLAN.md): captures, narration, timelines and mixes live in lucas-academy-video-data/weekly
 public/weekly
@@ -93,3 +94,7 @@ out/weekly/
 # 中英阅读 (ZHONG-YING.md): timelines (they carry the NIV text), narration mixes, living captures and paintings are
 # rebuilt by scripts/zhong-ying/; the intro takes and alignments live in lucas-academy-video-data/zhong-ying.
 public/zhong-ying/
+
+# 跨越中等收入陷阱 (从新闻看教育): Codex illustrations, Li Lu clips and stills, timelines and narration are local working
+# copies -- scripts/middle-income-trap/assets.py rebuilds them from lucas-academy-video-data/middle-income-trap.
+public/middle-income-trap/
