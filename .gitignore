@@ -89,3 +89,7 @@ public/cube-2x2/
 # 好奇新世界 (WEEKLY-DEMO-PLAN.md): captures, narration, timelines and mixes live in lucas-academy-video-data/weekly
 public/weekly
 out/weekly/
+
+# 中英阅读 (ZHONG-YING.md): timelines (they carry the NIV text), narration mixes, living captures and paintings are
+# rebuilt by scripts/zhong-ying/; the intro takes and alignments live in lucas-academy-video-data/zhong-ying.
+public/zhong-ying/

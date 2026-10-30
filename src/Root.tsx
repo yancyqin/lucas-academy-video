@@ -11,6 +11,7 @@ import {FunEconomics02Video, FunEconomics02Cover, FunEconomics02CoverEn, calcula
 import {NewsEducation01Video, NewsEducation01Cover, NewsEducation01CoverEn, calculateNe01Metadata} from './videos/news-education-01/NewsEducation01Video';
 import {WeeklyCover, WeeklyEpisode, calculateWeeklyMetadata} from './videos/weekly/WeeklyEpisode';
 import {Cube2x2Cover, Cube2x2Video, calculateCubeMetadata} from './videos/cube-2x2/Cube2x2Video';
+import {ZhongYingCover, ZhongYingSeal, ZhongYingVideo, calculateZhongYingMetadata} from './videos/zhong-ying/ZhongYingVideo';
 import type {FC} from 'react';
 import {MonkeySocietyVideo} from './MonkeySocietyVideo';
 import {MonkeyIntroVideo} from './videos/MonkeyIntroVideo';
@@ -312,6 +313,11 @@ export const Root: FC = () => {
       <Composition id="Cube2x2" component={Cube2x2Video} durationInFrames={12000} fps={30} width={1920} height={1080} defaultProps={{tl:null,track:"en" as const}} calculateMetadata={calculateCubeMetadata} />
       <Composition id="Cube2x2ZhTrack" component={Cube2x2Video} durationInFrames={12000} fps={30} width={1920} height={1080} defaultProps={{tl:null,track:"zh" as const}} calculateMetadata={calculateCubeMetadata} />
       <Composition id="Cube2x2Cover" component={Cube2x2Cover} durationInFrames={1} fps={30} width={1920} height={1080} />
+      <Composition id="ZhongYingClimbHigher" component={ZhongYingVideo} durationInFrames={9000} fps={30} width={1920} height={1080} defaultProps={{film:"climb-higher",tl:null}} calculateMetadata={calculateZhongYingMetadata} />
+      <Composition id="ZhongYingLittleBoats" component={ZhongYingVideo} durationInFrames={9000} fps={30} width={1920} height={1080} defaultProps={{film:"little-boats",tl:null}} calculateMetadata={calculateZhongYingMetadata} />
+      <Composition id="ZhongYingCanBeautyLast" component={ZhongYingVideo} durationInFrames={9000} fps={30} width={1920} height={1080} defaultProps={{film:"can-beauty-last",tl:null}} calculateMetadata={calculateZhongYingMetadata} />
+      <Composition id="ZhongYingSeal" component={ZhongYingSeal} durationInFrames={1} fps={30} width={1920} height={1080} />
+      <Composition id="ZhongYingCover" component={ZhongYingCover} durationInFrames={1} fps={30} width={1920} height={1080} defaultProps={{film: "climb-higher" as const, lang: "zh" as const, layout: "a" as const}} />
       <Composition id="FunEconomics01Zh" component={FunEconomics01Video} durationInFrames={18000} fps={30} width={1920} height={1080} defaultProps={{tl:null,lang:"zh"}} calculateMetadata={calculateEconMetadata} />
       <Composition id="FunEconomics01En" component={FunEconomics01Video} durationInFrames={18000} fps={30} width={1920} height={1080} defaultProps={{tl:null,lang:"en"}} calculateMetadata={calculateEconMetadata} />
       <Composition id="FunEconomics01CoverZh" component={FunEconomics01Cover} durationInFrames={1} fps={30} width={1920} height={1080} />
