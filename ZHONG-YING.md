@@ -74,6 +74,12 @@ then once in English, verse by verse, with the narration the lesson already has.
 Python scripts run with the repo's venvs; data lands in `lucas-academy-video-data/zhong-ying/` and
 `public/zhong-ying/<film>/` (git-ignored: the timeline carries the NIV text).
 
+Cleaned 2026-10-30 (owner: 清理除了桌面以外的文件): only the readers' own memos stay in
+`lucas-academy-video-data/zhong-ying/narration/{sunny,matthew}/raw/` (Sunny's Windchime 18 and 19, Matthew's two New
+Recordings — the only copies on this Mac). Takes, alignments, art-lab exports, MiniMax runs, captures and renders went
+to the Trash (`中英阅读-清理-20261030`), and the finished films are on the Desktop, so a rebuild starts from step 1:
+voices, art-lab export, MiniMax.
+
 1. Export the art lab: `git -C ../lucas-visual-art-lab archive origin/main | tar -x -C ../lucas-academy-video-data/zhong-ying/art-lab-<sha>`.
 2. Intro takes: `lucas-narrate` on `zhong-ying/narration/intro-{zh,en}.json` (in lucas-academy-media), Whisper-check
    with `scripts/check_narration.py`, copy the chosen takes to `narration/intro-{zh,en}.wav`.
