@@ -99,10 +99,10 @@ def main(film: str, dest: Path):
     chapters_en = "\n".join(f"{stamp(c['start'])} {c['en']}" for c in tl["chapters"])
     moving = any(w.get("minimax") for w in tl["works"])     # works that end as a MiniMax clip; 回顾 replays them all
     each = all(w.get("minimax") for w in tl["works"])
-    moves_zh = about.get("moves_zh", ("每篇" if each else "有的篇") + "读完，画再动起来；最后一起回顾。") if moving else ""
-    moves_en = about.get("moves_en", f" After {'each reading' if each else 'some readings'} the picture starts to move, and at the end we look back at all three.") if moving else ""
-    made_zh = "，读完后动起来的画面由 MiniMax 海螺生成" if moving else ""
-    made_en = f", and the moving pictures at the end of {'each reading' if each else 'the readings'} were made with MiniMax Hailuo" if moving else ""
+    moves_zh = about.get("moves_zh", ("每篇" if each else "有的篇") + "读到最后一句，画再动起来；最后一起回顾。") if moving else ""
+    moves_en = about.get("moves_en", f" As {'each reading' if each else 'some readings'} reaches its last line, the picture starts to move, and at the end we look back at all three.") if moving else ""
+    made_zh = "，最后一句时动起来的画面由 MiniMax 海螺生成" if moving else ""
+    made_en = f", and the moving pictures under the last line of {'each reading' if each else 'the readings'} were made with MiniMax Hailuo" if moving else ""
     made_how = " and motion" if moving else ""
     voices_zh = about.get("voices_zh") or f"{about['read_zh']}；其余配音（开头、题目、结尾和其他句子）为 AI 合成，使用 Fangfang（中文）和 Louise（英文）的授权声线。"
     voices_en = about.get("voices_en") or (f"{about['read_en']}; the rest of the narration (the intro, the titles, the closing and the "

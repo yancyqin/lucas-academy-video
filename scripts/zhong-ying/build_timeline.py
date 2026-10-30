@@ -31,8 +31,8 @@ TITLE_AT = 0.6                   # a work's title shows, then it is read (with i
 TITLE_GAP = 1.0                  # the title's English, then the first verse
 ZH_EN_GAP = 0.7                  # a verse's Chinese, then its English
 VERSE_GAP = 1.1                  # one verse to the next
-HOLD = 3.2                       # after a work's last verse: watch it alive
-LIVING_TAIL = 1.4                # with a MiniMax clip: alive this long, then it dissolves into the clip (minimax_prep.py)
+HOLD = 3.2                       # after a work's last verse: watch it alive (a work without a MiniMax clip)
+CLIP_TAIL = 0.4                  # with a clip: after the clip and the reading have both ended
 CLOSING_AT = 0.8                 # after the last work: its closing lines, over its finished picture
 CLOSING_HOLD = 2.5
 RECAP_FADE = 1.0                 # one MiniMax clip dissolving into the next in the look back (paint.py)
@@ -149,9 +149,13 @@ def main(film: str):
                 verse_cues.append(cue)
                 last = k == len(work["units"]) - 1 and lang == "en"
                 t += ZH_EN_GAP if lang == "zh" else (VERSE_GAP if not last else 0)
-        if minimax:     # painted → alive → moving: the clip plays out after the last verse
-            minimax = {"from": round(t + LIVING_TAIL, 3), "seconds": minimax["seconds"], "file": clip.with_suffix(".mp4").name}
-            t = minimax["from"] + minimax["seconds"] + 0.4
+        if minimax:     # painted → alive → moving, inside the reading: the clip runs out with the last English line
+            # (owner, 2026-10-30: no time of its own after the reading) but starts no earlier than that line, while
+            # the Chinese is still painting the picture in
+            last = verse_cues[-1]
+            start = max(last["start"], last["end"] - minimax["seconds"])
+            minimax = {"from": round(start, 3), "seconds": minimax["seconds"], "file": clip.with_suffix(".mp4").name}
+            t = max(t, start + minimax["seconds"]) + CLIP_TAIL
         else:
             t += HOLD
         cue_of = {(c["unit"], c["lang"]): c for c in verse_cues}

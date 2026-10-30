@@ -46,8 +46,12 @@ then once in English, verse by verse, with the narration the lesson already has.
   clipped first words (the English of 诗篇 121:2 started on a 0.145 jump). "Quiet" is 42 dB under the line's
   peak or within 6 dB of the take's own floor, so a hissy take is not cut a second before its voice.
   `narration.py choose` passes over takes with a lone short sound at the head or tail (`strays`).
-- **Three steps per work (2026-10-27):** painted (Chinese) → alive (English) → moving: after a work's last verse the
-  living painting dissolves into a MiniMax-Hailuo-02 clip made from the same picture (`minimax_prep.py`; jobs with
+- **Three steps per work (2026-10-27):** painted (Chinese) → alive (English) → moving: the living painting dissolves
+  into a MiniMax-Hailuo-02 clip made from the same picture. **The clip plays inside the reading, not after it (owner,
+  2026-10-30: 「minimax 视频接在朗读里的末尾 不要专门空白的时间了」):** it ends with the last English line (+0.2 s),
+  starts no earlier than that line (the Chinese is still painting), and the next work follows `CLIP_TAIL` 0.4 s
+  later (`build_timeline.py`). Before, it played after the reading in its own 7.6 s, with no voice. A living brush on
+  the last line can fall under the clip (春夜喜雨's petals on "flowers"). (`minimax_prep.py`; jobs with
   `scripts/debussy-impressions/minimax_job.py`, `MINIMAX_DATA=…/zhong-ying`; 1080P, 6 s, first frame only, fixed
   camera, small motions). First try, one each for 爬高一点: Foreign Lands held its oil style; 诗篇 121 greyed its
   paper; 登鹳雀楼 turned the pale ink into a saturated painting with a sea of clouds. `--tone` can pull a clip's
