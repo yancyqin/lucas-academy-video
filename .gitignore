@@ -94,3 +94,5 @@ out/weekly/
 # 跨越中等收入陷阱 (从新闻看教育): Codex illustrations, Li Lu clips and stills, timelines and narration are local working
 # copies -- scripts/middle-income-trap/assets.py rebuilds them from lucas-academy-video-data/middle-income-trap.
 public/middle-income-trap/
+# 「你爱听 AI 说「是的」吗？」: scripts/ai-sycophancy/assets.py rebuilds it from lucas-academy-video-data/ai-sycophancy.
+public/ai-sycophancy/
