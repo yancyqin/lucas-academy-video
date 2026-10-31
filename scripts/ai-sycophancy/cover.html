@@ -1,0 +1,38 @@
+<!doctype html>
+<!-- YouTube cover for 你爱听 AI 说「是的」吗？ (README "YouTube covers"): the question, a news line under it
+     (Yancy 10-30: 加个小标题，字也不要太小) and the 从新闻看教育 ribbon, as on the middle-income-trap cover.
+     cover.py fills BG and renders it at 1280×720 with headless Chrome. -->
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<style>
+  @font-face { font-family: "NotoSerifSC"; src: url("FONT"); }
+  html, body { margin: 0; width: 1280px; height: 720px; overflow: hidden; background: #0f1317; }
+  .bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: BGPOS; }
+  .shade { position: absolute; inset: 0;
+    background: linear-gradient(90deg, rgba(10,12,15,.92) 0%, rgba(10,12,15,.78) 42%, rgba(10,12,15,.15) 70%, rgba(10,12,15,0) 100%); }
+  .text { position: absolute; left: 64px; top: 0; bottom: 0; display: flex; flex-direction: column; justify-content: center; }
+  .title { font-family: "NotoSerifSC", "Songti SC", serif; font-size: 104px; line-height: 1.22; letter-spacing: 4px;
+    color: #fff; text-shadow: 0 4px 24px rgba(0,0,0,.6); white-space: nowrap; }
+  .yes { color: #6cc9ff; }
+  .rule { width: 72px; height: 5px; background: #c9a45a; margin: 34px 0 22px; }
+  .sub { font-family: "PingFang SC", sans-serif; font-weight: 500; font-size: 44px; line-height: 1.32; letter-spacing: 2px;
+    color: #ece3d2; text-shadow: 0 3px 16px rgba(0,0,0,.7); white-space: nowrap; }
+  .ribbon { position: absolute; top: 0; right: 0; width: 458px; height: 458px; overflow: hidden; }
+  .ribbon div { position: absolute; left: -166px; top: 121px; width: 918px; height: 88px; transform: rotate(45deg);
+    background: #c9a45a; color: #16120d; display: flex; align-items: center; justify-content: center;
+    font-family: "NotoSerifSC", "Songti SC", serif; font-size: 46px; letter-spacing: 2px;
+    box-shadow: 0 6px 20px rgba(0,0,0,.45); white-space: nowrap; }
+</style>
+</head>
+<body>
+  <img class="bg" src="BG">
+  <div class="shade"></div>
+  <div class="text">
+    <div class="title">你爱听 AI<br>说「<span class="yes">是的</span>」吗？</div>
+    <div class="rule"></div>
+    <div class="sub">亚马逊机器学习女工程师离世<br>父母起诉 OpenAI</div>
+  </div>
+  <div class="ribbon"><div>从新闻看教育</div></div>
+</body>
+</html>
