@@ -8,8 +8,8 @@ then once in English, verse by verse, with the narration the lesson already has.
 | 爬高一点，看远一点 · Climb Higher, See Farther | `climb-higher` | 登鹳雀楼 · Foreign Lands · 诗篇 121:1–2 | 2:33 |
 | 小船去远方 · Little Boats, Far Away | `little-boats` | 早发白帝城 · Where Go the Boats? · 以赛亚书 40:31 | 3:22 |
 | 美好能否留存？ · Can Beauty Last? | `can-beauty-last` | 春夜喜雨 · Sonnet 18 · 传道书 3:11 | 5:56 |
-| 谁看见过风？ · Has Anyone Seen the Wind? | `seen-the-wind` | 赋得古原草送别 · The Wind · 约翰福音 3:8 | 5:53 |
-| 星星数得完吗？ · Can You Count the Stars? | `count-the-stars` | 夜宿山寺 · The Star (Jane Taylor) · 创世记 15:5–6 | 5:27 |
+| 谁看见过风？ · Has Anyone Seen the Wind? | `seen-the-wind` | 赋得古原草送别 · The Wind · 约翰福音 3:8 | 5:52 |
+| 星星数得完吗？ · Can You Count the Stars? | `count-the-stars` | 夜宿山寺 · The Star (Jane Taylor) · 创世记 15:5–6 | 5:26 |
 
 ## What the owner decided (2026-10-26)
 
@@ -305,3 +305,8 @@ no part has more than lang's seven units.
   (The Wind's last refrain) the clip may start as soon as the picture is complete, so it is slowed too. Then
   `minimax_prep.py` (per-work speed) → `build_timeline.py` → `living.mjs` → `paint.py` → `render.py` → `package.py`,
   into the same Desktop folders.
+- **Second cut, 2026-11-01 (owner: 「你试试 minimax」):** the three clips sent at 09:27 PST came back within four minutes
+  (v2: John 3:8's paper greys and more leaves fly; The Star's little stars all grow into big sparkles; Genesis's night
+  deepens and the tent glows). Every end clip is now slowed to fill the end of its reading (0.5–0.7, 8.2–11.6 s); 古原草
+  and The Wind start theirs on the last verse's Chinese, which paints nothing. Rebuilt and replaced in the same Desktop
+  folders: 5:52 and 5:26, −16.2 LUFS, true peak −5.9 / −6.0, no black frames, every work ending on its picture.
