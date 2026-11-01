@@ -33,6 +33,7 @@ ZH_EN_GAP = 0.7                  # a verse's Chinese, then its English
 VERSE_GAP = 1.1                  # one verse to the next
 HOLD = 3.2                       # after a work's last verse: watch it alive (a work without a MiniMax clip)
 CLIP_TAIL = 0.4                  # with a clip: after the clip and the reading have both ended
+CLIP_AFTER = 2.0                 # the clip runs on this long after the last English line (owner, 2026-10-31: 多展示一会儿)
 CLOSING_AT = 0.8                 # after the last work: its closing lines, over its finished picture
 CLOSING_HOLD = 2.5
 RECAP_FADE = 1.0                 # one MiniMax clip dissolving into the next in the look back (paint.py)
@@ -149,11 +150,12 @@ def main(film: str):
                 verse_cues.append(cue)
                 last = k == len(work["units"]) - 1 and lang == "en"
                 t += ZH_EN_GAP if lang == "zh" else (VERSE_GAP if not last else 0)
-        if minimax:     # painted → alive → moving, inside the reading: the clip runs out with the last English line
-            # (owner, 2026-10-30: no time of its own after the reading) but starts no earlier than that line, while
-            # the Chinese is still painting the picture in
+        if minimax:     # painted → alive → moving, under the last English line (owner, 2026-10-30: 接在朗读里的末尾),
+            # starting no earlier than that line, while the Chinese is still painting the picture in, and running on
+            # CLIP_AFTER past it — or longer, if the line is shorter than the clip (owner, 2026-10-31: show it longer;
+            # minimax_prep.py also slows it down)
             last = verse_cues[-1]
-            start = max(last["start"], last["end"] - minimax["seconds"])
+            start = max(last["start"], last["end"] + CLIP_AFTER - minimax["seconds"])
             minimax = {"from": round(start, 3), "seconds": minimax["seconds"], "file": clip.with_suffix(".mp4").name}
             t = max(t, start + minimax["seconds"]) + CLIP_TAIL
         else:
