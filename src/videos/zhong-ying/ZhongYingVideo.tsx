@@ -396,7 +396,7 @@ const COVERS: Record<CoverProps["film"], {
   "seen-the-wind": {
     art: "the-wind",
     title: { zh: "谁看见过风？", en: "Has Anyone Seen the Wind?" },
-    sky: { left: 380, top: 360, width: 1160, zh: 230, en: 160, enLines: ["Bilingual", "Read-Aloud"] },
+    sky: { left: 380, top: 290, width: 1160, zh: 230, en: 160, enLines: ["Bilingual", "Read-Aloud"] },
     crop: "0% 0%",
   },
   "count-the-stars": {
