@@ -56,6 +56,9 @@ Updated 2026-10-21:
 - **Series are not numbered.** 从新闻看教育 never carries 1, 2, 3, on the cover, the title card,
   the YouTube title or the description. The `-01` in file names is an internal id only.
 
+Exception (owner, 2026-10-27): 中英阅读 covers say 双语朗读 big with the film's title small and a clean seal, no
+question and no ribbon ([ZHONG-YING.md](./ZHONG-YING.md) §Cover).
+
 ## Continuous footage and speed curves
 
 The owner's rule (2026-10-07): compress a long continuous recording as **one unbroken

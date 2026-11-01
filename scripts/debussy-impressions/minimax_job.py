@@ -13,7 +13,8 @@ The API key is read from ~/.netrc (machine api.minimaxi.com) into the request he
 import argparse, base64, hashlib, json, netrc, os, pathlib, ssl, subprocess, sys, time, urllib.request
 from PIL import Image
 
-DATA = pathlib.Path("/Users/yqin/repo/playground/lucas-academy-video-data/debussy-impressions")
+# Runs land under DATA/minimax/<id>/vN; another film points MINIMAX_DATA at its own data folder (中英阅读 does).
+DATA = pathlib.Path(os.environ.get("MINIMAX_DATA", "/Users/yqin/repo/playground/lucas-academy-video-data/debussy-impressions"))
 BASE = "https://api.minimax.cn"
 MODEL = "MiniMax-Hailuo-02"
 CTX = ssl.create_default_context(cafile="/etc/ssl/cert.pem")
