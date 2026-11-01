@@ -64,6 +64,12 @@ SPOKEN = {
 }
 # Takes picked by ear or by a measurement Whisper can't make, over choose()'s pick: line → (take, why).
 PINNED = {
+    "en/ye-su-shan-si-title": ("ye-su-shan-si-title-b", "a and c have a lone sound before the voice (strays); b is heard as "
+                                                       "written but for \"Lee-Bai\" for Li Bai"),
+    "en/john-3-8-title": ("john-3-8-title-g", "\"John, chapter 3, verse 8\" was slurred in six takes (Whisper: \"John 3.8\", "
+                                             "\"John 3 verse 8\"); with \"The Gospel of\" before it, take g is heard as written"),
+    "en/fu-de-gu-yuan-cao-title": ("fu-de-gu-yuan-cao-title-c", "Whisper medium hears c as written (\"Old Plain … Bai Zhu Yi\"); "
+                                                             "a is heard \"Oak Plain\" by both models"),
     "zh/little-boats-v04": ("little-boats-v04-d", "漂 read piāo three times (level pitch; Whisper writes 飄), the pace of "
                                                  "take b, which read the last two 漂 falling"),
     "zh/little-boats-v06": ("little-boats-v06-a", "in the films the owner approved; its clicks lie before the cut, "

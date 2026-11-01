@@ -135,7 +135,7 @@ FILMS: dict[str, dict] = {
              "say": {"zh": "风。斯蒂文森。", "en": "The Wind, by Robert Louis Stevenson."}},
             {"id": "john-3-8", "units": [11], "style": "watercolour",
              "title": {"zh": "约翰福音 3:8", "en": "John 3:8"}, "by": {"zh": "圣经 · 和合本", "en": "The Bible · NIV"},
-             "say": {"zh": "约翰福音第三章，第八节。", "en": "John, chapter 3, verse 8."}},
+             "say": {"zh": "约翰福音第三章，第八节。", "en": "The Gospel of John, chapter three, verse eight."}},   # "John, chapter 3": six takes slurred it
         ],
     },
     "count-the-stars": {
