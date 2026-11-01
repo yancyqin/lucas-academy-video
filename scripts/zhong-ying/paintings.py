@@ -24,6 +24,8 @@ import re
 SKY_BLUE = (160, 190, 228)
 WIND_SKY = [(139, 194, 234), (155, 204, 236), (125, 186, 234), (170, 212, 238), (110, 175, 230)]      # the-wind's oil sky
 TEMPLE_NIGHT = [(182, 199, 220), (198, 211, 226), (208, 218, 229), (222, 228, 236), (234, 235, 238)]  # ye-su-shan-si's pale night
+PLAIN = [(239, 233, 209), (248, 234, 208), (228, 214, 171), (233, 226, 201), (225, 210, 165), (247, 232, 203),
+         (249, 246, 241)]                                                                     # 古原草's grass, road and paper
 STAR_NIGHT = [(1, 35, 102), (2, 45, 118), (6, 56, 135), (10, 66, 150), (20, 60, 130)]                   # the-star's deep blue
 
 REGIONS: dict[str, list[dict]] = {
@@ -146,13 +148,14 @@ REGIONS: dict[str, list[dict]] = {
     ],
     # 看得见的诗 · 第四期 (lang lesson seen-the-wind, 2026-10-31)
     "fu-de-gu-yuan-cao": [
-        dict(name="scholar and rider", over=True, unit=4, at="王孙", r=3,
+        # The figures come with the plain: painted later, any underlay (paper, or the plain inpainted) left a ghost
+        dict(name="scholar and rider", unit=1, at="草", r=3, not_near=PLAIN,   # the figures, not the grass round them
              shape=("or", ("rect", 0.51, 0.56, 0.1, 0.18), ("rect", 0.635, 0.51, 0.065, 0.15))),
         dict(name="burnt ground", over=True, unit=2, at="野火", r=6, shape=("rect", 0, 0.75, 0.36, 0.19)),
         dict(name="road", over=True, unit=3, at="古道", r=8, shape=("poly", [[0.3, 1], [0.4, 0.9], [0.5, 0.8], [0.56, 0.74], [0.66, 0.66],
                                                                          [0.76, 0.6], [0.86, 0.555], [0.9, 0.56], [0.82, 0.6], [0.72, 0.66],
                                                                          [0.63, 0.73], [0.6, 0.8], [0.58, 0.9], [0.57, 1]])),
-        dict(name="town", over=True, unit=3, at="荒城", r=6, shape=("rect", 0.69, 0.45, 0.31, 0.12)),
+        dict(name="town", unit=3, at="荒城", r=6, shape=("rect", 0.69, 0.44, 0.31, 0.11)),   # on the bare sky, down to the grass
         dict(name="birds", unit=2, at="吹", r=3, shape=("rect", 0.54, 0.18, 0.13, 0.11)),
         dict(name="cloud", unit=2, at="春风", r=14, shape=("rect", 0.04, 0.07, 0.38, 0.18)),
         dict(name="tufts", unit=1, at="荣", r=14, shape=("rect", 0.47, 0.77, 0.53, 0.23)),
@@ -164,7 +167,7 @@ REGIONS: dict[str, list[dict]] = {
         dict(name="kite", over=True, unit=5, at="风筝", r=4, shape=("rect", 0.81, 0.04, 0.19, 0.23), not_near=WIND_SKY),
         dict(name="birds", over=True, unit=5, at="小鸟", r=3, shape=("rect", 0.55, 0.09, 0.15, 0.13), not_near=WIND_SKY),
         dict(name="woman", over=True, unit=5, at="女士", r=3, shape=("rect", 0.245, 0.55, 0.05, 0.08)),
-        dict(name="child", over=True, unit=9, at="孩子", r=4, shape=("rect", 0.6, 0.65, 0.09, 0.23)),
+        dict(name="child", over=True, unit=9, at="孩子", r=4, shape=("rect", 0.605, 0.665, 0.08, 0.215)),   # below the skyline
         dict(name="flying leaves", over=True, unit=8, at="吹", r=3, shape=("rect", 0.28, 0.26, 0.17, 0.2), not_near=WIND_SKY),
         dict(name="tree", over=True, unit=8, at="风", r=8, not_near=WIND_SKY,
              shape=("or", ("rect", 0.05, 0.24, 0.27, 0.25), ("poly", [[0.01, 0.7], [0.08, 0.7], [0.1, 0.6], [0.12, 0.46], [0.09, 0.44],
@@ -207,7 +210,7 @@ REGIONS: dict[str, list[dict]] = {
              shape=("or", ("rect", 0.3, 0, 0.7, 0.55), ("rect", 0.05, 0, 0.25, 0.3))),
         dict(name="path", over=True, unit=5, at="走", r=6, shape=("poly", [[0.7, 0.86], [0.78, 0.82], [0.81, 0.84], [0.73, 0.92], [0.75, 1],
                                                                           [0.6, 1], [0.67, 0.9]])),
-        dict(name="tree", over=True, unit=6, at="夜空", r=6, shape=("rect", 0.87, 0.62, 0.13, 0.17)),
+        dict(name="tree", unit=3, at="上空", r=6, shape=("rect", 0.87, 0.62, 0.13, 0.17)),   # half sky: painted with it
         dict(name="cottage", unit=3, at="我", r=14, shape=("rect", 0, 0.32, 0.3, 0.68)),
         dict(name="hills", unit=3, at="世界", r=30, shape=("rect", 0.27, 0.66, 0.73, 0.34)),
         dict(name="sky", unit=3, at="上空", r=46, shape=("or", ("rect", 0.28, 0, 0.72, 0.72), ("rect", 0, 0, 0.3, 0.36))),

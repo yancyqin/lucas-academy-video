@@ -174,9 +174,10 @@ def clip(film: str, unit: int, lang: str) -> pathlib.Path:
     picks = json.loads(chosen.read_text()) if chosen.exists() else {}
     if f"{lang}/{film}-v{unit:02d}" in picks:
         return chosen.parent / lang / f"{picks[f'{lang}/{film}-v{unit:02d}']['take']}.wav"
-    # A lesson voiced for the series from the start (can-beauty-last: Sunny and Matthew, lesson_voice.py) uses its
-    # own published clips.
-    return LANG / "public" / "audio" / film / lang / f"v{unit:02d}-whole.mp3"
+    # A lesson voiced for the series from the start (Sunny and Matthew, lesson_voice.py) uses lesson_voice.py's own
+    # take when it is still there (48 kHz WAV), else the clip published from it (a 48 kbps MP3, can-beauty-last).
+    take = DATA / "lang" / film / lang / f"v{unit:02d}-whole.wav"
+    return take if take.exists() else LANG / "public" / "audio" / film / lang / f"v{unit:02d}-whole.mp3"
 
 
 def extra(line_id: str, lang: str) -> pathlib.Path:
