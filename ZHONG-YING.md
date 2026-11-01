@@ -8,8 +8,8 @@ then once in English, verse by verse, with the narration the lesson already has.
 | 爬高一点，看远一点 · Climb Higher, See Farther | `climb-higher` | 登鹳雀楼 · Foreign Lands · 诗篇 121:1–2 | 2:33 |
 | 小船去远方 · Little Boats, Far Away | `little-boats` | 早发白帝城 · Where Go the Boats? · 以赛亚书 40:31 | 3:22 |
 | 美好能否留存？ · Can Beauty Last? | `can-beauty-last` | 春夜喜雨 · Sonnet 18 · 传道书 3:11 | 5:56 |
-| 谁看见过风？ · Has Anyone Seen the Wind? | `seen-the-wind` | 赋得古原草送别 · The Wind · 约翰福音 3:8 | in progress |
-| 星星数得完吗？ · Can You Count the Stars? | `count-the-stars` | 夜宿山寺 · The Star (Jane Taylor) · 创世记 15:5–6 | in progress |
+| 谁看见过风？ · Has Anyone Seen the Wind? | `seen-the-wind` | 赋得古原草送别 · The Wind · 约翰福音 3:8 | 5:53 |
+| 星星数得完吗？ · Can You Count the Stars? | `count-the-stars` | 夜宿山寺 · The Star (Jane Taylor) · 创世记 15:5–6 | 5:27 |
 
 ## What the owner decided (2026-10-26)
 
@@ -289,3 +289,14 @@ no part has more than lang's seven units.
   over a sea of clouds, as 登鹳雀楼's first clip was). John 3:8, The Star and Genesis 15:5–6 failed: 「当前已达到 Token
   Plan 用量上限」 — the day's quota; resend as v2 after it renews.
 - **Closings are drafts** (`films.FILMS[…]["closing"]`) until the owner words them.
+- **MiniMax shown longer (owner, 2026-10-31: 「把 minimax 的视频时长稍微拉长一些 … 多展示一会儿」):** `minimax_prep.py`
+  plays each clip at 0.75 (about 7.7 s), and `build_timeline.py` lets it run `CLIP_AFTER` (2 s) past the last English line.
+- **First cut, 2026-11-01 01:40 (owner: 「可以放桌面」):** on the Desktop as two upload folders, 「中英阅读-谁看见过风-上传」
+  (5:53) and 「中英阅读-星星数得完吗-上传」 (5:27), −16.2 LUFS, true peak −5.9, no black frames, every work ending on
+  its picture; three of six works have their clip. The first render showed underlays before four late objects (a
+  sky-coloured notch over the kite-flier, a sky patch by The Star's tree, paper-white blocks for 古原草's figures and
+  town); `paintings.py` now keeps an `over` box below the skyline, paints half-sky objects with the sky, and paints
+  objects on ink paper with what they stand on. The upload text links lang's lesson and art lab's paintings, which are
+  live only once those branches are merged and deployed. The other three clips are resent at 08:05 PST
+  (Beijing midnight); then `minimax_prep.py` → `build_timeline.py` → `living.mjs` → `paint.py` → `render.py` →
+  `package.py` again, into the same folders.
