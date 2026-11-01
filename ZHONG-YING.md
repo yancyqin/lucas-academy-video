@@ -297,6 +297,11 @@ no part has more than lang's seven units.
   sky-coloured notch over the kite-flier, a sky patch by The Star's tree, paper-white blocks for 古原草's figures and
   town); `paintings.py` now keeps an `over` box below the skyline, paints half-sky objects with the sky, and paints
   objects on ink paper with what they stand on. The upload text links lang's lesson and art lab's paintings, which are
-  live only once those branches are merged and deployed. The other three clips are resent at 08:05 PST
-  (Beijing midnight); then `minimax_prep.py` → `build_timeline.py` → `living.mjs` → `paint.py` → `render.py` →
-  `package.py` again, into the same folders.
+  live only once those branches are merged and deployed.
+- **Next (owner, 2026-11-01):** 「橄榄树、窗口看星、亚伯兰三段要晚些再发」 — the v2 runs are prepared, not sent; the
+  owner says when. 「minimax 视频比例太少 … 不用安静动 8 秒那么长，就把现在末尾的 minimax 放慢拉长就好了，等出了片子再做」:
+  no long quiet tail; each work's one end clip is slowed to fill its last English line and end about 2 s after it
+  (speed = 5.875 s / (line + 2 s), between 0.5 and 0.75 — 8–12 s instead of 7.7). Where the last unit paints nothing
+  (The Wind's last refrain) the clip may start as soon as the picture is complete, so it is slowed too. Then
+  `minimax_prep.py` (per-work speed) → `build_timeline.py` → `living.mjs` → `paint.py` → `render.py` → `package.py`,
+  into the same Desktop folders.
