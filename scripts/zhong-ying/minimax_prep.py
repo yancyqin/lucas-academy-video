@@ -27,7 +27,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from films import PUBLIC  # noqa: E402
 
 PW, PH = 1230, 820
-SPEED = 0.75
+SPEED = 0.75                     # at most this fast (a 6 s clip runs 7.7 s)
+SLOWEST = 0.5                    # at most this slow (11.75 s); beyond it the in-between frames smear
 
 
 def frames(path):
@@ -46,9 +47,15 @@ def main():
     ap.add_argument("work")
     ap.add_argument("run")
     ap.add_argument("--tone", action="store_true")
-    ap.add_argument("--speed", type=float, default=SPEED)
+    ap.add_argument("--speed", type=float, help="a fixed speed instead of fitting the clip to the film")
     a = ap.parse_args()
     run = Path(a.run)
+    if a.speed is None:
+        source = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0",
+                                       str(run / "original.mp4")], capture_output=True, text=True, check=True).stdout)
+        work = next(w for w in json.loads((PUBLIC / a.film / "timeline.json").read_text())["works"] if w["id"] == a.work)
+        span = work["clip_span"][1] - work["clip_span"][0]
+        a.speed = round(min(SPEED, max(SLOWEST, source / span)), 3)
     out = PUBLIC / a.film / f"minimax-{a.work}.mp4"
     picture = cv2.cvtColor(cv2.imread(str(PUBLIC / a.film / f"living-{a.work}.jpg")), cv2.COLOR_BGR2RGB)
     picture = cv2.resize(picture, (PW, PH), interpolation=cv2.INTER_AREA)

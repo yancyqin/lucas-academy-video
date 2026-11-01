@@ -33,6 +33,7 @@ ZH_EN_GAP = 0.7                  # a verse's Chinese, then its English
 VERSE_GAP = 1.1                  # one verse to the next
 HOLD = 3.2                       # after a work's last verse: watch it alive (a work without a MiniMax clip)
 CLIP_TAIL = 0.4                  # with a clip: after the clip and the reading have both ended
+SETTLE = 0.6                     # paint.py: a region's last gaps settle in over this long
 CLIP_AFTER = 2.0                 # the clip runs on this long after the last English line (owner, 2026-10-31: 多展示一会儿)
 CLOSING_AT = 0.8                 # after the last work: its closing lines, over its finished picture
 CLOSING_HOLD = 2.5
@@ -150,16 +151,6 @@ def main(film: str):
                 verse_cues.append(cue)
                 last = k == len(work["units"]) - 1 and lang == "en"
                 t += ZH_EN_GAP if lang == "zh" else (VERSE_GAP if not last else 0)
-        if minimax:     # painted → alive → moving, under the last English line (owner, 2026-10-30: 接在朗读里的末尾),
-            # starting no earlier than that line, while the Chinese is still painting the picture in, and running on
-            # CLIP_AFTER past it — or longer, if the line is shorter than the clip (owner, 2026-10-31: show it longer;
-            # minimax_prep.py also slows it down)
-            last = verse_cues[-1]
-            start = max(last["start"], last["end"] + CLIP_AFTER - minimax["seconds"])
-            minimax = {"from": round(start, 3), "seconds": minimax["seconds"], "file": clip.with_suffix(".mp4").name}
-            t = max(t, start + minimax["seconds"]) + CLIP_TAIL
-        else:
-            t += HOLD
         cue_of = {(c["unit"], c["lang"]): c for c in verse_cues}
 
         # The Chinese words paint the regions in; each region runs until the next one in its verse starts.
@@ -172,12 +163,24 @@ def main(film: str):
             for i, r in enumerate(mine):
                 end = mine[i + 1]["start"] if i + 1 < len(mine) else cue_of[(n, "zh")]["speech"][1] + 0.35
                 r["end"] = max(end, r["start"] + (1.3 if r["r"] < 6 else 0.8))   # small details need time too
+        complete = max(r["end"] for r in regions) + SETTLE        # the picture is all there (paint.py settles 0.6 s)
         living = []
         for entry in LIVING[work["id"]]:
             cue = cue_of[(entry["unit"], "en")]
             living.append({**entry, "start": find_word(cue["words"], entry["at"])["start"]})
 
+        last = verse_cues[-1]
+        if minimax:     # painted → alive → moving, at the end of the reading (owner, 2026-10-30: 接在朗读里的末尾): the
+            # clip starts with the last English line — or as soon as the picture is complete, if that is earlier (The
+            # Wind's last refrain paints nothing) — and runs out CLIP_AFTER past it, longer only if it is longer than
+            # all that (owner, 2026-11-01: no long quiet tail; minimax_prep.py slows each clip to fit)
+            start = max(min(last["start"], complete), last["end"] + CLIP_AFTER - minimax["seconds"])
+            minimax = {"from": round(start, 3), "seconds": minimax["seconds"], "file": clip.with_suffix(".mp4").name}
+            t = max(t, start + minimax["seconds"]) + CLIP_TAIL
+        else:
+            t += HOLD
         works.append({**work, "start": round(w_start, 3), "end": round(t, 3), "minimax": minimax,
+                      "clip_span": [round(min(last["start"], complete), 3), round(last["end"] + CLIP_AFTER, 3)],
                       "paint_from": cue_of[(work["units"][0], "zh")]["start"],
                       "living_from": cue_of[(work["units"][0], "en")]["start"],
                       "regions": regions, "living": living})
