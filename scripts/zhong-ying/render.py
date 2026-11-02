@@ -13,7 +13,8 @@ import subprocess
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-COMPS = {"climb-higher": "ZhongYingClimbHigher", "little-boats": "ZhongYingLittleBoats", "can-beauty-last": "ZhongYingCanBeautyLast"}
+COMPS = {"climb-higher": "ZhongYingClimbHigher", "little-boats": "ZhongYingLittleBoats", "can-beauty-last": "ZhongYingCanBeautyLast",
+         "seen-the-wind": "ZhongYingSeenTheWind", "count-the-stars": "ZhongYingCountTheStars"}
 
 
 def main():

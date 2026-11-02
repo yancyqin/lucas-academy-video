@@ -368,7 +368,7 @@ export const ZhongYingVideo: FC<ZhongYingProps> = ({ film, tl }) => {
 // the owner wants viewers to see first that it is a bilingual read-aloud (ZHONG-YING.md §Cover). The picture is one
 // work's painting, full size (cover.py copies the art lab's 1536 × 1024 original to cover-<work>.jpg).
 // Layout "a" writes on the painting's open sky; "b" puts the words in a paper column beside it.
-type CoverProps = { film: "climb-higher" | "little-boats" | "can-beauty-last"; lang: Lang; layout: "a" | "b" };
+type CoverProps = { film: "climb-higher" | "little-boats" | "can-beauty-last" | "seen-the-wind" | "count-the-stars"; lang: Lang; layout: "a" | "b" };
 const COVERS: Record<CoverProps["film"], {
   art: string;
   title: Record<Lang, string>;
@@ -391,6 +391,18 @@ const COVERS: Record<CoverProps["film"], {
     art: "sonnet-18",
     title: { zh: "美好能否留存？", en: "Can Beauty Last?" },
     sky: { left: 740, top: 340, width: 1140, zh: 230, en: 160, enLines: ["Bilingual", "Read-Aloud"] },
+    crop: "0% 0%",
+  },
+  "seen-the-wind": {
+    art: "the-wind",
+    title: { zh: "谁看见过风？", en: "Has Anyone Seen the Wind?" },
+    sky: { left: 380, top: 290, width: 1160, zh: 230, en: 160, enLines: ["Bilingual", "Read-Aloud"] },
+    crop: "0% 0%",
+  },
+  "count-the-stars": {
+    art: "ye-su-shan-si",
+    title: { zh: "星星数得完吗？", en: "Can You Count the Stars?" },
+    sky: { left: 40, top: 330, width: 1100, zh: 230, en: 160, enLines: ["Bilingual", "Read-Aloud"] },
     crop: "0% 0%",
   },
 };

@@ -25,12 +25,13 @@ from __future__ import annotations
 
 import json
 import re
+import shutil
 import statistics
 import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from films import DATA, FILMS, MEDIA, SUBSCRIBE  # noqa: E402
+from films import DATA, FILMS, MEDIA, SUBSCRIBE, intro_spoken  # noqa: E402
 
 DIR = DATA / "narration" / "verses"
 TAKES = "ab"
@@ -55,9 +56,20 @@ SPOKEN = {
     "磨坊": "[m][ò]坊",            # 磨 mò, mill
     "漂": "[p][iāo]",              # 漂 piāo, float (owner, 2026-10-27: 「它们最后会漂到哪里」 was read piǎo / piào)
     "杜甫": "杜[f][ǔ]",            # 甫 fǔ (Fangfang's takes without it: Whisper heard 杜福 / 渡府)
+    "夜宿": "夜[s][ù]",            # 宿 sù, stay the night (not xiǔ)
+    "从那里来，往那里去": "从哪里来，往哪里去",   # 和合本 writes 那里 for 哪里 (nǎ li)
+    "数算": "[sh][ǔ]算",           # 数 shǔ, count (not shù)
+    "能数得": "能[sh][ǔ]得",
+    "为他的义": "[w][éi]他的义",     # 以此为义: 为 wéi, count as
 }
 # Takes picked by ear or by a measurement Whisper can't make, over choose()'s pick: line → (take, why).
 PINNED = {
+    "en/ye-su-shan-si-title": ("ye-su-shan-si-title-b", "a and c have a lone sound before the voice (strays); b is heard as "
+                                                       "written but for \"Lee-Bai\" for Li Bai"),
+    "en/john-3-8-title": ("john-3-8-title-g", "\"John, chapter 3, verse 8\" was slurred in six takes (Whisper: \"John 3.8\", "
+                                             "\"John 3 verse 8\"); with \"The Gospel of\" before it, take g is heard as written"),
+    "en/fu-de-gu-yuan-cao-title": ("fu-de-gu-yuan-cao-title-c", "Whisper medium hears c as written (\"Old Plain … Bai Zhu Yi\"); "
+                                                             "a is heard \"Oak Plain\" by both models"),
     "zh/little-boats-v04": ("little-boats-v04-d", "漂 read piāo three times (level pitch; Whisper writes 飄), the pace of "
                                                  "take b, which read the last two 漂 falling"),
     "zh/little-boats-v06": ("little-boats-v06-a", "in the films the owner approved; its clicks lie before the cut, "
@@ -91,9 +103,9 @@ def lines(lang: str) -> list[dict]:
 
 
 def extra_lines(lang: str) -> list[dict]:
-    """Every work's title and author as read aloud (<work id>-title), every film's closing (<film>-closing) and the
-    series' last line (subscribe)."""
-    out = []
+    """The series' opening line (intro), every work's title and author as read aloud (<work id>-title), every film's
+    closing (<film>-closing) and the series' last line (subscribe)."""
+    out = [{"id": "intro", "text": intro_spoken(lang)}]
     for film, spec in FILMS.items():
         titles = [{"id": f"{work['id']}-title", "film": film, "text": work["say"][lang]} for work in spec["works"]]
         closing = [{"id": f"{film}-closing", "film": film, "text": spec["closing"][lang]}]
@@ -239,6 +251,8 @@ def choose(kind: str = "verses"):
         median = statistics.median(t["pace"] for t in takes.values())
         for line in each_line(lang):
             mine = {lid: t for lid, t in takes.items() if t["line"] == line["id"]}
+            if not mine:                                     # not voiced (yet), or its takes were cleaned away
+                continue
             pin = PINNED.get(f"{lang}/{line['id']}")
             if pin and pin[0] in mine:
                 chosen[f"{lang}/{line['id']}"] = {"take": pin[0], "score": mine[pin[0]]["score"], "pinned": pin[1]}
@@ -255,6 +269,9 @@ def choose(kind: str = "verses"):
                 for lid, other in mine.items():
                     print(f"     {lid} {other['score']:.3f} {other['heard']}")
     (folder / "chosen.json").write_text(json.dumps(chosen, ensure_ascii=False, indent=1))
+    for lang in STYLE:                                       # the opening's chosen take, where align.py looks for it
+        if kind == "extras" and f"{lang}/intro" in chosen:
+            shutil.copy2(folder / lang / f"{chosen[f'{lang}/intro']['take']}.wav", DATA / "narration" / f"intro-{lang}.wav")
 
 
 def retake(lang: str, line_id: str, takes: str = "cde"):

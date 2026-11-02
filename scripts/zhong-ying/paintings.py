@@ -22,6 +22,11 @@ from __future__ import annotations
 import re
 
 SKY_BLUE = (160, 190, 228)
+WIND_SKY = [(139, 194, 234), (155, 204, 236), (125, 186, 234), (170, 212, 238), (110, 175, 230)]      # the-wind's oil sky
+TEMPLE_NIGHT = [(182, 199, 220), (198, 211, 226), (208, 218, 229), (222, 228, 236), (234, 235, 238)]  # ye-su-shan-si's pale night
+PLAIN = [(239, 233, 209), (248, 234, 208), (228, 214, 171), (233, 226, 201), (225, 210, 165), (247, 232, 203),
+         (249, 246, 241)]                                                                     # 古原草's grass, road and paper
+STAR_NIGHT = [(1, 35, 102), (2, 45, 118), (6, 56, 135), (10, 66, 150), (20, 60, 130)]                   # the-star's deep blue
 
 REGIONS: dict[str, list[dict]] = {
     "deng-guanque-lou": [
@@ -141,6 +146,84 @@ REGIONS: dict[str, list[dict]] = {
         dict(name="stars", unit=12, at="神", r=20, shape=("rect", 0, 0, 0.34, 0.32)),
         dict(name="hill", unit=12, at="造", r=22, shape=("rect", 0, 0.58, 0.86, 0.42)),
     ],
+    # 看得见的诗 · 第四期 (lang lesson seen-the-wind, 2026-10-31)
+    "fu-de-gu-yuan-cao": [
+        # The figures come with the plain: painted later, any underlay (paper, or the plain inpainted) left a ghost
+        dict(name="scholar and rider", unit=1, at="草", r=3, not_near=PLAIN,   # the figures, not the grass round them
+             shape=("or", ("rect", 0.51, 0.56, 0.1, 0.18), ("rect", 0.635, 0.51, 0.065, 0.15))),
+        dict(name="burnt ground", over=True, unit=2, at="野火", r=6, shape=("rect", 0, 0.75, 0.36, 0.19)),
+        dict(name="road", over=True, unit=3, at="古道", r=8, shape=("poly", [[0.3, 1], [0.4, 0.9], [0.5, 0.8], [0.56, 0.74], [0.66, 0.66],
+                                                                         [0.76, 0.6], [0.86, 0.555], [0.9, 0.56], [0.82, 0.6], [0.72, 0.66],
+                                                                         [0.63, 0.73], [0.6, 0.8], [0.58, 0.9], [0.57, 1]])),
+        dict(name="town", unit=3, at="荒城", r=6, shape=("rect", 0.69, 0.44, 0.31, 0.11)),   # on the bare sky, down to the grass
+        dict(name="birds", unit=2, at="吹", r=3, shape=("rect", 0.54, 0.18, 0.13, 0.11)),
+        dict(name="cloud", unit=2, at="春风", r=14, shape=("rect", 0.04, 0.07, 0.38, 0.18)),
+        dict(name="tufts", unit=1, at="荣", r=14, shape=("rect", 0.47, 0.77, 0.53, 0.23)),
+        dict(name="hills", unit=1, at="原", r=16, shape=("rect", 0, 0.47, 0.69, 0.08)),
+        dict(name="near grass", unit=1, at="草", r=28, shape=("rect", 0, 0.72, 1, 0.28)),
+        dict(name="far grass", unit=1, at="离离", r=24, shape=("rect", 0, 0.54, 1, 0.18)),
+    ],
+    "the-wind": [
+        dict(name="kite", over=True, unit=5, at="风筝", r=4, shape=("rect", 0.81, 0.04, 0.19, 0.23), not_near=WIND_SKY),
+        dict(name="birds", over=True, unit=5, at="小鸟", r=3, shape=("rect", 0.55, 0.09, 0.15, 0.13), not_near=WIND_SKY),
+        dict(name="woman", over=True, unit=5, at="女士", r=3, shape=("rect", 0.245, 0.55, 0.05, 0.08)),
+        dict(name="child", over=True, unit=9, at="孩子", r=4, shape=("rect", 0.605, 0.665, 0.08, 0.215)),   # below the skyline
+        dict(name="flying leaves", over=True, unit=8, at="吹", r=3, shape=("rect", 0.28, 0.26, 0.17, 0.2), not_near=WIND_SKY),
+        dict(name="tree", over=True, unit=8, at="风", r=8, not_near=WIND_SKY,
+             shape=("or", ("rect", 0.05, 0.24, 0.27, 0.25), ("poly", [[0.01, 0.7], [0.08, 0.7], [0.1, 0.6], [0.12, 0.46], [0.09, 0.44],
+                                                                       [0.05, 0.55], [0.02, 0.62]]))),
+        dict(name="right cloud", over=True, unit=6, at="唱", r=10, shape=("rect", 0.5, 0.26, 0.47, 0.2), not_near=WIND_SKY),
+        dict(name="left cloud", over=True, unit=5, at="满天", r=10, shape=("rect", 0.04, 0.03, 0.52, 0.26), not_near=WIND_SKY),
+        dict(name="near meadow", unit=7, at="各种", r=36, shape=("rect", 0, 0.76, 1, 0.24)),
+        dict(name="far meadow", unit=5, at="草地", r=36, shape=("rect", 0, 0.58, 1, 0.18), not_near=WIND_SKY),
+        dict(name="sky", unit=5, at="高空", r=46, shape=("rect", 0, 0, 1, 0.66)),
+    ],
+    "john-3-8": [
+        dict(name="adult and child", over=True, unit=11, at="你", r=3, shape=("rect", 0.33, 0.46, 0.16, 0.21)),
+        dict(name="flying leaves", unit=11, at="吹", r=3, shape=("rect", 0.42, 0.26, 0.32, 0.28)),
+        dict(name="birds", unit=11, at="去", r=3, shape=("rect", 0.8, 0.07, 0.16, 0.16)),
+        dict(name="olive tree", unit=11, at="风", r=10, shape=("rect", 0.03, 0.15, 0.4, 0.45)),
+        dict(name="wind streaks left", unit=11, at="意思", r=18, shape=("rect", 0, 0.05, 0.4, 0.18)),
+        dict(name="wind streaks right", unit=11, at="响声", r=18, shape=("rect", 0.5, 0.2, 0.5, 0.28)),
+        dict(name="evening glow", unit=11, at="晓得", r=18, shape=("rect", 0.5, 0.48, 0.5, 0.27)),
+        dict(name="grass and flowers", unit=11, at="生", r=14, shape=("rect", 0, 0.72, 1, 0.28)),
+        dict(name="hill", unit=11, at="来", r=18, shape=("poly", [[0, 0.56], [0.3, 0.56], [0.6, 0.66], [1, 0.76], [1, 0.82], [0, 0.82]])),
+    ],
+    # 看得见的诗 · 第五期 (lang lesson count-the-stars, 2026-10-31)
+    "ye-su-shan-si": [
+        dict(name="poet", over=True, unit=1, at="手", r=3, shape=("rect", 0.68, 0.12, 0.04, 0.09)),
+        dict(name="tower", over=True, unit=1, at="危楼", r=4, shape=("rect", 0.655, 0.22, 0.1, 0.25)),
+        dict(name="stars", over=True, unit=1, at="星辰", r=3, shape=("rect", 0, 0, 1, 0.33), not_near=TEMPLE_NIGHT),
+        dict(name="moon", over=True, unit=2, at="天上", r=4, shape=("rect", 0.07, 0.04, 0.08, 0.12), not_near=TEMPLE_NIGHT),
+        dict(name="small temple", over=True, unit=2, at="不敢", r=3, shape=("rect", 0.495, 0.66, 0.07, 0.1)),
+        dict(name="sky", unit=1, at="高", r=46, shape=("rect", 0, 0, 1, 0.42)),
+        dict(name="peak", unit=1, at="百尺", r=16, shape=("poly", [[0.44, 0.86], [0.56, 0.62], [0.62, 0.45], [0.76, 0.42], [0.86, 0.5],
+                                                                   [0.95, 0.55], [1, 0.62], [1, 0.86]])),
+        dict(name="far mountains", unit=2, at="语", r=16, shape=("rect", 0, 0.6, 0.45, 0.17)),
+        dict(name="sea of clouds", unit=2, at="恐", r=30, shape=("rect", 0, 0.74, 1, 0.26)),
+    ],
+    "the-star": [
+        dict(name="traveller", over=True, unit=5, at="赶路", r=3, shape=("rect", 0.715, 0.72, 0.06, 0.15)),
+        dict(name="window and child", over=True, unit=6, at="窗帘", r=4, shape=("rect", 0.04, 0.59, 0.18, 0.33)),
+        dict(name="bright star", over=True, unit=3, at="星星", r=4, shape=("circle", 0.7, 0.17, 0.07), not_near=STAR_NIGHT),
+        dict(name="little stars", over=True, unit=4, at="一闪一闪", r=3, not_near=STAR_NIGHT,
+             shape=("or", ("rect", 0.3, 0, 0.7, 0.55), ("rect", 0.05, 0, 0.25, 0.3))),
+        dict(name="path", over=True, unit=5, at="走", r=6, shape=("poly", [[0.7, 0.86], [0.78, 0.82], [0.81, 0.84], [0.73, 0.92], [0.75, 1],
+                                                                          [0.6, 1], [0.67, 0.9]])),
+        dict(name="tree", unit=3, at="上空", r=6, shape=("rect", 0.87, 0.62, 0.13, 0.17)),   # half sky: painted with it
+        dict(name="cottage", unit=3, at="我", r=14, shape=("rect", 0, 0.32, 0.3, 0.68)),
+        dict(name="hills", unit=3, at="世界", r=30, shape=("rect", 0.27, 0.66, 0.73, 0.34)),
+        dict(name="sky", unit=3, at="上空", r=46, shape=("or", ("rect", 0.28, 0, 0.72, 0.72), ("rect", 0, 0, 0.3, 0.36))),
+    ],
+    "genesis-15-5": [
+        dict(name="Abram", over=True, unit=8, at="他", r=3, shape=("rect", 0.585, 0.67, 0.08, 0.21)),
+        dict(name="tent", over=True, unit=8, at="领", r=4, shape=("rect", 0, 0.68, 0.24, 0.2)),
+        dict(name="sheep", over=True, unit=8, at="走到", r=3, shape=("rect", 0.15, 0.81, 0.11, 0.08)),
+        dict(name="starry sky", unit=8, at="众", r=30, shape=("rect", 0, 0, 1, 0.2)),     # the dense indigo, full of stars
+        dict(name="sky", unit=8, at="天", r=46, shape=("rect", 0, 0.2, 1, 0.22)),        # its paler lower edge
+        dict(name="hills", unit=9, at="亚伯兰", r=12, shape=("rect", 0.2, 0.78, 0.8, 0.06)),
+        dict(name="ground", unit=9, at="信", r=24, shape=("rect", 0, 0.8, 1, 0.2)),
+    ],
 }
 
 LIVING: dict[str, list[dict]] = {
@@ -206,6 +289,52 @@ LIVING: dict[str, list[dict]] = {
         dict(unit=12, at="time.", brush="petals", path=[[0.1, 0.3], [0.25, 0.38], [0.4, 0.42]], dur=1.0),
         dict(unit=12, at="eternity", brush="twinkle", path=[[0.03, 0.05], [0.15, 0.12], [0.28, 0.2]], dur=1.2),
         dict(unit=12, at="heart;", brush="birds", path=[[0.6, 0.22], [0.75, 0.2], [0.9, 0.24]], dur=1.0),
+    ],
+    # 第四期: every stroke goes on paint its Chinese has already laid down
+    "fu-de-gu-yuan-cao": [
+        dict(unit=1, at="grass", brush="tallgrass", path=[[0.05, 0.62], [0.3, 0.6], [0.55, 0.63], [0.8, 0.6], [0.98, 0.62]], dur=1.4),
+        dict(unit=2, at="wind", brush="tallgrass", path=[[0.5, 0.86], [0.7, 0.83], [0.9, 0.87]], dur=1.0),
+        dict(unit=2, at="grows", brush="sprouts", path=[[0.06, 0.85], [0.14, 0.84], [0.22, 0.86], [0.3, 0.84]], dur=1.0),
+        dict(unit=3, at="far", brush="mist", path=[[0.08, 0.15], [0.2, 0.12], [0.34, 0.16]], dur=1.2),
+        dict(unit=4, at="friend", brush="birds", path=[[0.5, 0.22], [0.6, 0.19], [0.7, 0.23]], dur=1.0),
+        dict(unit=4, at="grass", brush="tallgrass", path=[[0.02, 0.72], [0.25, 0.7], [0.45, 0.74]], dur=1.0),
+    ],
+    "the-wind": [
+        dict(unit=5, at="birds", brush="birds", path=[[0.52, 0.12], [0.6, 0.1], [0.7, 0.14]], dur=1.0),
+        dict(unit=5, at="grass—", brush="gusts", path=[[0.05, 0.66], [0.35, 0.64], [0.65, 0.67], [0.95, 0.65]], dur=1.4),
+        dict(unit=6, at="a-blowing", brush="gusts", path=[[0.95, 0.7], [0.6, 0.68], [0.25, 0.71]], dur=1.2),
+        dict(unit=7, at="push,", brush="gusts", path=[[0.05, 0.9], [0.4, 0.88], [0.75, 0.92], [0.98, 0.88]], dur=1.4),
+        dict(unit=8, at="a-blowing", brush="foliage", path=[[0.08, 0.3], [0.18, 0.27], [0.28, 0.34], [0.16, 0.44]], dur=1.2),
+        dict(unit=8, at="song!", brush="windleaves", path=[[0.28, 0.32], [0.36, 0.36], [0.44, 0.4]], dur=1.0),
+        dict(unit=9, at="blower,", brush="windleaves", path=[[0.2, 0.3], [0.3, 0.27], [0.38, 0.31]], dur=0.8),
+        dict(unit=10, at="a-blowing", brush="birds", path=[[0.42, 0.08], [0.5, 0.06], [0.58, 0.1]], dur=1.0),
+    ],
+    "john-3-8": [
+        dict(unit=11, at="blows", brush="foliage", path=[[0.08, 0.25], [0.2, 0.2], [0.33, 0.25], [0.4, 0.35]], dur=1.2),
+        dict(unit=11, at="sound,", brush="windleaves", path=[[0.45, 0.3], [0.55, 0.35], [0.65, 0.4]], dur=1.0),
+        dict(unit=11, at="going.", brush="birds", path=[[0.78, 0.12], [0.86, 0.09], [0.95, 0.13]], dur=1.0),
+        dict(unit=11, at="born", brush="tallgrass", path=[[0.05, 0.85], [0.35, 0.82], [0.65, 0.88], [0.95, 0.84]], dur=1.2),
+    ],
+    # 第五期
+    "ye-su-shan-si": [
+        dict(unit=1, at="pick", brush="twinkle", path=[[0.68, 0.15], [0.72, 0.13]], dur=0.6),
+        dict(unit=1, at="stars.", brush="starry", path=[[0.05, 0.1], [0.25, 0.16], [0.45, 0.08], [0.6, 0.14]], dur=1.2),
+        dict(unit=2, at="voice,", brush="mist", path=[[0.05, 0.86], [0.35, 0.82], [0.65, 0.88], [0.95, 0.84]], dur=1.4),
+        dict(unit=2, at="sky.", brush="sunglow", path=[[0.108, 0.1], [0.108, 0.1]], dur=0.3),
+    ],
+    "the-star": [
+        dict(unit=3, at="star,", brush="sunglow", path=[[0.7, 0.17], [0.7, 0.17]], dur=0.3),
+        dict(unit=3, at="sky.", brush="starry", path=[[0.35, 0.1], [0.45, 0.3]], dur=0.8),
+        dict(unit=4, at="light,", brush="starry", path=[[0.85, 0.1], [0.95, 0.3], [0.8, 0.45]], dur=1.0),
+        dict(unit=5, at="dark,", brush="sway", path=[[0.3, 0.85], [0.55, 0.8], [0.9, 0.9]], dur=1.2),
+        dict(unit=6, at="curtains", brush="lamplight", path=[[0.13, 0.72], [0.13, 0.72]], dur=0.3),
+        dict(unit=7, at="star.", brush="starry", path=[[0.4, 0.5], [0.55, 0.35]], dur=0.8),
+    ],
+    "genesis-15-5": [
+        dict(unit=8, at="outside", brush="lamplight", path=[[0.155, 0.8], [0.155, 0.8]], dur=0.3),
+        dict(unit=8, at="stars—if", brush="starry", path=[[0.05, 0.12], [0.25, 0.2], [0.45, 0.1], [0.65, 0.22], [0.9, 0.12]], dur=1.6),
+        dict(unit=8, at="offspring", brush="starry", path=[[0.3, 0.3], [0.6, 0.32], [0.9, 0.28]], dur=1.0),
+        dict(unit=9, at="believed", brush="sway", path=[[0.05, 0.92], [0.4, 0.9], [0.75, 0.94], [0.98, 0.9]], dur=1.2),
     ],
 }
 

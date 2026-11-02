@@ -33,7 +33,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 from films import DATA, MEDIA  # noqa: E402
-from narration import STYLE, heard_right  # noqa: E402
+from narration import SPOKEN as SERIES_SPOKEN, STYLE, heard_right  # noqa: E402
 
 OUT = DATA / "narration" / "emotion-lab"
 ASSISTANT = "You are a helpful assistant.<|endofprompt|>"
@@ -44,7 +44,7 @@ TEXTS = {   # owner, 2026-10-28: 杜甫《春夜喜雨》 and 传道书 3:11
 }
 LAB_TEXTS = {"chunye": "好雨知时节，当春乃发生。随风潜入夜，润物细无声。",
              "chuandao": "神造万物，各按其时成为美好；又将永生安置在世人心里。"}
-SPOKEN = {"花重": "花[zh][òng]"}               # 重 zhòng, heavy with rain
+SPOKEN = {"花重": "花[zh][òng]", **SERIES_SPOKEN}   # 重 zhòng, heavy with rain; and the series' polyphones
 SETUPS = {"0": "series style", "1": "happy, hybrid", "2": "happy, instruct2", "3": "expressive reference",
           "4": "expressive reference + happy", "5": "expressive reference + [breath]"}
 

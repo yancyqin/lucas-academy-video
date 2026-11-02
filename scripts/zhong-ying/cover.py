@@ -19,7 +19,8 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "scripts/zhong-ying"))
 from films import DATA  # noqa: E402
 
-ART = {"climb-higher": "foreign-lands", "little-boats": "where-go-the-boats", "can-beauty-last": "sonnet-18"}   # as COVERS in ZhongYingVideo.tsx
+ART = {"climb-higher": "foreign-lands", "little-boats": "where-go-the-boats", "can-beauty-last": "sonnet-18",
+       "seen-the-wind": "the-wind", "count-the-stars": "ye-su-shan-si"}   # as COVERS in ZhongYingVideo.tsx
 
 
 def main():

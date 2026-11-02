@@ -51,6 +51,23 @@ ABOUT = {
         "voices_zh": "中文由 Sunny、英文由 Matthew 配音，用他们自己的录音由 AI 合成；开头、中文题目、回顾和最后一句为 AI 合成，使用 Fangfang（中文）和 Louise（英文）的授权声线。",
         "voices_en": "The Chinese is voiced by Sunny and the English by Matthew, made with AI from their own recordings; the opening, the Chinese titles, the look back and the last line are AI-generated with Fangfang's (Chinese) and Louise's (English) licensed voices.",
     },
+    "seen-the-wind": {
+        "zh": "这一集读三篇，都在写看不见的风：唐诗《赋得古原草送别》（白居易）、斯蒂文森的《风》（The Wind）、约翰福音 3:8。",
+        "en": "Three readings about the wind no one can see: “Grass on the Old Plain: A Farewell” (Bai Juyi, Tang dynasty), Robert Louis Stevenson’s “The Wind”, and John 3:8.",
+        "sources_zh": "《赋得古原草送别》和斯蒂文森的 “The Wind”（1885）是公有领域，互译由 Lucas Academy 完成。约翰福音中文为和合本（公有领域），英文为 NIV。",
+        "sources_en": "“Grass on the Old Plain: A Farewell” and Stevenson’s “The Wind” (1885) are in the public domain; the translations are by Lucas Academy. John 3:8: Chinese Union Version (public domain); English NIV.",
+        # Owner, 2026-10-31: 旁白 Fangfang + Louise, titles and authors included; 朗读 Sunny + Matthew.
+        "voices_zh": "中文由 Sunny、英文由 Matthew 朗读，用他们自己的录音由 AI 合成；开头、每篇的题目和作者、回顾和最后一句为 AI 合成，使用 Fangfang（中文）和 Louise（英文）的授权声线。",
+        "voices_en": "The verses are read by Sunny (Chinese) and Matthew (English), made with AI from their own recordings; the opening, every title and author, the look back and the last line are AI-generated with Fangfang's (Chinese) and Louise's (English) licensed voices.",
+    },
+    "count-the-stars": {
+        "zh": "这一集读三篇，都在仰望满天的星星：唐诗《夜宿山寺》（李白）、简·泰勒的《小星星》（The Star）、创世记 15:5–6。",
+        "en": "Three readings under a sky full of stars: “A Night at the Mountain Temple” (Li Bai, Tang dynasty), Jane Taylor’s “The Star”, and Genesis 15:5–6.",
+        "sources_zh": "《夜宿山寺》和简·泰勒的 “The Star”（1806）是公有领域，互译由 Lucas Academy 完成。创世记中文为和合本（公有领域），英文为 NIV。",
+        "sources_en": "“A Night at the Mountain Temple” and Jane Taylor’s “The Star” (1806) are in the public domain; the translations are by Lucas Academy. Genesis 15:5–6: Chinese Union Version (public domain); English NIV.",
+        "voices_zh": "中文由 Sunny、英文由 Matthew 朗读，用他们自己的录音由 AI 合成；开头、每篇的题目和作者、回顾和最后一句为 AI 合成，使用 Fangfang（中文）和 Louise（英文）的授权声线。",
+        "voices_en": "The verses are read by Sunny (Chinese) and Matthew (English), made with AI from their own recordings; the opening, every title and author, the look back and the last line are AI-generated with Fangfang's (Chinese) and Louise's (English) licensed voices.",
+    },
 }
 
 
@@ -100,7 +117,7 @@ def main(film: str, dest: Path):
     moving = any(w.get("minimax") for w in tl["works"])     # works that end as a MiniMax clip; 回顾 replays them all
     each = all(w.get("minimax") for w in tl["works"])
     moves_zh = about.get("moves_zh", ("每篇" if each else "有的篇") + "读到最后一句，画再动起来；最后一起回顾。") if moving else ""
-    moves_en = about.get("moves_en", f" As {'each reading' if each else 'some readings'} reaches its last line, the picture starts to move, and at the end we look back at all three.") if moving else ""
+    moves_en = about.get("moves_en", f" As {'each reading reaches its' if each else 'some readings reach their'} last line, the picture starts to move, and at the end we look back at all three.") if moving else ""
     made_zh = "，最后一句时动起来的画面由 MiniMax 海螺生成" if moving else ""
     made_en = f", and the moving pictures under the last line of {'each reading' if each else 'the readings'} were made with MiniMax Hailuo" if moving else ""
     made_how = " and motion" if moving else ""

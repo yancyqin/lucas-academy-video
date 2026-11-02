@@ -7,7 +7,9 @@ then once in English, verse by verse, with the narration the lesson already has.
 |---|---|---|---|
 | 爬高一点，看远一点 · Climb Higher, See Farther | `climb-higher` | 登鹳雀楼 · Foreign Lands · 诗篇 121:1–2 | 2:33 |
 | 小船去远方 · Little Boats, Far Away | `little-boats` | 早发白帝城 · Where Go the Boats? · 以赛亚书 40:31 | 3:22 |
-| 美好能否留存？ · Can Beauty Last? | `can-beauty-last` | 春夜喜雨 · Sonnet 18 · 传道书 3:11 | not built |
+| 美好能否留存？ · Can Beauty Last? | `can-beauty-last` | 春夜喜雨 · Sonnet 18 · 传道书 3:11 | 5:56 |
+| 谁看见过风？ · Has Anyone Seen the Wind? | `seen-the-wind` | 赋得古原草送别 · The Wind · 约翰福音 3:8 | 5:52 |
+| 星星数得完吗？ · Can You Count the Stars? | `count-the-stars` | 夜宿山寺 · The Star (Jane Taylor) · 创世记 15:5–6 | 5:26 |
 
 ## What the owner decided (2026-10-26)
 
@@ -255,3 +257,56 @@ before "God" (8.06 s; it is said at 7.08): `align.py` `pull_back` moves such a w
 covers (it also fixes "subscribe," 2.0 → 1.5 s in the series' last line, as Whisper hears it). Film 6:09.2. 杜甫 is spelled 杜[f][ǔ] (`SPOKEN`): without it Whisper heard 杜福 / 渡府 in all three takes; take e is
 pinned, the one heard as 「春夜喜雨，唐，杜甫」. 传道书's first three takes each had a lone sound before the voice
 (`strays`), so three more were made; f is clean. Film 6:18.5 (was 6:25: Fangfang reads the titles faster).
+
+## 第四期、第五期: 谁看见过风？ and 星星数得完吗？ (owner, 2026-10-31)
+
+The owner picked two of four proposals and changed a work in each: 「风」 reads 白居易《赋得古原草送别》 (not 李峤《风》),
+and 「星」 reads Abraham's stars — 创世记 15:5–6 (the night scene: 「你向天观看，数算众星，能数得过来吗？」; 22:17's
+「如同天上的星，海边的沙」 was the alternative). The rules he restated for every new 期:
+
+- **旁白 = Fangfang (zh) + Louise (en)**: the opening, **every title and author in both languages**, the closing over the
+  回顾 and the last line — `series_voices: {"zh": ("titles", "closing"), "en": ("titles", "closing")}` (第三期 had
+  Matthew read the English titles; no longer). **朗读 = Sunny (zh) + Matthew (en)**: the verses only, `lesson_voice.py`.
+- **Picture = art-lab living painting + MiniMax** (as 第三期).
+
+Where things are: lang lessons `seen-the-wind`, `count-the-stars` (worktree `lucas-academy-lang-poems45`, branch
+`claude/poems-you-can-see-4-5`, on top of lang PR #21; `ZHONG_YING_LANG` points there); six living paintings in
+art-lab (worktree `lucas-visual-art-lab-poems45`, branch `living-poems-4-5`, on top of art-lab PR #15; pictures made
+with `scripts/zhong-ying/pictures.py`, which runs Codex on the prompts in art-lab's `living-image-prompts.json`).
+The Wind is read a stanza (four lines) per unit with its refrain as its own unit, The Star a stanza per unit, so
+no part has more than lang's seven units.
+
+- **Voices.** The 10-30 cleanup had trashed `lesson_voice.py`'s reference clips; `sunny_voice.py` and
+  `matthew_voice.py clips` re-cut them from the raw memos (Matthew's auditions go to a scratch folder, not the
+  Desktop). `lesson_voice.py` now picks Sunny's scripture prompt by `SCRIPTURE` (unit numbers per lesson) and reads
+  `EN_SPOKEN` (trav’ller → traveller). New polyphones in `narration.SPOKEN`, which `emotion_lab.say` now includes:
+  宿 sù, 数 shǔ, 以此为 wéi, and 和合本's 那里 read 哪里. The opening and the last line were trashed too:
+  `narration.py extras` now voices the opening (`intro`) with the titles, closing and subscribe line, and
+  `choose extras` copies the chosen opening to `narration/intro-{zh,en}.wav`; `choose` passes over lines with no takes.
+- **MiniMax (2026-10-31 22:27 PDT, v1 each, 1080P, 6 s, first frame = the art-lab picture).** Back: 赋得古原草送别
+  (the paper warms, the scholar turns and walks away up the road, the ember smokes), The Wind (kite ribbon, flying
+  leaves, waves of grass — the motion this film is about), 夜宿山寺 (repainted from pale ink into a deep-blue night
+  over a sea of clouds, as 登鹳雀楼's first clip was). John 3:8, The Star and Genesis 15:5–6 failed: 「当前已达到 Token
+  Plan 用量上限」 — the day's quota; resend as v2 after it renews.
+- **Closings are drafts** (`films.FILMS[…]["closing"]`) until the owner words them.
+- **MiniMax shown longer (owner, 2026-10-31: 「把 minimax 的视频时长稍微拉长一些 … 多展示一会儿」):** `minimax_prep.py`
+  plays each clip at 0.75 (about 7.7 s), and `build_timeline.py` lets it run `CLIP_AFTER` (2 s) past the last English line.
+- **First cut, 2026-11-01 01:40 (owner: 「可以放桌面」):** on the Desktop as two upload folders, 「中英阅读-谁看见过风-上传」
+  (5:53) and 「中英阅读-星星数得完吗-上传」 (5:27), −16.2 LUFS, true peak −5.9, no black frames, every work ending on
+  its picture; three of six works have their clip. The first render showed underlays before four late objects (a
+  sky-coloured notch over the kite-flier, a sky patch by The Star's tree, paper-white blocks for 古原草's figures and
+  town); `paintings.py` now keeps an `over` box below the skyline, paints half-sky objects with the sky, and paints
+  objects on ink paper with what they stand on. The upload text links lang's lesson and art lab's paintings, which are
+  live only once those branches are merged and deployed.
+- **Next (owner, 2026-11-01):** 「橄榄树、窗口看星、亚伯兰三段要晚些再发」 — the v2 runs are prepared, not sent; the
+  owner says when. 「minimax 视频比例太少 … 不用安静动 8 秒那么长，就把现在末尾的 minimax 放慢拉长就好了，等出了片子再做」:
+  no long quiet tail; each work's one end clip is slowed to fill its last English line and end about 2 s after it
+  (speed = 5.875 s / (line + 2 s), between 0.5 and 0.75 — 8–12 s instead of 7.7). Where the last unit paints nothing
+  (The Wind's last refrain) the clip may start as soon as the picture is complete, so it is slowed too. Then
+  `minimax_prep.py` (per-work speed) → `build_timeline.py` → `living.mjs` → `paint.py` → `render.py` → `package.py`,
+  into the same Desktop folders.
+- **Second cut, 2026-11-01 (owner: 「你试试 minimax」):** the three clips sent at 09:27 PST came back within four minutes
+  (v2: John 3:8's paper greys and more leaves fly; The Star's little stars all grow into big sparkles; Genesis's night
+  deepens and the tent glows). Every end clip is now slowed to fill the end of its reading (0.5–0.7, 8.2–11.6 s); 古原草
+  and The Wind start theirs on the last verse's Chinese, which paints nothing. Rebuilt and replaced in the same Desktop
+  folders: 5:52 and 5:26, −16.2 LUFS, true peak −5.9 / −6.0, no black frames, every work ending on its picture.

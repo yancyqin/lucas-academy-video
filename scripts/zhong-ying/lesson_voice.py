@@ -44,6 +44,10 @@ PROMPTS = {
            "Up into the cherry tree, Who should climb but little me? I held the trunk with both my hands, And looked abroad in foreign lands.",
            None),
 }
+# The scripture lines of each lesson (read with Sunny's scripture prompt; the rest with her poem prompt).
+SCRIPTURE = {"can-beauty-last": {12}, "seen-the-wind": {11}, "count-the-stars": {8, 9}}
+# English as the voice should say it (the screen keeps the source's spelling).
+EN_SPOKEN = {"trav’ller": "traveller"}
 # Takes the owner already heard (emotion_lab.py sunny, 2026-10-28): lesson → line ids → (take, its text).
 REUSE = {
     "can-beauty-last": {
@@ -154,14 +158,21 @@ def main():
     for line in lines:
         if line["id"] in done:
             continue
-        kind = "en" if lang == "en" else ("zh-scripture" if line["verseId"].endswith(".12") and lesson == "can-beauty-last" else "zh-poem")
+        unit = int(line["verseId"].split(".")[-1])
+        kind = "en" if lang == "en" else ("zh-scripture" if unit in SCRIPTURE.get(lesson, ()) else "zh-poem")
         clips, ref_text, cap = PROMPTS[kind]
         ref = out / f"prompt-{kind}.wav"
         if not ref.exists():
             ff(*sum((["-i", c] for c in clips), []), "-filter_complex",
                "".join(f"[{i}]" for i in range(len(clips))) + f"concat=n={len(clips)}:v=0:a=1", "-ar", "24000", ref)
         target = rate(ref, ref_text, lang) if cap is None else min(cap, rate(ref, ref_text, lang))
-        text = say(line["text"]) if lang == "zh" else line["text"].replace("’", "'")
+        if lang == "zh":
+            text = say(line["text"])
+        else:
+            text = line["text"]
+            for plain, spoken in EN_SPOKEN.items():
+                text = text.replace(plain, spoken)
+            text = text.replace("’", "'")
         tried = record.get(line["id"], {}).get("takes", []) if only else []
         best = None
         for m in tried:                                      # a retake competes with the takes already made

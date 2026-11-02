@@ -321,6 +321,8 @@ export const Root: FC = () => {
       <Composition id="ZhongYingClimbHigher" component={ZhongYingVideo} durationInFrames={9000} fps={30} width={1920} height={1080} defaultProps={{film:"climb-higher",tl:null}} calculateMetadata={calculateZhongYingMetadata} />
       <Composition id="ZhongYingLittleBoats" component={ZhongYingVideo} durationInFrames={9000} fps={30} width={1920} height={1080} defaultProps={{film:"little-boats",tl:null}} calculateMetadata={calculateZhongYingMetadata} />
       <Composition id="ZhongYingCanBeautyLast" component={ZhongYingVideo} durationInFrames={9000} fps={30} width={1920} height={1080} defaultProps={{film:"can-beauty-last",tl:null}} calculateMetadata={calculateZhongYingMetadata} />
+      <Composition id="ZhongYingSeenTheWind" component={ZhongYingVideo} durationInFrames={9000} fps={30} width={1920} height={1080} defaultProps={{film:"seen-the-wind",tl:null}} calculateMetadata={calculateZhongYingMetadata} />
+      <Composition id="ZhongYingCountTheStars" component={ZhongYingVideo} durationInFrames={9000} fps={30} width={1920} height={1080} defaultProps={{film:"count-the-stars",tl:null}} calculateMetadata={calculateZhongYingMetadata} />
       <Composition id="ZhongYingSeal" component={ZhongYingSeal} durationInFrames={1} fps={30} width={1920} height={1080} />
       <Composition id="ZhongYingCover" component={ZhongYingCover} durationInFrames={1} fps={30} width={1920} height={1080} defaultProps={{film: "climb-higher" as const, lang: "zh" as const, layout: "a" as const}} />
       <Composition id="Cube5x5" component={Cube5x5Video} durationInFrames={18000} fps={30} width={1920} height={1080} defaultProps={{tl:null,track:"en" as const}} calculateMetadata={calculateCube5x5Metadata} />

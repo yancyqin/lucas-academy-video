@@ -116,6 +116,48 @@ FILMS: dict[str, dict] = {
              "say": {"zh": "传道书第三章，第十一节。", "en": "Ecclesiastes, chapter 3, verse 11."}},
         ],
     },
+    # 看得见的诗 · 第四期、第五期 (owner, 2026-10-31): Sunny and Matthew read the verses (lesson_voice.py); Fangfang
+    # and Louise read the opening, every title and author in both languages, the closing and the last line.
+    "seen-the-wind": {
+        "title": {"zh": "谁看见过风？", "en": "Has Anyone Seen the Wind?"},
+        "lesson_voices": True,
+        "series_voices": {"zh": ("titles", "closing"), "en": ("titles", "closing")},
+        # Draft (2026-10-31): the owner words the closing; until then this is a placeholder to time the film with.
+        "closing": {"zh": "春风吹绿了原野，风筝飞上了高空，可是谁也没有看见过风。看不见的风，我们怎么知道它来过呢？",
+                    "en": "The spring wind turned the plain green, and the kite flew up high, but no one has ever seen "
+                          "the wind. How do we know the unseen wind has been here?"},
+        "works": [
+            {"id": "fu-de-gu-yuan-cao", "units": [1, 2, 3, 4], "style": "ink",
+             "title": {"zh": "赋得古原草送别", "en": "Grass on the Old Plain: A Farewell"}, "by": {"zh": "唐 · 白居易", "en": "Bai Juyi · Tang dynasty"},
+             "say": {"zh": "赋得古原草送别。唐，白居易。", "en": "Grass on the Old Plain: A Farewell, by Bai Juyi, Tang dynasty."}},
+            {"id": "the-wind", "units": [5, 6, 7, 8, 9, 10], "style": "oil",
+             "title": {"zh": "风", "en": "The Wind"}, "by": {"zh": "斯蒂文森 · 1885", "en": "Robert Louis Stevenson · 1885"},
+             "say": {"zh": "风。斯蒂文森。", "en": "The Wind, by Robert Louis Stevenson."}},
+            {"id": "john-3-8", "units": [11], "style": "watercolour",
+             "title": {"zh": "约翰福音 3:8", "en": "John 3:8"}, "by": {"zh": "圣经 · 和合本", "en": "The Bible · NIV"},
+             "say": {"zh": "约翰福音第三章，第八节。", "en": "The Gospel of John, chapter three, verse eight."}},   # "John, chapter 3": six takes slurred it
+        ],
+    },
+    "count-the-stars": {
+        "title": {"zh": "星星数得完吗？", "en": "Can You Count the Stars?"},
+        "lesson_voices": True,
+        "series_voices": {"zh": ("titles", "closing"), "en": ("titles", "closing")},
+        # Draft (2026-10-31), as above.
+        "closing": {"zh": "诗人想伸手摘星星，孩子想知道星星是什么，亚伯兰抬头数也数不完。他没有数完，却相信了神的应许。",
+                    "en": "The poet wanted to pick the stars, the child wondered what they are, and Abram could not "
+                          "count them all. He never finished counting, yet he believed God's promise."},
+        "works": [
+            {"id": "ye-su-shan-si", "units": [1, 2], "style": "ink",
+             "title": {"zh": "夜宿山寺", "en": "A Night at the Mountain Temple"}, "by": {"zh": "唐 · 李白", "en": "Li Bai · Tang dynasty"},
+             "say": {"zh": "夜宿山寺。唐，李白。", "en": "A Night at the Mountain Temple, by Li Bai, Tang dynasty."}},
+            {"id": "the-star", "units": [3, 4, 5, 6, 7], "style": "oil",
+             "title": {"zh": "小星星", "en": "The Star"}, "by": {"zh": "简·泰勒 · 1806", "en": "Jane Taylor · 1806"},
+             "say": {"zh": "小星星。简·泰勒。", "en": "The Star, by Jane Taylor."}},
+            {"id": "genesis-15-5", "units": [8, 9], "style": "watercolour",
+             "title": {"zh": "创世记 15:5–6", "en": "Genesis 15:5–6"}, "by": {"zh": "圣经 · 和合本", "en": "The Bible · NIV"},
+             "say": {"zh": "创世记第十五章，第五到六节。", "en": "Genesis, chapter 15, verses 5 and 6."}},
+        ],
+    },
 }
 
 RECORDED = ("sunny", "matthew")  # people's readings: Sunny's Chinese (sunny_voice.py), Matthew's English (matthew_voice.py)
@@ -132,9 +174,10 @@ def clip(film: str, unit: int, lang: str) -> pathlib.Path:
     picks = json.loads(chosen.read_text()) if chosen.exists() else {}
     if f"{lang}/{film}-v{unit:02d}" in picks:
         return chosen.parent / lang / f"{picks[f'{lang}/{film}-v{unit:02d}']['take']}.wav"
-    # A lesson voiced for the series from the start (can-beauty-last: Sunny and Matthew, lesson_voice.py) uses its
-    # own published clips.
-    return LANG / "public" / "audio" / film / lang / f"v{unit:02d}-whole.mp3"
+    # A lesson voiced for the series from the start (Sunny and Matthew, lesson_voice.py) uses lesson_voice.py's own
+    # take when it is still there (48 kHz WAV), else the clip published from it (a 48 kbps MP3, can-beauty-last).
+    take = DATA / "lang" / film / lang / f"v{unit:02d}-whole.wav"
+    return take if take.exists() else LANG / "public" / "audio" / film / lang / f"v{unit:02d}-whole.mp3"
 
 
 def extra(line_id: str, lang: str) -> pathlib.Path:
