@@ -1,0 +1,625 @@
+{
+ "chapters": {
+  "OG00": [
+   "A Dish of Green Water",
+   "Green Water"
+  ],
+  "OG01": [
+   "Switches",
+   "Switches"
+  ],
+  "OG02": [
+   "The Alga's Switch",
+   "Alga's Switch"
+  ],
+  "OG03": [
+   "From Switches to Messages",
+   "Messages"
+  ],
+  "OG04": [
+   "The Eye",
+   "The Eye"
+  ],
+  "OG05": [
+   "Seeing the Crosswalk Again",
+   "Crosswalk"
+  ],
+  "OG06": [
+   "Light in the Bible",
+   "Light"
+  ]
+ },
+ "shots": [
+  {
+   "at": "title",
+   "k": "nobel",
+   "img": "nobel-main.jpg",
+   "fit": "cover",
+   "focus": [
+    0.55,
+    0.32
+   ],
+   "zoom": [
+    1.0,
+    1.1
+   ]
+  },
+  {
+   "at": "og00-02",
+   "k": "prize",
+   "bg": "dish-beam.png"
+  },
+  {
+   "at": "og00-03",
+   "k": "nobel",
+   "img": "nobel-mouse.zh.jpg",
+   "focus": [
+    0.72,
+    0.55
+   ],
+   "zoom": [
+    1.0,
+    1.18
+   ]
+  },
+  {
+   "at": "og00-04",
+   "k": "footage",
+   "clip": "goggles"
+  },
+  {
+   "at": "og00-04@0.75",
+   "k": "footage",
+   "clip": "px40260364"
+  },
+  {
+   "at": "og00-05",
+   "k": "footage",
+   "clip": "fi1-magic",
+   "big": "没有魔法",
+   "bigAt": "og00-05@0.55",
+   "bigEn": "No magic"
+  },
+  {
+   "at": "og00-06",
+   "k": "still",
+   "img": "dish-green.png",
+   "label": "AI 生成 · 示意",
+   "zoom": [
+    1.0,
+    1.08
+   ]
+  },
+  {
+   "at": "og00-08",
+   "k": "window",
+   "clip": "chlamy-swim",
+   "bg": "dish-green.png",
+   "lower": "显微镜下的衣藻（真实画面）",
+   "lowerEn": "Chlamydomonas under a microscope (real footage)"
+  },
+  {
+   "at": "og00-08@0.45",
+   "k": "still",
+   "img": "dish-green.png",
+   "label": "AI 生成 · 示意",
+   "zoom": [
+    1.04,
+    1.1
+   ]
+  },
+  {
+   "at": "og00-09",
+   "k": "footage",
+   "clip": "phototaxis"
+  },
+  {
+   "at": "og00-11",
+   "k": "still",
+   "img": "chlamydomonas.png",
+   "label": "AI 生成 · 示意",
+   "zoom": [
+    1.0,
+    1.12
+   ]
+  },
+  {
+   "at": "og00-12",
+   "k": "nobel",
+   "img": "nobel-alga.zh.jpg",
+   "lower": "彼得·黑格曼 Peter Hegemann",
+   "lowerAt": "og00-12@0.45",
+   "lowerEn": "Peter Hegemann"
+  },
+  {
+   "at": "og00-13@0.35",
+   "k": "title"
+  },
+  {
+   "at": "og01-01",
+   "k": "footage",
+   "clip": "fi1-lamps",
+   "in": 0.5
+  },
+  {
+   "at": "og01-02",
+   "k": "footage",
+   "clip": "px5498990",
+   "big": "开 = 1　关 = 0",
+   "bigAt": "og01-02@0.7",
+   "bigEn": "on = 1    off = 0"
+  },
+  {
+   "at": "og01-03",
+   "k": "footage",
+   "clip": "fi1-lamps",
+   "in": 36.0
+  },
+  {
+   "at": "og01-04",
+   "k": "footage",
+   "clip": "px37101560",
+   "lower": "大脑：约 900 亿个神经细胞",
+   "lowerAt": "og01-04@0.4",
+   "lowerEn": "The brain: about 90 billion nerve cells"
+  },
+  {
+   "at": "og01-05",
+   "k": "anim",
+   "name": "spike"
+  },
+  {
+   "at": "og01-06",
+   "k": "anim",
+   "name": "rate"
+  },
+  {
+   "at": "og01-07",
+   "k": "nobel",
+   "img": "nobel-main.jpg",
+   "fit": "cover",
+   "focus": [
+    0.5,
+    0.35
+   ]
+  },
+  {
+   "at": "og01-08",
+   "k": "nobel",
+   "img": "nobel-main.jpg",
+   "fit": "cover",
+   "focus": [
+    0.62,
+    0.3
+   ],
+   "lower": "克里克：要按这个开关，最好用光",
+   "lowerAt": "og01-08@0.5",
+   "lowerEn": "Crick: the best way to press it is with light"
+  },
+  {
+   "at": "og02-01",
+   "k": "still",
+   "img": "dish-green.png",
+   "label": "AI 生成 · 示意",
+   "zoom": [
+    1.08,
+    1.16
+   ]
+  },
+  {
+   "at": "og02-02",
+   "k": "still",
+   "img": "chlamydomonas.png",
+   "label": "AI 生成 · 示意",
+   "zoom": [
+    1.0,
+    1.3
+   ],
+   "focus": [
+    0.574,
+    0.574
+   ],
+   "ring": [
+    0.574,
+    0.574
+   ],
+   "ringAt": "og02-02@0.15",
+   "ringText": "眼点",
+   "ringTextEn": "eyespot"
+  },
+  {
+   "at": "og02-03",
+   "k": "anim",
+   "name": "timebars"
+  },
+  {
+   "at": "og02-04",
+   "k": "anim",
+   "name": "gate"
+  },
+  {
+   "at": "og02-06",
+   "k": "footage",
+   "clip": "px5742018",
+   "lower": "青蛙卵",
+   "lowerAt": "og02-06@0.3",
+   "lowerEn": "Frog eggs"
+  },
+  {
+   "at": "og02-06@0.45",
+   "k": "nobel",
+   "img": "nobel-frog.zh.jpg"
+  },
+  {
+   "at": "og02-07",
+   "k": "card",
+   "lines": [
+    [
+     "通道视紫红质",
+     "lead"
+    ],
+    [
+     "= 光控开关",
+     "q"
+    ]
+   ],
+   "linesAt": [
+    "og02-07@0.1",
+    "og02-07@0.6"
+   ],
+   "linesEn": [
+    [
+     "Channelrhodopsin",
+     "lead"
+    ],
+    [
+     "= a light switch",
+     "q"
+    ]
+   ]
+  },
+  {
+   "at": "og02-08",
+   "k": "anim",
+   "name": "cells"
+  },
+  {
+   "at": "og02-09",
+   "k": "footage",
+   "clip": "px4121620"
+  },
+  {
+   "at": "og02-10",
+   "k": "nobel",
+   "img": "nobel-neuron.zh.jpg",
+   "lower": "2005",
+   "lowerAt": "og02-10@0.8"
+  },
+  {
+   "at": "og02-11",
+   "k": "nobel",
+   "img": "nobel-mouse.zh.jpg",
+   "lower": "2007",
+   "lowerAt": "og02-11@0.1"
+  },
+  {
+   "at": "og02-12",
+   "k": "anim",
+   "name": "patch"
+  },
+  {
+   "at": "og02-13",
+   "k": "nobel",
+   "img": "nobel-adv3.jpg",
+   "focus": [
+    0.75,
+    0.5
+   ],
+   "zoom": [
+    1.0,
+    1.0
+   ],
+   "fit": "contain",
+   "lower": "光亮一下，就发一个信号（真实记录）",
+   "lowerAt": "og02-13@0.55",
+   "lowerEn": "One flash, one signal (a real recording)"
+  },
+  {
+   "at": "og03-01",
+   "k": "anim",
+   "name": "bits"
+  },
+  {
+   "at": "og03-03",
+   "k": "footage",
+   "clip": "fi1-rules",
+   "in": 7.0
+  },
+  {
+   "at": "og03-04",
+   "k": "footage",
+   "clip": "px7298045",
+   "dim": 0.55
+  },
+  {
+   "at": "og04-01",
+   "k": "footage",
+   "clip": "px7298046"
+  },
+  {
+   "at": "og04-01@0.55",
+   "k": "anim",
+   "name": "eye",
+   "mode": "normal"
+  },
+  {
+   "at": "og04-03",
+   "k": "anim",
+   "name": "eye",
+   "mode": "broken"
+  },
+  {
+   "at": "og04-03@0.62",
+   "k": "footage",
+   "clip": "px6610113"
+  },
+  {
+   "at": "og04-04",
+   "k": "anim",
+   "name": "eye",
+   "mode": "wire"
+  },
+  {
+   "at": "og04-05",
+   "k": "still",
+   "img": "camera-cable.png",
+   "label": "AI 生成 · 示意",
+   "zoom": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "at": "og04-05@0.28",
+   "k": "footage",
+   "clip": "camera"
+  },
+  {
+   "at": "og04-06",
+   "k": "anim",
+   "name": "eye",
+   "mode": "new"
+  },
+  {
+   "at": "og05-01",
+   "k": "footage",
+   "clip": "px7579846",
+   "lower": "2021 · 《自然·医学》报告的一位病人",
+   "lowerAt": "og05-02@0.05",
+   "lowerEn": "2021 · one patient, reported in Nature Medicine"
+  },
+  {
+   "at": "og05-03",
+   "k": "anim",
+   "name": "eye",
+   "mode": "amber"
+  },
+  {
+   "at": "og05-04",
+   "k": "anim",
+   "name": "eye",
+   "mode": "dim"
+  },
+  {
+   "at": "og05-05",
+   "k": "footage",
+   "clip": "goggles"
+  },
+  {
+   "at": "og05-05@0.8",
+   "k": "footage",
+   "clip": "dots",
+   "big": "编码：画面 → 光点",
+   "bigAt": "og05-06@0.3",
+   "bigEn": "Encoding: scene → dots of light"
+  },
+  {
+   "at": "og05-07",
+   "k": "anim",
+   "name": "codec"
+  },
+  {
+   "at": "og05-08",
+   "k": "footage",
+   "clip": "px37247586"
+  },
+  {
+   "at": "og05-09@0.3",
+   "k": "footage",
+   "clip": "px40260364"
+  },
+  {
+   "at": "og05-10",
+   "k": "footage",
+   "clip": "notebook",
+   "count": [
+    36,
+    39
+   ],
+   "countAt": "og05-10@0.7"
+  },
+  {
+   "at": "og05-11",
+   "k": "card",
+   "lines": [
+    [
+     "只有一位病人",
+     "step"
+    ],
+    [
+     "只恢复了一部分",
+     "step"
+    ],
+    [
+     "摘掉眼镜，还是看不见",
+     "step"
+    ],
+    [
+     "还在临床试验里",
+     "step"
+    ]
+   ],
+   "linesAt": [
+    "og05-11@0.05",
+    "og05-11@0.2",
+    "og05-11@0.35",
+    "og05-11@0.7"
+   ],
+   "linesEn": [
+    [
+     "Only one patient",
+     "step"
+    ],
+    [
+     "Only part of his sight came back",
+     "step"
+    ],
+    [
+     "Without the glasses, he still can't see",
+     "step"
+    ],
+    [
+     "Still in clinical trials",
+     "step"
+    ]
+   ]
+  },
+  {
+   "at": "og05-12",
+   "k": "card",
+   "lines": [
+    [
+     "光还是光，开关还是开关",
+     "lead2"
+    ],
+    [
+     "变的，是规则",
+     "q"
+    ]
+   ],
+   "linesAt": [
+    "og05-12@0.05",
+    "og05-12@0.3"
+   ],
+   "linesEn": [
+    [
+     "The light is still light, the switches are still switches",
+     "lead2"
+    ],
+    [
+     "What changed is the rule",
+     "q"
+    ]
+   ]
+  },
+  {
+   "at": "og06-01",
+   "k": "footage",
+   "clip": "px5767251"
+  },
+  {
+   "at": "og06-02",
+   "k": "footage",
+   "clip": "px6101001",
+   "verse": "于是神造了两个大光，大的管昼，小的管夜，又造众星。",
+   "ref": "创世记 1:16",
+   "verseAt": "og06-02@0.3",
+   "verseEn": "God made the two great lights: the greater light to rule the day, and the lesser light to rule the night. He also made the stars.",
+   "refEn": "Genesis 1:16 (WEB)"
+  },
+  {
+   "at": "og06-02@0.62",
+   "k": "footage",
+   "clip": "px36492194",
+   "verse": "于是神造了两个大光，大的管昼，小的管夜，又造众星。",
+   "ref": "创世记 1:16",
+   "verseAt": "og06-02@0.62",
+   "verseEn": "God made the two great lights: the greater light to rule the day, and the lesser light to rule the night. He also made the stars.",
+   "refEn": "Genesis 1:16 (WEB)"
+  },
+  {
+   "at": "og06-02@0.86",
+   "k": "footage",
+   "clip": "px14164051",
+   "verse": "于是神造了两个大光，大的管昼，小的管夜，又造众星。",
+   "ref": "创世记 1:16",
+   "verseAt": "og06-02@0.86",
+   "verseEn": "God made the two great lights: the greater light to rule the day, and the lesser light to rule the night. He also made the stars.",
+   "refEn": "Genesis 1:16 (WEB)"
+  },
+  {
+   "at": "og06-03",
+   "k": "footage",
+   "clip": "px34659657",
+   "verse": "你的话是我脚前的灯，是我路上的光。",
+   "ref": "诗篇 119:105",
+   "verseAt": "og06-03@0.05",
+   "verseEn": "Your word is a lamp to my feet, and a light for my path.",
+   "refEn": "Psalm 119:105 (WEB)"
+  },
+  {
+   "at": "og06-04",
+   "k": "footage",
+   "clip": "px856912",
+   "verse": "我是世界的光。跟从我的，就不在黑暗里走，必要得着生命的光。",
+   "ref": "约翰福音 8:12",
+   "verseAt": "og06-04@0.3",
+   "verseEn": "I am the light of the world. He who follows me will not walk in the darkness, but will have the light of life.",
+   "refEn": "John 8:12 (WEB)"
+  },
+  {
+   "at": "og06-04@0.62",
+   "k": "footage",
+   "clip": "px5767251",
+   "in": 12.0,
+   "verse": "我是世界的光。跟从我的，就不在黑暗里走，必要得着生命的光。",
+   "ref": "约翰福音 8:12",
+   "verseAt": "og06-04@0.3",
+   "verseEn": "I am the light of the world. He who follows me will not walk in the darkness, but will have the light of life.",
+   "refEn": "John 8:12 (WEB)"
+  },
+  {
+   "at": "og06-05",
+   "k": "footage",
+   "clip": "px12550702",
+   "verse": "光照在黑暗里，黑暗却不接受光。",
+   "ref": "约翰福音 1:5",
+   "verseAt": "og06-05@0.3",
+   "verseEn": "The light shineth in darkness; and the darkness comprehended it not.",
+   "refEn": "John 1:5 (KJV)"
+  },
+  {
+   "at": "og06-07",
+   "k": "footage",
+   "clip": "phototaxis",
+   "in": 0.0,
+   "dim": 0.7,
+   "ask": [
+    "你需要这样的光吗？",
+    "除了用眼睛，我们还需要什么样的解码器，才能接收到这样的光呢？"
+   ],
+   "askAt": [
+    "og06-07",
+    "og06-08"
+   ],
+   "askEn": [
+    "Do you need a light like this?",
+    "Besides our eyes, what kind of decoder do we need to receive a light like this?"
+   ]
+  },
+  {
+   "at": "og06-09",
+   "k": "end"
+  }
+ ]
+}

@@ -1,0 +1,38 @@
+{
+  "pexels": {
+    "856912": {"title": "Ray Of Light", "by": "Pixabay", "link": "https://videos.pexels.com/video-files/856912/856912-hd_1920_1080_30fps.mp4", "use": "S45"},
+    "4121620": {"title": "A Woman Using a Microscope", "by": "Edward Jenner", "link": "https://videos.pexels.com/video-files/4121620/4121620-hd_1920_1080_25fps.mp4", "use": "S20"},
+    "5498990": {"title": "A Person Switching Lights", "by": "Bonus Studio", "link": "https://videos.pexels.com/video-files/5498990/5498990-hd_1920_1080_25fps.mp4", "use": "S08"},
+    "5742018": {"title": "Close up Shot of Frogs Eggs in White Background", "by": "Luis Quintero", "link": "https://videos.pexels.com/video-files/5742018/5742018-hd_1920_1080_30fps.mp4", "use": "S17"},
+    "5767251": {"title": "Candle in the Dark", "by": "Dmitry Marchenkov", "link": "https://videos.pexels.com/video-files/5767251/5767251-hd_1920_1080_30fps.mp4", "use": "S42"},
+    "6101001": {"title": "Time Lapse Sunrise", "by": "Jyoti Pur", "link": "https://videos.pexels.com/video-files/6101001/6101001-hd_1920_1080_30fps.mp4", "use": "S43"},
+    "6520278": {"title": "Person Flicking Switches", "by": "RDNE Stock project", "link": "https://videos.pexels.com/video-files/6520278/6520278-hd_1920_1080_24fps.mp4", "use": "S08"},
+    "6610113": {"title": "Blind Man using Cane", "by": "Tima Miroshnichenko", "link": "https://videos.pexels.com/video-files/6610113/6610113-hd_1920_1080_25fps.mp4", "use": "S30"},
+    "7298045": {"title": "Eye Close Up", "by": "Kindel Media", "link": "https://videos.pexels.com/video-files/7298045/7298045-hd_1920_1080_30fps.mp4", "use": "S27"},
+    "7298046": {"title": "Close-up Video of Man's Eyes", "by": "Kindel Media", "link": "https://videos.pexels.com/video-files/7298046/7298046-hd_1920_1080_30fps.mp4", "use": "S28"},
+    "7579846": {"title": "Man having Eye Examination", "by": "cottonbro studio", "link": "https://videos.pexels.com/video-files/7579846/7579846-hd_2048_1080_25fps.mp4", "use": "S33"},
+    "9373536": {"title": "Scientists Looking Through a Microscope", "by": "Mikhail Nilov", "link": "https://videos.pexels.com/video-files/9373536/9373536-hd_1920_1080_25fps.mp4", "use": "S20"},
+    "10189096": {"title": "Mixed Liquid Chemical on a Petri Dish", "by": "Ron Lach", "link": "https://videos.pexels.com/video-files/10189096/10189096-hd_1920_1080_25fps.mp4", "use": "S21"},
+    "12550702": {"title": "Burning Candle in Darkness", "by": "Florencio Rojas", "link": "https://videos.pexels.com/video-files/12550702/12550702-hd_1920_1080_24fps.mp4", "use": "S46"},
+    "14164051": {"title": "Clouds and Stars on Night Sky", "by": "Roy S.", "link": "https://videos.pexels.com/video-files/14164051/14164051-hd_1920_1080_25fps.mp4", "use": "S43"},
+    "29184317": {"title": "Abstract Neural Network Connections Animation", "by": "Nicola Narracci", "link": "https://videos.pexels.com/video-files/29184317/12601884_1920_1080_30fps.mp4", "use": "S10"},
+    "32333921": {"title": "Vibrant Fiber Optic Light Display", "by": "Pachon in Motion", "link": "https://videos.pexels.com/video-files/32333921/13793523_1920_1080_60fps.mp4", "use": "S22"},
+    "34659657": {"title": "Mysterious Night Stroll with Lantern Light", "by": "Burak Bahadır Büyükkılınç", "link": "https://videos.pexels.com/video-files/34659657/14691378_1920_1080_60fps.mp4", "use": "S44"},
+    "36492194": {"title": "Crescent Moon in Night Sky", "by": "Dr Photographer", "link": "https://videos.pexels.com/video-files/36492194/15473875_1920_1080_60fps.mp4", "use": "S43"},
+    "37101560": {"title": "Vibrant Abstract Neural Network Animation", "by": "Nicola Narracci", "link": "https://videos.pexels.com/video-files/37101560/15717707_1920_1080_30fps.mp4", "use": "S10"},
+    "37247586": {"title": "Aerial View of Pedestrians at Crosswalk in City", "by": "SHOX ART", "link": "https://videos.pexels.com/video-files/37247586/15779242_1920_1080_60fps.mp4", "use": "S38"},
+    "40260364": {"title": "Urban Crosswalk in Busy City Street", "by": "SHOX ART", "link": "https://videos.pexels.com/video-files/40260364/17195715_1920_1080_60fps.mp4", "use": "S38"}
+  },
+  "commons": {
+    "chlamy-swim": {"file": "Nickel-and-low-CO2-controlled-motility-in-Chlamydomonas-through-complementation-of-a-paralyzed-1471-2229-11-22-S1.ogv", "license": "CC BY 2.0", "by": "Ferrante P, Diener D, Rosenbaum J, Giuliano G", "use": "S02"},
+    "chlamy-phototaxis": {"file": "Phototaxis-beyond-turning-persistent-accumulation-and-response-acclimation-of-the-microalga-41598_2017_3618_MOESM1_ESM.ogv", "license": "CC BY 4.0", "by": "Arrieta J, Barreira A, Chioccioli M, Polin M, Tuval I", "use": "S03"},
+    "zebrafish-chr2": {"file": "Optical-Stimulation-of-Zebrafish-Hair-Cells-Expressing-Channelrhodopsin-2-pone.0096641.s002.ogv", "license": "CC BY 4.0", "by": "Monesson-Olson B, Browning-Kamins J, Aziz-Bose R, Kreines F, Trapani J", "use": "S24"},
+    "zebrafish-wt": {"file": "Optical-Stimulation-of-Zebrafish-Hair-Cells-Expressing-Channelrhodopsin-2-pone.0096641.s001.ogv", "license": "CC BY 4.0", "by": "Monesson-Olson B, Browning-Kamins J, Aziz-Bose R, Kreines F, Trapani J", "use": "S24"}
+  },
+  "nobel": {
+    "credit": "© The Nobel Committee for Physiology or Medicine. Ill. Mattias Karlén",
+    "base": "https://www.nobelprize.org/uploads/2026/10/",
+    "files": {"main": "NP_POM_2026_3-2_01.jpg", "alga": "POP_Fig_2.jpg", "frog": "POP_Fig_3_ENG_01.jpg", "neuron": "POP_Fig_4_ENG_01.jpg", "mouse": "POP_Fig_5_ENG_01.jpg",
+              "adv1": "ADV_FIG_1_02.jpg", "adv2": "ADV_FIG_2-02.jpg", "adv3": "ADV_FIG_3-02.jpg", "adv4": "ADV_FIG_4-02.jpg"}
+  }
+}
