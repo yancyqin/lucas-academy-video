@@ -8,7 +8,8 @@ Uses the Commons API with a descriptive User-Agent; thumbnails only at the allow
 """
 import json, os, sys, time, urllib.parse, urllib.request
 
-ART = "/Users/yqin/repo/playground/lucas-academy-video-data/debussy-impressions/art"
+# Another film points ART_DIR at its own art folder (the Gymnopédies film does).
+ART = os.environ.get("ART_DIR", "/Users/yqin/repo/playground/lucas-academy-video-data/debussy-impressions/art")
 API = "https://commons.wikimedia.org/w/api.php"
 UA = "LucasAcademyVideoResearch/1.0 (yqin@paciolan.com)"
 
