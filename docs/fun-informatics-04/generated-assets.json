@@ -1,0 +1,94 @@
+{
+  "assets": [
+    {
+      "path": "references/dish-green.png",
+      "tool": "codex exec · image_generation",
+      "created": "2026-11-01",
+      "use": "S01 / G1 首帧",
+      "reference": null,
+      "intent": "Top-down view of a shallow round clear glass dish, like a petri dish about ten centimetres wide, filled with water that has a faint, even, pale-green tint from microscopic algae. It sits in the middle of a plain matte white table, with plenty of empty table around it. Soft, even daylight and a gentle soft shadow under the dish; clean and calm. Realistic photograph, not an illustration. No people, no hands, no text, letters, numbers, labels or logos anywhere. Landscape 16:9, the largest native size, no software upscale.",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "3d80ab17159e74360402485481eb5f5123a5558ae9f3a7b9f26a1b0d50e32661",
+      "bytes": 1918445,
+      "label": "AI 生成"
+    },
+    {
+      "path": "references/dish-beam.png",
+      "tool": "codex exec · image_generation",
+      "created": "2026-11-01",
+      "use": "S03 / S47 / G2 首帧",
+      "reference": "references/dish-green.png",
+      "intent": "The same glass dish of pale-green water as in the attached reference picture, from the same top-down camera, but the room is now dim. A small black flashlight lies on the table at the left edge of the frame, pointing at the dish; its narrow warm-white beam lights the left side of the dish. The green tint is still even across the whole dish: the algae have not moved yet. Realistic photograph, not an illustration. No people, no hands, no text, letters, numbers, labels or logos anywhere. Landscape 16:9, the largest native size, no software upscale.",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "ba731438c3b3a8aae9ebea340430f9cf886ca10d816c10fcf6dabe292b5e435b",
+      "bytes": 1992231,
+      "label": "AI 生成"
+    },
+    {
+      "path": "references/goggles.png",
+      "tool": "codex exec · image_generation",
+      "created": "2026-11-01",
+      "use": "S36 / G3 首帧",
+      "reference": null,
+      "intent": "A pair of research goggles resting on a clean white table, three-quarter view. The front frame is matte dark grey with one small round camera lens in the centre, between the eyes; a faint amber glow shows from inside the lenses. Soft studio light, shallow depth of field, a quiet product shot of a medical research device. Realistic photograph, not an illustration. No people, no hands, no text, letters, numbers, labels or logos anywhere. Landscape 16:9, the largest native size, no software upscale.",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "b1197040a362a755d1593aec81a94c17446cbe904b42e2c71c6e2ef511d265c1",
+      "bytes": 1730146,
+      "label": "AI 生成"
+    },
+    {
+      "path": "references/notebook-table.png",
+      "tool": "codex exec · image_generation",
+      "created": "2026-11-01",
+      "use": "S39 / G5 首帧",
+      "reference": null,
+      "intent": "A plain closed notebook with a dark blue cover and a small white cardboard box, side by side with a gap between them, on a plain white table, seen from about 45 degrees above. Soft daylight from the left. Empty table space on the right side of the frame, where a hand could later reach in. Realistic photograph, not an illustration. No people, no hands, no text, letters, numbers, labels or logos anywhere. Landscape 16:9, the largest native size, no software upscale.",
+      "dimensions": [
+        1672,
+        940
+      ],
+      "sha256": "5b053910acd16b775d27583a04c0baa619ec0a3c914ec2b72ed40427b32369ed",
+      "bytes": 2187971,
+      "label": "AI 生成"
+    },
+    {
+      "path": "references/camera-cable.png",
+      "tool": "codex exec · image_generation",
+      "created": "2026-11-01",
+      "use": "S31 / G6 首帧（相机的比方）",
+      "reference": null,
+      "intent": "A mirrorless camera body with its lens removed, seen from the front so the rectangular image sensor inside the mount is clearly visible, standing on a clean wooden desk. A black cable runs from the side of the camera to an open laptop beside it. Soft window light; no brand names. Realistic photograph, not an illustration. No people, no hands, no text, letters, numbers, labels or logos anywhere. Landscape 16:9, the largest native size, no software upscale.",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "067d478492a761feb505e2a6aac4264e15db7b27b37fd3544c7f7f6e969ea66f",
+      "bytes": 1803166,
+      "label": "AI 生成"
+    },
+    {
+      "path": "references/chlamydomonas.png",
+      "tool": "codex exec · image_generation",
+      "created": "2026-11-01",
+      "use": "S02 / S04 / G7 首帧（可选）",
+      "reference": null,
+      "intent": "Bright-field microscope image of a single Chlamydomonas reinhardtii cell: an oval green cell about ten micrometres long, with two thin flagella of equal length coming out of its front end, a cup-shaped green chloroplast filling most of the cell, and one small bright orange-red eyespot on the side of the cell near its middle. Pale background, sharp focus, the cell in the centre with space around it. No scale bar. Realistic photograph, not an illustration. No people, no hands, no text, letters, numbers, labels or logos anywhere. Landscape 16:9, the largest native size, no software upscale.",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "c8e55d192569ae48a5af706a73a15fd65806e1a444c43cfdc16208103650e615",
+      "bytes": 1647319,
+      "label": "AI 生成"
+    }
+  ]
+}
