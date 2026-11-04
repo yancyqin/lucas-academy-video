@@ -1,0 +1,86 @@
+{
+ "name": "s1-etoile",
+ "piece": "gymnopedie-1",
+ "start": 0.0,
+ "end": 20.85,
+ "size": [
+  1080,
+  1560
+ ],
+ "fade_in": 0.0,
+ "fade_out": 0.0,
+ "afade_in": 0.03,
+ "afade_out": 1.5,
+ "afade_curve": "qua",
+ "breath": false,
+ "out_dir": "shorts",
+ "shots": [
+  {
+   "at": 0.0,
+   "src": "art:etoile",
+   "crop": [
+    0.006,
+    0.008,
+    0.95
+   ],
+   "zoom": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "at": 1.2,
+   "src": "muse:etoile-b",
+   "in": 0.0,
+   "out": 2.821,
+   "crop": [
+    0.006,
+    0.008,
+    0.95
+   ],
+   "floor": 0.9,
+   "xfade": 0.6
+  },
+  {
+   "at": 6.783,
+   "src": "art:etoile",
+   "crop": [
+    0.006,
+    0.008,
+    0.95
+   ],
+   "zoom": [
+    1.0,
+    1.0
+   ],
+   "xfade": 0.6
+  },
+  {
+   "at": 8.183,
+   "src": "muse:etoile-b",
+   "in": 2.821,
+   "out": 8.462,
+   "crop": [
+    0.006,
+    0.008,
+    0.95
+   ],
+   "floor": 0.9,
+   "xfade": 0.6
+  },
+  {
+   "at": 19.95,
+   "src": "art:etoile",
+   "crop": [
+    0.006,
+    0.008,
+    0.95
+   ],
+   "zoom": [
+    1.0,
+    1.0
+   ],
+   "xfade": 0.6
+  }
+ ]
+}

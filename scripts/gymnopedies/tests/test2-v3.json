@@ -1,0 +1,84 @@
+{
+ "name": "test2-v3-no2-ball",
+ "piece": "gymnopedie-2",
+ "start": 0.0,
+ "end": 54.0,
+ "fade_in": 1.5,
+ "fade_out": 3.5,
+ "shots": [
+  {
+   "at": 0.0,
+   "src": "art:bougival",
+   "crop": [
+    0.015,
+    0.1,
+    0.91
+   ],
+   "zoom": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "at": 4.68,
+   "src": "video:/Users/yqin/repo/playground/lucas-academy-video-data/satie-gymnopedies/footage/muse/aligned/bougival.mp4",
+   "crop": [
+    0.015,
+    0.1,
+    0.91
+   ],
+   "mean": 0.45,
+   "xfade": 2.5,
+   "hold": 2.5
+  },
+  {
+   "at": 18.72,
+   "src": "art:moulin-galette",
+   "zoom": [
+    1.0,
+    1.0
+   ],
+   "xfade": 2.0
+  },
+  {
+   "at": 23.4,
+   "src": "video:/Users/yqin/repo/playground/lucas-academy-video-data/satie-gymnopedies/footage/impressionism-secret/gen-moulin.mp4",
+   "in": 0.0,
+   "mean": 0.55,
+   "xfade": 2.0
+  },
+  {
+   "at": 28.08,
+   "src": "pexels:6719120",
+   "in": 24.0,
+   "mean": 0.5,
+   "xfade": 1.6
+  },
+  {
+   "at": 37.44,
+   "src": "art:dance-city",
+   "crop": [
+    0.025,
+    0.12,
+    0.93
+   ],
+   "zoom": [
+    1.0,
+    1.0
+   ],
+   "xfade": 2.0
+  },
+  {
+   "at": 42.12,
+   "src": "video:/Users/yqin/repo/playground/lucas-academy-video-data/satie-gymnopedies/footage/muse/aligned/dance-city.mp4",
+   "crop": [
+    0.025,
+    0.12,
+    0.93
+   ],
+   "mean": 0.45,
+   "xfade": 2.5,
+   "hold": 2.5
+  }
+ ]
+}

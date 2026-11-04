@@ -59,6 +59,14 @@ Updated 2026-10-21:
 Exception (owner, 2026-10-27): 中英阅读 covers say 双语朗读 big with the film's title small and a clean seal, no
 question and no ribbon ([ZHONG-YING.md](./ZHONG-YING.md) §Cover).
 
+Updated 2026-11-03 (听得见的舞, `scripts/gymnopedies/cover.py`):
+
+- **Keep the picture's composition.** Put the title in the picture's open space, using the thirds grid, or exactly
+  where the owner marks it on a screenshot; never recompose the picture to clear a spot (「不要改变原始构图」). If the
+  title has to sit over a busy background, soften that background a little behind a sharp subject (`dof()` cuts the
+  dancer out with GrabCut and blurs the rest) instead of moving anyone.
+- **Hands stay whole.** No figure's hand is cut by the cover's edge or covered by the title.
+
 ## Continuous footage and speed curves
 
 The owner's rule (2026-10-07): compress a long continuous recording as **one unbroken

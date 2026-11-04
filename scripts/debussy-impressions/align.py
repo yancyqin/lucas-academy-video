@@ -16,10 +16,11 @@ usage: .venv-reframe/bin/python align.py [ids...]
 import json, os, sys, glob
 import numpy as np, cv2
 
-DATA = "/Users/yqin/repo/playground/lucas-academy-video-data/debussy-impressions"
+# Another film points ALIGN_DATA at its own data folder with the same art/ + real/ layout (the Gymnopédies film does).
+DATA = os.environ.get("ALIGN_DATA", "/Users/yqin/repo/playground/lucas-academy-video-data/debussy-impressions")
 ART, REAL = f"{DATA}/art", f"{DATA}/real"
 OUT = f"{REAL}/aligned"; REV = f"{OUT}/review"
-LONG = 2160      # output long side
+LONG = int(os.environ.get("ALIGN_LONG", 2160))      # output long side
 WORK = 900       # analysis long side
 
 def photo_path(pid):
@@ -176,7 +177,9 @@ def main(ids):
         report[pid] = {"photo": os.path.basename(photo_path(pid)), "method": best, "scores": {k2: round(v[0], 3) for k2, v in scored.items()},
                        "score": round(scored[best][0], 3), "score_stretch": round(scored["stretch"][0], 3), "sift_inliers": n_in,
                        "transform": decompose(M, size), "uncovered_pct": round(miss, 2), "flow_median_pct": med, "flow_p95_pct": p95,
-                       "photo_ratio": round(R0.shape[1] / R0.shape[0], 3), "painting_ratio": round(w / h, 3), "edge_fill_px": filled, "out_size": list(out_size)}
+                       "photo_ratio": round(R0.shape[1] / R0.shape[0], 3), "painting_ratio": round(w / h, 3), "edge_fill_px": filled, "out_size": list(out_size),
+                       # photo pixels -> output pixels, so a video made from the photo can be warped the same way
+                       "A": A.tolist(), "photo_size": [R0.shape[1], R0.shape[0]]}
         # review strip
         Pv = cv2.resize(P0, out_size, interpolation=cv2.INTER_AREA)
         blend = cv2.addWeighted(Pv, 0.5, Wfull, 0.5, 0)

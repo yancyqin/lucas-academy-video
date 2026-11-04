@@ -1,0 +1,24 @@
+<!doctype html>
+<!-- YouTube cover for 听得见的舞 (README "YouTube covers"): one frame of the owner's Muse clip (owner 11-03: 「use the above
+     for 封面」 — his two stills), the title alone, one language per cover. cover.py fills BG, BGPOS, TITLE and SIDE and
+     renders it at 1280×720 with headless Chrome. -->
+<html lang="LANG">
+<head>
+<meta charset="utf-8">
+<style>
+  @font-face { font-family: "NotoSerifSC"; src: url("FONT"); }
+  html, body { margin: 0; width: 1280px; height: 720px; overflow: hidden; background: #14110e; }
+  .bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: BGPOS; }
+  .shade { position: absolute; inset: 0; background: SHADE; }
+  .text { position: absolute; SIDE; }
+  .title { font-family: "NotoSerifSC", "Songti SC", serif; font-size: SIZEpx; line-height: 1.12; letter-spacing: SPACING;
+    color: #fffaf0; text-shadow: 0 4px 28px rgba(0,0,0,.75), 0 1px 3px rgba(0,0,0,.6); white-space: nowrap; }
+  .key { color: #f2c46d; }
+</style>
+</head>
+<body>
+  <img class="bg" src="BG">
+  <div class="shade"></div>
+  <div class="text"><div class="title">TITLE</div></div>
+</body>
+</html>

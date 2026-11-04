@@ -1,0 +1,128 @@
+{
+ "name": "no2",
+ "piece": "gymnopedie-2",
+ "start": 0.0,
+ "end": 159.0,
+ "fade_in": 3.0,
+ "fade_out": 5.0,
+ "afade_in": 0.0,
+ "afade_out": 2.0,
+ "out_dir": "film",
+ "shots": [
+  {
+   "at": 0.0,
+   "src": "art:bougival",
+   "crop": [
+    0.015,
+    0.1,
+    0.91
+   ],
+   "zoom": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "at": 4.68,
+   "src": "muse:bougival",
+   "crop": [
+    0.015,
+    0.1,
+    0.91
+   ],
+   "fit": true,
+   "xfade": 2.5,
+   "hold": 2.5
+  },
+  {
+   "at": 25.7,
+   "src": "pexels:6719120",
+   "in": 24.0,
+   "mean": 0.5,
+   "xfade": 1.6
+  },
+  {
+   "at": 39.8,
+   "src": "art:moulin-galette",
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "xfade": 2.0
+  },
+  {
+   "at": 44.4,
+   "src": "gen:gen-moulin",
+   "fit": true,
+   "xfade": 2.0
+  },
+  {
+   "at": 60.8,
+   "src": "pexels:6719117",
+   "in": 8.0,
+   "mean": 0.5,
+   "xfade": 1.6
+  },
+  {
+   "at": 72.5,
+   "src": "art:dance-country",
+   "crop": [
+    0.0,
+    0.08,
+    1.0
+   ],
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "xfade": 2.0
+  },
+  {
+   "at": 84.2,
+   "src": "pexels:4990394",
+   "in": 0.0,
+   "mean": 0.45,
+   "xfade": 2.0
+  },
+  {
+   "at": 98.2,
+   "src": "art:dance-city",
+   "crop": [
+    0.025,
+    0.12,
+    0.93
+   ],
+   "zoom": [
+    1.0,
+    1.0
+   ],
+   "xfade": 2.0
+  },
+  {
+   "at": 102.9,
+   "src": "muse:dance-city",
+   "crop": [
+    0.025,
+    0.12,
+    0.93
+   ],
+   "fit": true,
+   "xfade": 2.5,
+   "hold": 2.5
+  },
+  {
+   "at": 126.2,
+   "src": "pexels:8934149",
+   "in": 0.0,
+   "mean": 0.45,
+   "xfade": 1.6
+  },
+  {
+   "at": 140.3,
+   "src": "pexels:10637339",
+   "in": 0.0,
+   "mean": 0.45,
+   "xfade": 1.6
+  }
+ ]
+}

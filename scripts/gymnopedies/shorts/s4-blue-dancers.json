@@ -1,0 +1,113 @@
+{
+ "name": "s4-blue-dancers",
+ "piece": "gymnopedie-3",
+ "start": 121.5,
+ "end": 145.0,
+ "size": [
+  1080,
+  1620
+ ],
+ "fade_in": 0.0,
+ "fade_out": 0.0,
+ "afade_in": 0.03,
+ "afade_out": 2.5,
+ "afade_curve": "qua",
+ "breath": false,
+ "out_dir": "shorts",
+ "shots": [
+  {
+   "at": 121.5,
+   "src": "img:/Users/yqin/repo/playground/lucas-academy-video-data/satie-gymnopedies/shorts/blue-dancers-canvas.png",
+   "crop": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "zoom": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "at": 122.7,
+   "src": "video:/Users/yqin/repo/playground/lucas-academy-video-data/satie-gymnopedies/footage/muse/sharp/blue-dancers-vertical.mp4",
+   "in": 0.0,
+   "out": 3.307,
+   "crop": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "floor": 0.9,
+   "xfade": 0.6
+  },
+  {
+   "at": 128.9,
+   "src": "img:/Users/yqin/repo/playground/lucas-academy-video-data/satie-gymnopedies/shorts/blue-dancers-canvas.png",
+   "crop": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "zoom": [
+    1.0,
+    1.0
+   ],
+   "xfade": 0.6
+  },
+  {
+   "at": 130.3,
+   "src": "video:/Users/yqin/repo/playground/lucas-academy-video-data/satie-gymnopedies/footage/muse/sharp/blue-dancers-vertical.mp4",
+   "in": 3.307,
+   "out": 6.613,
+   "crop": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "floor": 0.9,
+   "xfade": 0.6
+  },
+  {
+   "at": 136.5,
+   "src": "img:/Users/yqin/repo/playground/lucas-academy-video-data/satie-gymnopedies/shorts/blue-dancers-canvas.png",
+   "crop": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "zoom": [
+    1.0,
+    1.0
+   ],
+   "xfade": 0.6
+  },
+  {
+   "at": 137.9,
+   "src": "video:/Users/yqin/repo/playground/lucas-academy-video-data/satie-gymnopedies/footage/muse/sharp/blue-dancers-vertical.mp4",
+   "in": 6.613,
+   "out": 9.92,
+   "crop": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "floor": 0.9,
+   "xfade": 0.6
+  },
+  {
+   "at": 144.1,
+   "src": "img:/Users/yqin/repo/playground/lucas-academy-video-data/satie-gymnopedies/shorts/blue-dancers-canvas.png",
+   "crop": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "zoom": [
+    1.0,
+    1.0
+   ],
+   "xfade": 0.6
+  }
+ ]
+}
