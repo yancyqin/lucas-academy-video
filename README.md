@@ -86,11 +86,12 @@ The owner's rule (2026-10-07): every tag is **lowercase**, and every film carrie
     #art #arthistory #stem
     #bilingual #bilingualchildren #lucas_academy
 
-in two places: the hashtag line that ends the description, and the Studio tags field (there without `#`).
-A film adds a few lowercase topic tags of its own. In the hashtag line they come after the defaults,
-because YouTube shows a description's first three hashtags (#education #christianeducation #parenting)
-above the title; more than 15 hashtags and YouTube ignores them all, so a film adds at most six. In the
-tags field they come first, and the field holds 500 characters.
+in two places: the hashtag line that ends the description, and the Studio tags field. Both are written as
+hashtags, `#` and the tag with no spaces inside, one space between (owner, 2026-11-03), so `erik satie`
+becomes `#eriksatie`. A film adds a few lowercase topic tags of its own. In the hashtag line they come
+after the defaults, because YouTube shows a description's first three hashtags (#education
+#christianeducation #parenting) above the title; more than 60 hashtags and YouTube ignores them all. In
+the tags field they come first, and the field holds 500 characters.
 
 The set lives in [`scripts/youtube_tags.py`](./scripts/youtube_tags.py); every description generator
 (`scripts/*/youtube.py`, `scripts/reciprocal-doors-youtube.py`) should take its hashtags and tags from it,

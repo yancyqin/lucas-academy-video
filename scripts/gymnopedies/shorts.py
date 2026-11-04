@@ -199,7 +199,7 @@ def texts():
         desc = "\n".join([zh, en, "", "完整版 / Full film：《听得见的舞》The Dance You Can Hear", "", mz, me, "", az, ae, "",
                           hashtags(["shorts", "satie", "gymnopedie", "degas", "ballet"])])
         doc += [f"========== {f}.mp4 ==========", "【标题 / Title】", title, "", "【简介 / Description】", desc, "",
-                "【标签 / Tags】", tags(YT.OWN_TAGS), ""]
+                "【标签 / Tags】", tags([*YT.OWN_TAGS, "shorts"]), ""]
     doc += ["【上传设置 / Upload settings】",
             "· 四个竖屏短视频（1080×1920，30 fps，约 21–24 秒，-18 LUFS），每个都能无缝循环：第一帧和最后一帧是同一张画，音乐在下一个小节前淡出",
             "· 完整版上传后，把简介里的「完整版」换成它的链接，也可以在 Shorts 的「相关视频」里关联完整版",
