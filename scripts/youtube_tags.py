@@ -14,7 +14,7 @@ from __future__ import annotations
 import re
 from collections.abc import Iterable
 
-DEFAULT = ["education", "christianeducation", "parenting",
+DEFAULT = ["education", "parenting",   # #christianeducation dropped by the owner 2026-11-03
            "art", "arthistory", "stem",
            "bilingual", "bilingualchildren", "lucas_academy"]
 MAX_HASHTAGS = 60      # with more than 60, YouTube ignores every hashtag on the video (Help, answer 6390658)
@@ -47,7 +47,7 @@ def tags(own: Iterable[str]) -> str:
 
 def hashtags(own: Iterable[str] = ()) -> str:
     """The hashtag line that ends a description. The defaults come first, because YouTube shows a
-    description's first three hashtags (#education #christianeducation #parenting) above the title."""
+    description's first three hashtags (#education #parenting #art) above the title."""
     words = [*DEFAULT, *_own(own)]
     assert len(words) <= MAX_HASHTAGS, f"{len(words)} hashtags; with more than {MAX_HASHTAGS} YouTube ignores them all"
     return " ".join(f"#{w}" for w in words)
