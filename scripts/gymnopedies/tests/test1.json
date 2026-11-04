@@ -1,0 +1,59 @@
+{
+ "name": "test1-no1-studio",
+ "piece": "gymnopedie-1",
+ "start": 0.0,
+ "end": 56.0,
+ "fade_in": 1.5,
+ "fade_out": 3.5,
+ "shots": [
+  {
+   "at": 0.0,
+   "src": "pexels:10628912",
+   "in": 0.0,
+   "mean": 0.3
+  },
+  {
+   "at": 11.7,
+   "src": "pexels:10640532",
+   "in": 1.5,
+   "mean": 0.45,
+   "xfade": 1.2
+  },
+  {
+   "at": 21.0,
+   "src": "video:/Users/yqin/repo/playground/lucas-academy-video-data/satie-gymnopedies/minimax/waiting/v1/original.mp4",
+   "crop": [
+    0.0,
+    0.08,
+    0.98
+   ],
+   "mean": 0.55,
+   "xfade": 2.0
+  },
+  {
+   "at": 28.9,
+   "src": "pexels:10640406",
+   "in": 5.5,
+   "mean": 0.5,
+   "xfade": 1.6
+  },
+  {
+   "at": 36.1,
+   "src": "video:/Users/yqin/repo/playground/lucas-academy-video-data/satie-gymnopedies/minimax/barre/v1/original.mp4",
+   "crop": [
+    0.0,
+    0.1,
+    1.0
+   ],
+   "mean": 0.6,
+   "xfade": 2.0
+  },
+  {
+   "at": 43.2,
+   "src": "pexels:10637176",
+   "in": 0.5,
+   "mean": 0.45,
+   "xfade": 1.6
+  }
+ ]
+}

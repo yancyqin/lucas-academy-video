@@ -1,0 +1,199 @@
+{
+ "name": "no1",
+ "piece": "gymnopedie-1",
+ "start": 0.0,
+ "end": 191.2,
+ "fade_in": 3.0,
+ "fade_out": 5.0,
+ "afade_in": 0.0,
+ "afade_out": 2.0,
+ "out_dir": "film",
+ "shots": [
+  {
+   "at": 0.0,
+   "src": "art:etoile",
+   "crop": [
+    0.008,
+    0.245,
+    0.94
+   ],
+   "zoom": [
+    1.05,
+    1.0
+   ]
+  },
+  {
+   "at": 5.7,
+   "src": "muse:etoile-a",
+   "crop": [
+    0.008,
+    0.245,
+    0.94
+   ],
+   "fit": true,
+   "xfade": 2.5,
+   "hold": 2.5
+  },
+  {
+   "at": 11.7,
+   "src": "muse:etoile-b",
+   "crop": [
+    0.008,
+    0.245,
+    0.94
+   ],
+   "crop_to": [
+    0.008,
+    0.21,
+    0.94
+   ],
+   "fit": true,
+   "xfade": 1.0
+  },
+  {
+   "at": 31.8,
+   "src": "pexels:10637171",
+   "in": 3.0,
+   "mean": 0.45,
+   "xfade": 1.6
+  },
+  {
+   "at": 40.7,
+   "src": "art:barre-met",
+   "crop": [
+    0.025,
+    0.035,
+    0.86
+   ],
+   "zoom": [
+    1.0,
+    1.0
+   ],
+   "xfade": 2.0
+  },
+  {
+   "at": 45.0,
+   "src": "muse:barre",
+   "crop": [
+    0.025,
+    0.035,
+    0.86
+   ],
+   "fit": true,
+   "xfade": 2.5,
+   "hold": 2.5
+  },
+  {
+   "at": 66.4,
+   "src": "pexels:10640406",
+   "in": 4.0,
+   "mean": 0.5,
+   "xfade": 1.6
+  },
+  {
+   "at": 80.2,
+   "src": "pexels:10628818",
+   "in": 2.0,
+   "mean": 0.5,
+   "xfade": 1.6
+  },
+  {
+   "at": 94.1,
+   "src": "pexels:10637176",
+   "in": 1.0,
+   "mean": 0.45,
+   "xfade": 2.0
+  },
+  {
+   "at": 107.9,
+   "src": "pexels:10640421",
+   "in": 8.0,
+   "mean": 0.5,
+   "xfade": 1.6
+  },
+  {
+   "at": 119.7,
+   "src": "pexels:10637341",
+   "in": 0.5,
+   "mean": 0.5,
+   "xfade": 1.6
+  },
+  {
+   "at": 130.4,
+   "src": "art:dance-class",
+   "crop": [
+    0.03,
+    0.22,
+    0.86
+   ],
+   "zoom": [
+    1.0,
+    1.0
+   ],
+   "xfade": 2.0
+  },
+  {
+   "at": 135.0,
+   "src": "muse:dance-class-a",
+   "crop": [
+    0.03,
+    0.22,
+    0.86
+   ],
+   "fit": true,
+   "xfade": 2.5,
+   "hold": 2.5
+  },
+  {
+   "at": 139.0,
+   "src": "muse:dance-class-b",
+   "crop": [
+    0.03,
+    0.22,
+    0.86
+   ],
+   "fit": true,
+   "xfade": 0.6
+  },
+  {
+   "at": 142.5,
+   "src": "art:dance-class",
+   "crop": [
+    0.03,
+    0.22,
+    0.86
+   ],
+   "zoom": [
+    1.0,
+    1.0
+   ],
+   "xfade": 1.5
+  },
+  {
+   "at": 149.5,
+   "src": "muse:dance-class-c",
+   "crop": [
+    0.03,
+    0.22,
+    0.86
+   ],
+   "fit": true,
+   "xfade": 2.5,
+   "hold": 1.5
+  },
+  {
+   "at": 175.3,
+   "src": "art:dance-class",
+   "crop": [
+    0.03,
+    0.22,
+    0.86
+   ],
+   "zoom": [
+    1.0,
+    1.06
+   ],
+   "xfade": 2.0
+  }
+ ]
+}

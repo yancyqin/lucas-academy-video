@@ -1,0 +1,17 @@
+{
+ "name": "test1-v2-no1-studio",
+ "piece": "gymnopedie-1",
+ "start": 0.0, "end": 77.5, "fade_in": 1.5, "fade_out": 3.5,
+ "shots": [
+  {"at": 0.0,  "src": "pexels:10628912", "in": 0.0, "mean": 0.30},
+  {"at": 11.7, "src": "pexels:10640532", "in": 1.5, "mean": 0.45, "xfade": 1.2},
+  {"at": 21.0, "src": "img:/Users/yqin/repo/playground/lucas-academy-video-data/satie-gymnopedies/real/aligned/waiting.png", "crop": [0.0, 0.08, 0.98], "zoom": [1.0, 1.025], "xfade": 2.0},
+  {"at": 24.5, "src": "art:waiting", "crop": [0.0, 0.08, 0.98], "zoom": [1.025, 1.06], "xfade": 2.5},
+  {"at": 28.9, "src": "pexels:10640406", "in": 5.5, "mean": 0.50, "xfade": 1.6},
+  {"at": 36.1, "src": "img:/Users/yqin/repo/playground/lucas-academy-video-data/satie-gymnopedies/real/aligned/barre-met.png", "crop": [0.0, 0.10, 1.0], "zoom": [1.0, 1.025], "xfade": 2.0},
+  {"at": 40.7, "src": "art:barre-met", "crop": [0.0, 0.10, 1.0], "zoom": [1.025, 1.06], "xfade": 2.5},
+  {"at": 48.4, "src": "pexels:10637176", "in": 0.5, "mean": 0.45, "xfade": 1.6},
+  {"at": 57.9, "src": "img:/Users/yqin/repo/playground/lucas-academy-video-data/satie-gymnopedies/real/aligned/dance-class.png", "crop": [0.01, 0.22, 0.98], "zoom": [1.0, 1.03], "xfade": 2.0},
+  {"at": 66.4, "src": "art:dance-class", "crop": [0.01, 0.22, 0.98], "zoom": [1.03, 1.09], "xfade": 3.0}
+ ]
+}

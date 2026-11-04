@@ -1,0 +1,67 @@
+{
+ "name": "test2-no2-ball",
+ "piece": "gymnopedie-2",
+ "start": 0.0,
+ "end": 54.0,
+ "fade_in": 1.5,
+ "fade_out": 3.5,
+ "shots": [
+  {
+   "at": 0.0,
+   "src": "art:bougival",
+   "crop": [
+    0.0,
+    0.1,
+    1.0
+   ],
+   "zoom": [
+    1.0,
+    1.08
+   ]
+  },
+  {
+   "at": 9.36,
+   "src": "pexels:6719120",
+   "in": 24.0,
+   "mean": 0.5,
+   "xfade": 1.6
+  },
+  {
+   "at": 18.72,
+   "src": "video:/Users/yqin/repo/playground/lucas-academy-video-data/satie-gymnopedies/footage/impressionism-secret/gen-moulin.mp4",
+   "in": 0.0,
+   "mean": 0.55,
+   "xfade": 1.6
+  },
+  {
+   "at": 28.08,
+   "src": "art:moulin-galette",
+   "zoom": [
+    1.0,
+    1.07
+   ],
+   "xfade": 2.0
+  },
+  {
+   "at": 37.44,
+   "src": "pexels:6719117",
+   "in": 44.0,
+   "mean": 0.5,
+   "xfade": 1.6
+  },
+  {
+   "at": 46.8,
+   "src": "art:dance-city",
+   "crop": [
+    0.0,
+    0.12,
+    1.0
+   ],
+   "zoom": [
+    1.0,
+    1.07
+   ],
+   "xfade": 2.0
+  }
+ ]
+}

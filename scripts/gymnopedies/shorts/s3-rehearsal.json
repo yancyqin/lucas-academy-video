@@ -1,0 +1,86 @@
+{
+ "name": "s3-rehearsal",
+ "piece": "gymnopedie-2",
+ "start": 0.0,
+ "end": 20.85,
+ "size": [
+  1080,
+  834
+ ],
+ "fade_in": 0.0,
+ "fade_out": 0.0,
+ "afade_in": 0.03,
+ "afade_out": 1.5,
+ "afade_curve": "qua",
+ "breath": false,
+ "out_dir": "shorts",
+ "shots": [
+  {
+   "at": 0.0,
+   "src": "art:rehearsal-stage",
+   "crop": [
+    0.008,
+    0.004,
+    0.985
+   ],
+   "zoom": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "at": 1.2,
+   "src": "muse:rehearsal-stage",
+   "in": 0.0,
+   "out": 3.307,
+   "crop": [
+    0.008,
+    0.004,
+    0.985
+   ],
+   "floor": 0.9,
+   "xfade": 0.6
+  },
+  {
+   "at": 6.783,
+   "src": "art:rehearsal-stage",
+   "crop": [
+    0.008,
+    0.004,
+    0.985
+   ],
+   "zoom": [
+    1.0,
+    1.0
+   ],
+   "xfade": 0.6
+  },
+  {
+   "at": 8.183,
+   "src": "muse:rehearsal-stage",
+   "in": 3.307,
+   "out": 9.92,
+   "crop": [
+    0.008,
+    0.004,
+    0.985
+   ],
+   "floor": 0.9,
+   "xfade": 0.6
+  },
+  {
+   "at": 19.95,
+   "src": "art:rehearsal-stage",
+   "crop": [
+    0.008,
+    0.004,
+    0.985
+   ],
+   "zoom": [
+    1.0,
+    1.0
+   ],
+   "xfade": 0.6
+  }
+ ]
+}

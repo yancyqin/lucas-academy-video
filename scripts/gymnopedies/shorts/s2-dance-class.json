@@ -1,0 +1,113 @@
+{
+ "name": "s2-dance-class",
+ "piece": "gymnopedie-3",
+ "start": 0.0,
+ "end": 20.85,
+ "size": [
+  1080,
+  1184
+ ],
+ "fade_in": 0.0,
+ "fade_out": 0.0,
+ "afade_in": 0.03,
+ "afade_out": 1.5,
+ "afade_curve": "qua",
+ "breath": false,
+ "out_dir": "shorts",
+ "shots": [
+  {
+   "at": 0.0,
+   "src": "art:dance-class",
+   "crop": [
+    0.03,
+    0.02,
+    0.86
+   ],
+   "zoom": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "at": 1.2,
+   "src": "muse:dance-class-b",
+   "in": 0.0,
+   "out": 0.378,
+   "crop": [
+    0.03,
+    0.02,
+    0.86
+   ],
+   "floor": 0.9,
+   "xfade": 0.6
+  },
+  {
+   "at": 2.1,
+   "src": "art:dance-class",
+   "crop": [
+    0.03,
+    0.02,
+    0.86
+   ],
+   "zoom": [
+    1.0,
+    1.0
+   ],
+   "xfade": 0.6
+  },
+  {
+   "at": 3.5,
+   "src": "muse:dance-class-c",
+   "in": 0.0,
+   "out": 4.314,
+   "crop": [
+    0.03,
+    0.02,
+    0.86
+   ],
+   "floor": 0.9,
+   "xfade": 0.6
+  },
+  {
+   "at": 11.025,
+   "src": "art:dance-class",
+   "crop": [
+    0.03,
+    0.02,
+    0.86
+   ],
+   "zoom": [
+    1.0,
+    1.0
+   ],
+   "xfade": 0.6
+  },
+  {
+   "at": 12.425,
+   "src": "muse:dance-class-c",
+   "in": 4.314,
+   "out": 8.628,
+   "crop": [
+    0.03,
+    0.02,
+    0.86
+   ],
+   "floor": 0.9,
+   "xfade": 0.6
+  },
+  {
+   "at": 19.95,
+   "src": "art:dance-class",
+   "crop": [
+    0.03,
+    0.02,
+    0.86
+   ],
+   "zoom": [
+    1.0,
+    1.0
+   ],
+   "xfade": 0.6
+  }
+ ]
+}

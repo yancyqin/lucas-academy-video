@@ -1,0 +1,94 @@
+{
+ "name": "test3-v3-no3-stage",
+ "piece": "gymnopedie-3",
+ "start": 0.0,
+ "end": 54.0,
+ "fade_in": 1.5,
+ "fade_out": 3.5,
+ "shots": [
+  {
+   "at": 0.0,
+   "src": "art:rehearsal-stage",
+   "crop": [
+    0.01,
+    0.155,
+    0.98
+   ],
+   "zoom": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "at": 4.68,
+   "src": "video:/Users/yqin/repo/playground/lucas-academy-video-data/satie-gymnopedies/footage/muse/aligned/rehearsal-stage.mp4",
+   "crop": [
+    0.01,
+    0.155,
+    0.98
+   ],
+   "mean": 0.5,
+   "xfade": 2.5,
+   "hold": 2.5
+  },
+  {
+   "at": 18.72,
+   "src": "art:orchestra-opera",
+   "crop": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "zoom": [
+    1.0,
+    1.0
+   ],
+   "xfade": 2.0
+  },
+  {
+   "at": 23.4,
+   "src": "video:/Users/yqin/repo/playground/lucas-academy-video-data/satie-gymnopedies/footage/impressionism-secret/gen-opera.mp4",
+   "in": 0.0,
+   "crop": [
+    0.0,
+    0.02,
+    1.0
+   ],
+   "mean": 0.6,
+   "xfade": 2.0
+  },
+  {
+   "at": 32.76,
+   "src": "pexels:8935734",
+   "in": 2.0,
+   "mean": 0.45,
+   "xfade": 1.6
+  },
+  {
+   "at": 42.12,
+   "src": "art:etoile",
+   "crop": [
+    0.008,
+    0.28,
+    0.94
+   ],
+   "zoom": [
+    1.0,
+    1.0
+   ],
+   "xfade": 2.0
+  },
+  {
+   "at": 46.8,
+   "src": "video:/Users/yqin/repo/playground/lucas-academy-video-data/satie-gymnopedies/footage/muse/aligned/etoile.mp4",
+   "crop": [
+    0.008,
+    0.28,
+    0.94
+   ],
+   "mean": 0.15,
+   "xfade": 2.0,
+   "hold": 2.0
+  }
+ ]
+}
