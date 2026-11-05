@@ -71,7 +71,8 @@
     "fal01:timeline:voiced": "python3 scripts/family-ai-lab-01/build.py --voiced",
     "fal01:voice:select": ".venv-align/bin/python scripts/family-ai-lab-01/mix_audio.py --select",
     "fal01:voice:mix": ".venv-align/bin/python scripts/family-ai-lab-01/mix_audio.py",
-    "fal01:check:final": "python3 scripts/family-ai-lab-01/verify.py --voiced"
+    "fal01:check:final": "python3 scripts/family-ai-lab-01/verify.py --voiced",
+    "fal01:cover:v2": ".venv-align/bin/python scripts/family-ai-lab-01/cover_v2.py"
   },
   "dependencies": {
     "@remotion/cli": "^4.0.484",

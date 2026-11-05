@@ -1,5 +1,7 @@
 # Family AI Lab 01 — bilingual film
 
+**Next revision — cover/copy review only (2026-11-05):** [Owner review brief](revision-2026-11-05.md) and [new cover candidate](cover-v2.json). The next MP4 will have no subtitle tracks or reserved subtitle strip; SRT files remain separate. The current delivered film below is the previous version. No new video, Muse shot or narration is generated in this step.
+
 One common picture uses short English labels. Louise narrates both languages at speed 1.1 with a warm, curious, conversational instruction. The MP4 contains two independent audio tracks and two independent subtitle tracks; English is selected by default for both. Captions are not burned into the picture. `FamilyAiLab01En` / `Zh` are inspection compositions for the same timeline, not separate film deliveries.
 
 ## Delivery

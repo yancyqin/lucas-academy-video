@@ -1,0 +1,40 @@
+{
+  "status": "style candidate for owner review; video revision not started",
+  "background": "public/family-ai-lab-01/art/cover-v2-bg.png",
+  "backgroundSha256": "faaaa4820906af3a8e65cabbc05423b145775e161a25671f273e2400fc9668e2",
+  "headlines": {
+    "zh": [
+      "比Claude Fable 5.1快300万倍",
+      "比GPT-6-Astra快1000万倍！"
+    ],
+    "en": [
+      "3 million times faster than Claude Fable 5.1",
+      "10 million times faster than GPT-6-Astra!"
+    ]
+  },
+  "teasers": {
+    "zh": "偷偷告诉你，在家和孩子一起训练！",
+    "en": "Psst… you can train it at home with your kids!"
+  },
+  "typography": "Code only; no About/Over/约/多 in the new headline.",
+  "covers": [
+    {
+      "language": "zh",
+      "path": "out/family-ai-lab-01/cover/cover-v2.zh.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "c87d30e7a707ff69805a09d07a9485a735af090fa3e5667b9f18562cc6144ab9"
+    },
+    {
+      "language": "en",
+      "path": "out/family-ai-lab-01/cover/cover-v2.en.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "3a7f58e45002a2d7e9260b933f99812c5380b7ebfe5d2c3981cc1d04acd0e6a4"
+    }
+  ]
+}
