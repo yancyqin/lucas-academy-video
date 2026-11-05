@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8149/L2-lower-intermediate/perceptron/perceptron.html",
+  "events": [
+    {
+      "name": "three-zero",
+      "seconds": 1.502000093460083
+    },
+    {
+      "name": "click-round",
+      "seconds": 2.430999994277954
+    },
+    {
+      "name": "round-one-complete",
+      "seconds": 3.7780001163482666
+    },
+    {
+      "name": "three-trained",
+      "seconds": 8.79800009727478
+    },
+    {
+      "name": "twenty-trained",
+      "seconds": 9.062000036239624
+    },
+    {
+      "name": "end",
+      "seconds": 13.854000091552734
+    }
+  ],
+  "originalSha256": "0ae50bf477d8e127caeb45c54836e5380ff32cacf1519a22182b9d880f1d836e",
+  "adapter": "20x20 imports the selected trained 419-picture state. Original Python predict/train unchanged. 3x3 uses original UI training. No benchmark calls.",
+  "baselineBenchmarkRerun": false,
+  "pointsChangedIn3x3": "points = [ 0, -1,  0,\n           1,  0,  1,\n           0, -1,  0]",
+  "final": {
+    "n": 20,
+    "examples": 419,
+    "rounds": 27
+  }
+}

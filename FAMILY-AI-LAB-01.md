@@ -1,6 +1,6 @@
 # A 1957 AI Model Is Faster Than ChatGPT Astra and Claude Fable? / 一个 1957 年的 AI，比 ChatGPT Astra 和 Claude Fable 还快？
 
-**家庭AI实验室 1 · Family AI Lab 1**，新系列的第一部。中文、英文各一部，时间线各自独立，6–8 分钟。
+**家庭AI实验室 1 · Family AI Lab 1**，新系列的第一部。**本次最新决定：中英文共用一部片子，默认英文。片内标签只用简短英文。中文单独音轨、单独字幕。** 审核阶段先不配音，使用同一条时间线和可切换字幕，约 7 分 15 秒。
 
 **故事线**
 - **开场**是一场真实的比赛：同一张手写的 7，问四个选手“这是 7 吗？”。
@@ -8,7 +8,7 @@
 - 然后穿越回 1957 年：一家人用纸和笔，再加一个网页，就能学会电脑怎么“看”、大脑怎么做决定、机器怎么从错误里学。
 - 最后揭晓：X 就是 Rosenblatt 1957 年的感知机。
 
-**复测状态**：本次 Claude Fable 5.1 中位数变化超过 30%，已按要求停止后续实验和制作；详见 [复测记录](docs/family-ai-lab-01/benchmark-check.md)。以下数字保留原始实验结果，未与本轮混用。
+**制作依据（Yancy 本次确认）**：沿用原始整轮 `results/*.json`，不再重跑。此前超出 30% 的复测记录保留在 [复测记录](docs/family-ai-lab-01/benchmark-check.md)，不纳入片中数字。
 
 实验已经跑完，数字都来自真实运行。脚本和原始结果在 [scripts/perceptron-race/](scripts/perceptron-race/)，汇总在 `results/summary.md`。
 
@@ -27,7 +27,7 @@
   - 配音的规矩以后重新定：不同系列用不同的人，没有统一规则，慢慢摸索。
   - 这部片不照 `SCRIPT-AND-VOICE.md` 的第一人称、`yancy/zh` 那一套；稿子由 Codex 写，旁白口吻。
 - **先做带字幕的审核版，后配音**：
-  - 先出没有配音、字幕直接显示在画面上的片子，Yancy 审画面和文字；
+  - 先出没有配音的一部审核片，英文字幕默认开启，中文字幕可切换；字幕作为独立轨道，不烧进画面。Yancy 审画面和文字；
   - 定了再配音，因为配音费时间。
 - **生成视频用本机的 Muse**，由 Codex 直接操作。
 - **结构 8 段**，见第 3 节。
@@ -182,21 +182,21 @@ python3 summarize.py
 ## 4. 制作
 
 - **工作地点（本次用户指令覆盖旧方案）**：不开 worktree。先把本地未提交的源码和文稿保存为本地提交，再在当前 checkout 从最新 `origin/main` 建立分支 `codex/family-ai-lab-01`，带入本片方案和实验脚本。
-- **合成**：`FamilyAiLab01Zh` / `FamilyAiLab01En`，npm 脚本 `fal01:*`。比赛动画直接读 `results/*.json`。
+- **合成**：`FamilyAiLab01` 是共用干净画面；`FamilyAiLab01En` / `FamilyAiLab01Zh` 只用于字幕检查。npm 脚本 `fal01:*`。比赛动画直接读原始 `results/*.json`。
 - **Muse**：Codex 直接操作本机的 Muse app 生成短视频。
   - 每段的提示词和选用的那一条记在 `docs/family-ai-lab-01/muse.md`。
   - 原件放 `public/family-ai-lab-01/muse/`，不提交。
   - 照趣味信息学 4 的做法备份到 `lucas-academy-video-data/family-ai-lab-01/`，带 SHA256SUMS。
 - **画面来源**：每个镜头右下角标来源（真实实验录屏 · 作者；AI 生成 · 示意；图 · 来源 · 许可）。
 - **审核版**：
-  - 没有配音，字幕直接显示在画面上。每句的时长按 Louise 的语速估：中文约 3.5 字/秒，英文约 2.6 词/秒，句间留 0.4 秒。
+  - 没有配音。可切换的独立字幕轨：英文默认开启，中文单独一轨。每句按中文约 3.5 字/秒、英文约 2.6 词/秒中的较长值估时，句间留 0.4 秒，保证后续两种音轨共用画面。
   - 可以加音乐垫底：用 Yancy 的 Suno 曲子就写「Yancy 用 Suno 创作」。
-  - 出中英两部，放 `out/family-ai-lab-01/review/`。
+  - 出一部共用画面，默认英文字幕、可切换中文字幕，放 `out/family-ai-lab-01/review/`。
 - **配音（审核通过以后）**：
-  - Louise 中英文；
+  - Louise 中英文，分别生成、对齐后封装为独立音轨，英文默认；
   - 语速和语气指令那时再和 Yancy 定：先拿一段分别试 1.0、1.2、1.3；
   - 每句过 Whisper，按配音重新对齐时间线。
-- **最终版**：干净视频，加 `zh-Hans.srt` / `en.srt`，字幕不烧进画面（−16 LUFS）。交付时写清楚视频和 SRT 在哪里。
+- **最终版**：同一视频内英文音轨默认，中文音轨单独可切换，并带 `zh-Hans.srt` / `en.srt`；字幕不烧进画面（声音 −16 LUFS）。交付时写清楚视频和 SRT 在哪里。
 
 ## 5. 封面：先出 3 个设计
 

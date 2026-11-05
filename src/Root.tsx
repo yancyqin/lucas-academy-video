@@ -1,3 +1,4 @@
+import {FamilyAiLab01, calculateFamilyMetadata} from './videos/family-ai-lab-01/FamilyAiLab01';
 import {Composition} from 'remotion';
 import {VG_WHY_DURATION, VG_WHY_FPS, VgWhyCover, VgWhyVideo} from './videos/vg-why/VgWhyVideo';
 import {RD_FPS, filmDuration, LanguageBridgeCover, LanguageBridgeVideo, type LanguageBridgeProps} from './videos/ReciprocalDoorsVideo';
@@ -346,6 +347,9 @@ export const Root: FC = () => {
       <Composition id="MiddleIncomeTrapCover" component={MiddleIncomeTrapCover} durationInFrames={1} fps={30} width={1280} height={720} />
       <Composition id="MiddleIncomeTrapCoverEn" component={MiddleIncomeTrapCoverEn} durationInFrames={1} fps={30} width={1280} height={720} />
       <Composition id="AiSycophancy" component={AiSycophancyVideo} durationInFrames={18000} fps={30} width={1920} height={1080} defaultProps={{tl:null, lang:'zh' as const}} calculateMetadata={calculateAsMetadata} />
+      <Composition id="FamilyAiLab01" component={FamilyAiLab01} fps={30} width={1920} height={1080} durationInFrames={13000} defaultProps={{tl:null,data:null,captions:null}} calculateMetadata={calculateFamilyMetadata} />
+      <Composition id="FamilyAiLab01En" component={FamilyAiLab01} fps={30} width={1920} height={1080} durationInFrames={13000} defaultProps={{tl:null,data:null,captions:'en' as const}} calculateMetadata={calculateFamilyMetadata} />
+      <Composition id="FamilyAiLab01Zh" component={FamilyAiLab01} fps={30} width={1920} height={1080} durationInFrames={13000} defaultProps={{tl:null,data:null,captions:'zh' as const}} calculateMetadata={calculateFamilyMetadata} />
       <Composition id="FunInformatics04Zh" component={FunInformatics04Video} durationInFrames={18000} fps={30} width={1920} height={1080} defaultProps={{tl:null, lang:'zh' as const}} calculateMetadata={calculateFi04Metadata} />
       <Composition id="FunInformatics04En" component={FunInformatics04Video} durationInFrames={18000} fps={30} width={1920} height={1080} defaultProps={{tl:null, lang:'en' as const}} calculateMetadata={calculateFi04Metadata} />
       <Composition id="AsScreen" component={AsScreen} durationInFrames={300} fps={30} width={720} height={1560} defaultProps={{kind:'G1', width:720, height:1560, seconds:10, cues:[2,4], lines:['您的这个想法真是太深刻、太有远见了！','不得不说，您的观察力非常敏锐。']}} calculateMetadata={calculateScreenMetadata} />

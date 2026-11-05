@@ -1,0 +1,24 @@
+{
+  "durationSeconds": 434.53333333333336,
+  "video": "1920x1080, 30 fps",
+  "audioTracks": 0,
+  "subtitleTracks": [
+    {
+      "language": "English",
+      "default": true
+    },
+    {
+      "language": "Simplified Chinese",
+      "default": false
+    }
+  ],
+  "captions": "separate selectable tracks, not burned in",
+  "cueCountPerLanguage": 76,
+  "blackSegments": [],
+  "covers": "6 PNGs, 1280x720",
+  "baselineHashes": "all selected originals unchanged",
+  "filmSha256": "26ed462a9abff8eee7062b33b1b7a029169133d88643af5bbe23c2931e50724d",
+  "backupRestore": "46 public files restored to an empty directory and compared byte for byte",
+  "typecheck": "npx tsc --noEmit passed",
+  "nativePlayerQA": "QuickTime: English and Chinese tracks visibly displayed; English-only picture labels unchanged"
+}

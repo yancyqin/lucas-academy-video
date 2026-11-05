@@ -1,0 +1,223 @@
+{
+  "assets": [
+    {
+      "path": "public/family-ai-lab-01/muse/G1-last.png",
+      "sha256": "18b65a83599813283ece48992ac2988b89e5a617725205de57e829abb9f265f2",
+      "credit": "Owner-supplied Muse generation; illustrative"
+    },
+    {
+      "path": "public/family-ai-lab-01/muse/G1.mp4",
+      "sha256": "ba0781973452f25bb3aab199a2ee14e5b6080e0c725061ca627674d3ffd4338e",
+      "credit": "Owner-supplied Muse generation; illustrative",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_type": "video",
+            "width": 1280,
+            "height": 720,
+            "r_frame_rate": "24/1"
+          },
+          {
+            "codec_type": "audio",
+            "r_frame_rate": "0/0"
+          }
+        ],
+        "format": {
+          "duration": "10.000000"
+        }
+      }
+    },
+    {
+      "path": "public/family-ai-lab-01/muse/G2-last.png",
+      "sha256": "b4b8f35e3a5d92d29bbeae59bec17e6df49c1429cdd0338828c145127eab9a1f",
+      "credit": "Owner-supplied Muse generation; illustrative"
+    },
+    {
+      "path": "public/family-ai-lab-01/muse/G2.mp4",
+      "sha256": "04c65fc4f8611b62f03ce2225fa968def50312d66f27eaf73598b9d8a025d055",
+      "credit": "Owner-supplied Muse generation; illustrative",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_type": "video",
+            "width": 1280,
+            "height": 720,
+            "r_frame_rate": "24/1"
+          },
+          {
+            "codec_type": "audio",
+            "r_frame_rate": "0/0"
+          }
+        ],
+        "format": {
+          "duration": "10.000000"
+        }
+      }
+    },
+    {
+      "path": "public/family-ai-lab-01/muse/G3-last.png",
+      "sha256": "03589af419c29a5d0484ae162ec37e9c151a7bd42f7dc1d44ae794e71f17c9bc",
+      "credit": "Owner-supplied Muse generation; illustrative"
+    },
+    {
+      "path": "public/family-ai-lab-01/muse/G3.mp4",
+      "sha256": "6097e89c3e14d0875a753fc8ea4e74b7c49311e1a3c8a56e6917e6851e740066",
+      "credit": "Owner-supplied Muse generation; illustrative",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_type": "video",
+            "width": 1280,
+            "height": 720,
+            "r_frame_rate": "24/1"
+          },
+          {
+            "codec_type": "audio",
+            "r_frame_rate": "0/0"
+          }
+        ],
+        "format": {
+          "duration": "10.000000"
+        }
+      }
+    },
+    {
+      "path": "public/family-ai-lab-01/art/cover-1.png",
+      "sha256": "8beb2ea5e084864d6e36b96f4f3d9167e181c1b3f4acc0b7943adf0f5579ff02",
+      "credit": "Built-in ImageGen generation; illustrative"
+    },
+    {
+      "path": "public/family-ai-lab-01/art/cover-2.png",
+      "sha256": "efdabd753f20d121a22d10d3b90a35640e4d62a4b5ba7c9863d1afa9fc3b007e",
+      "credit": "Built-in ImageGen generation; illustrative"
+    },
+    {
+      "path": "public/family-ai-lab-01/art/cover-3.png",
+      "sha256": "72c56f86cb69fe6c7eec8417575f684667614aaac39a5fc17a336a93d06cadb5",
+      "credit": "Built-in ImageGen generation; illustrative"
+    },
+    {
+      "path": "public/family-ai-lab-01/capture/lab.mp4",
+      "sha256": "6051bbe606a78aec9541ed18043ca93fea1771183c927fc8b4be350200ba8e60",
+      "credit": "Owner browser/terminal recording or documented derivative",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_type": "video",
+            "width": 1920,
+            "height": 1280,
+            "r_frame_rate": "30/1"
+          }
+        ],
+        "format": {
+          "duration": "14.066667"
+        }
+      }
+    },
+    {
+      "path": "public/family-ai-lab-01/capture/terminal-view.mp4",
+      "sha256": "f4c4962ef68c7ade77efa7d12bd55b296c251cb7a3430a5780ba6fabd50b1b6a",
+      "credit": "Owner browser/terminal recording or documented derivative",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_type": "video",
+            "width": 3184,
+            "height": 860,
+            "r_frame_rate": "30/1"
+          }
+        ],
+        "format": {
+          "duration": "2.733333"
+        }
+      }
+    },
+    {
+      "path": "public/family-ai-lab-01/capture/terminal-view.png",
+      "sha256": "38c4d15dfd36efa240c2cb71018142440e43eb777ccbcf456022fa84804a9837",
+      "credit": "Owner browser/terminal recording or documented derivative"
+    },
+    {
+      "path": "public/family-ai-lab-01/capture/terminal.mov",
+      "sha256": "d4f7aad7e81877967d3694289a09d509dbd04de2bf057928be55f8d807e1b94e",
+      "credit": "Owner browser/terminal recording or documented derivative",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_type": "video",
+            "width": 3184,
+            "height": 2024,
+            "r_frame_rate": "120/1"
+          }
+        ],
+        "format": {
+          "duration": "2.666667"
+        }
+      }
+    },
+    {
+      "path": "public/family-ai-lab-01/capture/terminal.mp4",
+      "sha256": "778713e4d4c072892aaea5f634f41aa572809568ca4cf2dd5dda64999e21b930",
+      "credit": "Owner browser/terminal recording or documented derivative",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_type": "video",
+            "width": 3184,
+            "height": 2024,
+            "r_frame_rate": "30/1"
+          }
+        ],
+        "format": {
+          "duration": "2.733333"
+        }
+      }
+    },
+    {
+      "path": "public/family-ai-lab-01/capture/terminal.png",
+      "sha256": "45c4e103c94d91eac51c13bef4b1e2b4e309415108099513fd9b2718783c675c",
+      "credit": "Owner browser/terminal recording or documented derivative"
+    },
+    {
+      "path": "public/family-ai-lab-01/capture/three-round.png",
+      "sha256": "1dce53436baf88aad6c5f1239619fc25526acaf562cc102c41dab0e1afb348e2",
+      "credit": "Owner browser/terminal recording or documented derivative"
+    },
+    {
+      "path": "public/family-ai-lab-01/capture/three-trained.png",
+      "sha256": "f3e0f3a3234a319fcee26e8bbd0412598229634f3fc6e5884c044d8cc67147d3",
+      "credit": "Owner browser/terminal recording or documented derivative"
+    },
+    {
+      "path": "public/family-ai-lab-01/capture/three-zero.png",
+      "sha256": "ae28c97dbeadf0d477d8c548200d415b10bfe85b9d94065d53a84b270e85d03b",
+      "credit": "Owner browser/terminal recording or documented derivative"
+    },
+    {
+      "path": "public/family-ai-lab-01/capture/twenty-points.png",
+      "sha256": "803481aaeecb273b325a47657d204d47c92a55c95c4f0f832c7e0833279f48db",
+      "credit": "Owner browser/terminal recording or documented derivative"
+    },
+    {
+      "path": "public/family-ai-lab-01/capture/twenty-trained.png",
+      "sha256": "c1991662b627bdd65095843be365ef62b79e3dfe5a1c468a02f9b4a3b1704784",
+      "credit": "Owner browser/terminal recording or documented derivative"
+    }
+  ],
+  "commonsMediaUsed": false,
+  "allVideoMutedInReview": true
+}

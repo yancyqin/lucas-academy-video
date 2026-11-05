@@ -54,7 +54,15 @@
     "c2:render": "python3 scripts/cube-2x2/render.py",
     "c5:narration": "python3 scripts/cube-5x5/narration.py",
     "c5:timeline": "python3 scripts/cube-5x5/build_timeline.py",
-    "c5:render": "python3 scripts/cube-2x2/render.py --film cube-5x5"
+    "c5:render": "python3 scripts/cube-2x2/render.py --film cube-5x5",
+    "fal01:prepare": "python3 scripts/family-ai-lab-01/assets.py && python3 scripts/family-ai-lab-01/build.py",
+    "fal01:timeline": "python3 scripts/family-ai-lab-01/build.py",
+    "fal01:capture": "node scripts/family-ai-lab-01/capture.mjs",
+    "fal01:cover": ".venv-align/bin/python scripts/family-ai-lab-01/cover.py",
+    "fal01:render": "node scripts/family-ai-lab-01/render.cjs --movie",
+    "fal01:check": "python3 scripts/family-ai-lab-01/verify.py",
+    "fal01:backup": "python3 scripts/family-ai-lab-01/backup.py",
+    "fal01:terminal": "python3 scripts/family-ai-lab-01/record_terminal.py"
   },
   "dependencies": {
     "@remotion/cli": "^4.0.484",

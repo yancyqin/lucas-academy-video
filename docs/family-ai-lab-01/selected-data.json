@@ -1,0 +1,32 @@
+{
+  "selection": "original full round",
+  "ownerConfirmed": true,
+  "noMoreBenchmarkCalls": true,
+  "sha256": {
+    "perceptron-js": "de92518173cf7cbd78d5f12d0bc1dc613d8179c710a3e4b786791f12421c3b08",
+    "claude-fable": "3551368a8c7cb006506832963e8c6225b222b048fe60f46b9c110295c05b386f",
+    "astra-low": "77bead1fe510ef71339cd84bd94dcc45526fbd051ca9e53fd8448721eadf8bcb",
+    "qwen-fast": "2350b2fe9aede4e23c0562f747c4a2a647608809d00987ef7e1e216196f3d4d7"
+  },
+  "derived": {
+    "x_us": "0.37",
+    "x_seconds": "0.00000037",
+    "test_n_zh": "十",
+    "test_n_en": "ten",
+    "claude_seconds": "1.15",
+    "astra_seconds": "4.05",
+    "qwen_seconds": "0.54",
+    "claude_million_zh": "300",
+    "claude_million_en": "3",
+    "astra_ten_million_zh": "1000",
+    "astra_ten_million_en": "10",
+    "train_n": 419,
+    "pixel_n": 400,
+    "qwen_right_zh": "五",
+    "qwen_right_en": "five"
+  },
+  "delivery": "one common English-label picture",
+  "defaultLanguage": "en",
+  "audio": "deferred until review approved; future English default and separate Chinese track",
+  "subtitles": "independent English default and Simplified Chinese tracks"
+}

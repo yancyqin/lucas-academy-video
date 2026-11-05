@@ -102,3 +102,6 @@ public/zhong-ying/
 public/middle-income-trap/
 # 「你爱听 AI 说「是的」吗？」: scripts/ai-sycophancy/assets.py rebuilds it from lucas-academy-video-data/ai-sycophancy.
 public/ai-sycophancy/
+
+# Family AI Lab 01 generated assets and captures; backed up in sibling video-data.
+public/family-ai-lab-01/
