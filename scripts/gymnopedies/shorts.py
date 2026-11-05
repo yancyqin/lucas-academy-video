@@ -24,6 +24,7 @@ usage: .venv-reframe/bin/python scripts/gymnopedies/shorts.py plan|render|vertic
        -> shorts/NAME.json (plan), shorts/NAME.mp4 (picture), shorts/NAME-vertical.mp4 (the short, -18 LUFS)
        .venv-reframe/bin/python scripts/gymnopedies/shorts.py canvas      -> shorts/blue-dancers-canvas.png
        .venv-reframe/bin/python scripts/gymnopedies/shorts.py texts       -> package/youtube-description.shorts.txt
+       .venv-reframe/bin/python scripts/gymnopedies/shorts.py cover [NAME ...]   -> shorts/NAME-cover.jpg (shorts 2–4)
 """
 import json, os, re, subprocess, sys
 
@@ -115,18 +116,105 @@ def blue_canvas():
 
 def out(name, suffix=""): return f"{walk.DATA}/shorts/{name}{suffix}.mp4"
 
+# Owner 11-04 on 2, 3 and 4: 「有空间的地方加上一些简短的 label 用这两句，可以分开在不同的段落，highlight 舞女 动作」 — Degas's own
+# words as Vollard recorded them (Degas: An Intimate Portrait, 1927, p. 141: "People call me the painter of dancing girls. It
+# has never occurred to them that my chief interest in dancers lies in rendering movement…"). Second round: 「人物图往上，下面留出
+# 空间，标题写下面。视频也是这样，视频中英文，英文大中文小。字再精简一下」. So the picture sits at the top (TOP, cropped where
+# it has more than it needs), and under it one sentence per stretch of clip, English large, Chinese small; [x] = gold. Neither
+# the first nor the last frame has a label, so the loop still closes.
+EN, ZH = 62, 40
+SAY1 = [("I, Degas, am called", EN), ("the painter of [dancers]...", EN), ("我，Degas，被称作[舞女]画家……", ZH)]
+SAY2 = [("But what interests me", EN), ("most is [movement]...", EN), ("然而，我最感兴趣的是[动作]……", ZH)]
+TOP, UNDER = 110, 40   # the picture's top edge in the short; gap from its bottom edge to the label
+LAYOUT = {   # name: picture rows kept (top, bottom, of the rendered picture), [(in, out, lines)] in seconds of the short
+    "s2-dance-class": dict(rows=(80, 1184), says=[(1.4, 10.6, SAY1), (12.4, 19.6, SAY2)]),
+    "s3-rehearsal": dict(rows=(0, 834), says=[(1.4, 7.8, SAY1), (8.6, 19.6, SAY2)]),
+    # Blue Dancers: the painting runs from ~290 to ~1450 of its 1620-row canvas; keep the raised arms above it
+    "s4-blue-dancers": dict(rows=(250, 1450), says=[(1.4, 10.8, SAY1), (11.6, 22.2, SAY2)]),
+}
+FONT = f"{os.path.dirname(walk.DATA)}/jesu/fonts/NotoSerifSC-Regular.otf"
+CREAM, GOLD = (255, 250, 240), (242, 196, 109)   # the covers' colours (cover.html)
+LABEL_FADE = 0.5
+
+def title_png(lines, path, scale=1.0, w=VW):
+    """(text, size) lines centred on a transparent canvas, [x] in gold, on a soft dark shade with a soft shadow (as on the
+    covers); a little air before the first small (Chinese) line. Returns the canvas height."""
+    from PIL import Image, ImageDraw, ImageFilter, ImageFont
+    lines = [(t, round(s * scale)) for t, s in lines]; big = max(s for _, s in lines)
+    rows, y = [], big
+    for k, (t, s) in enumerate(lines):
+        if k and s < lines[k - 1][1]: y += big * 0.3
+        font = ImageFont.truetype(FONT, s)
+        runs = [(p, j % 2 == 1) for j, p in enumerate(re.split(r"\[|\]", t)) if p]
+        rows.append((runs, font, y, sum(font.getlength(p) for p, _ in runs))); y += s * 1.32
+    h = round(y + big); wmax = max(r[3] for r in rows)
+    shade = Image.new("L", (w, h), 0); ImageDraw.Draw(shade).ellipse(
+        [w / 2 - wmax * 0.62, big * 0.5, w / 2 + wmax * 0.62, h - big * 0.5], fill=105)
+    shade = shade.filter(ImageFilter.GaussianBlur(big * 0.6))
+    ink, glow = Image.new("RGBA", (w, h), (0, 0, 0, 0)), Image.new("L", (w, h), 0)
+    di, dg = ImageDraw.Draw(ink), ImageDraw.Draw(glow)
+    for runs, font, y, wd in rows:
+        x = (w - wd) / 2
+        for p, key in runs:
+            di.text((x, y), p, font=font, fill=(*(GOLD if key else CREAM), 255)); dg.text((x, y + font.size * 0.05), p, font=font, fill=255)
+            x += font.getlength(p)
+    img = Image.new("RGBA", (w, h), (12, 10, 8, 0)); img.putalpha(shade)
+    for blur, a in ((big * 0.35, 0.75), (big * 0.05, 0.6)):
+        g = glow.filter(ImageFilter.GaussianBlur(blur)).point(lambda v, a=a: round(v * a))
+        img = Image.alpha_composite(img, Image.merge("RGBA", (*Image.new("RGB", (w, h), (0, 0, 0)).split(), g)))
+    Image.alpha_composite(img, ink).save(path)
+    return h
+
+def picture_filter(name):
+    """The short's picture: the blurred, enlarged copy behind, the picture (cropped to LAYOUT rows) at TOP. Returns the filter
+    (input [0:v], output [v0]) and the y just under the picture."""
+    r0, r1 = LAYOUT[name]["rows"]
+    vf = (f"[0:v]split[a][b];[a]scale={VW}:{VH}:force_original_aspect_ratio=increase,crop={VW}:{VH},gblur=sigma=34,"
+          f"eq=brightness=-0.07:saturation=0.85[bg];[b]crop=iw:{r1 - r0}:0:{r0}[p];[bg][p]overlay=0:{TOP}[v0]")
+    return vf, TOP + r1 - r0
+
+def label_inputs(name, below):
+    """ffmpeg inputs and filter for the labels of one short: one looped PNG per sentence, faded in and out on its stretch."""
+    args, chain, last = [], "", "[v0]"
+    for i, (t0, t1, lines) in enumerate(LAYOUT[name]["says"]):
+        png = f"{walk.DATA}/shorts/{name}-label{i + 1}.png"; title_png(lines, png)
+        args += ["-loop", "1", "-framerate", str(walk.FPS), "-t", f"{t1 + LABEL_FADE:.2f}", "-i", png]
+        chain += (f";[{i + 1}:v]format=rgba,fade=t=in:st={t0:.2f}:d={LABEL_FADE}:alpha=1,"
+                  f"fade=t=out:st={t1 - LABEL_FADE:.2f}:d={LABEL_FADE}:alpha=1[l{i}];"
+                  f"{last}[l{i}]overlay=0:{below + UNDER - EN}:eof_action=pass[v{i + 1}]")
+        last = f"[v{i + 1}]"
+    return args, chain, last
+
+# Owner 11-04: 「配封面，我，Degas，被称作画舞女的画家...」, then 「人物图往上，下面留出空间，标题写下面」 — a 1080×1920 cover per
+# short: a clip frame in the short's own layout, the first sentence under the picture, larger.
+COVERS = {"s2-dance-class": 6.0, "s3-rehearsal": 14.0, "s4-blue-dancers": 19.0}
+
+def cover(name):
+    from PIL import Image
+    src = out(name); vf, below = picture_filter(name)
+    bg, txt = f"{walk.DATA}/shorts/{name}-cover-bg.png", f"{walk.DATA}/shorts/{name}-cover-title.png"
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-ss", f"{COVERS[name]:.2f}", "-i", src, "-frames:v", "1",
+                    "-filter_complex", vf, "-map", "[v0]", bg], check=True)
+    title_png(SAY1, txt, scale=1.3)
+    im = Image.open(bg).convert("RGBA"); im.alpha_composite(Image.open(txt), (0, below + UNDER - round(EN * 1.3)))
+    path = f"{walk.DATA}/shorts/{name}-cover.jpg"; im.convert("RGB").save(path, quality=92); print(path)
+
 def loudness(path):
     r = subprocess.run(["ffmpeg", "-v", "info", "-i", path, "-af", "ebur128=peak=true", "-f", "null", "-"], capture_output=True, text=True).stderr
     return float(re.findall(r"I:\s+(-?[\d.]+) LUFS", r)[-1]), float(re.findall(r"Peak:\s+(-?[\d.]+) dBFS", r)[-1])
 
 def vertical(name):
     src = out(name); w, h, _ = walk.probe(src)
-    y = round((VH - h) * LIFT) & ~1
     lufs, peak = loudness(src); gain = -18.0 - lufs
     af = f"volume={gain:.2f}dB" + (",alimiter=limit=0.89:level=false" if peak + gain > -1.0 else "")
-    vf = (f"[0:v]split[a][b];[a]scale={VW}:{VH}:force_original_aspect_ratio=increase,crop={VW}:{VH},gblur=sigma=34,"
-          f"eq=brightness=-0.07:saturation=0.85[bg];[bg][b]overlay=0:{y}[v]")
-    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", src, "-filter_complex", vf, "-map", "[v]", "-map", "0:a", "-af", af,
+    if name in LAYOUT:
+        vf, below = picture_filter(name); y = TOP
+        largs, lchain, last = label_inputs(name, below); vf += lchain
+    else:   # short 1: as first made, the picture a little above the middle, no label
+        y = round((VH - h) * LIFT) & ~1; largs, last = [], "[v0]"
+        vf = (f"[0:v]split[a][b];[a]scale={VW}:{VH}:force_original_aspect_ratio=increase,crop={VW}:{VH},gblur=sigma=34,"
+              f"eq=brightness=-0.07:saturation=0.85[bg];[bg][b]overlay=0:{y}[v0]")
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", src, *largs, "-filter_complex", vf, "-map", last, "-map", "0:a", "-af", af,
                     "-c:v", "libx264", "-crf", "17", "-preset", "medium", "-pix_fmt", "yuv420p", "-r", str(walk.FPS),
                     "-c:a", "aac", "-b:a", "256k", "-ar", "48000", "-movflags", "+faststart", out(name, "-vertical")], check=True)
     print(f"{name}: picture {w}x{h} at y {y}, {lufs:.1f} LUFS {gain:+.1f} dB -> {out(name, '-vertical')}")
@@ -211,6 +299,9 @@ def main():
     cmd, names = sys.argv[1], sys.argv[2:] or NAMES
     if cmd == "texts": texts(); return
     if cmd == "canvas": blue_canvas(); return
+    if cmd == "cover":
+        for n in names if sys.argv[2:] else COVERS: cover(n)
+        return
     for n in names:
         if cmd == "plan": plan(n)
         elif cmd == "render": walk.MUSE = "sharp"; walk.render(json.load(open(f"{HERE}/shorts/{n}.json")), False)
