@@ -212,6 +212,6 @@ python3 summarize.py
 ## 6. 本轮待 Yancy 审核
 
 1. 新封面：设计 3 的 7、科技外壳、设计 1 流光的合并方向。
-2. [开头与结尾文案](docs/family-ai-lab-01/revision-2026-11-05.md)。
+2. 全片文案：[完整中文审核稿](docs/family-ai-lab-01/full-review-v2.zh.md) · [完整英文审核稿](docs/family-ai-lab-01/full-review-v2.en.md)。包含新开头、速度标题与结尾澄清；八段、78 条对应旁白。
 
 确认以后再做视频。实验沿用原始整轮，不重跑；Qwen 暂按现版保留。
