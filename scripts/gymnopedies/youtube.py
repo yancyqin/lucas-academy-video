@@ -60,9 +60,9 @@ AI_EN = ("About the images: the moments where a painting turns \"real\" are AI r
          "The paintings themselves are in the public domain; the images come from the museums' open-access collections and "
          "Wikimedia Commons.")
 OWN_HASHTAGS = ["satie", "gymnopedie", "degas", "ballet", "classicalmusic", "piano"]
-OWN_TAGS = ["听得见的舞", "裸体歌舞", "萨蒂", "德加", "雷诺阿", "芭蕾", "钢琴", "古典音乐", "satie", "erik satie", "gymnopedie",
-            "gymnopedies", "gymnopedie no 1", "degas", "edgar degas", "renoir", "ballet", "ballet dancers", "piano",
-            "classical music", "impressionism", "art and music"]
+OWN_TAGS = ["听得见的舞", "裸体歌舞", "萨蒂", "德加", "雷诺阿", "芭蕾", "钢琴", "古典音乐", "satie", "eriksatie", "gymnopédie",
+            "gymnopedie", "gymnopedieno1", "degas", "renoir", "ballet", "dancers", "piano", "classicalmusic", "impressionism",
+            "artandmusic"]   # the ones the owner used on upload (11-03)
 
 def mmss(t): return f"{int(t // 60)}:{int(t % 60):02d}"
 
