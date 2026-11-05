@@ -1,0 +1,762 @@
+[
+  {
+    "id": "fa01-01-01",
+    "caption": "How fast can a computer recognize a seven?",
+    "spoken": "How fast can a computer recognize a seven?",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "642a47c3badbfd71868b5eee8d420abf8aca379ff2af919f00baa53a89865cbc"
+  },
+  {
+    "id": "fa01-01-02",
+    "caption": "Give the same seven to four programs, and watch who answers first.",
+    "spoken": "Give the same seven to four programs, and watch who answers first.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "4fa6d134ecda491ae810d5fbfeebcacdbed989c6762b088804fb8951ec6330ab"
+  },
+  {
+    "id": "fa01-01-03",
+    "caption": "Ready? Let's start their clocks together and watch what happens.",
+    "spoken": "Ready? Let's start their clocks together and watch what happens.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "18f44f355d4a8d4865050990edcdd3f97aa275ffc63001e6f01a3ec06565b787"
+  },
+  {
+    "id": "fa01-01-04",
+    "caption": "X has already finished. Its time is 0.37 microseconds per picture.",
+    "spoken": "X has already finished. Its time is zero point three seven microseconds per picture.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "28fbc4df95207c87e9da677da1a2de3b4db02b6854b50c7eae3126abbe31518f"
+  },
+  {
+    "id": "fa01-01-05",
+    "caption": "These are the original result files saved from the experiment.",
+    "spoken": "These are the original result files saved from the experiment.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "6713db82606eea468bd019cf8049eeef9e4f3a6616c43d11052c2227bd4f5126"
+  },
+  {
+    "id": "fa01-01-06",
+    "caption": "Across ten pictures it had never trained on, X got every answer right.",
+    "spoken": "Across ten pictures it had never trained on, X got every answer right.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "3c43ead428eb8925351b83bef248bda98bc63988143c2d4ff50422cb587a2be5"
+  },
+  {
+    "id": "fa01-01-07",
+    "caption": "It was about 3 million times faster than Claude Fable.",
+    "spoken": "It was about three million times faster than Claude Fable.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "fdd86d6e738490d88e6020f2ceee54fb7a687276d422bc3cf6ee235c1438384d"
+  },
+  {
+    "id": "fa01-01-08",
+    "caption": "And over 10 million times faster than GPT-6-Astra.",
+    "spoken": "And over ten million times faster than G P T six Astra.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "392c0da25875408a57f944ecfd8e74fc1ebfcb5875dac499311e25ebd0593548"
+  },
+  {
+    "id": "fa01-01-09",
+    "caption": "So who is this mysterious X, with its name still hidden from us?",
+    "spoken": "So who is this mysterious X, with its name still hidden from us?",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "d6753bd4069075556f4e4e5adc20bd0128cddababbc0211d385836975b90ca06"
+  },
+  {
+    "id": "fa01-02-01",
+    "caption": "A 1957 AI model is faster than ChatGPT Astra and Claude Fable?",
+    "spoken": "A nineteen fifty seven A I model is faster than Chat G P T Astra and Claude Fable?",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "dd275390df3acaf3fe9871646c877f74a416b417f4afa84c5e4adfeed496ef65"
+  },
+  {
+    "id": "fa01-03-01",
+    "caption": "Let's go back to 1957. For now, all we need is paper and a pencil.",
+    "spoken": "Let's go back to nineteen fifty seven. For now, all we need is paper and a pencil.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "54132ebbced89a535204537c17bbc3ae7fd21ef59c7d8e7bf6dae73f11ebb838"
+  },
+  {
+    "id": "fa01-03-02",
+    "caption": "A computer has no eyes like ours. How can we give it a picture?",
+    "spoken": "A computer has no eyes like ours. How can we give it a picture?",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "fe9a79db3ae98d481aa87b9cdc39d21e22f25626fb475ef97cbf3d2ac1dab72a"
+  },
+  {
+    "id": "fa01-03-03",
+    "caption": "Divide the picture into little squares, and keep just one color in each square.",
+    "spoken": "Divide the picture into little squares, and keep just one color in each square.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "75b008f06248fb1b0e7788eea72afa47fd9b7a1a5cd806863baa3f624572714f"
+  },
+  {
+    "id": "fa01-03-04",
+    "caption": "Make it simpler still: write one for black, and zero for white.",
+    "spoken": "Make it simpler still: write one for black, and zero for white.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "3ec11d94545ae16e8035f25a9092a291be87d6602ac809101fe0b279423a6af1"
+  },
+  {
+    "id": "fa01-03-05",
+    "caption": "Read a row of numbers aloud. Let your child color the squares to match.",
+    "spoken": "Read a row of numbers aloud. Let your child color the squares to match.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "816ed9e346fe4086a6e37883633b3a59ba46bf8b4ad23c4a5cf571bf9cb7da42"
+  },
+  {
+    "id": "fa01-03-06",
+    "caption": "Keep the picture a secret for a moment. See when your child recognizes it.",
+    "spoken": "Keep the picture a secret for a moment. See when your child recognizes it.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "97793dc3619920f6d075bd788db39c7c69a9740101fb309de5f30a9e598d7e7e"
+  },
+  {
+    "id": "fa01-03-07",
+    "caption": "Now try this cat. Here is the photograph before we turn it into squares.",
+    "spoken": "Now try this cat. Here is the photograph before we turn it into squares.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "9c59b6a9299225ead534ed33203f45b4b097ea82151b34488b5d60bfe311e902"
+  },
+  {
+    "id": "fa01-03-08",
+    "caption": "As the squares get bigger, the fur and whiskers become harder to make out.",
+    "spoken": "As the squares get bigger, the fur and whiskers become harder to make out.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "fdad38525abe7efb172a93f3d6f6557e4bda8912bbeb407b9dbf82970d52b91c"
+  },
+  {
+    "id": "fa01-03-09",
+    "caption": "Eventually there are only eight rows left. Can you still spot the cat's ears?",
+    "spoken": "Eventually there are only eight rows left. Can you still spot the cat's ears?",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "5b2367bcf7c95aa05d83b4b5229c9149610e668a2e314c72f34c5ab67d0e6da7"
+  },
+  {
+    "id": "fa01-03-10",
+    "caption": "Each row has eight zeros and ones. That fits neatly inside one byte.",
+    "spoken": "Each row has eight zeros and ones. That fits neatly inside one byte.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "bcdca73da842758694714228dde0398aa695f6ac9d164cd9a96fe0c7df950c36"
+  },
+  {
+    "id": "fa01-03-11",
+    "caption": "So the whole tiny cat takes just eight bytes to store.",
+    "spoken": "So the whole tiny cat takes just eight bytes to store.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "7228ed5d79b7264ea0cdc218cc58f22a87f91f9b74f47561210b9c0f15351c8c"
+  },
+  {
+    "id": "fa01-03-12",
+    "caption": "Send those numbers to a friend. They can rebuild your cat on paper, square by square.",
+    "spoken": "Send those numbers to a friend. They can rebuild your cat on paper, square by square.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "6f37d423ab84ec42270b822617e8d55eeb37c1df48e0eab6aa65ec0e3bfa141e"
+  },
+  {
+    "id": "fa01-04-01",
+    "caption": "We have our squares. But how can something make a decision from them?",
+    "spoken": "We have our squares. But how can something make a decision from them?",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "b105e289c3312021d358a95add91e9e770a2f97f9ca82a77735279bc54541844"
+  },
+  {
+    "id": "fa01-04-02",
+    "caption": "Let's borrow a very simple idea from a neuron in the brain.",
+    "spoken": "Let's borrow a very simple idea from a neuron in the brain.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "9936715245144fbc583081ddb0ed5edc38345afb82bb7f614470f2546761a66c"
+  },
+  {
+    "id": "fa01-04-03",
+    "caption": "A neuron receives many signals. Some connections have a stronger effect than others.",
+    "spoken": "A neuron receives many signals. Some connections have a stronger effect than others.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "02517af0f99d79d968ae453edc913a3376b6bb99706c3a6d8f29a062f9129330"
+  },
+  {
+    "id": "fa01-04-04",
+    "caption": "When the combined input is enough, it sends a signal of its own.",
+    "spoken": "When the combined input is enough, it sends a signal of its own.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "8964ec05c2ba6cc69f096ddd7cdcb955825b0f0305d7544db69bc48ac5c9f56e"
+  },
+  {
+    "id": "fa01-04-05",
+    "caption": "The human brain is often estimated to contain about eighty-six billion neurons.",
+    "spoken": "The human brain is often estimated to contain about eighty-six billion neurons.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "03a41cf686251bba76d6a4dde66e76035692d641cf6f87a56969e5a7fa5c2d2f"
+  },
+  {
+    "id": "fa01-04-06",
+    "caption": "We can start with a much simpler model, and turn it into a game.",
+    "spoken": "We can start with a much simpler model, and turn it into a game.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "48d3aa3b98912f3e0a9196d790c59d507e705a26e54ebb4883ec78825ff2d591"
+  },
+  {
+    "id": "fa01-04-07",
+    "caption": "Pretend you are a neuron. Your job is to decide whether something is an apple.",
+    "spoken": "Pretend you are a neuron. Your job is to decide whether something is an apple.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "2826153ba2ddd549d5c6c10807b4bd5d2b5428224347bea00c67b2a79da922c7"
+  },
+  {
+    "id": "fa01-04-08",
+    "caption": "Give it one point for being red, and another point for being round.",
+    "spoken": "Give it one point for being red, and another point for being round.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "f46aa48d20628a9a2eac70a48639d31847fdc24f9fd5987d776045d99a10b1d9"
+  },
+  {
+    "id": "fa01-04-09",
+    "caption": "When it gets two points, raise your hand. That means you think you found one.",
+    "spoken": "When it gets two points, raise your hand. That means you think you found one.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "fc4b3e755c9fe0abc6115c2e045c580e78a7479f87374e41102284934cfcaea2"
+  },
+  {
+    "id": "fa01-04-10",
+    "caption": "But a tomato can collect both points too. What could you change?",
+    "spoken": "But a tomato can collect both points too. What could you change?",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "cbccb598bcd49eb1b4b9a3001925824770d0b46934f1fbb856c33a523eb30a56"
+  },
+  {
+    "id": "fa01-04-11",
+    "caption": "Try another clue: does it taste sweet? How much should that clue count?",
+    "spoken": "Try another clue: does it taste sweet? How much should that clue count?",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "8179eb4d2f7c1e0b4300c8a944794074903f5e9a1391657d7cce6e7b8df5d1ed"
+  },
+  {
+    "id": "fa01-04-12",
+    "caption": "Back in 1949, Hebb proposed that repeated activity together could strengthen connections.",
+    "spoken": "Back in nineteen forty nine, Hebb proposed that repeated activity together could strengthen connections.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "69de12298b20d127e67a10c8bde0380dc869c62b1982564abd87c3cc7020fa7b"
+  },
+  {
+    "id": "fa01-05-01",
+    "caption": "Now let's move our little points game into the browser laboratory.",
+    "spoken": "Now let's move our little points game into the browser laboratory.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "1c907d926033b144ee8f4f90a091571050813e988a0355aa1dfea632128a6a1a"
+  },
+  {
+    "id": "fa01-05-02",
+    "caption": "Every square in the picture has its own points value, ready to be adjusted.",
+    "spoken": "Every square in the picture has its own points value, ready to be adjusted.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "77a73ae64153a7621f91d57094578ece4a89e146c0595a626745ca95faa73e41"
+  },
+  {
+    "id": "fa01-05-03",
+    "caption": "Click Run one round, and watch the points while it works through the examples.",
+    "spoken": "Click Run one round, and watch the points while it works through the examples.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "e804be09e685c9b738e3d30630866778d6b12cf752c01f31fee1eac306370a68"
+  },
+  {
+    "id": "fa01-05-04",
+    "caption": "If a horizontal line should switch the light on and does not, add points.",
+    "spoken": "If a horizontal line should switch the light on and does not, add points.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "c7fff47aac39ddae7e51b84022fc4cb376fa66b69351cc5b7c17ae5c78e274a7"
+  },
+  {
+    "id": "fa01-05-05",
+    "caption": "Only change the points for squares that are black in this particular picture.",
+    "spoken": "Only change the points for squares that are black in this particular picture.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "fd0bd2b2fcfc8344e96295ddb8cbc8eb7d9e42360b1d2933027947c75f6400f6"
+  },
+  {
+    "id": "fa01-05-06",
+    "caption": "Look underneath the grid. The numbers in the points list change at the same time.",
+    "spoken": "Look underneath the grid. The numbers in the points list change at the same time.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "c88d8dfc875d1c95854516aeea58268f7581de9f66926506202f5314ee51c213"
+  },
+  {
+    "id": "fa01-05-07",
+    "caption": "If the light comes on when it should stay off, lower those points instead.",
+    "spoken": "If the light comes on when it should stay off, lower those points instead.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "087d1989b056b19bc35dc6a92ae74254dc5b639713e44deb48f8ed59eb2c6439"
+  },
+  {
+    "id": "fa01-05-08",
+    "caption": "Now switch to a twenty-by-twenty picture. The learning rule stays just the same.",
+    "spoken": "Now switch to a twenty-by-twenty picture. The learning rule stays just the same.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "ae2921138d9c072bd0b10e6e850e20094b52a85b2b52834ce333def711a442b2"
+  },
+  {
+    "id": "fa01-05-09",
+    "caption": "After training, do the blue points begin to remind you of a seven?",
+    "spoken": "After training, do the blue points begin to remind you of a seven?",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "dbc440cb850b4828a0fd8e7910b061b6883d3fe123fd79258c991e906f228561"
+  },
+  {
+    "id": "fa01-05-10",
+    "caption": "The predict function adds up the points belonging to the black squares.",
+    "spoken": "The predict function adds up the points belonging to the black squares.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "e9ca4e47d2ce44ad3e9360a139d5debad21a67dfc8979dd856d17045c51245df"
+  },
+  {
+    "id": "fa01-05-11",
+    "caption": "The train function checks the answer and decides whether those points need changing.",
+    "spoken": "The train function checks the answer and decides whether those points need changing.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "572672912c2105185f0dcc3b4d20e840ff735b861609730eb7b07729efeb7d3b"
+  },
+  {
+    "id": "fa01-05-12",
+    "caption": "We supply examples and answers. The program adjusts the individual points as it learns.",
+    "spoken": "We supply examples and answers. The program adjusts the individual points as it learns.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "04c08337a91664e04c8e2c40e577a6f050f36a4efc5343922497a10ddcdf849a"
+  },
+  {
+    "id": "fa01-06-01",
+    "caption": "Now we can reveal X. It is a perceptron.",
+    "spoken": "Now we can reveal X. It is a perceptron.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "2ba84fc3d2a888b3d898bfbd6d4d05879e1f9a6eb7774322bb11460375346281"
+  },
+  {
+    "id": "fa01-06-02",
+    "caption": "Frank Rosenblatt described his perceptron ideas in a report published in 1957.",
+    "spoken": "Frank Rosenblatt described his perceptron ideas in a report published in nineteen fifty seven.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "bbbe0f99167e1c698a018119339158c9a288acf7532775033d9e4005b65684f0"
+  },
+  {
+    "id": "fa01-06-03",
+    "caption": "The later Mark I machine had an eye made from a grid of light sensors.",
+    "spoken": "The later Mark one machine had an eye made from a grid of light sensors.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "1c3048de0a2e7fcf211adb8901b3ee52b2115988662c06afcd66f702dcdf1f52"
+  },
+  {
+    "id": "fa01-06-04",
+    "caption": "Those sensors were arranged in a twenty-by-twenty array, reading light and dark from a card.",
+    "spoken": "Those sensors were arranged in a twenty-by-twenty array, reading light and dark from a card.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "ea85e4d8bd864ea1f4ca97487558d06fbebf645f96618b30404cda6bb8060d09"
+  },
+  {
+    "id": "fa01-06-05",
+    "caption": "To adjust a connection's strength, a small motor physically turned a potentiometer.",
+    "spoken": "To adjust a connection's strength, a small motor physically turned a potentiometer.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "c39450b92f2f4a3e954153049df8313cc89290a534db021b0771e5557b1b1d1c"
+  },
+  {
+    "id": "fa01-06-06",
+    "caption": "After learning, another card could be presented, and the output indicated the machine's decision.",
+    "spoken": "After learning, another card could be presented, and the output indicated the machine's decision.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "9008d8b46c4c8965f57e6e0400a56167184ad4d398881638e0c96d631b001f16"
+  },
+  {
+    "id": "fa01-06-07",
+    "caption": "The positions of those adjustable controls physically stored what the machine had learned.",
+    "spoken": "The positions of those adjustable controls physically stored what the machine had learned.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "e58250fa77541b40ec635700cda6e1625a8555f89e3c64926d1079a1ec579354"
+  },
+  {
+    "id": "fa01-06-08",
+    "caption": "A 1958 newspaper headline described a new Navy device that learns by doing.",
+    "spoken": "A nineteen fifty eight newspaper headline described a new Navy device that learns by doing.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "96ae3fe2e759b258447fb85a3ccf69de077cf216e81198b00b3972e5f5682e76"
+  },
+  {
+    "id": "fa01-06-09",
+    "caption": "This race used a simplified perceptron rule written in JavaScript and running on this Mac.",
+    "spoken": "This race used a simplified perceptron rule written in JavaScript and running on this Mac.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "28d2ed25f01e70496d8772459756f1a7303e6770be4d80d79a4c0da9b09a6d8f"
+  },
+  {
+    "id": "fa01-06-10",
+    "caption": "It had already learned from 419 training pictures before entering the race.",
+    "spoken": "It had already learned from four hundred and nineteen training pictures before entering the race.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "b0df9ef65521dcb0409cb84156fb1e608be290c67fd68ace64074a67e89b3a74"
+  },
+  {
+    "id": "fa01-07-01",
+    "caption": "Why was it so fast? Now we can look at how much work it actually does.",
+    "spoken": "Why was it so fast? Now we can look at how much work it actually does.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "b669b008756ea7dbe471d134a6cedd72ffa19736cacb78cc9df81c9ec648b8dd"
+  },
+  {
+    "id": "fa01-07-02",
+    "caption": "For one picture, it needs at most 400 additions to collect the points.",
+    "spoken": "For one picture, it needs at most four hundred additions to collect the points.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "47924bc4378dec97240f4728e9726d0cf0564f47153dee1f14f0669eeea82ea7"
+  },
+  {
+    "id": "fa01-07-03",
+    "caption": "The local Qwen model has roughly eight billion parameters, a much larger collection of numbers.",
+    "spoken": "The local Qwen model has roughly eight billion parameters, a much larger collection of numbers.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "dda48e7e90cb61f178f0f465b0deca71cd1b9f446882df33d76ba81bb895eaf8"
+  },
+  {
+    "id": "fa01-07-04",
+    "caption": "It calculates across many layers, then writes its answer one token at a time.",
+    "spoken": "It calculates across many layers, then writes its answer one token at a time.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "28162f5e6c3b84d8fc47195a07364d6f8ce813bd2e175cd576ac64ba7f18621d"
+  },
+  {
+    "id": "fa01-07-05",
+    "caption": "This simple artificial neuron was part of a much longer story of increasingly complex networks.",
+    "spoken": "This simple artificial neuron was part of a much longer story of increasingly complex networks.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "d32e55063d08fd0828d3432fe7f617aafd1a786d88655369f07d41b3cec8e019"
+  },
+  {
+    "id": "fa01-07-06",
+    "caption": "In 1969, Minsky and Papert published a detailed mathematical study of perceptrons and their limitations.",
+    "spoken": "In nineteen sixty nine, Minsky and Papert published a detailed mathematical study of perceptrons and their limitations.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "cf6df363d73bdba3ca4cc15d87039a72febc1457c13ac019242b7bbb69fc4c97"
+  },
+  {
+    "id": "fa01-07-07",
+    "caption": "Interest later cooled for a time. Backpropagation helped make networks with multiple layers learn effectively.",
+    "spoken": "Interest later cooled for a time. Backpropagation helped make networks with multiple layers learn effectively.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "c340672d50fd973011031d9af9896623383fa1384aa657619526e857c4259f50"
+  },
+  {
+    "id": "fa01-07-08",
+    "caption": "In 2012, a deep neural network made a major breakthrough in the ImageNet picture-recognition competition.",
+    "spoken": "In twenty twelve, a deep neural network made a major breakthrough in the ImageNet picture-recognition competition.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "45b6571d7c858b967a0f703cc0976cecdfe82243a006084daab72dba1cf2096e"
+  },
+  {
+    "id": "fa01-07-09",
+    "caption": "Then came the Transformer, followed by the conversational AI systems we use today.",
+    "spoken": "Then came the Transformer, followed by the conversational A I systems we use today.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "01f6d47005de1e7326884f99ff0206b48a462fbffdf819486e9dbc017d2753a3"
+  },
+  {
+    "id": "fa01-07-10",
+    "caption": "Those models can discuss far more than this one small question about a picture.",
+    "spoken": "Those models can discuss far more than this one small question about a picture.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "af545b30fabdbbfd34caacd36fd67fe2395b74cd6ba0369660fb553dd0967031"
+  },
+  {
+    "id": "fa01-07-11",
+    "caption": "Even a simple request can still require a great deal of computation.",
+    "spoken": "Even a simple request can still require a great deal of computation.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "c46a0a5454451dc40144c88fcd9aa1cdd9dd93dd4a69c52457e1e7e89b2297aa"
+  },
+  {
+    "id": "fa01-07-12",
+    "caption": "In this experiment, the local Qwen model answered only five of the pictures correctly.",
+    "spoken": "In this experiment, the local Qwen model answered only five of the pictures correctly.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "20452409dc943dffd73ba561b64c87eeaecd07192bf81fbbc44acae9c6eecb5d"
+  },
+  {
+    "id": "fa01-07-13",
+    "caption": "And an answer that sounds confident is still something we may need to check.",
+    "spoken": "And an answer that sounds confident is still something we may need to check.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "cfb2762077a1a7a287db09cdf6d67e93fba7b461cdb3a714d21b76c6ad42a3fb"
+  },
+  {
+    "id": "fa01-08-01",
+    "caption": "You can begin exploring these ideas right at your own family table.",
+    "spoken": "You can begin exploring these ideas right at your own family table.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "2d05a4ddb179a4963b7b56823ad7f0aab3d60594b2b668b70a5def6d60050591"
+  },
+  {
+    "id": "fa01-08-02",
+    "caption": "Print a worksheet, find a few pencils, and leave some room for trying things out.",
+    "spoken": "Print a worksheet, find a few pencils, and leave some room for trying things out.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "c9e4aaa454798d5753f4974373e50c435ca84f6bac050b5eff138de3edadffc0"
+  },
+  {
+    "id": "fa01-08-03",
+    "caption": "One person reads the numbers, while someone else colors in the hidden picture.",
+    "spoken": "One person reads the numbers, while someone else colors in the hidden picture.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "b4c389c0ace9b30e8c8c97930e806f6f778d6f40d71239d2e44fcedcb8cd6b4d"
+  },
+  {
+    "id": "fa01-08-04",
+    "caption": "Then take turns being the neuron. Decide together how much each clue should count.",
+    "spoken": "Then take turns being the neuron. Decide together how much each clue should count.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "7c6c3c88e68b6dd2f7dfc1b1b5ed88a8711d5c0a740bab5538df4487750d786a"
+  },
+  {
+    "id": "fa01-08-05",
+    "caption": "When you want the computer to try, open the browser lab and teach it with examples.",
+    "spoken": "When you want the computer to try, open the browser lab and teach it with examples.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "f23dddb25cee56aab11c89ee70c925de2ca8375e970d8c112927663e9090fa55"
+  },
+  {
+    "id": "fa01-08-06",
+    "caption": "Scan the code to open the lab and find the printable worksheets.",
+    "spoken": "Scan the code to open the lab and find the printable worksheets.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "a4385a11d0bef2c9e6bb776fa4ed7cebbd34708dada3ae88fd20aba6e27c92b0"
+  },
+  {
+    "id": "fa01-08-07",
+    "caption": "Come explore with us at Lucas Academy. What would you and your child like to teach it to recognize first?",
+    "spoken": "Come explore with us at Lucas Academy. What would you and your child like to teach it to recognize first?",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "speed": 1.1,
+    "settingsSha256": "12312d30327e1993c384558d8d08c25c1b928ad0fc30c413ef8c2d11a5ae4a99"
+  }
+]

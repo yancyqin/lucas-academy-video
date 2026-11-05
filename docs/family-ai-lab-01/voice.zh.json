@@ -1,0 +1,768 @@
+[
+  {
+    "id": "fa01-01-01",
+    "caption": "电脑认出一个七，到底能有多快？",
+    "spoken": "电脑认出一个七，到底能有多快？",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "740ab314c3978edf2e5614d545d49ad700e623be584e4d34bd28029e4cfc7fde"
+  },
+  {
+    "id": "fa01-01-02",
+    "caption": "同一张数字七，交给四位选手。比比谁先回答。",
+    "spoken": "同一张数字七，交给四位选手。比比谁先回答。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "readingNote": "Use a clear digit phrase and natural sentence breaks; the matching Chinese caption uses the same wording.",
+    "settingsSha256": "554b690a1d7a0c947f3bd316e36ed931f37621400119fcb7e9563cff01c2536f"
+  },
+  {
+    "id": "fa01-01-03",
+    "caption": "准备好了吗？一起按下开始。",
+    "spoken": "准备好了吗？一起按下开始。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "9f3b8691c81179dcdf8fea16f124f168e4b06c72968a0743256122e14dd0a0a5"
+  },
+  {
+    "id": "fa01-01-04",
+    "caption": "X 已经答完了，只用了 0.37 微秒。",
+    "spoken": "艾克斯 已经答完了，只用了 零点三七 微秒。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "a70c2b247d56f8db6407f4b213e88cb137a310c11add5d63ca494e00f4f5494c"
+  },
+  {
+    "id": "fa01-01-05",
+    "caption": "这是实验留下的原始记录。",
+    "spoken": "这是实验留下的原始记录。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "b6025b27c098cf376ccc2330e480a801a94755f92b8d3b67f478859d1a240658"
+  },
+  {
+    "id": "fa01-01-06",
+    "caption": "换了十张没见过的图，X 全都答对。",
+    "spoken": "换了十张没见过的图，艾克斯 全都答对。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "e01a966349d39c30b94416b5d9ab5606937c07e7e598f6388ee4e266adb12da6"
+  },
+  {
+    "id": "fa01-01-07",
+    "caption": "它比 Claude Fable 快了约 300 万倍。",
+    "spoken": "它比克劳德 Fable，快约三百万倍。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "readingNote": "Chinese spoken form of Claude and a short pause before the unchanged measured ratio.",
+    "settingsSha256": "5280c9c7ef0aad774c4420982965e3073a65fcdbab6a0393fec9aab3e7c52353"
+  },
+  {
+    "id": "fa01-01-08",
+    "caption": "比 GPT-6-Astra，还快了 1000 多万倍。",
+    "spoken": "比 G P T 六，Astra，还快了 一千 多万倍。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "adbc579d4737fdad69fda8e9374f9384cfdcbb881397d80a3c60a03bc61cfcea"
+  },
+  {
+    "id": "fa01-01-09",
+    "caption": "这个藏着名字的 X，到底是谁？",
+    "spoken": "这个藏着名字的 艾克斯，到底是谁？",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "64a8be8e978d26a5b507e7597438c1f775c6d7f3adf5ccab83456709515ea321"
+  },
+  {
+    "id": "fa01-02-01",
+    "caption": "一个一九五七年的 AI，比 ChatGPT Astra 和 Claude Fable 还快？",
+    "spoken": "一个一九五七年的 AI，比 Chat G P T Astra 和 Claude Fable 还快？",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "6c33aa5e9a23369392ca6ba160c862b2e136918455931c7389dd727ddfab65be"
+  },
+  {
+    "id": "fa01-03-01",
+    "caption": "先回到一九五七年，桌上只留纸和笔。",
+    "spoken": "先回到一九五七年，桌上只留纸和笔。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "fde1e1dc2941547e6792886c689450fd12d9ff797270ed584c0afbb5ce4ba767"
+  },
+  {
+    "id": "fa01-03-02",
+    "caption": "电脑没有眼睛，怎么把一张图交给它？",
+    "spoken": "电脑没有眼睛，怎么把一张图交给它？",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "b6c6035ec5da235e48ce7633bad94f4b478a03ee135305664f3a055b90c721d9"
+  },
+  {
+    "id": "fa01-03-03",
+    "caption": "把画面切成小方格，每格只留一种颜色。",
+    "spoken": "把画面切成小方格，每格只留一种颜色。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "712d5da6da062b0abd990bba3e8afbf441f08ed78251d29e16701537d46a90b2"
+  },
+  {
+    "id": "fa01-03-04",
+    "caption": "再简单一点，黑的写一，白的写零。",
+    "spoken": "再简单一点，黑的写一，白的写零。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "945434b10c85604657a99b078f56b36b85548f9a4b842ec7ca812d53c32a8fe5"
+  },
+  {
+    "id": "fa01-03-05",
+    "caption": "你念一排数字，让孩子照着涂。",
+    "spoken": "你念一排数字，让孩子照着涂。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "de5fa85a40e2a55814d38d5f9bbf1e08d2efd38c3faf486374c2b68f2ea18ae9"
+  },
+  {
+    "id": "fa01-03-06",
+    "caption": "先别告诉他是什么，看看他什么时候猜出来。",
+    "spoken": "先别告诉他是什么，看看他什么时候猜出来。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "3217b904a516222619b0904fc7df3d180a6ed1f207f62ac4facb8b9821f0e3d1"
+  },
+  {
+    "id": "fa01-03-07",
+    "caption": "现在换这只猫，先看照片。",
+    "spoken": "现在换这只猫，先看照片。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "ba00de2ebf28c8cbb9c5a5fec63090def74264f95d092cbcefa4478d37c363fb"
+  },
+  {
+    "id": "fa01-03-08",
+    "caption": "格子越大，毛和胡须就越难看清。",
+    "spoken": "格子越大，毛和胡须就越难看清。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "bdd45aff72c50843c46a652e2564473d600f228ee4b03edae9fa117885f989f0"
+  },
+  {
+    "id": "fa01-03-09",
+    "caption": "只剩八行，猫的耳朵还在。",
+    "spoken": "只剩八行，猫的耳朵还在。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "a83f1e9d42682fc7eb3ea9d4be5e165ed1a4cc1836c5b2e45190211061e841e7"
+  },
+  {
+    "id": "fa01-03-10",
+    "caption": "每行八个零和一，刚好装进一个字节。",
+    "spoken": "每航八个零和一，刚好装进一个字节。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "readingNote": "航 forces háng for the row sense of 行; captions retain 每行.",
+    "settingsSha256": "47a52ea424a2c6ad8c81253792759e5b6612db285b78a7242d1a7bf37fbedc4f"
+  },
+  {
+    "id": "fa01-03-11",
+    "caption": "整只猫，只占八个字节。",
+    "spoken": "整只猫，只占八个字节。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "161f133fb583b6b51342290a0d7ccc69a4e0485b7bbeb4a5cba6dc4144015263"
+  },
+  {
+    "id": "fa01-03-12",
+    "caption": "把数字寄给朋友，他也能在纸上还原出来。",
+    "spoken": "把数字寄给朋友，他也能在纸上还原出来。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "bfd7d448ee925e5f154681f4d5bd0049a8683a8bda5a24d69ed53640e34d4129"
+  },
+  {
+    "id": "fa01-04-01",
+    "caption": "纸上的格子有了，谁来做决定呢？",
+    "spoken": "纸上的格子有了，谁来做决定呢？",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "84a1b34b716038e60f47cf3244a44277a0b416e09321eac51d7e0002e72dbe57"
+  },
+  {
+    "id": "fa01-04-02",
+    "caption": "先借大脑里的一个神经元来想想。",
+    "spoken": "先借助大脑里的一个神经元，来想一想。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "readingNote": "Make 借助 and the reduplicated verb unambiguous without changing the analogy.",
+    "settingsSha256": "3c0fab7c9d5755a30ca6ae3b1b0e6ca366166d271c88bb2ba99b758594d3d055"
+  },
+  {
+    "id": "fa01-04-03",
+    "caption": "它收到许多信号，有些强，有些弱。",
+    "spoken": "它收到许多信号，有些强，有些弱。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "ce9459d76b4594cb0658e92893b469a46ca2a782131355e2f1c61f0d458d1f26"
+  },
+  {
+    "id": "fa01-04-04",
+    "caption": "合起来够了，它就发出一次信号。",
+    "spoken": "合起来够了，它就发出一次信号。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "5fccd1c344f8732bb6bc8544f9699a0d80616d8bb9babe903ed098d7e557e925"
+  },
+  {
+    "id": "fa01-04-05",
+    "caption": "人脑大约有八百六十亿个神经元。",
+    "spoken": "人脑里的神经元，大约有八百六十亿。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "readingNote": "Place the critical 亿 unit at the phrase end so it is clearly voiced.",
+    "settingsSha256": "12b47c4ccb95e5767500e6e0de0bcdc7569041b1cc4a876125a073fe100aa617"
+  },
+  {
+    "id": "fa01-04-06",
+    "caption": "我们先拿一个很简单的模型，玩个游戏。",
+    "spoken": "我们先拿一个很简单的模型，玩个游戏。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "80eb48cb14e145c182941ff653ea331a9ebf7d11f0082206e71b649dc56772be"
+  },
+  {
+    "id": "fa01-04-07",
+    "caption": "假装你是个神经元，要找出苹果。",
+    "spoken": "假装你是个神经元，要找出苹果。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "cec0c1d10c34336d10ea70835557245ffa9efb92d12ecc25dec7c396e3737a56"
+  },
+  {
+    "id": "fa01-04-08",
+    "caption": "红色加一分，圆形也加一分。",
+    "spoken": "红色加一分，圆形也加一分。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "99871dfb3935ad906f132529ee32d0c61869ada37203d3478337764b7c6beb04"
+  },
+  {
+    "id": "fa01-04-09",
+    "caption": "够两分，就举起手，表示找到了。",
+    "spoken": "够两分，就举起手，表示找到了。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "79374c236a1a3cb1a1918260504af4bb9734f38e0db950d8106b22b31fb4f3f4"
+  },
+  {
+    "id": "fa01-04-10",
+    "caption": "可番茄也能拿满分，怎么办？",
+    "spoken": "可番茄也能拿满分，怎么办？",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "31be2085f96285540be7cf686c39c3183af75a92c4671b01945bb9542715ad1e"
+  },
+  {
+    "id": "fa01-04-11",
+    "caption": "再加一条线索：吃起来甜不甜？",
+    "spoken": "再加一条线索：吃起来甜不甜？",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "9d64605f1af69e2a7e6191512b986aad2ac24f494c68d9357694aa1f553b0362"
+  },
+  {
+    "id": "fa01-04-12",
+    "caption": "赫布早就提出，常一起活动的连接会变强。",
+    "spoken": "赫布早就提出，常一起活动的连接会变强。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "3a9421af892109aa835d6d7c2ff770130d9d4478609b31f3becb3ff09cb80199"
+  },
+  {
+    "id": "fa01-05-01",
+    "caption": "现在，把打分的游戏放进网页里。",
+    "spoken": "现在，把打分的游戏放进网页里。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "49458d5ac812b6f8bc29812392aa4fb342a85a6820aee61614f886ca622a74ef"
+  },
+  {
+    "id": "fa01-05-02",
+    "caption": "每个格子，都有一个自己的分数。",
+    "spoken": "每个格子，都有一个自己的分数。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "267c8e00c1a7a2c4a8baf338910686ebf2d1b40a7896d465b4e487f7647eaf5d"
+  },
+  {
+    "id": "fa01-05-03",
+    "caption": "点一下 Run one round，看看它怎么学。",
+    "spoken": "点一下 运行一轮，看看它怎么学。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "0ab7ffd6edae8badf2dec72ad941610effe7c3add6a9954bce955ff5a0e2535f"
+  },
+  {
+    "id": "fa01-05-04",
+    "caption": "横线应该亮灯，它却没亮，就得加分。",
+    "spoken": "横线应该亮灯，它却没亮，就得加分。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "88b9357b16588bf81536168f243b928571e3e5768cf2d64460eb9e114cb34dca"
+  },
+  {
+    "id": "fa01-05-05",
+    "caption": "只给这张图里黑着的格子加分。",
+    "spoken": "只给这张图里黑着的格子加分。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "5309b006078244f53a15c158ec53034fc9a787ac7a21da6572090529cc833771"
+  },
+  {
+    "id": "fa01-05-06",
+    "caption": "下面那串 points，也跟着一起变。",
+    "spoken": "下面那串 分数，也跟着一起变。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "5c8858fe28d20accb955a1ff0e63b3d600140e9ce2b6370df1fe6321db31d4cc"
+  },
+  {
+    "id": "fa01-05-07",
+    "caption": "反过来，多亮了，就把对应的分数减一点。",
+    "spoken": "反过来，多亮了，就把对应的分数减一点。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "9d0377e634f14badda6f1e6290f4c762a6cad26f794ddc013e43de447645d5c1"
+  },
+  {
+    "id": "fa01-05-08",
+    "caption": "格子换成二十乘二十，方法还是一样。",
+    "spoken": "格子换成二十乘二十，方法还是一样。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "e72d649196c2e5a30d01edcf67013bffbfa9349d1e01c239d25a5bc6aa0e42c6"
+  },
+  {
+    "id": "fa01-05-09",
+    "caption": "练完以后，蓝色的分数像不像一个七？",
+    "spoken": "练完以后，蓝色的分数像不像一个七？",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "53d8e3d751404490f3640759c0680259246f76d9361a66f1038d90e4aaeb7fc6"
+  },
+  {
+    "id": "fa01-05-10",
+    "caption": "predict 只管把黑格子的分数加起来。",
+    "spoken": "predict 只管把黑格子的分数加起来。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "745c543a9ecffafcc2cd3e3dd269e8c9af4b6458645981567c3af2469838482a"
+  },
+  {
+    "id": "fa01-05-11",
+    "caption": "train 对照答案，决定分数要不要改。",
+    "spoken": "train 对照答案，决定分数要不要改。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "c0f145ed82661e005b2bb483cbbbc1f458d8bb5d6018c20a1e48ecc6a117ca09"
+  },
+  {
+    "id": "fa01-05-12",
+    "caption": "人给它看例子，具体的分数让它自己调。",
+    "spoken": "人给它看例子，具体的分数让它自己调。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "f2db1f5e48789ca407f83914b26b196def8bfbf9ee631579d77989e576af5b62"
+  },
+  {
+    "id": "fa01-06-01",
+    "caption": "现在可以揭晓了：X 就是感知机。",
+    "spoken": "现在可以揭晓了：艾克斯 就是感知机。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "a27ac763eae5c862aca07a621123db2810f8d6dbad204ff216a3783e2f27f4a7"
+  },
+  {
+    "id": "fa01-06-02",
+    "caption": "罗森布拉特在一九五七年写下了这套想法。",
+    "spoken": "罗森布拉特在一九五七年写下了这套想法。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "701a85cddb0b412bba8d1e243f4a5c78c4e012ac9793338245eff66f70c52994"
+  },
+  {
+    "id": "fa01-06-03",
+    "caption": "后来的 Mark I，真有一块光电管做的眼睛。",
+    "spoken": "后来的 马克一号，真有一块光电管做的眼睛。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "f1f3aa816f768691175a7f911adbc9c50d2cfbe4971cc837cb9761ad856a2ff1"
+  },
+  {
+    "id": "fa01-06-04",
+    "caption": "排成二十乘二十，把卡片的明暗读进去。",
+    "spoken": "排成二十乘二十，把卡片的明暗读进去。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "cbc7d022aed13a94090b32476c5d9f5e1d9fffa798760bd94e5c24fbebdad2cc"
+  },
+  {
+    "id": "fa01-06-05",
+    "caption": "要改连接的强弱，电机就转动电位器。",
+    "spoken": "要改连接的强弱，电机就转动电位器。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "5a2b05daa9fe0fb830bbce08c17c907109210c2446c7703d1d8caf4b0f5a2481"
+  },
+  {
+    "id": "fa01-06-06",
+    "caption": "学完再放进卡片，输出灯就给出答案。",
+    "spoken": "学完再放进卡片，输出灯就给出答案。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "c8f89909480cc6e7ca44fa0b7c038062d96a319e90b2e18248ad57849572bf6c"
+  },
+  {
+    "id": "fa01-06-07",
+    "caption": "它的记忆，真的留在那些旋钮的位置上。",
+    "spoken": "它的记忆，真的留在那些旋钮的位置上。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "52ce067f477294101bbb308e5a1cd986db82857dc0db2245706b60aea9901dc2"
+  },
+  {
+    "id": "fa01-06-08",
+    "caption": "当年的报纸说，这台机器能从做中学。",
+    "spoken": "当年的报纸说，这台机器能从做中学。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "e8ff8fa488ebf84ec367d1ca9fe7157928eecac51e2adb39ac5f7663dadf6389"
+  },
+  {
+    "id": "fa01-06-09",
+    "caption": "比赛里的 X，用 JavaScript 写了简化的规则。",
+    "spoken": "比赛里的 艾克斯，用 JavaScript 写了简化的规则。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "dc86dde1ea0d891bb20b5167c3354ea5a3722a76d523d0bba512dd6471a387a6"
+  },
+  {
+    "id": "fa01-06-10",
+    "caption": "它已经看过 419 张训练图，再来参加比赛。",
+    "spoken": "它已经看过 四百一十九 张训练图，再来参加比赛。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "4eec89877dcca0cb70db24f8865d0136c58b483b08fe7bb87cc0b6a93dd897f4"
+  },
+  {
+    "id": "fa01-07-01",
+    "caption": "它为什么这么快？现在看看它要做多少事。",
+    "spoken": "它为什么这么快？现在看看它要做多少事。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "603aeefbf3de2905533403c653c67c739c837daf3c7d2e1541c51565d447a265"
+  },
+  {
+    "id": "fa01-07-02",
+    "caption": "一张图，最多只要把 400 个分数加一遍。",
+    "spoken": "一张图，最多只要把 四百 个分数加一遍。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "9bfc653093b77c45889bd618bc8ae298347897481517b31aeeb8f978ae4443f9"
+  },
+  {
+    "id": "fa01-07-03",
+    "caption": "本机那个 Qwen 模型，有大约八十亿个参数。",
+    "spoken": "本机那个千问模型，参数大约有八十亿。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "readingNote": "Keep the critical 亿 unit clearly at the phrase end; the model card count is rounded to eight billion in the film.",
+    "settingsSha256": "08725115de64f06777ad339f2a3a593a0c914e7d56e9ae4e8bf7023cb08b58fe"
+  },
+  {
+    "id": "fa01-07-04",
+    "caption": "它要一层层计算，再一个词一个词地往外写。",
+    "spoken": "它要一层层计算，再一个词一个词地往外写。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "ebc5d3d313cb96cfedb82ba69dfa533ab2550827803c215b418fabc6973e24bf"
+  },
+  {
+    "id": "fa01-07-05",
+    "caption": "从这个简单的神经元，后来长出了更复杂的网络。",
+    "spoken": "从这个简单的神经元，后来长出了更复杂的网络。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "5b1374ef7f3ee00483f0a55231df8a8898de0d98818dec630e60bea2e4da1f8a"
+  },
+  {
+    "id": "fa01-07-06",
+    "caption": "一九六九年，一本书仔细研究了感知机的局限。",
+    "spoken": "一九六九年，一本书仔细研究了感知机的局限。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "e7f2c33a2042a8f948e7c73bbad069004130d803767caca9e06d08ddc5b85a9c"
+  },
+  {
+    "id": "fa01-07-07",
+    "caption": "后来研究冷过一阵。反向传播让多层网络更好学。",
+    "spoken": "后来研究冷过一阵。反向传播让多层网络更好学。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "886e7e6388ba4f265f20e7b895b4e173deb8235f87faed72057dd83555dfe421"
+  },
+  {
+    "id": "fa01-07-08",
+    "caption": "到二零一二年，深度网络的认图成绩提高了很多。",
+    "spoken": "到二零一二年，深度网络的认图成绩提高了很多。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "0c6b919d8e3af86971274fccc3ff4c8f7ab57bc229ee09506aef5994c23a5ca7"
+  },
+  {
+    "id": "fa01-07-09",
+    "caption": "接着是 Transformer，再到今天会聊天的 AI。",
+    "spoken": "接着是 Transformer，再到今天会聊天的 AI。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "c1dddce6f8e798e332aa677a5cff49436bdc0ec4ebcc323f571cf5525c3e6f41"
+  },
+  {
+    "id": "fa01-07-10",
+    "caption": "这类大模型，还能回答许多别的问题。",
+    "spoken": "这类大模型，还能回答许多别的问题。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "7de487a4d237f03d5dc2a1ace2514be808f348ea4fe7c442fb1de49589835e98"
+  },
+  {
+    "id": "fa01-07-11",
+    "caption": "可简单的事，它也可能算得很费力。",
+    "spoken": "可简单的事，它也可能算得很费力。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "21a98375fa80d8a7c06fa4311926078973b5be7e5ac6f578137cab65bb6f6ca7"
+  },
+  {
+    "id": "fa01-07-12",
+    "caption": "这次本机的 Qwen，只答对了五张。",
+    "spoken": "这次本机的 千问，只答对了五张。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "545db3c033693f407e02905b587f256d4f440459fdedef8f0801d4e240971165"
+  },
+  {
+    "id": "fa01-07-13",
+    "caption": "回答很有把握，也不一定就是真的。",
+    "spoken": "回答很有把握，也不一定就是真的。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "bb10153b914ade2b316c17951d4f69c59108876bf129c38583a6cf7356dab758"
+  },
+  {
+    "id": "fa01-08-01",
+    "caption": "这些实验，在家里的餐桌上就能开始。",
+    "spoken": "这些实验，在家里的餐桌上就能开始。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "a9819a172fac9bcf55854a47171b9565e35d5d1fc4ca8ba29f9f89429b424afa"
+  },
+  {
+    "id": "fa01-08-02",
+    "caption": "打印一张格子纸，拿几支笔就够了。",
+    "spoken": "打印一张格子纸，拿几支笔就够了。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "0442b1572f8eb0da7073fdec007e9cfd425e4989c00dc9867fbf634cd177f044"
+  },
+  {
+    "id": "fa01-08-03",
+    "caption": "一个人念数字，另一个人把图涂出来。",
+    "spoken": "一个人念数字，另一个人把图涂出来。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "ee085da78701857750fabd4fc986eccaf282d3cf0357dba120978c9c01ae8c95"
+  },
+  {
+    "id": "fa01-08-04",
+    "caption": "再轮流当神经元，商量每条线索值几分。",
+    "spoken": "再轮流当神经元，商量每条线索值几分。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "d551e4dfcd85993e2c141b68738900f4d0bf8c5b2fa7938349bba514a9997945"
+  },
+  {
+    "id": "fa01-08-05",
+    "caption": "想让机器来试，就打开网页里的实验室。",
+    "spoken": "想让机器来试，就打开网页里的实验室。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "d2ced8ad60c4ebc870bdf6158b92d78c11f4954477d46f7c1ecd40a7f2939c36"
+  },
+  {
+    "id": "fa01-08-06",
+    "caption": "扫屏幕上的二维码，就能打开实验室和学习单。",
+    "spoken": "扫屏幕上的二维码，就能打开实验室和学习单。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "1a7d3971e9876910baa7e5d304478b7fac9f56565d7aee04934143e5bcf115c8"
+  },
+  {
+    "id": "fa01-08-07",
+    "caption": "来 Lucas Academy 一起试试：你和孩子想先教它认什么？",
+    "spoken": "来 Lucas Academy 一起试试：你和孩子想先教它认什么？",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "speed": 1.1,
+    "settingsSha256": "bf534da6084be2ae3defdb15484b283cc8289ccbf6d1a4efbaf76184d4a528bc"
+  }
+]

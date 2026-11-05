@@ -1,4 +1,4 @@
-"""Build the unvoiced review timelines from the owner's selected ORIGINAL race.
+"""Build common bilingual timelines from the owner's selected ORIGINAL race.
 
 No benchmark or model call is made here. scripts/perceptron-race/reruns is never read.
 """
@@ -9,6 +9,7 @@ import json
 import math
 import re
 import textwrap
+import sys
 
 ROOT = Path(__file__).resolve().parents[2]
 DIR = ROOT / "public/family-ai-lab-01"
@@ -76,6 +77,8 @@ def main():
     DOC.mkdir(parents=True, exist_ok=True)
     values = numbers()
     source = json.loads((Path(__file__).parent / "script.json").read_text())
+    narrated = "--voiced" in sys.argv
+    narration = json.loads((DIR / "narration.json").read_text()) if narrated else None
     titles = {
         "zh": ["同一张图", "一个问题", "纸和笔", "你来当神经元", "网页实验室", "揭晓 X", "后来发生了什么", "从餐桌开始"],
         "en": ["The same picture", "One question", "Paper and pencil", "Be a neuron", "The browser lab", "Meet X", "What came next", "Start at the table"],
@@ -85,10 +88,15 @@ def main():
         counts[scene] = counts.get(scene, 0) + 1
         text = {"zh": zh.format(**values), "en": en.format(**values)}
         spoken = max(math.ceil(reading_seconds(t, lang) * FPS) for lang, t in text.items())
+        line_id = f"fa01-{scene:02}-{counts[scene]:02}"
+        if narration:
+            for lang in ("en", "zh"):
+                assert narration[lang][line_id]["caption"] == text[lang], (lang, line_id, "stale narration")
+            spoken = max(math.ceil(narration[lang][line_id]["seconds"] * FPS) for lang in ("en", "zh")) + 3
         if visual == "race-run":
             spoken = max(spoken, math.ceil((load("astra-low")["median_model"] + 1.5) * FPS))
         duration = spoken + round(0.4 * FPS)
-        lines.append({"id": f"fa01-{scene:02}-{counts[scene]:02}", "scene": scene, "visual": visual,
+        lines.append({"id": line_id, "scene": scene, "visual": visual,
                       "text": text, "from": frame, "duration": duration, "captionFrames": spoken})
         frame += duration
     lines[-1]["duration"] += 5 * FPS
@@ -97,11 +105,12 @@ def main():
     tl = {"fps": FPS, "defaultLanguage": "en", "durationInFrames": frame, "lines": lines,
           "titles": titles["en"], "values": values,
           "dataSelection": "original full round, explicitly retained by owner; no reruns",
-          "delivery": "one picture, English labels, English default captions, separate Chinese captions; audio deferred"}
+          "delivery": "one picture, English default, independent Chinese audio/subtitles" if narrated else "one picture, English labels, English default captions, separate Chinese captions; audio deferred",
+          "narrated": narrated}
     (DIR / "timeline.json").write_text(json.dumps(tl, ensure_ascii=False, indent=2) + "\n")
     for lang in ("zh", "en"):
         md = [f"# {'家庭AI实验室 1 · 中文审核稿' if lang == 'zh' else 'Family AI Lab 1 · English review script'}", "",
-              "无配音审核版。实验数字仅取原始 results/*.json；复测不入片。" if lang == "zh" else "Unvoiced review. Experiment values come only from the original results/*.json, excluding reruns.", ""]
+              ("Louise 配音稿，共用画面，中文独立音轨。实验数字仅取原始 results/*.json。" if narrated else "无配音审核版。实验数字仅取原始 results/*.json；复测不入片。") if lang == "zh" else ("Louise narration script. One common picture, English default audio. Original experiment values only." if narrated else "Unvoiced review. Experiment values come only from the original results/*.json, excluding reruns."), ""]
         for scene in range(1, 9):
             md += [f"## S{scene} · {titles[lang][scene-1]}", ""]
             md += [f"- **{line['id']}** {line['text'][lang]}" for line in lines if line["scene"] == scene]
@@ -136,7 +145,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
     (DOC / "selected-data.json").write_text(json.dumps({"selection": "original full round", "ownerConfirmed": True,
         "noMoreBenchmarkCalls": True, "sha256": hashes, "derived": values,
         "delivery": "one common English-label picture", "defaultLanguage": "en",
-        "audio": "deferred until review approved; future English default and separate Chinese track",
+        "audio": "Louise/en default; Louise/zh independent; speed 1.1" if narrated else "deferred until review approved; future English default and separate Chinese track",
         "subtitles": "independent English default and Simplified Chinese tracks"}, ensure_ascii=False, indent=2) + "\n")
 
 

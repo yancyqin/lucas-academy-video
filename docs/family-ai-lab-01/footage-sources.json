@@ -124,7 +124,7 @@
     },
     {
       "path": "public/family-ai-lab-01/capture/terminal-view.mp4",
-      "sha256": "f4c4962ef68c7ade77efa7d12bd55b296c251cb7a3430a5780ba6fabd50b1b6a",
+      "sha256": "a1176b826d8e1c4454e77b6afbcb160b2d3409876388ada792bd84369a0a942b",
       "credit": "Owner browser/terminal recording or documented derivative",
       "probe": {
         "programs": [],
@@ -133,7 +133,7 @@
           {
             "codec_type": "video",
             "width": 3184,
-            "height": 860,
+            "height": 688,
             "r_frame_rate": "30/1"
           }
         ],
@@ -144,7 +144,7 @@
     },
     {
       "path": "public/family-ai-lab-01/capture/terminal-view.png",
-      "sha256": "38c4d15dfd36efa240c2cb71018142440e43eb777ccbcf456022fa84804a9837",
+      "sha256": "05bb3c019032facd8545f7bbea550cbde7f281deb1de7c1d974edc31c8d86c2b",
       "credit": "Owner browser/terminal recording or documented derivative"
     },
     {
@@ -216,8 +216,18 @@
       "path": "public/family-ai-lab-01/capture/twenty-trained.png",
       "sha256": "c1991662b627bdd65095843be365ef62b79e3dfe5a1c468a02f9b4a3b1704784",
       "credit": "Owner browser/terminal recording or documented derivative"
+    },
+    {
+      "path": "public/family-ai-lab-01/art/ai-lab-qr.png",
+      "credit": "Authored QR · https://ai.lucasacademy.org/",
+      "sha256": "d444799f4fd421671d84d7a36fbd48aa04b2c370670f9b7d787ec9242ef08e0d"
+    },
+    {
+      "path": "public/family-ai-lab-01/training-tiles.json",
+      "credit": "Authored paths from the 419 actual training pictures",
+      "sha256": "276a2336ffced06bca9c4c6ce0e6acde83f9f7605953e8b5efacb54f1bf5b592"
     }
   ],
   "commonsMediaUsed": false,
-  "allVideoMutedInReview": true
+  "allSourceVideoMuted": true
 }

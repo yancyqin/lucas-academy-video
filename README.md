@@ -28,9 +28,10 @@ a sentence. Both run locally on this Mac.
   validation results and limitations. Read before starting another video project.
 - [`FAMILY-AI-LAB-01.md`](./FAMILY-AI-LAB-01.md) -- the perceptron experiment film.
   Its owner-approved delivery is one picture with simple English labels, English default,
-  and separate Chinese audio/subtitles. The current review has selectable English/Chinese
-  captions and no narration; [production notes](./docs/family-ai-lab-01/production.md) record
-  the original experiment selection, media backup and `fal01:*` commands.
+  and separate Chinese audio/subtitles. Louise narrates both languages; the MP4 has
+  selectable English/Chinese audio and captions, with English selected by default.
+  [Production notes](./docs/family-ai-lab-01/production.md) record the original experiment
+  selection, media backup and `fal01:*` commands.
 
 ## YouTube covers
 

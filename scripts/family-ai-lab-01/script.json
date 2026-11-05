@@ -1,8 +1,8 @@
 {
-  "notes": "Experimental numbers are template fields resolved only from the owner's selected original results/*.json. No model calls during production. Educational dates and counts have their own cited sources.",
+  "notes": "Experimental numbers are template fields resolved only from the owner's selected original results/*.json. No benchmark or race-contender calls during production. Educational dates and counts have their own cited sources.",
   "lines": [
-    [1,"race-intro","这张图，你一眼就认出来了。","You probably recognize this picture before you have even finished looking at it."],
-    [1,"race-intro","现在，把它交给四个程序：这是七吗？","Now give the same picture to four programs. Ask each one: is this a seven?"],
+    [1,"pixel-rain","电脑认出一个七，到底能有多快？","How fast can a computer recognize a seven?"],
+    [1,"pixel-rain","同一张数字七，交给四位选手。比比谁先回答。","Give the same seven to four programs, and watch who answers first."],
     [1,"race-run","准备好了吗？一起按下开始。","Ready? Let's start their clocks together and watch what happens."],
     [1,"race-result","X 已经答完了，只用了 {x_us} 微秒。","X has already finished. Its time is {x_us} microseconds per picture."],
     [1,"terminal","这是实验留下的原始记录。","These are the original result files saved from the experiment."],
@@ -60,19 +60,19 @@
     [6,"mark-output","学完再放进卡片，输出灯就给出答案。","After learning, another card could be presented, and the output indicated the machine's decision."],
     [6,"vintage-lab","它的记忆，真的留在那些旋钮的位置上。","The positions of those adjustable controls physically stored what the machine had learned."],
     [6,"newspaper","当年的报纸说，这台机器能从做中学。","A 1958 newspaper headline described a new Navy device that learns by doing."],
-    [6,"reveal-code","比赛里的 X，用 JavaScript 写了简化的规则。","Our race used a simplified perceptron rule written in JavaScript and running on this Mac."],
+    [6,"reveal-code","比赛里的 X，用 JavaScript 写了简化的规则。","This race used a simplified perceptron rule written in JavaScript and running on this Mac."],
     [6,"reveal-trained","它已经看过 {train_n} 张训练图，再来参加比赛。","It had already learned from {train_n} training pictures before entering the race."],
 
     [7,"scale","它为什么这么快？现在看看它要做多少事。","Why was it so fast? Now we can look at how much work it actually does."],
     [7,"scale","一张图，最多只要把 {pixel_n} 个分数加一遍。","For one picture, it needs at most {pixel_n} additions to collect the points."],
     [7,"scale-zoom","本机那个 Qwen 模型，有大约八十亿个参数。","The local Qwen model has roughly eight billion parameters, a much larger collection of numbers."],
-    [7,"scale-zoom","它要一层层计算，再一个词一个词地往外写。","It computes through layers, then produces its answer a token at a time."],
+    [7,"scale-zoom","它要一层层计算，再一个词一个词地往外写。","It calculates across many layers, then writes its answer one token at a time."],
     [7,"timeline-1957","从这个简单的神经元，后来长出了更复杂的网络。","This simple artificial neuron was part of a much longer story of increasingly complex networks."],
     [7,"timeline-1969","一九六九年，一本书仔细研究了感知机的局限。","In 1969, Minsky and Papert published a detailed mathematical study of perceptrons and their limitations."],
     [7,"timeline-1986","后来研究冷过一阵。反向传播让多层网络更好学。","Interest later cooled for a time. Backpropagation helped make networks with multiple layers learn effectively."],
     [7,"timeline-2012","到二零一二年，深度网络的认图成绩提高了很多。","In 2012, a deep neural network made a major breakthrough in the ImageNet picture-recognition competition."],
     [7,"timeline-2017","接着是 Transformer，再到今天会聊天的 AI。","Then came the Transformer, followed by the conversational AI systems we use today."],
-    [7,"chat","大模型能聊的事，远远超过这道认图题。","Those models can discuss far more than this one small question about a picture."],
+    [7,"chat","这类大模型，还能回答许多别的问题。","Those models can discuss far more than this one small question about a picture."],
     [7,"limits","可简单的事，它也可能算得很费力。","Even a simple request can still require a great deal of computation."],
     [7,"limits","这次本机的 Qwen，只答对了{qwen_right_zh}张。","In this experiment, the local Qwen model answered only {qwen_right_en} of the pictures correctly."],
     [7,"limits","回答很有把握，也不一定就是真的。","And an answer that sounds confident is still something we may need to check."],
@@ -82,7 +82,7 @@
     [8,"family","一个人念数字，另一个人把图涂出来。","One person reads the numbers, while someone else colors in the hidden picture."],
     [8,"start","再轮流当神经元，商量每条线索值几分。","Then take turns being the neuron. Decide together how much each clue should count."],
     [8,"start","想让机器来试，就打开网页里的实验室。","When you want the computer to try, open the browser lab and teach it with examples."],
-    [8,"url","网址稍后公布，学习单也会放在一起。","The website address will be announced soon, with the printable worksheets in the same place."],
+    [8,"url","扫屏幕上的二维码，就能打开实验室和学习单。","Scan the code to open the lab and find the printable worksheets."],
     [8,"invite","来 Lucas Academy 一起试试：你和孩子想先教它认什么？","Come explore with us at Lucas Academy. What would you and your child like to teach it to recognize first?"]
   ]
 }

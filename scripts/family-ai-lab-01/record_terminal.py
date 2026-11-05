@@ -32,7 +32,7 @@ end tell'''
     for source, dest in [("terminal.png", "terminal-view.png"), ("terminal.mp4", "terminal-view.mp4")]:
         dims = json.loads(subprocess.check_output(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries", "stream=width,height", "-of", "json", str(OUT / source)]))["streams"][0]
         y = int(dims["height"] * .035) // 2 * 2
-        h = int(dims["height"] * .425) // 2 * 2
+        h = int(dims["height"] * .34) // 2 * 2
         extra = ["-frames:v", "1"] if source.endswith("png") else ["-an", "-c:v", "libx264", "-crf", "18", "-pix_fmt", "yuv420p"]
         subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(OUT / source), "-vf", f"crop={dims['width']}:{h}:0:{y}", *extra, str(OUT / dest)], check=True)
     print("Recorded native Terminal; original result viewer only:", OUT / "terminal-view.mp4")

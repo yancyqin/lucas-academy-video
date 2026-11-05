@@ -9,7 +9,7 @@ import recording from '../../../docs/family-ai-lab-01/capture.json';
 type Lang = 'en' | 'zh';
 type Line = {id:string; scene:number; visual:string; text:Record<Lang,string>; from:number; duration:number; captionFrames:number};
 type Timeline = {fps:number; durationInFrames:number; lines:Line[]; titles:string[]; values:Record<string,string|number>};
-type VisualData = {pixels:number[]; points:number[]; rounds:number};
+type VisualData = {pixels:number[]; points:number[]; rounds:number; training:{d:string;yes:boolean}[]};
 export type FamilyProps = {tl?:Timeline|null; data?:VisualData|null; captions?:Lang|null};
 const file=(p:string)=>staticFile(`family-ai-lab-01/${p}`);
 const PAPER='#f1ecdf', INK='#172a2c', TEAL='#103e42', GOLD='#efba63', CYAN='#8be0dc', BLUE='#4779d7', ORANGE='#dc8352';
@@ -23,11 +23,11 @@ const vtime=(name:string)=>recording.events.find(e=>e.name===name)!.seconds;
 
 export const calculateFamilyMetadata:CalculateMetadataFunction<FamilyProps>=async({props,abortSignal})=>{
  const read=async(name:string)=>{const r=await fetch(file(name),{signal:abortSignal});if(!r.ok)throw Error(`Missing ${name}: run npm run fal01:prepare`);return r.json();};
- const [tl,picture,model]=await Promise.all([read('timeline.json'),read('picture.json'),read('trained-model.json')]);
- return {props:{...props,tl,data:{pixels:picture.pixels,points:model.points,rounds:model.rounds}},fps:tl.fps,durationInFrames:tl.durationInFrames};
+ const [tl,picture,model,training]=await Promise.all([read('timeline.json'),read('picture.json'),read('trained-model.json'),read('training-tiles.json')]);
+ return {props:{...props,tl,data:{pixels:picture.pixels,points:model.points,rounds:model.rounds,training}},fps:tl.fps,durationInFrames:tl.durationInFrames};
 };
 
-const Box:FC<{children:ReactNode;style?:CSSProperties}>=({children,style})=><div style={{position:'absolute',borderRadius:22,background:'#fffaf0',border:'1px solid #203d3e22',boxShadow:'0 12px 40px #173b3012',...style}}>{children}</div>;
+const Box:FC<{children:ReactNode;style?:CSSProperties}>=({children,style})=><div style={{position:'absolute',boxSizing:'border-box',borderRadius:22,background:'#fffaf0',border:'1px solid #203d3e22',boxShadow:'0 12px 40px #173b3012',...style}}>{children}</div>;
 const Label:FC<{children:ReactNode;style?:CSSProperties}>=({children,style})=><div style={{fontSize:30,fontWeight:650,letterSpacing:1,...style}}>{children}</div>;
 const Big:FC<{children:ReactNode;style?:CSSProperties}>=({children,style})=><div style={{fontSize:76,fontWeight:750,lineHeight:1.13,letterSpacing:-2,...style}}>{children}</div>;
 const Credit:FC<{children:ReactNode}>=({children})=><div style={{position:'absolute',right:76,top:886,fontSize:20,color:'#576567',background:'#f6f0e8ed',padding:'7px 15px',borderRadius:4}}>{children}</div>;
@@ -50,6 +50,50 @@ const Grid:FC<{pixels:number[];n:number;size?:number;color?:string;paper?:string
 const CAT=[129,195,255,153,255,231,126,60];
 const HEART=[102,255,255,255,126,60,24,0];
 const bytes=(values:number[])=>values.flatMap(b=>Array.from({length:8},(_,i)=>(b>>(7-i))&1));
+
+const QrCard:FC<{style?:CSSProperties;large?:boolean}>=({style,large=false})=><Box style={{width:large?370:270,height:large?490:365,padding:large?32:24,textAlign:'center',background:'#fff',...style}}>
+ <Label style={{fontSize:large?38:29,color:TEAL,marginBottom:20}}>Try the lab</Label>
+ <Img src={file('art/ai-lab-qr.png')} style={{width:large?300:222,height:large?300:222,imageRendering:'pixelated'}}/>
+ <div style={{fontSize:large?23:18,color:TEAL,fontWeight:650,marginTop:16}}>ai.lucasacademy.org</div>
+</Box>;
+
+/** Every sprite is a real training picture. Sevens are amber, ones cyan. */
+function PixelRain({tl,data,frame}:{tl:Timeline;data:VisualData;frame:number}){
+ const p=Math.min(1,Math.max(0,frame/Math.max(1,at(tl,'race-run')-1)));
+ const merge=mix(p,.48,.98);
+ const targets=data.pixels.map((v,i)=>v?i:-1).filter(i=>i>=0);
+ const cards=data.training.map((_,i)=>{
+  // 197 is coprime to 419: interleave the two classes without repeating or
+  // omitting a training image, keeping sevens throughout the whole opening.
+  const tile=data.training[(i*197)%data.training.length];
+  const launch=i/data.training.length*.86-.22;
+  const age=(p-launch)/.34;
+  if(age<0||age>1)return null;
+  const depth=.3+(i*73%101)/145;
+  const fallX=(i*137%25)*82-45+Math.sin(age*5+i)*28;
+  const fallY=age*1250-160;
+  const cell=targets[i%targets.length];
+  const targetX=695+(cell%20)*25,targetY=205+Math.floor(cell/20)*25;
+  const px=fallX*(1-merge)+targetX*merge,py=fallY*(1-merge)+targetY*merge;
+  const size=(38+depth*78)*(1-merge)+19*merge;
+  const opacity=(.2+depth*.6)*Math.sin(Math.PI*age)*(.65+.35*merge);
+  return <g key={i} transform={`translate(${px} ${py}) rotate(${(1-merge)*Math.sin(i)*7}) scale(${size/20})`} opacity={opacity}>
+   <path d={tile.d} fill={tile.yes?GOLD:CYAN}/>
+  </g>;
+ });
+ const core=data.pixels.map((v,i)=>v?`M${i%20},${Math.floor(i/20)}h1v1h-1z`:'').join(' ');
+ return <>
+  <AbsoluteFill style={{height:930,background:'radial-gradient(ellipse at 50% 50%,#144c52,#071b25 75%)'}}/>
+  <svg width={1920} height={930} style={{position:'absolute',top:0}}>
+   <defs><linearGradient id="rain-fade" x1="0" y1="0" x2="0" y2="1"><stop stopColor={CYAN} stopOpacity="0"/><stop offset=".6" stopColor={CYAN} stopOpacity=".25"/><stop offset="1" stopColor={CYAN} stopOpacity="0"/></linearGradient></defs>
+   {Array.from({length:24},(_,i)=><rect key={i} x={i*84+20} y={-180+((frame*(1+i%4)*5+i*51)%600)} width={1.5} height={500} fill="url(#rain-fade)" opacity={1-merge}/>)}
+   {cards}
+   <g transform="translate(695 205) scale(25)" opacity={mix(p,.78,.98)}><path d={core} fill={GOLD}/></g>
+  </svg>
+  <Big style={{position:'absolute',left:95,top:180,fontSize:85,color:PAPER,opacity:1-mix(p,.35,.8)}}>How fast?</Big>
+  <Credit>Pixel animation · real training pictures · Author</Credit>
+ </>;
+}
 
 function Race({tl,data,frame,line}:{tl:Timeline;data:VisualData;frame:number;line:Line}){
  const elapsed=Math.max(0,(frame-at(tl,'race-run'))/30-0.5);
@@ -183,15 +227,16 @@ function Lab({line,tl,frame}:{line:Line;tl:Timeline;frame:number}){
   <div style={{position:'absolute',left:70,top:160,width:1780,height:705,borderRadius:18,overflow:'hidden',border:'2px solid #9fada0',background:'#f4f5fa'}}>
    <Take name="capture/lab.mp4" poster={`capture/${poster}.png`} from={start} start={sourceStart} frames={frames} rate={twenty?0.6:0.55} style={{width:1056,height:704,top:0}}/>
   </div>
-  <Box style={{left:twenty?1090:1190,top:twenty?260:190,width:twenty?665:585,height:twenty?520:650,padding:30,background:'#f6f0e8f7'}}>
+  <Box style={{left:twenty?1030:1030,top:twenty?260:190,width:twenty?520:520,height:twenty?520:650,padding:30,background:'#f6f0e8f7'}}>
    <Label style={{fontSize:34,color:TEAL,marginBottom:25}}>{twenty?'The learned points':'Points · enlarged'}</Label>
-   {twenty?<Img src={file('capture/twenty-points.png')} style={{width:410,height:410,objectFit:'contain',marginLeft:90,imageRendering:'pixelated'}}/>:
-    <><div style={{position:'relative',width:430,height:380,overflow:'hidden',marginLeft:55}}>
+   {twenty?<Img src={file('capture/twenty-points.png')} style={{width:410,height:410,objectFit:'contain',marginLeft:20,imageRendering:'pixelated'}}/>:
+    <><div style={{position:'relative',width:380,height:380,overflow:'hidden',marginLeft:40}}>
      <Take name="capture/lab.mp4" poster={`capture/${poster}.png`} from={start} start={sourceStart} frames={frames} rate={0.55} style={{width:1920,height:1280,left:-649,top:-263}}/>
-    </div><div style={{position:'absolute',left:40,top:485,width:500,height:125,overflow:'hidden'}}>
+    </div><div style={{position:'absolute',left:40,top:485,width:440,height:125,overflow:'hidden'}}>
      <Take name="capture/lab.mp4" poster={`capture/${poster}.png`} from={start} start={sourceStart} frames={frames} rate={0.55} style={{width:2688,height:1792,left:-910,top:-1027.6}}/>
     </div></>}
   </Box>
+  <QrCard style={{left:1600,top:230}}/>
   <Credit>Browser recording · Lucas Academy · {twenty?'trained model restored':'3×3 activity'}</Credit>
  </>;
 }
@@ -277,19 +322,20 @@ function Limits({chat=false}:{chat?:boolean}){
 
 function Closing({line,tl}:{line:Line;tl:Timeline}){
  if(line.visual==='family') return <><Take name="muse/G3.mp4" poster="muse/G3-last.png" from={at(tl,'family')} style={{height:930}}/><Credit>AI generated · Muse · illustration</Credit></>;
- if(line.visual==='invite')return <><AbsoluteFill style={{background:TEAL}}/><Label style={{position:'absolute',left:110,top:220,color:CYAN,fontSize:37}}>Lucas Academy</Label><Big style={{position:'absolute',left:110,top:345,fontSize:120,color:PAPER}}>What would you<br/>teach it?</Big><div style={{position:'absolute',right:150,top:280,width:400,height:400,opacity:.85}}><Grid n={8} pixels={bytes(HEART)} color={GOLD} paper={TEAL} size={380}/></div><Credit>Illustration · Author</Credit></>;
+ if(line.visual==='invite')return <><AbsoluteFill style={{background:TEAL}}/><Label style={{position:'absolute',left:110,top:220,color:CYAN,fontSize:37}}>Lucas Academy</Label><Big style={{position:'absolute',left:110,top:345,fontSize:120,color:PAPER}}>What would you<br/>teach it?</Big><QrCard large style={{right:130,top:240}}/><Credit>Website · Lucas Academy</Credit></>;
  return <>
-  <div style={{position:'absolute',left:95,top:220,display:'flex',gap:35}}>{['Print','Color','Teach'].map((s,i)=><Box key={s} style={{position:'relative',width:550,height:535,padding:30}}><Label style={{fontSize:48,color:TEAL,marginBottom:25}}>{s}</Label><Img src={file(i===0?'curriculum/worksheet-heart-cat.png':i===1?'curriculum/cat_bits.png':'capture/twenty-trained.png')} style={{width:'100%',height:370,objectFit:'contain'}}/></Box>)}</div>
-  <Label style={{position:'absolute',left:100,top:795,fontSize:38,color:TEAL}}>{line.visual==='url'?'Website coming soon':'Try it together.'}</Label><Credit>Lucas Academy · worksheets and browser lab</Credit>
+  <div style={{position:'absolute',left:95,top:220,display:'flex',gap:35}}>{['Print','Color','Teach'].map((s,i)=>i===2&&line.visual==='url'?<QrCard key={s} large style={{position:'relative',width:550,height:535,padding:40}}/>:<Box key={s} style={{position:'relative',width:550,height:535,padding:30}}><Label style={{fontSize:48,color:TEAL,marginBottom:25}}>{s}</Label><Img src={file(i===0?'curriculum/worksheet-heart-cat.png':i===1?'curriculum/cat_bits.png':'capture/twenty-trained.png')} style={{width:'100%',height:370,objectFit:'contain'}}/></Box>)}</div>
+  <Label style={{position:'absolute',left:100,top:795,fontSize:38,color:TEAL}}>{line.visual==='url'?'ai.lucasacademy.org':'Try it together.'}</Label><Credit>Lucas Academy · worksheets and browser lab</Credit>
  </>;
 }
 
 function Visual({line,tl,data,frame}:{line:Line;tl:Timeline;data:VisualData;frame:number}){
  const v=line.visual;
+ if(v==='pixel-rain')return <PixelRain tl={tl} data={data} frame={frame}/>;
  if(v.startsWith('ratio-'))return <Ratios which={v==='ratio-claude'?'claude':'astra'}/>;
  if(v==='terminal')return <><div style={{position:'absolute',left:90,top:190,width:1740,height:650,overflow:'hidden',background:'#000',borderRadius:18}}><Take name="capture/terminal-view.mp4" poster="capture/terminal-view.png" from={line.from} frames={90} fit="contain" style={{height:'100%',width:'100%'}}/></div><Credit>Real terminal recording · saved original results · Author</Credit></>;
  if(line.scene===1)return <Race tl={tl} data={data} frame={frame} line={line}/>;
- if(v==='title')return <><Take name="muse/G1.mp4" poster="muse/G1-last.png" from={line.from} style={{height:930}}/><div style={{position:'absolute',inset:0,height:930,background:'#0c2d2ee6'}}/><Label style={{position:'absolute',left:100,top:220,color:CYAN,fontSize:35}}>Family AI Lab · Lucas Academy</Label><Big style={{position:'absolute',left:100,top:330,color:PAPER,fontSize:94}}>A 1957 AI model is faster<br/>than ChatGPT Astra<br/>and Claude Fable?</Big><Credit>AI generated background · Muse · illustration</Credit></>;
+ if(v==='title')return <><Take name="muse/G1.mp4" poster="muse/G1-last.png" from={line.from} style={{height:930}}/><div style={{position:'absolute',inset:0,height:930,background:'#0c2d2ee6'}}/><Label style={{position:'absolute',left:100,top:220,color:CYAN,fontSize:35}}>Family AI Lab · Lucas Academy</Label><Big style={{position:'absolute',left:100,top:330,color:PAPER,fontSize:94}}>A 1957 AI model is faster<br/>than ChatGPT Astra<br/>and Claude Fable?</Big><Label style={{position:'absolute',left:110,top:800,fontSize:29,color:CYAN}}>By Lucas Academy Team</Label><Credit>AI generated background · Muse · illustration</Credit></>;
  if(v==='time-travel')return <><Take name="muse/G1.mp4" poster="muse/G1-last.png" from={at(tl,'title')} style={{height:930}}/><Big style={{position:'absolute',left:100,top:225,fontFamily:"'Georgia', serif",fontSize:180,color:'#fff3d8',textShadow:'0 3px 25px #18201a'}}>1957</Big><Credit>AI generated · Muse · illustration</Credit></>;
  if(line.scene===3)return <Pictures line={line} tl={tl} frame={frame}/>;
  if(v.startsWith('apple-')||v==='tomato')return <AppleGame line={line} frame={frame}/>;

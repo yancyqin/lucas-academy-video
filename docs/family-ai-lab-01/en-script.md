@@ -1,11 +1,11 @@
 # Family AI Lab 1 · English review script
 
-Unvoiced review. Experiment values come only from the original results/*.json, excluding reruns.
+Louise narration script. One common picture, English default audio. Original experiment values only.
 
 ## S1 · The same picture
 
-- **fa01-01-01** You probably recognize this picture before you have even finished looking at it.
-- **fa01-01-02** Now give the same picture to four programs. Ask each one: is this a seven?
+- **fa01-01-01** How fast can a computer recognize a seven?
+- **fa01-01-02** Give the same seven to four programs, and watch who answers first.
 - **fa01-01-03** Ready? Let's start their clocks together and watch what happens.
 - **fa01-01-04** X has already finished. Its time is 0.37 microseconds per picture.
 - **fa01-01-05** These are the original result files saved from the experiment.
@@ -73,7 +73,7 @@ Unvoiced review. Experiment values come only from the original results/*.json, e
 - **fa01-06-06** After learning, another card could be presented, and the output indicated the machine's decision.
 - **fa01-06-07** The positions of those adjustable controls physically stored what the machine had learned.
 - **fa01-06-08** A 1958 newspaper headline described a new Navy device that learns by doing.
-- **fa01-06-09** Our race used a simplified perceptron rule written in JavaScript and running on this Mac.
+- **fa01-06-09** This race used a simplified perceptron rule written in JavaScript and running on this Mac.
 - **fa01-06-10** It had already learned from 419 training pictures before entering the race.
 
 ## S7 · What came next
@@ -81,7 +81,7 @@ Unvoiced review. Experiment values come only from the original results/*.json, e
 - **fa01-07-01** Why was it so fast? Now we can look at how much work it actually does.
 - **fa01-07-02** For one picture, it needs at most 400 additions to collect the points.
 - **fa01-07-03** The local Qwen model has roughly eight billion parameters, a much larger collection of numbers.
-- **fa01-07-04** It computes through layers, then produces its answer a token at a time.
+- **fa01-07-04** It calculates across many layers, then writes its answer one token at a time.
 - **fa01-07-05** This simple artificial neuron was part of a much longer story of increasingly complex networks.
 - **fa01-07-06** In 1969, Minsky and Papert published a detailed mathematical study of perceptrons and their limitations.
 - **fa01-07-07** Interest later cooled for a time. Backpropagation helped make networks with multiple layers learn effectively.
@@ -99,5 +99,5 @@ Unvoiced review. Experiment values come only from the original results/*.json, e
 - **fa01-08-03** One person reads the numbers, while someone else colors in the hidden picture.
 - **fa01-08-04** Then take turns being the neuron. Decide together how much each clue should count.
 - **fa01-08-05** When you want the computer to try, open the browser lab and teach it with examples.
-- **fa01-08-06** The website address will be announced soon, with the printable worksheets in the same place.
+- **fa01-08-06** Scan the code to open the lab and find the printable worksheets.
 - **fa01-08-07** Come explore with us at Lucas Academy. What would you and your child like to teach it to recognize first?

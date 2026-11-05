@@ -1,21 +1,32 @@
-# Family AI Lab 01 — review delivery
+# Family AI Lab 01 — bilingual film
 
-The owner's latest decisions override the earlier two-film plan: **one picture, English labels, English default, separate Chinese audio and subtitles**. At this review stage narration is deferred. The single MP4 has two selectable subtitle tracks, with English selected by default. Subtitles are not burned into the picture. The two caption-preview compositions are inspection tools for the same common timeline, not separate film deliveries.
+One common picture uses short English labels. Louise narrates both languages at speed 1.1 with a warm, curious, conversational instruction. The MP4 contains two independent audio tracks and two independent subtitle tracks; English is selected by default for both. Captions are not burned into the picture. `FamilyAiLab01En` / `Zh` are inspection compositions for the same timeline, not separate film deliveries.
 
 ## Delivery
 
-- Review: `out/family-ai-lab-01/review/family-ai-lab-01.review.mp4`, 1920×1080, 30 fps, approximately 7:15, no audio.
-- External captions: `out/family-ai-lab-01/review/en.srt`, `out/family-ai-lab-01/review/zh-Hans.srt`.
+- Film: `out/family-ai-lab-01/delivery/family-ai-lab-01.bilingual.mp4`, 1920×1080, 30 fps. The exact duration and measured loudness are in [verification.json](verification.json).
+- External captions: `out/family-ai-lab-01/delivery/en.srt`, `out/family-ai-lab-01/delivery/zh-Hans.srt`.
+- Separate audio: `out/family-ai-lab-01/audio/en.m4a`, `out/family-ai-lab-01/audio/zh.m4a`.
 - Covers: `out/family-ai-lab-01/cover/design-{1,2,3}.{en,zh}.png`, 1280×720. `all-designs.png` is the six-cover contact sheet.
 - Scripts: [English](en-script.md), [Chinese](zh-script.md), common sentence IDs `fa01-NN-MM`.
-- Verification: `out/family-ai-lab-01/review/verification.json` and [committed check result](verification.json).
-- QuickTime Player: View → Subtitles → English / Chinese selects the independent caption track. Both languages were checked visibly in the native player.
+- Verification: `out/family-ai-lab-01/delivery/verification.json` and [committed check result](verification.json).
+- QuickTime Player: View → Languages selects English / Chinese audio; View → Subtitles selects either independent caption track. The earlier silent review remains under `out/family-ai-lab-01/review/` as a previous revision.
+
+The opening animates all 419 actual training sprites: 228 sevens and 191 ones, in amber and cyan. They fall as pixel rain and gather into the actual race input. The native terminal shot retains the saved result rows while cropping out the shell username, host and cursor. The browser-lab scenes and final invitation show a QR code for https://ai.lucasacademy.org/ . The old website placeholder is removed. QR recognition is checked on a rendered 1280×720 film frame, not just on the source image.
+
+## Narration and timing
+
+152 selected sentence WAVs are preserved under the ignored `public/family-ai-lab-01/narration/` input directory and in the local data backup. Each take has a SHA256, actual duration, original synthesis settings and source. English/Chinese plans are in [voice.en.json](voice.en.json) and [voice.zh.json](voice.zh.json). [voice-overrides.json](voice-overrides.json) records pronunciation-specific respellings and unambiguous paraphrases. These do not change experimental numbers; captions retain ordinary spelling. [voice-choices.json](voice-choices.json) records the inspected take chosen for each sentence.
+
+Whisper small transcribes every selected sentence independently. Uncertain lines receive a second medium-model pass; transcripts and hashes remain in the local data backup. Scores only identify review candidates: number units and Mandarin homophones require separate inspection. Rephrased retakes clarify “our race”, “through layers”, the row pronunciation of 行, and the 亿 units in the brain/model counts.
+
+Each sentence starts 0.1 seconds into its picture interval. The common interval uses the longer actual English/Chinese take plus a 0.4-second gap; no speech is stretched or clipped. The race interval also preserves real elapsed finish times. The final invitation adds five seconds to scan the code. Two-pass loudness normalization targets −16 LUFS and −1 dBTP. Final AAC audio is measured again after muxing. All Muse and browser footage is muted so only the selected narration enters the two audio tracks.
 
 Cover directions: 1 — brass photocell array; 2 — paper card and circuits; 3 — green CRT. Generated backgrounds contain no text. Every title, model name and number is typeset by code. Bilingual cover questions and the surrounding comparison copy follow the film-specific owner plan, which overrides the general repository cover rules. No series ribbon or diagonal band.
 
 ## Experiment selection
 
-The owner explicitly retained the original complete round after seeing the later Claude timing change. No benchmarks or model calls were made during production. `reruns/` is not read by the build or compositions. [Selected-data hashes](selected-data.json) freeze the four original JSON inputs. The native terminal clip shows the saved original files, clearly labelled as records; it is not presented as a new model run.
+The owner explicitly retained the original complete round after seeing the later Claude timing change. No benchmarks or calls to the race contenders were made during production. `reruns/` is not read by the build or compositions. [Selected-data hashes](selected-data.json) freeze the four original JSON inputs. The native terminal clip shows the saved original files, clearly labelled as records; it is not presented as a new model run.
 
 The race runs at 1:1 elapsed seconds. JavaScript completes before the next 30 fps frame. Each model's displayed finishing time comes directly from its original JSON median. The illustrative input is the actual `seven-a` grid. A single small methodological line stays in the race corner. X's name is withheld until S6. The earlier twelve-example experiment is never used in the film.
 
@@ -46,25 +57,29 @@ The 400-point and approximately eight-billion-parameter comparison uses area, no
 
 ## Rebuild
 
-From the existing checkout, without a worktree:
+From the existing checkout, without a worktree, first restore the local media backup if inputs are absent:
 
 ```sh
-npm run fal01:prepare
+python3 ../lucas-academy-video-data/family-ai-lab-01/restore.py "$PWD"
+npm run fal01:timeline:voiced
+npm run fal01:voice:mix
 npm run fal01:cover
 node scripts/family-ai-lab-01/render.cjs --stills
-npm run fal01:render
-npm run fal01:check
+npm run fal01:final
+npm run fal01:check:final
 npm run fal01:backup
 ```
 
-Restore the local media backup first on another checkout: `python3 ../lucas-academy-video-data/family-ai-lab-01/restore.py "$PWD"`. It verifies SHA256SUMS before copying and refuses differing destination files. Backup includes the three Muse originals, three generated backgrounds, curriculum snapshots, native recordings and capture derivatives. Media and finished video are ignored in Git.
+Restore verifies SHA256SUMS before copying and refuses differing destination files. The backup includes Muse originals, generated backgrounds, curriculum snapshots, native recordings, capture derivatives, QR/training sprite inputs, all 152 selected narration WAVs, transcripts and loudness measurements. Media and finished video are ignored in Git. Rebuilding from the selected WAVs requires no model download or voice-profile access.
 
-To recapture the browser rather than restore it, serve the sibling curriculum with `python3 -m http.server 8149 --bind 127.0.0.1 --directory ../lucas-academy-ai`, then run `npm run fal01:capture`. The capture script uses installed Chrome and the bundled Playwright runtime; `PLAYWRIGHT_DIR` can supply another runtime. A missing Playwright FFmpeg binary can be installed through its `playwright install ffmpeg` command. `python3 scripts/family-ai-lab-01/record_terminal.py` recaptures the saved-result viewer in macOS Terminal, without rerunning an experiment. Cover rendering uses Pillow in `.venv-align`.
+The project uses `.venv-align` for Pillow, qrcode, NumPy, soundfile, Whisper and OpenCC. The sibling media repository's `.conda` runtime, CosyVoice3 weights and private Louise profiles are needed only to generate new takes (`fal01:voice:en` / `zh`). Synthesis uses at most two CPU processes with three Torch threads each. Cached English/Chinese text-normalizer FSTs are required; synthesis does not fetch unrelated language packs. Changed lines require a new `--take` and explicit selection before `fal01:voice:select` copies them into portable inputs.
+
+`fal01:prepare` rebuilds curriculum inputs, QR/training sprites and the estimated silent-review timeline. Follow it with `fal01:timeline:voiced` before rebuilding the narrated delivery. `fal01:visuals` alone refreshes the QR, crop and sprites. To recapture the browser, serve the sibling curriculum with `python3 -m http.server 8149 --bind 127.0.0.1 --directory ../lucas-academy-ai`, then run `npm run fal01:capture`. Capture uses installed Chrome and the bundled Playwright runtime; `PLAYWRIGHT_DIR` can supply another runtime. `npm run fal01:terminal` records only the saved-result viewer in macOS Terminal; it makes no experiment call.
 
 ## Still for the owner to decide
 
 1. Cover direction 1, 2 or 3.
-2. Website address; review says “Website coming soon”.
-3. The title currently uses grammatical **A 1957**, as in the plan.
-4. Qwen is currently retained; its small incorrect race result remains unspoken in S1.
-5. After picture/script approval, try Louise's pace and tone for each language, then align the two independent audio tracks to the common picture. English will be the default audio track. No voice has been generated yet.
+2. The title currently uses grammatical **A 1957**, as in the plan.
+3. Qwen is currently retained; its small incorrect race result remains unspoken in S1.
+
+The website is confirmed and full narration is authorized. Pace or tone can be adjusted after listening to this version.
