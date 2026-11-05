@@ -28,5 +28,5 @@
   "delivery": "one common English-label picture",
   "defaultLanguage": "en",
   "audio": "Louise/en default; Louise/zh independent; speed 1.1",
-  "subtitles": "independent English default and Simplified Chinese tracks"
+  "subtitles": "external SRT files only; no embedded subtitle tracks or subtitle band"
 }

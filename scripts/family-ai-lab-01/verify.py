@@ -15,6 +15,8 @@ def main():
     voiced = '--voiced' in sys.argv
     delivery = OUT / ('delivery' if voiced else 'review')
     tl = json.loads((ROOT / "public/family-ai-lab-01/timeline.json").read_text())
+    revision=tl.get('revision',1)
+    if revision>=2:delivery=delivery/f'v{revision}'
     selected = json.loads((ROOT / "docs/family-ai-lab-01/selected-data.json").read_text())
     if voiced:
         assert tl.get('narrated')
@@ -48,6 +50,11 @@ def main():
         cues = re.findall(r"\d{2}:\d{2}:\d{2},\d{3} --> \d{2}:\d{2}:\d{2},\d{3}", text)
         assert len(cues) == len(tl["lines"])
         cue_times.append(cues)
+        blocks=re.split(r'\n\s*\n',text.strip())
+        for block,line in zip(blocks,tl['lines']):
+            words=' '.join(block.splitlines()[2:])
+            expected=line['text']['en' if lang=='en' else 'zh']
+            assert re.sub(r'\s','',words)==re.sub(r'\s','',expected),(lang,line['id'])
     assert cue_times[0] == cue_times[1]
     film = delivery / ('family-ai-lab-01.bilingual.mp4' if voiced else 'family-ai-lab-01.review.mp4')
     probe = json.loads(subprocess.check_output(["ffprobe", "-v", "error", "-show_streams", "-show_format", "-of", "json", str(film)]))
@@ -62,9 +69,9 @@ def main():
         assert all(s['codec_name']=='aac' for s in audio)
     else:
         assert not audio, 'No narration at review stage'
-    assert len(subtitles) == 2
-    assert [(s["tags"]["language"], s["disposition"]["default"]) for s in subtitles] == [("eng", 1), ("zho", 0)]
-    for index, lang in enumerate(("en", "zh")):
+    assert len(subtitles) == (0 if revision>=2 else 2)
+    if revision<2:assert [(s["tags"]["language"], s["disposition"]["default"]) for s in subtitles] == [("eng", 1), ("zho", 0)]
+    for index, lang in ([] if revision>=2 else enumerate(("en", "zh"))):
         embedded = subprocess.check_output(["ffmpeg", "-v", "error", "-i", str(film), "-map", f"0:s:{index}", "-c:s", "srt", "-f", "srt", "-"], text=True)
         blocks = re.split(r"\n\s*\n", embedded.strip())
         assert len(blocks) == len(tl["lines"])
@@ -75,18 +82,27 @@ def main():
     assert abs(float(probe["format"]["duration"]) - tl["durationInFrames"] / tl["fps"]) < .1
     if voiced:
         assert all(abs(float(s['duration']) - tl['durationInFrames']/tl['fps']) < .1 for s in audio)
-    for n in (1, 2, 3):
-        for lang in ("en", "zh"):
-            image = OUT / f"cover/design-{n}.{lang}.png"
-            dims = json.loads(subprocess.check_output(["ffprobe", "-v", "error", "-show_entries", "stream=width,height", "-of", "json", str(image)]))["streams"][0]
-            assert (dims["width"], dims["height"]) == (1280, 720)
+    covers=[OUT/f"cover/cover-v2.{lang}.png" for lang in ('en','zh')] if revision>=2 else [OUT/f"cover/design-{n}.{lang}.png" for n in (1,2,3) for lang in ('en','zh')]
+    for image in covers:
+        dims=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_entries','stream=width,height','-of','json',str(image)]))['streams'][0]
+        assert (dims['width'],dims['height'])==(1280,720)
+    if revision>=2:
+        intro=json.loads((ROOT/'public/family-ai-lab-01/intro.json').read_text())
+        assert intro['ready']
+        assert hashlib.sha256((ROOT/'public/family-ai-lab-01'/intro['path']).read_bytes()).hexdigest()==intro['sha256']
+        assert tl['lines'][0]['visual']=='time-travel-intro'
+        assert tl['lines'][0]['duration']/tl['fps']>=intro['seconds']
+        assert len(tl['lines'])==77
+        accepted=json.loads((ROOT/'docs/family-ai-lab-01/accepted-script-v2.json').read_text())
+        for name,digest in accepted['sha256'].items():
+            assert hashlib.sha256((ROOT/'docs/family-ai-lab-01'/name).read_bytes()).hexdigest()==digest,name
     check = subprocess.run(["ffmpeg", "-hide_banner", "-i", str(film), "-vf", "blackdetect=d=0.07:pix_th=0.06:pic_th=0.985", "-an", "-sn", "-f", "null", "-"], text=True, capture_output=True, check=True)
     black = [l for l in check.stderr.splitlines() if "black_start:" in l]
     assert not black, black
     result = {"durationSeconds": tl["durationInFrames"] / tl["fps"], "video": "1920x1080, 30 fps",
-              "audioTracks": len(audio), "subtitleTracks": [{"language": "English", "default": True}, {"language": "Simplified Chinese", "default": False}],
-              "captions": "separate selectable tracks, not burned in", "cueCountPerLanguage": len(tl["lines"]),
-              "blackSegments": black, "covers": "6 PNGs, 1280x720", "baselineHashes": "all selected originals unchanged"}
+              "audioTracks": len(audio), "subtitleTracks": [] if revision>=2 else [{"language": "English", "default": True}, {"language": "Simplified Chinese", "default": False}],
+              "captions": "no embedded or burned captions; external SRTs only; no reserved subtitle band" if revision>=2 else "separate selectable tracks, not burned in", "cueCountPerLanguage": len(tl["lines"]),
+              "blackSegments": black, "covers": f"{len(covers)} PNGs, 1280x720", "baselineHashes": "all selected originals unchanged"}
     if voiced:
         levels = {}
         for index, lang in enumerate(('en','zh')):

@@ -1,12 +1,4 @@
 {
-  "zh/fa01-01-02": {
-    "spoken": "同一张数字七，交给四位选手。比比谁先回答。",
-    "reason": "Use a clear digit phrase and natural sentence breaks; the matching Chinese caption uses the same wording."
-  },
-  "zh/fa01-01-07": {
-    "spoken": "它比克劳德 Fable，快约三百万倍。",
-    "reason": "Chinese spoken form of Claude and a short pause before the unchanged measured ratio."
-  },
   "zh/fa01-03-10": {
     "spoken": "每航八个零和一，刚好装进一个字节。",
     "reason": "航 forces háng for the row sense of 行; captions retain 每行."
@@ -22,5 +14,9 @@
   "zh/fa01-07-03": {
     "spoken": "本机那个千问模型，参数大约有八十亿。",
     "reason": "Keep the critical 亿 unit clearly at the phrase end; the model card count is rounded to eight billion in the film."
+  },
+  "zh/fa01-07-12": {
+    "spoken": "比如，这次本机的千问，只答对了五张。",
+    "reason": "A short pause clarifies 比如 and 本机; the owner’s wording and result are unchanged."
   }
 }

@@ -1,6 +1,6 @@
 # Family AI Lab 1 · Complete English review script v2
 
-**Status: complete copy draft for review, 2026-11-05.** No revised video, Muse shot or narration has been produced.
+**Status: production update authorized from Yancy’s edited Chinese script, 2026-11-05.** English follows the Chinese edits.
 
 [中文审核稿](full-review-v2.zh.md)
 
@@ -10,11 +10,11 @@ English is the default audio; Chinese is an independent track. The next MP4 has 
 
 Voice: Louise. Lively opening; clear, measured technical explanation. Read AI fluently, without an artificial gap between the letters. Read 5.1 as “five point one”.
 
-Sentence IDs belong to this review draft for line-by-line corrections. This draft has not replaced the production script or been bound to existing voice takes.
+These 77 matching narration entries now drive the production update. Retain the selected original experiment round.
 
 ## S1 · Back to 1957: the race
 
-[Picture direction — not spoken] The new green pixel seven, advanced metal enclosure and cyan/gold light streams form a portal into a 1957 laboratory. Then move into the real training-picture rain and speed race. Read the opening with lively curiosity; do not explain the speed advantage yet.
+[Picture direction — not spoken] The green pixel seven and cyan/gold light streams lead through a time portal into a 1957 lab. End focused on a front-on retro screen. Every remaining S1 shot—the actual training-picture rain, race, saved records and hidden X—plays inside that screen. Read the opening with lively curiosity; do not explain the speed advantage yet.
 
 **fa01-01-01**
 
@@ -62,7 +62,8 @@ So who is this mysterious X, with its name still hidden from us?
 
 **fa01-03-01**
 
-For now, all we need is paper and a pencil.
+
+Let’s return to our family AI classroom. First, get some paper and pencils.
 
 **fa01-03-02**
 
@@ -106,13 +107,15 @@ So the whole tiny cat takes just eight bytes to store.
 
 **fa01-03-12**
 
-Send those numbers to a friend. They can rebuild your cat on paper, square by square.
+
+Send the numbers to a friend. They can recreate the picture on paper.
 
 ## S4 · Be a neuron
 
 **fa01-04-01**
 
-We have our squares. But how can something make a decision from them?
+
+Your eyes can see the colored squares. How do you work out what the picture is?
 
 **fa01-04-02**
 
@@ -164,7 +167,8 @@ Back in 1949, Hebb proposed that repeated activity together could strengthen con
 
 **fa01-05-01**
 
-Now let's move our little points game into the browser laboratory.
+
+Now let’s move the points game into our Family AI Lab webpage.
 
 **fa01-05-02**
 
@@ -300,11 +304,9 @@ Even a simple request can still require a great deal of computation.
 
 **fa01-07-12**
 
-In this experiment, the local Qwen model answered only five of the pictures correctly.
 
-**fa01-07-13**
+For example, the local Qwen model got only five pictures right in this experiment.
 
-And an answer that sounds confident is still something we may need to check.
 
 ## S8 · Start at the table: what the race means
 

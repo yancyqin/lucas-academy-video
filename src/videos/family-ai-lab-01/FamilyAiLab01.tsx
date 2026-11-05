@@ -1,4 +1,5 @@
 import type {CSSProperties, FC, ReactNode} from 'react';
+import {createContext, useContext} from 'react';
 import {AbsoluteFill, Img, OffthreadVideo, Sequence, interpolate, staticFile, useCurrentFrame, type CalculateMetadataFunction} from 'remotion';
 import xResult from '../../../scripts/perceptron-race/results/perceptron-js.json';
 import claudeResult from '../../../scripts/perceptron-race/results/claude-fable.json';
@@ -9,8 +10,8 @@ import recording from '../../../docs/family-ai-lab-01/capture.json';
 type Lang = 'en' | 'zh';
 type Line = {id:string; scene:number; visual:string; text:Record<Lang,string>; from:number; duration:number; captionFrames:number};
 type Timeline = {fps:number; durationInFrames:number; lines:Line[]; titles:string[]; values:Record<string,string|number>};
-type VisualData = {pixels:number[]; points:number[]; rounds:number; training:{d:string;yes:boolean}[]};
-export type FamilyProps = {tl?:Timeline|null; data?:VisualData|null; captions?:Lang|null};
+type VisualData = {pixels:number[]; points:number[]; rounds:number; training:{d:string;yes:boolean}[]; intro:{ready:boolean;frames:number}};
+export type FamilyProps = {tl?:Timeline|null; data?:VisualData|null;};
 const file=(p:string)=>staticFile(`family-ai-lab-01/${p}`);
 const PAPER='#f1ecdf', INK='#172a2c', TEAL='#103e42', GOLD='#efba63', CYAN='#8be0dc', BLUE='#4779d7', ORANGE='#dc8352';
 const FONT="'Avenir Next', 'Arial', 'Hiragino Sans GB', sans-serif";
@@ -20,17 +21,18 @@ const mix=(f:number,a:number,b:number)=>interpolate(f,[a,b],[0,1],clamp);
 const at=(tl:Timeline,v:string)=>tl.lines.find(l=>l.visual===v)!.from;
 const sceneAt=(tl:Timeline,s:number)=>tl.lines.find(l=>l.scene===s)!.from;
 const vtime=(name:string)=>recording.events.find(e=>e.name===name)!.seconds;
+const ScreenContext=createContext(false);
 
 export const calculateFamilyMetadata:CalculateMetadataFunction<FamilyProps>=async({props,abortSignal})=>{
  const read=async(name:string)=>{const r=await fetch(file(name),{signal:abortSignal});if(!r.ok)throw Error(`Missing ${name}: run npm run fal01:prepare`);return r.json();};
- const [tl,picture,model,training]=await Promise.all([read('timeline.json'),read('picture.json'),read('trained-model.json'),read('training-tiles.json')]);
- return {props:{...props,tl,data:{pixels:picture.pixels,points:model.points,rounds:model.rounds,training}},fps:tl.fps,durationInFrames:tl.durationInFrames};
+ const [tl,picture,model,training,intro]=await Promise.all([read('timeline.json'),read('picture.json'),read('trained-model.json'),read('training-tiles.json'),read('intro.json')]);
+ return {props:{...props,tl,data:{pixels:picture.pixels,points:model.points,rounds:model.rounds,training,intro}},fps:tl.fps,durationInFrames:tl.durationInFrames};
 };
 
 const Box:FC<{children:ReactNode;style?:CSSProperties}>=({children,style})=><div style={{position:'absolute',boxSizing:'border-box',borderRadius:22,background:'#fffaf0',border:'1px solid #203d3e22',boxShadow:'0 12px 40px #173b3012',...style}}>{children}</div>;
 const Label:FC<{children:ReactNode;style?:CSSProperties}>=({children,style})=><div style={{fontSize:30,fontWeight:650,letterSpacing:1,...style}}>{children}</div>;
 const Big:FC<{children:ReactNode;style?:CSSProperties}>=({children,style})=><div style={{fontSize:76,fontWeight:750,lineHeight:1.13,letterSpacing:-2,...style}}>{children}</div>;
-const Credit:FC<{children:ReactNode}>=({children})=><div style={{position:'absolute',right:76,top:886,fontSize:20,color:'#576567',background:'#f6f0e8ed',padding:'7px 15px',borderRadius:4}}>{children}</div>;
+const Credit:FC<{children:ReactNode}>=({children})=>{const screen=useContext(ScreenContext);return <div data-shot-credit style={{position:'absolute',right:screen?140:76,bottom:screen?60:34,fontSize:screen?19:20,color:'#576567',background:'#f6f0e8ed',padding:'7px 15px',borderRadius:4}}>{children}</div>;};
 
 /** One unbroken source take followed by its final frame; no video loops. */
 const Take:FC<{name:string;from:number;poster:string;frames?:number;start?:number;rate?:number;fit?:'cover'|'contain';style?:CSSProperties}>=({name,from,poster,frames=300,start=0,rate=1,fit='cover',style})=><AbsoluteFill style={{overflow:'hidden',...style}}>
@@ -59,7 +61,9 @@ const QrCard:FC<{style?:CSSProperties;large?:boolean}>=({style,large=false})=><B
 
 /** Every sprite is a real training picture. Sevens are amber, ones cyan. */
 function PixelRain({tl,data,frame}:{tl:Timeline;data:VisualData;frame:number}){
- const p=Math.min(1,Math.max(0,frame/Math.max(1,at(tl,'race-run')-1)));
+ const compact=useContext(ScreenContext);
+ const start=at(tl,'pixel-rain');
+ const p=Math.min(1,Math.max(0,(frame-start)/Math.max(1,at(tl,'race-run')-start-1)));
  const merge=mix(p,.48,.98);
  const targets=data.pixels.map((v,i)=>v?i:-1).filter(i=>i>=0);
  const cards=data.training.map((_,i)=>{
@@ -73,7 +77,7 @@ function PixelRain({tl,data,frame}:{tl:Timeline;data:VisualData;frame:number}){
   const fallX=(i*137%25)*82-45+Math.sin(age*5+i)*28;
   const fallY=age*1250-160;
   const cell=targets[i%targets.length];
-  const targetX=695+(cell%20)*25,targetY=205+Math.floor(cell/20)*25;
+  const targetX=(compact?545:695)+(cell%20)*25,targetY=205+Math.floor(cell/20)*25;
   const px=fallX*(1-merge)+targetX*merge,py=fallY*(1-merge)+targetY*merge;
   const size=(38+depth*78)*(1-merge)+19*merge;
   const opacity=(.2+depth*.6)*Math.sin(Math.PI*age)*(.65+.35*merge);
@@ -83,12 +87,12 @@ function PixelRain({tl,data,frame}:{tl:Timeline;data:VisualData;frame:number}){
  });
  const core=data.pixels.map((v,i)=>v?`M${i%20},${Math.floor(i/20)}h1v1h-1z`:'').join(' ');
  return <>
-  <AbsoluteFill style={{height:930,background:'radial-gradient(ellipse at 50% 50%,#144c52,#071b25 75%)'}}/>
+  <AbsoluteFill style={{background:'radial-gradient(ellipse at 50% 50%,#144c52,#071b25 75%)'}}/>
   <svg width={1920} height={930} style={{position:'absolute',top:0}}>
    <defs><linearGradient id="rain-fade" x1="0" y1="0" x2="0" y2="1"><stop stopColor={CYAN} stopOpacity="0"/><stop offset=".6" stopColor={CYAN} stopOpacity=".25"/><stop offset="1" stopColor={CYAN} stopOpacity="0"/></linearGradient></defs>
    {Array.from({length:24},(_,i)=><rect key={i} x={i*84+20} y={-180+((frame*(1+i%4)*5+i*51)%600)} width={1.5} height={500} fill="url(#rain-fade)" opacity={1-merge}/>)}
    {cards}
-   <g transform="translate(695 205) scale(25)" opacity={mix(p,.78,.98)}><path d={core} fill={GOLD}/></g>
+   <g transform={`translate(${compact?545:695} 205) scale(25)`} opacity={mix(p,.78,.98)}><path d={core} fill={GOLD}/></g>
   </svg>
   <Big style={{position:'absolute',left:95,top:180,fontSize:85,color:PAPER,opacity:1-mix(p,.35,.8)}}>How fast?</Big>
   <Credit>Pixel animation · real training pictures · Author</Credit>
@@ -96,6 +100,7 @@ function PixelRain({tl,data,frame}:{tl:Timeline;data:VisualData;frame:number}){
 }
 
 function Race({tl,data,frame,line}:{tl:Timeline;data:VisualData;frame:number;line:Line}){
+ const compact=useContext(ScreenContext);
  const elapsed=Math.max(0,(frame-at(tl,'race-run'))/30-0.5);
  const go=frame>=at(tl,'race-run')+15;
  const systems=[
@@ -107,23 +112,23 @@ function Race({tl,data,frame,line}:{tl:Timeline;data:VisualData;frame:number;lin
  const ascii=Array.from({length:20},(_,r)=>data.pixels.slice(r*20,r*20+20).map(p=>p?'#':'.').join('')).join('\n');
  return <>
   <div style={{position:'absolute',inset:0,background:'radial-gradient(ellipse at 20% 15%,#225d5d,#0b2429 65%)'}}/>
-  <Big style={{position:'absolute',left:80,top:165,color:PAPER,fontSize:68}}>Is this a 7?</Big>
-  <Box style={{left:80,top:275,width:500,height:560,background:'#092326',borderColor:'#93c9c533'}}>
-   <pre style={{margin:'30px 0 0',textAlign:'center',fontFamily:MONO,fontSize:24,lineHeight:'24px',letterSpacing:2,color:CYAN}}>{ascii}</pre>
+  <Big style={{position:'absolute',left:80,top:compact?180:165,color:PAPER,fontSize:68}}>Is this a 7?</Big>
+  <Box style={{left:80,top:compact?315:275,width:compact?440:500,height:compact?545:560,background:'#092326',borderColor:'#93c9c533'}}>
+   <pre style={{margin:'25px 0 0',textAlign:'center',fontFamily:MONO,fontSize:compact?22:24,lineHeight:'24px',letterSpacing:2,color:CYAN}}>{ascii}</pre>
   </Box>
   {systems.map((s,i)=>{
    const done=go&&elapsed>=s.seconds;
    const progress=go?Math.min(elapsed/s.seconds,1):0;
-   return <div key={s.name} style={{position:'absolute',left:665,top:264+i*143,width:1165,height:126,color:PAPER}}>
+   return <div key={s.name} style={{position:'absolute',left:compact?580:665,top:(compact?315:264)+i*(compact?155:143),width:compact?930:1165,height:126,color:PAPER}}>
     <Label style={{fontSize:29,color:s.color}}>{s.name}</Label>
-    <div style={{position:'absolute',left:0,top:60,width:750,height:24,borderRadius:12,background:'#ffffff14',overflow:'hidden'}}><div style={{height:'100%',width:`${progress*100}%`,background:s.color,borderRadius:12}}/></div>
-    <div style={{position:'absolute',left:775,top:35,fontFamily:MONO,fontSize:s.name==='X'?28:39,color:s.color}}>{done?(s.name==='X'?s.seconds.toFixed(8):s.seconds.toFixed(2)):(go?Math.min(elapsed,s.seconds).toFixed(2):'0.00')}<span style={{fontSize:23}}> s</span></div>
+    <div style={{position:'absolute',left:0,top:60,width:compact?575:750,height:24,borderRadius:12,background:'#ffffff14',overflow:'hidden'}}><div style={{height:'100%',width:`${progress*100}%`,background:s.color,borderRadius:12}}/></div>
+    <div style={{position:'absolute',left:compact?590:775,top:35,fontFamily:MONO,fontSize:s.name==='X'?28:39,color:s.color}}>{done?(s.name==='X'?s.seconds.toFixed(8):s.seconds.toFixed(2)):(go?Math.min(elapsed,s.seconds).toFixed(2):'0.00')}<span style={{fontSize:23}}> s</span></div>
     {done&&<div style={{position:'absolute',right:0,top:35,fontSize:30,fontWeight:700,color:s.answer?'#c6f1db':'#f5a985'}}>{s.answer?'YES ✓':'NO ×'}</div>}
    </div>;
   })}
-  <div style={{position:'absolute',left:82,top:863,fontSize:19,color:'#bbd0c9'}}>2026-11-04 · MacBook Pro · same 20×20 input · medians · warmed JS / reported model times</div>
+  <div style={{position:'absolute',left:82,top:compact?990:863,fontSize:compact?17:19,color:'#bbd0c9'}}>2026-11-04 · MacBook Pro · same 20×20 input · medians · warmed JS / reported model times</div>
   <Credit>Original experiment · Author</Credit>
-  {line.visual==='mystery'&&<div style={{position:'absolute',right:210,top:340,fontSize:390,fontWeight:700,color:'#b5e6e8',textShadow:'0 0 70px #73dedb55'}}>X<span style={{color:GOLD}}>?</span></div>}
+  {line.visual==='mystery'&&<div style={{position:'absolute',right:140,top:345,fontSize:320,fontWeight:700,color:'#b5e6e8',textShadow:'0 0 70px #73dedb55'}}>X<span style={{color:GOLD}}>?</span></div>}
  </>;
 }
 
@@ -313,7 +318,7 @@ function History({line}:{line:Line}){
 
 function Limits({chat=false}:{chat?:boolean}){
  return <>
-  <Big style={{position:'absolute',left:100,top:190,color:TEAL,fontSize:72}}>{chat?'Many kinds of questions':'A confident answer can still be wrong.'}</Big>
+  <Big style={{position:'absolute',left:100,top:190,color:TEAL,fontSize:72}}>{chat?'Many kinds of questions':'On this test'}</Big>
   {chat?<div style={{position:'absolute',left:120,top:355,width:1640,display:'flex',gap:35}}>{['Explain a story','Help with code','Translate a sentence'].map((c,i)=><Box key={c} style={{position:'relative',width:520,height:325,padding:45,background:i===1?TEAL:'#fffaf0',color:i===1?PAPER:INK}}><div style={{fontSize:75,color:i===1?GOLD:BLUE,marginBottom:55}}>{['“ ”','{ }','A ↔ B'][i]}</div><Label style={{fontSize:37}}>{c}</Label></Box>)}</div>:
    <><Label style={{position:'absolute',left:115,top:330,fontSize:40}}>Qwen · local · original experiment</Label><div style={{position:'absolute',left:110,top:425,display:'flex',gap:18}}>{qwenResult.rows.map((r,i)=><Box key={i} style={{position:'relative',width:150,height:160,background:r.right?'#dbe8d8':'#f2d8c1',borderRadius:14,padding:23,textAlign:'center'}}><Label style={{fontSize:29}}>NO</Label><div style={{fontSize:55,color:r.right?TEAL:'#ae552a',marginTop:14}}>{r.right?'✓':'×'}</div></Box>)}</div><Big style={{position:'absolute',left:115,top:660,fontSize:92,color:TEAL}}>{qwenResult.right} / {qwenResult.n}<span style={{fontSize:39,marginLeft:35}}>correct</span></Big></>}
   <Credit>{chat?'Illustration · Author':'Original experiment · Author'}</Credit>
@@ -321,7 +326,7 @@ function Limits({chat=false}:{chat?:boolean}){
 }
 
 function Closing({line,tl}:{line:Line;tl:Timeline}){
- if(line.visual==='family') return <><Take name="muse/G3.mp4" poster="muse/G3-last.png" from={at(tl,'family')} style={{height:930}}/><Credit>AI generated · Muse · illustration</Credit></>;
+ if(line.visual==='family') return <><Take name="muse/G3.mp4" poster="muse/G3-last.png" from={at(tl,'family')} style={{height:1080}}/><Credit>AI generated · Muse · illustration</Credit></>;
  if(line.visual==='invite')return <><AbsoluteFill style={{background:TEAL}}/><Label style={{position:'absolute',left:110,top:220,color:CYAN,fontSize:37}}>Lucas Academy</Label><Big style={{position:'absolute',left:110,top:345,fontSize:120,color:PAPER}}>What would you<br/>teach it?</Big><QrCard large style={{right:130,top:240}}/><Credit>Website · Lucas Academy</Credit></>;
  return <>
   <div style={{position:'absolute',left:95,top:220,display:'flex',gap:35}}>{['Print','Color','Teach'].map((s,i)=>i===2&&line.visual==='url'?<QrCard key={s} large style={{position:'relative',width:550,height:535,padding:40}}/>:<Box key={s} style={{position:'relative',width:550,height:535,padding:30}}><Label style={{fontSize:48,color:TEAL,marginBottom:25}}>{s}</Label><Img src={file(i===0?'curriculum/worksheet-heart-cat.png':i===1?'curriculum/cat_bits.png':'capture/twenty-trained.png')} style={{width:'100%',height:370,objectFit:'contain'}}/></Box>)}</div>
@@ -329,14 +334,70 @@ function Closing({line,tl}:{line:Line;tl:Timeline}){
  </>;
 }
 
+function SpeedTitle({tl}:{tl:Timeline}){
+ return <>
+  <Img src={file('art/cover-v2-bg.png')} style={{position:'absolute',inset:0,width:1920,height:1080,objectFit:'cover'}}/>
+  <Label style={{position:'absolute',left:95,top:170,color:PAPER,fontSize:43}}>Claude Fable 5.1</Label>
+  <Big style={{position:'absolute',left:90,top:245,fontSize:130,color:GOLD}}>{tl.values.claude_million_en} MILLION ×</Big>
+  <Label style={{position:'absolute',left:95,top:470,color:PAPER,fontSize:43}}>GPT-6-Astra</Label>
+  <Big style={{position:'absolute',left:90,top:545,fontSize:130,color:'#baffb0'}}>{tl.values.astra_ten_million_en} MILLION ×</Big>
+  <Label style={{position:'absolute',left:100,top:760,color:CYAN,fontSize:40}}>FASTER IN THIS TASK</Label>
+  <Label style={{position:'absolute',left:100,top:930,color:PAPER,fontSize:30}}>By Lucas Academy Team</Label>
+  <Credit>Original experiment · AI generated illustration</Credit>
+ </>;
+}
+
+function TimeTravelIntro({line,data,frame}:{line:Line;data:VisualData;frame:number}){
+ const f=frame-line.from, end=data.intro.frames;
+ return <>
+  {data.intro.ready?<Take name="muse/G4-time-travel-v2.mp4" poster="muse/G4-last.png" from={line.from} frames={end} style={{height:1080}}/>:<Img src={file('art/cover-v2-bg.png')} style={{width:1920,height:1080,objectFit:'cover'}}/>}
+
+  <Label style={{position:'absolute',left:100,top:85,color:PAPER,fontSize:44,textShadow:'0 2px 18px #00120c',opacity:1-mix(f,80,120)}}>Claude Fable 5.1  +  GPT-6-Astra</Label>
+  <Big style={{position:'absolute',left:110,top:190,color:GOLD,fontSize:140,textShadow:'0 4px 30px #00120c',opacity:mix(f,85,115)*(1-mix(f,205,245))}}>1957</Big>
+  <Credit>AI generated · Muse · imagined time travel</Credit>
+ </>;
+}
+
+function RetroScreen({children,frame,tl}:{children:ReactNode;frame:number;line:Line;tl:Timeline}){
+ const appear=mix(frame-at(tl,'pixel-rain'),0,15);
+ return <AbsoluteFill style={{background:'#061b16'}}>
+  <Img src={file('muse/G4-last.png')} style={{position:'absolute',inset:0,width:1920,height:1080,objectFit:'cover'}}/>
+  <svg width={0} height={0} style={{position:'absolute'}}><defs><clipPath id="crt-aperture" clipPathUnits="userSpaceOnUse"><path transform="scale(1.5)" d="M292 61 C530 40 778 53 974 82 Q1039 90 1055 148 C1073 280 1078 465 1045 558 Q1039 591 994 601 C753 636 454 637 270 618 Q221 613 213 568 C202 429 199 275 211 151 Q214 78 269 65 Z"/></clipPath></defs></svg>
+  <div style={{position:'absolute',inset:0,clipPath:'url(#crt-aperture)',opacity:appear,background:TEAL}}>
+   <ScreenContext.Provider value={true}>
+    <div style={{position:'absolute',left:310,top:82,width:1600,height:1050,transform:'scale(0.8)',transformOrigin:'top left',overflow:'hidden',fontFamily:FONT}}>
+     {children}
+     <Label style={{position:'absolute',left:82,top:100,fontSize:27,color:CYAN,letterSpacing:3}}>FAMILY AI LAB</Label>
+     <Label style={{position:'absolute',right:95,top:100,fontSize:28,color:PAPER}}>The same picture</Label>
+    </div>
+   </ScreenContext.Provider>
+  </div>
+  <div style={{position:'absolute',right:65,bottom:18,fontSize:17,color:'#c3ddd1'}}>Muse · imagined lab | Screen · original records and author animation</div>
+ </AbsoluteFill>;
+}
+
+function Scope({line,data}:{line:Line;data:VisualData}){
+ const learning=line.visual==='scope-learn';
+ return <>
+  <Big style={{position:'absolute',left:100,top:165,color:TEAL,fontSize:76}}>{learning?'See how learning works.':'One task.'}</Big>
+  <Box style={{left:130,top:310,width:530,height:485,padding:35,textAlign:'center'}}><Grid n={20} pixels={data.pixels} size={350}/><Label style={{marginTop:25,color:TEAL}}>Recognize a 7?</Label></Box>
+  <Box style={{left:760,top:310,width:1010,height:485,padding:55,background:TEAL,color:PAPER}}>
+   <Big style={{fontSize:70,color:GOLD}}>{learning?'Try it together.':'Fast at this task.'}</Big>
+   <Label style={{fontSize:43,marginTop:45,lineHeight:1.35}}>{learning?'Examples → points → a decision':'This race does not rank overall AI ability.'}</Label>
+   <Label style={{fontSize:29,marginTop:40,color:CYAN}}>{learning?'Paper, pencils and the browser lab':'A specialized model, on a specific picture task'}</Label>
+  </Box>
+  <Credit>Original experiment · explanation and diagram by author</Credit>
+ </>;
+}
+
 function Visual({line,tl,data,frame}:{line:Line;tl:Timeline;data:VisualData;frame:number}){
  const v=line.visual;
  if(v==='pixel-rain')return <PixelRain tl={tl} data={data} frame={frame}/>;
  if(v.startsWith('ratio-'))return <Ratios which={v==='ratio-claude'?'claude':'astra'}/>;
- if(v==='terminal')return <><div style={{position:'absolute',left:90,top:190,width:1740,height:650,overflow:'hidden',background:'#000',borderRadius:18}}><Take name="capture/terminal-view.mp4" poster="capture/terminal-view.png" from={line.from} frames={90} fit="contain" style={{height:'100%',width:'100%'}}/></div><Credit>Real terminal recording · saved original results · Author</Credit></>;
+ if(v==='terminal')return <><div style={{position:'absolute',left:70,top:235,width:1460,height:620,overflow:'hidden',background:'#000',borderRadius:18}}><Take name="capture/terminal-view.mp4" poster="capture/terminal-view.png" from={line.from} frames={90} fit="contain" style={{height:'100%',width:'100%'}}/></div><Credit>Real terminal recording · saved original results · Author</Credit></>;
  if(line.scene===1)return <Race tl={tl} data={data} frame={frame} line={line}/>;
- if(v==='title')return <><Take name="muse/G1.mp4" poster="muse/G1-last.png" from={line.from} style={{height:930}}/><div style={{position:'absolute',inset:0,height:930,background:'#0c2d2ee6'}}/><Label style={{position:'absolute',left:100,top:220,color:CYAN,fontSize:35}}>Family AI Lab · Lucas Academy</Label><Big style={{position:'absolute',left:100,top:330,color:PAPER,fontSize:94}}>A 1957 AI model is faster<br/>than ChatGPT Astra<br/>and Claude Fable?</Big><Label style={{position:'absolute',left:110,top:800,fontSize:29,color:CYAN}}>By Lucas Academy Team</Label><Credit>AI generated background · Muse · illustration</Credit></>;
- if(v==='time-travel')return <><Take name="muse/G1.mp4" poster="muse/G1-last.png" from={at(tl,'title')} style={{height:930}}/><Big style={{position:'absolute',left:100,top:225,fontFamily:"'Georgia', serif",fontSize:180,color:'#fff3d8',textShadow:'0 3px 25px #18201a'}}>1957</Big><Credit>AI generated · Muse · illustration</Credit></>;
+ if(v==='title')return <SpeedTitle tl={tl}/>;
+ if(v==='time-travel')return <><Take name="muse/G1.mp4" poster="muse/G1-last.png" from={at(tl,'title')} style={{height:1080}}/><Big style={{position:'absolute',left:100,top:225,fontFamily:"'Georgia', serif",fontSize:180,color:'#fff3d8',textShadow:'0 3px 25px #18201a'}}>1957</Big><Credit>AI generated · Muse · illustration</Credit></>;
  if(line.scene===3)return <Pictures line={line} tl={tl} frame={frame}/>;
  if(v.startsWith('apple-')||v==='tomato')return <AppleGame line={line} frame={frame}/>;
  if(line.scene===4)return <Neuron line={line} tl={tl} frame={frame}/>;
@@ -345,28 +406,30 @@ function Visual({line,tl,data,frame}:{line:Line;tl:Timeline;data:VisualData;fram
  if(v==='reveal'||v==='reveal-trained')return <><AbsoluteFill style={{background:TEAL}}/><Label style={{position:'absolute',left:110,top:215,fontSize:48,color:CYAN}}>X =</Label><Big style={{position:'absolute',left:110,top:330,fontSize:170,color:GOLD}}>Perceptron</Big><Label style={{position:'absolute',left:125,top:600,fontSize:47,color:PAPER}}>{v==='reveal-trained'?`${xResult.training.pictures} training pictures · ${xResult.right}/${xResult.n} test answers correct`:'Frank Rosenblatt · 1957'}</Label><Credit>Original experiment and Rosenblatt 1957 · Author</Credit></>;
  if(v==='report'||v==='newspaper')return <Report newspaper={v==='newspaper'}/>;
  if(v.startsWith('mark-'))return <MarkI line={line} tl={tl} data={data} frame={frame}/>;
- if(v==='vintage-lab')return <><Take name="muse/G2.mp4" poster="muse/G2-last.png" from={line.from} rate={1} style={{height:930}}/><Credit>AI generated · Muse · imagined computer room</Credit></>;
+ if(v==='vintage-lab')return <><Take name="muse/G2.mp4" poster="muse/G2-last.png" from={line.from} rate={1} style={{height:1080}}/><Credit>AI generated · Muse · imagined computer room</Credit></>;
  if(v==='scale'||v==='scale-zoom')return <Scale data={data} zoom={v==='scale-zoom'} frame={frame} line={line}/>;
  if(v.startsWith('timeline-'))return <History line={line}/>;
+ if(v.startsWith('scope-'))return <Scope line={line} data={data}/>;
  if(v==='chat'||v==='limits')return <Limits chat={v==='chat'}/>;
  if(line.scene===8)return <Closing line={line} tl={tl}/>;
  throw Error(`No shot for ${v}`);
 }
 
-export const FamilyAiLab01:FC<FamilyProps>=({tl,data,captions=null})=>{
+export const FamilyAiLab01:FC<FamilyProps>=({tl,data})=>{
  const frame=useCurrentFrame();
  if(!tl||!data)throw Error('Family AI Lab metadata not loaded');
  const line=tl.lines.find(l=>frame>=l.from&&frame<l.from+l.duration)??tl.lines[tl.lines.length-1];
- const footage=['time-travel','vintage-lab','family'].includes(line.visual);
- const dark=(line.scene===1&&line.visual!=='terminal')||footage||['title','reveal','reveal-trained','invite'].includes(line.visual);
- return <AbsoluteFill style={{fontFamily:FONT,background:PAPER,color:INK}}>
-  <AbsoluteFill style={{height:930,backgroundImage:'linear-gradient(#35665108 1px,transparent 1px),linear-gradient(90deg,#35665108 1px,transparent 1px)',backgroundSize:'40px 40px'}}/>
-  <Visual line={line} tl={tl} data={data} frame={frame}/>
-  {footage&&<div style={{position:'absolute',top:0,left:0,right:0,height:140,background:'linear-gradient(#092b2dcc,transparent)'}}/>}
+ if(line.scene===1){
+  if(line.visual==='time-travel-intro')return <AbsoluteFill style={{fontFamily:FONT,background:TEAL}}><TimeTravelIntro line={line} data={data} frame={frame}/></AbsoluteFill>;
+  return <RetroScreen frame={frame} line={line} tl={tl}><Visual line={line} tl={tl} data={data} frame={frame}/></RetroScreen>;
+ }
+ const full=['title','vintage-lab','family'].includes(line.visual);
+ const dark=full||['reveal','reveal-trained','invite'].includes(line.visual);
+ return <AbsoluteFill style={{fontFamily:FONT,background:dark?TEAL:PAPER,color:INK}}>
+  <AbsoluteFill style={{backgroundImage:'linear-gradient(#35665108 1px,transparent 1px),linear-gradient(90deg,#35665108 1px,transparent 1px)',backgroundSize:'40px 40px'}}/>
+  <div style={{position:'absolute',left:0,top:full?0:75,width:1920,height:full?1080:930}}><Visual line={line} tl={tl} data={data} frame={frame}/></div>
+  {full&&<div style={{position:'absolute',top:0,left:0,right:0,height:130,background:'linear-gradient(#092b2d99,transparent)'}}/>}
   <div style={{position:'absolute',left:80,top:56,color:dark?CYAN:TEAL,fontSize:24,fontWeight:650,letterSpacing:4,textTransform:'uppercase'}}>Family AI Lab</div>
   <div style={{position:'absolute',right:80,top:52,color:dark?'#d4dfd4':TEAL,fontSize:31,fontWeight:650}}>{tl.titles[line.scene-1]}</div>
-  <div style={{position:'absolute',left:0,right:0,top:931,height:149,background:'#0a2025',borderTop:'2px solid #4d777055'}}/>
-  {captions&&frame<line.from+line.captionFrames&&<div style={{position:'absolute',bottom:35,left:100,right:100,textAlign:'center',color:'#fff9e9',fontSize:captions==='en'?40:43,lineHeight:1.23,fontWeight:500,textShadow:'0 2px 3px #000',maxHeight:110}}>{line.text[captions]}</div>}
-  <div style={{position:'absolute',left:0,bottom:0,height:4,width:`${(frame+1)/tl.durationInFrames*100}%`,background:GOLD}}/>
  </AbsoluteFill>;
 };

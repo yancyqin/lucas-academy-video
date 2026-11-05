@@ -77,11 +77,12 @@ def main():
     DOC.mkdir(parents=True, exist_ok=True)
     values = numbers()
     source = json.loads((Path(__file__).parent / "script.json").read_text())
+    revision = source.get('revision',1)
     narrated = "--voiced" in sys.argv
     narration = json.loads((DIR / "narration.json").read_text()) if narrated else None
     titles = {
-        "zh": ["同一张图", "一个问题", "纸和笔", "你来当神经元", "网页实验室", "揭晓 X", "后来发生了什么", "从餐桌开始"],
-        "en": ["The same picture", "One question", "Paper and pencil", "Be a neuron", "The browser lab", "Meet X", "What came next", "Start at the table"],
+        "zh": ["同一张图", "速度标题卡", "纸和笔", "你来当神经元", "网页实验室", "揭晓 X", "后来发生了什么", "从餐桌开始"],
+        "en": ["The same picture", "The speed headline", "Paper and pencil", "Be a neuron", "The browser lab", "Meet X", "What came next", "Start at the table"],
     }
     frame, counts, lines = 0, {}, []
     for scene, visual, zh, en in source["lines"]:
@@ -93,6 +94,8 @@ def main():
             for lang in ("en", "zh"):
                 assert narration[lang][line_id]["caption"] == text[lang], (lang, line_id, "stale narration")
             spoken = max(math.ceil(narration[lang][line_id]["seconds"] * FPS) for lang in ("en", "zh")) + 3
+        if visual == 'time-travel-intro':
+            spoken = max(spoken, round(10.8*FPS))
         if visual == "race-run":
             spoken = max(spoken, math.ceil((load("astra-low")["median_model"] + 1.5) * FPS))
         duration = spoken + round(0.4 * FPS)
@@ -102,7 +105,7 @@ def main():
     lines[-1]["duration"] += 5 * FPS
     lines[-1]["captionFrames"] += 5 * FPS
     frame += 5 * FPS
-    tl = {"fps": FPS, "defaultLanguage": "en", "durationInFrames": frame, "lines": lines,
+    tl = {"fps": FPS, "revision":revision, "defaultLanguage": "en", "durationInFrames": frame, "lines": lines,
           "titles": titles["en"], "values": values,
           "dataSelection": "original full round, explicitly retained by owner; no reruns",
           "delivery": "one picture, English default, independent Chinese audio/subtitles" if narrated else "one picture, English labels, English default captions, separate Chinese captions; audio deferred",
@@ -146,7 +149,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
         "noMoreBenchmarkCalls": True, "sha256": hashes, "derived": values,
         "delivery": "one common English-label picture", "defaultLanguage": "en",
         "audio": "Louise/en default; Louise/zh independent; speed 1.1" if narrated else "deferred until review approved; future English default and separate Chinese track",
-        "subtitles": "independent English default and Simplified Chinese tracks"}, ensure_ascii=False, indent=2) + "\n")
+        "subtitles": "external SRT files only; no embedded subtitle tracks or subtitle band" if revision>=2 else "independent English default and Simplified Chinese tracks"}, ensure_ascii=False, indent=2) + "\n")
 
 
 if __name__ == "__main__":

@@ -4,23 +4,22 @@ Louise narration script. One common picture, English default audio. Original exp
 
 ## S1 · The same picture
 
-- **fa01-01-01** How fast can a computer recognize a seven?
-- **fa01-01-02** Give the same seven to four programs, and watch who answers first.
-- **fa01-01-03** Ready? Let's start their clocks together and watch what happens.
-- **fa01-01-04** X has already finished. Its time is 0.37 microseconds per picture.
-- **fa01-01-05** These are the original result files saved from the experiment.
-- **fa01-01-06** Across ten pictures it had never trained on, X got every answer right.
-- **fa01-01-07** It was about 3 million times faster than Claude Fable.
-- **fa01-01-08** And over 10 million times faster than GPT-6-Astra.
-- **fa01-01-09** So who is this mysterious X, with its name still hidden from us?
+- **fa01-01-01** Let’s take Claude Fable 5.1 and GPT-6-Astra back to 1957 for an AI speed race!
+- **fa01-01-02** How fast can a computer recognize a seven?
+- **fa01-01-03** Give the same seven to four programs, and watch who answers first.
+- **fa01-01-04** Ready? Let's start their clocks together and watch what happens.
+- **fa01-01-05** X has already finished. Its time is 0.37 microseconds per picture.
+- **fa01-01-06** These are the original result files saved from the experiment.
+- **fa01-01-07** Across ten pictures it had never trained on, X got every answer right.
+- **fa01-01-08** So who is this mysterious X, with its name still hidden from us?
 
-## S2 · One question
+## S2 · The speed headline
 
-- **fa01-02-01** A 1957 AI model is faster than ChatGPT Astra and Claude Fable?
+- **fa01-02-01** 3 million times faster than Claude Fable 5.1, and 10 million times faster than GPT-6-Astra!
 
 ## S3 · Paper and pencil
 
-- **fa01-03-01** Let's go back to 1957. For now, all we need is paper and a pencil.
+- **fa01-03-01** Let’s return to our family AI classroom. First, get some paper and pencils.
 - **fa01-03-02** A computer has no eyes like ours. How can we give it a picture?
 - **fa01-03-03** Divide the picture into little squares, and keep just one color in each square.
 - **fa01-03-04** Make it simpler still: write one for black, and zero for white.
@@ -31,11 +30,11 @@ Louise narration script. One common picture, English default audio. Original exp
 - **fa01-03-09** Eventually there are only eight rows left. Can you still spot the cat's ears?
 - **fa01-03-10** Each row has eight zeros and ones. That fits neatly inside one byte.
 - **fa01-03-11** So the whole tiny cat takes just eight bytes to store.
-- **fa01-03-12** Send those numbers to a friend. They can rebuild your cat on paper, square by square.
+- **fa01-03-12** Send the numbers to a friend. They can recreate the picture on paper.
 
 ## S4 · Be a neuron
 
-- **fa01-04-01** We have our squares. But how can something make a decision from them?
+- **fa01-04-01** Your eyes can see the colored squares. How do you work out what the picture is?
 - **fa01-04-02** Let's borrow a very simple idea from a neuron in the brain.
 - **fa01-04-03** A neuron receives many signals. Some connections have a stronger effect than others.
 - **fa01-04-04** When the combined input is enough, it sends a signal of its own.
@@ -50,7 +49,7 @@ Louise narration script. One common picture, English default audio. Original exp
 
 ## S5 · The browser lab
 
-- **fa01-05-01** Now let's move our little points game into the browser laboratory.
+- **fa01-05-01** Now let’s move the points game into our Family AI Lab webpage.
 - **fa01-05-02** Every square in the picture has its own points value, ready to be adjusted.
 - **fa01-05-03** Click Run one round, and watch the points while it works through the examples.
 - **fa01-05-04** If a horizontal line should switch the light on and does not, add points.
@@ -89,8 +88,7 @@ Louise narration script. One common picture, English default audio. Original exp
 - **fa01-07-09** Then came the Transformer, followed by the conversational AI systems we use today.
 - **fa01-07-10** Those models can discuss far more than this one small question about a picture.
 - **fa01-07-11** Even a simple request can still require a great deal of computation.
-- **fa01-07-12** In this experiment, the local Qwen model answered only five of the pictures correctly.
-- **fa01-07-13** And an answer that sounds confident is still something we may need to check.
+- **fa01-07-12** For example, the local Qwen model got only five pictures right in this experiment.
 
 ## S8 · Start at the table
 
@@ -100,4 +98,7 @@ Louise narration script. One common picture, English default audio. Original exp
 - **fa01-08-04** Then take turns being the neuron. Decide together how much each clue should count.
 - **fa01-08-05** When you want the computer to try, open the browser lab and teach it with examples.
 - **fa01-08-06** Scan the code to open the lab and find the printable worksheets.
-- **fa01-08-07** Come explore with us at Lucas Academy. What would you and your child like to teach it to recognize first?
+- **fa01-08-07** The title is a bit of a tease.
+- **fa01-08-08** This model has one job: recognizing sevens. Winning that speed test doesn’t make it smarter overall.
+- **fa01-08-09** The experiment helps us and our kids see how machines learn.
+- **fa01-08-10** Come explore with us at Lucas Academy. What would you and your child like to teach it to recognize first?

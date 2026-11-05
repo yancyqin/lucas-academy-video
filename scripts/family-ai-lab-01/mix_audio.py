@@ -29,17 +29,17 @@ def select():
             decision=choices[key]
             assert decision['checked'],key
             name=line['id']+(f'.take{decision["take"]}' if decision.get('take') else '')
-            source=MEDIA/f'outputs/louise/{lang}/family-ai-lab-01-v1/s1.10/{name}.wav'
+            source=MEDIA/f'outputs/louise/{lang}/family-ai-lab-01-v{line.get("revision",1)}/s1.10/{name}.wav'
             meta=json.loads(source.with_suffix('.json').read_text())
             samples,rate=sf.read(source,dtype='float32')
             assert samples.ndim==1 and rate==24000,(key,samples.shape,rate)
             assert len(samples)/rate>.5,key
-            dest=PUBLIC/f'narration/{lang}/{line["id"]}.wav'
+            dest=PUBLIC/f'narration-v{line["revision"]}/{lang}/{line["id"]}.wav' if line.get('revision',1)>=2 else PUBLIC/f'narration/{lang}/{line["id"]}.wav'
             dest.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(source,dest)
             manifest[lang][line['id']]={
                 'clip':str(dest.relative_to(PUBLIC)),'seconds':len(samples)/rate,'samples':len(samples),'sampleRate':rate,
                 'sha256':hashlib.sha256(dest.read_bytes()).hexdigest(),'source':str(source.relative_to(MEDIA)),
-                'caption':line['caption'],'spoken':meta['spoken'],'settingsSha256':meta['settingsSha256'],
+                'caption':line['caption'],'spoken':meta.get('reused',{}).get('spoken',meta['spoken']),'settingsSha256':meta['settingsSha256'],
                 'check':decision['note']}
     (PUBLIC/'narration.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
     print('Selected and copied',sum(len(v) for v in manifest.values()),'inspected takes')
@@ -58,7 +58,8 @@ def loudnorm(source,dest):
 def mix():
     tl=json.loads((PUBLIC/'timeline.json').read_text());assert tl.get('narrated')
     narration=json.loads((PUBLIC/'narration.json').read_text())
-    folder=OUT/'audio';folder.mkdir(parents=True,exist_ok=True)
+    folder=OUT/'audio'/f'v{tl["revision"]}' if tl.get('revision',1)>=2 else OUT/'audio'
+    folder.mkdir(parents=True,exist_ok=True)
     rate=24000;length=math.ceil(tl['durationInFrames']/tl['fps']*rate)
     checks={}
     for lang in ('en','zh'):

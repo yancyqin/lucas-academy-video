@@ -13,8 +13,9 @@ from opencc import OpenCC
 
 ROOT=Path(__file__).resolve().parents[2]
 MEDIA=ROOT.parent/'lucas-academy-media'
-REPORT=ROOT/'out/family-ai-lab-01/narration/check.json'
-OUT=ROOT/'out/family-ai-lab-01/narration/medium.json'
+REVISION=json.loads((ROOT/'scripts/family-ai-lab-01/script.json').read_text()).get('revision',1)
+REPORT=ROOT/(f'out/family-ai-lab-01/narration/v{REVISION}/check.json' if REVISION>=2 else 'out/family-ai-lab-01/narration/check.json')
+OUT=REPORT.with_name('medium.json')
 CC=OpenCC('t2s')
 
 
@@ -59,14 +60,15 @@ def main():
             value['canonicalScore']=round(score(value['expected'],value['heard'],lang),3)
             if value['canonicalScore']>=args.threshold or result.get(key,{}).get('sha256')==value['sha256']:continue
             if model is None:model=whisper.load_model('medium',device='cpu')
-            wav=MEDIA/f'outputs/louise/{lang}/family-ai-lab-01-v1/s1.10/{name}.wav'
+            wav=MEDIA/f'outputs/louise/{lang}/family-ai-lab-01-v{REVISION}/s1.10/{name}.wav'
             heard=model.transcribe(str(wav),language=lang,condition_on_previous_text=False,fp16=False,
                 initial_prompt='感知机。艾克斯，Claude Fable，GPT Astra，千问。' if lang=='zh' else 'Perceptron, Rosenblatt, Claude Fable, GPT Astra, Qwen, Lucas Academy.')
             text=heard['text'].strip();ratio=score(value['expected'],text,lang)
             result[key]={'sha256':value['sha256'],'model':'medium','expected':value['expected'],'heard':text,'canonicalScore':round(ratio,3)}
             OUT.parent.mkdir(parents=True,exist_ok=True);OUT.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
             print(f'{key} {ratio:.3f} | {text}',flush=True)
-        if not args.watch or len(raw)>=152:break
+        expected=2*len(json.loads((ROOT/'scripts/family-ai-lab-01/script.json').read_text())['lines'])
+        if not args.watch or len(raw)>=expected:break
         time.sleep(10)
 
 

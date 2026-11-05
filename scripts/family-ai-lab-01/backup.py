@@ -29,8 +29,8 @@ def main():
     for folder in ('narration', 'audio'):
         source = ROOT / 'out/family-ai-lab-01' / folder
         if source.exists():
-            for p in source.glob('*.json'):
-                dest = BACKUP / 'checks' / folder / p.name
+            for p in source.rglob('*.json'):
+                dest = BACKUP / 'checks' / folder / p.relative_to(source)
                 dest.parent.mkdir(parents=True, exist_ok=True)
                 shutil.copy2(p, dest)
     restore = '''#!/usr/bin/env python3
@@ -58,9 +58,9 @@ print('Verified and restored',target/'public/family-ai-lab-01')
 
 Owner-selected original full experiment round; later timing reruns are preserved separately and excluded from the film.
 
-`public/family-ai-lab-01/` contains the three owner-supplied Muse originals, three original built-in ImageGen cover backgrounds and later versioned cover candidates, curriculum snapshots, original browser/terminal recordings, derived capture crops, the live lab QR code, actual 419-picture training sprites, trained-state restoration, common bilingual timeline and 152 selected Louise narration WAVs with hashes. Narration is generated locally with CosyVoice at 1.1 speed. No Suno media was downloaded or used.
+`public/family-ai-lab-01/` contains the three original Muse clips, the new G4 time-travel clip and its exact ending frame, original and versioned ImageGen cover/reference images, curriculum snapshots, native browser/terminal recordings, derived capture crops, the live lab QR, actual 419-picture training sprites, trained-state restoration, the common timeline and all selected revisioned Louise narration WAVs with hashes. Narration is generated locally with CosyVoice at 1.1 speed; v2 opens more brightly and reuses unchanged checked technical takes. No Suno media was downloaded or used.
 
-`records/` preserves scripts, prompts, source attribution, selected narration decisions, the capture adapter description and selected-data hashes. Later cover/copy review drafts are recorded separately; they do not imply that a new film has been rendered. `checks/` preserves raw Whisper transcripts and audio loudness measurements. `baseline-results/` is immutable: backup refuses a differing original experiment file.
+`records/` preserves scripts, prompts, source attribution, selected narration decisions, the capture adapter description and selected-data hashes. `checks/` preserves revisioned Whisper transcripts and audio loudness measurements. `archive/v1/` preserves the preceding production inputs before v2 changed cue IDs. `baseline-results/` is immutable: backup refuses a differing original experiment file.
 
 Restore into an empty directory or checkout using `python3 restore.py /absolute/path/to/lucas-academy-video`. It verifies all hashes before copying and refuses differing destination files. Then run `npm run fal01:timeline:voiced`, `npm run fal01:voice:mix`, `npm run fal01:final` to rebuild the narrated film from selected takes. The backed-up generation outputs remain irreplaceable.
 """)

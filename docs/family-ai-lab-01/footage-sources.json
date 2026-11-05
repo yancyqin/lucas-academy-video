@@ -226,6 +226,41 @@
       "path": "public/family-ai-lab-01/training-tiles.json",
       "credit": "Authored paths from the 419 actual training pictures",
       "sha256": "276a2336ffced06bca9c4c6ce0e6acde83f9f7605953e8b5efacb54f1bf5b592"
+    },
+    {
+      "path": "public/family-ai-lab-01/art/cover-v2-bg.png",
+      "credit": "Built-in ImageGen · selected v2 cover and title style",
+      "sha256": "faaaa4820906af3a8e65cabbc05423b145775e161a25671f273e2400fc9668e2"
+    },
+    {
+      "path": "public/family-ai-lab-01/art/retro-screen-v2.png",
+      "credit": "Built-in ImageGen · Muse ending-frame reference only; not composited into the final film",
+      "sha256": "1275c83860ec387a7db4eb0a6389c10c71f8e5ae20ea6e0d65b1e9197ed39c62"
+    },
+    {
+      "path": "public/family-ai-lab-01/muse/G4-time-travel-v2.mp4",
+      "credit": "Local Muse generation · imagined time travel",
+      "sha256": "a70230fb111e0b8464609955b5269a5f2eaf6dcca1ca15d2369df4a43fbb425c",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_type": "video",
+            "width": 1280,
+            "height": 720,
+            "r_frame_rate": "24/1"
+          }
+        ],
+        "format": {
+          "duration": "10.000000"
+        }
+      }
+    },
+    {
+      "path": "public/family-ai-lab-01/muse/G4-last.png",
+      "credit": "Exact ending frame of Muse G4; reused as the S1 monitor shell",
+      "sha256": "eeb2d106a24d08068f01a583abcad1211cdd6006123a9d86c152374d3b8dacf2"
     }
   ],
   "commonsMediaUsed": false,

@@ -26,3 +26,9 @@ Owner supplied all three generated originals from Downloads. All three first can
 - G1: `public/family-ai-lab-01/muse/G1.mp4` · SHA256 `ba0781973452f25bb3aab199a2ee14e5b6080e0c725061ca627674d3ffd4338e`
 - G2: `public/family-ai-lab-01/muse/G2.mp4` · SHA256 `04c65fc4f8611b62f03ce2225fa968def50312d66f27eaf73598b9d8a025d055`
 - G3: `public/family-ai-lab-01/muse/G3.mp4` · SHA256 `6097e89c3e14d0875a753fc8ea4e74b7c49311e1a3c8a56e6917e6851e740066`
+
+## G4 — time travel into the retro screen (v2)
+
+Generated in the existing local Muse perceptron chat after the owner approved production. The exact request and two local style references are in [intro-v2-prompt.md](intro-v2-prompt.md); the selected original hash/probe is in [intro-v2.json](intro-v2.json). The first generated candidate is selected: 10.000 s, 1280×720, 24 fps, video only. It starts with a green pixel seven, travels through cyan/gold filaments into a warm imagined 1957 lab, and approaches a blank green CRT.
+
+The generated still `art/retro-screen-v2.png` was an ending-frame style reference. The actual Muse output ends on a different retro monitor, so the finished film holds its **actual last frame**, `muse/G4-last.png`, for all remaining S1 shots. The monitor shell never changes at the handoff. A curved SVG aperture clips the code-drawn rain, real-time race, saved-record recording and X mystery into that glass area. No generated image contains the experimental times or model names; those stay code-drawn. All footage is muted.

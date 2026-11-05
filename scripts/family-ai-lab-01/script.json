@@ -1,19 +1,19 @@
 {
-  "notes": "Experimental numbers are template fields resolved only from the owner's selected original results/*.json. No benchmark or race-contender calls during production. Educational dates and counts have their own cited sources.",
+  "notes": "Owner-edited Chinese v2 script drives production. Original result JSONs only, no benchmark/race-contender calls. S1 lands on the retro screen; remaining S1 is composited inside. No embedded captions or subtitle band.",
+  "revision": 2,
   "lines": [
+    [1,"time-travel-intro","我们带上 Claude Fable 5.1 和 GPT-6-Astra，穿越到一九五七年，来场模型速度大比拼！","Let’s take Claude Fable 5.1 and GPT-6-Astra back to 1957 for an AI speed race!"],
     [1,"pixel-rain","电脑认出一个七，到底能有多快？","How fast can a computer recognize a seven?"],
     [1,"pixel-rain","同一张数字七，交给四位选手。比比谁先回答。","Give the same seven to four programs, and watch who answers first."],
     [1,"race-run","准备好了吗？一起按下开始。","Ready? Let's start their clocks together and watch what happens."],
     [1,"race-result","X 已经答完了，只用了 {x_us} 微秒。","X has already finished. Its time is {x_us} microseconds per picture."],
     [1,"terminal","这是实验留下的原始记录。","These are the original result files saved from the experiment."],
     [1,"race-result","换了{test_n_zh}张没见过的图，X 全都答对。","Across {test_n_en} pictures it had never trained on, X got every answer right."],
-    [1,"ratio-claude","它比 Claude Fable 快了约 {claude_million_zh} 万倍。","It was about {claude_million_en} million times faster than Claude Fable."],
-    [1,"ratio-astra","比 GPT-6-Astra，还快了 {astra_ten_million_zh} 多万倍。","And over {astra_ten_million_en} million times faster than GPT-6-Astra."],
     [1,"mystery","这个藏着名字的 X，到底是谁？","So who is this mysterious X, with its name still hidden from us?"],
 
-    [2,"title","一个一九五七年的 AI，比 ChatGPT Astra 和 Claude Fable 还快？","A 1957 AI model is faster than ChatGPT Astra and Claude Fable?"],
+    [2,"title","比 Claude Fable 5.1 快{claude_million_zh}万倍，比 GPT-6-Astra 快{astra_ten_million_zh}万倍！","{claude_million_en} million times faster than Claude Fable 5.1, and {astra_ten_million_en} million times faster than GPT-6-Astra!"],
 
-    [3,"time-travel","先回到一九五七年，桌上只留纸和笔。","Let's go back to 1957. For now, all we need is paper and a pencil."],
+    [3,"heart-photo","让我们回到家庭AI小课堂，先把纸和笔拿出来。","Let’s return to our family AI classroom. First, get some paper and pencils."],
     [3,"heart-photo","电脑没有眼睛，怎么把一张图交给它？","A computer has no eyes like ours. How can we give it a picture?"],
     [3,"heart-mosaic","把画面切成小方格，每格只留一种颜色。","Divide the picture into little squares, and keep just one color in each square."],
     [3,"heart-bits","再简单一点，黑的写一，白的写零。","Make it simpler still: write one for black, and zero for white."],
@@ -24,9 +24,9 @@
     [3,"cat-bits","只剩八行，猫的耳朵还在。","Eventually there are only eight rows left. Can you still spot the cat's ears?"],
     [3,"cat-bytes","每行八个零和一，刚好装进一个字节。","Each row has eight zeros and ones. That fits neatly inside one byte."],
     [3,"cat-bytes","整只猫，只占八个字节。","So the whole tiny cat takes just eight bytes to store."],
-    [3,"worksheet-cat","把数字寄给朋友，他也能在纸上还原出来。","Send those numbers to a friend. They can rebuild your cat on paper, square by square."],
+    [3,"worksheet-cat","把数字发给朋友，他也能在纸上还原出来图片来。","Send the numbers to a friend. They can recreate the picture on paper."],
 
-    [4,"neuron","纸上的格子有了，谁来做决定呢？","We have our squares. But how can something make a decision from them?"],
+    [4,"neuron","眼睛看到纸上涂色的格子了，之后怎么认出画的是什么呢？","Your eyes can see the colored squares. How do you work out what the picture is?"],
     [4,"neuron","先借大脑里的一个神经元来想想。","Let's borrow a very simple idea from a neuron in the brain."],
     [4,"neuron","它收到许多信号，有些强，有些弱。","A neuron receives many signals. Some connections have a stronger effect than others."],
     [4,"neuron-fire","合起来够了，它就发出一次信号。","When the combined input is enough, it sends a signal of its own."],
@@ -39,7 +39,7 @@
     [4,"apple-clue","再加一条线索：吃起来甜不甜？","Try another clue: does it taste sweet? How much should that clue count?"],
     [4,"hebb","赫布早就提出，常一起活动的连接会变强。","Back in 1949, Hebb proposed that repeated activity together could strengthen connections."],
 
-    [5,"lab-3","现在，把打分的游戏放进网页里。","Now let's move our little points game into the browser laboratory."],
+    [5,"lab-3","现在，把打分的游戏放进家庭AI实验室网页里。","Now let’s move the points game into our Family AI Lab webpage."],
     [5,"lab-3","每个格子，都有一个自己的分数。","Every square in the picture has its own points value, ready to be adjusted."],
     [5,"lab-round","点一下 Run one round，看看它怎么学。","Click Run one round, and watch the points while it works through the examples."],
     [5,"lab-round","横线应该亮灯，它却没亮，就得加分。","If a horizontal line should switch the light on and does not, add points."],
@@ -74,8 +74,7 @@
     [7,"timeline-2017","接着是 Transformer，再到今天会聊天的 AI。","Then came the Transformer, followed by the conversational AI systems we use today."],
     [7,"chat","这类大模型，还能回答许多别的问题。","Those models can discuss far more than this one small question about a picture."],
     [7,"limits","可简单的事，它也可能算得很费力。","Even a simple request can still require a great deal of computation."],
-    [7,"limits","这次本机的 Qwen，只答对了{qwen_right_zh}张。","In this experiment, the local Qwen model answered only {qwen_right_en} of the pictures correctly."],
-    [7,"limits","回答很有把握，也不一定就是真的。","And an answer that sounds confident is still something we may need to check."],
+    [7,"limits","比如这次本机的 Qwen，只答对了{qwen_right_zh}张。","For example, the local Qwen model got only {qwen_right_en} pictures right in this experiment."],
 
     [8,"family","这些实验，在家里的餐桌上就能开始。","You can begin exploring these ideas right at your own family table."],
     [8,"family","打印一张格子纸，拿几支笔就够了。","Print a worksheet, find a few pencils, and leave some room for trying things out."],
@@ -83,6 +82,9 @@
     [8,"start","再轮流当神经元，商量每条线索值几分。","Then take turns being the neuron. Decide together how much each clue should count."],
     [8,"start","想让机器来试，就打开网页里的实验室。","When you want the computer to try, open the browser lab and teach it with examples."],
     [8,"url","扫屏幕上的二维码，就能打开实验室和学习单。","Scan the code to open the lab and find the printable worksheets."],
+    [8,"scope-tease","标题玩了个噱头。","The title is a bit of a tease."],
+    [8,"scope-task","这个模型专门认七，跑得快不代表整体能力更强。","This model has one job: recognizing sevens. Winning that speed test doesn’t make it smarter overall."],
+    [8,"scope-learn","做这个实验，是为了和孩子一起看懂机器怎么学。","The experiment helps us and our kids see how machines learn."],
     [8,"invite","来 Lucas Academy 一起试试：你和孩子想先教它认什么？","Come explore with us at Lucas Academy. What would you and your child like to teach it to recognize first?"]
   ]
 }

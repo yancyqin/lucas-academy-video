@@ -1,99 +1,132 @@
 {
-  "durationSeconds": 434.8333333333333,
+  "durationSeconds": 445.5,
   "video": "1920x1080, 30 fps",
   "audioTracks": 2,
-  "subtitleTracks": [
-    {
-      "language": "English",
-      "default": true
-    },
-    {
-      "language": "Simplified Chinese",
-      "default": false
-    }
-  ],
-  "captions": "separate selectable tracks, not burned in",
-  "cueCountPerLanguage": 76,
+  "subtitleTracks": [],
+  "captions": "no embedded or burned captions; external SRTs only; no reserved subtitle band",
+  "cueCountPerLanguage": 77,
   "blackSegments": [],
   "covers": {
-    "design-1.en.png": {
+    "cover-v2.en.png": {
       "dimensions": "1280x720",
-      "sha256": "8f78ba89d3768b0dc5436f36ab55d462e18770ca915711cbfc4cd2c8fa9c4e7b"
+      "sha256": "3a7f58e45002a2d7e9260b933f99812c5380b7ebfe5d2c3981cc1d04acd0e6a4"
     },
-    "design-1.zh.png": {
+    "cover-v2.zh.png": {
       "dimensions": "1280x720",
-      "sha256": "efa957e4f2a8d2fc4c4191018300fe7c74ff7ec0be54276347a252422555824d"
-    },
-    "design-2.en.png": {
-      "dimensions": "1280x720",
-      "sha256": "ef26f2c86c7c447328b57ddb47c7c35201826f78c865fea893243da558c87746"
-    },
-    "design-2.zh.png": {
-      "dimensions": "1280x720",
-      "sha256": "e9620157e5744d8c3bc98708fa3172ee78f5f4461b45cd162db38fa25a50209f"
-    },
-    "design-3.en.png": {
-      "dimensions": "1280x720",
-      "sha256": "5b488dfd8c15004ef0edfa14c7fff7e66ba37d96bb3e28d6b9725bbaa0d1242c"
-    },
-    "design-3.zh.png": {
-      "dimensions": "1280x720",
-      "sha256": "d3208c74818b84e444fa5248a4a4357ae245691861233f446cc816a7fe1e7e8c"
+      "sha256": "c87d30e7a707ff69805a09d07a9485a735af090fa3e5667b9f18562cc6144ab9"
     }
   },
   "baselineHashes": "all selected originals unchanged",
   "audioLoudness": {
     "en": {
       "input_i": "-16.01",
-      "input_tp": "-0.92",
-      "input_lra": "3.80",
+      "input_tp": "-0.98",
+      "input_lra": "3.60",
       "input_thresh": "-26.65",
-      "output_i": "-15.96",
+      "output_i": "-15.97",
       "output_tp": "-1.00",
-      "output_lra": "3.70",
-      "output_thresh": "-26.60",
+      "output_lra": "3.60",
+      "output_thresh": "-26.61",
       "normalization_type": "dynamic",
-      "target_offset": "-0.04"
+      "target_offset": "-0.03"
     },
     "zh": {
-      "input_i": "-16.00",
-      "input_tp": "-0.96",
-      "input_lra": "6.90",
-      "input_thresh": "-26.75",
-      "output_i": "-15.81",
+      "input_i": "-15.98",
+      "input_tp": "-0.93",
+      "input_lra": "7.10",
+      "input_thresh": "-26.71",
+      "output_i": "-15.89",
       "output_tp": "-1.00",
-      "output_lra": "6.60",
-      "output_thresh": "-26.57",
+      "output_lra": "7.00",
+      "output_thresh": "-26.63",
       "normalization_type": "dynamic",
-      "target_offset": "-0.19"
+      "target_offset": "-0.11"
     }
   },
-  "filmSha256": "38e93048658ef6d3d10386a4a028c56d3e721ee770749d03bae9a9d785bba729",
+  "revision": 2,
+  "filmSha256": "5fe0d2239e200a4ed4ddd9bdc35e869c6d13f63ca08995311474163ea978504c",
   "audioSelection": [
     {
-      "language": "English",
+      "language": "eng",
       "default": true
     },
     {
-      "language": "Chinese",
+      "language": "zho",
       "default": false
     }
   ],
-  "sourceAssetSha256Checks": 22,
+  "sourceAssetSha256Checks": 26,
   "narrationQA": {
-    "selectedSentences": 152,
-    "mediumSecondPasses": 34,
-    "selectedReplacementTakes": 10
+    "selectedSentences": 154,
+    "reusedHashVerifiedTakes": 119,
+    "newOrReplacedTakes": 35,
+    "selectedRetakes": 3,
+    "AIWordTimes": {
+      "en/fa01-01-01": [
+        {
+          "start": 6.92,
+          "end": 7.28
+        }
+      ],
+      "en/fa01-03-01": [
+        {
+          "start": 1.8,
+          "end": 2.26
+        }
+      ],
+      "en/fa01-05-01": [
+        {
+          "start": 3.0,
+          "end": 3.54
+        }
+      ],
+      "en/fa01-07-09": [
+        {
+          "start": 3.04,
+          "end": 3.36
+        }
+      ],
+      "zh/fa01-03-01": [
+        {
+          "start": 1.72,
+          "end": 1.98
+        }
+      ],
+      "zh/fa01-05-01": [
+        {
+          "start": 3.34,
+          "end": 3.62
+        }
+      ]
+    }
   },
   "qr": {
     "target": "https://ai.lucasacademy.org/",
     "decodedFromFinalMovieFrames": [
-      "final-lab.png @ 189.733 s",
-      "final-invite.png @ 430.033 s"
+      "frames/v2/final-lab.png",
+      "frames/v2/final-invite.png"
     ],
     "alsoDecodedAt1280x720": true
   },
-  "visualQA": "76 sentence samples inspected; final terminal frame excludes shell username, hostname and cursor; opening uses all actual 419 training pictures with classes interleaved.",
-  "backupRestore": "199 public input files restored into an empty directory and compared byte for byte. All selected narration WAVs included.",
-  "typecheck": "npx tsc --noEmit passed"
+  "visualQA": "77 cue samples and five final movie frames inspected. S1 uses the exact G4 ending frame as one continuous CRT shell; race and saved records remain inside its aperture. No caption strip or burned subtitles. Actual 419 training pictures interleaved. Final terminal frame excludes shell username, hostname and cursor.",
+  "backupRestore": "359 public input files restored into an empty directory and compared byte for byte, including all 154 selected v2 narration WAVs.",
+  "render": {
+    "frameCount": 13365,
+    "chunks": 5,
+    "framesPerChunk": 3000,
+    "workers": 2,
+    "cacheMiB": {
+      "offthreadVideo": 256,
+      "media": 128
+    },
+    "successfulLog": "tmp/family-ai-lab-01/v2-final-render-segmented.log"
+  },
+  "typecheck": "npx tsc --noEmit passed",
+  "s1Preview": {
+    "path": "out/family-ai-lab-01/delivery/v2/s1-preview.mp4",
+    "durationSeconds": 49.301,
+    "videoFrames": 1479,
+    "audioTracks": 2,
+    "subtitleTracks": 0
+  }
 }
