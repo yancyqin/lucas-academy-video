@@ -1,0 +1,67 @@
+{
+  "system": "astra-xhigh",
+  "setting": "gpt-6-astra via codex exec, reasoning xhigh",
+  "right": 3,
+  "n": 3,
+  "median_wall": 6.6084415829973295,
+  "min_wall": 5.465585541998735,
+  "max_wall": 8.543189083997277,
+  "median_model": 3.7679569169995375,
+  "cold_start": null,
+  "rows": [
+    {
+      "picture": "seven-a",
+      "answer": true,
+      "said": true,
+      "right": true,
+      "text": "YES",
+      "wall": 6.6084415829973295,
+      "model": 3.7679569169995375,
+      "output_tokens": 19,
+      "reasoning_tokens": 12,
+      "events": [
+        "thread.started",
+        "turn.started",
+        "item.completed",
+        "turn.completed"
+      ],
+      "stderr_tail": ""
+    },
+    {
+      "picture": "one-a",
+      "answer": false,
+      "said": false,
+      "right": true,
+      "text": "NO",
+      "wall": 8.543189083997277,
+      "model": 6.737362832995132,
+      "output_tokens": 35,
+      "reasoning_tokens": 28,
+      "events": [
+        "thread.started",
+        "turn.started",
+        "item.completed",
+        "turn.completed"
+      ],
+      "stderr_tail": ""
+    },
+    {
+      "picture": "seven-b",
+      "answer": true,
+      "said": true,
+      "right": true,
+      "text": "YES",
+      "wall": 5.465585541998735,
+      "model": 3.6629080419952516,
+      "output_tokens": 5,
+      "reasoning_tokens": 0,
+      "events": [
+        "thread.started",
+        "turn.started",
+        "item.completed",
+        "turn.completed"
+      ],
+      "stderr_tail": ""
+    }
+  ]
+}

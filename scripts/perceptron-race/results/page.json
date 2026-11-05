@@ -1,0 +1,8 @@
+{
+  "system": "Perceptron inside perceptron.html (Brython 3.14 in the browser)",
+  "setting": "20 x 20 '7 or 1' set on the page, trained until all right (3 rounds); 300 calls of window.py_predict on one 400-square picture, measured in the Claude desktop app's browser pane on 2026-11-04",
+  "brython_seconds_per_call": 0.000311,
+  "plain_javascript_seconds_per_call": 1.84e-07,
+  "note": "Upper bound: measured in the Claude desktop app's (throttled) browser pane while local Qwen was busy on the GPU. Brython time includes copying the 400-number lists between the page and Python; the same rule as a plain JavaScript loop is 0.18 microseconds.",
+  "how": "scripts/perceptron-race/page_timing.js, pasted into the browser console on perceptron.html"
+}

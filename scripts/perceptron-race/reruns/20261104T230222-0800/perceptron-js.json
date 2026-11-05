@@ -1,0 +1,87 @@
+{
+  "system": "Perceptron (Rosenblatt rule), plain JavaScript",
+  "setting": "trained on 419 pictures; Node v22.23.1 on arm64",
+  "training": {
+    "pictures": 419,
+    "rounds": 27,
+    "seconds": 0.010864041
+  },
+  "right": 10,
+  "n": 10,
+  "median_seconds": 3.7536547925e-7,
+  "min_seconds": 3.472228335e-7,
+  "max_seconds": 4.0615127099999997e-7,
+  "rows": [
+    {
+      "picture": "seven-a",
+      "answer": true,
+      "said": true,
+      "right": true,
+      "seconds": 3.6762527099999996e-7
+    },
+    {
+      "picture": "one-a",
+      "answer": false,
+      "said": false,
+      "right": true,
+      "seconds": 3.472228335e-7
+    },
+    {
+      "picture": "seven-b",
+      "answer": true,
+      "said": true,
+      "right": true,
+      "seconds": 3.7130437500000004e-7
+    },
+    {
+      "picture": "one-b",
+      "answer": false,
+      "said": false,
+      "right": true,
+      "seconds": 4.0615127099999997e-7
+    },
+    {
+      "picture": "seven-c",
+      "answer": true,
+      "said": true,
+      "right": true,
+      "seconds": 3.71033021e-7
+    },
+    {
+      "picture": "one-c",
+      "answer": false,
+      "said": false,
+      "right": true,
+      "seconds": 3.9357708349999996e-7
+    },
+    {
+      "picture": "seven-d",
+      "answer": true,
+      "said": true,
+      "right": true,
+      "seconds": 3.762435625e-7
+    },
+    {
+      "picture": "one-d",
+      "answer": false,
+      "said": false,
+      "right": true,
+      "seconds": 3.9969470800000003e-7
+    },
+    {
+      "picture": "seven-e",
+      "answer": true,
+      "said": true,
+      "right": true,
+      "seconds": 3.74487396e-7
+    },
+    {
+      "picture": "one-e",
+      "answer": false,
+      "said": false,
+      "right": true,
+      "seconds": 4.06057771e-7
+    }
+  ],
+  "sink": 51000000
+}

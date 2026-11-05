@@ -1,0 +1,11 @@
+seven-a  right  367.6 ns
+one-a    right  347.2 ns
+seven-b  right  371.3 ns
+one-b    right  406.2 ns
+seven-c  right  371.0 ns
+one-c    right  393.6 ns
+seven-d  right  376.2 ns
+one-d    right  399.7 ns
+seven-e  right  374.5 ns
+one-e    right  406.1 ns
+trained in 27 rounds (10.9 ms); 10/10 right; median 375.4 ns per picture

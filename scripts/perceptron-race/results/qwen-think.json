@@ -1,0 +1,32 @@
+{
+  "system": "qwen-think",
+  "setting": "qwen3:8b on this Mac, thinking on (stopped after 2 pictures, about 4 minutes each)",
+  "right": 1,
+  "n": 2,
+  "median_wall": 246.42000000000002,
+  "min_wall": 238.28,
+  "max_wall": 254.56,
+  "median_model": 246.405,
+  "cold_start": null,
+  "partial": true,
+  "rows": [
+    {
+      "picture": "seven-a",
+      "answer": true,
+      "said": true,
+      "right": true,
+      "text": "YES",
+      "wall": 238.28,
+      "model": 238.26
+    },
+    {
+      "picture": "one-a",
+      "answer": false,
+      "said": true,
+      "right": false,
+      "text": "YES",
+      "wall": 254.56,
+      "model": 254.55
+    }
+  ]
+}
