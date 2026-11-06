@@ -1,0 +1,16 @@
+{
+  "status": "production script for owner review",
+  "authorizedScope": "Full bilingual narrated animation, 2026-11-05",
+  "cuePairs": 36,
+  "canonicalScriptSha256": "044d9aa005a7b6dfd90c0494397c90fe06f5ef1149eb273ea595c52c30bb5d89",
+  "sha256": {
+    "zh-script.md": "eeae56a17567b5cad3e8c4832c5c52c3be7f67b10bc8f2fbca010a13d6baa31b",
+    "en-script.md": "2dd1408d3adb702a14d64be5aed16197e3b7dbd6d00684421c6d555187e83100",
+    "voice.en.json": "eb6baeb6c920924e8e3179bb38a702979e549cdccc57ac1f414b486472b1b638",
+    "voice.zh.json": "8859e6ee1827c0c1833947d82edec7540b3048700e3fb082f0f8c6f2587e4842",
+    "voice-choices.json": "1f17e5cc79c65c6fab59e45c6dda9f5d503439b71ea1ed810936f3326d10672f"
+  },
+  "durationInFrames": 7893,
+  "fps": 30,
+  "durationSeconds": 263.1
+}

@@ -1,0 +1,16 @@
+{
+  "frames": 194,
+  "events": [
+    {
+      "action": "Weight 64",
+      "seconds": 1.211
+    },
+    {
+      "action": "Weight 1",
+      "seconds": 2.662
+    }
+  ],
+  "result": "01000001 = 65 → A\nUsing ASCII for A–Z. The light weights run from 128 to 1.",
+  "source": "Unmodified snapshot of lucas-academy-ai/assets/labs/binary.html, lab.css, lab.js, math.js. Native All off/Weight buttons.",
+  "sha256": "369ce41959fdcfea80892dd4b6ed754728b311ec24ce54d5d0cad137f8b01656"
+}

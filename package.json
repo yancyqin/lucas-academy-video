@@ -72,7 +72,19 @@
     "fal01:voice:select": ".venv-align/bin/python scripts/family-ai-lab-01/mix_audio.py --select",
     "fal01:voice:mix": ".venv-align/bin/python scripts/family-ai-lab-01/mix_audio.py",
     "fal01:check:final": "python3 scripts/family-ai-lab-01/verify.py --voiced",
-    "fal01:cover:v2": ".venv-align/bin/python scripts/family-ai-lab-01/cover_v2.py"
+    "fal01:cover:v2": ".venv-align/bin/python scripts/family-ai-lab-01/cover_v2.py",
+    "fal02:prepare": ".venv-align/bin/python scripts/family-ai-lab-02/prepare.py && python3 scripts/family-ai-lab-02/build.py",
+    "fal02:capture": "node scripts/family-ai-lab-02/capture.mjs",
+    "fal02:voice:en": "../lucas-academy-media/.conda/bin/python scripts/family-ai-lab-02/narrate.py --lang en",
+    "fal02:voice:zh": "../lucas-academy-media/.conda/bin/python scripts/family-ai-lab-02/narrate.py --lang zh",
+    "fal02:voice:check": ".venv-align/bin/python scripts/family-ai-lab-02/check_voice.py",
+    "fal02:voice:select": ".venv-align/bin/python scripts/family-ai-lab-02/mix_audio.py --select",
+    "fal02:timeline:voiced": "python3 scripts/family-ai-lab-02/build.py --voiced",
+    "fal02:voice:mix": ".venv-align/bin/python scripts/family-ai-lab-02/mix_audio.py",
+    "fal02:stills": "node scripts/family-ai-lab-02/render.cjs --stills",
+    "fal02:final": "node scripts/family-ai-lab-02/render.cjs --voiced",
+    "fal02:check": "python3 scripts/family-ai-lab-02/verify.py",
+    "fal02:backup": "python3 scripts/family-ai-lab-02/backup.py"
   },
   "dependencies": {
     "@remotion/cli": "^4.0.484",
