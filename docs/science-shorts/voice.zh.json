@@ -114,35 +114,35 @@
   {
     "film": "perceptron",
     "id": "p11",
-    "caption": "在 Lucas Academy，我们一起一点一点学。你想让 AI 学会什么？",
-    "spoken": "在卢卡斯学院，我们一起一点一点学。你想让人工智能学会什么？",
+    "caption": "在 Lucas Academy，我们一起一点一点学。今天，关于 AI，你想学点什么？",
+    "spoken": "在卢卡斯学院，我们一起一点一点学。今天，关于人工智能，你想学点什么？",
     "voice": "louise/zh",
     "speed": 1.1,
     "mode": "zero-shot-instruct",
     "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
-    "settingsSha256": "e196495367f805448b7ee983e38dc2aabbf7188d7ba71cedf7e24d89e7c88ed1"
+    "settingsSha256": "fa325544ca91f0c63e3af1dda8e51195d044b394d261c0deb86bbb428010ba0b"
   },
   {
     "film": "optogenetics",
     "id": "o01",
-    "caption": "一位失明的人，怎么又找到了桌上的笔记本？",
-    "spoken": "一位失明的人，怎么又找到了桌上的笔记本？",
+    "caption": "一分钟了解二零二六年诺贝尔奖：光遗传学。",
+    "spoken": "一分钟了解二零二六年诺贝尔奖：光遗传学。",
     "voice": "louise/zh",
     "speed": 1.1,
     "mode": "zero-shot-instruct",
     "instruction": "请用活泼、带着笑意的语气，像邀请家长和孩子一起出发探险。轻快、有好奇心，字句自然连贯，不用播报腔。",
-    "settingsSha256": "e552b2572ba7e6938506fc3837774da426db787fd658a068771dba0e981c21a3"
+    "settingsSha256": "e9cac951f1b99fbc1663031bdd2baaa94c96c6daf7caf95d8f54b67d987d6b69"
   },
   {
     "film": "optogenetics",
     "id": "o02",
-    "caption": "线索，竟然藏在绿藻里。光一照，它们就朝着光游过去。",
-    "spoken": "线索，竟然藏在绿藻里。光一照，它们就朝着光游过去。",
+    "caption": "线索藏在绿藻里。光一照，它们就朝着光游。",
+    "spoken": "线索藏在绿藻里。光一照，它们就朝着光游。",
     "voice": "louise/zh",
     "speed": 1.1,
     "mode": "zero-shot-instruct",
     "instruction": "请用活泼、带着笑意的语气，像邀请家长和孩子一起出发探险。轻快、有好奇心，字句自然连贯，不用播报腔。",
-    "settingsSha256": "159aee1bfc6257fc3aa6aa8c074215b982170cbbfd236dc4b6dc0594d6d76caf"
+    "settingsSha256": "25f5d8d08bc4bb4ba725a663871c94b8c4798c27b97b0dd2b1b855152b2a81be"
   },
   {
     "film": "optogenetics",
@@ -157,25 +157,14 @@
   },
   {
     "film": "optogenetics",
-    "id": "o04",
-    "caption": "这位病人的感光细胞坏了，后面传信的细胞，却还在。",
-    "spoken": "这位病人的感光细胞坏了，后面传信的细胞，却还在。",
-    "voice": "louise/zh",
-    "speed": 1.1,
-    "mode": "zero-shot-instruct",
-    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
-    "settingsSha256": "d5d88cde5d10dd9da42e3c22e2010808f6e840cbf398e0599fb9505244dfe279"
-  },
-  {
-    "film": "optogenetics",
     "id": "o05",
-    "caption": "研究团队给那些细胞装上另一种光开关。琥珀色的光，就能把它打开。",
-    "spoken": "研究团队给那些细胞装上另一种光开关。琥珀色的光，就能把它打开。",
+    "caption": "给失明病人的视网膜细胞，装上另一种开关，用琥珀色光打开。",
+    "spoken": "给失明病人的视网膜细胞，装上另一种开关，用琥珀色光打开。",
     "voice": "louise/zh",
     "speed": 1.1,
     "mode": "zero-shot-instruct",
     "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
-    "settingsSha256": "ade2a6ba77bf173e2a83d5ed704ec238ee77583322b595227a90b6177a08a04b"
+    "settingsSha256": "e545018436bef6ebed2b110d76364c56565104fd76b66f9a9ccffc6438234390"
   },
   {
     "film": "optogenetics",
@@ -220,17 +209,6 @@
     "mode": "zero-shot-instruct",
     "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
     "settingsSha256": "66f095d66821b8e0a99a44a410604b1e2684ded9cbbf8bf6df7e5249a64286b6"
-  },
-  {
-    "film": "optogenetics",
-    "id": "o10",
-    "caption": "从一个光信号开始，我们能一点点研究大脑怎样处理信息。",
-    "spoken": "从一个光信号开始，我们能一点点研究大脑怎样处理信息。",
-    "voice": "louise/zh",
-    "speed": 1.1,
-    "mode": "zero-shot-instruct",
-    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
-    "settingsSha256": "74264a1c25ca59c60147d7158ba00489422f51ee9b7cc13712bfdd069fb25149"
   },
   {
     "film": "optogenetics",

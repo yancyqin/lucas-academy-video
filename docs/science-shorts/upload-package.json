@@ -1,21 +1,21 @@
 {
-  "path": "/Users/yqin/Desktop/感知机与光遗传学-竖屏短片-v2",
+  "path": "/Users/yqin/Desktop/感知机与光遗传学-竖屏短片-v3",
   "files": 16,
   "sha256": {
-    "perceptron/perceptron.bilingual.mp4": "e9a793ee1b8785820adb7a772973e6f0b032874b6271d4d0b13491e357789623",
-    "perceptron/en.m4a": "1497f3c171e8494618bbf9e3e884c23c00480e842bcbb7be2e24054a3b93a7ff",
-    "perceptron/zh.m4a": "e9b977295d2bdb85dd66bf8660095a0fac7bf6c9167b627aeec88b73398faa8a",
-    "perceptron/en.srt": "4c847c7b9897d195d372b1653dacfc5394a24845bafb83948bc9a52f863283d0",
-    "perceptron/zh-Hans.srt": "f01994dd98ff5856acba10ef3b3985e452caa096f7abdc93d65952a18dfc0108",
+    "perceptron/perceptron.bilingual.mp4": "68f7d0f837a3fd94e498c3acb1c528e7dde0cf808a0e2a9c15b5b135f18079e8",
+    "perceptron/en.m4a": "6f068a26b402e1fcf20081069fd28a2ff115487179c2cb4b9678a847f1f95e1b",
+    "perceptron/zh.m4a": "0dc207bdfe2620927d106b27aebb46de1b281e64f2922e152e012f3f00ad94fb",
+    "perceptron/en.srt": "f23fe2e5674ee441a981e6c748bf37fea1c7582eb3c91aa01cdccf94ec06454f",
+    "perceptron/zh-Hans.srt": "ae2834e0c6eef496067b5cb943ea649f66ae8652171db7c6afb3f9cd5148eda6",
     "perceptron/youtube.en.txt": "b98b0069e23b43045940399fc44fd2b02b25cd9ef64575a1226619ec1190fea8",
     "perceptron/youtube.zh.txt": "afa0957f5e2f2b2a69c6a5404ef9d8400c3011ff883b5aad2267fa36915fca14",
-    "optogenetics/optogenetics.bilingual.mp4": "5b73ce73f9343aa8f51051b5de71b036466716919a8b420ebdea900e958064a1",
-    "optogenetics/en.m4a": "957011d5388cfd101dbfbd7bc10606978c2a18d881fbc5b331d89809a826fb26",
-    "optogenetics/zh.m4a": "c8b4ae3b639b782aac72a62bc060ad22079ce8faf0d4d2e828a71a33d6f64cda",
-    "optogenetics/en.srt": "0fd08ee21ac65175cc2b3bd8fd1a4827e74c82912f3a54f912355d7bd082d8d8",
-    "optogenetics/zh-Hans.srt": "8a0823872b60f72bee78553bc7e663a4adb50d84c27bd3956169b7aa31e6380f",
-    "optogenetics/youtube.en.txt": "cc61acc0fae36590f78d17e4554902e159e7aa597a5bdffcd57d34ea9b5cd805",
-    "optogenetics/youtube.zh.txt": "be6390ca1b5dbd3129dca4251f3d649691bece56c55ad20d9b67e101fd208a0e",
-    "先读我.txt": "bd79741b544f365b8b5d8072a935ce7df4502b275ef2823755a4d5e11fc36758"
+    "optogenetics/optogenetics.bilingual.mp4": "f104ac721f98978594260b355321f9d8caee538cc5f88743a8e10f55e9870b02",
+    "optogenetics/en.m4a": "a1e00d8fec004dee976b7cb75202b77aa2b429696eb7630c33e58891c624ae6a",
+    "optogenetics/zh.m4a": "720490546e56c515b735253d6232fa2fdd03afd6034d881816e2bd21538df07c",
+    "optogenetics/en.srt": "c1ad0f1ef79aad832ac8c7a7a117974975e67a4a4397d0437f683b205a4dc2b3",
+    "optogenetics/zh-Hans.srt": "8905547c10184fd9112733726209378e3e10b3137b09e70840c0d9b0557f4936",
+    "optogenetics/youtube.en.txt": "9b7e47adc72f0dd65e31435e108575432521092439e792dfacf824c57436fe09",
+    "optogenetics/youtube.zh.txt": "b3d745915090f9e2fe1ffed06caef613a24b18b719768d6426ca9b449cc1cd0f",
+    "先读我.txt": "e721a6646753f2e221c725107f3ed249624bcc0a44a81f3853fa5266f2014e0d"
   }
 }

@@ -4,33 +4,33 @@
   "width": 1080,
   "height": 1920,
   "defaultLanguage": "en",
-  "durationInFrames": 2243,
+  "durationInFrames": 1800,
   "narrated": true,
   "lines": [
     {
       "id": "o01",
-      "visual": "notebook-hook",
+      "visual": "nobel-hook",
       "from": 0,
-      "duration": 168,
+      "duration": 203,
       "text": {
-        "en": "A blind patient reached for a notebook. How did light help him find it?",
-        "zh": "一位失明的人，怎么又找到了桌上的笔记本？"
+        "en": "The 2026 Nobel Prize in Medicine, in one minute: optogenetics.",
+        "zh": "一分钟了解二零二六年诺贝尔奖：光遗传学。"
       }
     },
     {
       "id": "o02",
       "visual": "algae",
-      "from": 168,
-      "duration": 221,
+      "from": 203,
+      "duration": 187,
       "text": {
         "en": "The clue starts with tiny algae. Shine a light, and they swim toward it.",
-        "zh": "线索，竟然藏在绿藻里。光一照，它们就朝着光游过去。"
+        "zh": "线索藏在绿藻里。光一照，它们就朝着光游。"
       }
     },
     {
       "id": "o03",
       "visual": "gate",
-      "from": 389,
+      "from": 390,
       "duration": 230,
       "text": {
         "en": "Scientists found a door that light could open. Put it in other cells, and light could trigger a signal.",
@@ -38,29 +38,19 @@
       }
     },
     {
-      "id": "o04",
-      "visual": "camera",
-      "from": 619,
-      "duration": 201,
-      "text": {
-        "en": "This patient’s light-sensing cells had failed. But other cells that could pass signals along were still there.",
-        "zh": "这位病人的感光细胞坏了，后面传信的细胞，却还在。"
-      }
-    },
-    {
       "id": "o05",
       "visual": "amber",
-      "from": 820,
-      "duration": 203,
+      "from": 620,
+      "duration": 207,
       "text": {
-        "en": "The team gave those cells another kind of light switch, one that responds to amber light.",
-        "zh": "研究团队给那些细胞装上另一种光开关。琥珀色的光，就能把它打开。"
+        "en": "In a blind patient, a different switch made retinal cells respond to amber light.",
+        "zh": "给失明病人的视网膜细胞，装上另一种开关，用琥珀色光打开。"
       }
     },
     {
       "id": "o06",
       "visual": "encode",
-      "from": 1023,
+      "from": 827,
       "duration": 192,
       "text": {
         "en": "Special glasses turn changes in brightness into pulses of light. That is encoding.",
@@ -70,7 +60,7 @@
     {
       "id": "o07",
       "visual": "decode",
-      "from": 1215,
+      "from": 1019,
       "duration": 160,
       "text": {
         "en": "The brain learns to read those signals as objects. That is decoding.",
@@ -80,7 +70,7 @@
     {
       "id": "o08",
       "visual": "touch",
-      "from": 1375,
+      "from": 1179,
       "duration": 160,
       "text": {
         "en": "After months of training, he could locate some objects and reach out to touch them.",
@@ -90,7 +80,7 @@
     {
       "id": "o09",
       "visual": "limits",
-      "from": 1535,
+      "from": 1339,
       "duration": 220,
       "text": {
         "en": "This was partial recovery in one patient. He still needed the glasses, and normal vision had not returned.",
@@ -98,20 +88,10 @@
       }
     },
     {
-      "id": "o10",
-      "visual": "brain",
-      "from": 1755,
-      "duration": 185,
-      "text": {
-        "en": "Starting with a light signal, we can explore how the brain processes information.",
-        "zh": "从一个光信号开始，我们能一点点研究大脑怎样处理信息。"
-      }
-    },
-    {
       "id": "o11",
       "visual": "question",
-      "from": 1940,
-      "duration": 303,
+      "from": 1559,
+      "duration": 241,
       "text": {
         "en": "At Lucas Academy, we explore step by step: how do brains think, and how does AI learn?",
         "zh": "在 Lucas Academy，我们一起一点点探索：大脑如何思考，AI 又如何学习？"
@@ -128,8 +108,8 @@
       "layout": "wide",
       "focus": 0.4,
       "from": 0,
-      "duration": 168,
-      "rate": 0.8035714285714286
+      "duration": 203,
+      "rate": 0.6650246305418719
     },
     {
       "first": "o02",
@@ -139,8 +119,8 @@
       "out": 10,
       "layout": "square",
       "focus": 0.44,
-      "from": 168,
-      "duration": 221,
+      "from": 203,
+      "duration": 187,
       "rate": 1.35
     },
     {
@@ -151,21 +131,9 @@
       "out": 10,
       "layout": "portrait",
       "focus": 0.5,
-      "from": 389,
+      "from": 390,
       "duration": 230,
       "rate": 1.3043478260869565
-    },
-    {
-      "first": "o04",
-      "last": "o04",
-      "asset": "opto-camera",
-      "in": 0,
-      "out": 5.4,
-      "layout": "wide",
-      "focus": 0.46,
-      "from": 619,
-      "duration": 201,
-      "rate": 0.8059701492537313
     },
     {
       "first": "o05",
@@ -175,9 +143,9 @@
       "out": 10,
       "layout": "wide",
       "focus": 0.5,
-      "from": 820,
-      "duration": 395,
-      "rate": 0.759493670886076
+      "from": 620,
+      "duration": 399,
+      "rate": 0.7518796992481203
     },
     {
       "first": "o07",
@@ -187,7 +155,7 @@
       "out": 4.5,
       "layout": "portrait",
       "focus": 0.55,
-      "from": 1215,
+      "from": 1019,
       "duration": 160,
       "rate": 0.84375
     },
@@ -199,7 +167,7 @@
       "out": 10,
       "layout": "wide",
       "focus": 0.4,
-      "from": 1375,
+      "from": 1179,
       "duration": 160,
       "rate": 1.03125
     },
@@ -211,30 +179,30 @@
       "out": 10,
       "layout": "portrait",
       "focus": 0.5,
-      "from": 1535,
+      "from": 1339,
       "duration": 220,
       "rate": 0.6818181818181819
     },
     {
-      "first": "o10",
+      "first": "o11",
       "last": "o11",
       "asset": "opto-dots",
       "in": 4.5,
       "out": 10,
       "layout": "portrait",
       "focus": 0.5,
-      "from": 1755,
-      "duration": 488,
-      "rate": 0.33811475409836067
+      "from": 1559,
+      "duration": 241,
+      "rate": 0.6846473029045643
     }
   ],
   "voices": {
     "en": {
       "o01": {
         "path": "narration/en/o01.wav",
-        "sha256": "ea5c3857685486883a16dfcbee04b998496c24328eb1cb1365f8424e8509455e",
-        "seconds": 5.22,
-        "settingsSha256": "adde8c6de672ce59a2e5c3d7dc3eeb44fba4a80f5f458360d2bf4ad9eb5c0491"
+        "sha256": "e6e15ecdb169cb354f22cfa472b6f167fe4641d0ce6a22de79fd1ab1ffbddb3a",
+        "seconds": 6.36,
+        "settingsSha256": "fa7ba4b5a3cb795be791bae90e03f6b6bbb7c3105fb72ab0114c0529edb3c268"
       },
       "o02": {
         "path": "narration/en/o02.wav",
@@ -248,17 +216,11 @@
         "seconds": 6.24,
         "settingsSha256": "acbdacbb0d821a83817725b945acece6d7d5b25134160f660355011029f0ea8d"
       },
-      "o04": {
-        "path": "narration/en/o04.wav",
-        "sha256": "7cab9c2e2877a58b3342b1ff7ed391d01297a3d0dd6bb4411b4f095a5e68a576",
-        "seconds": 6.32,
-        "settingsSha256": "25831e81fc01531ec8af6cd1911d7c95f3b79ccb16edffcf17a5c43d1038e719"
-      },
       "o05": {
         "path": "narration/en/o05.wav",
-        "sha256": "d552fa093bad24c5194fb3736ba5915657dfbf6805a4114f1cbf60bd7ee7203f",
+        "sha256": "a2dd9b5afcbb73795dad854b5d8f55c85b89291c1118f87e581fdd085be94bd4",
         "seconds": 5.4,
-        "settingsSha256": "5db16d7af1c5ba5139c6dd1cb5490762c9292bd8ebeea92f7c048429436bb0d2"
+        "settingsSha256": "6444ca833eee78c10e84451c48afd7b6474051363e79e0fbe8cb92362e4d4a97"
       },
       "o06": {
         "path": "narration/en/o06.wav",
@@ -284,12 +246,6 @@
         "seconds": 6.94,
         "settingsSha256": "2c4d662093c9e03ee73787a0254cec1069dbb980f47ff513f4cf588c5832a62c"
       },
-      "o10": {
-        "path": "narration/en/o10.wav",
-        "sha256": "726816d9147b7e5d129933ff73734dc6e81e31e50e22833e62c3e711add76e6c",
-        "seconds": 5.52,
-        "settingsSha256": "8240fd7099343c0137de08b1e1ff3482bea765e4da5648be0c0295c7a2f37ec7"
-      },
       "o11": {
         "path": "narration/en/o11.wav",
         "sha256": "106fc3b204f91d86fa80882b2b68ab5e9d6b2a252f36e2d5c6d73e11ae919c31",
@@ -300,15 +256,15 @@
     "zh": {
       "o01": {
         "path": "narration/zh/o01.wav",
-        "sha256": "aabac10e928835d4ac09378aca64fb86eb1de6bec7334f177b223b39adeea657",
-        "seconds": 3.7,
-        "settingsSha256": "e552b2572ba7e6938506fc3837774da426db787fd658a068771dba0e981c21a3"
+        "sha256": "135ca8dae6d8d61e0747d9ed868c24fc99816773f9f5dce92645409ebf06dcbf",
+        "seconds": 5.22,
+        "settingsSha256": "e9cac951f1b99fbc1663031bdd2baaa94c96c6daf7caf95d8f54b67d987d6b69"
       },
       "o02": {
         "path": "narration/zh/o02.wav",
-        "sha256": "2c45fd762bff39bd0184de2ed7bc15a9f16f9dccc3ca72f7f5d7de98450024c0",
-        "seconds": 6.98,
-        "settingsSha256": "159aee1bfc6257fc3aa6aa8c074215b982170cbbfd236dc4b6dc0594d6d76caf"
+        "sha256": "f16f37de1757491638e69fd2f123ac5845f497159a50099a15595692dafabeee",
+        "seconds": 5.26,
+        "settingsSha256": "25f5d8d08bc4bb4ba725a663871c94b8c4798c27b97b0dd2b1b855152b2a81be"
       },
       "o03": {
         "path": "narration/zh/o03.wav",
@@ -316,17 +272,11 @@
         "seconds": 7.26,
         "settingsSha256": "a6a883ed57fbbd41db6999fc9289ee6765c0169efdfa0a2c6ad450ca047567ad"
       },
-      "o04": {
-        "path": "narration/zh/o04.wav",
-        "sha256": "95fb438e3801799db3baea9df6c5b4499a115351243a46dfc2fdac30e4bb7cc0",
-        "seconds": 4.98,
-        "settingsSha256": "d5d88cde5d10dd9da42e3c22e2010808f6e840cbf398e0599fb9505244dfe279"
-      },
       "o05": {
         "path": "narration/zh/o05.wav",
-        "sha256": "489a7d2f7eccffdf2336ddfd7b35f7f8275c4b24d48cd5b1c3836c01c900ac73",
-        "seconds": 6.36,
-        "settingsSha256": "ade2a6ba77bf173e2a83d5ed704ec238ee77583322b595227a90b6177a08a04b"
+        "sha256": "429e88b13d1587a58db83ef624340605c31458e90b2b054a0e8ef83bf62c9705",
+        "seconds": 5.92,
+        "settingsSha256": "e545018436bef6ebed2b110d76364c56565104fd76b66f9a9ccffc6438234390"
       },
       "o06": {
         "path": "narration/zh/o06.wav",
@@ -352,12 +302,6 @@
         "seconds": 5.44,
         "settingsSha256": "66f095d66821b8e0a99a44a410604b1e2684ded9cbbf8bf6df7e5249a64286b6"
       },
-      "o10": {
-        "path": "narration/zh/o10.wav",
-        "sha256": "979be0a67a6544f709a8d25e2a8f8ce5c5396da99fe66b2fe97e22eab2839a04",
-        "seconds": 5.78,
-        "settingsSha256": "74264a1c25ca59c60147d7158ba00489422f51ee9b7cc13712bfdd069fb25149"
-      },
       "o11": {
         "path": "narration/zh/o11.wav",
         "sha256": "080a232f9e5fab1dcfa096bafdfbfa4603c9fb4feb4ac5f79f384ba0f5ba41ee",
@@ -367,7 +311,7 @@
     }
   },
   "title": {
-    "zh": "光怎么帮他找到桌上的东西？",
-    "en": "How did light help him find the notebook?"
+    "zh": "1分钟了解2026诺贝尔奖：光遗传学",
+    "en": "The 2026 Nobel Prize in Medicine in one minute: Optogenetics"
   }
 }

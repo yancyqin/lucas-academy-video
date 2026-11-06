@@ -79,6 +79,86 @@
     "heard": "That weighted sum can be written as matrix multiplication, one of today's basic AI operations.",
     "note": "Revised learning invitation / bridge; medium transcript checked, Chinese name homophones normalized."
   },
+  "en/p11": {
+    "checked": true,
+    "take": "5",
+    "asrModel": "medium",
+    "sha256": "1dd7f8f3c4239f7909774624de62ed25d8aa884743869604269eb42d21a50fc2",
+    "heard": "At Lucas Academy, we learn step by step. What do you want to learn about AI today?",
+    "note": "V3 new hook / case / final learning question, checked against intended spoken copy; digit forms and Chinese homophones normalized."
+  },
+  "en/o01": {
+    "checked": true,
+    "take": "5",
+    "asrModel": "medium",
+    "sha256": "e6e15ecdb169cb354f22cfa472b6f167fe4641d0ce6a22de79fd1ab1ffbddb3a",
+    "heard": "The 2026 Nobel Prize in Medicine in one minute. Optogenetics.",
+    "note": "V3 new hook / case / final learning question, checked against intended spoken copy; digit forms and Chinese homophones normalized."
+  },
+  "en/o02": {
+    "checked": true,
+    "take": "",
+    "asrModel": "medium",
+    "sha256": "20bd4fdac7aecde525cce490e857d12472bb1c48c02af615f12020d22c241df3",
+    "heard": "The clue starts with tiny algae. Shine a light and they swim toward it.",
+    "note": "Transcript reviewed against intended speech, retaining single patient, partial recovery and glasses; homophones normalized."
+  },
+  "en/o03": {
+    "checked": true,
+    "take": "",
+    "asrModel": "small",
+    "sha256": "ef66842cda14974eb4e9265683389ca4cfb7fde749916eae6830c7968f7ca715",
+    "heard": "Scientists found the door that light could open. Put it in other cells and light could trigger a signal.",
+    "note": "Transcript reviewed against intended speech, retaining single patient, partial recovery and glasses; homophones normalized."
+  },
+  "en/o05": {
+    "checked": true,
+    "take": "5",
+    "asrModel": "medium",
+    "sha256": "a2dd9b5afcbb73795dad854b5d8f55c85b89291c1118f87e581fdd085be94bd4",
+    "heard": "In a blind patient, a different switch made retinal cells respond to amber light.",
+    "note": "V3 new hook / case / final learning question, checked against intended spoken copy; digit forms and Chinese homophones normalized."
+  },
+  "en/o06": {
+    "checked": true,
+    "take": "",
+    "asrModel": "small",
+    "sha256": "82b71a82efe59a23d50b85db490bc9f3ac5dad9cd8b51a8a3c07a551bf99771d",
+    "heard": "Special glasses turn changes in brightness into pulses of light. That is encoding.",
+    "note": "Transcript reviewed against intended speech, retaining single patient, partial recovery and glasses; homophones normalized."
+  },
+  "en/o07": {
+    "checked": true,
+    "take": "",
+    "asrModel": "small",
+    "sha256": "59243d8aaf0de0491f79af8d47d7f228d8d0eb3fab542732f05e5fc3b4449b3a",
+    "heard": "The brain learns to read those signals as objects. That is decoding.",
+    "note": "Transcript reviewed against intended speech, retaining single patient, partial recovery and glasses; homophones normalized."
+  },
+  "en/o08": {
+    "checked": true,
+    "take": "",
+    "asrModel": "small",
+    "sha256": "589edd039d1422084296e2e71748c0a3ac840319fbfc240e56b4f8ac314d2d35",
+    "heard": "After months of training, he could locate some objects and reach out to touch them.",
+    "note": "Transcript reviewed against intended speech, retaining single patient, partial recovery and glasses; homophones normalized."
+  },
+  "en/o09": {
+    "checked": true,
+    "take": "",
+    "asrModel": "small",
+    "sha256": "d68690ba41742c3ad9eb40c3b4462e86be96ec910d46c50716387b4e48953c11",
+    "heard": "This was partial recovery in one patient. He still needed the glasses and normal vision had not returned.",
+    "note": "Transcript reviewed against intended speech, retaining single patient, partial recovery and glasses; homophones normalized."
+  },
+  "en/o11": {
+    "checked": true,
+    "take": "3",
+    "asrModel": "medium",
+    "sha256": "106fc3b204f91d86fa80882b2b68ab5e9d6b2a252f36e2d5c6d73e11ae919c31",
+    "heard": "At Lucas Academy, we explore step by step. How do brains think and how does AI learn?",
+    "note": "Revised learning invitation / bridge; medium transcript checked, Chinese name homophones normalized."
+  },
   "zh/p01": {
     "checked": true,
     "take": "",
@@ -159,101 +239,29 @@
     "heard": "刚才的加权求和可以写成矩阵向乘,这是今天人工智能的基础运算。",
     "note": "Mathematics-vocabulary recheck confirms 矩阵; 加全/加权 and 向乘/相乘 are ASR spellings of the spoken mathematical phrase. Retake splits the explanation into two short sentences. Independent English take says matrix multiplication."
   },
-  "en/o01": {
+  "zh/p11": {
     "checked": true,
-    "take": "",
-    "asrModel": "small",
-    "sha256": "ea5c3857685486883a16dfcbee04b998496c24328eb1cb1365f8424e8509455e",
-    "heard": "A blind patient reached for a notebook. How did light help him find it?",
-    "note": "Transcript reviewed against intended speech, retaining single patient, partial recovery and glasses; homophones normalized."
-  },
-  "en/o02": {
-    "checked": true,
-    "take": "",
+    "take": "5",
     "asrModel": "medium",
-    "sha256": "20bd4fdac7aecde525cce490e857d12472bb1c48c02af615f12020d22c241df3",
-    "heard": "The clue starts with tiny algae. Shine a light and they swim toward it.",
-    "note": "Transcript reviewed against intended speech, retaining single patient, partial recovery and glasses; homophones normalized."
-  },
-  "en/o03": {
-    "checked": true,
-    "take": "",
-    "asrModel": "small",
-    "sha256": "ef66842cda14974eb4e9265683389ca4cfb7fde749916eae6830c7968f7ca715",
-    "heard": "Scientists found the door that light could open. Put it in other cells and light could trigger a signal.",
-    "note": "Transcript reviewed against intended speech, retaining single patient, partial recovery and glasses; homophones normalized."
-  },
-  "en/o04": {
-    "checked": true,
-    "take": "",
-    "asrModel": "small",
-    "sha256": "7cab9c2e2877a58b3342b1ff7ed391d01297a3d0dd6bb4411b4f095a5e68a576",
-    "heard": "This patient's light-sensing cells had failed, but other cells that could pass signals along were still there.",
-    "note": "Transcript reviewed against intended speech, retaining single patient, partial recovery and glasses; homophones normalized."
-  },
-  "en/o05": {
-    "checked": true,
-    "take": "",
-    "asrModel": "medium",
-    "sha256": "d552fa093bad24c5194fb3736ba5915657dfbf6805a4114f1cbf60bd7ee7203f",
-    "heard": "The team gave those cells another kind of light switch, one that responds to amber light.",
-    "note": "Transcript reviewed against intended speech, retaining single patient, partial recovery and glasses; homophones normalized."
-  },
-  "en/o06": {
-    "checked": true,
-    "take": "",
-    "asrModel": "small",
-    "sha256": "82b71a82efe59a23d50b85db490bc9f3ac5dad9cd8b51a8a3c07a551bf99771d",
-    "heard": "Special glasses turn changes in brightness into pulses of light. That is encoding.",
-    "note": "Transcript reviewed against intended speech, retaining single patient, partial recovery and glasses; homophones normalized."
-  },
-  "en/o07": {
-    "checked": true,
-    "take": "",
-    "asrModel": "small",
-    "sha256": "59243d8aaf0de0491f79af8d47d7f228d8d0eb3fab542732f05e5fc3b4449b3a",
-    "heard": "The brain learns to read those signals as objects. That is decoding.",
-    "note": "Transcript reviewed against intended speech, retaining single patient, partial recovery and glasses; homophones normalized."
-  },
-  "en/o08": {
-    "checked": true,
-    "take": "",
-    "asrModel": "small",
-    "sha256": "589edd039d1422084296e2e71748c0a3ac840319fbfc240e56b4f8ac314d2d35",
-    "heard": "After months of training, he could locate some objects and reach out to touch them.",
-    "note": "Transcript reviewed against intended speech, retaining single patient, partial recovery and glasses; homophones normalized."
-  },
-  "en/o09": {
-    "checked": true,
-    "take": "",
-    "asrModel": "small",
-    "sha256": "d68690ba41742c3ad9eb40c3b4462e86be96ec910d46c50716387b4e48953c11",
-    "heard": "This was partial recovery in one patient. He still needed the glasses and normal vision had not returned.",
-    "note": "Transcript reviewed against intended speech, retaining single patient, partial recovery and glasses; homophones normalized."
-  },
-  "en/o10": {
-    "checked": true,
-    "take": "3",
-    "asrModel": "medium",
-    "sha256": "726816d9147b7e5d129933ff73734dc6e81e31e50e22833e62c3e711add76e6c",
-    "heard": "Starting with the light signal, we can explore how the brain processes information.",
-    "note": "Revised learning invitation / bridge; medium transcript checked, Chinese name homophones normalized."
+    "sha256": "43e773c9427450eb0d97c40f6bae522e7f91a14c83e7f10f31d2eb54170a6770",
+    "heard": "在卢卡斯学院,我们一起一点一点学。今天,关于人工智能,你想学点什么?",
+    "note": "V3 new hook / case / final learning question, checked against intended spoken copy; digit forms and Chinese homophones normalized."
   },
   "zh/o01": {
     "checked": true,
-    "take": "",
-    "asrModel": "small",
-    "sha256": "aabac10e928835d4ac09378aca64fb86eb1de6bec7334f177b223b39adeea657",
-    "heard": "一位失明的人怎么又找到了桌上的笔记本?",
-    "note": "Transcript reviewed against intended speech, retaining single patient, partial recovery and glasses; homophones normalized."
+    "take": "5",
+    "asrModel": "medium",
+    "sha256": "135ca8dae6d8d61e0747d9ed868c24fc99816773f9f5dce92645409ebf06dcbf",
+    "heard": "一分钟了解2026年诺贝尔奖。光遗传学。",
+    "note": "V3 new hook / case / final learning question, checked against intended spoken copy; digit forms and Chinese homophones normalized."
   },
   "zh/o02": {
     "checked": true,
-    "take": "2",
-    "asrModel": "medium",
-    "sha256": "2c45fd762bff39bd0184de2ed7bc15a9f16f9dccc3ca72f7f5d7de98450024c0",
-    "heard": "线索竟然藏在绿枣里,光一照,他们就朝着光游过去。",
-    "note": "Transcript reviewed against intended speech, retaining single patient, partial recovery and glasses; homophones normalized."
+    "take": "5",
+    "asrModel": "small",
+    "sha256": "f16f37de1757491638e69fd2f123ac5845f497159a50099a15595692dafabeee",
+    "heard": "线索藏在绿枣里。光遗照,他们就朝着光游。",
+    "note": "V3 new hook / case / final learning question, checked against intended spoken copy; digit forms and Chinese homophones normalized."
   },
   "zh/o03": {
     "checked": true,
@@ -263,21 +271,13 @@
     "heard": "科学家找到了会别光打开的门。装进别的细胞,光就能让它发出信号。",
     "note": "Transcript reviewed against intended speech, retaining single patient, partial recovery and glasses; homophones normalized."
   },
-  "zh/o04": {
-    "checked": true,
-    "take": "",
-    "asrModel": "small",
-    "sha256": "95fb438e3801799db3baea9df6c5b4499a115351243a46dfc2fdac30e4bb7cc0",
-    "heard": "这位病人的感光细胞坏了,后面传信的细胞却还在。",
-    "note": "Transcript reviewed against intended speech, retaining single patient, partial recovery and glasses; homophones normalized."
-  },
   "zh/o05": {
     "checked": true,
-    "take": "2",
+    "take": "6",
     "asrModel": "medium",
-    "sha256": "489a7d2f7eccffdf2336ddfd7b35f7f8275c4b24d48cd5b1c3836c01c900ac73",
-    "heard": "研究团队给那些细胞装上另一种光开关,琥珀色的光就能把它打开。",
-    "note": "Transcript reviewed against intended speech, retaining single patient, partial recovery and glasses; homophones normalized."
+    "sha256": "429e88b13d1587a58db83ef624340605c31458e90b2b054a0e8ef83bf62c9705",
+    "heard": "给失明病人的视网膜细胞,装上另一种开关,用琥珀色光打开。",
+    "note": "Retake removes the unclear initial counter; full medium transcript matches intended speech. Kept within the existing picture interval."
   },
   "zh/o06": {
     "checked": true,
@@ -310,38 +310,6 @@
     "sha256": "c668a00e1480d46e136e1918e73b1e883b5c921e7f7f38c58cba339f5ccb5155",
     "heard": "这是一位病人的部分恢复，他仍需要眼镜，也没恢复正常势力。",
     "note": "Transcript reviewed against intended speech, retaining single patient, partial recovery and glasses; homophones normalized."
-  },
-  "zh/o10": {
-    "checked": true,
-    "take": "3",
-    "asrModel": "medium",
-    "sha256": "979be0a67a6544f709a8d25e2a8f8ce5c5396da99fe66b2fe97e22eab2839a04",
-    "heard": "从一个光信号开始,我们能一点点研究大脑怎样处理信息。",
-    "note": "Revised learning invitation / bridge; medium transcript checked, Chinese name homophones normalized."
-  },
-  "en/p11": {
-    "checked": true,
-    "take": "3",
-    "asrModel": "medium",
-    "sha256": "db60accb6015d55ddc6e283fdc29835f88958e201f7a758144b97b8ccfb9bdbc",
-    "heard": "At Lucas Academy, we learn step by step. What would you teach AI?",
-    "note": "Revised learning invitation / bridge; medium transcript checked, Chinese name homophones normalized."
-  },
-  "en/o11": {
-    "checked": true,
-    "take": "3",
-    "asrModel": "medium",
-    "sha256": "106fc3b204f91d86fa80882b2b68ab5e9d6b2a252f36e2d5c6d73e11ae919c31",
-    "heard": "At Lucas Academy, we explore step by step. How do brains think and how does AI learn?",
-    "note": "Revised learning invitation / bridge; medium transcript checked, Chinese name homophones normalized."
-  },
-  "zh/p11": {
-    "checked": true,
-    "take": "3",
-    "asrModel": "medium",
-    "sha256": "a72cc26ca1a8b777bb4d7c3da7f87a92be338588d88aa4fbc434a6bb7e705547",
-    "heard": "在路卡斯学院,我们一起一点一点学。你想让人工智能学会什么?",
-    "note": "Revised learning invitation / bridge; medium transcript checked, Chinese name homophones normalized."
   },
   "zh/o11": {
     "checked": true,

@@ -4,7 +4,7 @@
   "width": 1080,
   "height": 1920,
   "defaultLanguage": "en",
-  "durationInFrames": 2228,
+  "durationInFrames": 2248,
   "narrated": true,
   "lines": [
     {
@@ -111,10 +111,10 @@
       "id": "p11",
       "visual": "invite",
       "from": 1946,
-      "duration": 282,
+      "duration": 302,
       "text": {
-        "en": "At Lucas Academy, we learn step by step. What would you teach AI?",
-        "zh": "在 Lucas Academy，我们一起一点一点学。你想让 AI 学会什么？"
+        "en": "At Lucas Academy, we learn step by step. What do you want to learn about AI today?",
+        "zh": "在 Lucas Academy，我们一起一点一点学。今天，关于 AI，你想学点什么？"
       }
     }
   ],
@@ -212,8 +212,8 @@
       "layout": "portrait",
       "focus": 0.66,
       "from": 1946,
-      "duration": 282,
-      "rate": 0.425531914893617
+      "duration": 302,
+      "rate": 0.3973509933774835
     }
   ],
   "voices": {
@@ -280,9 +280,9 @@
       },
       "p11": {
         "path": "narration/en/p11.wav",
-        "sha256": "db60accb6015d55ddc6e283fdc29835f88958e201f7a758144b97b8ccfb9bdbc",
-        "seconds": 5.04,
-        "settingsSha256": "bbb0975e32325ea26a13ebbab44979d3a282e835670f463d99a53a45d527e47f"
+        "sha256": "1dd7f8f3c4239f7909774624de62ed25d8aa884743869604269eb42d21a50fc2",
+        "seconds": 6.14,
+        "settingsSha256": "af73e100b592c68a48c349eab950fade4b38ac2d5f9fe5e0e62a3b02458e23b5"
       }
     },
     "zh": {
@@ -348,9 +348,9 @@
       },
       "p11": {
         "path": "narration/zh/p11.wav",
-        "sha256": "a72cc26ca1a8b777bb4d7c3da7f87a92be338588d88aa4fbc434a6bb7e705547",
-        "seconds": 7.0,
-        "settingsSha256": "e196495367f805448b7ee983e38dc2aabbf7188d7ba71cedf7e24d89e7c88ed1"
+        "sha256": "43e773c9427450eb0d97c40f6bae522e7f91a14c83e7f10f31d2eb54170a6770",
+        "seconds": 7.66,
+        "settingsSha256": "fa325544ca91f0c63e3af1dda8e51195d044b394d261c0deb86bbb428010ba0b"
       }
     }
   },

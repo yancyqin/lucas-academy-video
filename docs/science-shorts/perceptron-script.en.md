@@ -22,4 +22,4 @@
 
 **p10** That weighted sum can be written as matrix multiplication, one of today’s basic AI operations.
 
-**p11** At Lucas Academy, we learn step by step. What would you teach AI?
+**p11** At Lucas Academy, we learn step by step. What do you want to learn about AI today?

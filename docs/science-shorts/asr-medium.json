@@ -3559,5 +3559,1193 @@
       }
     ],
     "similarity": 0.877
+  },
+  "en/p11.take5": {
+    "sha256": "1dd7f8f3c4239f7909774624de62ed25d8aa884743869604269eb42d21a50fc2",
+    "expected": "At Lucas Academy, we learn step by step. What do you want to learn about AI today?",
+    "heard": "At Lucas Academy, we learn step by step. What do you want to learn about AI today?",
+    "model": "medium",
+    "seconds": 6.14,
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0.0,
+        "end": 3.36,
+        "text": " At Lucas Academy, we learn step by step.",
+        "tokens": [
+          50364,
+          1711,
+          19178,
+          11735,
+          11,
+          321,
+          1466,
+          1823,
+          538,
+          1823,
+          13,
+          50532
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.3166207313537598,
+        "compression_ratio": 1.025,
+        "no_speech_prob": 0.006102265790104866,
+        "words": [
+          {
+            "word": " At",
+            "start": 0.0,
+            "end": 0.56,
+            "probability": 0.9473370313644409
+          },
+          {
+            "word": " Lucas",
+            "start": 0.56,
+            "end": 0.8,
+            "probability": 0.9173617362976074
+          },
+          {
+            "word": " Academy,",
+            "start": 0.8,
+            "end": 1.28,
+            "probability": 0.922976016998291
+          },
+          {
+            "word": " we",
+            "start": 1.66,
+            "end": 1.76,
+            "probability": 0.9959198236465454
+          },
+          {
+            "word": " learn",
+            "start": 1.76,
+            "end": 2.12,
+            "probability": 0.9832416772842407
+          },
+          {
+            "word": " step",
+            "start": 2.12,
+            "end": 2.66,
+            "probability": 0.9461288452148438
+          },
+          {
+            "word": " by",
+            "start": 2.66,
+            "end": 3.0,
+            "probability": 0.7243573069572449
+          },
+          {
+            "word": " step.",
+            "start": 3.0,
+            "end": 3.36,
+            "probability": 0.9998173117637634
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "seek": 0,
+        "start": 4.0,
+        "end": 5.98,
+        "text": " What do you want to learn about AI today?",
+        "tokens": [
+          50532,
+          708,
+          360,
+          291,
+          528,
+          281,
+          1466,
+          466,
+          7318,
+          965,
+          30,
+          50668
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.3166207313537598,
+        "compression_ratio": 1.025,
+        "no_speech_prob": 0.006102265790104866,
+        "words": [
+          {
+            "word": " What",
+            "start": 4.0,
+            "end": 4.14,
+            "probability": 0.9922906756401062
+          },
+          {
+            "word": " do",
+            "start": 4.14,
+            "end": 4.36,
+            "probability": 0.9951249957084656
+          },
+          {
+            "word": " you",
+            "start": 4.36,
+            "end": 4.48,
+            "probability": 0.934901773929596
+          },
+          {
+            "word": " want",
+            "start": 4.48,
+            "end": 4.58,
+            "probability": 0.9985104203224182
+          },
+          {
+            "word": " to",
+            "start": 4.58,
+            "end": 4.8,
+            "probability": 0.9992384910583496
+          },
+          {
+            "word": " learn",
+            "start": 4.8,
+            "end": 5.06,
+            "probability": 0.998783528804779
+          },
+          {
+            "word": " about",
+            "start": 5.06,
+            "end": 5.44,
+            "probability": 0.9973546266555786
+          },
+          {
+            "word": " AI",
+            "start": 5.44,
+            "end": 5.7,
+            "probability": 0.9684592485427856
+          },
+          {
+            "word": " today?",
+            "start": 5.7,
+            "end": 5.98,
+            "probability": 0.9884987473487854
+          }
+        ]
+      }
+    ],
+    "similarity": 1.0
+  },
+  "zh/p11.take5": {
+    "sha256": "43e773c9427450eb0d97c40f6bae522e7f91a14c83e7f10f31d2eb54170a6770",
+    "expected": "在卢卡斯学院，我们一起一点一点学。今天，关于人工智能，你想学点什么？",
+    "heard": "在卢卡斯学院,我们一起一点一点学。今天,关于人工智能,你想学点什么?",
+    "model": "medium",
+    "seconds": 7.66,
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0.0,
+        "end": 3.8,
+        "text": "在卢卡斯学院,我们一起一点一点学。",
+        "tokens": [
+          50364,
+          3581,
+          5322,
+          95,
+          32681,
+          30758,
+          29618,
+          38358,
+          11,
+          15003,
+          29567,
+          49042,
+          49042,
+          29618,
+          1543,
+          50556
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.22354514458600214,
+        "compression_ratio": 0.9494949494949495,
+        "no_speech_prob": 0.007204366847872734,
+        "words": [
+          {
+            "word": "在",
+            "start": 0.0,
+            "end": 0.58,
+            "probability": 0.9316799640655518
+          },
+          {
+            "word": "卢",
+            "start": 0.58,
+            "end": 0.76,
+            "probability": 0.5455182828009129
+          },
+          {
+            "word": "卡",
+            "start": 0.76,
+            "end": 0.88,
+            "probability": 0.9800501465797424
+          },
+          {
+            "word": "斯",
+            "start": 0.88,
+            "end": 1.02,
+            "probability": 0.990282416343689
+          },
+          {
+            "word": "学",
+            "start": 1.02,
+            "end": 1.22,
+            "probability": 0.38403692841529846
+          },
+          {
+            "word": "院,",
+            "start": 1.22,
+            "end": 1.84,
+            "probability": 0.9994214773178101
+          },
+          {
+            "word": "我们",
+            "start": 2.2,
+            "end": 2.26,
+            "probability": 0.9713758826255798
+          },
+          {
+            "word": "一起",
+            "start": 2.26,
+            "end": 2.64,
+            "probability": 0.9941028952598572
+          },
+          {
+            "word": "一点",
+            "start": 2.64,
+            "end": 3.02,
+            "probability": 0.981590747833252
+          },
+          {
+            "word": "一点",
+            "start": 3.02,
+            "end": 3.24,
+            "probability": 0.9899805188179016
+          },
+          {
+            "word": "学。",
+            "start": 3.24,
+            "end": 3.8,
+            "probability": 0.98970627784729
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "seek": 0,
+        "start": 4.34,
+        "end": 7.54,
+        "text": "今天,关于人工智能,你想学点什么?",
+        "tokens": [
+          50556,
+          12074,
+          11,
+          28053,
+          37732,
+          4035,
+          23323,
+          5094,
+          118,
+          8225,
+          11,
+          38386,
+          29618,
+          12579,
+          10440,
+          30,
+          50756
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.22354514458600214,
+        "compression_ratio": 0.9494949494949495,
+        "no_speech_prob": 0.007204366847872734,
+        "words": [
+          {
+            "word": "今天,",
+            "start": 4.34,
+            "end": 4.74,
+            "probability": 0.9822100400924683
+          },
+          {
+            "word": "关",
+            "start": 5.24,
+            "end": 5.3,
+            "probability": 0.9590992331504822
+          },
+          {
+            "word": "于",
+            "start": 5.3,
+            "end": 5.48,
+            "probability": 0.9992325305938721
+          },
+          {
+            "word": "人",
+            "start": 5.48,
+            "end": 5.64,
+            "probability": 0.9602217674255371
+          },
+          {
+            "word": "工",
+            "start": 5.64,
+            "end": 5.84,
+            "probability": 0.9992503523826599
+          },
+          {
+            "word": "智",
+            "start": 5.84,
+            "end": 6.02,
+            "probability": 0.9996562600135803
+          },
+          {
+            "word": "能,",
+            "start": 6.02,
+            "end": 6.36,
+            "probability": 0.98826664686203
+          },
+          {
+            "word": "你想",
+            "start": 6.84,
+            "end": 7.02,
+            "probability": 0.981901228427887
+          },
+          {
+            "word": "学",
+            "start": 7.02,
+            "end": 7.18,
+            "probability": 0.9969927072525024
+          },
+          {
+            "word": "点",
+            "start": 7.18,
+            "end": 7.34,
+            "probability": 0.9573749899864197
+          },
+          {
+            "word": "什么?",
+            "start": 7.34,
+            "end": 7.54,
+            "probability": 0.9707071781158447
+          }
+        ]
+      }
+    ],
+    "similarity": 1.0
+  },
+  "en/o01.take5": {
+    "sha256": "e6e15ecdb169cb354f22cfa472b6f167fe4641d0ce6a22de79fd1ab1ffbddb3a",
+    "expected": "The twenty twenty six Nobel Prize in Medicine, in one minute: optogenetics.",
+    "heard": "The 2026 Nobel Prize in Medicine in one minute. Optogenetics.",
+    "model": "medium",
+    "seconds": 6.36,
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0.0,
+        "end": 6.2,
+        "text": " The 2026 Nobel Prize in Medicine in one minute. Optogenetics.",
+        "tokens": [
+          50364,
+          440,
+          945,
+          10880,
+          24611,
+          22604,
+          294,
+          20338,
+          294,
+          472,
+          3456,
+          13,
+          21455,
+          8799,
+          15793,
+          13,
+          50680
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.2381696965959337,
+        "compression_ratio": 0.953125,
+        "no_speech_prob": 0.005950090475380421,
+        "words": [
+          {
+            "word": " The",
+            "start": 0.0,
+            "end": 0.34,
+            "probability": 0.6283794045448303
+          },
+          {
+            "word": " 2026",
+            "start": 0.34,
+            "end": 1.42,
+            "probability": 0.9710397720336914
+          },
+          {
+            "word": " Nobel",
+            "start": 1.42,
+            "end": 1.82,
+            "probability": 0.9948828220367432
+          },
+          {
+            "word": " Prize",
+            "start": 1.82,
+            "end": 2.24,
+            "probability": 0.9459327459335327
+          },
+          {
+            "word": " in",
+            "start": 2.24,
+            "end": 2.46,
+            "probability": 0.9942828416824341
+          },
+          {
+            "word": " Medicine",
+            "start": 2.46,
+            "end": 2.92,
+            "probability": 0.8468425273895264
+          },
+          {
+            "word": " in",
+            "start": 2.92,
+            "end": 3.66,
+            "probability": 0.5997014045715332
+          },
+          {
+            "word": " one",
+            "start": 3.66,
+            "end": 4.14,
+            "probability": 0.6196959614753723
+          },
+          {
+            "word": " minute.",
+            "start": 4.14,
+            "end": 4.7,
+            "probability": 0.9653419256210327
+          },
+          {
+            "word": " Optogenetics.",
+            "start": 5.46,
+            "end": 6.2,
+            "probability": 0.985912024974823
+          }
+        ]
+      }
+    ],
+    "similarity": 0.829
+  },
+  "zh/o01.take5": {
+    "sha256": "135ca8dae6d8d61e0747d9ed868c24fc99816773f9f5dce92645409ebf06dcbf",
+    "expected": "一分钟了解二零二六年诺贝尔奖：光遗传学。",
+    "heard": "一分钟了解2026年诺贝尔奖。光遗传学。",
+    "model": "medium",
+    "seconds": 5.22,
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0.7,
+        "end": 3.7,
+        "text": "一分钟了解2026年诺贝尔奖。",
+        "tokens": [
+          50364,
+          2257,
+          6627,
+          50064,
+          2289,
+          17278,
+          2009,
+          10880,
+          5157,
+          5233,
+          118,
+          18464,
+          251,
+          1530,
+          242,
+          1881,
+          244,
+          1543,
+          50534
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.21232664174047008,
+        "compression_ratio": 0.8253968253968254,
+        "no_speech_prob": 0.028969543054699898,
+        "words": [
+          {
+            "word": "一",
+            "start": 0.7,
+            "end": 1.1,
+            "probability": 0.8477938175201416
+          },
+          {
+            "word": "分",
+            "start": 1.1,
+            "end": 1.28,
+            "probability": 0.04909859970211983
+          },
+          {
+            "word": "钟",
+            "start": 1.28,
+            "end": 1.46,
+            "probability": 0.9371134042739868
+          },
+          {
+            "word": "了",
+            "start": 1.46,
+            "end": 1.62,
+            "probability": 0.985901951789856
+          },
+          {
+            "word": "解",
+            "start": 1.62,
+            "end": 1.82,
+            "probability": 0.9948896169662476
+          },
+          {
+            "word": "20",
+            "start": 1.82,
+            "end": 2.16,
+            "probability": 0.684867799282074
+          },
+          {
+            "word": "26",
+            "start": 2.16,
+            "end": 2.42,
+            "probability": 0.9991082549095154
+          },
+          {
+            "word": "年",
+            "start": 2.42,
+            "end": 2.6,
+            "probability": 0.8769447803497314
+          },
+          {
+            "word": "诺",
+            "start": 2.6,
+            "end": 2.78,
+            "probability": 0.9946039617061615
+          },
+          {
+            "word": "贝",
+            "start": 2.78,
+            "end": 2.84,
+            "probability": 0.9937624931335449
+          },
+          {
+            "word": "尔",
+            "start": 2.84,
+            "end": 3.04,
+            "probability": 0.9960548281669617
+          },
+          {
+            "word": "奖。",
+            "start": 3.04,
+            "end": 3.7,
+            "probability": 0.9466323852539062
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "seek": 0,
+        "start": 3.9,
+        "end": 5.04,
+        "text": "光遗传学。",
+        "tokens": [
+          50534,
+          20690,
+          3330,
+          245,
+          7384,
+          254,
+          29618,
+          1543,
+          50634
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.21232664174047008,
+        "compression_ratio": 0.8253968253968254,
+        "no_speech_prob": 0.028969543054699898,
+        "words": [
+          {
+            "word": "光",
+            "start": 3.9,
+            "end": 4.18,
+            "probability": 0.8965578675270081
+          },
+          {
+            "word": "遗",
+            "start": 4.18,
+            "end": 4.58,
+            "probability": 0.6857517212629318
+          },
+          {
+            "word": "传",
+            "start": 4.58,
+            "end": 4.8,
+            "probability": 0.9990472793579102
+          },
+          {
+            "word": "学。",
+            "start": 4.8,
+            "end": 5.04,
+            "probability": 0.654962420463562
+          }
+        ]
+      }
+    ],
+    "similarity": 0.778
+  },
+  "en/o05.take5": {
+    "sha256": "a2dd9b5afcbb73795dad854b5d8f55c85b89291c1118f87e581fdd085be94bd4",
+    "expected": "In a blind patient, a different switch made retinal cells respond to amber light.",
+    "heard": "In a blind patient, a different switch made retinal cells respond to amber light.",
+    "model": "medium",
+    "seconds": 5.4,
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0.0,
+        "end": 5.26,
+        "text": " In a blind patient, a different switch made retinal cells respond to amber light.",
+        "tokens": [
+          50364,
+          682,
+          257,
+          6865,
+          4537,
+          11,
+          257,
+          819,
+          3679,
+          1027,
+          1533,
+          2071,
+          5438,
+          4196,
+          281,
+          48304,
+          1442,
+          13,
+          50664
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.19383366107940675,
+        "compression_ratio": 1.051948051948052,
+        "no_speech_prob": 0.002998891519382596,
+        "words": [
+          {
+            "word": " In",
+            "start": 0.0,
+            "end": 0.5,
+            "probability": 0.9169834852218628
+          },
+          {
+            "word": " a",
+            "start": 0.5,
+            "end": 0.68,
+            "probability": 0.9875150918960571
+          },
+          {
+            "word": " blind",
+            "start": 0.68,
+            "end": 0.9,
+            "probability": 0.9939203262329102
+          },
+          {
+            "word": " patient,",
+            "start": 0.9,
+            "end": 1.44,
+            "probability": 0.99784255027771
+          },
+          {
+            "word": " a",
+            "start": 2.02,
+            "end": 2.24,
+            "probability": 0.9906152486801147
+          },
+          {
+            "word": " different",
+            "start": 2.24,
+            "end": 2.46,
+            "probability": 0.9552880525588989
+          },
+          {
+            "word": " switch",
+            "start": 2.46,
+            "end": 2.78,
+            "probability": 0.9979302883148193
+          },
+          {
+            "word": " made",
+            "start": 2.78,
+            "end": 3.04,
+            "probability": 0.9884357452392578
+          },
+          {
+            "word": " retinal",
+            "start": 3.04,
+            "end": 3.44,
+            "probability": 0.9808766841888428
+          },
+          {
+            "word": " cells",
+            "start": 3.44,
+            "end": 3.84,
+            "probability": 0.9976481795310974
+          },
+          {
+            "word": " respond",
+            "start": 3.84,
+            "end": 4.42,
+            "probability": 0.9883466362953186
+          },
+          {
+            "word": " to",
+            "start": 4.42,
+            "end": 4.74,
+            "probability": 0.9994418025016785
+          },
+          {
+            "word": " amber",
+            "start": 4.74,
+            "end": 4.94,
+            "probability": 0.9361181259155273
+          },
+          {
+            "word": " light.",
+            "start": 4.94,
+            "end": 5.26,
+            "probability": 0.9773083329200745
+          }
+        ]
+      }
+    ],
+    "similarity": 1.0
+  },
+  "zh/o05.take5": {
+    "sha256": "a01080dfbbdb7fde6658ca75d1135d17ac4dad7addf4953dcc751b503fbad877",
+    "expected": "一位失明病人的视网膜细胞，有了另一种开关，用琥珀色光打开。",
+    "heard": "因为失明病人的视网膜细胞,有了另一种开关,用琥珀色光打开。",
+    "model": "medium",
+    "seconds": 6.5,
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0.7399999999999989,
+        "end": 6.48,
+        "text": "因为失明病人的视网膜细胞,有了另一种开关,用琥珀色光打开。",
+        "tokens": [
+          50364,
+          34627,
+          28564,
+          11100,
+          30986,
+          4035,
+          1546,
+          40656,
+          16469,
+          239,
+          39708,
+          250,
+          10115,
+          228,
+          19095,
+          252,
+          11,
+          2412,
+          2289,
+          22762,
+          2257,
+          39810,
+          18937,
+          28053,
+          11,
+          9254,
+          10568,
+          98,
+          8434,
+          222,
+          17673,
+          20690,
+          12467,
+          18937,
+          1543,
+          50714
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.19836775032249657,
+        "compression_ratio": 0.9021739130434783,
+        "no_speech_prob": 0.011917917989194393,
+        "words": [
+          {
+            "word": "因为",
+            "start": 0.7399999999999989,
+            "end": 1.1,
+            "probability": 0.04645107313990593
+          },
+          {
+            "word": "失",
+            "start": 1.1,
+            "end": 1.3,
+            "probability": 0.623932957649231
+          },
+          {
+            "word": "明",
+            "start": 1.3,
+            "end": 1.46,
+            "probability": 0.9887028932571411
+          },
+          {
+            "word": "病",
+            "start": 1.46,
+            "end": 1.66,
+            "probability": 0.9760388731956482
+          },
+          {
+            "word": "人",
+            "start": 1.66,
+            "end": 1.8,
+            "probability": 0.9968857169151306
+          },
+          {
+            "word": "的",
+            "start": 1.8,
+            "end": 1.98,
+            "probability": 0.9878653883934021
+          },
+          {
+            "word": "视",
+            "start": 1.98,
+            "end": 2.08,
+            "probability": 0.8447085618972778
+          },
+          {
+            "word": "网",
+            "start": 2.08,
+            "end": 2.18,
+            "probability": 0.9976905286312103
+          },
+          {
+            "word": "膜",
+            "start": 2.18,
+            "end": 2.38,
+            "probability": 0.9987363219261169
+          },
+          {
+            "word": "细",
+            "start": 2.38,
+            "end": 2.62,
+            "probability": 0.9983296096324921
+          },
+          {
+            "word": "胞,",
+            "start": 2.62,
+            "end": 3.06,
+            "probability": 0.9975850582122803
+          },
+          {
+            "word": "有",
+            "start": 3.18,
+            "end": 3.34,
+            "probability": 0.92167067527771
+          },
+          {
+            "word": "了",
+            "start": 3.34,
+            "end": 3.48,
+            "probability": 0.9604384899139404
+          },
+          {
+            "word": "另",
+            "start": 3.48,
+            "end": 3.62,
+            "probability": 0.9871323108673096
+          },
+          {
+            "word": "一",
+            "start": 3.62,
+            "end": 3.72,
+            "probability": 0.9921031594276428
+          },
+          {
+            "word": "种",
+            "start": 3.72,
+            "end": 3.86,
+            "probability": 0.9980974793434143
+          },
+          {
+            "word": "开",
+            "start": 3.86,
+            "end": 4.1,
+            "probability": 0.994472324848175
+          },
+          {
+            "word": "关,",
+            "start": 4.1,
+            "end": 4.66,
+            "probability": 0.9965400695800781
+          },
+          {
+            "word": "用",
+            "start": 5.08,
+            "end": 5.28,
+            "probability": 0.9682230353355408
+          },
+          {
+            "word": "琥",
+            "start": 5.28,
+            "end": 5.5,
+            "probability": 0.8448100090026855
+          },
+          {
+            "word": "珀",
+            "start": 5.5,
+            "end": 5.68,
+            "probability": 0.9951165318489075
+          },
+          {
+            "word": "色",
+            "start": 5.68,
+            "end": 5.86,
+            "probability": 0.995369017124176
+          },
+          {
+            "word": "光",
+            "start": 5.86,
+            "end": 6.02,
+            "probability": 0.9975442290306091
+          },
+          {
+            "word": "打",
+            "start": 6.02,
+            "end": 6.28,
+            "probability": 0.989953875541687
+          },
+          {
+            "word": "开。",
+            "start": 6.28,
+            "end": 6.48,
+            "probability": 0.9988154172897339
+          }
+        ]
+      }
+    ],
+    "similarity": 0.923
+  },
+  "zh/o05.take6": {
+    "sha256": "429e88b13d1587a58db83ef624340605c31458e90b2b054a0e8ef83bf62c9705",
+    "expected": "给失明病人的视网膜细胞，装上另一种开关，用琥珀色光打开。",
+    "heard": "给失明病人的视网膜细胞,装上另一种开关,用琥珀色光打开。",
+    "model": "medium",
+    "seconds": 5.92,
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0.0,
+        "end": 5.9,
+        "text": "给失明病人的视网膜细胞,装上另一种开关,用琥珀色光打开。",
+        "tokens": [
+          50364,
+          23197,
+          28564,
+          11100,
+          30986,
+          4035,
+          1546,
+          40656,
+          16469,
+          239,
+          39708,
+          250,
+          10115,
+          228,
+          19095,
+          252,
+          11,
+          8083,
+          227,
+          5708,
+          22762,
+          2257,
+          39810,
+          18937,
+          28053,
+          11,
+          9254,
+          10568,
+          98,
+          8434,
+          222,
+          17673,
+          20690,
+          12467,
+          18937,
+          1543,
+          50664
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.16093973109596654,
+        "compression_ratio": 0.8791208791208791,
+        "no_speech_prob": 0.0013103033415973186,
+        "words": [
+          {
+            "word": "给",
+            "start": 0.0,
+            "end": 0.6,
+            "probability": 0.26175495982170105
+          },
+          {
+            "word": "失",
+            "start": 0.6,
+            "end": 0.84,
+            "probability": 0.7791920900344849
+          },
+          {
+            "word": "明",
+            "start": 0.84,
+            "end": 0.96,
+            "probability": 0.9562632441520691
+          },
+          {
+            "word": "病",
+            "start": 0.96,
+            "end": 1.18,
+            "probability": 0.9884600639343262
+          },
+          {
+            "word": "人",
+            "start": 1.18,
+            "end": 1.36,
+            "probability": 0.9968963861465454
+          },
+          {
+            "word": "的",
+            "start": 1.36,
+            "end": 1.62,
+            "probability": 0.9873271584510803
+          },
+          {
+            "word": "视",
+            "start": 1.62,
+            "end": 1.74,
+            "probability": 0.8918824791908264
+          },
+          {
+            "word": "网",
+            "start": 1.74,
+            "end": 1.84,
+            "probability": 0.9985875189304352
+          },
+          {
+            "word": "膜",
+            "start": 1.84,
+            "end": 2.08,
+            "probability": 0.9963586330413818
+          },
+          {
+            "word": "细",
+            "start": 2.08,
+            "end": 2.26,
+            "probability": 0.996186763048172
+          },
+          {
+            "word": "胞,",
+            "start": 2.26,
+            "end": 2.68,
+            "probability": 0.9952421486377716
+          },
+          {
+            "word": "装",
+            "start": 2.84,
+            "end": 2.94,
+            "probability": 0.9922452569007874
+          },
+          {
+            "word": "上",
+            "start": 2.94,
+            "end": 3.08,
+            "probability": 0.9945452213287354
+          },
+          {
+            "word": "另",
+            "start": 3.08,
+            "end": 3.3,
+            "probability": 0.9760596752166748
+          },
+          {
+            "word": "一",
+            "start": 3.3,
+            "end": 3.4,
+            "probability": 0.9959999322891235
+          },
+          {
+            "word": "种",
+            "start": 3.4,
+            "end": 3.5,
+            "probability": 0.99638831615448
+          },
+          {
+            "word": "开",
+            "start": 3.5,
+            "end": 3.74,
+            "probability": 0.9947866201400757
+          },
+          {
+            "word": "关,",
+            "start": 3.74,
+            "end": 4.16,
+            "probability": 0.9966593980789185
+          },
+          {
+            "word": "用",
+            "start": 4.58,
+            "end": 4.7,
+            "probability": 0.9623382091522217
+          },
+          {
+            "word": "琥",
+            "start": 4.7,
+            "end": 4.92,
+            "probability": 0.9000617861747742
+          },
+          {
+            "word": "珀",
+            "start": 4.92,
+            "end": 5.1,
+            "probability": 0.9959203898906708
+          },
+          {
+            "word": "色",
+            "start": 5.1,
+            "end": 5.28,
+            "probability": 0.9874528050422668
+          },
+          {
+            "word": "光",
+            "start": 5.28,
+            "end": 5.48,
+            "probability": 0.9976775050163269
+          },
+          {
+            "word": "打",
+            "start": 5.48,
+            "end": 5.7,
+            "probability": 0.9851989150047302
+          },
+          {
+            "word": "开。",
+            "start": 5.7,
+            "end": 5.9,
+            "probability": 0.9990589022636414
+          }
+        ]
+      }
+    ],
+    "similarity": 1.0
   }
 }

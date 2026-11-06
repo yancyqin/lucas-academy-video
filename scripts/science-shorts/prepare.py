@@ -80,11 +80,19 @@ def main():
                     voices[lang][item['id']]={'path':str(target.relative_to(PUBLIC)),'sha256':sha(target),'seconds':seconds,'settingsSha256':row['settingsSha256']}
                     durations.append(seconds)
             duration=math.ceil((max(durations)+.1+.28)*FPS)
+            duration=max(duration,round(item.get('minSeconds',0)*FPS))
             if item['id']=='p02':duration=max(duration,round(5.7*FPS))
-            if item==info['lines'][-1]:duration+=round(2*FPS)
+            if item==info['lines'][-1]:duration+=round(info.get('endHoldSeconds',2)*FPS)
             lines.append({'id':item['id'],'visual':item['visual'],'from':cursor,'duration':duration,
                           'text':{lang:manifest[lang][item['id']]['caption'] for lang in ('en','zh')}})
             cursor+=duration
+        if info.get('targetSeconds') and not args.estimated:
+            target=round(info['targetSeconds']*FPS)
+            adjustment=target-cursor
+            # Only shorten the silent ending; keep every selected take and at least .2 s after it.
+            assert lines[-1]['duration']+adjustment>=math.ceil((max(durations)+.1+.2)*FPS),(film,'Narration exceeds the one-minute cut',cursor/FPS)
+            lines[-1]['duration']+=adjustment
+            cursor=target
         lookup={item['id']:item for item in lines};shots=[]
         for item in info['shots']:
             first,last=lookup[item['first']],lookup[item['last']]
@@ -103,6 +111,9 @@ def main():
             captions=[]
             for index,line in enumerate(lines,1):
                 end=line['from']+line['duration']-round(.28*FPS)
+                if not args.estimated:
+                    speech_end=line['from']+math.ceil((max(voices[lang][line['id']]['seconds'] for lang in ('en','zh'))+.1)*FPS)
+                    end=max(end,speech_end)
                 copy='\n'.join(textwrap.wrap(line['text'][lang],width=48 if lang=='en' else 24))
                 captions.append(f'{index}\n{stamp(line["from"]/FPS)} --> {stamp(end/FPS)}\n{copy}')
             (folder/f'{"zh-Hans" if lang=="zh" else lang}.srt').write_text('\n\n'.join(captions)+'\n')

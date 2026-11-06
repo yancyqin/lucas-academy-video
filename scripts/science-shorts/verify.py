@@ -1,6 +1,7 @@
 """Validate rendered deliveries, original inputs and selected narration together."""
 import argparse
 import json
+import math
 import re
 import subprocess
 from common import ROOT,PUBLIC,DOCS,OUT,SOURCE,sha,plans
@@ -37,8 +38,8 @@ def main():
             assert asr[f'{lang}/{name}']['sha256']==decision['sha256']
             assert sha(PUBLIC/f'narration/{lang}/{row["id"]}.wav')==decision['sha256']
     previous=json.loads((DOCS/'verification.json').read_text()) if args.film and (DOCS/'verification.json').exists() else {}
-    checked_films={name:item for name,item in previous.get('films',{}).items() if item.get('revision')==2}
-    report={'revision':2,'originalResultSha256':original_hashes,'sourceClips':len(data['assets']),'selectedCheckedVoices':len(choices),'films':checked_films}
+    checked_films={name:item for name,item in previous.get('films',{}).items() if item.get('revision')==SOURCE['revision']}
+    report={'revision':SOURCE['revision'],'originalResultSha256':original_hashes,'sourceClips':len(data['assets']),'selectedCheckedVoices':len(choices),'films':checked_films}
     for film in ('perceptron','optogenetics'):
         if args.film and args.film!=film:continue
         tl=json.loads((PUBLIC/f'timeline.{film}.json').read_text());assert tl['narrated']
@@ -55,12 +56,19 @@ def main():
         if film=='perceptron':
             race=next(line for line in tl['lines'] if line['id']=='p02')
             assert race['duration']/fps>data['metrics']['astra']['median_model']+.5
+            assert tl['lines'][-1]['text']['en'].endswith('What do you want to learn about AI today?')
+        if film=='optogenetics':
+            assert total==60*fps and tl['lines'][0]['visual']=='nobel-hook'
+            assert '2026 Nobel Prize in Medicine' in tl['lines'][0]['text']['en']
         for lang,filename in (('en','en'),('zh','zh-Hans')):
             blocks=re.split(r'\n\s*\n',(folder/f'{filename}.srt').read_text().strip())
-            assert len(blocks)==len(tl['lines'])==11
+            assert len(blocks)==len(tl['lines'])==len(SOURCE['films'][film]['lines'])
             for index,(block,line) in enumerate(zip(blocks,tl['lines']),1):
                 rows=block.splitlines();assert rows[0]==str(index)
-                assert rows[1]==f'{stamp(line["from"]/fps)} --> {stamp((line["from"]+line["duration"]-round(.28*fps))/fps)}'
+                speech_end=line['from']+math.ceil((max(tl['voices'][language][line['id']]['seconds'] for language in ('en','zh'))+.1)*fps)
+                caption_end=max(line['from']+line['duration']-round(.28*fps),speech_end)
+                assert caption_end<=line['from']+line['duration']
+                assert rows[1]==f'{stamp(line["from"]/fps)} --> {stamp(caption_end/fps)}'
                 assert re.sub(r'\s','',''.join(rows[2:]))==re.sub(r'\s','',line['text'][lang])
                 voice=tl['voices'][lang][line['id']]
                 assert sha(PUBLIC/voice['path'])==voice['sha256']
@@ -95,7 +103,7 @@ def main():
                 found=subprocess.check_output([str(scanner),str(frames/f'{name}.png')],text=True).strip()
                 assert not found,found
             qr='Absent from both revised closing beats'
-        item={'revision':2,'durationSeconds':total/fps,'video':'1080x1920, 30fps','audio':[{'language':s['tags']['language'],'default':bool(s['disposition']['default'])} for s in audio],
+        item={'revision':SOURCE['revision'],'durationSeconds':total/fps,'video':'1080x1920, 30fps','audio':[{'language':s['tags']['language'],'default':bool(s['disposition']['default'])} for s in audio],
               'subtitleTracks':0,'externalCuesPerLanguage':len(tl['lines']),'blackSegments':black_segments,'audioLoudness':levels,
               'standaloneAudio':'AAC payloads match the movie bit for bit','movingFootageCoverage':1.0,'shotCount':len(tl['shots']),
               'qrCheck':qr,'sha256':sha(movie),'bytes':movie.stat().st_size}

@@ -101,7 +101,7 @@ function LearningInvite({topic}:{topic:'perceptron'|'brain'}){
   <AbsoluteFill style={{background:'linear-gradient(#001b1b70,#001b1b22,#001b1b99)'}}/>
   <Title top={235} size={86}>Lucas Academy</Title>
   <Key top={410} size={58} color={C.gold}>Learn, step by step.</Key>
-  <Key top={1210} size={topic==='brain'?74:85}>{topic==='brain'?<>How do brains think?<br/><br/>How does AI learn?</>:<>What would<br/>you teach AI?</>}</Key>
+  <Key top={1210} size={topic==='brain'?74:78}>{topic==='brain'?<>How do brains think?<br/><br/>How does AI learn?</>:<>What do you want<br/>to learn about AI<br/>today?</>}</Key>
  </>;
 }
 
@@ -153,11 +153,18 @@ function LightGate({frame,line}:{frame:number;line:Line}){
 
 function Optogenetics({line,frame}:{line:Line;frame:number}){
  const v=line.visual;
+ if(v==='nobel-hook')return <>
+  <Title top={190} size={134} style={{color:C.amber}}>2026</Title>
+  <Key top={350} size={80}>Nobel Prize</Key>
+  <Key top={472} size={34}>Physiology or Medicine</Key>
+  <Key top={1440} size={86} color={C.amber}>In 1 minute.</Key>
+  <Key top={1570} size={56}>Optogenetics</Key>
+ </>;
  if(v==='notebook-hook')return <><Title size={90}>How did light<br/>help him find it?</Title><Key top={1430} size={60}>A notebook.<br/>A clue from algae.</Key></>;
  if(v==='algae')return <><Title size={88}>A clue in<br/>tiny algae.</Title><Key top={1550} size={66}>Light → Signal</Key></>;
  if(v==='gate')return <LightGate line={line} frame={frame}/>;
  if(v==='camera')return <><Title size={82}>Light sensors fail.<br/>Signal cells remain.</Title><Key top={1390} size={50}>Like a camera:<br/>sensor ×<br/>signal path ✓</Key></>;
- if(v==='amber')return <><Title size={88}>A new switch.<br/>Amber light.</Title><Key top={1430} size={58} color={C.amber}>A different light switch</Key></>;
+ if(v==='amber')return <><Title size={88}>A new switch.<br/>Amber light.</Title><Key top={1430} size={58} color={C.amber}>A patient case · 2021</Key></>;
  if(v==='encode')return <><Title size={125} style={{color:C.amber}}>ENCODE</Title><Key top={420} size={55}>Scene → light pulses</Key><Key top={1450} size={58}>Glasses send<br/>a new signal.</Key></>;
  if(v==='decode')return <><Title size={124} style={{color:C.amber}}>DECODE</Title><Key top={1310} size={78}>Signals → objects</Key><Key top={1480} size={52}>The brain learns.</Key></>;
  if(v==='touch')return <><Title size={84}>After months<br/>of training…</Title><Key top={1450} size={60}>Locate. Reach. Touch.</Key></>;

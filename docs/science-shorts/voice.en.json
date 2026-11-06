@@ -114,24 +114,24 @@
   {
     "film": "perceptron",
     "id": "p11",
-    "caption": "At Lucas Academy, we learn step by step. What would you teach AI?",
-    "spoken": "At Lucas Academy, we learn step by step. What would you teach AI?",
+    "caption": "At Lucas Academy, we learn step by step. What do you want to learn about AI today?",
+    "spoken": "At Lucas Academy, we learn step by step. What do you want to learn about AI today?",
     "voice": "louise/en",
     "speed": 1.1,
     "mode": "zero-shot-instruct",
     "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
-    "settingsSha256": "bbb0975e32325ea26a13ebbab44979d3a282e835670f463d99a53a45d527e47f"
+    "settingsSha256": "af73e100b592c68a48c349eab950fade4b38ac2d5f9fe5e0e62a3b02458e23b5"
   },
   {
     "film": "optogenetics",
     "id": "o01",
-    "caption": "A blind patient reached for a notebook. How did light help him find it?",
-    "spoken": "A blind patient reached for a notebook. How did light help him find it?",
+    "caption": "The 2026 Nobel Prize in Medicine, in one minute: optogenetics.",
+    "spoken": "The twenty twenty six Nobel Prize in Medicine, in one minute: optogenetics.",
     "voice": "louise/en",
     "speed": 1.1,
     "mode": "zero-shot-instruct",
     "instruction": "Please speak with bright, playful energy and curious excitement, as if inviting a family on a time-travel adventure. Smile in your voice. Keep the words connected and natural.",
-    "settingsSha256": "adde8c6de672ce59a2e5c3d7dc3eeb44fba4a80f5f458360d2bf4ad9eb5c0491"
+    "settingsSha256": "fa7ba4b5a3cb795be791bae90e03f6b6bbb7c3105fb72ab0114c0529edb3c268"
   },
   {
     "film": "optogenetics",
@@ -157,25 +157,14 @@
   },
   {
     "film": "optogenetics",
-    "id": "o04",
-    "caption": "This patient’s light-sensing cells had failed. But other cells that could pass signals along were still there.",
-    "spoken": "This patient’s light-sensing cells had failed. But other cells that could pass signals along were still there.",
-    "voice": "louise/en",
-    "speed": 1.1,
-    "mode": "zero-shot-instruct",
-    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
-    "settingsSha256": "25831e81fc01531ec8af6cd1911d7c95f3b79ccb16edffcf17a5c43d1038e719"
-  },
-  {
-    "film": "optogenetics",
     "id": "o05",
-    "caption": "The team gave those cells another kind of light switch, one that responds to amber light.",
-    "spoken": "The team gave those cells another kind of light switch, one that responds to amber light.",
+    "caption": "In a blind patient, a different switch made retinal cells respond to amber light.",
+    "spoken": "In a blind patient, a different switch made retinal cells respond to amber light.",
     "voice": "louise/en",
     "speed": 1.1,
     "mode": "zero-shot-instruct",
     "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
-    "settingsSha256": "5db16d7af1c5ba5139c6dd1cb5490762c9292bd8ebeea92f7c048429436bb0d2"
+    "settingsSha256": "6444ca833eee78c10e84451c48afd7b6474051363e79e0fbe8cb92362e4d4a97"
   },
   {
     "film": "optogenetics",
@@ -220,17 +209,6 @@
     "mode": "zero-shot-instruct",
     "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
     "settingsSha256": "2c4d662093c9e03ee73787a0254cec1069dbb980f47ff513f4cf588c5832a62c"
-  },
-  {
-    "film": "optogenetics",
-    "id": "o10",
-    "caption": "Starting with a light signal, we can explore how the brain processes information.",
-    "spoken": "Starting with a light signal, we can explore how the brain processes information.",
-    "voice": "louise/en",
-    "speed": 1.1,
-    "mode": "zero-shot-instruct",
-    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
-    "settingsSha256": "8240fd7099343c0137de08b1e1ff3482bea765e4da5648be0c0295c7a2f37ec7"
   },
   {
     "film": "optogenetics",
