@@ -1,0 +1,442 @@
+{
+  "en/fa02s-03": {
+    "sha256": "f4b96c91253dc5a226dadc0175f781139821fab4cb78e5ad46d517698eba50f5",
+    "expected": "Yes! His screen says play. The invitation got through!",
+    "heard": "Yes, his screen says play. The invitation got through.",
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0.0,
+        "end": 2.1,
+        "text": " Yes, his screen says play.",
+        "tokens": [
+          50364,
+          1079,
+          11,
+          702,
+          2568,
+          1619,
+          862,
+          13,
+          50489
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.3095526414759019,
+        "compression_ratio": 0.8709677419354839,
+        "no_speech_prob": 0.03730529919266701,
+        "words": [
+          {
+            "word": " Yes,",
+            "start": 0.0,
+            "end": 0.7,
+            "probability": 0.6752176880836487
+          },
+          {
+            "word": " his",
+            "start": 0.94,
+            "end": 1.08,
+            "probability": 0.9769712090492249
+          },
+          {
+            "word": " screen",
+            "start": 1.08,
+            "end": 1.34,
+            "probability": 0.9872277975082397
+          },
+          {
+            "word": " says",
+            "start": 1.34,
+            "end": 1.6,
+            "probability": 0.9938708543777466
+          },
+          {
+            "word": " play.",
+            "start": 1.6,
+            "end": 2.1,
+            "probability": 0.6033194065093994
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "seek": 0,
+        "start": 2.52,
+        "end": 3.54,
+        "text": " The invitation got through.",
+        "tokens": [
+          50489,
+          440,
+          17890,
+          658,
+          807,
+          13,
+          50542
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.3095526414759019,
+        "compression_ratio": 0.8709677419354839,
+        "no_speech_prob": 0.03730529919266701,
+        "words": [
+          {
+            "word": " The",
+            "start": 2.52,
+            "end": 2.62,
+            "probability": 0.9853412508964539
+          },
+          {
+            "word": " invitation",
+            "start": 2.62,
+            "end": 3.0,
+            "probability": 0.9925823211669922
+          },
+          {
+            "word": " got",
+            "start": 3.0,
+            "end": 3.3,
+            "probability": 0.993309736251831
+          },
+          {
+            "word": " through.",
+            "start": 3.3,
+            "end": 3.54,
+            "probability": 0.9661557674407959
+          }
+        ]
+      }
+    ],
+    "model": "medium"
+  },
+  "zh/fa02s-02": {
+    "sha256": "aa16c9642d1a952af0e0f65ce63f7343dc3e3724c011850bf38e564b3c418fbe",
+    "expected": "约好一张表。金色是一，蓝色是零。",
+    "heard": "约好一张表,金色是1,蓝色是0。",
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0.0,
+        "end": 4.66,
+        "text": "约好一张表,金色是1,蓝色是0。",
+        "tokens": [
+          50364,
+          16853,
+          99,
+          2131,
+          2257,
+          44059,
+          17571,
+          11,
+          19117,
+          17673,
+          1541,
+          16,
+          11,
+          164,
+          26152,
+          17673,
+          1541,
+          15,
+          1543,
+          50614
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.23831421988351004,
+        "compression_ratio": 0.851063829787234,
+        "no_speech_prob": 0.1556340903043747,
+        "words": [
+          {
+            "word": "约",
+            "start": 0.0,
+            "end": 0.7,
+            "probability": 0.8723363280296326
+          },
+          {
+            "word": "好",
+            "start": 0.7,
+            "end": 0.92,
+            "probability": 0.9940074682235718
+          },
+          {
+            "word": "一",
+            "start": 0.92,
+            "end": 1.06,
+            "probability": 0.9829965233802795
+          },
+          {
+            "word": "张",
+            "start": 1.06,
+            "end": 1.18,
+            "probability": 0.9979216456413269
+          },
+          {
+            "word": "表,",
+            "start": 1.18,
+            "end": 1.62,
+            "probability": 0.9848527312278748
+          },
+          {
+            "word": "金",
+            "start": 2.18,
+            "end": 2.32,
+            "probability": 0.959626317024231
+          },
+          {
+            "word": "色",
+            "start": 2.32,
+            "end": 2.54,
+            "probability": 0.9964104294776917
+          },
+          {
+            "word": "是",
+            "start": 2.54,
+            "end": 2.78,
+            "probability": 0.8320465683937073
+          },
+          {
+            "word": "1,",
+            "start": 2.78,
+            "end": 3.2,
+            "probability": 0.8955196142196655
+          },
+          {
+            "word": "蓝",
+            "start": 3.54,
+            "end": 3.78,
+            "probability": 0.9950949549674988
+          },
+          {
+            "word": "色",
+            "start": 3.78,
+            "end": 4.2,
+            "probability": 0.9960842132568359
+          },
+          {
+            "word": "是",
+            "start": 4.2,
+            "end": 4.46,
+            "probability": 0.9730172157287598
+          },
+          {
+            "word": "0。",
+            "start": 4.46,
+            "end": 4.66,
+            "probability": 0.949148952960968
+          }
+        ]
+      }
+    ],
+    "model": "medium"
+  },
+  "zh/fa02s-03": {
+    "sha256": "00632c5da9066c0737b1a54c5c99aeecfe25721facbf5ff030cb80baacb6ba57",
+    "expected": "可以！里奥收到了：一起来玩！",
+    "heard": "可以,聊收到了,一起來玩!",
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0.0,
+        "end": 2.84,
+        "text": "可以,聊收到了,一起來玩!",
+        "tokens": [
+          50364,
+          6723,
+          11,
+          40096,
+          18681,
+          21381,
+          11,
+          2257,
+          21670,
+          19912,
+          0,
+          50514
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.4087627117450421,
+        "compression_ratio": 0.75,
+        "no_speech_prob": 0.1026279479265213,
+        "words": [
+          {
+            "word": "可以,",
+            "start": 0.0,
+            "end": 0.94,
+            "probability": 0.8823084235191345
+          },
+          {
+            "word": "聊",
+            "start": 1.24,
+            "end": 1.42,
+            "probability": 0.7038281559944153
+          },
+          {
+            "word": "收",
+            "start": 1.42,
+            "end": 1.66,
+            "probability": 0.9739830493927002
+          },
+          {
+            "word": "到了,",
+            "start": 1.66,
+            "end": 1.92,
+            "probability": 0.9167473912239075
+          },
+          {
+            "word": "一",
+            "start": 2.38,
+            "end": 2.44,
+            "probability": 0.6131587028503418
+          },
+          {
+            "word": "起來",
+            "start": 2.44,
+            "end": 2.6,
+            "probability": 0.9832029342651367
+          },
+          {
+            "word": "玩!",
+            "start": 2.6,
+            "end": 2.84,
+            "probability": 0.9981412887573242
+          }
+        ]
+      }
+    ],
+    "model": "medium"
+  },
+  "zh/fa02s-05": {
+    "sha256": "087b820d7ac2842c9cdb1a3a7522988c27b3c497f69bba4534338837db7966c1",
+    "expected": "四次是或否的回答，找到了七号箱。",
+    "heard": "四字是或否的回答找到了七號箱",
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0.0,
+        "end": 2.18,
+        "text": "四字是或否的回答",
+        "tokens": [
+          50364,
+          19425,
+          22381,
+          1541,
+          19780,
+          45334,
+          1546,
+          8350,
+          28223,
+          50464
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.29667495426378754,
+        "compression_ratio": 0.7924528301886793,
+        "no_speech_prob": 0.1195409893989563,
+        "words": [
+          {
+            "word": "四",
+            "start": 0.0,
+            "end": 0.48,
+            "probability": 0.3162142336368561
+          },
+          {
+            "word": "字",
+            "start": 0.48,
+            "end": 0.76,
+            "probability": 0.923751950263977
+          },
+          {
+            "word": "是",
+            "start": 0.76,
+            "end": 1.04,
+            "probability": 0.909813642501831
+          },
+          {
+            "word": "或",
+            "start": 1.04,
+            "end": 1.2,
+            "probability": 0.9450172185897827
+          },
+          {
+            "word": "否",
+            "start": 1.2,
+            "end": 1.42,
+            "probability": 0.9995669722557068
+          },
+          {
+            "word": "的",
+            "start": 1.42,
+            "end": 1.62,
+            "probability": 0.9720572233200073
+          },
+          {
+            "word": "回",
+            "start": 1.62,
+            "end": 1.76,
+            "probability": 0.9587518572807312
+          },
+          {
+            "word": "答",
+            "start": 1.76,
+            "end": 2.18,
+            "probability": 0.9994138479232788
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "seek": 0,
+        "start": 2.18,
+        "end": 3.36,
+        "text": "找到了七號箱",
+        "tokens": [
+          50464,
+          25085,
+          21381,
+          29920,
+          18616,
+          11249,
+          109,
+          50564
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.29667495426378754,
+        "compression_ratio": 0.7924528301886793,
+        "no_speech_prob": 0.1195409893989563,
+        "words": [
+          {
+            "word": "找",
+            "start": 2.18,
+            "end": 2.46,
+            "probability": 0.7068579792976379
+          },
+          {
+            "word": "到了",
+            "start": 2.46,
+            "end": 2.72,
+            "probability": 0.9799963235855103
+          },
+          {
+            "word": "七",
+            "start": 2.72,
+            "end": 3.02,
+            "probability": 0.7628459334373474
+          },
+          {
+            "word": "號",
+            "start": 3.02,
+            "end": 3.16,
+            "probability": 0.7467753291130066
+          },
+          {
+            "word": "箱",
+            "start": 3.16,
+            "end": 3.36,
+            "probability": 0.9693449139595032
+          }
+        ]
+      }
+    ],
+    "model": "medium"
+  }
+}

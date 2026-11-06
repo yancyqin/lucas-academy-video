@@ -94,7 +94,15 @@
     "fal02:orbital:final": "node scripts/family-ai-lab-02/orbital_full.cjs --voiced",
     "fal02:orbital:check": "python3 scripts/family-ai-lab-02/orbital_verify.py",
     "fal02:orbital:cover": ".venv-align/bin/python scripts/family-ai-lab-02/orbital_cover.py",
-    "fal02:orbital:opening": "python3 scripts/family-ai-lab-02/orbital_preview.py"
+    "fal02:orbital:opening": "python3 scripts/family-ai-lab-02/orbital_preview.py",
+    "fal02:short:voice:en": "../lucas-academy-media/.conda/bin/python scripts/family-ai-lab-02/short_voice.py generate --lang en",
+    "fal02:short:voice:zh": "../lucas-academy-media/.conda/bin/python scripts/family-ai-lab-02/short_voice.py generate --lang zh",
+    "fal02:short:voice:select": ".venv-align/bin/python scripts/family-ai-lab-02/short_voice.py select",
+    "fal02:short:build": "python3 scripts/family-ai-lab-02/short_build.py",
+    "fal02:short:mix": ".venv-align/bin/python scripts/family-ai-lab-02/short_mix.py",
+    "fal02:short:stills": "node scripts/family-ai-lab-02/short_render.cjs --stills",
+    "fal02:short:final": "node scripts/family-ai-lab-02/short_render.cjs",
+    "fal02:short:check": "python3 scripts/family-ai-lab-02/short_verify.py"
   },
   "dependencies": {
     "@remotion/cli": "^4.0.484",

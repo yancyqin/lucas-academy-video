@@ -1,0 +1,40 @@
+{
+  "movie": "out/family-ai-lab-02/orbital-v2/short/delivery/family-ai-lab-02.short.bilingual.mp4",
+  "sha256": "c5c0cabd5de56847af6e97bd64fc47f55ac38030c218939f16ff9e87b1224f4e",
+  "seconds": 40.233333333333334,
+  "frames": 1207,
+  "size": [
+    1080,
+    1920
+  ],
+  "fps": 30,
+  "museOriginals": 6,
+  "museSeconds": 34.733333333333334,
+  "museCoverageFraction": 0.8632974316487159,
+  "forwardSpansWithoutLoops": true,
+  "fullFilmUnchanged": true,
+  "audioTracks": [
+    "English default",
+    "Chinese"
+  ],
+  "subtitleTracks": 0,
+  "externalSRTs": {
+    "en": 8,
+    "zh-Hans": 8
+  },
+  "audioLoudness": {
+    "en": {
+      "integratedLUFS": "-16.13",
+      "truePeakDBTP": "-0.98"
+    },
+    "zh": {
+      "integratedLUFS": "-16.04",
+      "truePeakDBTP": "-0.99"
+    }
+  },
+  "blackSegments": [],
+  "qrDecodedAt": [
+    "native",
+    "720px width"
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "en/fa02s-02": {
+    "checked": true,
+    "take": "",
+    "sha256": "64cf524a24943c22f0d16268aa27c2bde1e507307b5e59c20819d5ff30d20bf0",
+    "heard": "They share a code. Gold is 1. Blue is 0.",
+    "note": "Script and transcript inspected. Figures retain the correct values; punctuation, numeral formatting, traditional script and name/homophone variants are retained as ASR evidence."
+  },
+  "en/fa02s-03": {
+    "checked": true,
+    "take": "",
+    "sha256": "f4b96c91253dc5a226dadc0175f781139821fab4cb78e5ad46d517698eba50f5",
+    "heard": "Yes, his screen says play. The invitation got through.",
+    "note": "Medium confirms the complete Yes and screen says play phrase; lowercase play is the spoken form of the on-screen PLAY."
+  },
+  "en/fa02s-04": {
+    "checked": true,
+    "take": "",
+    "sha256": "008719789ab972dc7b651b8f83686328120beaaf7e505467b560bda41411a957",
+    "heard": "A gift is hidden in one of ten boxes.",
+    "note": "Script and transcript inspected. Figures retain the correct values; punctuation, numeral formatting, traditional script and name/homophone variants are retained as ASR evidence."
+  },
+  "en/fa02s-05": {
+    "checked": true,
+    "take": "",
+    "sha256": "009ea581023e31cb4e0de466a92476f57843547a450ef3d49e003d882cad34e7",
+    "heard": "Four yes or no answers lead him to box 7.",
+    "note": "Script and transcript inspected. Figures retain the correct values; punctuation, numeral formatting, traditional script and name/homophone variants are retained as ASR evidence."
+  },
+  "en/fa02s-06": {
+    "checked": true,
+    "take": "",
+    "sha256": "bfca0a0439c21ede83cee6b0a2969ff2cdfe90b76695e4fb6332b8a84c394d4e",
+    "heard": "Watermelon. Now it's Leo's turn to send a message.",
+    "note": "Script and transcript inspected. Figures retain the correct values; punctuation, numeral formatting, traditional script and name/homophone variants are retained as ASR evidence."
+  },
+  "en/fa02s-08": {
+    "checked": true,
+    "take": "",
+    "sha256": "cb2dfa1fdaaa3ceddc7de17fdb005933ae8b66cb12ea1cba985528a426c5b45b",
+    "heard": "What would you send through your tiny pipe?",
+    "note": "Script and transcript inspected. Figures retain the correct values; punctuation, numeral formatting, traditional script and name/homophone variants are retained as ASR evidence."
+  },
+  "zh/fa02s-02": {
+    "checked": true,
+    "take": "",
+    "sha256": "aa16c9642d1a952af0e0f65ce63f7343dc3e3724c011850bf38e564b3c418fbe",
+    "heard": "约好一张表,金色是1,蓝色是0。",
+    "note": "Script and transcript inspected. Figures retain the correct values; punctuation, numeral formatting, traditional script and name/homophone variants are retained as ASR evidence."
+  },
+  "zh/fa02s-03": {
+    "checked": true,
+    "take": "2",
+    "sha256": "96d3211f8e3b58f9fc29a09fcc76d413aec61661e15b278e31679c705ab28049",
+    "heard": "可以 邀請送到了 一起玩吧",
+    "note": "Rephrased to remove the unclear name. Take 2 clearly transcribes 可以, 邀请送到了, 一起玩吧."
+  },
+  "zh/fa02s-04": {
+    "checked": true,
+    "take": "",
+    "sha256": "418c7a32e323cf4a1ae9204febaa8ac15a5d8dc8cda8175a5106de17b455d161",
+    "heard": "禮物藏在十個箱子裡李奧要找出來",
+    "note": "Script and transcript inspected. Figures retain the correct values; punctuation, numeral formatting, traditional script and name/homophone variants are retained as ASR evidence."
+  },
+  "zh/fa02s-06": {
+    "checked": true,
+    "take": "",
+    "sha256": "c44151c92478a1da2b75a09dad11c4095838269a5b20086ea8c58e0925c5b0a9",
+    "heard": "是西瓜,這回輪到李奧回信。",
+    "note": "Script and transcript inspected. Figures retain the correct values; punctuation, numeral formatting, traditional script and name/homophone variants are retained as ASR evidence."
+  },
+  "zh/fa02s-08": {
+    "checked": true,
+    "take": "",
+    "sha256": "32a77cfc0698410db7c6a9f429aa8919637187c176c999ba53b4e6705d546996",
+    "heard": "如果是你,你想跟朋友說什麼?",
+    "note": "Script and transcript inspected. Figures retain the correct values; punctuation, numeral formatting, traditional script and name/homophone variants are retained as ASR evidence."
+  },
+  "zh/fa02s-05": {
+    "checked": true,
+    "take": "3",
+    "sha256": "79973723d6bee4b5b3b9aac27e1774a33fa759460f9965ba546701b3d50df2b8",
+    "heard": "四個回答,7號箱找到了。",
+    "note": "Simplified to 四个回答，七号箱找到了 to avoid unclear 四次 / 是否 pronunciations. Take 3 confirms the correct four answers and box seven, with numeral/traditional-script formatting variants."
+  }
+}

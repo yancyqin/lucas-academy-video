@@ -1,0 +1,12 @@
+{
+  "backup": "/Users/yqin/repo/playground/lucas-academy-video-data/family-ai-lab-02",
+  "restoreCheck": "tmp/family-ai-lab-02/story-short-restore-xeae0kjx",
+  "manifestFilesAtRestore": 495,
+  "sha256ManifestVerified": true,
+  "publicInputsRestored": 174,
+  "byteIdentical": true,
+  "originalMuseFiles": 6,
+  "rawShortVoiceTakes": 15,
+  "selectedNewShortVoices": 12,
+  "reusedFullFilmVoices": 4
+}

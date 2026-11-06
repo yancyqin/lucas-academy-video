@@ -1,0 +1,186 @@
+{
+  "en": {
+    "fa02-01-01": {
+      "clip": "orbital-v2/narration/en/fa02-01-01.take2.wav",
+      "seconds": 5.4,
+      "sha256": "7955c5fd1b42b70873ece6ff2f1d5e87be60913df12880b62133230531cb3974",
+      "source": "outputs/louise/en/family-ai-lab-02-v2/s1.00/fa02-01-01.take2.wav",
+      "caption": "This note is too big. How can Mia invite Leo to play?",
+      "spoken": "This note is too big. How can Mia invite Leo to play?",
+      "settingsSha256": "f49cf5baea6d2670ea25fdb78afbda509f9384c6ee1febacf2d6dddcd124ed2a",
+      "review": "Owner found the first English line unclear. Rephrased the opening to This note is too big; rerecorded at speed 1.0 with a clear first sentence and brief pause. Small-model ASR matches every expected word, including Mia and Leo.",
+      "reusedFromV1": false,
+      "reusedFromFull": true
+    },
+    "fa02s-02": {
+      "clip": "orbital-v2/short/narration/en/fa02s-02.wav",
+      "seconds": 4.42,
+      "sha256": "64cf524a24943c22f0d16268aa27c2bde1e507307b5e59c20819d5ff30d20bf0",
+      "source": "outputs/louise/en/family-ai-lab-02-short/s1.10/fa02s-02.wav",
+      "caption": "They share a code. Gold is one. Blue is zero.",
+      "spoken": "They share a code. Gold is one. Blue is zero.",
+      "settingsSha256": "c4ed7ea7b72fcaad9b8043403f1aa92296d816fb524f24e3e85a438f497bd7e8",
+      "review": "Script and transcript inspected. Figures retain the correct values; punctuation, numeral formatting, traditional script and name/homophone variants are retained as ASR evidence.",
+      "reusedFromFull": false
+    },
+    "fa02s-03": {
+      "clip": "orbital-v2/short/narration/en/fa02s-03.wav",
+      "seconds": 3.84,
+      "sha256": "f4b96c91253dc5a226dadc0175f781139821fab4cb78e5ad46d517698eba50f5",
+      "source": "outputs/louise/en/family-ai-lab-02-short/s1.10/fa02s-03.wav",
+      "caption": "Yes! His screen says PLAY. The invitation got through!",
+      "spoken": "Yes! His screen says play. The invitation got through!",
+      "settingsSha256": "bcf6d5dbb665b3bda9fb3e1b7b7bc1a795734b6b7cf9e01b0864d3aa4087e674",
+      "review": "Medium confirms the complete Yes and screen says play phrase; lowercase play is the spoken form of the on-screen PLAY.",
+      "reusedFromFull": false
+    },
+    "fa02s-04": {
+      "clip": "orbital-v2/short/narration/en/fa02s-04.wav",
+      "seconds": 2.76,
+      "sha256": "008719789ab972dc7b651b8f83686328120beaaf7e505467b560bda41411a957",
+      "source": "outputs/louise/en/family-ai-lab-02-short/s1.10/fa02s-04.wav",
+      "caption": "A gift is hidden in one of ten boxes.",
+      "spoken": "A gift is hidden in one of ten boxes.",
+      "settingsSha256": "ce913c56fe4e3a7633ca6c732094a9612ba727cca752f12fa9a1734b450836c4",
+      "review": "Script and transcript inspected. Figures retain the correct values; punctuation, numeral formatting, traditional script and name/homophone variants are retained as ASR evidence.",
+      "reusedFromFull": false
+    },
+    "fa02s-05": {
+      "clip": "orbital-v2/short/narration/en/fa02s-05.wav",
+      "seconds": 3.88,
+      "sha256": "009ea581023e31cb4e0de466a92476f57843547a450ef3d49e003d882cad34e7",
+      "source": "outputs/louise/en/family-ai-lab-02-short/s1.10/fa02s-05.wav",
+      "caption": "Four yes-or-no answers lead him to box seven.",
+      "spoken": "Four yes-or-no answers lead him to box seven.",
+      "settingsSha256": "63bda5474c23a1e83a143b8df8f34d4d94de322941d8cc45b5b927f42bba3257",
+      "review": "Script and transcript inspected. Figures retain the correct values; punctuation, numeral formatting, traditional script and name/homophone variants are retained as ASR evidence.",
+      "reusedFromFull": false
+    },
+    "fa02s-06": {
+      "clip": "orbital-v2/short/narration/en/fa02s-06.wav",
+      "seconds": 3.96,
+      "sha256": "bfca0a0439c21ede83cee6b0a2969ff2cdfe90b76695e4fb6332b8a84c394d4e",
+      "source": "outputs/louise/en/family-ai-lab-02-short/s1.10/fa02s-06.wav",
+      "caption": "Watermelon! Now it's Leo's turn to send a message.",
+      "spoken": "Watermelon! Now it's Leo's turn to send a message.",
+      "settingsSha256": "020c5b96a07c30a5df0dfab11ba658cc25d5c9f3435494cbffefa02d4a3e0173",
+      "review": "Script and transcript inspected. Figures retain the correct values; punctuation, numeral formatting, traditional script and name/homophone variants are retained as ASR evidence.",
+      "reusedFromFull": false
+    },
+    "fa02-08-01": {
+      "clip": "orbital-v2/narration/en/fa02-08-01.wav",
+      "seconds": 4.82,
+      "sha256": "f630d635e1b5063b5be9cbf09ea7abd8ea8047b999f5d82cded69b3fa25632cd",
+      "source": "outputs/louise/en/family-ai-lab-02-v2/s1.10/fa02-08-01.wav",
+      "caption": "Leo presses Send. A gold signal carries his reply: got it!",
+      "spoken": "Leo presses Send. A gold signal carries his reply: got it!",
+      "settingsSha256": "be2f5e08815dabf597deca31ded418ed5804b715f1ee5cee31fe229d404e9069",
+      "review": "ASR inspected: full expected phrase, figures and letter names retained; punctuation and numeral formatting are transcription variants.",
+      "reusedFromV1": false,
+      "reusedFromFull": true
+    },
+    "fa02s-08": {
+      "clip": "orbital-v2/short/narration/en/fa02s-08.wav",
+      "seconds": 2.42,
+      "sha256": "cb2dfa1fdaaa3ceddc7de17fdb005933ae8b66cb12ea1cba985528a426c5b45b",
+      "source": "outputs/louise/en/family-ai-lab-02-short/s1.10/fa02s-08.wav",
+      "caption": "What would you send through your tiny pipe?",
+      "spoken": "What would you send through your tiny pipe?",
+      "settingsSha256": "ddae5f146b4c9b90b96b6ba62b8076e6b948fe6d2b9f28bad738d024e877b364",
+      "review": "Script and transcript inspected. Figures retain the correct values; punctuation, numeral formatting, traditional script and name/homophone variants are retained as ASR evidence.",
+      "reusedFromFull": false
+    }
+  },
+  "zh": {
+    "fa02-01-01": {
+      "clip": "orbital-v2/narration/zh/fa02-01-01.wav",
+      "seconds": 4.32,
+      "sha256": "9cad82d37b0ee80dd9801d02991e4cb1f31c98a0792667174a1468ca90d814a9",
+      "source": "outputs/louise/zh/family-ai-lab-02-v2/s1.10/fa02-01-01.wav",
+      "caption": "纸条过不去。米娅怎么邀请对面的里奥来玩？",
+      "spoken": "纸条过不去。米亚怎么邀请对面的里奥来玩？",
+      "settingsSha256": "735b5362396dff937b277fd9f636b090af5ea71ae25559f6fa3ce70c638f529a",
+      "review": "Small and medium ASR inspected. Medium confirms the full phrase and names; Traditional characters and 李奧 are equivalent/homophonic transcription of 里奥.",
+      "reusedFromV1": false,
+      "reusedFromFull": true
+    },
+    "fa02s-02": {
+      "clip": "orbital-v2/short/narration/zh/fa02s-02.wav",
+      "seconds": 4.72,
+      "sha256": "aa16c9642d1a952af0e0f65ce63f7343dc3e3724c011850bf38e564b3c418fbe",
+      "source": "outputs/louise/zh/family-ai-lab-02-short/s1.10/fa02s-02.wav",
+      "caption": "约好一张表。金色是一，蓝色是零。",
+      "spoken": "约好一张表。金色是一，蓝色是零。",
+      "settingsSha256": "e0fef5be8b9578e7556b44ed3f61497ec7a5b446b353ef061d52d9533cb5936d",
+      "review": "Script and transcript inspected. Figures retain the correct values; punctuation, numeral formatting, traditional script and name/homophone variants are retained as ASR evidence.",
+      "reusedFromFull": false
+    },
+    "fa02s-03": {
+      "clip": "orbital-v2/short/narration/zh/fa02s-03.take2.wav",
+      "seconds": 2.64,
+      "sha256": "96d3211f8e3b58f9fc29a09fcc76d413aec61661e15b278e31679c705ab28049",
+      "source": "outputs/louise/zh/family-ai-lab-02-short/s1.10/fa02s-03.take2.wav",
+      "caption": "可以！邀请送到了。一起玩吧！",
+      "spoken": "可以！邀请送到了。一起玩吧！",
+      "settingsSha256": "3128e4b8ef4cde7b5afd77ad05631aeba81d5bd11f7b87da67e707f60f67a296",
+      "review": "Rephrased to remove the unclear name. Take 2 clearly transcribes 可以, 邀请送到了, 一起玩吧.",
+      "reusedFromFull": false
+    },
+    "fa02s-04": {
+      "clip": "orbital-v2/short/narration/zh/fa02s-04.wav",
+      "seconds": 3.56,
+      "sha256": "418c7a32e323cf4a1ae9204febaa8ac15a5d8dc8cda8175a5106de17b455d161",
+      "source": "outputs/louise/zh/family-ai-lab-02-short/s1.10/fa02s-04.wav",
+      "caption": "礼物藏在十个箱子里。里奥要找出来。",
+      "spoken": "礼物藏在十个箱子里。里奥要找出来。",
+      "settingsSha256": "fa15afbd43491c0cb4c125385251a28ac3739c88e7ebe9e8df82e373201ba3bc",
+      "review": "Script and transcript inspected. Figures retain the correct values; punctuation, numeral formatting, traditional script and name/homophone variants are retained as ASR evidence.",
+      "reusedFromFull": false
+    },
+    "fa02s-05": {
+      "clip": "orbital-v2/short/narration/zh/fa02s-05.take3.wav",
+      "seconds": 2.86,
+      "sha256": "79973723d6bee4b5b3b9aac27e1774a33fa759460f9965ba546701b3d50df2b8",
+      "source": "outputs/louise/zh/family-ai-lab-02-short/s1.10/fa02s-05.take3.wav",
+      "caption": "四个回答，七号箱找到了！",
+      "spoken": "四个回答，七号箱找到了！",
+      "settingsSha256": "1777d0e94cd0ecac38f6061e848807e3c97226363cab5f5c8f1509a20971087f",
+      "review": "Simplified to 四个回答，七号箱找到了 to avoid unclear 四次 / 是否 pronunciations. Take 3 confirms the correct four answers and box seven, with numeral/traditional-script formatting variants.",
+      "reusedFromFull": false
+    },
+    "fa02s-06": {
+      "clip": "orbital-v2/short/narration/zh/fa02s-06.wav",
+      "seconds": 3.34,
+      "sha256": "c44151c92478a1da2b75a09dad11c4095838269a5b20086ea8c58e0925c5b0a9",
+      "source": "outputs/louise/zh/family-ai-lab-02-short/s1.10/fa02s-06.wav",
+      "caption": "是西瓜！这回，轮到里奥回信。",
+      "spoken": "是西瓜！这回，轮到里奥回信。",
+      "settingsSha256": "70d098360cb0b50a6a38b6856ec9bd7b62dad3969fc08447b0413be893807f8e",
+      "review": "Script and transcript inspected. Figures retain the correct values; punctuation, numeral formatting, traditional script and name/homophone variants are retained as ASR evidence.",
+      "reusedFromFull": false
+    },
+    "fa02-08-01": {
+      "clip": "orbital-v2/narration/zh/fa02-08-01.take2.wav",
+      "seconds": 4.94,
+      "sha256": "339eb6078e1304337e9161b82a6a749e232531297d46485a32a2604af86b2f84",
+      "source": "outputs/louise/zh/family-ai-lab-02-v2/s1.10/fa02-08-01.take2.wav",
+      "caption": "他按下发送键，一颗金色小球传了回去：收到啦！",
+      "spoken": "他按下发送键，一颗金色小球传了回去：收到啦！",
+      "settingsSha256": "9827c099f4e2de5bfba47ec984ae35a71a6119de56a3416a3f3e912a4d09045e",
+      "review": "Replacement take inspected: complete revised phrase, clear 管道连接 / 按下发送键. Traditional characters and the final 啦/了 transcription variant do not alter the message; no appended speech.",
+      "reusedFromV1": false,
+      "reusedFromFull": true
+    },
+    "fa02s-08": {
+      "clip": "orbital-v2/short/narration/zh/fa02s-08.wav",
+      "seconds": 2.9,
+      "sha256": "32a77cfc0698410db7c6a9f429aa8919637187c176c999ba53b4e6705d546996",
+      "source": "outputs/louise/zh/family-ai-lab-02-short/s1.10/fa02s-08.wav",
+      "caption": "如果是你，你想给朋友说什么？",
+      "spoken": "如果是你，你想给朋友说什么？",
+      "settingsSha256": "781e54affcaa43bbfe7054acf99ec3c92ba88b59dbe3f22df06b5e37d8017933",
+      "review": "Script and transcript inspected. Figures retain the correct values; punctuation, numeral formatting, traditional script and name/homophone variants are retained as ASR evidence.",
+      "reusedFromFull": false
+    }
+  }
+}

@@ -7,29 +7,37 @@ MEDIA=ROOT.parent/'lucas-academy-media'
 PUBLIC=ROOT/'public/family-ai-lab-02'
 DOC=ROOT/'docs/family-ai-lab-02/design-v2'
 SPEED=1.1
+SCRIPT=Path(__file__).with_name('orbital-script.json')
+BASELINE=PUBLIC/'narration.json'
+SERIES='family-ai-lab-02-v2'
+SUBDIR='orbital-v2'
+PREFIX='orbital'
+REUSE_FLAG='reusedFromV1'
 
 
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 
 
 def plan(lang):
-    source=json.loads((Path(__file__).parent/'orbital-script.json').read_text())
-    old=json.loads((PUBLIC/'narration.json').read_text())
+    source=json.loads(SCRIPT.read_text())
+    old=json.loads(BASELINE.read_text())
     rows=[]
     for row in source['lines']:
-        if old[lang][row['id']]['caption']==row[lang]:continue
+        prior=old[lang].get(row['id'])
+        if prior and prior['caption']==row[lang]:continue
         text=row[lang];spoken=text
         if lang=='zh':
             for a,b in [('米娅','米亚'),(' L、A、Y。','字母 L、A、Y。')]:spoken=spoken.replace(a,b)
         tone=('Please speak with playful curiosity, as if inviting a child into a little space adventure. Warm, lively, natural connected speech. Clear short sentences.' if row['scene']==1 else 'Please tell this story with a warm, curious voice. Natural connected speech, clear and conversational. The explanation is calm and unhurried.') if lang=='en' else ('请用轻快、好奇的语气讲这个太空小冒险，像在和孩子聊天。短句自然连贯，亲切活泼。' if row['scene']==1 else '请用亲切、清楚的普通话讲故事，像坐在孩子旁边说话。语句连贯，节奏平稳。')
         override=row.get('voice',{}).get(lang,{})
+        spoken=override.get('spoken',spoken)
         item={'id':row['id'],'caption':text,'spoken':spoken,'voice':f'louise/{lang}','mode':'zero-shot-instruct','instruction':override.get('instruction',tone),'speed':override.get('speed',SPEED),'scene':row['scene']}
         item['settingsSha256']=hashlib.sha256(json.dumps(item,sort_keys=True,ensure_ascii=False).encode()).hexdigest()
         rows.append(item)
     return rows
 
 
-def folder(lang,speed=SPEED):return MEDIA/f'outputs/louise/{lang}/family-ai-lab-02-v2/s{speed:.2f}'
+def folder(lang,speed=SPEED):return MEDIA/f'outputs/louise/{lang}/{SERIES}/s{speed:.2f}'
 
 
 def generate(lang,take,only=None):
@@ -45,7 +53,7 @@ def generate(lang,take,only=None):
     from lucas_media.cosyvoice_engine import CosyVoiceEngine
     from lucas_media.joke import DEFAULT_PEAK_DBFS,add_peak_headroom,save_wav
     engine=CosyVoiceEngine(MEDIA/f'profiles/louise/{lang}/profile.json')
-    rows=plan(lang);(DOC/f'orbital-voice.{lang}.json').write_text(json.dumps(rows,ensure_ascii=False,indent=2)+'\n')
+    rows=plan(lang);(DOC/f'{PREFIX}-voice.{lang}.json').write_text(json.dumps(rows,ensure_ascii=False,indent=2)+'\n')
     for row in rows:
         if only and row['id'] not in only:continue
         target=folder(lang,row['speed']);target.mkdir(parents=True,exist_ok=True)
@@ -66,7 +74,7 @@ def check(lang,take,model_name='small',only=None):
     import torch,whisper
     torch.set_num_threads(2)
     model=whisper.load_model(model_name,device='cpu')
-    path=DOC/('orbital-asr.json' if model_name=='small' else f'orbital-asr.{model_name}.json');report=json.loads(path.read_text()) if path.exists() else {}
+    path=DOC/(f'{PREFIX}-asr.json' if model_name=='small' else f'{PREFIX}-asr.{model_name}.json');report=json.loads(path.read_text()) if path.exists() else {}
     for row in plan(lang):
         if only and row['id'] not in only:continue
         name=row['id']+(f'.take{take}' if take else '');wav=folder(lang,row['speed'])/(name+'.wav');key=lang+'/'+name
@@ -79,23 +87,24 @@ def check(lang,take,model_name='small',only=None):
 
 def select():
     import soundfile as sf
-    old=json.loads((PUBLIC/'narration.json').read_text());script=json.loads((Path(__file__).parent/'orbital-script.json').read_text());choices=json.loads((DOC/'orbital-voice-review.json').read_text());manifest={'en':{},'zh':{}}
+    old=json.loads(BASELINE.read_text());script=json.loads(SCRIPT.read_text());choices=json.loads((DOC/f'{PREFIX}-voice-review.json').read_text());manifest={'en':{},'zh':{}}
     for lang in manifest:
         plans={row['id']:row for row in plan(lang)}
         for row in script['lines']:
-            prior=old[lang][row['id']]
-            if prior['caption']==row[lang]:manifest[lang][row['id']]={**prior,'reusedFromV1':True};continue
+            prior=old[lang].get(row['id'])
+            if prior and prior['caption']==row[lang]:manifest[lang][row['id']]={**prior,REUSE_FLAG:True};continue
             choice=choices[lang+'/'+row['id']];assert choice['checked']
             name=row['id']+(f'.take{choice["take"]}' if choice.get('take') else '');source=folder(lang,plans[row['id']]['speed'])/(name+'.wav');meta=json.loads(source.with_suffix('.json').read_text())
             assert meta['caption']==row[lang] and sha(source)==choice['sha256']
-            target=PUBLIC/f'orbital-v2/narration/{lang}/{name}.wav';target.parent.mkdir(parents=True,exist_ok=True)
+            target=PUBLIC/f'{SUBDIR}/narration/{lang}/{name}.wav';target.parent.mkdir(parents=True,exist_ok=True)
             if target.exists():assert sha(target)==sha(source)
             else:shutil.copy2(source,target)
             samples,rate=sf.read(target);assert rate==24000 and samples.ndim==1
-            manifest[lang][row['id']]={'clip':str(target.relative_to(PUBLIC)),'seconds':len(samples)/rate,'sha256':sha(target),'source':str(source.relative_to(MEDIA)),'caption':row[lang],'spoken':meta['spoken'],'settingsSha256':meta['settingsSha256'],'review':choice['note'],'reusedFromV1':False}
-    (PUBLIC/'orbital-v2/narration.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
-    (DOC/'orbital-narration.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
-    print('Selected',sum(len(v) for v in manifest.values()),'takes; reused',sum(x.get('reusedFromV1',False) for v in manifest.values() for x in v.values()))
+            manifest[lang][row['id']]={'clip':str(target.relative_to(PUBLIC)),'seconds':len(samples)/rate,'sha256':sha(target),'source':str(source.relative_to(MEDIA)),'caption':row[lang],'spoken':meta['spoken'],'settingsSha256':meta['settingsSha256'],'review':choice['note'],REUSE_FLAG:False}
+    (PUBLIC/SUBDIR).mkdir(parents=True,exist_ok=True)
+    (PUBLIC/SUBDIR/'narration.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
+    (DOC/f'{PREFIX}-narration.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
+    print('Selected',sum(len(v) for v in manifest.values()),'takes; reused',sum(x.get(REUSE_FLAG,False) for v in manifest.values() for x in v.values()))
 
 
 if __name__=='__main__':

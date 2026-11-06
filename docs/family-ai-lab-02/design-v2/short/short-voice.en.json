@@ -1,0 +1,68 @@
+[
+  {
+    "id": "fa02s-02",
+    "caption": "They share a code. Gold is one. Blue is zero.",
+    "spoken": "They share a code. Gold is one. Blue is zero.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please tell this story with a warm, curious voice. Natural connected speech, clear and conversational. The explanation is calm and unhurried.",
+    "speed": 1.1,
+    "scene": 2,
+    "settingsSha256": "c4ed7ea7b72fcaad9b8043403f1aa92296d816fb524f24e3e85a438f497bd7e8"
+  },
+  {
+    "id": "fa02s-03",
+    "caption": "Yes! His screen says PLAY. The invitation got through!",
+    "spoken": "Yes! His screen says play. The invitation got through!",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please tell this story with a warm, curious voice. Natural connected speech, clear and conversational. The explanation is calm and unhurried.",
+    "speed": 1.1,
+    "scene": 3,
+    "settingsSha256": "bcf6d5dbb665b3bda9fb3e1b7b7bc1a795734b6b7cf9e01b0864d3aa4087e674"
+  },
+  {
+    "id": "fa02s-04",
+    "caption": "A gift is hidden in one of ten boxes.",
+    "spoken": "A gift is hidden in one of ten boxes.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please tell this story with a warm, curious voice. Natural connected speech, clear and conversational. The explanation is calm and unhurried.",
+    "speed": 1.1,
+    "scene": 4,
+    "settingsSha256": "ce913c56fe4e3a7633ca6c732094a9612ba727cca752f12fa9a1734b450836c4"
+  },
+  {
+    "id": "fa02s-05",
+    "caption": "Four yes-or-no answers lead him to box seven.",
+    "spoken": "Four yes-or-no answers lead him to box seven.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please tell this story with a warm, curious voice. Natural connected speech, clear and conversational. The explanation is calm and unhurried.",
+    "speed": 1.1,
+    "scene": 5,
+    "settingsSha256": "63bda5474c23a1e83a143b8df8f34d4d94de322941d8cc45b5b927f42bba3257"
+  },
+  {
+    "id": "fa02s-06",
+    "caption": "Watermelon! Now it's Leo's turn to send a message.",
+    "spoken": "Watermelon! Now it's Leo's turn to send a message.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please tell this story with a warm, curious voice. Natural connected speech, clear and conversational. The explanation is calm and unhurried.",
+    "speed": 1.1,
+    "scene": 6,
+    "settingsSha256": "020c5b96a07c30a5df0dfab11ba658cc25d5c9f3435494cbffefa02d4a3e0173"
+  },
+  {
+    "id": "fa02s-08",
+    "caption": "What would you send through your tiny pipe?",
+    "spoken": "What would you send through your tiny pipe?",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please tell this story with a warm, curious voice. Natural connected speech, clear and conversational. The explanation is calm and unhurried.",
+    "speed": 1.1,
+    "scene": 8,
+    "settingsSha256": "ddae5f146b4c9b90b96b6ba62b8076e6b948fe6d2b9f28bad738d024e877b364"
+  }
+]

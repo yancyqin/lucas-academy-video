@@ -4,6 +4,8 @@
 
 用户确认片名：**0和1，能聊天吗？** / **Can 0 and 1 Talk?**。封面直接取新版视频第 0 帧，中英文各一张；标题卡同步使用英文片名。[封面记录](docs/family-ai-lab-02/design-v2/cover.json)。
 
+**剧情浓缩版（2026-11-06）**：另出 40.23 秒、9:16 竖屏短片，六条 Muse 原件全部用上，动态 Muse 画面约占 86.3%。同样为英文默认、中文独立音轨、外置字幕。剧情从纸条受阻一路到邀请、找礼物、西瓜和回信，保留少量准确的编码与四问动画。路径：`out/family-ai-lab-02/orbital-v2/short/delivery/family-ai-lab-02.short.bilingual.mp4`。[短片制作记录](docs/family-ai-lab-02/design-v2/short/production.md)。
+
 用户于 2026-11-05 指定改编 [0与1，开与关](https://ai.lucasacademy.org/courses/zero-and-one/)，要求有动画、有剧情，并明确选择直接制作双语配音动画审核版。沿用上一部：英文默认、中文独立音轨、简短英文画面标签，无内嵌字幕、无字幕留白，另交中英文 SRT。不新建 worktree；现有 checkout 从最新 `origin/main` 建立 `codex/family-ai-lab-02`。
 
 ## 原故事与改编

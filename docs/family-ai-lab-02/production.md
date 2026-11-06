@@ -4,6 +4,8 @@
 
 Current movie: `out/family-ai-lab-02/orbital-v2/delivery/family-ai-lab-02.bilingual.mp4`; external subtitles: `en.srt` and `zh-Hans.srt` beside it. Selected scripts: [English](design-v2/orbital-script.en.md), [Chinese](design-v2/orbital-script.zh.md).
 
+**Additional story short, 2026-11-06:** 40.23 seconds, 1080×1920/30 fps, with all six Muse originals and 86.3% moving Muse footage. English default plus independent Chinese audio and external SRTs. [Short production and rebuild instructions](design-v2/short/production.md). Output: `out/family-ai-lab-02/orbital-v2/short/delivery/family-ai-lab-02.short.bilingual.mp4`.
+
 The owner requested a story adaptation of the zero-and-one lesson and selected full bilingual narrated animation on 2026-11-05. The original opening is in `lucas-academy-ai/L1-beginner/course.md`; curriculum revision and frozen asset hashes are in [sources.json](sources.json). [Story and shot plan](../../FAMILY-AI-LAB-02.md), [Chinese](zh-script.md), [English](en-script.md).
 
 ## Orbital study and manual generation pack

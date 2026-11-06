@@ -15,26 +15,26 @@ def main():
     BACKUP.mkdir(parents=True,exist_ok=True)
     shutil.copytree(ROOT/'public/family-ai-lab-02',BACKUP/'public/family-ai-lab-02',dirs_exist_ok=True)
     shutil.copytree(ROOT/'docs/family-ai-lab-02',BACKUP/'records',dirs_exist_ok=True)
-    for series in ('v1','v2'):
+    for series in ('v1','v2','short'):
         for lang in ('en','zh'):
             folder=ROOT.parent/f'lucas-academy-media/outputs/louise/{lang}/family-ai-lab-02-{series}'
             if not folder.exists():continue
             for p in folder.glob('s*/*'):
                 if not p.is_file() or p.suffix not in ('.wav','.json'):continue
-                category='raw-narration' if series=='v1' else 'raw-narration-v2'
+                category='raw-narration' if series=='v1' else f'raw-narration-{series}'
                 target=BACKUP/f'{category}/{lang}'
                 if p.parent.name!='s1.10':target=target/p.parent.name
                 dest=target/p.name;dest.parent.mkdir(parents=True,exist_ok=True)
                 if dest.exists():assert sha(dest)==sha(p),('Immutable take differs',dest)
                 else:shutil.copy2(p,dest)
-    for name in ('audio','narration','orbital-v2/audio'):
+    for name in ('audio','narration','orbital-v2/audio','orbital-v2/short/audio'):
         for p in (ROOT/f'out/family-ai-lab-02/{name}').rglob('*.json'):
             dest=BACKUP/'checks'/name/p.relative_to(ROOT/f'out/family-ai-lab-02/{name}');dest.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(p,dest)
     (BACKUP/'README.md').write_text('''# Family AI Lab — The tiny pipe
 
-`public/` contains the frozen original course inputs, curriculum artwork, worksheets, actual browser recording and capture receipt, derived code/guessing facts, QR, original imagegen plates, six intact Muse originals, editing derivatives, shared voiced timelines and all selected Louise WAVs. `raw-narration/` and `raw-narration-v2/` retain every original/replacement take with its settings and SHA receipts. Differing raw takes are never overwritten. `records/` and `checks/` preserve scripts, provenance, selected decisions, ASR transcripts, word times and loudness/ducking reports.
+`public/` contains the frozen original course inputs, curriculum artwork, worksheets, actual browser recording and capture receipt, derived code/guessing facts, QR, original imagegen plates, six intact Muse originals, editing derivatives, shared voiced timelines and all selected Louise WAVs. `raw-narration/`, `raw-narration-v2/` and `raw-narration-short/` retain every original/replacement take with its settings and SHA receipts. Differing raw takes are never overwritten. `records/` and `checks/` preserve scripts, provenance, selected decisions, ASR transcripts, word times and loudness/ducking reports.
 
-Restore with `python3 restore.py /absolute/path/to/video-checkout`. All SHA256SUMS are verified before copying; a differing existing destination refuses the entire restore. Rebuild the current orbital film with `npm run fal02:orbital:build`, `npm run fal02:orbital:mix`, `npm run fal02:orbital:final`, `npm run fal02:orbital:check`. The restored editing derivatives avoid an unnecessary retranscode; `fal02:orbital:clips` can recreate them from the six preserved Muse originals. Selected WAVs need no private voice profile. Original procedural music and sound effects are rebuilt from the committed recipe; no external songs or samples are involved. Historical v1 commands and inputs remain available in the checkout.
+Restore with `python3 restore.py /absolute/path/to/video-checkout`. All SHA256SUMS are verified before copying; a differing existing destination refuses the entire restore. Rebuild the current orbital film with `npm run fal02:orbital:build`, `npm run fal02:orbital:mix`, `npm run fal02:orbital:final`, `npm run fal02:orbital:check`. The restored editing derivatives avoid an unnecessary retranscode; `fal02:orbital:clips` can recreate them from the six preserved Muse originals. Selected WAVs need no private voice profile. Original procedural music and sound effects are rebuilt from the committed recipe; no external songs or samples are involved. Rebuild the 40-second story short with `npm run fal02:short:build`, `npm run fal02:short:mix`, `npm run fal02:short:final` and `npm run fal02:short:check`. Historical v1 commands and inputs remain available in the checkout.
 ''')
     (BACKUP/'restore.py').write_text('''from pathlib import Path
 import hashlib,shutil,sys
