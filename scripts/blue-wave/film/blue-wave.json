@@ -1,0 +1,566 @@
+{
+  "name": "蓝色浪潮",
+  "title": "蓝色浪潮 | 肖邦 夜曲 Op. 9, No. 2",
+  "title_en": "Blue Wave | Chopin Nocturne Op. 9, No. 2",
+  "piece": "levy",
+  "start": 0,
+  "end": 271.47,
+  "fade_in": 2.5,
+  "fade_out": 7,
+  "afade_in": 0,
+  "afade_out": 3,
+  "out_dir": "film",
+  "size": [
+    1920,
+    1080
+  ],
+  "shots": [
+    {
+      "id": "great-wave-painting",
+      "section": "S1",
+      "at": 0,
+      "src": "art:great-wave",
+      "zoom": [
+        1,
+        1.04
+      ],
+      "crop": [
+        0,
+        0.1,
+        1
+      ]
+    },
+    {
+      "id": "great-wave-moving",
+      "section": "S1",
+      "at": 5.666666666666667,
+      "src": "muse:great-wave",
+      "in": 0,
+      "out": 10,
+      "xfade": 2.8,
+      "hold": 2.8,
+      "zoom": [
+        1,
+        1
+      ],
+      "speed_mode": "constant",
+      "crop": [
+        0.019230769230769273,
+        0.11609251749599672,
+        0.9615384615384615
+      ],
+      "crop_to": [
+        0.01923077,
+        0.015,
+        0.96153846
+      ]
+    },
+    {
+      "id": "impression-sunrise-painting",
+      "section": "S2",
+      "at": 30.1,
+      "src": "art:impression-sunrise",
+      "xfade": 2.8,
+      "zoom": [
+        1,
+        1.035
+      ],
+      "crop": [
+        0,
+        0.12,
+        1
+      ]
+    },
+    {
+      "id": "impression-sunrise-moving",
+      "section": "S2",
+      "at": 40.766666666666666,
+      "src": "muse:impression-sunrise",
+      "in": 0,
+      "out": 7,
+      "xfade": 2.8,
+      "hold": 2.8,
+      "zoom": [
+        1,
+        1
+      ],
+      "speed_mode": "constant",
+      "crop": [
+        0.016908212560386437,
+        0.1322597311616095,
+        0.9661835748792271
+      ],
+      "crop_to": [
+        0.01690821,
+        0.12,
+        0.96618357
+      ]
+    },
+    {
+      "id": "blue-dancers-orsay-painting",
+      "section": "S3",
+      "at": 59.3,
+      "src": "art:blue-dancers-orsay",
+      "xfade": 2.8,
+      "zoom": [
+        1,
+        1
+      ],
+      "layout": "contain"
+    },
+    {
+      "id": "blue-dancers-orsay-moving",
+      "section": "S3",
+      "at": 63.1,
+      "src": "rawmuse:blue-dancers-orsay",
+      "in": 1.0,
+      "out": 10,
+      "xfade": 2.8,
+      "hold": 2.8,
+      "zoom": [
+        1,
+        1
+      ],
+      "speed_mode": "constant",
+      "layout": "contain"
+    },
+    {
+      "id": "blue-dancers-painting",
+      "section": "S3",
+      "at": 75.53333333333333,
+      "src": "art:blue-dancers",
+      "xfade": 2.8,
+      "zoom": [
+        1,
+        1
+      ],
+      "layout": "contain"
+    },
+    {
+      "id": "blue-dancers-moving",
+      "section": "S3",
+      "at": 79.3,
+      "src": "rawmuse:blue-dancers",
+      "in": 0,
+      "out": 6.5,
+      "xfade": 2.8,
+      "hold": 2.8,
+      "zoom": [
+        1,
+        1
+      ],
+      "speed_mode": "constant",
+      "layout": "contain"
+    },
+    {
+      "id": "rhone-painting",
+      "section": "S4",
+      "at": 87.63333333333334,
+      "src": "art:rhone",
+      "xfade": 2.8,
+      "zoom": [
+        1,
+        1.025
+      ],
+      "crop": [
+        0.006,
+        0.26,
+        0.978
+      ]
+    },
+    {
+      "id": "rhone-moving",
+      "section": "S4",
+      "at": 94.53333333333333,
+      "src": "muse:rhone",
+      "in": 0,
+      "out": 10,
+      "xfade": 2.8,
+      "hold": 2.8,
+      "zoom": [
+        1,
+        1
+      ],
+      "speed_mode": "constant",
+      "crop": [
+        0.017926829268292636,
+        0.2686565696302124,
+        0.9541463414634147
+      ],
+      "crop_to": [
+        0.017926829268292636,
+        0.13,
+        0.9541463414634147
+      ]
+    },
+    {
+      "id": "kramskoi-moonlit-painting",
+      "section": "S5",
+      "at": 117.16666666666667,
+      "src": "art:kramskoi-moonlit",
+      "xfade": 2.8,
+      "zoom": [
+        1,
+        1
+      ],
+      "layout": "contain"
+    },
+    {
+      "id": "kramskoi-moonlit-moving",
+      "section": "S5",
+      "at": 125.2,
+      "src": "rawmuse:kramskoi-moonlit",
+      "in": 0,
+      "out": 8.5,
+      "xfade": 2.8,
+      "hold": 2.8,
+      "zoom": [
+        1,
+        1
+      ],
+      "speed_mode": "constant",
+      "layout": "contain"
+    },
+    {
+      "id": "shalott-painting",
+      "section": "S6",
+      "at": 145.1,
+      "src": "art:shalott",
+      "xfade": 2.8,
+      "zoom": [
+        1,
+        1.025
+      ],
+      "crop": [
+        0.025,
+        0.07,
+        0.93
+      ],
+      "tint": 0.4
+    },
+    {
+      "id": "shalott-moving",
+      "section": "S6",
+      "at": 151.16666666666666,
+      "src": "muse:shalott",
+      "in": 0,
+      "out": 8,
+      "xfade": 2.8,
+      "hold": 2.8,
+      "zoom": [
+        1,
+        1
+      ],
+      "speed_mode": "constant",
+      "crop": [
+        0.0363414634146341,
+        0.07831271156281294,
+        0.9073170731707318
+      ],
+      "crop_to": [
+        0.0363414634146341,
+        0.012,
+        0.9073170731707318
+      ],
+      "tint": 0.4
+    },
+    {
+      "id": "whistler-chelsea-painting",
+      "section": "S6",
+      "at": 164.8,
+      "src": "art:whistler-chelsea",
+      "xfade": 3,
+      "zoom": [
+        1,
+        1
+      ],
+      "layout": "contain",
+      "breath": false,
+      "tint": 0.4
+    },
+    {
+      "id": "miranda-painting",
+      "section": "S7",
+      "at": 175.13333333333333,
+      "src": "art:miranda",
+      "xfade": 2.8,
+      "zoom": [
+        1,
+        1.025
+      ],
+      "crop": [
+        0.01,
+        0.04,
+        0.95
+      ]
+    },
+    {
+      "id": "miranda-moving",
+      "section": "S7",
+      "at": 179.03333333333333,
+      "src": "muse:miranda",
+      "in": 0,
+      "out": 10,
+      "xfade": 2.8,
+      "hold": 2.8,
+      "zoom": [
+        1,
+        1
+      ],
+      "speed_mode": "constant",
+      "crop": [
+        0.021585365853658493,
+        0.04905282822590209,
+        0.926829268292683
+      ],
+      "crop_to": [
+        0.021585365853658493,
+        0.008,
+        0.926829268292683
+      ]
+    },
+    {
+      "id": "liberty-painting",
+      "section": "S8",
+      "at": 206.06666666666666,
+      "src": "art:liberty",
+      "xfade": 3,
+      "zoom": [
+        1,
+        1
+      ],
+      "crop": [
+        0,
+        0,
+        1
+      ],
+      "crop_to": [
+        0.29,
+        0,
+        0.45
+      ],
+      "tint": 0.4
+    },
+    {
+      "id": "wanderer-extended-painting",
+      "section": "S9",
+      "at": 227.9,
+      "src": "img:/Users/yqin/repo/playground/lucas-academy-video-data/blue-wave/codex/extended-wanderer.png",
+      "xfade": 3,
+      "zoom": [
+        1,
+        1.03
+      ],
+      "crop": [
+        0,
+        0,
+        1
+      ],
+      "breath": false,
+      "tint": 0.4
+    },
+    {
+      "id": "wanderer-extended-moving",
+      "section": "S9",
+      "at": 236.06666666666666,
+      "src": "muse:wanderer-extended",
+      "in": 0,
+      "out": 10,
+      "xfade": 2.8,
+      "hold": 2.8,
+      "zoom": [
+        1,
+        1
+      ],
+      "speed_mode": "constant",
+      "crop": [
+        0.014563106796116498,
+        0.014563106796116498,
+        0.970873786407767
+      ],
+      "crop_to": [
+        0,
+        0,
+        1
+      ],
+      "tint": 0.4
+    },
+    {
+      "id": "wanderer-final-painting",
+      "section": "S9",
+      "at": 259.3333333333333,
+      "src": "img:/Users/yqin/repo/playground/lucas-academy-video-data/blue-wave/codex/extended-wanderer.png",
+      "xfade": 3,
+      "zoom": [
+        1,
+        1
+      ],
+      "crop": [
+        0,
+        0,
+        1
+      ],
+      "breath": false,
+      "dissolve": "fog_return",
+      "tint": 0.4
+    }
+  ],
+  "accent_snaps": [
+    {
+      "target": 29,
+      "onset": 30.093,
+      "actual": 30.1,
+      "score": 0.552,
+      "delta": 1.1000000000000014
+    },
+    {
+      "target": 58,
+      "onset": 59.315,
+      "actual": 59.3,
+      "score": 0.246,
+      "delta": 1.2999999999999972
+    },
+    {
+      "target": 88,
+      "onset": 87.62,
+      "actual": 87.63333333333334,
+      "score": 0.779,
+      "delta": -0.36666666666666003
+    },
+    {
+      "target": 117,
+      "onset": 117.18,
+      "actual": 117.16666666666667,
+      "score": 0.827,
+      "delta": 0.1666666666666714
+    },
+    {
+      "target": 145,
+      "onset": 145.09,
+      "actual": 145.1,
+      "score": 0.855,
+      "delta": 0.09999999999999432
+    },
+    {
+      "target": 174,
+      "onset": 175.148,
+      "actual": 175.13333333333333,
+      "score": 0.483,
+      "delta": 1.1333333333333258
+    },
+    {
+      "target": 205,
+      "onset": 206.077,
+      "actual": 206.06666666666666,
+      "score": 0.754,
+      "delta": 1.0666666666666629
+    },
+    {
+      "target": 228,
+      "onset": 227.904,
+      "actual": 227.9,
+      "score": 0.704,
+      "delta": -0.09999999999999432
+    },
+    {
+      "target": 6.5,
+      "onset": 5.654,
+      "actual": 5.666666666666667,
+      "score": 0.902,
+      "delta": -0.833333333333333
+    },
+    {
+      "target": 41,
+      "onset": 40.774,
+      "actual": 40.766666666666666,
+      "score": 0.688,
+      "delta": -0.23333333333333428
+    },
+    {
+      "target": 63,
+      "onset": 63.1,
+      "actual": 63.1,
+      "score": 0.846,
+      "delta": 0.10000000000000142
+    },
+    {
+      "target": 74.5,
+      "onset": 75.535,
+      "actual": 75.53333333333333,
+      "score": 0.719,
+      "delta": 1.0333333333333314
+    },
+    {
+      "target": 79,
+      "onset": 79.285,
+      "actual": 79.3,
+      "score": 0.991,
+      "delta": 0.29999999999999716
+    },
+    {
+      "target": 94,
+      "onset": 94.528,
+      "actual": 94.53333333333333,
+      "score": 0.59,
+      "delta": 0.5333333333333314
+    },
+    {
+      "target": 124,
+      "onset": 125.214,
+      "actual": 125.2,
+      "score": 0.773,
+      "delta": 1.2000000000000028
+    },
+    {
+      "target": 151,
+      "onset": 151.174,
+      "actual": 151.16666666666666,
+      "score": 0.659,
+      "delta": 0.1666666666666572
+    },
+    {
+      "target": 165,
+      "onset": 164.815,
+      "actual": 164.8,
+      "score": 0.867,
+      "delta": -0.19999999999998863
+    },
+    {
+      "target": 180,
+      "onset": 179.037,
+      "actual": 179.03333333333333,
+      "score": 0.745,
+      "delta": -0.9666666666666686
+    },
+    {
+      "target": 236,
+      "onset": 236.054,
+      "actual": 236.06666666666666,
+      "score": 0.691,
+      "delta": 0.06666666666666288
+    },
+    {
+      "target": 258,
+      "onset": 259.332,
+      "actual": 259.3333333333333,
+      "score": 0.505,
+      "delta": 1.3333333333333144
+    }
+  ],
+  "section_boundaries": {
+    "29": 30.1,
+    "58": 59.3,
+    "88": 87.63333333333334,
+    "117": 117.16666666666667,
+    "145": 145.1,
+    "174": 175.13333333333333,
+    "205": 206.06666666666666,
+    "228": 227.9
+  },
+  "revision": "2026-11-05: portraits remain centred; correct only Wanderer opening painting camera, restore approved Muse segment and return painting",
+  "notes": [
+    "Every portrait uses its own actual image bounds, fitted to full height and centred horizontally, with its own 40%-darkened blurred side fill. No shared registration canvas offsets.",
+    "After a true first-frame hold for the WHOLE dissolve, clips ease into constant motion over 0.75 seconds.",
+    "Wanderer sequence: the same original PNG with global camera movement and no brightness breath, then the approved Muse footage exactly as in v1, then return to the same PNG. Only the opening still is constrained to a fixed image."
+  ]
+}
