@@ -1,7 +1,7 @@
 {
   "tool": "built-in imagegen",
   "ownerRequest": "Three science-fiction opening designs with the immediate visual impact of short-form video",
-  "status": "01-orbital selected by owner; motion preview requested",
+  "status": "01-orbital selected by owner; Muse motion generation failed with service 502; no video output",
   "prompts": "docs/family-ai-lab-02/design-v2/prompts.json",
   "assets": [
     {
