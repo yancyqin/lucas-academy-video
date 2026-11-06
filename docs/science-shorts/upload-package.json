@@ -1,0 +1,21 @@
+{
+  "path": "/Users/yqin/Desktop/感知机与光遗传学-竖屏短片",
+  "files": 16,
+  "sha256": {
+    "perceptron/perceptron.bilingual.mp4": "b60fd9097668222b17a794032f2f102c43e084f5f42357a3606c60f8fa226148",
+    "perceptron/en.m4a": "b3aca751c5bedd5b2e362df047e0deacd5f69e9a9bd44bd28fd059aa51916cc5",
+    "perceptron/zh.m4a": "301dfbc903ac0f462a574786b4a53f71c712822495488d14cfe381e924053f1f",
+    "perceptron/en.srt": "65345565c33a5862575f7ed025f3e96952b3a0b6ea55366e43b16425d3468c4d",
+    "perceptron/zh-Hans.srt": "da28bdb1c417218717e3a118048352d3458ed6ea58ad15d45122b5e6d20935ac",
+    "perceptron/youtube.en.txt": "16654d37ce455164ed4fdac597c8d5bdbfc7aa48789940cf865322b7814b93c0",
+    "perceptron/youtube.zh.txt": "c5a4c407cde3d9549be094ecb128b8913e7ab0421d0796abe4d2eb41fced0b9e",
+    "optogenetics/optogenetics.bilingual.mp4": "3453cbb83a3f7df31d050e6a8d467e83546e357ecdbe5627bcf806d4f1da438c",
+    "optogenetics/en.m4a": "b6615f377a67ab040f9270bf130d21125504612314b5ec6ca3f440db7d896e74",
+    "optogenetics/zh.m4a": "e781ec088c5d45a0f5ea94e9c541555b556c252827ee85435d1818c71dae7647",
+    "optogenetics/en.srt": "fd1c433f0046b6c4b1b79a46362ef1be2fd7406db1089061b771b33db1accd49",
+    "optogenetics/zh-Hans.srt": "b7b442b1f7e5ef0fb782f3bf6fbe674acc6d7c4318d18deec3b7151b575a1543",
+    "optogenetics/youtube.en.txt": "85418f93e9afe763101a426636d23c761ca1d52620fcd698ed275b438157e53e",
+    "optogenetics/youtube.zh.txt": "853dd18189f9e601a66be589a2a8721f73b910b6248193c6a9f4b8c7f0e3fce7",
+    "先读我.txt": "0979ef8d187243073629b0f58d6039e2c80fc76410d14cf22e7c3cc24e5e82c6"
+  }
+}

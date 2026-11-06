@@ -1,0 +1,1940 @@
+{
+  "en/p03": {
+    "sha256": "bf02bef3ddadfba2cdc295b42884cd55665fdf02c50001b8c833f814961d4e07",
+    "expected": "Just zero point three seven microseconds per picture. All ten test pictures correct.",
+    "heard": "Just 0.37 microseconds per picture. All 10 test pictures correct.",
+    "model": "medium",
+    "seconds": 6.06,
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0.0,
+        "end": 3.76,
+        "text": " Just 0.37 microseconds per picture.",
+        "tokens": [
+          50364,
+          1449,
+          1958,
+          13,
+          12851,
+          3123,
+          37841,
+          28750,
+          680,
+          3036,
+          13,
+          50564
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.23428546814691453,
+        "compression_ratio": 0.9701492537313433,
+        "no_speech_prob": 0.014322636649012566,
+        "words": [
+          {
+            "word": " Just",
+            "start": 0.0,
+            "end": 1.0,
+            "probability": 0.5867123603820801
+          },
+          {
+            "word": " 0",
+            "start": 1.0,
+            "end": 1.46,
+            "probability": 0.987640917301178
+          },
+          {
+            "word": ".37",
+            "start": 1.46,
+            "end": 2.32,
+            "probability": 0.9961796998977661
+          },
+          {
+            "word": " microseconds",
+            "start": 2.32,
+            "end": 3.12,
+            "probability": 0.9778463244438171
+          },
+          {
+            "word": " per",
+            "start": 3.12,
+            "end": 3.36,
+            "probability": 0.9865091443061829
+          },
+          {
+            "word": " picture.",
+            "start": 3.36,
+            "end": 3.76,
+            "probability": 0.9964307546615601
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "seek": 0,
+        "start": 4.32,
+        "end": 5.88,
+        "text": " All 10 test pictures correct.",
+        "tokens": [
+          50564,
+          1057,
+          1266,
+          1500,
+          5242,
+          3006,
+          13,
+          50664
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.23428546814691453,
+        "compression_ratio": 0.9701492537313433,
+        "no_speech_prob": 0.014322636649012566,
+        "words": [
+          {
+            "word": " All",
+            "start": 4.32,
+            "end": 4.52,
+            "probability": 0.9856894016265869
+          },
+          {
+            "word": " 10",
+            "start": 4.52,
+            "end": 4.8,
+            "probability": 0.7324005365371704
+          },
+          {
+            "word": " test",
+            "start": 4.8,
+            "end": 5.1,
+            "probability": 0.9906406402587891
+          },
+          {
+            "word": " pictures",
+            "start": 5.1,
+            "end": 5.46,
+            "probability": 0.9845173954963684
+          },
+          {
+            "word": " correct.",
+            "start": 5.46,
+            "end": 5.88,
+            "probability": 0.9588817358016968
+          }
+        ]
+      }
+    ],
+    "similarity": 0.78
+  },
+  "en/p10": {
+    "sha256": "b138fc923558b6568afa01024bcdf2a21f6e1fdce6765f2d888f254dd1c7b8d3",
+    "expected": "What would you and your child teach it to recognize first?",
+    "heard": "What would you and your child teach it to recognize first?",
+    "model": "medium",
+    "seconds": 4.46,
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0.0,
+        "end": 4.16,
+        "text": " What would you and your child teach it to recognize first?",
+        "tokens": [
+          50364,
+          708,
+          576,
+          291,
+          293,
+          428,
+          1440,
+          2924,
+          309,
+          281,
+          5521,
+          700,
+          30,
+          50564
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.24279901186625164,
+        "compression_ratio": 0.9508196721311475,
+        "no_speech_prob": 0.01012040488421917,
+        "words": [
+          {
+            "word": " What",
+            "start": 0.0,
+            "end": 0.98,
+            "probability": 0.7247796058654785
+          },
+          {
+            "word": " would",
+            "start": 0.98,
+            "end": 1.34,
+            "probability": 0.991479754447937
+          },
+          {
+            "word": " you",
+            "start": 1.34,
+            "end": 1.8,
+            "probability": 0.9743913412094116
+          },
+          {
+            "word": " and",
+            "start": 1.8,
+            "end": 2.12,
+            "probability": 0.9763606786727905
+          },
+          {
+            "word": " your",
+            "start": 2.12,
+            "end": 2.38,
+            "probability": 0.9961109757423401
+          },
+          {
+            "word": " child",
+            "start": 2.38,
+            "end": 2.58,
+            "probability": 0.9986074566841125
+          },
+          {
+            "word": " teach",
+            "start": 2.58,
+            "end": 2.84,
+            "probability": 0.9955314993858337
+          },
+          {
+            "word": " it",
+            "start": 2.84,
+            "end": 3.0,
+            "probability": 0.45020025968551636
+          },
+          {
+            "word": " to",
+            "start": 3.0,
+            "end": 3.14,
+            "probability": 0.9958294034004211
+          },
+          {
+            "word": " recognize",
+            "start": 3.14,
+            "end": 3.58,
+            "probability": 0.9871777296066284
+          },
+          {
+            "word": " first?",
+            "start": 3.58,
+            "end": 4.16,
+            "probability": 0.9775632619857788
+          }
+        ]
+      }
+    ],
+    "similarity": 1.0
+  },
+  "en/o02": {
+    "sha256": "20bd4fdac7aecde525cce490e857d12472bb1c48c02af615f12020d22c241df3",
+    "expected": "The clue starts with tiny algae. Shine a light, and they swim toward it.",
+    "heard": "The clue starts with tiny algae. Shine a light and they swim toward it.",
+    "model": "medium",
+    "seconds": 5.84,
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0.0,
+        "end": 2.34,
+        "text": " The clue starts with tiny algae.",
+        "tokens": [
+          50364,
+          440,
+          13602,
+          3719,
+          365,
+          5870,
+          32658,
+          13,
+          50514
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.2781687691098168,
+        "compression_ratio": 1.0289855072463767,
+        "no_speech_prob": 0.005776113830506802,
+        "words": [
+          {
+            "word": " The",
+            "start": 0.0,
+            "end": 0.62,
+            "probability": 0.9089338779449463
+          },
+          {
+            "word": " clue",
+            "start": 0.62,
+            "end": 0.78,
+            "probability": 0.9351486563682556
+          },
+          {
+            "word": " starts",
+            "start": 0.78,
+            "end": 1.18,
+            "probability": 0.9951636791229248
+          },
+          {
+            "word": " with",
+            "start": 1.18,
+            "end": 1.54,
+            "probability": 0.9980508089065552
+          },
+          {
+            "word": " tiny",
+            "start": 1.54,
+            "end": 1.86,
+            "probability": 0.8412047624588013
+          },
+          {
+            "word": " algae.",
+            "start": 1.86,
+            "end": 2.34,
+            "probability": 0.98703533411026
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "seek": 0,
+        "start": 3.48,
+        "end": 5.6,
+        "text": " Shine a light and they swim toward it.",
+        "tokens": [
+          50514,
+          46460,
+          257,
+          1442,
+          293,
+          436,
+          7110,
+          7361,
+          309,
+          13,
+          50664
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.2781687691098168,
+        "compression_ratio": 1.0289855072463767,
+        "no_speech_prob": 0.005776113830506802,
+        "words": [
+          {
+            "word": " Shine",
+            "start": 3.48,
+            "end": 3.68,
+            "probability": 0.9598302245140076
+          },
+          {
+            "word": " a",
+            "start": 3.68,
+            "end": 3.84,
+            "probability": 0.9781219959259033
+          },
+          {
+            "word": " light",
+            "start": 3.84,
+            "end": 4.12,
+            "probability": 0.9990119934082031
+          },
+          {
+            "word": " and",
+            "start": 4.12,
+            "end": 4.6,
+            "probability": 0.670984148979187
+          },
+          {
+            "word": " they",
+            "start": 4.6,
+            "end": 4.84,
+            "probability": 0.9909145832061768
+          },
+          {
+            "word": " swim",
+            "start": 4.84,
+            "end": 5.04,
+            "probability": 0.9914134740829468
+          },
+          {
+            "word": " toward",
+            "start": 5.04,
+            "end": 5.32,
+            "probability": 0.9739883542060852
+          },
+          {
+            "word": " it.",
+            "start": 5.32,
+            "end": 5.6,
+            "probability": 0.996291995048523
+          }
+        ]
+      }
+    ],
+    "similarity": 1.0
+  },
+  "zh/p03": {
+    "sha256": "562efd2402e219614f54979f34bca51e82dcc421f3f63f034e2094b8a206a2b7",
+    "expected": "每张只要零点三七微秒。十张测试图，全都答对。",
+    "heard": "每张只要0.37为秒,10张测试图全都答对。",
+    "model": "medium",
+    "seconds": 5.04,
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0.0,
+        "end": 4.94,
+        "text": "每张只要0.37为秒,10张测试图全都答对。",
+        "tokens": [
+          50364,
+          23664,
+          44059,
+          14003,
+          4275,
+          15,
+          13,
+          12851,
+          13992,
+          20956,
+          11,
+          3279,
+          44059,
+          11038,
+          233,
+          5233,
+          243,
+          3919,
+          122,
+          11319,
+          7182,
+          28223,
+          8713,
+          1543,
+          50614
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.2221494454603929,
+        "compression_ratio": 0.8253968253968254,
+        "no_speech_prob": 0.00208504986949265,
+        "words": [
+          {
+            "word": "每",
+            "start": 0.0,
+            "end": 0.46,
+            "probability": 0.986677885055542
+          },
+          {
+            "word": "张",
+            "start": 0.46,
+            "end": 0.74,
+            "probability": 0.2457551807165146
+          },
+          {
+            "word": "只",
+            "start": 0.74,
+            "end": 1.0,
+            "probability": 0.98226398229599
+          },
+          {
+            "word": "要",
+            "start": 1.0,
+            "end": 1.22,
+            "probability": 0.98223477602005
+          },
+          {
+            "word": "0.",
+            "start": 1.22,
+            "end": 1.52,
+            "probability": 0.8469159007072449
+          },
+          {
+            "word": "37",
+            "start": 1.7,
+            "end": 2.0,
+            "probability": 0.9951369166374207
+          },
+          {
+            "word": "为",
+            "start": 2.0,
+            "end": 2.28,
+            "probability": 0.3822284936904907
+          },
+          {
+            "word": "秒,",
+            "start": 2.28,
+            "end": 2.76,
+            "probability": 0.9977606534957886
+          },
+          {
+            "word": "10",
+            "start": 3.12,
+            "end": 3.18,
+            "probability": 0.6496126651763916
+          },
+          {
+            "word": "张",
+            "start": 3.18,
+            "end": 3.38,
+            "probability": 0.9904531240463257
+          },
+          {
+            "word": "测",
+            "start": 3.38,
+            "end": 3.5,
+            "probability": 0.9970187544822693
+          },
+          {
+            "word": "试",
+            "start": 3.5,
+            "end": 3.72,
+            "probability": 0.9990282356739044
+          },
+          {
+            "word": "图",
+            "start": 3.72,
+            "end": 4.18,
+            "probability": 0.9997662901878357
+          },
+          {
+            "word": "全",
+            "start": 4.18,
+            "end": 4.5,
+            "probability": 0.8739954829216003
+          },
+          {
+            "word": "都",
+            "start": 4.5,
+            "end": 4.68,
+            "probability": 0.9896008372306824
+          },
+          {
+            "word": "答",
+            "start": 4.68,
+            "end": 4.8,
+            "probability": 0.8171596527099609
+          },
+          {
+            "word": "对。",
+            "start": 4.8,
+            "end": 4.94,
+            "probability": 0.9987427592277527
+          }
+        ]
+      }
+    ],
+    "similarity": 0.684
+  },
+  "zh/p10": {
+    "sha256": "ecad12bdabf9dda11dc1f4377720db106bdcbc4a69e0bb525d49a5a039946e11",
+    "expected": "你和孩子想先教它认什么？",
+    "heard": "你和孩子,想先教他认什么?",
+    "model": "medium",
+    "seconds": 3.12,
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0.0,
+        "end": 3.02,
+        "text": "你和孩子,想先教他认什么?",
+        "tokens": [
+          50364,
+          2166,
+          12565,
+          48989,
+          11,
+          7093,
+          10108,
+          21936,
+          5000,
+          7422,
+          97,
+          10440,
+          30,
+          50514
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.35846239725748696,
+        "compression_ratio": 0.7608695652173914,
+        "no_speech_prob": 0.015060754492878914,
+        "words": [
+          {
+            "word": "你",
+            "start": 0.0,
+            "end": 0.76,
+            "probability": 0.8713803887367249
+          },
+          {
+            "word": "和",
+            "start": 0.76,
+            "end": 0.9,
+            "probability": 0.9969274401664734
+          },
+          {
+            "word": "孩子,",
+            "start": 0.9,
+            "end": 1.36,
+            "probability": 0.998741090297699
+          },
+          {
+            "word": "想",
+            "start": 1.82,
+            "end": 1.92,
+            "probability": 0.9648387432098389
+          },
+          {
+            "word": "先",
+            "start": 1.92,
+            "end": 2.12,
+            "probability": 0.9890117645263672
+          },
+          {
+            "word": "教",
+            "start": 2.12,
+            "end": 2.32,
+            "probability": 0.9128969311714172
+          },
+          {
+            "word": "他",
+            "start": 2.32,
+            "end": 2.62,
+            "probability": 0.7689892053604126
+          },
+          {
+            "word": "认",
+            "start": 2.62,
+            "end": 2.8,
+            "probability": 0.8529497683048248
+          },
+          {
+            "word": "什么?",
+            "start": 2.8,
+            "end": 3.02,
+            "probability": 0.359508752822876
+          }
+        ]
+      }
+    ],
+    "similarity": 0.909
+  },
+  "zh/o02": {
+    "sha256": "81d726921c7e4a68ff3ab5dd460b74d7a4f86facf8298d877af59bc6e796e872",
+    "expected": "线索，藏在一碟绿藻里。光一照，它就往亮处游。",
+    "heard": "线索藏在一点绿枣里,光一照,它就往亮出游。",
+    "model": "medium",
+    "seconds": 5.44,
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0.5400000000000005,
+        "end": 5.38,
+        "text": "线索藏在一点绿枣里,光一照,它就往亮出游。",
+        "tokens": [
+          50364,
+          16853,
+          123,
+          7732,
+          95,
+          21782,
+          237,
+          3581,
+          49042,
+          10115,
+          123,
+          7360,
+          96,
+          15759,
+          11,
+          20690,
+          2257,
+          32150,
+          11,
+          11284,
+          3111,
+          29510,
+          22991,
+          7781,
+          9592,
+          116,
+          1543,
+          50639
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.2138322632888268,
+        "compression_ratio": 0.8428571428571429,
+        "no_speech_prob": 0.002149249892681837,
+        "words": [
+          {
+            "word": "线",
+            "start": 0.5400000000000005,
+            "end": 0.9800000000000002,
+            "probability": 0.5238520596176386
+          },
+          {
+            "word": "索",
+            "start": 0.9800000000000002,
+            "end": 1.42,
+            "probability": 0.9980700612068176
+          },
+          {
+            "word": "藏",
+            "start": 1.42,
+            "end": 1.64,
+            "probability": 0.9822503924369812
+          },
+          {
+            "word": "在",
+            "start": 1.64,
+            "end": 1.84,
+            "probability": 0.9911667704582214
+          },
+          {
+            "word": "一点",
+            "start": 1.84,
+            "end": 2.0,
+            "probability": 0.7635214924812317
+          },
+          {
+            "word": "绿",
+            "start": 2.0,
+            "end": 2.22,
+            "probability": 0.9896378815174103
+          },
+          {
+            "word": "枣",
+            "start": 2.22,
+            "end": 2.44,
+            "probability": 0.8958533704280853
+          },
+          {
+            "word": "里,",
+            "start": 2.44,
+            "end": 3.18,
+            "probability": 0.9764899015426636
+          },
+          {
+            "word": "光",
+            "start": 3.38,
+            "end": 3.44,
+            "probability": 0.9913187623023987
+          },
+          {
+            "word": "一",
+            "start": 3.44,
+            "end": 3.68,
+            "probability": 0.9910616874694824
+          },
+          {
+            "word": "照,",
+            "start": 3.68,
+            "end": 3.98,
+            "probability": 0.9878485202789307
+          },
+          {
+            "word": "它",
+            "start": 4.32,
+            "end": 4.36,
+            "probability": 0.940654993057251
+          },
+          {
+            "word": "就",
+            "start": 4.36,
+            "end": 4.54,
+            "probability": 0.9946528673171997
+          },
+          {
+            "word": "往",
+            "start": 4.54,
+            "end": 4.66,
+            "probability": 0.968468189239502
+          },
+          {
+            "word": "亮",
+            "start": 4.66,
+            "end": 4.86,
+            "probability": 0.8501880168914795
+          },
+          {
+            "word": "出",
+            "start": 4.86,
+            "end": 5.1,
+            "probability": 0.8061496019363403
+          },
+          {
+            "word": "游。",
+            "start": 5.1,
+            "end": 5.38,
+            "probability": 0.7482431828975677
+          }
+        ]
+      }
+    ],
+    "similarity": 0.833
+  },
+  "en/p05": {
+    "sha256": "bbe2a6aff5350f1a900e0cf429a09885a31a5842639257d44d613fb0ae9c4d4d",
+    "expected": "Meet the perceptron: a nineteen fifty seven idea, using just four hundred points.",
+    "heard": "Meet the Perceptron, a 1957 idea, using just 400 points.",
+    "model": "medium",
+    "seconds": 6.2,
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0.0,
+        "end": 5.6,
+        "text": " Meet the Perceptron, a 1957 idea, using just 400 points.",
+        "tokens": [
+          50364,
+          22963,
+          264,
+          3026,
+          1336,
+          2044,
+          11,
+          257,
+          46256,
+          1558,
+          11,
+          1228,
+          445,
+          8423,
+          2793,
+          13,
+          50664
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.2280422846476237,
+        "compression_ratio": 0.875,
+        "no_speech_prob": 0.008971895091235638,
+        "words": [
+          {
+            "word": " Meet",
+            "start": 0.0,
+            "end": 0.62,
+            "probability": 0.8870468735694885
+          },
+          {
+            "word": " the",
+            "start": 0.62,
+            "end": 0.92,
+            "probability": 0.9615960121154785
+          },
+          {
+            "word": " Perceptron,",
+            "start": 0.92,
+            "end": 1.6,
+            "probability": 0.7414379119873047
+          },
+          {
+            "word": " a",
+            "start": 2.04,
+            "end": 2.14,
+            "probability": 0.9819492697715759
+          },
+          {
+            "word": " 1957",
+            "start": 2.14,
+            "end": 3.0,
+            "probability": 0.9963072538375854
+          },
+          {
+            "word": " idea,",
+            "start": 3.0,
+            "end": 3.56,
+            "probability": 0.9857932925224304
+          },
+          {
+            "word": " using",
+            "start": 4.08,
+            "end": 4.22,
+            "probability": 0.9943430423736572
+          },
+          {
+            "word": " just",
+            "start": 4.22,
+            "end": 4.64,
+            "probability": 0.9956641793251038
+          },
+          {
+            "word": " 400",
+            "start": 4.64,
+            "end": 5.16,
+            "probability": 0.9711591005325317
+          },
+          {
+            "word": " points.",
+            "start": 5.16,
+            "end": 5.6,
+            "probability": 0.9836152195930481
+          }
+        ]
+      }
+    ],
+    "similarity": 0.673
+  },
+  "en/o05": {
+    "sha256": "d552fa093bad24c5194fb3736ba5915657dfbf6805a4114f1cbf60bd7ee7203f",
+    "expected": "The team gave those cells another kind of light switch, one that responds to amber light.",
+    "heard": "The team gave those cells another kind of light switch, one that responds to amber light.",
+    "model": "medium",
+    "seconds": 5.4,
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0.0,
+        "end": 5.26,
+        "text": " The team gave those cells another kind of light switch, one that responds to amber light.",
+        "tokens": [
+          50364,
+          440,
+          1469,
+          2729,
+          729,
+          5438,
+          1071,
+          733,
+          295,
+          1442,
+          3679,
+          11,
+          472,
+          300,
+          27331,
+          281,
+          48304,
+          1442,
+          13,
+          50614
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.19895626249767484,
+        "compression_ratio": 1.0987654320987654,
+        "no_speech_prob": 0.006370491813868284,
+        "words": [
+          {
+            "word": " The",
+            "start": 0.0,
+            "end": 0.72,
+            "probability": 0.9312217831611633
+          },
+          {
+            "word": " team",
+            "start": 0.72,
+            "end": 0.96,
+            "probability": 0.9951409101486206
+          },
+          {
+            "word": " gave",
+            "start": 0.96,
+            "end": 1.24,
+            "probability": 0.9941062927246094
+          },
+          {
+            "word": " those",
+            "start": 1.24,
+            "end": 1.58,
+            "probability": 0.8038549423217773
+          },
+          {
+            "word": " cells",
+            "start": 1.58,
+            "end": 1.8,
+            "probability": 0.9975308775901794
+          },
+          {
+            "word": " another",
+            "start": 1.8,
+            "end": 2.26,
+            "probability": 0.9918409585952759
+          },
+          {
+            "word": " kind",
+            "start": 2.26,
+            "end": 2.56,
+            "probability": 0.9906687140464783
+          },
+          {
+            "word": " of",
+            "start": 2.56,
+            "end": 2.72,
+            "probability": 0.9945934414863586
+          },
+          {
+            "word": " light",
+            "start": 2.72,
+            "end": 2.88,
+            "probability": 0.9854433536529541
+          },
+          {
+            "word": " switch,",
+            "start": 2.88,
+            "end": 3.3,
+            "probability": 0.9908339381217957
+          },
+          {
+            "word": " one",
+            "start": 3.7,
+            "end": 3.9,
+            "probability": 0.9942095279693604
+          },
+          {
+            "word": " that",
+            "start": 3.9,
+            "end": 4.1,
+            "probability": 0.9978243112564087
+          },
+          {
+            "word": " responds",
+            "start": 4.1,
+            "end": 4.52,
+            "probability": 0.9760499000549316
+          },
+          {
+            "word": " to",
+            "start": 4.52,
+            "end": 4.82,
+            "probability": 0.9991201758384705
+          },
+          {
+            "word": " amber",
+            "start": 4.82,
+            "end": 5.0,
+            "probability": 0.9015893340110779
+          },
+          {
+            "word": " light.",
+            "start": 5.0,
+            "end": 5.26,
+            "probability": 0.9572576880455017
+          }
+        ]
+      }
+    ],
+    "similarity": 1.0
+  },
+  "zh/p05": {
+    "sha256": "bfc2dad00b521001f4eb5495971e50515a1d680fa4a835e8dcffc356c1afef05",
+    "expected": "谜底是感知机。一九五七年的思路，只有四百个分数。",
+    "heard": "拟底是感知机。1957年的思路只有400个分数。",
+    "model": "medium",
+    "seconds": 5.44,
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0.5599999999999987,
+        "end": 2.44,
+        "text": "拟底是感知机。",
+        "tokens": [
+          50364,
+          6852,
+          253,
+          22816,
+          1541,
+          9709,
+          6498,
+          37960,
+          1543,
+          50464
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.38487501939137775,
+        "compression_ratio": 0.8405797101449275,
+        "no_speech_prob": 0.009546514600515366,
+        "words": [
+          {
+            "word": "拟",
+            "start": 0.5599999999999987,
+            "end": 1.0,
+            "probability": 0.43449741159565747
+          },
+          {
+            "word": "底",
+            "start": 1.0,
+            "end": 1.22,
+            "probability": 0.9511127471923828
+          },
+          {
+            "word": "是",
+            "start": 1.22,
+            "end": 1.42,
+            "probability": 0.9494339823722839
+          },
+          {
+            "word": "感",
+            "start": 1.42,
+            "end": 1.58,
+            "probability": 0.17504030466079712
+          },
+          {
+            "word": "知",
+            "start": 1.58,
+            "end": 1.78,
+            "probability": 0.9934724569320679
+          },
+          {
+            "word": "机。",
+            "start": 1.78,
+            "end": 2.44,
+            "probability": 0.04443185031414032
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "seek": 0,
+        "start": 3.24,
+        "end": 5.42,
+        "text": "1957年的思路只有400个分数。",
+        "tokens": [
+          50464,
+          3405,
+          19004,
+          34128,
+          8870,
+          24658,
+          35244,
+          13741,
+          7549,
+          6627,
+          33188,
+          1543,
+          50664
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.38487501939137775,
+        "compression_ratio": 0.8405797101449275,
+        "no_speech_prob": 0.009546514600515366,
+        "words": [
+          {
+            "word": "19",
+            "start": 3.24,
+            "end": 3.26,
+            "probability": 0.896340012550354
+          },
+          {
+            "word": "57",
+            "start": 3.26,
+            "end": 3.58,
+            "probability": 0.9988980293273926
+          },
+          {
+            "word": "年的",
+            "start": 3.58,
+            "end": 3.84,
+            "probability": 0.9570213556289673
+          },
+          {
+            "word": "思",
+            "start": 3.84,
+            "end": 4.1,
+            "probability": 0.9078308939933777
+          },
+          {
+            "word": "路",
+            "start": 4.1,
+            "end": 4.32,
+            "probability": 0.9934828877449036
+          },
+          {
+            "word": "只有",
+            "start": 4.32,
+            "end": 4.66,
+            "probability": 0.8475841283798218
+          },
+          {
+            "word": "400",
+            "start": 4.66,
+            "end": 4.94,
+            "probability": 0.9255855679512024
+          },
+          {
+            "word": "个",
+            "start": 4.94,
+            "end": 5.12,
+            "probability": 0.9212773442268372
+          },
+          {
+            "word": "分",
+            "start": 5.12,
+            "end": 5.32,
+            "probability": 0.9955809712409973
+          },
+          {
+            "word": "数。",
+            "start": 5.32,
+            "end": 5.42,
+            "probability": 0.993595540523529
+          }
+        ]
+      }
+    ],
+    "similarity": 0.651
+  },
+  "zh/o05": {
+    "sha256": "9d9ae21ee4c61a17d27146b0a7445276ea1095ee27ac1acb0354225d1ebda578",
+    "expected": "研究团队给那些细胞装上另一种光开关，响应琥珀色的光。",
+    "heard": "研究团队给那些细胞装上另一种光开关,抢映琥珀色的光。",
+    "model": "medium",
+    "seconds": 6.32,
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0.8400000000000005,
+        "end": 6.26,
+        "text": "研究团队给那些细胞装上另一种光开关,抢映琥珀色的光。",
+        "tokens": [
+          50364,
+          23230,
+          242,
+          44704,
+          3919,
+          95,
+          10034,
+          253,
+          23197,
+          4184,
+          13824,
+          10115,
+          228,
+          19095,
+          252,
+          8083,
+          227,
+          5708,
+          22762,
+          2257,
+          39810,
+          20690,
+          18937,
+          28053,
+          11,
+          7235,
+          95,
+          1431,
+          254,
+          10568,
+          98,
+          8434,
+          222,
+          17673,
+          1546,
+          20690,
+          1543,
+          50714
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.16693737567999425,
+        "compression_ratio": 0.8735632183908046,
+        "no_speech_prob": 0.013880406506359577,
+        "words": [
+          {
+            "word": "研",
+            "start": 0.8400000000000005,
+            "end": 1.24,
+            "probability": 0.9929686188697815
+          },
+          {
+            "word": "究",
+            "start": 1.24,
+            "end": 1.38,
+            "probability": 0.9998220801353455
+          },
+          {
+            "word": "团",
+            "start": 1.38,
+            "end": 1.56,
+            "probability": 0.6176613569259644
+          },
+          {
+            "word": "队",
+            "start": 1.56,
+            "end": 1.78,
+            "probability": 0.9998783767223358
+          },
+          {
+            "word": "给",
+            "start": 1.78,
+            "end": 1.96,
+            "probability": 0.9891138076782227
+          },
+          {
+            "word": "那",
+            "start": 1.96,
+            "end": 2.12,
+            "probability": 0.9738522171974182
+          },
+          {
+            "word": "些",
+            "start": 2.12,
+            "end": 2.3,
+            "probability": 0.9994737505912781
+          },
+          {
+            "word": "细",
+            "start": 2.3,
+            "end": 2.54,
+            "probability": 0.997785747051239
+          },
+          {
+            "word": "胞",
+            "start": 2.54,
+            "end": 2.8,
+            "probability": 0.9971845149993896
+          },
+          {
+            "word": "装",
+            "start": 2.8,
+            "end": 2.98,
+            "probability": 0.9947440326213837
+          },
+          {
+            "word": "上",
+            "start": 2.98,
+            "end": 3.2,
+            "probability": 0.9958361387252808
+          },
+          {
+            "word": "另",
+            "start": 3.2,
+            "end": 3.42,
+            "probability": 0.9815889596939087
+          },
+          {
+            "word": "一",
+            "start": 3.42,
+            "end": 3.54,
+            "probability": 0.9974009990692139
+          },
+          {
+            "word": "种",
+            "start": 3.54,
+            "end": 3.62,
+            "probability": 0.9983365535736084
+          },
+          {
+            "word": "光",
+            "start": 3.62,
+            "end": 3.82,
+            "probability": 0.9956918358802795
+          },
+          {
+            "word": "开",
+            "start": 3.82,
+            "end": 4.08,
+            "probability": 0.998374342918396
+          },
+          {
+            "word": "关,",
+            "start": 4.08,
+            "end": 4.64,
+            "probability": 0.9932101368904114
+          },
+          {
+            "word": "抢",
+            "start": 4.64,
+            "end": 5.1,
+            "probability": 0.8239623010158539
+          },
+          {
+            "word": "映",
+            "start": 5.1,
+            "end": 5.36,
+            "probability": 0.6762620657682419
+          },
+          {
+            "word": "琥",
+            "start": 5.36,
+            "end": 5.6,
+            "probability": 0.7891703248023987
+          },
+          {
+            "word": "珀",
+            "start": 5.6,
+            "end": 5.78,
+            "probability": 0.9851373434066772
+          },
+          {
+            "word": "色",
+            "start": 5.78,
+            "end": 5.98,
+            "probability": 0.9989181756973267
+          },
+          {
+            "word": "的",
+            "start": 5.98,
+            "end": 6.12,
+            "probability": 0.9770494103431702
+          },
+          {
+            "word": "光。",
+            "start": 6.12,
+            "end": 6.26,
+            "probability": 0.9968165755271912
+          }
+        ]
+      }
+    ],
+    "similarity": 0.917
+  },
+  "zh/p05.take2": {
+    "sha256": "9e46b15741b86d21fbddcf2e604347929530f8fdeaa3c7daa0d8ad885118c56f",
+    "expected": "这就是感知机。一九五七年的思路，只有四百个分数。",
+    "heard": "这就是感知机。1957年的思路只有400个分数。",
+    "model": "medium",
+    "seconds": 5.22,
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0.0,
+        "end": 5.2,
+        "text": "这就是感知机。1957年的思路只有400个分数。",
+        "tokens": [
+          50364,
+          5562,
+          5620,
+          9709,
+          6498,
+          37960,
+          1543,
+          3405,
+          19004,
+          34128,
+          8870,
+          24658,
+          35244,
+          13741,
+          7549,
+          6627,
+          33188,
+          1543,
+          50614
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.3143173694610596,
+        "compression_ratio": 0.8405797101449275,
+        "no_speech_prob": 0.002748462138697505,
+        "words": [
+          {
+            "word": "这",
+            "start": 0.0,
+            "end": 0.74,
+            "probability": 0.10576062649488449
+          },
+          {
+            "word": "就是",
+            "start": 0.74,
+            "end": 1.0,
+            "probability": 0.9669774770736694
+          },
+          {
+            "word": "感",
+            "start": 1.0,
+            "end": 1.24,
+            "probability": 0.7037464380264282
+          },
+          {
+            "word": "知",
+            "start": 1.24,
+            "end": 1.38,
+            "probability": 0.9980012774467468
+          },
+          {
+            "word": "机。",
+            "start": 1.38,
+            "end": 1.96,
+            "probability": 0.28754884004592896
+          },
+          {
+            "word": "19",
+            "start": 2.66,
+            "end": 2.7,
+            "probability": 0.8850133419036865
+          },
+          {
+            "word": "57",
+            "start": 2.7,
+            "end": 3.02,
+            "probability": 0.9988628625869751
+          },
+          {
+            "word": "年的",
+            "start": 3.02,
+            "end": 3.3,
+            "probability": 0.9651353359222412
+          },
+          {
+            "word": "思",
+            "start": 3.3,
+            "end": 3.54,
+            "probability": 0.8987027406692505
+          },
+          {
+            "word": "路",
+            "start": 3.54,
+            "end": 3.88,
+            "probability": 0.9977396726608276
+          },
+          {
+            "word": "只有",
+            "start": 3.88,
+            "end": 4.28,
+            "probability": 0.6822174191474915
+          },
+          {
+            "word": "400",
+            "start": 4.28,
+            "end": 4.62,
+            "probability": 0.9526541829109192
+          },
+          {
+            "word": "个",
+            "start": 4.62,
+            "end": 4.84,
+            "probability": 0.4335407316684723
+          },
+          {
+            "word": "分",
+            "start": 4.84,
+            "end": 5.04,
+            "probability": 0.9950968623161316
+          },
+          {
+            "word": "数。",
+            "start": 5.04,
+            "end": 5.2,
+            "probability": 0.9890992641448975
+          }
+        ]
+      }
+    ],
+    "similarity": 0.698
+  },
+  "zh/o02.take2": {
+    "sha256": "2c45fd762bff39bd0184de2ed7bc15a9f16f9dccc3ca72f7f5d7de98450024c0",
+    "expected": "线索，竟然藏在绿藻里。光一照，它们就朝着光游过去。",
+    "heard": "线索竟然藏在绿枣里,光一照,他们就朝着光游过去。",
+    "model": "medium",
+    "seconds": 6.98,
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0.7799999999999991,
+        "end": 6.66,
+        "text": "线索竟然藏在绿枣里,光一照,他们就朝着光游过去。",
+        "tokens": [
+          50364,
+          16853,
+          123,
+          7732,
+          95,
+          11957,
+          253,
+          5823,
+          21782,
+          237,
+          3581,
+          10115,
+          123,
+          7360,
+          96,
+          15759,
+          11,
+          20690,
+          2257,
+          32150,
+          11,
+          47911,
+          3111,
+          46610,
+          20708,
+          20690,
+          9592,
+          116,
+          16866,
+          6734,
+          1543,
+          50714
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.19194269180297852,
+        "compression_ratio": 0.8607594936708861,
+        "no_speech_prob": 0.006780147086828947,
+        "words": [
+          {
+            "word": "线",
+            "start": 0.7799999999999991,
+            "end": 1.2599999999999996,
+            "probability": 0.6833385229110718
+          },
+          {
+            "word": "索",
+            "start": 1.2599999999999996,
+            "end": 1.74,
+            "probability": 0.999519556760788
+          },
+          {
+            "word": "竟",
+            "start": 1.74,
+            "end": 2.0,
+            "probability": 0.961925745010376
+          },
+          {
+            "word": "然",
+            "start": 2.0,
+            "end": 2.28,
+            "probability": 0.9910446405410767
+          },
+          {
+            "word": "藏",
+            "start": 2.28,
+            "end": 2.4,
+            "probability": 0.9991526901721954
+          },
+          {
+            "word": "在",
+            "start": 2.4,
+            "end": 2.54,
+            "probability": 0.9967466592788696
+          },
+          {
+            "word": "绿",
+            "start": 2.54,
+            "end": 2.72,
+            "probability": 0.9817659258842468
+          },
+          {
+            "word": "枣",
+            "start": 2.72,
+            "end": 2.94,
+            "probability": 0.8189665079116821
+          },
+          {
+            "word": "里,",
+            "start": 2.94,
+            "end": 3.74,
+            "probability": 0.9851111769676208
+          },
+          {
+            "word": "光",
+            "start": 4.0,
+            "end": 4.08,
+            "probability": 0.9621220827102661
+          },
+          {
+            "word": "一",
+            "start": 4.08,
+            "end": 4.32,
+            "probability": 0.9962649941444397
+          },
+          {
+            "word": "照,",
+            "start": 4.32,
+            "end": 4.72,
+            "probability": 0.9985824823379517
+          },
+          {
+            "word": "他们",
+            "start": 4.98,
+            "end": 5.16,
+            "probability": 0.40516605973243713
+          },
+          {
+            "word": "就",
+            "start": 5.16,
+            "end": 5.38,
+            "probability": 0.9837827086448669
+          },
+          {
+            "word": "朝",
+            "start": 5.38,
+            "end": 5.48,
+            "probability": 0.9931721687316895
+          },
+          {
+            "word": "着",
+            "start": 5.48,
+            "end": 5.66,
+            "probability": 0.9713215827941895
+          },
+          {
+            "word": "光",
+            "start": 5.66,
+            "end": 6.0,
+            "probability": 0.9888843297958374
+          },
+          {
+            "word": "游",
+            "start": 6.0,
+            "end": 6.2,
+            "probability": 0.9885842800140381
+          },
+          {
+            "word": "过",
+            "start": 6.2,
+            "end": 6.46,
+            "probability": 0.9972690939903259
+          },
+          {
+            "word": "去。",
+            "start": 6.46,
+            "end": 6.66,
+            "probability": 0.9875314831733704
+          }
+        ]
+      }
+    ],
+    "similarity": 0.905
+  },
+  "zh/o05.take2": {
+    "sha256": "489a7d2f7eccffdf2336ddfd7b35f7f8275c4b24d48cd5b1c3836c01c900ac73",
+    "expected": "研究团队给那些细胞装上另一种光开关。琥珀色的光，就能把它打开。",
+    "heard": "研究团队给那些细胞装上另一种光开关,琥珀色的光就能把它打开。",
+    "model": "medium",
+    "seconds": 6.36,
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0.0,
+        "end": 3.96,
+        "text": "研究团队给那些细胞装上另一种光开关,",
+        "tokens": [
+          50364,
+          23230,
+          242,
+          44704,
+          3919,
+          95,
+          10034,
+          253,
+          23197,
+          4184,
+          13824,
+          10115,
+          228,
+          19095,
+          252,
+          8083,
+          227,
+          5708,
+          22762,
+          2257,
+          39810,
+          20690,
+          18937,
+          28053,
+          11,
+          50550
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.17464433397565568,
+        "compression_ratio": 0.8888888888888888,
+        "no_speech_prob": 0.006197153590619564,
+        "words": [
+          {
+            "word": "研",
+            "start": 0.0,
+            "end": 0.68,
+            "probability": 0.9890328943729401
+          },
+          {
+            "word": "究",
+            "start": 0.68,
+            "end": 0.8,
+            "probability": 0.9994947910308838
+          },
+          {
+            "word": "团",
+            "start": 0.8,
+            "end": 1.02,
+            "probability": 0.5821414589881897
+          },
+          {
+            "word": "队",
+            "start": 1.02,
+            "end": 1.2,
+            "probability": 0.999830424785614
+          },
+          {
+            "word": "给",
+            "start": 1.2,
+            "end": 1.36,
+            "probability": 0.9884907007217407
+          },
+          {
+            "word": "那",
+            "start": 1.36,
+            "end": 1.52,
+            "probability": 0.97092604637146
+          },
+          {
+            "word": "些",
+            "start": 1.52,
+            "end": 1.64,
+            "probability": 0.9993056058883667
+          },
+          {
+            "word": "细",
+            "start": 1.64,
+            "end": 1.86,
+            "probability": 0.9986457824707031
+          },
+          {
+            "word": "胞",
+            "start": 1.86,
+            "end": 2.14,
+            "probability": 0.9974883794784546
+          },
+          {
+            "word": "装",
+            "start": 2.14,
+            "end": 2.3,
+            "probability": 0.9954705834388733
+          },
+          {
+            "word": "上",
+            "start": 2.3,
+            "end": 2.48,
+            "probability": 0.9935541152954102
+          },
+          {
+            "word": "另",
+            "start": 2.48,
+            "end": 2.66,
+            "probability": 0.9760705232620239
+          },
+          {
+            "word": "一",
+            "start": 2.66,
+            "end": 2.78,
+            "probability": 0.9974327683448792
+          },
+          {
+            "word": "种",
+            "start": 2.78,
+            "end": 2.82,
+            "probability": 0.9972694516181946
+          },
+          {
+            "word": "光",
+            "start": 2.82,
+            "end": 3.02,
+            "probability": 0.9970320463180542
+          },
+          {
+            "word": "开",
+            "start": 3.02,
+            "end": 3.28,
+            "probability": 0.9976838827133179
+          },
+          {
+            "word": "关,",
+            "start": 3.28,
+            "end": 3.96,
+            "probability": 0.9947519898414612
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "seek": 0,
+        "start": 3.96,
+        "end": 6.34,
+        "text": "琥珀色的光就能把它打开。",
+        "tokens": [
+          50550,
+          10568,
+          98,
+          8434,
+          222,
+          17673,
+          1546,
+          20690,
+          3111,
+          8225,
+          42061,
+          12467,
+          18937,
+          1543,
+          50700
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.17464433397565568,
+        "compression_ratio": 0.8888888888888888,
+        "no_speech_prob": 0.006197153590619564,
+        "words": [
+          {
+            "word": "琥",
+            "start": 3.96,
+            "end": 4.44,
+            "probability": 0.9567678272724152
+          },
+          {
+            "word": "珀",
+            "start": 4.44,
+            "end": 4.62,
+            "probability": 0.9967334568500519
+          },
+          {
+            "word": "色",
+            "start": 4.62,
+            "end": 4.82,
+            "probability": 0.9982060194015503
+          },
+          {
+            "word": "的",
+            "start": 4.82,
+            "end": 4.96,
+            "probability": 0.9758713841438293
+          },
+          {
+            "word": "光",
+            "start": 4.96,
+            "end": 5.26,
+            "probability": 0.9954752326011658
+          },
+          {
+            "word": "就",
+            "start": 5.26,
+            "end": 5.54,
+            "probability": 0.9361863732337952
+          },
+          {
+            "word": "能",
+            "start": 5.54,
+            "end": 5.68,
+            "probability": 0.993925154209137
+          },
+          {
+            "word": "把它",
+            "start": 5.68,
+            "end": 5.88,
+            "probability": 0.9360196590423584
+          },
+          {
+            "word": "打",
+            "start": 5.88,
+            "end": 6.14,
+            "probability": 0.9964895844459534
+          },
+          {
+            "word": "开。",
+            "start": 6.14,
+            "end": 6.34,
+            "probability": 0.9993543028831482
+          }
+        ]
+      }
+    ],
+    "similarity": 1.0
+  }
+}

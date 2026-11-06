@@ -1,0 +1,57 @@
+{
+  "defaultLanguage": "en",
+  "voice": "louise",
+  "speed": 1.1,
+  "notes": "Two self-contained vertical story shorts. Original perceptron experiment only; no reruns. Existing owner-supplied moving footage is prioritized. Clean English-label picture, independent Chinese audio and external EN/ZH subtitles. No source/chapter badges. Medical claims describe the single published 2021 case; illustrative footage never claims to show the patient's visual experience.",
+  "films": {
+    "perceptron": {
+      "title": {"zh":"一九五七年的模型，怎么跑赢大模型？","en":"How did a 1957 model win this race?"},
+      "lines": [
+        {"id":"p01","visual":"portal","zh":"我们带上 Claude Fable 5.1 和 GPT-6-Astra，穿越到一九五七年，来场模型速度大比拼！","en":"Let’s take Claude Fable 5.1 and GPT-6-Astra back to 1957 for an AI speed race!","reuseFamilyCue":"fa01-01-01"},
+        {"id":"p02","visual":"race","zh":"同一张七，四位选手一起认。X 一开始就答完了。","en":"Four programs get the same seven. X finishes almost instantly."},
+        {"id":"p03","visual":"speed","zh":"每张只要{x_us}微秒。{test_n_zh}张测试图，全都答对。","en":"Just {x_us} microseconds per picture. All {test_n_en} test pictures correct."},
+        {"id":"p04","visual":"ratios","zh":"比 Claude Fable 5.1 快{claude_million_zh}万倍，比 GPT-6-Astra 快{astra_ten_million_zh}万倍！","en":"{claude_million_en} million times faster than Claude Fable 5.1, and {astra_ten_million_en} million times faster than GPT-6-Astra!","reuseFamilyCue":"fa01-02-01"},
+        {"id":"p05","visual":"reveal","zh":"这就是感知机。一九五七年的思路，只有{pixel_n_zh}个分数。","en":"Meet the perceptron: a 1957 idea, using just {pixel_n} points."},
+        {"id":"p06","visual":"add","zh":"把黑格子的分数加起来，够了就回答“是”。","en":"Add the black squares’ points. Enough points means yes."},
+        {"id":"p07","visual":"train","zh":"{train_n_zh}张例子，让它把这些分数一点点调好。","en":"It learned from {train_n} examples, adjusting those points along the way."},
+        {"id":"p08","visual":"scope","zh":"专项任务跑得快，不代表整体能力更强。","en":"Winning this specialized speed test doesn’t make it smarter overall."},
+        {"id":"p09","visual":"family","zh":"格子纸，几支笔，你和孩子也能训练一个。","en":"Grid paper, a few pencils, and you can try training one with your child."},
+        {"id":"p10","visual":"invite","zh":"你和孩子想先教它认什么？","en":"What would you and your child teach it to recognize first?"}
+      ],
+      "shots": [
+        {"first":"p01","last":"p01","asset":"perceptron-portal","in":0,"out":10,"layout":"portrait","focus":0.57},
+        {"first":"p02","last":"p03","asset":"perceptron-lab","in":0,"out":10,"layout":"portrait","focus":0.52},
+        {"first":"p04","last":"p05","asset":"perceptron-1957","in":0,"out":10,"layout":"portrait","focus":0.57},
+        {"first":"p06","last":"p07","asset":"perceptron-lab","in":0,"out":10,"layout":"portrait","focus":0.65},
+        {"first":"p08","last":"p08","asset":"perceptron-portal","in":7,"out":10,"layout":"portrait","focus":0.52},
+        {"first":"p09","last":"p10","asset":"perceptron-family","in":0,"out":10,"layout":"portrait","focus":0.66}
+      ]
+    },
+    "optogenetics": {
+      "title": {"zh":"光怎么帮他找到桌上的东西？","en":"How did light help him find the notebook?"},
+      "lines": [
+        {"id":"o01","visual":"notebook-hook","zh":"一位失明的人，怎么又找到了桌上的笔记本？","en":"A blind patient reached for a notebook. How did light help him find it?"},
+        {"id":"o02","visual":"algae","zh":"线索，竟然藏在绿藻里。光一照，它们就朝着光游过去。","en":"The clue starts with tiny algae. Shine a light, and they swim toward it."},
+        {"id":"o03","visual":"gate","zh":"科学家找到了会被光打开的门。装进别的细胞，光就能让它发出信号。","en":"Scientists found a door that light could open. Put it in other cells, and light could trigger a signal."},
+        {"id":"o04","visual":"camera","zh":"这位病人的感光细胞坏了，后面传信的细胞，却还在。","en":"This patient’s light-sensing cells had failed. But other cells that could pass signals along were still there."},
+        {"id":"o05","visual":"amber","zh":"研究团队给那些细胞装上另一种光开关。琥珀色的光，就能把它打开。","en":"The team gave those cells another kind of light switch, one that responds to amber light."},
+        {"id":"o06","visual":"encode","zh":"特制眼镜把明暗变化，变成一闪一闪的光点。这叫编码。","en":"Special glasses turn changes in brightness into pulses of light. That is encoding."},
+        {"id":"o07","visual":"decode","zh":"大脑再学着把光信号读成东西的样子。这叫解码。","en":"The brain learns to read those signals as objects. That is decoding."},
+        {"id":"o08","visual":"touch","zh":"练了几个月，他能找到一些物体，还能伸手去摸。","en":"After months of training, he could locate some objects and reach out to touch them."},
+        {"id":"o09","visual":"limits","zh":"这是一位病人的部分恢复。他仍需要眼镜，也没恢复正常视力。","en":"This was partial recovery in one patient. He still needed the glasses, and normal vision had not returned."},
+        {"id":"o10","visual":"question","zh":"你会怎样把一幅画面，变成能传过去的消息？","en":"How would you turn a picture into a message that someone else could receive?"}
+      ],
+      "shots": [
+        {"first":"o01","last":"o01","asset":"opto-touch","in":0,"out":4.5,"layout":"wide","focus":0.4},
+        {"first":"o02","last":"o02","asset":"opto-algae","in":0,"out":10,"layout":"square","focus":0.44},
+        {"first":"o03","last":"o03","asset":"opto-algae","in":0,"out":10,"layout":"portrait","focus":0.5},
+        {"first":"o04","last":"o04","asset":"opto-camera","in":0,"out":5.4,"layout":"wide","focus":0.46},
+        {"first":"o05","last":"o06","asset":"opto-goggles","in":0,"out":10,"layout":"wide","focus":0.5},
+        {"first":"o07","last":"o07","asset":"opto-dots","in":0,"out":4.5,"layout":"portrait","focus":0.55},
+        {"first":"o08","last":"o08","asset":"opto-touch","in":4.5,"out":10,"layout":"wide","focus":0.4},
+        {"first":"o09","last":"o09","asset":"opto-goggles","in":5,"out":10,"layout":"portrait","focus":0.5},
+        {"first":"o10","last":"o10","asset":"opto-dots","in":4.5,"out":10,"layout":"portrait","focus":0.5}
+      ]
+    }
+  }
+}
