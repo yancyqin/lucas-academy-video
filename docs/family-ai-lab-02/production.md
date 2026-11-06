@@ -4,7 +4,9 @@
 
 Current movie: `out/family-ai-lab-02/orbital-v2/delivery/family-ai-lab-02.bilingual.mp4`; external subtitles: `en.srt` and `zh-Hans.srt` beside it. Selected scripts: [English](design-v2/orbital-script.en.md), [Chinese](design-v2/orbital-script.zh.md).
 
-**Additional story short, 2026-11-06:** 40.23 seconds, 1080×1920/30 fps, with all six Muse originals and 86.3% moving Muse footage. English default plus independent Chinese audio and external SRTs. [Short production and rebuild instructions](design-v2/short/production.md). Output: `out/family-ai-lab-02/orbital-v2/short/delivery/family-ai-lab-02.short.bilingual.mp4`.
+**Additional story short, 2026-11-06:** 56.90 seconds, 1080×1920/30 fps, with all six Muse originals and 90.3% moving Muse footage. The new ending connects the friends’ pipe to the internet, AI chats and a playful sharing question. English default plus independent Chinese audio and external SRTs. [Short production and rebuild instructions](design-v2/short/production.md). Output: `out/family-ai-lab-02/orbital-v2/short/delivery/family-ai-lab-02.short.bilingual.mp4`.
+
+YouTube metadata: [English long](youtube/long.en.txt), [Chinese long](youtube/long.zh.txt), [English Shorts](youtube/short.en.txt), [Chinese Shorts](youtube/short.zh.txt). Generate after verification with `python3 scripts/family-ai-lab-02/youtube.py`; update the existing desktop delivery with `python3 scripts/family-ai-lab-02/deliver.py`. Shared defaults are imported from `scripts/youtube_tags.py`.
 
 The owner requested a story adaptation of the zero-and-one lesson and selected full bilingual narrated animation on 2026-11-05. The original opening is in `lucas-academy-ai/L1-beginner/course.md`; curriculum revision and frozen asset hashes are in [sources.json](sources.json). [Story and shot plan](../../FAMILY-AI-LAB-02.md), [Chinese](zh-script.md), [English](en-script.md).
 

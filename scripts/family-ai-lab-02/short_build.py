@@ -1,4 +1,4 @@
-"""Fit the story to actual bilingual speech and seven forward Muse spans."""
+"""Fit the story and Internet/AI ending to actual bilingual speech."""
 from pathlib import Path
 import hashlib,json,math,subprocess
 from orbital_build import stamp
@@ -23,9 +23,9 @@ def main():
         duration=max(round(row['minSeconds']*FPS),math.ceil(max(seconds.values())*FPS)+lead+12)
         rows.append({**row,'from':at,'duration':duration,'speechOffsetFrames':lead,'voiceSeconds':seconds});at+=duration
     by_visual={r['visual']:r for r in rows};originals={r['id']:r for r in json.loads((DOC.parent/'clips.json').read_text())['clips']}
-    # G4 is used in two disjoint, forward source intervals. Every other
-    # original contributes exactly one shot. There are no reversed/looped clips.
-    specs=[('paper','G1b',.2,7.7,0,None),('code','G1a',.8,7.8,0,None),('arrival','G2',1,6,0,None),('cargo','G3',.2,6,0,None),('snack','G4',.2,5.2,33,None),('reply','G5',0,5.8,0,None),('invite','G4',5.2,9.6,0,None)]
+    # The ending uses previously unused tails in forward source order.
+    # Each original's intervals are disjoint; no shot is looped or reversed.
+    specs=[('paper','G1b',.2,7.7,0,None),('code','G1a',.8,7.8,0,None),('arrival','G2',1,6,0,None),('cargo','G3',.2,6,0,None),('snack','G4',.2,5.2,33,None),('reply','G5',0,5.8,0,None),('friends','G1b',7.7,10,0,None),('world','G1a',7.8,10,0,None),('online','G5',5.8,10,0,None),('invite','G4',5.2,9.6,0,None)]
     folder=DEST/'clips';folder.mkdir(parents=True,exist_ok=True);old=json.loads((DEST/'clips.json').read_text()) if (DEST/'clips.json').exists() else {};clips=[]
     for visual,origin,start,end,offset,limit in specs:
         cue=by_visual[visual];frames=min(limit,cue['duration']-offset) if limit else cue['duration']-offset;assert frames>0

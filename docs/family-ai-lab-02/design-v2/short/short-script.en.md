@@ -38,4 +38,19 @@ Leo presses Send. A gold signal carries his reply: got it!
 
 ## fa02s-08
 
-What would you send through your tiny pipe?
+Our tiny pipe connects two friends.
+
+
+## fa02s-09
+
+The internet connects the world!
+
+
+## fa02s-10
+
+Videos, messages, even chats with AI—all use zeros and ones.
+
+
+## fa02s-11
+
+A funny story? A new game? What will you share today?

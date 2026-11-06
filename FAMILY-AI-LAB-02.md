@@ -4,7 +4,7 @@
 
 用户确认片名：**0和1，能聊天吗？** / **Can 0 and 1 Talk?**。封面直接取新版视频第 0 帧，中英文各一张；标题卡同步使用英文片名。[封面记录](docs/family-ai-lab-02/design-v2/cover.json)。
 
-**剧情浓缩版（2026-11-06）**：另出 40.23 秒、9:16 竖屏短片，六条 Muse 原件全部用上，动态 Muse 画面约占 86.3%。同样为英文默认、中文独立音轨、外置字幕。剧情从纸条受阻一路到邀请、找礼物、西瓜和回信，保留少量准确的编码与四问动画。路径：`out/family-ai-lab-02/orbital-v2/short/delivery/family-ai-lab-02.short.bilingual.mp4`。[短片制作记录](docs/family-ai-lab-02/design-v2/short/production.md)。
+**剧情浓缩版（2026-11-06）**：另出 56.90 秒、9:16 竖屏短片，六条 Muse 原件全部用上，动态 Muse 画面约占 90.3%。同样为英文默认、中文独立音轨、外置字幕。剧情从纸条受阻一路到邀请、找礼物、西瓜和回信，保留少量准确的编码与四问动画；新结尾连接互联网、AI 和俏皮的分享问题。路径：`out/family-ai-lab-02/orbital-v2/short/delivery/family-ai-lab-02.short.bilingual.mp4`。[短片制作记录](docs/family-ai-lab-02/design-v2/short/production.md)。
 
 用户于 2026-11-05 指定改编 [0与1，开与关](https://ai.lucasacademy.org/courses/zero-and-one/)，要求有动画、有剧情，并明确选择直接制作双语配音动画审核版。沿用上一部：英文默认、中文独立音轨、简短英文画面标签，无内嵌字幕、无字幕留白，另交中英文 SRT。不新建 worktree；现有 checkout 从最新 `origin/main` 建立 `codex/family-ai-lab-02`。
 
@@ -55,4 +55,4 @@ Louise 讲中英文故事，默认速度 1.1；新版英文首句用 1.0，并�
 
 `FamilyAiLab02Orbital` 的 `view: full` 是当前统一无字幕画面。新版使用 `fal02:orbital:*` 命令；重建、音轨、听写决定和备份记录见 [orbital-production.md](docs/family-ai-lab-02/design-v2/orbital-production.md)。`FamilyAiLab02` 和原 `fal02:final` 保留为绘本版参考。
 
-成片位于 `out/family-ai-lab-02/orbital-v2/delivery/`，中英文 SRT 分别随片交付；输入、六条 Muse 原件和不可重做的配音备份到 `../lucas-academy-video-data/family-ai-lab-02/`，附 SHA256SUMS 与拒绝覆盖不同文件的恢复脚本。媒体与视频不提交。现阶段是带完整配音的动画审核版；封面标题尚为工作片名。
+成片位于 `out/family-ai-lab-02/orbital-v2/delivery/`，中英文 SRT 分别随片交付；输入、六条 Muse 原件和不可重做的配音备份到 `../lucas-academy-video-data/family-ai-lab-02/`，附 SHA256SUMS 与拒绝覆盖不同文件的恢复脚本。媒体与视频不提交。现阶段是带完整配音的动画审核版；封面使用已确认的片名问句。

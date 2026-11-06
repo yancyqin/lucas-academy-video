@@ -438,5 +438,474 @@
       }
     ],
     "model": "medium"
+  },
+  "en/fa02s-10.take4": {
+    "sha256": "ca2ec0555d550625e3d62921bb5da18c30e861859b0b332499223c7899683f67",
+    "expected": "Videos, messages, even chats with AI, all use zeros and ones.",
+    "heard": "Videos, messages, even chats with AI, all use zeros and ones.",
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0.0,
+        "end": 4.42,
+        "text": " Videos, messages, even chats with AI, all use zeros and ones.",
+        "tokens": [
+          50364,
+          25903,
+          11,
+          7897,
+          11,
+          754,
+          38057,
+          365,
+          7318,
+          11,
+          439,
+          764,
+          35193,
+          293,
+          2306,
+          13,
+          50592
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.2928616205851237,
+        "compression_ratio": 0.9104477611940298,
+        "no_speech_prob": 0.02355307899415493,
+        "words": [
+          {
+            "word": " Videos,",
+            "start": 0.0,
+            "end": 0.52,
+            "probability": 0.9192146062850952
+          },
+          {
+            "word": " messages,",
+            "start": 0.9,
+            "end": 1.24,
+            "probability": 0.9711753726005554
+          },
+          {
+            "word": " even",
+            "start": 1.68,
+            "end": 1.84,
+            "probability": 0.9866429567337036
+          },
+          {
+            "word": " chats",
+            "start": 1.84,
+            "end": 2.2,
+            "probability": 0.9946802258491516
+          },
+          {
+            "word": " with",
+            "start": 2.2,
+            "end": 2.56,
+            "probability": 0.95252525806427
+          },
+          {
+            "word": " AI,",
+            "start": 2.56,
+            "end": 2.92,
+            "probability": 0.950868546962738
+          },
+          {
+            "word": " all",
+            "start": 3.26,
+            "end": 3.46,
+            "probability": 0.9843341708183289
+          },
+          {
+            "word": " use",
+            "start": 3.46,
+            "end": 3.72,
+            "probability": 0.9056244492530823
+          },
+          {
+            "word": " zeros",
+            "start": 3.72,
+            "end": 3.96,
+            "probability": 0.4264083206653595
+          },
+          {
+            "word": " and",
+            "start": 3.96,
+            "end": 4.2,
+            "probability": 0.8900302648544312
+          },
+          {
+            "word": " ones.",
+            "start": 4.2,
+            "end": 4.42,
+            "probability": 0.969028651714325
+          }
+        ]
+      }
+    ],
+    "model": "medium"
+  },
+  "en/fa02s-11.take4": {
+    "sha256": "c2bfb8ec812dd10dc85163c3397bf820d446e5bda76638c72e66d5799e839bee",
+    "expected": "A funny story? A new game? What will you share today?",
+    "heard": "Funny story? A new game? What will you share today?",
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0.0,
+        "end": 0.7,
+        "text": " Funny story?",
+        "tokens": [
+          50364,
+          36484,
+          1657,
+          30,
+          50414
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.23178987503051757,
+        "compression_ratio": 0.864406779661017,
+        "no_speech_prob": 0.017396464943885803,
+        "words": [
+          {
+            "word": " Funny",
+            "start": 0.0,
+            "end": 0.32,
+            "probability": 0.8989126682281494
+          },
+          {
+            "word": " story?",
+            "start": 0.32,
+            "end": 0.7,
+            "probability": 0.9375032782554626
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "seek": 0,
+        "start": 1.06,
+        "end": 1.58,
+        "text": " A new game?",
+        "tokens": [
+          50414,
+          316,
+          777,
+          1216,
+          30,
+          50464
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.23178987503051757,
+        "compression_ratio": 0.864406779661017,
+        "no_speech_prob": 0.017396464943885803,
+        "words": [
+          {
+            "word": " A",
+            "start": 1.06,
+            "end": 1.2,
+            "probability": 0.9570977091789246
+          },
+          {
+            "word": " new",
+            "start": 1.2,
+            "end": 1.32,
+            "probability": 0.9794993996620178
+          },
+          {
+            "word": " game?",
+            "start": 1.32,
+            "end": 1.58,
+            "probability": 0.815880537033081
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "seek": 0,
+        "start": 2.24,
+        "end": 3.18,
+        "text": " What will you share today?",
+        "tokens": [
+          50464,
+          708,
+          486,
+          291,
+          2073,
+          965,
+          30,
+          50528
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.23178987503051757,
+        "compression_ratio": 0.864406779661017,
+        "no_speech_prob": 0.017396464943885803,
+        "words": [
+          {
+            "word": " What",
+            "start": 2.24,
+            "end": 2.42,
+            "probability": 0.9892020225524902
+          },
+          {
+            "word": " will",
+            "start": 2.42,
+            "end": 2.56,
+            "probability": 0.9727340936660767
+          },
+          {
+            "word": " you",
+            "start": 2.56,
+            "end": 2.78,
+            "probability": 0.9975705742835999
+          },
+          {
+            "word": " share",
+            "start": 2.78,
+            "end": 2.88,
+            "probability": 0.9948679208755493
+          },
+          {
+            "word": " today?",
+            "start": 2.88,
+            "end": 3.18,
+            "probability": 0.996953010559082
+          }
+        ]
+      }
+    ],
+    "model": "medium"
+  },
+  "zh/fa02s-08.take4": {
+    "sha256": "c598ee423b02be8de2cebcaf5270c68f4b806ec3fb733521b96c712f44c871cc",
+    "expected": "小管子连起两个朋友。",
+    "heard": "小管子,圆起两个朋友",
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0.47999999999999965,
+        "end": 2.52,
+        "text": "小管子,圆起两个朋友",
+        "tokens": [
+          50364,
+          7322,
+          23131,
+          7626,
+          11,
+          2523,
+          228,
+          9147,
+          36257,
+          7549,
+          19828,
+          50508
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.5090019886310284,
+        "compression_ratio": 0.717948717948718,
+        "no_speech_prob": 0.18615245819091797,
+        "words": [
+          {
+            "word": "小",
+            "start": 0.47999999999999965,
+            "end": 0.92,
+            "probability": 0.934328019618988
+          },
+          {
+            "word": "管",
+            "start": 0.92,
+            "end": 1.16,
+            "probability": 0.9168096780776978
+          },
+          {
+            "word": "子,",
+            "start": 1.16,
+            "end": 1.56,
+            "probability": 0.9997550845146179
+          },
+          {
+            "word": "圆",
+            "start": 1.7,
+            "end": 1.82,
+            "probability": 0.5491589158773422
+          },
+          {
+            "word": "起",
+            "start": 1.82,
+            "end": 1.92,
+            "probability": 0.8890888094902039
+          },
+          {
+            "word": "两",
+            "start": 1.92,
+            "end": 2.16,
+            "probability": 0.9537681937217712
+          },
+          {
+            "word": "个",
+            "start": 2.16,
+            "end": 2.3,
+            "probability": 0.9944096207618713
+          },
+          {
+            "word": "朋友",
+            "start": 2.3,
+            "end": 2.52,
+            "probability": 0.9963482022285461
+          }
+        ]
+      }
+    ],
+    "model": "medium"
+  },
+  "zh/fa02s-10.take4": {
+    "sha256": "c5c0dff6919900716e18a0d4975efab613fb058233afa259b2ed28100d979580",
+    "expected": "视频、消息，连和人工智能聊天，都用零和一。",
+    "heard": "視頻、消息、聯合人工智能聊天都用零和一",
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0.0,
+        "end": 4.58,
+        "text": "視頻、消息、聯合人工智能聊天都用零和一",
+        "tokens": [
+          50364,
+          27333,
+          29940,
+          1231,
+          28837,
+          26460,
+          1231,
+          43942,
+          14245,
+          4035,
+          23323,
+          5094,
+          118,
+          8225,
+          40096,
+          6135,
+          7182,
+          9254,
+          6306,
+          114,
+          12565,
+          2257,
+          50594
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.3405005931854248,
+        "compression_ratio": 0.8382352941176471,
+        "no_speech_prob": 0.5458748936653137,
+        "words": [
+          {
+            "word": "視",
+            "start": 0.0,
+            "end": 0.68,
+            "probability": 0.3186857998371124
+          },
+          {
+            "word": "頻、",
+            "start": 0.68,
+            "end": 1.04,
+            "probability": 0.9725010395050049
+          },
+          {
+            "word": "消",
+            "start": 1.34,
+            "end": 1.52,
+            "probability": 0.9762141108512878
+          },
+          {
+            "word": "息、",
+            "start": 1.52,
+            "end": 1.94,
+            "probability": 0.9997565150260925
+          },
+          {
+            "word": "聯",
+            "start": 2.24,
+            "end": 2.24,
+            "probability": 0.4355507493019104
+          },
+          {
+            "word": "合",
+            "start": 2.24,
+            "end": 2.34,
+            "probability": 0.9986907839775085
+          },
+          {
+            "word": "人",
+            "start": 2.34,
+            "end": 2.52,
+            "probability": 0.9919537901878357
+          },
+          {
+            "word": "工",
+            "start": 2.52,
+            "end": 2.68,
+            "probability": 0.9991540908813477
+          },
+          {
+            "word": "智",
+            "start": 2.68,
+            "end": 2.76,
+            "probability": 0.9999252557754517
+          },
+          {
+            "word": "能",
+            "start": 2.76,
+            "end": 2.88,
+            "probability": 0.9917588829994202
+          },
+          {
+            "word": "聊",
+            "start": 2.88,
+            "end": 3.08,
+            "probability": 0.9782560467720032
+          },
+          {
+            "word": "天",
+            "start": 3.08,
+            "end": 3.48,
+            "probability": 0.9995836615562439
+          },
+          {
+            "word": "都",
+            "start": 3.48,
+            "end": 3.8,
+            "probability": 0.600647509098053
+          },
+          {
+            "word": "用",
+            "start": 3.8,
+            "end": 3.94,
+            "probability": 0.9912341237068176
+          },
+          {
+            "word": "零",
+            "start": 3.94,
+            "end": 4.2,
+            "probability": 0.6726219952106476
+          },
+          {
+            "word": "和",
+            "start": 4.2,
+            "end": 4.38,
+            "probability": 0.954757034778595
+          },
+          {
+            "word": "一",
+            "start": 4.38,
+            "end": 4.58,
+            "probability": 0.9839043617248535
+          }
+        ]
+      }
+    ],
+    "model": "medium"
   }
 }

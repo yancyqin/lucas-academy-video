@@ -1,16 +1,16 @@
 {
   "movie": "out/family-ai-lab-02/orbital-v2/short/delivery/family-ai-lab-02.short.bilingual.mp4",
-  "sha256": "c5c0cabd5de56847af6e97bd64fc47f55ac38030c218939f16ff9e87b1224f4e",
-  "seconds": 40.233333333333334,
-  "frames": 1207,
+  "sha256": "8644b1ac64cf2cb80b021dd94411072aea89e8a5617bf36e3e051d0ea0cd43ff",
+  "seconds": 56.9,
+  "frames": 1707,
   "size": [
     1080,
     1920
   ],
   "fps": 30,
   "museOriginals": 6,
-  "museSeconds": 34.733333333333334,
-  "museCoverageFraction": 0.8632974316487159,
+  "museSeconds": 51.4,
+  "museCoverageFraction": 0.9033391915641477,
   "forwardSpansWithoutLoops": true,
   "fullFilmUnchanged": true,
   "audioTracks": [
@@ -19,22 +19,28 @@
   ],
   "subtitleTracks": 0,
   "externalSRTs": {
-    "en": 8,
-    "zh-Hans": 8
+    "en": 11,
+    "zh-Hans": 11
   },
   "audioLoudness": {
     "en": {
-      "integratedLUFS": "-16.13",
-      "truePeakDBTP": "-0.98"
+      "integratedLUFS": "-16.17",
+      "truePeakDBTP": "-0.95"
     },
     "zh": {
-      "integratedLUFS": "-16.04",
-      "truePeakDBTP": "-0.99"
+      "integratedLUFS": "-16.00",
+      "truePeakDBTP": "-0.98"
     }
   },
   "blackSegments": [],
   "qrDecodedAt": [
     "native",
     "720px width"
+  ],
+  "ending": [
+    "two friends",
+    "internet",
+    "AI chats",
+    "playful sharing question"
   ]
 }

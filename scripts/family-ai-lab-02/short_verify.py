@@ -26,7 +26,11 @@ def main():
             else:
                 decision=approved[lang+'/'+row['id']];assert decision['checked'] and decision['sha256']==voice['sha256']
             assert row['speechOffsetFrames']/30+voice['seconds']<row['duration']/30
-    assert len(tl['lines'])==8 and at==tl['durationInFrames']
+    expected_cues=len(json.loads(Path(__file__).with_name('short-script.json').read_text())['lines'])
+    assert len(tl['lines'])==expected_cues==11 and at==tl['durationInFrames']
+    assert [r['visual'] for r in tl['lines'][-4:]]==['friends','world','online','invite']
+    assert tl['lines'][-1]['en']=='A funny story? A new game? What will you share today?'
+    assert 'AI' in tl['lines'][-2]['en'] and 'zeros and ones' in tl['lines'][-2]['en']
     originals=set();ranges={}
     for shot in tl['storyClips']:
         assert sha(ROOT/shot['original'])==shot['originalSha256'] and sha(PUBLIC/shot['src'])==shot['sha256'];originals.add(shot['original'])
@@ -43,7 +47,7 @@ def main():
     assert len(audio)==2 and [(s['tags']['language'],s['disposition']['default']) for s in audio]==[('eng',1),('zho',0)]
     assert not any(s['codec_type']=='subtitle' for s in p['streams']) and all(abs(float(s['duration'])-at/30)<.1 for s in audio)
     for lang,name in [('en','en'),('zh','zh-Hans')]:
-        srt=(DATA/(lang+'.srt')).read_text();assert srt==(OUT/'delivery'/(name+'.srt')).read_text();blocks=re.split(r'\n\s*\n',srt.strip());assert len(blocks)==8
+        srt=(DATA/(lang+'.srt')).read_text();assert srt==(OUT/'delivery'/(name+'.srt')).read_text();blocks=re.split(r'\n\s*\n',srt.strip());assert len(blocks)==expected_cues
         for block,row in zip(blocks,tl['lines']):assert ''.join(block.splitlines()[2:])==row[lang]
     black=subprocess.run(['ffmpeg','-hide_banner','-i',str(movie),'-vf','blackdetect=d=0.07:pix_th=0.06:pic_th=0.985','-an','-sn','-f','null','-'],text=True,capture_output=True,check=True);assert 'black_start:' not in black.stderr
     levels={}
@@ -54,7 +58,7 @@ def main():
     if not binary.exists():subprocess.run(['swiftc','-module-cache-path',str(binary.parent/'swift-cache'),str(Path(__file__).with_name('verify_qr.swift')),'-o',str(binary)],check=True)
     subprocess.run([str(binary),str(qr)],check=True)
     small=OUT/'final-qr-720.png';subprocess.run(['ffmpeg','-v','error','-y','-i',str(qr),'-vf','scale=720:-2','-frames:v','1',str(small)],check=True);subprocess.run([str(binary),str(small)],check=True)
-    report={'movie':str(movie.relative_to(ROOT)),'sha256':sha(movie),'seconds':at/30,'frames':at,'size':list(expected),'fps':30,'museOriginals':6,'museSeconds':tl['museCoverageSeconds'],'museCoverageFraction':tl['museCoverageFraction'],'forwardSpansWithoutLoops':True,'fullFilmUnchanged':True,'audioTracks':['English default','Chinese'],'subtitleTracks':0,'externalSRTs':{'en':8,'zh-Hans':8},'audioLoudness':levels,'blackSegments':[],'qrDecodedAt':['native','720px width']}
+    report={'movie':str(movie.relative_to(ROOT)),'sha256':sha(movie),'seconds':at/30,'frames':at,'size':list(expected),'fps':30,'museOriginals':6,'museSeconds':tl['museCoverageSeconds'],'museCoverageFraction':tl['museCoverageFraction'],'forwardSpansWithoutLoops':True,'fullFilmUnchanged':True,'audioTracks':['English default','Chinese'],'subtitleTracks':0,'externalSRTs':{'en':expected_cues,'zh-Hans':expected_cues},'audioLoudness':levels,'blackSegments':[],'qrDecodedAt':['native','720px width'],'ending':['two friends','internet','AI chats','playful sharing question']}
     (DOC/'verification.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n');(OUT/'delivery/verification.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n');print(json.dumps(report,ensure_ascii=False,indent=2))
 
 

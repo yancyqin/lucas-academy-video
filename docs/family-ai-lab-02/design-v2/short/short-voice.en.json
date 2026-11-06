@@ -56,13 +56,46 @@
   },
   {
     "id": "fa02s-08",
-    "caption": "What would you send through your tiny pipe?",
-    "spoken": "What would you send through your tiny pipe?",
+    "caption": "Our tiny pipe connects two friends.",
+    "spoken": "Our tiny pipe connects two friends.",
     "voice": "louise/en",
     "mode": "zero-shot-instruct",
     "instruction": "Please tell this story with a warm, curious voice. Natural connected speech, clear and conversational. The explanation is calm and unhurried.",
     "speed": 1.1,
     "scene": 8,
-    "settingsSha256": "ddae5f146b4c9b90b96b6ba62b8076e6b948fe6d2b9f28bad738d024e877b364"
+    "settingsSha256": "7ebd1908f656844a76be49720c5c40c27f6f3a36e8147631cb39e33114257a7e"
+  },
+  {
+    "id": "fa02s-09",
+    "caption": "The internet connects the world!",
+    "spoken": "The internet connects the world!",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please tell this story with a warm, curious voice. Natural connected speech, clear and conversational. The explanation is calm and unhurried.",
+    "speed": 1.1,
+    "scene": 9,
+    "settingsSha256": "63dc4a06395968c630922f3fa1b37a169ccfdcbc5863225112617ad197ceffdf"
+  },
+  {
+    "id": "fa02s-10",
+    "caption": "Videos, messages, even chats with AI—all use zeros and ones.",
+    "spoken": "Videos, messages, even chats with AI, all use zeros and ones.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak warmly and clearly, with natural connected speech. Say AI smoothly as the familiar two-letter name, without a long gap. Keep the story light and curious.",
+    "speed": 1.1,
+    "scene": 10,
+    "settingsSha256": "a13cd0053ff9eed142dca3f0212a5e36337706411f3d8e42459bb9ca76603708"
+  },
+  {
+    "id": "fa02s-11",
+    "caption": "A funny story? A new game? What will you share today?",
+    "spoken": "A funny story? A new game? What will you share today?",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Ask each question slowly, playfully, and clearly, like chatting with a child. Pause for half a second after story and after game. Keep the last question warm and inviting.",
+    "speed": 1.0,
+    "scene": 11,
+    "settingsSha256": "fc6c4c5e97ecad34d33134a55e874af0a11e691b9ff66ffde70c298342ff4d27"
   }
 ]

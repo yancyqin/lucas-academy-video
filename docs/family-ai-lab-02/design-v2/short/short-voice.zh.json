@@ -56,13 +56,46 @@
   },
   {
     "id": "fa02s-08",
-    "caption": "如果是你，你想给朋友说什么？",
-    "spoken": "如果是你，你想给朋友说什么？",
+    "caption": "两个朋友，就用小管子传话。",
+    "spoken": "两个朋友，就用小管子传话。",
     "voice": "louise/zh",
     "mode": "zero-shot-instruct",
     "instruction": "请用亲切、清楚的普通话讲故事，像坐在孩子旁边说话。语句连贯，节奏平稳。",
     "speed": 1.1,
     "scene": 8,
-    "settingsSha256": "781e54affcaa43bbfe7054acf99ec3c92ba88b59dbe3f22df06b5e37d8017933"
+    "settingsSha256": "04378beca5cf8ba60c673557ba1dd7a8ca7971986b18f7fb9fb176337319a2da"
+  },
+  {
+    "id": "fa02s-09",
+    "caption": "互联网连起全世界！",
+    "spoken": "互联网连起全世界！",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、清楚的普通话讲故事，像坐在孩子旁边说话。语句连贯，节奏平稳。",
+    "speed": 1.1,
+    "scene": 9,
+    "settingsSha256": "c1751d19440e554e808e2327413c643f0a33d6abb1112c364f3d5a6b557e5557"
+  },
+  {
+    "id": "fa02s-10",
+    "caption": "视频、消息、AI聊天，全都用零和一。",
+    "spoken": "视频、消息、人工智能聊天，全都用零和一。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、清楚的普通话讲故事，像坐在孩子旁边说话。语句连贯，节奏平稳。",
+    "speed": 1.1,
+    "scene": 10,
+    "settingsSha256": "6f537a52d5b6ed6bec7c37b762d3bad068678613b6d9076018ea3bbdba5adb6c"
+  },
+  {
+    "id": "fa02s-11",
+    "caption": "一个好玩的故事？一个新游戏？今天你想分享什么？",
+    "spoken": "一个好玩的故事？一个新游戏？今天你想分享什么？",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "像和孩子聊天一样，轻快、俏皮地问这三个小问题。短句清楚亲切，问题之间自然稍停。",
+    "speed": 1.1,
+    "scene": 11,
+    "settingsSha256": "67286c6f58eca3fed9cb8d095ca55e911bc8f4e22cd6c878b72c58f82ecaae2f"
   }
 ]

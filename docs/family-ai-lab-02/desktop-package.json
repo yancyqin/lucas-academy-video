@@ -1,0 +1,125 @@
+{
+  "destination": "/Users/yqin/Desktop/0和1能聊天吗-交付",
+  "longMovieSha256": "9de7cfdfd74706a0dabeee359fd487328b2c8b4366b540a4bdef5c3a1c7b9bbb",
+  "shortMovieSha256": "8644b1ac64cf2cb80b021dd94411072aea89e8a5617bf36e3e051d0ea0cd43ff",
+  "shortSeconds": 56.9,
+  "defaultLanguage": "en",
+  "audio": {
+    "long/en": {
+      "file": "01-长片/英文音轨.m4a",
+      "encodedAudioMatchesMovie": true,
+      "seconds": 264.733
+    },
+    "long/zh": {
+      "file": "01-长片/中文音轨.m4a",
+      "encodedAudioMatchesMovie": true,
+      "seconds": 264.733
+    },
+    "short/en": {
+      "file": "02-竖屏短片/英文音轨.m4a",
+      "encodedAudioMatchesMovie": true,
+      "seconds": 56.9
+    },
+    "short/zh": {
+      "file": "02-竖屏短片/中文音轨.m4a",
+      "encodedAudioMatchesMovie": true,
+      "seconds": 56.9
+    }
+  },
+  "youtubeVariants": [
+    "long/en",
+    "long/zh",
+    "short/en",
+    "short/zh"
+  ],
+  "files": {
+    ".DS_Store": {
+      "bytes": 6148,
+      "sha256": "0b5b1dd9ab257e6f5d38f51d8efb880b3b94c8457002d10eb78514b3d09175bf"
+    },
+    "01-长片/0和1能聊天吗-双语长片.en.srt": {
+      "bytes": 4122,
+      "sha256": "29630dc8ef0f3392ff11bc9bbc1782ed62c4942e2eec1433725393ae71cdcb8e"
+    },
+    "01-长片/0和1能聊天吗-双语长片.mp4": {
+      "bytes": 65670961,
+      "sha256": "9de7cfdfd74706a0dabeee359fd487328b2c8b4366b540a4bdef5c3a1c7b9bbb"
+    },
+    "01-长片/0和1能聊天吗-双语长片.zh-Hans.srt": {
+      "bytes": 3957,
+      "sha256": "20e78602b8c43164412e65004f046bc250243b1a85ad26d95993b932cd504c16"
+    },
+    "01-长片/中文音轨.m4a": {
+      "bytes": 5351210,
+      "sha256": "a7cc360a67eae68d862ebc1d3483c206cfc60a8e2822b8dd3d01fd8bd5a53d51"
+    },
+    "01-长片/开头审核-30秒.mp4": {
+      "bytes": 5403091,
+      "sha256": "1b0946f071737283cba8a867bddc13ad422e400be1921193a47eba98c9332b5d"
+    },
+    "01-长片/英文音轨.m4a": {
+      "bytes": 5464313,
+      "sha256": "5ed7615d33428d91c3e8fa6be23e82ba48831ce05e619c4d1eedf103f98bd430"
+    },
+    "02-竖屏短片/0和1能聊天吗-竖屏短片.en.srt": {
+      "bytes": 900,
+      "sha256": "758734947c4e25486a94fb83d99f5d86c4030d3eebc515a204cb0a73e03efb65"
+    },
+    "02-竖屏短片/0和1能聊天吗-竖屏短片.mp4": {
+      "bytes": 59227130,
+      "sha256": "8644b1ac64cf2cb80b021dd94411072aea89e8a5617bf36e3e051d0ea0cd43ff"
+    },
+    "02-竖屏短片/0和1能聊天吗-竖屏短片.zh-Hans.srt": {
+      "bytes": 906,
+      "sha256": "23ee5d6931a8e766b9a7f042472d0e3440fb7b78ebe4cdc85a80616f4866d64e"
+    },
+    "02-竖屏短片/中文音轨.m4a": {
+      "bytes": 1148926,
+      "sha256": "a642773731558265bcaea95682f195c33947fc549adb0910d641c32da9df63e9"
+    },
+    "02-竖屏短片/结尾审核-互联网AI.mp4": {
+      "bytes": 5468916,
+      "sha256": "8ed798973b0bc6cb54e8b272131cfb7ecdaeff255cef5cd9fee949fadacbf100"
+    },
+    "02-竖屏短片/英文音轨.m4a": {
+      "bytes": 1146739,
+      "sha256": "1eb8416f1973483bdb4ea150b5d0e098f16f6f06ed480bc79e2c18d3801d87fe"
+    },
+    "03-封面/中文封面.png": {
+      "bytes": 1015324,
+      "sha256": "6a0b4ff45f59d5e12e9214cfd3f1f31b3e2a30ad9173c91c89aceeb76bcc7a2c"
+    },
+    "03-封面/英文封面.png": {
+      "bytes": 1010757,
+      "sha256": "5036a7318846f4e5c5818ef25b0adde2d786738218834b13c31c760a776b089f"
+    },
+    "04-YouTube文案/YouTube-Shorts-English.txt": {
+      "bytes": 1715,
+      "sha256": "895b050ba59fdc67809b5f084b67e032271373c299685962d5a6b98b5a6e08b3"
+    },
+    "04-YouTube文案/YouTube-Shorts-中文.txt": {
+      "bytes": 1681,
+      "sha256": "634dfc840cb171e773ad3c1d1a6d81fb797285f3eeb470b745450a75706f25ef"
+    },
+    "04-YouTube文案/YouTube-长片-English.txt": {
+      "bytes": 2027,
+      "sha256": "3d9455dd13058538e574a8b9b71f418a676e131ff73438046deb3ab09508d004"
+    },
+    "04-YouTube文案/YouTube-长片-中文.txt": {
+      "bytes": 2058,
+      "sha256": "5d1edf5a288f01153c2849ac17a5769355492b6b1370ba5f732e823d4e39705f"
+    },
+    "Fluent-Emoji-LICENSE.txt": {
+      "bytes": 1141,
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+    },
+    "使用说明.txt": {
+      "bytes": 947,
+      "sha256": "03d5e473c7ea1a699cd39039022b0c55a00780640ddde340ab837ad1cab18bea"
+    },
+    "素材来源说明.md": {
+      "bytes": 1513,
+      "sha256": "eb386a8a294fa9dcbe87784dece8fc32c20c4ecc8612127aac0e2de7d8532074"
+    }
+  }
+}

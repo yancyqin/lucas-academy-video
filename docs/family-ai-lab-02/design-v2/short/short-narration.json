@@ -80,14 +80,47 @@
       "reusedFromFull": true
     },
     "fa02s-08": {
-      "clip": "orbital-v2/short/narration/en/fa02s-08.wav",
-      "seconds": 2.42,
-      "sha256": "cb2dfa1fdaaa3ceddc7de17fdb005933ae8b66cb12ea1cba985528a426c5b45b",
-      "source": "outputs/louise/en/family-ai-lab-02-short/s1.10/fa02s-08.wav",
-      "caption": "What would you send through your tiny pipe?",
-      "spoken": "What would you send through your tiny pipe?",
-      "settingsSha256": "ddae5f146b4c9b90b96b6ba62b8076e6b948fe6d2b9f28bad738d024e877b364",
-      "review": "Script and transcript inspected. Figures retain the correct values; punctuation, numeral formatting, traditional script and name/homophone variants are retained as ASR evidence.",
+      "clip": "orbital-v2/short/narration/en/fa02s-08.take4.wav",
+      "seconds": 3.2,
+      "sha256": "7fe30b236328b73046d9f260ccd0c1dc37f3099b75b20d19610880482a546e79",
+      "source": "outputs/louise/en/family-ai-lab-02-short/s1.10/fa02s-08.take4.wav",
+      "caption": "Our tiny pipe connects two friends.",
+      "spoken": "Our tiny pipe connects two friends.",
+      "settingsSha256": "7ebd1908f656844a76be49720c5c40c27f6f3a36e8147631cb39e33114257a7e",
+      "review": "Approved ending copy and matching take settings checked against ASR. Chinese traditional-script, punctuation and 和/合 transcription variants are retained as evidence; no narration time stretching.",
+      "reusedFromFull": false
+    },
+    "fa02s-09": {
+      "clip": "orbital-v2/short/narration/en/fa02s-09.take4.wav",
+      "seconds": 3.04,
+      "sha256": "82438e60a8509c69ad80d9b7c0e47a7ce1bee067d8918f416fb935aa71d1973f",
+      "source": "outputs/louise/en/family-ai-lab-02-short/s1.10/fa02s-09.take4.wav",
+      "caption": "The internet connects the world!",
+      "spoken": "The internet connects the world!",
+      "settingsSha256": "63dc4a06395968c630922f3fa1b37a169ccfdcbc5863225112617ad197ceffdf",
+      "review": "Approved ending copy and matching take settings checked against ASR. Chinese traditional-script, punctuation and 和/合 transcription variants are retained as evidence; no narration time stretching.",
+      "reusedFromFull": false
+    },
+    "fa02s-10": {
+      "clip": "orbital-v2/short/narration/en/fa02s-10.take4.wav",
+      "seconds": 4.6,
+      "sha256": "ca2ec0555d550625e3d62921bb5da18c30e861859b0b332499223c7899683f67",
+      "source": "outputs/louise/en/family-ai-lab-02-short/s1.10/fa02s-10.take4.wav",
+      "caption": "Videos, messages, even chats with AI—all use zeros and ones.",
+      "spoken": "Videos, messages, even chats with AI, all use zeros and ones.",
+      "settingsSha256": "a13cd0053ff9eed142dca3f0212a5e36337706411f3d8e42459bb9ca76603708",
+      "review": "Medium confirms the complete AI phrase and all use zeros and ones. AI is recognized as one short, continuous word; no added letter gap.",
+      "reusedFromFull": false
+    },
+    "fa02s-11": {
+      "clip": "orbital-v2/short/narration/en/fa02s-11.take5.wav",
+      "seconds": 4.0,
+      "sha256": "9ace9e2a6ad2cf8d132a1ef736cd13f0a9243aecb01b96da165e727179aa40ef",
+      "source": "outputs/louise/en/family-ai-lab-02-short/s1.00/fa02s-11.take5.wav",
+      "caption": "A funny story? A new game? What will you share today?",
+      "spoken": "A funny story? A new game? What will you share today?",
+      "settingsSha256": "fc6c4c5e97ecad34d33134a55e874af0a11e691b9ff66ffde70c298342ff4d27",
+      "review": "Approved ending copy and matching take settings checked against ASR. Chinese traditional-script, punctuation and 和/合 transcription variants are retained as evidence; no narration time stretching.",
       "reusedFromFull": false
     }
   },
@@ -172,14 +205,47 @@
       "reusedFromFull": true
     },
     "fa02s-08": {
-      "clip": "orbital-v2/short/narration/zh/fa02s-08.wav",
-      "seconds": 2.9,
-      "sha256": "32a77cfc0698410db7c6a9f429aa8919637187c176c999ba53b4e6705d546996",
-      "source": "outputs/louise/zh/family-ai-lab-02-short/s1.10/fa02s-08.wav",
-      "caption": "如果是你，你想给朋友说什么？",
-      "spoken": "如果是你，你想给朋友说什么？",
-      "settingsSha256": "781e54affcaa43bbfe7054acf99ec3c92ba88b59dbe3f22df06b5e37d8017933",
-      "review": "Script and transcript inspected. Figures retain the correct values; punctuation, numeral formatting, traditional script and name/homophone variants are retained as ASR evidence.",
+      "clip": "orbital-v2/short/narration/zh/fa02s-08.take5.wav",
+      "seconds": 2.98,
+      "sha256": "d65e502c8c14cc260b683d9d698556bf7f65f0571d2fd22cd0e43c1389172e28",
+      "source": "outputs/louise/zh/family-ai-lab-02-short/s1.10/fa02s-08.take5.wav",
+      "caption": "两个朋友，就用小管子传话。",
+      "spoken": "两个朋友，就用小管子传话。",
+      "settingsSha256": "04378beca5cf8ba60c673557ba1dd7a8ca7971986b18f7fb9fb176337319a2da",
+      "review": "Approved ending copy and matching take settings checked against ASR. Chinese traditional-script, punctuation and 和/合 transcription variants are retained as evidence; no narration time stretching.",
+      "reusedFromFull": false
+    },
+    "fa02s-09": {
+      "clip": "orbital-v2/short/narration/zh/fa02s-09.take4.wav",
+      "seconds": 2.24,
+      "sha256": "b5c94eb1e1f5f33e506bf612040514b353e66c8abd72d4258c96b28018d59eeb",
+      "source": "outputs/louise/zh/family-ai-lab-02-short/s1.10/fa02s-09.take4.wav",
+      "caption": "互联网连起全世界！",
+      "spoken": "互联网连起全世界！",
+      "settingsSha256": "c1751d19440e554e808e2327413c643f0a33d6abb1112c364f3d5a6b557e5557",
+      "review": "Approved ending copy and matching take settings checked against ASR. Chinese traditional-script, punctuation and 和/合 transcription variants are retained as evidence; no narration time stretching.",
+      "reusedFromFull": false
+    },
+    "fa02s-10": {
+      "clip": "orbital-v2/short/narration/zh/fa02s-10.take5.wav",
+      "seconds": 4.72,
+      "sha256": "ea9ecfccd90f7faa84d6597b6b72ba47baa1a5cc90bac0cbb9196f0815a16c19",
+      "source": "outputs/louise/zh/family-ai-lab-02-short/s1.10/fa02s-10.take5.wav",
+      "caption": "视频、消息、AI聊天，全都用零和一。",
+      "spoken": "视频、消息、人工智能聊天，全都用零和一。",
+      "settingsSha256": "6f537a52d5b6ed6bec7c37b762d3bad068678613b6d9076018ea3bbdba5adb6c",
+      "review": "Approved ending copy and matching take settings checked against ASR. Chinese traditional-script, punctuation and 和/合 transcription variants are retained as evidence; no narration time stretching.",
+      "reusedFromFull": false
+    },
+    "fa02s-11": {
+      "clip": "orbital-v2/short/narration/zh/fa02s-11.take4.wav",
+      "seconds": 7.88,
+      "sha256": "fd2acd62b9b3860494a7fcac56721fa17a36314cabdc6b1a2b70073f523c8b4b",
+      "source": "outputs/louise/zh/family-ai-lab-02-short/s1.10/fa02s-11.take4.wav",
+      "caption": "一个好玩的故事？一个新游戏？今天你想分享什么？",
+      "spoken": "一个好玩的故事？一个新游戏？今天你想分享什么？",
+      "settingsSha256": "67286c6f58eca3fed9cb8d095ca55e911bc8f4e22cd6c878b72c58f82ecaae2f",
+      "review": "Approved ending copy and matching take settings checked against ASR. Chinese traditional-script, punctuation and 和/合 transcription variants are retained as evidence; no narration time stretching.",
       "reusedFromFull": false
     }
   }

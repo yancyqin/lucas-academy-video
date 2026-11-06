@@ -1,6 +1,6 @@
 {
   "fps": 30,
-  "durationInFrames": 1207,
+  "durationInFrames": 1707,
   "aspect": "portrait",
   "workingTitle": {
     "en": "Can 0 and 1 Talk?",
@@ -121,16 +121,79 @@
     {
       "id": "fa02s-08",
       "scene": 8,
-      "visual": "invite",
-      "en": "What would you send through your tiny pipe?",
-      "zh": "如果是你，你想给朋友说什么？",
-      "minSeconds": 4.4,
+      "visual": "friends",
+      "en": "Our tiny pipe connects two friends.",
+      "zh": "两个朋友，就用小管子传话。",
+      "minSeconds": 2.8,
       "from": 1075,
-      "duration": 132,
+      "duration": 111,
       "speechOffsetFrames": 3,
       "voiceSeconds": {
-        "en": 2.42,
-        "zh": 2.9
+        "en": 3.2,
+        "zh": 2.98
+      }
+    },
+    {
+      "id": "fa02s-09",
+      "scene": 9,
+      "visual": "world",
+      "en": "The internet connects the world!",
+      "zh": "互联网连起全世界！",
+      "minSeconds": 2.8,
+      "from": 1186,
+      "duration": 107,
+      "speechOffsetFrames": 3,
+      "voiceSeconds": {
+        "en": 3.04,
+        "zh": 2.24
+      }
+    },
+    {
+      "id": "fa02s-10",
+      "scene": 10,
+      "visual": "online",
+      "en": "Videos, messages, even chats with AI—all use zeros and ones.",
+      "zh": "视频、消息、AI聊天，全都用零和一。",
+      "minSeconds": 5.4,
+      "voice": {
+        "en": {
+          "spoken": "Videos, messages, even chats with AI, all use zeros and ones.",
+          "instruction": "Please speak warmly and clearly, with natural connected speech. Say AI smoothly as the familiar two-letter name, without a long gap. Keep the story light and curious."
+        },
+        "zh": {
+          "spoken": "视频、消息、人工智能聊天，全都用零和一。"
+        }
+      },
+      "from": 1293,
+      "duration": 162,
+      "speechOffsetFrames": 3,
+      "voiceSeconds": {
+        "en": 4.6,
+        "zh": 4.72
+      }
+    },
+    {
+      "id": "fa02s-11",
+      "scene": 11,
+      "visual": "invite",
+      "en": "A funny story? A new game? What will you share today?",
+      "zh": "一个好玩的故事？一个新游戏？今天你想分享什么？",
+      "minSeconds": 5.4,
+      "voice": {
+        "en": {
+          "speed": 1.0,
+          "instruction": "Ask each question slowly, playfully, and clearly, like chatting with a child. Pause for half a second after story and after game. Keep the last question warm and inviting."
+        },
+        "zh": {
+          "instruction": "像和孩子聊天一样，轻快、俏皮地问这三个小问题。短句清楚亲切，问题之间自然稍停。"
+        }
+      },
+      "from": 1455,
+      "duration": 252,
+      "speechOffsetFrames": 3,
+      "voiceSeconds": {
+        "en": 4.0,
+        "zh": 7.88
       }
     }
   ],
@@ -238,27 +301,78 @@
       "signature": "b8ac92932b25fab680b1afc84afc29f400b462ac2f8db920ac8505b4b62b1bb0"
     },
     {
+      "id": "G1b",
+      "visual": "friends",
+      "from": 1075,
+      "duration": 111,
+      "frames": 111,
+      "src": "orbital-v2/short/clips/G1b-friends.mp4",
+      "lastFrame": "orbital-v2/short/clips/G1b-friends-last.png",
+      "sha256": "e7cd1c83a82c39b6b041061ba593479010e56b04db694be94bbb437fad3ec816",
+      "lastFrameSha256": "33ca215b9440ed74d37fc4581b366b2be4fc008b9321e61accd26db8560029cd",
+      "original": "public/family-ai-lab-02/muse-v2/02-G1b-paper.mp4",
+      "originalSha256": "f4587f162f9a16577795787f493548722fc0bde1df9bb3ee4bbded35986c21a3",
+      "sourceStartSeconds": 7.7,
+      "sourceEndSeconds": 10,
+      "speed": 0.6216216216216215,
+      "signature": "14386ccf899d1c31f0b60ae6b8d5a3bcbe439e43503ecb17ecd1a20ce4fc03cb"
+    },
+    {
+      "id": "G1a",
+      "visual": "world",
+      "from": 1186,
+      "duration": 107,
+      "frames": 107,
+      "src": "orbital-v2/short/clips/G1a-world.mp4",
+      "lastFrame": "orbital-v2/short/clips/G1a-world-last.png",
+      "sha256": "de83310677263f6a7fca5ce1083c1741f62ad62f6adc985e225b3c6f88ee25e9",
+      "lastFrameSha256": "a10e690a97ff93d4c9e0e0ee4f3c65baac1bb7e70801019630409e968404e33f",
+      "original": "public/family-ai-lab-02/muse-v2/01-G1a-signal.mp4",
+      "originalSha256": "78527ffb184a7809e302a78dfcfd2955823463b2a6fd6d35dbae964c117256a9",
+      "sourceStartSeconds": 7.8,
+      "sourceEndSeconds": 10,
+      "speed": 0.6168224299065421,
+      "signature": "428fb944e090a36942e76d10ecce61b804705b464acf9ffc57af1cd9a4dc8a43"
+    },
+    {
+      "id": "G5",
+      "visual": "online",
+      "from": 1293,
+      "duration": 162,
+      "frames": 162,
+      "src": "orbital-v2/short/clips/G5-online.mp4",
+      "lastFrame": "orbital-v2/short/clips/G5-online-last.png",
+      "sha256": "61ed2c188797fb9017cfb4d7f8dc6849fdf0855ebf45448b221551d007fcd146",
+      "lastFrameSha256": "1771dabf8e4023ddb022b27cf5c55d6067d3818d57351d0a94e3f1dd622c77f3",
+      "original": "public/family-ai-lab-02/muse-v2/06-G5-reply.mp4",
+      "originalSha256": "e2d2f59fb5997a0a1b1ccc3b9957f274fb1edc0fc6f4f9182eaf0d7ecf00bce4",
+      "sourceStartSeconds": 5.8,
+      "sourceEndSeconds": 10,
+      "speed": 0.7777777777777778,
+      "signature": "56d443dcd4294c68f709b4503f054e7fa3b97ca4e2691c2e4792c33bb9a93c33"
+    },
+    {
       "id": "G4",
       "visual": "invite",
-      "from": 1075,
-      "duration": 132,
-      "frames": 132,
+      "from": 1455,
+      "duration": 252,
+      "frames": 252,
       "src": "orbital-v2/short/clips/G4-invite.mp4",
       "lastFrame": "orbital-v2/short/clips/G4-invite-last.png",
-      "sha256": "72db75f566ef90c77bd3ae61a4a2c1a56788b65ef2855bc65a17c755218545b6",
-      "lastFrameSha256": "ea90d105d5efab6a957515cd5af0cd0d64099f6ef09cd0ce52d0d0b7eff81943",
+      "sha256": "ec910c6cf3e761f24ea55328e19fcf4e93d627d26b27198330a180d1cfbc1fc5",
+      "lastFrameSha256": "31a09e75f00b4b5a5dc79fd2806fbca245b6ac90bb8cc3f924991865beaa0985",
       "original": "public/family-ai-lab-02/muse-v2/05-G4-watermelon.mp4",
       "originalSha256": "066327941ad75c548117eca27ba3b0d3e21248ebb3907e85afc9d58dc3659b09",
       "sourceStartSeconds": 5.2,
       "sourceEndSeconds": 9.6,
-      "speed": 0.9999999999999998,
-      "signature": "f8c23c0f9933a7d9cacf7970fe520776e6cef90e93f28f1a0972853daa816b12"
+      "speed": 0.5238095238095237,
+      "signature": "62e76b493a042f30be1ece974829eb38392e552ecfcffe36a33b34a2bf4995bd"
     }
   ],
   "museOriginalCount": 6,
-  "museCoverageSeconds": 34.733333333333334,
-  "museCoverageFraction": 0.8632974316487159,
-  "scriptSha256": "1f34807e157c888acb34b3cdc7d09ca39f8ec5e2433934a1c3629ce662620527",
+  "museCoverageSeconds": 51.4,
+  "museCoverageFraction": 0.9033391915641477,
+  "scriptSha256": "75c7af290ab845efe34a77f02c2508ca3d3add116a3cfd1337399c81b84aa85c",
   "cornerCredits": false,
   "defaultLanguage": "en",
   "delivery": "One picture, English default and Chinese independent audio, external SRTs only."
