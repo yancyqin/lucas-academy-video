@@ -1,0 +1,154 @@
+{
+  "created": "2026-11-05",
+  "direction": "orbital pods",
+  "assets": [
+    {
+      "id": "lab-workbench",
+      "prompt": "Use case: stylized-concept. Create a new shot in the same cinematic orbital-pod world as the reference image, preserving its physically textured titanium, slightly worn charcoal-and-ivory materials, copper/amber practical lights, ice-blue edge lights, enormous ringed planet and realistic CGI lens language. This is a frame for a family science-fiction adventure, not a flat illustration. Landscape 16:9, high production value. No writing, digits, captions, logos, watermark, invented HUD text or graphic panels. The lesson graphics will be composited in code afterward.\nTransform the reference into an empty interior laboratory shot. The camera is eye-level, straight on with a subtle low angle, looking over a precision-built dark glass experiment bench. A wide portal window and the ringed planet are visible in the upper background, and a glass signal conduit enters from the left and leaves toward the right. Structural ribs frame the corners. Keep the central 75 percent calm, clear and dark enough for luminous teaching objects to be overlaid, with the bench beginning near the lower edge. Place most beautiful mechanical detail at the left/right borders and top corners. Restrained atmospheric volume, shallow pockets of depth, sharp physical glass and metal, warm practical highlights. No people, no spheres in the tube, no screens containing content. This is an actual environment plate; do not draw the future lesson or put a blank rectangular UI overlay in the scene.",
+      "source": "/Users/yqin/.codex/generated_images/01a1adbb-7e40-7551-8692-e8402ef305f2/exec-de98ea5a-caa2-4e3c-bf5e-210570e7fdca.png",
+      "asset": "public/family-ai-lab-02/orbital-v2/art/lab-workbench.png",
+      "review": "out/family-ai-lab-02/orbital-v2/art/lab-workbench.png",
+      "tool": "built-in imagegen",
+      "reference": "public/family-ai-lab-02/design-v2/01-orbital.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "2329983d6f19283611eb239bcc2529e4e0b8a8055677ce0a04e73e55a9a38a15"
+    },
+    {
+      "id": "cargo-bay",
+      "prompt": "Use case: stylized-concept. Create a new shot in the same cinematic orbital-pod world as the reference image, preserving its physically textured titanium, slightly worn charcoal-and-ivory materials, copper/amber practical lights, ice-blue edge lights, enormous ringed planet and realistic CGI lens language. This is a frame for a family science-fiction adventure, not a flat illustration. Landscape 16:9, high production value. No writing, digits, captions, logos, watermark, invented HUD text or graphic panels. The lesson graphics will be composited in code afterward.\nTransform the reference into the clean cargo compartment inside the same orbital station. A generous empty central work area, seen almost straight on; two horizontal titanium storage rails recede gently in perspective. Warm amber ceiling strips, cold blue rim illumination, curved structural ribs and a side window with the ringed planet. The room has weight, depth and realistic contact shadows. Keep the central 75 percent unobstructed and relatively dark: code will place exactly ten storage pods and their numbers there. Do not generate boxes, cargo pods, labels, digits, people, words or a user interface. Put intricate mechanical details and cable runs mostly at the room edges. Widescreen cinematic frame, no border.",
+      "source": "/Users/yqin/.codex/generated_images/01a1adbb-7e40-7551-8692-e8402ef305f2/exec-4a0b89f0-8448-44ff-b624-243e846b4925.png",
+      "asset": "public/family-ai-lab-02/orbital-v2/art/cargo-bay.png",
+      "review": "out/family-ai-lab-02/orbital-v2/art/cargo-bay.png",
+      "tool": "built-in imagegen",
+      "reference": "public/family-ai-lab-02/design-v2/01-orbital.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "a0db2a724c8f738bf88f8815cf3ca06775c2104f012ea2543d30ee6db43c37b1"
+    },
+    {
+      "id": "signal-conduit",
+      "prompt": "Use case: stylized-concept. Create a new shot in the same cinematic orbital-pod world as the reference image, preserving its physically textured titanium, slightly worn charcoal-and-ivory materials, copper/amber practical lights, ice-blue edge lights, enormous ringed planet and realistic CGI lens language. This is a frame for a family science-fiction adventure, not a flat illustration. Landscape 16:9, high production value. No writing, digits, captions, logos, watermark, invented HUD text or graphic panels. The lesson graphics will be composited in code afterward.\nTransform the reference into an extreme macro side view of an elegant transparent glass signal conduit, stretching horizontally from a precision-machined sender collar at the far left to a matching receiver collar at the far right. The central tube occupies the middle horizontal band of the 16:9 image, with crisp glass refraction and controlled amber/blue reflections. Behind it is the same softly defocused orbital laboratory and a faint ringed planet through a window. No people and NO glowing balls, particles, letters, symbols or pulses inside the empty tube: exact signal states will be animated afterward. Keep a broad clean dark area above the tube for eight receiving slots and a smaller clean area below. Physical cinematic CGI materials, premium optical detail, NOT an infographic.",
+      "source": "/Users/yqin/.codex/generated_images/01a1adbb-7e40-7551-8692-e8402ef305f2/exec-333a17f8-3ab0-4834-bfe0-b17d264b4c53.png",
+      "asset": "public/family-ai-lab-02/orbital-v2/art/signal-conduit.png",
+      "review": "out/family-ai-lab-02/orbital-v2/art/signal-conduit.png",
+      "tool": "built-in imagegen",
+      "reference": "public/family-ai-lab-02/design-v2/01-orbital.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "16165c7435e98979253acaecb90091aed1402ab289c930ae2fe06232bda6f5c1"
+    },
+    {
+      "id": "story-arrival",
+      "prompt": "Use case: stylized-concept. Create a new shot in the same cinematic orbital-pod world as the reference image, preserving its physically textured titanium, slightly worn charcoal-and-ivory materials, copper/amber practical lights, ice-blue edge lights, enormous ringed planet and realistic CGI lens language. This is a frame for a family science-fiction adventure, not a flat illustration. Landscape 16:9, high production value. No writing, digits, captions, logos, watermark, invented HUD text or graphic panels. The lesson graphics will be composited in code afterward.\nChange the camera to the receiving pod, keeping the BOY from the distant right-hand pod in the reference as the same boy, now a medium-close view: tousled brown hair, about eleven years old, charcoal and ivory flight suit with restrained cyan and amber indicators, curious friendly expression. A transparent pipe with an amber light signal reaches a mechanical receiving collar beside his hand. He has just noticed the arriving invitation and turns toward the port with a spontaneous delighted expression. His fingers rest naturally by one simple physical receive switch. A dark glass console occupies the bottom-right foreground; keep its glass face blank so accurate PLAY text can be composited later. Through the porthole behind him, the girl's distant separated pod and the ringed planet establish the shared world. The frame has a real focal subject and strong depth, realistic hands with five fingers, no writing, no HUD panels, no title, no overdesigned hologram. A natural cinematic story frame, not a posed promotional portrait.",
+      "source": "/Users/yqin/.codex/generated_images/01a1adbb-7e40-7551-8692-e8402ef305f2/exec-988da6b9-d95b-4a47-8e09-c74fa9ae3cc8.png",
+      "asset": "public/family-ai-lab-02/orbital-v2/art/story-arrival.png",
+      "review": "out/family-ai-lab-02/orbital-v2/art/story-arrival.png",
+      "tool": "built-in imagegen",
+      "reference": "public/family-ai-lab-02/design-v2/01-orbital.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "8f51b4de46d6bea4f49692eacd4e76399de4933d9de4548180f6758fc0dc9b98"
+    },
+    {
+      "id": "story-cargo",
+      "references": [
+        "/Users/yqin/repo/playground/lucas-academy-video/public/family-ai-lab-02/design-v2/01-orbital.png",
+        "/Users/yqin/repo/playground/lucas-academy-video/public/family-ai-lab-02/orbital-v2/art/story-arrival.png",
+        "/Users/yqin/repo/playground/lucas-academy-video/public/family-ai-lab-02/orbital-v2/art/cargo-bay.png"
+      ],
+      "prompt": "Use case: illustration-story. A new story shot in the SAME cinematic orbital-pod world. Image 1 is the world, materials and girl's identity reference. Image 2 is the exact BOY identity and flight-suit reference: preserve that same tousled brown-haired boy, age, face, freckles, charcoal-and-ivory suit, warm amber/cyan indicator details and friendly personality. Realistic premium CGI, 16:9. Worn titanium, dark glass, ceramic-white structure, warm amber practical light and ice-blue rims, enormous ringed planet outside. Natural hands with five fingers. No text, letters, digits, logos, subtitles, HUD panels or watermarks. This is a grounded cinematic moment with real space and physical action, not a collage or posed promotional poster.\nImage 3 is the cargo room reference; preserve its floor rails, wall ribs, side window and lighting. Show the boy in medium-wide three-quarter view stepping from the receive station toward the metallic cargo area, his torso turned naturally, curious expression looking ahead. Several CLOSED storage modules rest on the rails, their fronts completely blank and unnumbered; do not promise an exact count in the image. Leave the boxes closed with no fruit visible. Strong over-the-shoulder and environmental depth, a readable physical direction of movement. The boy is the only person in this shot.",
+      "source": "/Users/yqin/.codex/generated_images/01a1adbb-7e40-7551-8692-e8402ef305f2/exec-0cce4198-9089-4e44-8155-c3e29cd51f8d.png",
+      "asset": "public/family-ai-lab-02/orbital-v2/art/story-cargo.png",
+      "review": "out/family-ai-lab-02/orbital-v2/art/story-cargo.png",
+      "tool": "built-in imagegen",
+      "selected": true,
+      "note": "Story keyframe, not generated motion.",
+      "sha256": "ba74be8e8839b8c549f8bcca41b04be277e6caca1b917932e1f86d900ca7cb10",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "id": "story-watermelon",
+      "references": [
+        "/Users/yqin/repo/playground/lucas-academy-video/public/family-ai-lab-02/design-v2/01-orbital.png",
+        "/Users/yqin/repo/playground/lucas-academy-video/public/family-ai-lab-02/orbital-v2/art/story-arrival.png",
+        "/Users/yqin/repo/playground/lucas-academy-video/public/family-ai-lab-02/orbital-v2/art/cargo-bay.png"
+      ],
+      "prompt": "Use case: illustration-story. A new story shot in the SAME cinematic orbital-pod world. Image 1 is the world, materials and girl's identity reference. Image 2 is the exact BOY identity and flight-suit reference: preserve that same tousled brown-haired boy, age, face, freckles, charcoal-and-ivory suit, warm amber/cyan indicator details and friendly personality. Realistic premium CGI, 16:9. Worn titanium, dark glass, ceramic-white structure, warm amber practical light and ice-blue rims, enormous ringed planet outside. Natural hands with five fingers. No text, letters, digits, logos, subtitles, HUD panels or watermarks. This is a grounded cinematic moment with real space and physical action, not a collage or posed promotional poster.\nImage 3 is the cargo room and lighting reference. Show a medium-close three-quarter view of the same boy beside a single titanium storage box on the cargo rail. The lid is propped open with a practical amber light inside, no bright magical beam. He has just carefully picked up ONE triangular watermelon slice with pale rind and visible dark seeds, holding the rind naturally in one hand; his other hand rests on the open lid. He looks delighted at the small snack surprise. His full hands are in frame. Other storage modules behind him stay CLOSED, all faces blank and unnumbered. The fruit stays an ordinary physical watermelon slice. Physical contact shadows, cinematic depth and warm reflected light on his face. No extra people.",
+      "source": "/Users/yqin/.codex/generated_images/01a1adbb-7e40-7551-8692-e8402ef305f2/exec-b45efce0-004d-4be7-9bfa-74c395e32c3c.png",
+      "asset": "public/family-ai-lab-02/orbital-v2/art/story-watermelon.png",
+      "review": "out/family-ai-lab-02/orbital-v2/art/story-watermelon.png",
+      "tool": "built-in imagegen",
+      "selected": true,
+      "note": "Story keyframe, not generated motion.",
+      "sha256": "2feb121907be2686025b2a7572242cab6ee74b37e3fc1e733bce616cda029ef7",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "id": "story-reply",
+      "references": [
+        "/Users/yqin/repo/playground/lucas-academy-video/public/family-ai-lab-02/design-v2/01-orbital.png",
+        "/Users/yqin/repo/playground/lucas-academy-video/public/family-ai-lab-02/orbital-v2/art/story-arrival.png"
+      ],
+      "prompt": "Use case: illustration-story. A new story shot in the SAME cinematic orbital-pod world. Image 1 is the world, materials and girl's identity reference. Image 2 is the exact BOY identity and flight-suit reference: preserve that same tousled brown-haired boy, age, face, freckles, charcoal-and-ivory suit, warm amber/cyan indicator details and friendly personality. Realistic premium CGI, 16:9. Worn titanium, dark glass, ceramic-white structure, warm amber practical light and ice-blue rims, enormous ringed planet outside. Natural hands with five fingers. No text, letters, digits, logos, subtitles, HUD panels or watermarks. This is a grounded cinematic moment with real space and physical action, not a collage or posed promotional poster.\nReverse-angle medium-wide story frame from the boy's receiving pod, beside the transparent connecting tube. He holds the ONE watermelon slice with visible seeds in his left hand and rests his right index finger naturally on one amber physical SEND switch. The tube leading AWAY from his pod toward the girl's distant separate pod contains a single amber signal ball near his side. The girl is visible in her far round window, same outfit and dark hair as Image 1, smiling or waving back. The ringed planet and the gap of deep space between their pods remain visible. Both children stay in separate pods. Show physical pipe connection and a clear reverse direction for a reply. Full hands, believable relaxed pose, no letters on the dark blank console, no extra people or extra fruit.",
+      "source": "/Users/yqin/.codex/generated_images/01a1adbb-7e40-7551-8692-e8402ef305f2/exec-ebce3a49-6d66-4842-96fa-2cb5ec68b1e4.png",
+      "asset": "public/family-ai-lab-02/orbital-v2/art/story-reply-wide-v1.png",
+      "review": "out/family-ai-lab-02/orbital-v2/art/story-reply-wide-v1.png",
+      "tool": "built-in imagegen",
+      "selected": false,
+      "note": "Not selected: remote girl's identity is unclear; superseded by a simpler single-boy shot.",
+      "sha256": "716e87020f1936a79154be3dfa7fac5589b7960f55444b6d3c6c187cb54898b7",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "id": "story-reply-wide-v2",
+      "prompt": "Use case: identity-preserve. Correct ONLY the tiny distant character in the far right pod window in Image 1. That distant person must be the GIRL MIA from Image 2: dark black hair tied back in a small ponytail, loose side strands, the same dark-haired girl, with her same charcoal-and-ivory flight suit, smiling and waving. It must not be another copy of the curly-haired boy. Keep the entire foreground BOY in Image 1 absolutely unchanged, including his face, tousled brown hair, flight suit, natural two hands, watermelon slice and index finger pressing the switch. Keep the exact composition, camera, two pods, ringed planet, glass tube, amber signal, all lighting, textures and resolution. Make only the small distant-window identity correction. No new text, graphics, digits or objects.",
+      "references": [
+        "/Users/yqin/.codex/generated_images/01a1adbb-7e40-7551-8692-e8402ef305f2/exec-ebce3a49-6d66-4842-96fa-2cb5ec68b1e4.png",
+        "/Users/yqin/repo/playground/lucas-academy-video/public/family-ai-lab-02/design-v2/01-orbital.png"
+      ],
+      "source": "/Users/yqin/.codex/generated_images/01a1adbb-7e40-7551-8692-e8402ef305f2/exec-fd8608f5-b47c-4124-8adb-51fb2bf14950.png",
+      "asset": "public/family-ai-lab-02/orbital-v2/art/story-reply-wide-v2.png",
+      "review": "out/family-ai-lab-02/orbital-v2/art/story-reply-wide-v2.png",
+      "tool": "built-in imagegen",
+      "selected": false,
+      "note": "Remote girl's identity still insufficiently clear; retain original and do not use for video generation.",
+      "sha256": "34c9456a3f4d10fdf401dfa33d0f427cb306ca5ea03593a75f1e72a6854a584d",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "id": "g1-paper-single",
+      "prompt": "Use case: illustration-story. Reframe this orbital reference as ONE simple cinematic medium-close shot for image-to-video: the SAME dark-haired GIRL MIA in the same charcoal-and-ivory flight suit, near a narrow metal sender port in her pod. Her face is on the left, one whole natural hand holds a small folded cream paper invitation against the small round port at center-right. The folded paper is visibly a little wider than the hole, its leading edge touching the metal collar. The paper has no words or markings. Keep her five fingers, whole hand, face and interface clearly visible. Her hand and the port are the focal action; the rest of the orbital interior is softly blurred. There are NO glowing balls or moving light signals in this shot, no other person, no distant second pod, no scene change and no montage. Preserve the source girl's face, tied-back dark hair and loose side strands, suit, worn titanium, warm amber practical lighting and ice-blue rim lights. A quiet believable pose just BEFORE she pushes the paper gently and discovers it will not fit. Realistic premium CGI, 16:9, fixed camera framing, no text, numbers, logos, subtitles or HUD. This is the starting reference for a single paper-blocked-at-port action.",
+      "reference": "/Users/yqin/repo/playground/lucas-academy-video/public/family-ai-lab-02/design-v2/01-orbital.png",
+      "source": "/Users/yqin/.codex/generated_images/01a1adbb-7e40-7551-8692-e8402ef305f2/exec-8a94b30c-e4d0-4d4d-8713-79337134a1b2.png",
+      "asset": "public/family-ai-lab-02/orbital-v2/art/g1-paper-single.png",
+      "review": "out/family-ai-lab-02/orbital-v2/art/g1-paper-single.png",
+      "tool": "built-in imagegen",
+      "selected": true,
+      "sha256": "804e3f7c1fa07591945a21d3e4e41736d2df3b2bc14e045fa0a362da639a9ff6",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "id": "story-reply",
+      "references": [
+        "/Users/yqin/repo/playground/lucas-academy-video/public/family-ai-lab-02/orbital-v2/art/story-arrival.png",
+        "/Users/yqin/repo/playground/lucas-academy-video/public/family-ai-lab-02/orbital-v2/art/story-watermelon.png"
+      ],
+      "prompt": "Use case: identity-preserve. Create one simple fixed medium-close story shot for image-to-video. Preserve the exact SAME curly brown-haired BOY, face, freckles and charcoal/ivory flight suit from the references. He is seated inside his orbital pod at the small physical amber send switch and holds one watermelon slice in his LEFT hand. His RIGHT index fingertip hovers just one centimeter above that switch, ready to press. Both whole hands are visible and anatomically natural. The metal sender collar is beside the switch; a small part of the transparent pipe extends out of frame. The frame is TIGHT on the boy, hands, watermelon and sender. Softly defocused orbital interior and warm amber/cyan lighting behind him. NO other person, NO distant pod window, no extra face, no glowing signal already in flight. One camera, one subject, one impending button-press action. Premium realistic CGI, landscape 16:9. No text, letters, digits, logos, captions, HUD panels or watermark.",
+      "source": "/Users/yqin/.codex/generated_images/01a1adbb-7e40-7551-8692-e8402ef305f2/exec-9d56ba5e-7581-4da2-8083-5e44eccab344.png",
+      "asset": "public/family-ai-lab-02/orbital-v2/art/story-reply.png",
+      "review": "out/family-ai-lab-02/orbital-v2/art/story-reply.png",
+      "tool": "built-in imagegen",
+      "selected": true,
+      "note": "Single-boy close-up; avoids remote-character identity ambiguity.",
+      "sha256": "9cb1c86942d2a64fa972279f243d2c3acbc3747978afb38bedfcd26d6654fb9b",
+      "width": 1672,
+      "height": 941
+    }
+  ]
+}

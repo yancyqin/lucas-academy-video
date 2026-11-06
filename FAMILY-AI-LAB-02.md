@@ -1,6 +1,6 @@
 # 家庭 AI 实验室 · 小管子的消息
 
-**当前风格复审（2026-11-05）**：用户已从[三套科幻设计](docs/family-ai-lab-02/design-v2/README.md)中选择 **01 深空隔舱**。开头采用 03 的管内追光视角，再揭示两座隔舱与被管口挡住的纸条。十秒连续动作样片已提交 Muse，但视频服务重试后仍报 502，[本轮没有生成新片段](docs/family-ai-lab-02/design-v2/opening-result.json)；[新版 S1 中英文与镜头衔接](docs/family-ai-lab-02/design-v2/s1-script.md)单独记录。下面的绘本版保留为内容、算法与音轨底稿，尚未替换成新版全片。
+**当前制作（2026-11-05）**：用户选择 **01 深空隔舱**，并要求全片改为写实科幻风。原开场太复杂，现按**每条视频一个分镜**拆开，由用户在 Muse 手动生成。六条参考图和提示词已打包；[单镜头清单](docs/family-ai-lab-02/design-v2/single-shots.md)、[全片改版方案](docs/family-ai-lab-02/design-v2/full-film-plan.md)和[生成交接记录](docs/family-ai-lab-02/design-v2/generation-handoff.json)。中后段已有 42 秒无声动画样片；下面的绘本版保留作内容与旧音轨参考，尚非新版全片。
 
 工作片名：**只有0和1，怎么说一句话？** / **How Can 0 and 1 Send a Message?**
 

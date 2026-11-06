@@ -84,7 +84,9 @@
     "fal02:stills": "node scripts/family-ai-lab-02/render.cjs --stills",
     "fal02:final": "node scripts/family-ai-lab-02/render.cjs --voiced",
     "fal02:check": "python3 scripts/family-ai-lab-02/verify.py",
-    "fal02:backup": "python3 scripts/family-ai-lab-02/backup.py"
+    "fal02:backup": "python3 scripts/family-ai-lab-02/backup.py",
+    "fal02:orbital:stills": "node scripts/family-ai-lab-02/orbital_render.cjs --stills",
+    "fal02:orbital:preview": "node scripts/family-ai-lab-02/orbital_render.cjs"
   },
   "dependencies": {
     "@remotion/cli": "^4.0.484",

@@ -1,0 +1,41 @@
+{
+  "date": "2026-11-05",
+  "generationOwner": "Owner manually in Muse",
+  "automaticSubmission": "stopped at owner request",
+  "ownerFeedback": "One generated video must contain one shot; previous orbital introduction was too complex.",
+  "pack": "out/family-ai-lab-02/muse-pack/FamilyAiLab02-Muse-Single-Shots.zip",
+  "currentSpec": "docs/family-ai-lab-02/design-v2/muse-pack.json",
+  "attempts": [
+    {
+      "id": "G1a",
+      "reference": "signal-conduit.png",
+      "requestedSeconds": 6,
+      "shot": "Locked side macro, one amber pulse moving left to right",
+      "submitted": true,
+      "source": "Muse native UI response inspected",
+      "result": "502, unavailable after 3 attempts; no g1a file or playable attachment"
+    },
+    {
+      "id": "G1b",
+      "reference": "g1-paper-single.png",
+      "requestedSeconds": 6,
+      "shot": "Locked close-up, paper meets resistance and bends at port",
+      "submitted": false,
+      "result": "Owner took over; no automatic request sent"
+    }
+  ],
+  "earlierOwnerRetry": {
+    "source": "Muse chat message visibly inspected, not a local ffprobe result",
+    "file": "01-orbital-opening.mp4",
+    "reportedDurationSeconds": 10,
+    "reportedSize": [
+      1248,
+      704
+    ],
+    "reportedFPS": 24,
+    "reportedAudio": true,
+    "status": "Generated in Muse after owner retry; owner rejected complex multi-action opening. Not imported or adopted locally."
+  },
+  "newAssets": "Eight selected imagegen originals; two unselected wide reply variants retained in backup.",
+  "filmStatus": "A 42-second silent orbital teaching-animation study is available; the complete bilingual orbital film awaits manually generated clips and revised narration."
+}

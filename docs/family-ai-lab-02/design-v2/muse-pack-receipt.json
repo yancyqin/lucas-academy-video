@@ -1,0 +1,15 @@
+{
+  "archive": "out/family-ai-lab-02/muse-pack/FamilyAiLab02-Muse-Single-Shots.zip",
+  "bytes": 22010156,
+  "sha256": "c008eea1156a8827f72adae1739131cfaf48fddebdc983aa2fcd56d1ba0790a0",
+  "entries": 29,
+  "shotReferences": 6,
+  "settings": "One shot per video, six seconds, 16:9, fixed camera, no speech or subtitles",
+  "prompts": [
+    "Chinese",
+    "English"
+  ],
+  "allEntryChecksumsVerified": true,
+  "contains": "Six shot reference PNGs, world reference, two background plates, overview, 12 prompt text files, prompt documents, offline viewer, imagegen source prompts, manifest and SHA256SUMS",
+  "generationOwner": "Owner in Muse; automation stopped"
+}

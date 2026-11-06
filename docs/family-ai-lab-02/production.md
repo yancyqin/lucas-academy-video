@@ -1,10 +1,19 @@
 # The tiny pipe — bilingual animated review
 
-**Current visual review, 2026-11-05:** the owner selected **01 — orbital pods** from the [three science-fiction directions](design-v2/README.md), with the inside-the-pipe camera language from 03. The ten-second Muse motion request failed: the video service returned 502 after retries, with no source clips or playable output. See the [request](design-v2/opening-request.json), [failure receipt](design-v2/opening-result.json) and [revised bilingual S1](design-v2/s1-script.md). The v1 delivery below remains the content/audio reference; the complete movie has not yet been rebuilt in the selected style.
+**Current visual review, 2026-11-05:** the owner selected orbital pods for the entire movie and then required one shot per generated video. Six independent reference/prompt pairs are packaged for the owner to generate manually in Muse; automated submission has stopped. [Single-shot plan](design-v2/single-shots.md), [full-film direction](design-v2/full-film-plan.md), [handoff](design-v2/generation-handoff.json). A new 42-second silent orbital teaching-animation study is rendered at 720p/30 fps. The full narrated movie below remains the v1 content/audio reference.
 
 The owner requested a story adaptation of the zero-and-one lesson and selected full bilingual narrated animation on 2026-11-05. The original opening is in `lucas-academy-ai/L1-beginner/course.md`; curriculum revision and frozen asset hashes are in [sources.json](sources.json). [Story and shot plan](../../FAMILY-AI-LAB-02.md), [Chinese](zh-script.md), [English](en-script.md).
 
-## Delivery
+## Orbital study and manual generation pack
+
+- `out/family-ai-lab-02/muse-pack/FamilyAiLab02-Muse-Single-Shots.zip`: six native-size reference PNGs, per-shot Chinese/English text files, offline image/prompt viewer, common style reference, two teaching background plates and SHA256SUMS. Start with G1a and G1b. No generated story clip is substituted with a still.
+- `out/family-ai-lab-02/orbital-v2/style-study.mp4`: 42 seconds, 1,260 frames, 1280×720/30 fps, silent, no subtitle tracks. Eight scenes demonstrate the selected materials, signal spheres, ASCII, storage boxes, decision tree, curriculum fruit, real lab and worksheet terminal. This is a visual study, not the finished story.
+- [Imagegen source prompts and hashes](design-v2/full-film-prompts.json), [study verification](design-v2/style-study.json). Ten originals are preserved: eight selected assets and two rejected wide-reply variants. The final reply reference is a simpler boy-only close-up.
+- Rebuild with `npm run fal02:orbital:preview`; `npm run fal02:orbital:stills` renders the eight study frames only. `python3 scripts/family-ai-lab-02/muse_pack.py` rebuilds the owner handoff ZIP. Neither command changes the v1 voiced timeline or audio.
+
+The owner-retried 10-second Muse orbital clip exists in Muse and was rejected for excessive action/shot complexity. The simpler G1a attempt returned 502 after retries. G1b was prepared but not submitted before the owner took over. G2–G5 have not been submitted by Codex. New story clips, final timing, changed space-pod narration and the electronic soundtrack remain to be integrated before a new bilingual delivery.
+
+## Delivery — v1 reference
 
 - Opening preview: `out/family-ai-lab-02/delivery/opening-preview.mp4`, 30 seconds, both audio tracks.
 - Movie: `out/family-ai-lab-02/delivery/family-ai-lab-02.bilingual.mp4`, 4:23.1, 7,893 frames.
