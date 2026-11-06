@@ -261,6 +261,20 @@
       "path": "public/family-ai-lab-01/muse/G4-last.png",
       "credit": "Exact ending frame of Muse G4; reused as the S1 monitor shell",
       "sha256": "eeb2d106a24d08068f01a583abcad1211cdd6006123a9d86c152374d3b8dacf2"
+    },
+    {
+      "path": "public/family-ai-lab-01/art/instrument-screen-v3.png",
+      "sha256": "09c2edf5ec5fad713f4c647fb5e2bb2d164289dd060b803fc75915542e6ca08c",
+      "credit": "Built-in ImageGen; illustrative 1957 teaching set; provenance retained off-picture at owner request",
+      "prompt": "docs/family-ai-lab-01/atmosphere-v3-prompts.json",
+      "dimensions": "1672x941"
+    },
+    {
+      "path": "public/family-ai-lab-01/art/projection-screen-v3.png",
+      "sha256": "9b9cdf628cf9bdbd41856ae8388f749bd3ab19154da3ab604833b0e0e252bd60",
+      "credit": "Built-in ImageGen; illustrative 1957 teaching set; provenance retained off-picture at owner request",
+      "prompt": "docs/family-ai-lab-01/atmosphere-v3-prompts.json",
+      "dimensions": "1672x941"
     }
   ],
   "commonsMediaUsed": false,
