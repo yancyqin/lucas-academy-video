@@ -43,11 +43,12 @@ def score(total):
 
 def effects(timeline):
     track=np.zeros(round(timeline['durationInFrames']/30*RATE),dtype=np.float32);events=[]
-    # Quick high-pass-like noise sweep through the cold open, reproducible seed.
-    t=np.arange(round(1.8*RATE),dtype=np.float32)/RATE;rng=np.random.default_rng(1957)
+    # The sweep follows the launch clip, after the invitation question.
+    launch=next(shot for shot in timeline['storyClips'] if shot['id']=='G1a');duration=launch['duration']/30
+    t=np.arange(round(duration*RATE),dtype=np.float32)/RATE;rng=np.random.default_rng(1957)
     noise=rng.standard_normal(len(t)).astype(np.float32);noise=np.convolve(noise,np.array([1,-.94],dtype=np.float32),mode='same')
-    whoosh=.025*noise*np.sin(np.pi*t/1.8)**2+.014*np.sin(2*np.pi*(160*t+280*t*t))*np.sin(np.pi*t/1.8)**2
-    add(track,0,whoosh)
+    whoosh=.025*noise*np.sin(np.pi*t/duration)**2+.014*np.sin(2*np.pi*(160*t+280*t*t))*np.sin(np.pi*t/duration)**2
+    add(track,launch['from']/30,whoosh);events.append({'seconds':launch['from']/30,'durationSeconds':duration,'type':'launch'})
     for row in timeline['lines']:
         if row['visual'] in ('send-p','send-play'):
             count=8 if row['visual']=='send-p' else 24

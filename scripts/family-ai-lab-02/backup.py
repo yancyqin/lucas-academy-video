@@ -17,12 +17,14 @@ def main():
     shutil.copytree(ROOT/'docs/family-ai-lab-02',BACKUP/'records',dirs_exist_ok=True)
     for series in ('v1','v2'):
         for lang in ('en','zh'):
-            folder=ROOT.parent/f'lucas-academy-media/outputs/louise/{lang}/family-ai-lab-02-{series}/s1.10'
+            folder=ROOT.parent/f'lucas-academy-media/outputs/louise/{lang}/family-ai-lab-02-{series}'
             if not folder.exists():continue
-            for p in folder.iterdir():
-                if p.suffix not in ('.wav','.json'):continue
+            for p in folder.glob('s*/*'):
+                if not p.is_file() or p.suffix not in ('.wav','.json'):continue
                 category='raw-narration' if series=='v1' else 'raw-narration-v2'
-                dest=BACKUP/f'{category}/{lang}'/p.name;dest.parent.mkdir(parents=True,exist_ok=True)
+                target=BACKUP/f'{category}/{lang}'
+                if p.parent.name!='s1.10':target=target/p.parent.name
+                dest=target/p.name;dest.parent.mkdir(parents=True,exist_ok=True)
                 if dest.exists():assert sha(dest)==sha(p),('Immutable take differs',dest)
                 else:shutil.copy2(p,dest)
     for name in ('audio','narration','orbital-v2/audio'):

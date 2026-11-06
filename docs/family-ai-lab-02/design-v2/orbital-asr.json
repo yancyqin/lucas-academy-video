@@ -1516,5 +1516,373 @@
       }
     ],
     "model": "small"
+  },
+  "en/fa02-01-01.take2": {
+    "sha256": "7955c5fd1b42b70873ece6ff2f1d5e87be60913df12880b62133230531cb3974",
+    "expected": "This note is too big. How can Mia invite Leo to play?",
+    "heard": "This note is too big. How can Mia invite Leo to play?",
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0.6599999999999995,
+        "end": 1.94,
+        "text": " This note is too big.",
+        "tokens": [
+          50364,
+          639,
+          3637,
+          307,
+          886,
+          955,
+          13,
+          50544
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.35046795794838353,
+        "compression_ratio": 0.9298245614035088,
+        "no_speech_prob": 0.12674595415592194,
+        "words": [
+          {
+            "word": " This",
+            "start": 0.6599999999999995,
+            "end": 1.1,
+            "probability": 0.6157663464546204
+          },
+          {
+            "word": " note",
+            "start": 1.1,
+            "end": 1.34,
+            "probability": 0.9966316819190979
+          },
+          {
+            "word": " is",
+            "start": 1.34,
+            "end": 1.56,
+            "probability": 0.9962466359138489
+          },
+          {
+            "word": " too",
+            "start": 1.56,
+            "end": 1.72,
+            "probability": 0.9876226186752319
+          },
+          {
+            "word": " big.",
+            "start": 1.72,
+            "end": 1.94,
+            "probability": 0.9979350566864014
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "seek": 0,
+        "start": 3.2,
+        "end": 5.16,
+        "text": " How can Mia invite Leo to play?",
+        "tokens": [
+          50544,
+          1012,
+          393,
+          28545,
+          7980,
+          19344,
+          281,
+          862,
+          30,
+          50632
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.35046795794838353,
+        "compression_ratio": 0.9298245614035088,
+        "no_speech_prob": 0.12674595415592194,
+        "words": [
+          {
+            "word": " How",
+            "start": 3.2,
+            "end": 3.64,
+            "probability": 0.962600588798523
+          },
+          {
+            "word": " can",
+            "start": 3.64,
+            "end": 3.84,
+            "probability": 0.9906623959541321
+          },
+          {
+            "word": " Mia",
+            "start": 3.84,
+            "end": 4.04,
+            "probability": 0.9371582865715027
+          },
+          {
+            "word": " invite",
+            "start": 4.04,
+            "end": 4.48,
+            "probability": 0.9826623201370239
+          },
+          {
+            "word": " Leo",
+            "start": 4.48,
+            "end": 4.68,
+            "probability": 0.9651453495025635
+          },
+          {
+            "word": " to",
+            "start": 4.68,
+            "end": 4.9,
+            "probability": 0.997914731502533
+          },
+          {
+            "word": " play?",
+            "start": 4.9,
+            "end": 5.16,
+            "probability": 0.9978834986686707
+          }
+        ]
+      }
+    ],
+    "model": "small"
+  },
+  "en/fa02-02-01": {
+    "sha256": "dff281da681c9c7ad6b90360983f8071fdc6c8684729dded2d5b44046021e0bc",
+    "expected": "Yes! Start with one little ball. It has just two possible values.",
+    "heard": "Yes, start with one little ball. It has just two possible values.",
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0.0,
+        "end": 4.88,
+        "text": " Yes, start with one little ball. It has just two possible values.",
+        "tokens": [
+          50364,
+          1079,
+          11,
+          722,
+          365,
+          472,
+          707,
+          2594,
+          13,
+          467,
+          575,
+          445,
+          732,
+          1944,
+          4190,
+          13,
+          50628
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.2845061620076497,
+        "compression_ratio": 0.9558823529411765,
+        "no_speech_prob": 0.004523296374827623,
+        "words": [
+          {
+            "word": " Yes,",
+            "start": 0.0,
+            "end": 0.42,
+            "probability": 0.9009310007095337
+          },
+          {
+            "word": " start",
+            "start": 0.94,
+            "end": 1.34,
+            "probability": 0.9887186288833618
+          },
+          {
+            "word": " with",
+            "start": 1.34,
+            "end": 1.58,
+            "probability": 0.9987797141075134
+          },
+          {
+            "word": " one",
+            "start": 1.58,
+            "end": 1.88,
+            "probability": 0.9269524216651917
+          },
+          {
+            "word": " little",
+            "start": 1.88,
+            "end": 2.1,
+            "probability": 0.9810479879379272
+          },
+          {
+            "word": " ball.",
+            "start": 2.1,
+            "end": 2.48,
+            "probability": 0.9983548521995544
+          },
+          {
+            "word": " It",
+            "start": 2.98,
+            "end": 3.24,
+            "probability": 0.99196857213974
+          },
+          {
+            "word": " has",
+            "start": 3.24,
+            "end": 3.4,
+            "probability": 0.9979270696640015
+          },
+          {
+            "word": " just",
+            "start": 3.4,
+            "end": 3.64,
+            "probability": 0.9878199100494385
+          },
+          {
+            "word": " two",
+            "start": 3.64,
+            "end": 3.98,
+            "probability": 0.9023572206497192
+          },
+          {
+            "word": " possible",
+            "start": 3.98,
+            "end": 4.42,
+            "probability": 0.9980085492134094
+          },
+          {
+            "word": " values.",
+            "start": 4.42,
+            "end": 4.88,
+            "probability": 0.9983910322189331
+          }
+        ]
+      }
+    ],
+    "model": "small"
+  },
+  "zh/fa02-02-01": {
+    "sha256": "c75271d4526c71c2e853dafa40102865b385332e60fcaea95d6ac3656057a0d8",
+    "expected": "可以！先看一颗珠子。它只有两种可能。",
+    "heard": "可以先看一棵豬子它只有兩種可能",
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0.0,
+        "end": 2.3,
+        "text": "可以先看一棵豬子",
+        "tokens": [
+          50364,
+          6723,
+          10108,
+          4200,
+          2257,
+          16407,
+          113,
+          19517,
+          105,
+          7626,
+          50490
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.488054074739155,
+        "compression_ratio": 0.8035714285714286,
+        "no_speech_prob": 0.008999017998576164,
+        "words": [
+          {
+            "word": "可以",
+            "start": 0.0,
+            "end": 0.54,
+            "probability": 0.9602813720703125
+          },
+          {
+            "word": "先",
+            "start": 0.54,
+            "end": 1.46,
+            "probability": 0.5335240960121155
+          },
+          {
+            "word": "看",
+            "start": 1.46,
+            "end": 1.66,
+            "probability": 0.9962385892868042
+          },
+          {
+            "word": "一",
+            "start": 1.66,
+            "end": 1.82,
+            "probability": 0.9697375297546387
+          },
+          {
+            "word": "棵",
+            "start": 1.82,
+            "end": 1.92,
+            "probability": 0.7121583819389343
+          },
+          {
+            "word": "豬",
+            "start": 1.92,
+            "end": 2.1,
+            "probability": 0.6512135565280914
+          },
+          {
+            "word": "子",
+            "start": 2.1,
+            "end": 2.3,
+            "probability": 0.9141011238098145
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "seek": 0,
+        "start": 2.3,
+        "end": 4.22,
+        "text": "它只有兩種可能",
+        "tokens": [
+          50490,
+          11284,
+          35244,
+          16313,
+          16516,
+          16657,
+          50590
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.488054074739155,
+        "compression_ratio": 0.8035714285714286,
+        "no_speech_prob": 0.008999017998576164,
+        "words": [
+          {
+            "word": "它",
+            "start": 2.3,
+            "end": 3.0,
+            "probability": 0.7285898327827454
+          },
+          {
+            "word": "只有",
+            "start": 3.0,
+            "end": 3.6,
+            "probability": 0.9294312000274658
+          },
+          {
+            "word": "兩",
+            "start": 3.6,
+            "end": 3.78,
+            "probability": 0.9653505086898804
+          },
+          {
+            "word": "種",
+            "start": 3.78,
+            "end": 3.96,
+            "probability": 0.9974560141563416
+          },
+          {
+            "word": "可能",
+            "start": 3.96,
+            "end": 4.22,
+            "probability": 0.994608998298645
+          }
+        ]
+      }
+    ],
+    "model": "small"
   }
 }

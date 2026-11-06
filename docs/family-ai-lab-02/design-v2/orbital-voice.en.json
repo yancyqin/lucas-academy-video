@@ -1,14 +1,14 @@
 [
   {
     "id": "fa02-01-01",
-    "caption": "The note won't fit! How can Mia invite Leo to play?",
-    "spoken": "The note won't fit! How can Mia invite Leo to play?",
+    "caption": "This note is too big. How can Mia invite Leo to play?",
+    "spoken": "This note is too big. How can Mia invite Leo to play?",
     "voice": "louise/en",
     "mode": "zero-shot-instruct",
-    "instruction": "Please speak with playful curiosity, as if inviting a child into a little space adventure. Warm, lively, natural connected speech. Clear short sentences.",
-    "speed": 1.1,
+    "instruction": "Please speak clearly and warmly to a child. Say the first short sentence at a relaxed pace, with every word distinct. Briefly pause after big. Then ask the question with natural playful curiosity. Keep Mia and Leo clear.",
+    "speed": 1.0,
     "scene": 1,
-    "settingsSha256": "ec52f7df5f6cd15234b1a06d8d134d0c8c91fb484d95537c34a499d968d41c7b"
+    "settingsSha256": "f49cf5baea6d2670ea25fdb78afbda509f9384c6ee1febacf2d6dddcd124ed2a"
   },
   {
     "id": "fa02-01-02",
@@ -20,6 +20,17 @@
     "speed": 1.1,
     "scene": 1,
     "settingsSha256": "2b1986d9bee5d6d0101111efec9e529cde2c75967d23ff494db7aaf12f4e110f"
+  },
+  {
+    "id": "fa02-02-01",
+    "caption": "Yes! Start with one little ball. It has just two possible values.",
+    "spoken": "Yes! Start with one little ball. It has just two possible values.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Begin with a bright, clear, confident Yes! Briefly pause, then continue the explanation calmly and clearly, as if exploring with a child. Natural connected speech.",
+    "speed": 1.1,
+    "scene": 2,
+    "settingsSha256": "07182448e1d50c0751fcbe97f30f64b50a43a9c9e0012d61b55dc311bbee4639"
   },
   {
     "id": "fa02-04-02",

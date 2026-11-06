@@ -1,7 +1,7 @@
 {
-  "file": "out/family-ai-lab-02/orbital-v2/delivery/opening-preview.mp4",
-  "frames": 710,
-  "seconds": 23.666666666666668,
+  "file": "out/family-ai-lab-02/orbital-v2/delivery/opening-yes.mp4",
+  "frames": 900,
+  "seconds": 30.0,
   "size": [
     1280,
     720
@@ -10,5 +10,12 @@
     "English default",
     "Chinese"
   ],
-  "sha256": "25db43a502c19a7dcd60d61bd36155509bb9045d02e3b89a1e57af1e4154aa0a"
+  "scope": "Complete S1, including the moved launch, explicit Yes / 可以, and the complete first explanation.",
+  "opening": {
+    "paperSeconds": 7.5,
+    "launchAtSeconds": 22.4,
+    "returnToExplanationAtSeconds": 24.2,
+    "affirmationAtSeconds": 24.3
+  },
+  "sha256": "1b0946f071737283cba8a867bddc13ad422e400be1921193a47eba98c9332b5d"
 }

@@ -12,13 +12,15 @@ FPS=30
 def sha(path):return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def prepare_clips():
+def prepare_clips(only=None):
     inputs=json.loads((DOC/'clips.json').read_text())['clips']
     # Preserve the complete source files. Only these clearly observed spans
     # become the local editing derivatives; no shot is reversed or looped.
-    spans={'G1a':(.8,6.6,1.8),'G1b':(.2,6.2,6.0),'G2':(1.0,6.0,5.0),'G3':(.2,6.0,5.8),'G4':(.2,5.2,5.0),'G5':(0.0,2.4,2.4)}
-    folder=DEST/'clips';folder.mkdir(parents=True,exist_ok=True);result={}
+    spans={'G1a':(.8,6.6,1.8),'G1b':(.2,7.7,7.5),'G2':(1.0,6.0,5.0),'G3':(.2,6.0,5.8),'G4':(.2,5.2,5.0),'G5':(0.0,2.4,2.4)}
+    folder=DEST/'clips';folder.mkdir(parents=True,exist_ok=True)
+    result=json.loads((DEST/'story-clips.json').read_text()) if (DEST/'story-clips.json').exists() else {}
     for source in inputs:
+        if only and source['id'] not in only:continue
         key=source['id'];start,end,duration=spans[key];original=ROOT/source['file'];assert sha(original)==source['sha256']
         frames=round(duration*FPS);video=folder/(key+'.mp4');last=folder/(key+'-last.png');speed=(end-start)/duration
         filters=f'setpts=(PTS-STARTPTS)/{speed:.9f},fps=30,scale=1920:1080:force_original_aspect_ratio=increase,crop=1920:1080,setsar=1,format=yuv420p,tpad=stop_mode=clone:stop_duration=0.2'
@@ -46,14 +48,25 @@ def build():
         lead=round(line.get('leadInSeconds',0)*FPS);body=max(math.ceil((max(seconds.values())+.1)*FPS)+lead,round(line.get('minSeconds',0)*FPS))
         duration=body+round((.4+line.get('hold',0)+line.get('afterHoldSeconds',0))*FPS)
         rows.append({**line,'from':frame,'duration':duration,'speechOffsetFrames':lead+3,'bodyDurationFrames':body,'voiceSeconds':seconds});frame+=duration
-    lookup={row['visual']:row for row in rows};story=[]
+    lookup={row['visual']:row for row in rows};opening=script['opening'];challenge=lookup[opening['launchAfterVisual']]
+    # Let both narrations finish the invitation question before the launch.
+    launch=max(round(opening['launchAtSeconds']*FPS),challenge['from']+challenge['speechOffsetFrames']+math.ceil(max(challenge['voiceSeconds'].values())*FPS)+3)
+    launch_end=launch+clips['G1a']['frames'];extra=max(0,launch_end-challenge['from']-challenge['duration'])
+    for row in rows:
+        if row['from']>challenge['from']:row['from']+=extra
+    challenge['duration']+=extra;frame+=extra
+    story=[]
     def shot(key,visual,offset=0,duration=None):
         row=lookup[visual];story.append({**clips[key],'from':row['from']+offset,'duration':duration if duration is not None else row['duration']-offset})
-    shot('G1a','world',duration=clips['G1a']['frames']);shot('G1b','world',offset=clips['G1a']['frames']);shot('G2','received');shot('G3','boxes')
+    paper=round(opening['paperSeconds']*FPS)
+    assert paper<=clips['G1b']['frames'] and paper<=lookup['card']['from']+lookup['card']['duration']
+    shot('G1b','world',duration=paper)
+    shot('G1a',opening['launchAfterVisual'],offset=launch-challenge['from'],duration=clips['G1a']['frames'])
+    shot('G2','received');shot('G3','boxes')
     shot('G4','fruit-seeds',offset=lookup['fruit-seeds']['bodyDurationFrames'])
     shot('G5','picnic',duration=clips['G5']['frames'])
     for clip in story:assert clip['duration']>0
-    timeline={'fps':FPS,'durationInFrames':frame,'narrated':True,'defaultLanguage':'en','scenes':script['scenes'],'workingTitle':script['workingTitle'],'lines':rows,'storyClips':story,'scriptSha256':sha(script_path),'visualStyle':'orbital-v2','cornerCredits':False,'delivery':'One clean picture, English default, independent Chinese audio, external subtitles only.'}
+    timeline={'fps':FPS,'durationInFrames':frame,'narrated':True,'defaultLanguage':'en','scenes':script['scenes'],'workingTitle':script['workingTitle'],'lines':rows,'storyClips':story,'opening':{'paperSeconds':paper/FPS,'launchAtSeconds':launch/FPS,'returnToExplanationAtSeconds':lookup['one-bit']['from']/FPS,'affirmationAtSeconds':(lookup['one-bit']['from']+lookup['one-bit']['speechOffsetFrames'])/FPS},'scriptSha256':sha(script_path),'visualStyle':'orbital-v2','cornerCredits':False,'delivery':'One clean picture, English default, independent Chinese audio, external subtitles only.'}
     (DEST/'timeline.json').write_text(json.dumps(timeline,ensure_ascii=False,indent=2)+'\n');(DOC/'orbital-timeline.json').write_text(json.dumps(timeline,ensure_ascii=False,indent=2)+'\n')
     for lang in ('en','zh'):
         captions=[];paragraphs=['# '+script['workingTitle'][lang]]
@@ -66,5 +79,5 @@ def build():
 
 
 if __name__=='__main__':
-    parser=argparse.ArgumentParser();parser.add_argument('--clips',action='store_true');args=parser.parse_args()
-    prepare_clips() if args.clips else build()
+    parser=argparse.ArgumentParser();parser.add_argument('--clips',action='store_true');parser.add_argument('--only',help='Comma-separated clip IDs to prepare');args=parser.parse_args()
+    prepare_clips(set(args.only.split(',')) if args.only else None) if args.clips else build()

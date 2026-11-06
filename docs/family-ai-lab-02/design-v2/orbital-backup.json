@@ -1,12 +1,12 @@
 {
   "backup": "/Users/yqin/repo/playground/lucas-academy-video-data/family-ai-lab-02",
-  "restoreCheck": "tmp/family-ai-lab-02/orbital-final-restore-do_8e3h_",
+  "restoreCheck": "tmp/family-ai-lab-02/opening-yes-restore-_mu4bqo0",
   "sha256ManifestVerified": true,
-  "manifestFilesAtRestore": 408,
-  "publicInputsRestored": 140,
-  "publicInputBytes": 109364101,
+  "manifestFilesAtRestore": 420,
+  "publicInputsRestored": 143,
+  "publicInputBytes": 110783321,
   "byteIdentical": true,
   "originalMuseFiles": 6,
-  "newRawVoiceTakes": 11,
+  "newRawVoiceTakes": 14,
   "overwritePolicy": "All manifest hashes and all existing targets preflighted; differing destinations refuse the complete restore."
 }

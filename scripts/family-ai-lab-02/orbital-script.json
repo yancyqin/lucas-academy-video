@@ -1,11 +1,16 @@
 {
-  "revision": "orbital-v2-2026-11-05",
+  "revision": "orbital-v2-opening-order-2026-11-05",
   "workingTitle": {
-    "zh": "只有0和1，怎么说一句话？",
-    "en": "How Can 0 and 1 Send a Message?"
+    "zh": "0和1，能聊天吗？",
+    "en": "Can 0 and 1 Talk?"
   },
   "source": "https://ai.lucasacademy.org/courses/zero-and-one/",
   "direction": "Orbital pods; one shot per Muse clip; clean picture; English default plus independent Chinese audio.",
+  "opening": {
+    "paperSeconds": 7.5,
+    "launchAtSeconds": 22.4,
+    "launchAfterVisual": "challenge"
+  },
   "scenes": [
     "The invitation",
     "Two tiny signals",
@@ -22,8 +27,15 @@
       "scene": 1,
       "visual": "world",
       "zh": "纸条过不去。米娅怎么邀请对面的里奥来玩？",
-      "en": "The note won't fit! How can Mia invite Leo to play?",
-      "leadInSeconds": 1.8
+      "en": "This note is too big. How can Mia invite Leo to play?",
+      "leadInSeconds": 0.3,
+      "minSeconds": 6.4,
+      "voice": {
+        "en": {
+          "speed": 1.0,
+          "instruction": "Please speak clearly and warmly to a child. Say the first short sentence at a relaxed pace, with every word distinct. Briefly pause after big. Then ask the question with natural playful curiosity. Keep Mia and Leo clear."
+        }
+      }
     },
     {
       "id": "fa02-01-02",
@@ -51,8 +63,16 @@
       "id": "fa02-02-01",
       "scene": 2,
       "visual": "one-bit",
-      "zh": "先看一颗珠子。它只有两种可能。",
-      "en": "Start with one little ball. It has just two possible values."
+      "zh": "可以！先看一颗珠子。它只有两种可能。",
+      "en": "Yes! Start with one little ball. It has just two possible values.",
+      "voice": {
+        "en": {
+          "instruction": "Begin with a bright, clear, confident Yes! Briefly pause, then continue the explanation calmly and clearly, as if exploring with a child. Natural connected speech."
+        },
+        "zh": {
+          "instruction": "开头先清楚、有精神地说「可以」，稍停一下，再用亲切平稳的语气继续讲解，像坐在孩子旁边说话。"
+        }
+      }
     },
     {
       "id": "fa02-02-02",

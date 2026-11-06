@@ -1,17 +1,17 @@
 {
   "movie": "out/family-ai-lab-02/orbital-v2/delivery/family-ai-lab-02.bilingual.mp4",
-  "durationSeconds": 263.56666666666666,
-  "frames": 7907,
+  "durationSeconds": 264.73333333333335,
+  "frames": 7942,
   "size": [
     1920,
     1080
   ],
   "fps": 30,
-  "sha256": "7d2d3ee8bc7eb632359a4ba1cee1c251423c0eaa57437072ecab272312e46a0e",
+  "sha256": "9de7cfdfd74706a0dabeee359fd487328b2c8b4366b540a4bdef5c3a1c7b9bbb",
   "nativeMuseClips": 6,
   "originalMuseSeconds": 52.0,
   "selectedVoiceTakes": 72,
-  "reusedV1Takes": 63,
+  "reusedV1Takes": 61,
   "audioTracks": [
     {
       "language": "English",
@@ -24,28 +24,28 @@
   ],
   "loudness": [
     {
-      "input_i": "-16.04",
-      "input_tp": "-0.69",
+      "input_i": "-16.05",
+      "input_tp": "-0.97",
       "input_lra": "4.30",
-      "input_thresh": "-27.00",
-      "output_i": "-16.10",
+      "input_thresh": "-27.03",
+      "output_i": "-16.09",
       "output_tp": "-1.00",
-      "output_lra": "4.10",
-      "output_thresh": "-27.01",
+      "output_lra": "3.90",
+      "output_thresh": "-27.03",
       "normalization_type": "dynamic",
-      "target_offset": "0.10"
+      "target_offset": "0.09"
     },
     {
-      "input_i": "-16.04",
-      "input_tp": "-0.98",
-      "input_lra": "4.10",
-      "input_thresh": "-27.29",
-      "output_i": "-16.24",
+      "input_i": "-16.06",
+      "input_tp": "-0.95",
+      "input_lra": "4.00",
+      "input_thresh": "-27.28",
+      "output_i": "-16.09",
       "output_tp": "-1.00",
-      "output_lra": "3.70",
-      "output_thresh": "-27.45",
+      "output_lra": "3.50",
+      "output_thresh": "-27.28",
       "normalization_type": "dynamic",
-      "target_offset": "0.24"
+      "target_offset": "0.09"
     }
   ],
   "subtitleTracks": 0,
@@ -58,7 +58,7 @@
   "qr": [
     {
       "visual": "lab",
-      "seconds": 233.16666666666666,
+      "seconds": 234.33333333333334,
       "decodedAt": [
         "1080p",
         "720p"
@@ -66,7 +66,7 @@
     },
     {
       "visual": "worksheet",
-      "seconds": 240.0,
+      "seconds": 241.16666666666666,
       "decodedAt": [
         "1080p",
         "720p"
@@ -74,16 +74,34 @@
     },
     {
       "visual": "invite",
-      "seconds": 258.76666666666665,
+      "seconds": 259.93333333333334,
       "decodedAt": [
         "1080p",
         "720p"
       ]
     }
   ],
-  "sourceScriptSha256": "4179597c331ef8fc6171dc1bd9949af8afba93353702b6dd899aefc9970c97b5",
-  "visualSourceSha256": "d74af07e2363a332632f03cb598d08dcc694726bd26dd97fde6ed3b45eb96c87",
+  "sourceScriptSha256": "34a426b40c36c7173b6f091f08b0de6b85c21094a78394ca322e29dc467658cd",
+  "visualSourceSha256": "3479d88960d36523edc39ffbccf478bfc1728f34c90bbd14f6564d9bf05a6465",
   "sourceHashesVerified": 13,
   "artworkHashesVerified": 13,
-  "voiceDecisionsVerified": 72
+  "voiceDecisionsVerified": 72,
+  "opening": {
+    "paperSeconds": 7.5,
+    "launchAtSeconds": 22.4,
+    "returnToExplanationAtSeconds": 24.2,
+    "affirmationAtSeconds": 24.3
+  },
+  "covers": {
+    "sourceFrame": 0,
+    "pixelMatchToFinalFilm": true,
+    "titles": {
+      "zh": "0和1，能聊天吗？",
+      "en": "Can 0 and 1 Talk?"
+    },
+    "files": {
+      "en": "out/family-ai-lab-02/orbital-v2/cover/family-ai-lab-02.en.png",
+      "zh": "out/family-ai-lab-02/orbital-v2/cover/family-ai-lab-02.zh.png"
+    }
+  }
 }

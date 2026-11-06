@@ -37,7 +37,7 @@
     "status": "Generated in Muse after owner retry; owner rejected complex multi-action opening. Not imported or adopted locally."
   },
   "newAssets": "Eight selected imagegen originals; two unselected wide reply variants retained in backup.",
-  "filmStatus": "Full orbital bilingual review rendered and verified: 7907 frames, 263.5667 s, 1080p/30 fps, clean picture, English default, independent Chinese audio and external SRTs.",
+  "filmStatus": "Rendered and verified: Can 0 and 1 Talk?, 7942 frames, 264.7333 seconds, English default with independent Chinese audio. Paper first, launch at 22.4 s, affirmative Yes / 可以 at 24.3 s, then explanation.",
   "ownerManualUpdate": {
     "date": "2026-11-05",
     "reportedCompleted": [
@@ -61,5 +61,8 @@
     "editingSpans": "docs/family-ai-lab-02/design-v2/story-clips.json"
   },
   "delivery": "out/family-ai-lab-02/orbital-v2/delivery/family-ai-lab-02.bilingual.mp4",
-  "verification": "docs/family-ai-lab-02/design-v2/orbital-verification.json"
+  "verification": "docs/family-ai-lab-02/design-v2/orbital-verification.json",
+  "openingRevision": "docs/family-ai-lab-02/design-v2/opening-revision.json",
+  "openingPreview": "out/family-ai-lab-02/orbital-v2/delivery/opening-yes.mp4",
+  "covers": "docs/family-ai-lab-02/design-v2/cover.json"
 }

@@ -1,9 +1,9 @@
-# How Can 0 and 1 Send a Message?
+# Can 0 and 1 Talk?
 
 
 ## fa02-01-01
 
-The note won't fit! How can Mia invite Leo to play?
+This note is too big. How can Mia invite Leo to play?
 
 
 ## fa02-01-02
@@ -23,7 +23,7 @@ Could you send a message with only those two kinds of signal?
 
 ## fa02-02-01
 
-Start with one little ball. It has just two possible values.
+Yes! Start with one little ball. It has just two possible values.
 
 
 ## fa02-02-02

@@ -41,6 +41,15 @@ def main():
         assert row['sourceStartSeconds']<row['sourceEndSeconds'] and row['speed']>0
     assert len(tl['storyClips'])==6
     for shot in tl['storyClips']:assert shot['from']>=0 and shot['from']+shot['duration']<=position
+    paper=next(shot for shot in tl['storyClips'] if shot['id']=='G1b');launch=next(shot for shot in tl['storyClips'] if shot['id']=='G1a')
+    assert paper['from']==0 and paper['duration']==225 and paper['frames']>=paper['duration']
+    assert abs(launch['from']/30-22.4)<1
+    challenge=next(row for row in tl['lines'] if row['visual']=='challenge');explanation=next(row for row in tl['lines'] if row['visual']=='one-bit')
+    assert launch['from']>=challenge['from']+challenge['speechOffsetFrames']+math.ceil(max(challenge['voiceSeconds'].values())*30)
+    assert launch['from']+launch['duration']==explanation['from']
+    assert explanation['en'].startswith('Yes!') and explanation['zh'].startswith('可以！')
+    assert tl['workingTitle']=={'en':'Can 0 and 1 Talk?','zh':'0和1，能聊天吗？'}
+    for first,second in zip(sorted(tl['storyClips'],key=lambda shot:shot['from']),sorted(tl['storyClips'],key=lambda shot:shot['from'])[1:]):assert first['from']+first['duration']<=second['from']
     seed=next(row for row in tl['lines'] if row['visual']=='fruit-seeds');reveal=next(row for row in tl['storyClips'] if row['id']=='G4');assert reveal['from']>=seed['from']+seed['bodyDurationFrames']
     for lang,file in [('en','en'),('zh','zh-Hans')]:
         srt=(DATA/(lang+'.srt')).read_text();assert srt==(OUT/'delivery'/(file+'.srt')).read_text()
@@ -70,8 +79,16 @@ def main():
         subprocess.run([str(binary),str(image)],check=True)
         small=OUT/f'final-qr-{visual}-720.png';subprocess.run(['ffmpeg','-v','error','-y','-i',str(image),'-vf','scale=1280:720','-frames:v','1',str(small)],check=True);subprocess.run([str(binary),str(small)],check=True)
         qr.append({'visual':visual,'seconds':second,'decodedAt':['1080p','720p']})
+    cover=json.loads((DOC/'cover.json').read_text())
+    assert cover['sourceFrame']==0 and cover['sourceMovieSha256']==sha(movie) and cover['titles']==tl['workingTitle']
+    def frame_pixels(path):return subprocess.check_output(['ffmpeg','-v','error','-i',str(path),'-map','0:v:0','-frames:v','1','-pix_fmt','rgb24','-f','hash','-hash','sha256','-']).decode().strip()
+    assert frame_pixels(movie)==frame_pixels(OUT/'cover/first-frame.png')
+    for lang,row in cover['covers'].items():
+        path=ROOT/row['file'];assert path.stat().st_size<2_000_000 and sha(path)==row['sha256']
+        dims=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_entries','stream=width,height','-of','json',str(path)]))['streams'][0]
+        assert (dims['width'],dims['height'])==(1280,720) and row['unchangedOutsideTitle']
     result={'movie':str(movie.relative_to(ROOT)),'durationSeconds':position/30,'frames':position,'size':[1920,1080],'fps':30,'sha256':sha(movie),'nativeMuseClips':6,'originalMuseSeconds':sum(x['durationSeconds'] for x in originals),'selectedVoiceTakes':72,'reusedV1Takes':sum(x.get('reusedFromV1',False) for v in voices.values() for x in v.values()),'audioTracks':[{'language':'English','default':True},{'language':'Chinese','default':False}],'loudness':levels,'subtitleTracks':0,'externalSRTs':{'en':36,'zh-Hans':36},'cornerCredits':False,'blackSegments':[],'qr':qr,'sourceScriptSha256':tl['scriptSha256'],'visualSourceSha256':sha(ROOT/'src/videos/family-ai-lab-02/FamilyAiLab02Orbital.tsx')}
-    result.update(sourceHashesVerified=len(frozen),artworkHashesVerified=len(artwork),voiceDecisionsVerified=72)
+    result.update(sourceHashesVerified=len(frozen),artworkHashesVerified=len(artwork),voiceDecisionsVerified=72,opening=tl['opening'],covers={'sourceFrame':0,'pixelMatchToFinalFilm':True,'titles':cover['titles'],'files':{lang:row['file'] for lang,row in cover['covers'].items()}})
     (DOC/'orbital-verification.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
     (OUT/'delivery/verification.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
     print(json.dumps({k:result[k] for k in ['movie','durationSeconds','frames','sha256','cornerCredits','sourceHashesVerified','artworkHashesVerified','voiceDecisionsVerified']},ensure_ascii=False))

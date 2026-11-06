@@ -1,9 +1,9 @@
 {
   "en/fa02-01-01": {
     "checked": true,
-    "take": "",
-    "sha256": "02ffa5a4c0bc4edf2224b4cf61c8e3488a55f53daae79c1bbe34b511cba36914",
-    "note": "ASR inspected: full expected phrase, figures and letter names retained; punctuation and numeral formatting are transcription variants."
+    "take": "2",
+    "sha256": "7955c5fd1b42b70873ece6ff2f1d5e87be60913df12880b62133230531cb3974",
+    "note": "Owner found the first English line unclear. Rephrased the opening to This note is too big; rerecorded at speed 1.0 with a clear first sentence and brief pause. Small-model ASR matches every expected word, including Mia and Leo."
   },
   "en/fa02-01-02": {
     "checked": true,
@@ -52,5 +52,17 @@
     "take": "2",
     "sha256": "339eb6078e1304337e9161b82a6a749e232531297d46485a32a2604af86b2f84",
     "note": "Replacement take inspected: complete revised phrase, clear 管道连接 / 按下发送键. Traditional characters and the final 啦/了 transcription variant do not alter the message; no appended speech."
+  },
+  "en/fa02-02-01": {
+    "checked": true,
+    "take": "",
+    "sha256": "dff281da681c9c7ad6b90360983f8071fdc6c8684729dded2d5b44046021e0bc",
+    "note": "Explicit affirmative added after the launch before the explanation. Whisper small transcribes Yes and every following word; comma/exclamation is a punctuation variant."
+  },
+  "zh/fa02-02-01": {
+    "checked": true,
+    "take": "",
+    "sha256": "c75271d4526c71c2e853dafa40102865b385332e60fcaea95d6ac3656057a0d8",
+    "note": "Explicit affirmative added after the launch before the explanation. Whisper small confirms 可以 before the complete explanation; 棵/颗 and 猪/珠 are exact pronunciation homophones, with traditional-script transcription variants retained."
   }
 }

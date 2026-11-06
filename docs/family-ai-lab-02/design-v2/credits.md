@@ -1,4 +1,4 @@
-# The Tiny Pipe — sources and credits
+# Can 0 and 1 Talk? — sources and credits
 
 By Lucas Academy Team.
 

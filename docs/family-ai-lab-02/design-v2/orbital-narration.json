@@ -1,14 +1,14 @@
 {
   "en": {
     "fa02-01-01": {
-      "clip": "orbital-v2/narration/en/fa02-01-01.wav",
-      "seconds": 3.74,
-      "sha256": "02ffa5a4c0bc4edf2224b4cf61c8e3488a55f53daae79c1bbe34b511cba36914",
-      "source": "outputs/louise/en/family-ai-lab-02-v2/s1.10/fa02-01-01.wav",
-      "caption": "The note won't fit! How can Mia invite Leo to play?",
-      "spoken": "The note won't fit! How can Mia invite Leo to play?",
-      "settingsSha256": "ec52f7df5f6cd15234b1a06d8d134d0c8c91fb484d95537c34a499d968d41c7b",
-      "review": "ASR inspected: full expected phrase, figures and letter names retained; punctuation and numeral formatting are transcription variants.",
+      "clip": "orbital-v2/narration/en/fa02-01-01.take2.wav",
+      "seconds": 5.4,
+      "sha256": "7955c5fd1b42b70873ece6ff2f1d5e87be60913df12880b62133230531cb3974",
+      "source": "outputs/louise/en/family-ai-lab-02-v2/s1.00/fa02-01-01.take2.wav",
+      "caption": "This note is too big. How can Mia invite Leo to play?",
+      "spoken": "This note is too big. How can Mia invite Leo to play?",
+      "settingsSha256": "f49cf5baea6d2670ea25fdb78afbda509f9384c6ee1febacf2d6dddcd124ed2a",
+      "review": "Owner found the first English line unclear. Rephrased the opening to This note is too big; rerecorded at speed 1.0 with a clear first sentence and brief pause. Small-model ASR matches every expected word, including Mia and Leo.",
       "reusedFromV1": false
     },
     "fa02-01-02": {
@@ -45,15 +45,15 @@
       "reusedFromV1": true
     },
     "fa02-02-01": {
-      "clip": "narration/en/fa02-02-01.wav",
-      "seconds": 4.64,
-      "sha256": "654896211422796a8d8047d6ffb7f1278393a5766286c56a735fedfd73937954",
-      "source": "outputs/louise/en/family-ai-lab-02-v1/s1.10/fa02-02-01.take3.wav",
-      "caption": "Start with one little ball. It has just two possible values.",
-      "spoken": "Start with one little ball. It has just two possible values.",
-      "settingsSha256": "f988f19b8801c7925d30a36e062a98ba0329fa5baf8122ccb8e9b30ae0e7fb6c",
-      "review": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech.",
-      "reusedFromV1": true
+      "clip": "orbital-v2/narration/en/fa02-02-01.wav",
+      "seconds": 5.3,
+      "sha256": "dff281da681c9c7ad6b90360983f8071fdc6c8684729dded2d5b44046021e0bc",
+      "source": "outputs/louise/en/family-ai-lab-02-v2/s1.10/fa02-02-01.wav",
+      "caption": "Yes! Start with one little ball. It has just two possible values.",
+      "spoken": "Yes! Start with one little ball. It has just two possible values.",
+      "settingsSha256": "07182448e1d50c0751fcbe97f30f64b50a43a9c9e0012d61b55dc311bbee4639",
+      "review": "Explicit affirmative added after the launch before the explanation. Whisper small transcribes Yes and every following word; comma/exclamation is a punctuation variant.",
+      "reusedFromV1": false
     },
     "fa02-02-02": {
       "clip": "narration/en/fa02-02-02.wav",
@@ -443,15 +443,15 @@
       "reusedFromV1": true
     },
     "fa02-02-01": {
-      "clip": "narration/zh/fa02-02-01.wav",
-      "seconds": 3.98,
-      "sha256": "7fba6e83e0320ed054609ad6a0dcf87b6e823e4be936ba69888ba2933b473a31",
-      "source": "outputs/louise/zh/family-ai-lab-02-v1/s1.10/fa02-02-01.wav",
-      "caption": "先看一颗珠子。它只有两种可能。",
-      "spoken": "先看一颗珠子。它只有两种可能。",
-      "settingsSha256": "bb1c5e7b48f7543ed7fdff6a4fc6c0bead370987cb14917b1b564498a5580d16",
-      "review": "Medium confirms 一颗珠子 and both possibilities; the small-model 猪子 is an exact-syllable transcription substitution.",
-      "reusedFromV1": true
+      "clip": "orbital-v2/narration/zh/fa02-02-01.wav",
+      "seconds": 4.38,
+      "sha256": "c75271d4526c71c2e853dafa40102865b385332e60fcaea95d6ac3656057a0d8",
+      "source": "outputs/louise/zh/family-ai-lab-02-v2/s1.10/fa02-02-01.wav",
+      "caption": "可以！先看一颗珠子。它只有两种可能。",
+      "spoken": "可以！先看一颗珠子。它只有两种可能。",
+      "settingsSha256": "a010a08e8f20284d190917c517b85a00e8f5e197f7322bf30c788a978c386f72",
+      "review": "Explicit affirmative added after the launch before the explanation. Whisper small confirms 可以 before the complete explanation; 棵/颗 and 猪/珠 are exact pronunciation homophones, with traditional-script transcription variants retained.",
+      "reusedFromV1": false
     },
     "fa02-02-02": {
       "clip": "narration/zh/fa02-02-02.wav",

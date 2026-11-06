@@ -6,7 +6,7 @@ type Timeline=NonNullable<Family02Props['tl']>;
 type Cue=Timeline['lines'][number];
 type Facts=NonNullable<Family02Props['facts']>;
 type StorySpan={id:string;from:number;duration:number;frames:number;src:string;lastFrame:string};
-type OrbitalTimeline=Omit<Timeline,'lines'> & {lines:(Cue & {speechOffsetFrames?:number;bodyDurationFrames?:number})[];storyClips?:StorySpan[]};
+type OrbitalTimeline=Omit<Timeline,'lines'> & {lines:(Cue & {speechOffsetFrames?:number;bodyDurationFrames?:number})[];storyClips?:StorySpan[];workingTitle?:{en:string;zh:string}};
 export type OrbitalProps=Omit<Family02Props,'tl'> & {tl:OrbitalTimeline|null;view?:'study'|'full'};
 const P={white:'#e9faff',muted:'#9fc3ce',cyan:'#68ddff',gold:'#ffbd55',glass:'#05131fe8',edge:'#39728b',steel:'#253745'};
 const FONT="'Avenir Next','Arial',sans-serif",MONO="'SFMono-Regular','Menlo',monospace";
@@ -147,7 +147,7 @@ export const FamilyAiLab02Orbital:FC<OrbitalProps>=({tl,facts,captureFrames=180,
   {shot?<StoryFootage shot={shot} frame={frame}/>:<Img src={src} style={{position:'absolute',width:'100%',height:'100%',objectFit:'cover'}}/>}
   <AbsoluteFill style={{background:shot?'transparent':story?'linear-gradient(180deg,#020a12aa,transparent 45%,#020a1233)':'linear-gradient(180deg,#020a12df,#020a1266 38%,#020a1226 75%,#020a1288)'}}/>
   <svg width={1920} height={1080} viewBox="0 0 1920 1080" style={{position:'absolute',inset:0}}><Defs/>
-   {!shot&&cue.scene===1&&<>{v==='card'?<><T x={1780} y={145} anchor="end" size={51}>How Can 0 and 1 Send a Message?</T><T x={1780} y={204} anchor="end" size={25} fill={P.muted}>By Lucas Academy Team</T></>:<><Title name={v==='challenge'?'Only 0 and 1. Can you do it?':'Two signals. One tiny pipe.'}/><Platform/><Signal x={650} y={540} b={0} r={100} frame={frame}/><Signal x={1270} y={540} b={1} r={100} frame={frame}/></>}</>}
+   {!shot&&cue.scene===1&&<>{v==='card'?<><T x={1780} y={145} anchor="end" size={51}>{tl.workingTitle?.en??'Can 0 and 1 Talk?'}</T><T x={1780} y={204} anchor="end" size={25} fill={P.muted}>By Lucas Academy Team</T></>:<><Title name={v==='challenge'?'Only 0 and 1. Can you do it?':'Two signals. One tiny pipe.'}/><Platform/><Signal x={650} y={540} b={0} r={100} frame={frame}/><Signal x={1270} y={540} b={1} r={100} frame={frame}/></>}</>}
    {cue.scene===2&&<Bits cue={cue} local={local} frame={frame}/>}
    {cue.scene===3&&<Codes cue={cue} local={local} frame={frame} facts={facts}/>}
    {!shot&&cue.scene===4&&<Message cue={cue} local={local} frame={frame} facts={facts} study={view==='study'}/>}
