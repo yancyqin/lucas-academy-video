@@ -1,5 +1,7 @@
 # The tiny pipe — bilingual animated review
 
+**Current visual review, 2026-11-05:** the owner selected **01 — orbital pods** from the [three science-fiction directions](design-v2/README.md), with the inside-the-pipe camera language from 03. A ten-second motion preview has been requested in Muse; [request receipt](design-v2/opening-request.json) and [revised bilingual S1](design-v2/s1-script.md). The v1 delivery below remains the content/audio reference; the complete movie has not yet been rebuilt in the selected style.
+
 The owner requested a story adaptation of the zero-and-one lesson and selected full bilingual narrated animation on 2026-11-05. The original opening is in `lucas-academy-ai/L1-beginner/course.md`; curriculum revision and frozen asset hashes are in [sources.json](sources.json). [Story and shot plan](../../FAMILY-AI-LAB-02.md), [Chinese](zh-script.md), [English](en-script.md).
 
 ## Delivery

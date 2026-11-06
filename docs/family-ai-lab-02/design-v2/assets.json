@@ -1,0 +1,44 @@
+{
+  "tool": "built-in imagegen",
+  "ownerRequest": "Three science-fiction opening designs with the immediate visual impact of short-form video",
+  "status": "01-orbital selected by owner; motion preview requested",
+  "prompts": "docs/family-ai-lab-02/design-v2/prompts.json",
+  "assets": [
+    {
+      "id": "01-orbital",
+      "title": "深空隔舱",
+      "source": "/Users/yqin/.codex/generated_images/01a1adbb-7e40-7551-8692-e8402ef305f2/exec-b9f3fe9f-8150-42d3-a562-8891eb7824f4.png",
+      "asset": "public/family-ai-lab-02/design-v2/01-orbital.png",
+      "review": "out/family-ai-lab-02/design-v2/01-orbital.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "d0b2f933f284e42a24bf13c0844af34def931897855b88a1dff02e80d708382b",
+      "kind": "AI-generated cinematic concept keyframe, not video footage"
+    },
+    {
+      "id": "02-neon",
+      "title": "霓虹双城",
+      "source": "/Users/yqin/.codex/generated_images/01a1adbb-7e40-7551-8692-e8402ef305f2/exec-00778ed4-bb1f-42d1-a138-62c2c4c1c247.png",
+      "asset": "public/family-ai-lab-02/design-v2/02-neon.png",
+      "review": "out/family-ai-lab-02/design-v2/02-neon.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "11ccc406fddafcbd915b1bd9fdd3cc0c703c16b9dab9a6370623c251a55b5f65",
+      "kind": "AI-generated cinematic concept keyframe, not video footage"
+    },
+    {
+      "id": "03-photon",
+      "title": "光子隧道",
+      "source": "/Users/yqin/.codex/generated_images/01a1adbb-7e40-7551-8692-e8402ef305f2/exec-5f08e096-dd17-4eda-9c52-1ae75625b7f9.png",
+      "asset": "public/family-ai-lab-02/design-v2/03-photon.png",
+      "review": "out/family-ai-lab-02/design-v2/03-photon.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "6ca174270a024e1c7c5dc3cc91410a521569b1b93bfd35d7ed5ac4f4a98953e1",
+      "kind": "AI-generated cinematic concept keyframe, not video footage"
+    }
+  ],
+  "selectedDesign": "01-orbital",
+  "selectedOn": "2026-11-05",
+  "openingCameraReference": "03-photon"
+}
