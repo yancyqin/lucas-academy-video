@@ -37,5 +37,21 @@
     "status": "Generated in Muse after owner retry; owner rejected complex multi-action opening. Not imported or adopted locally."
   },
   "newAssets": "Eight selected imagegen originals; two unselected wide reply variants retained in backup.",
-  "filmStatus": "A 42-second silent orbital teaching-animation study is available; the complete bilingual orbital film awaits manually generated clips and revised narration."
+  "filmStatus": "A 42-second silent orbital teaching-animation study is available; the complete bilingual orbital film awaits manually generated clips and revised narration.",
+  "ownerManualUpdate": {
+    "date": "2026-11-05",
+    "reportedCompleted": [
+      "G1a",
+      "G1b"
+    ],
+    "ownerFeedback": "Both completed clips look good.",
+    "source": "Owner message in this chat; media not yet imported or independently inspected",
+    "remaining": [
+      "G2",
+      "G3",
+      "G4",
+      "G5"
+    ],
+    "generationOwner": "Owner manually in Muse; automatic submission remains stopped"
+  }
 }
