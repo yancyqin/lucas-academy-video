@@ -7,13 +7,13 @@
   "cueCountPerLanguage": 77,
   "blackSegments": [],
   "covers": {
-    "cover-v2.en.png": {
+    "cover-frame-02.zh.jpg": {
       "dimensions": "1280x720",
-      "sha256": "3a7f58e45002a2d7e9260b933f99812c5380b7ebfe5d2c3981cc1d04acd0e6a4"
+      "sha256": "601aca042443dfaf217ec3714d151a52597530bd6e52264ca3b9b2fa0b9f6991"
     },
-    "cover-v2.zh.png": {
+    "cover-frame-02.en.jpg": {
       "dimensions": "1280x720",
-      "sha256": "c87d30e7a707ff69805a09d07a9485a735af090fa3e5667b9f18562cc6144ab9"
+      "sha256": "58d5c2418397f31559526fbde63439dfdde2f9b76732f64211e6eed6f92ad42d"
     }
   },
   "baselineHashes": "all selected originals unchanged",
@@ -59,7 +59,7 @@
       "default": false
     }
   ],
-  "sourceAssetSha256Checks": 28,
+  "sourceAssetSha256Checks": 29,
   "onPictureOverlays": "No series header, chapter header, source-credit badge, byline or experiment-method footnote. Instructional content and QR destination retained.",
   "visualQA": "77 cue samples and eight frames from the final encoded movie inspected. Whole-course CRT, projection and instrument layouts fit inside their physical apertures; no caption band or burned subtitles.",
   "finalFrameChecks": [
@@ -148,5 +148,13 @@
     "framesPerChunk": 3000,
     "workers": 2,
     "successfulLog": "tmp/family-ai-lab-01/v3-final-render.log"
+  },
+  "uploadPackage": {
+    "destination": "/Users/yqin/Desktop/家庭AI实验室-感知机-上传",
+    "verifiedFiles": 12,
+    "movieCopySha256MatchesApproved": true,
+    "independentAudioPayloadsMatchMovie": true,
+    "coverBackgroundSeconds": 2,
+    "receipt": "docs/family-ai-lab-01/upload-package.json"
   }
 }

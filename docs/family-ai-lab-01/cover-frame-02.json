@@ -1,0 +1,58 @@
+{
+  "ownerSelection": "Use the background at 00:02 of the approved v3 film",
+  "seconds": 2,
+  "source": "public/family-ai-lab-01/muse/G4-time-travel-v2.mp4",
+  "sourceSha256": "a70230fb111e0b8464609955b5269a5f2eaf6dcca1ca15d2369df4a43fbb425c",
+  "background": "public/family-ai-lab-01/art/cover-frame-00-02.png",
+  "backgroundSha256": "3716d077936d3b90d1c6849bf2abadd4d5db0c9b484870f23abe6cd89fcb7e99",
+  "composition": "Exact unlettered source frame; no crop, subject move or image regeneration. Local text-contrast shading and code typography only.",
+  "language": "One language per cover; model names retained verbatim.",
+  "headlines": {
+    "zh": [
+      "比Claude Fable 5.1快300万倍",
+      "比GPT-6-Astra快1000万倍！"
+    ],
+    "en": [
+      "3 million times faster than Claude Fable 5.1",
+      "10 million times faster than GPT-6-Astra!"
+    ]
+  },
+  "covers": [
+    {
+      "language": "zh",
+      "path": "out/family-ai-lab-01/cover/cover-frame-02.zh.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "ac7baa3b0c9780e713ce5785346ef4cbc674590d445d9957b82cdeddd18b1506"
+    },
+    {
+      "language": "zh",
+      "path": "out/family-ai-lab-01/cover/cover-frame-02.zh.jpg",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "601aca042443dfaf217ec3714d151a52597530bd6e52264ca3b9b2fa0b9f6991"
+    },
+    {
+      "language": "en",
+      "path": "out/family-ai-lab-01/cover/cover-frame-02.en.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "94989281017e7bff48edd98e4d025072f5bd8d51c347252912f3002f23faa934"
+    },
+    {
+      "language": "en",
+      "path": "out/family-ai-lab-01/cover/cover-frame-02.en.jpg",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "58d5c2418397f31559526fbde63439dfdde2f9b76732f64211e6eed6f92ad42d"
+    }
+  ]
+}

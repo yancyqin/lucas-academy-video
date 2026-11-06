@@ -209,6 +209,8 @@ python3 summarize.py
 
 本轮 1280×720 中英文草案：`out/family-ai-lab-01/cover/cover-v2.zh.png`、`cover-v2.en.png`。它们已用于新版片名画面的视觉主题，前一轮六张封面保留。提示词、选图和文件哈希见 `docs/family-ai-lab-01/cover-v2*.json`。
 
+**最终上传封面（Yancy，2026-11-05）**：改用已确认影片 00:02 对应的无字原始帧作为背景，保留已定标题及亲子训练小字；每张封面只用一种语言。文件为 `cover-frame-02.zh.jpg` / `cover-frame-02.en.jpg`，同目录保留 PNG；影片本身沿用已确认的 v3。取帧与封面哈希见 [封面记录](docs/family-ai-lab-01/cover-frame-02.json)。桌面上传包见 [打包记录](docs/family-ai-lab-01/upload-package.json)。
+
 ## 6. 当前制作依据
 
 1. 新封面：设计 3 的 7、科技外壳、设计 1 流光的合并方向。
