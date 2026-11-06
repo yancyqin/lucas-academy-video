@@ -1,6 +1,8 @@
 # The tiny pipe — bilingual animated review
 
-**Current visual review, 2026-11-05:** the owner selected orbital pods for the entire movie and then required one shot per generated video. Six independent reference/prompt pairs are packaged for the owner to generate manually in Muse; automated submission has stopped. [Single-shot plan](design-v2/single-shots.md), [full-film direction](design-v2/full-film-plan.md), [handoff](design-v2/generation-handoff.json). A new 42-second silent orbital teaching-animation study is rendered at 720p/30 fps. The full narrated movie below remains the v1 content/audio reference.
+**Current delivery, 2026-11-05:** the full orbital-pod bilingual review is rendered: 4:23.57, 7,907 frames, 1920×1080/30 fps. All six owner-generated Muse single shots are integrated with the revised narration, precise teaching animations and an original electronic soundtrack. English is the default track; Chinese is independent. There are no burned captions, subtitle tracks, reserved subtitle band or corner credits. [Current production and rebuild instructions](design-v2/orbital-production.md), [actual delivery verification](design-v2/orbital-verification.json). The rest of this page retains the v1 content/audio history.
+
+Current movie: `out/family-ai-lab-02/orbital-v2/delivery/family-ai-lab-02.bilingual.mp4`; external subtitles: `en.srt` and `zh-Hans.srt` beside it. Selected scripts: [English](design-v2/orbital-script.en.md), [Chinese](design-v2/orbital-script.zh.md).
 
 The owner requested a story adaptation of the zero-and-one lesson and selected full bilingual narrated animation on 2026-11-05. The original opening is in `lucas-academy-ai/L1-beginner/course.md`; curriculum revision and frozen asset hashes are in [sources.json](sources.json). [Story and shot plan](../../FAMILY-AI-LAB-02.md), [Chinese](zh-script.md), [English](en-script.md).
 
@@ -8,10 +10,11 @@ The owner requested a story adaptation of the zero-and-one lesson and selected f
 
 - `out/family-ai-lab-02/muse-pack/FamilyAiLab02-Muse-Single-Shots.zip`: six native-size reference PNGs, per-shot Chinese/English text files, offline image/prompt viewer, common style reference, two teaching background plates and SHA256SUMS. Start with G1a and G1b. No generated story clip is substituted with a still.
 - `out/family-ai-lab-02/orbital-v2/style-study.mp4`: 42 seconds, 1,260 frames, 1280×720/30 fps, silent, no subtitle tracks. Eight scenes demonstrate the selected materials, signal spheres, ASCII, storage boxes, decision tree, curriculum fruit, real lab and worksheet terminal. This is a visual study, not the finished story.
+- The owner requested a clean picture: the orbital study and subsequent orbital full movie have no bottom-right source/credit overlay. Provenance and licence records remain in the production documents and delivery notes.
 - [Imagegen source prompts and hashes](design-v2/full-film-prompts.json), [study verification](design-v2/style-study.json). Ten originals are preserved: eight selected assets and two rejected wide-reply variants. The final reply reference is a simpler boy-only close-up.
 - Rebuild with `npm run fal02:orbital:preview`; `npm run fal02:orbital:stills` renders the eight study frames only. `python3 scripts/family-ai-lab-02/muse_pack.py` rebuilds the owner handoff ZIP. Neither command changes the v1 voiced timeline or audio.
 
-The owner-retried 10-second Muse orbital clip exists in Muse and was rejected for excessive action/shot complexity. The simpler G1a attempt returned 502 after retries. G1b was prepared but not submitted before the owner took over. G2–G5 have not been submitted by Codex. New story clips, final timing, changed space-pod narration and the electronic soundtrack remain to be integrated before a new bilingual delivery.
+The owner-retried complex orbital opening was rejected for excessive action/shot complexity. A subsequent automatic G1a attempt returned 502. The owner then completed all six simpler single shots manually. Their intact originals, local probes, hashes, selected forward spans and observed actions are recorded in [clips.json](design-v2/clips.json) and [story-clips.json](design-v2/story-clips.json). They are all integrated in the current full orbital delivery; no further generation or saving is required.
 
 ## Delivery — v1 reference
 

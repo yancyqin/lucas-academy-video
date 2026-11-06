@@ -1,0 +1,56 @@
+{
+  "en/fa02-01-01": {
+    "checked": true,
+    "take": "",
+    "sha256": "02ffa5a4c0bc4edf2224b4cf61c8e3488a55f53daae79c1bbe34b511cba36914",
+    "note": "ASR inspected: full expected phrase, figures and letter names retained; punctuation and numeral formatting are transcription variants."
+  },
+  "en/fa02-01-02": {
+    "checked": true,
+    "take": "",
+    "sha256": "8f778be537670c05ab69903cfb1bf0fc9b9f124a5ee0a7c63887bd902c4173e2",
+    "note": "ASR inspected: full expected phrase, figures and letter names retained; punctuation and numeral formatting are transcription variants."
+  },
+  "en/fa02-04-02": {
+    "checked": true,
+    "take": "",
+    "sha256": "8d92978550331cb86729a4d638ae74e99b54e89b3f5e58d8ed5b00ef8b0cd52e",
+    "note": "ASR inspected: full expected phrase, figures and letter names retained; punctuation and numeral formatting are transcription variants."
+  },
+  "en/fa02-05-01": {
+    "checked": true,
+    "take": "",
+    "sha256": "75163e81e80f7e0cac611212cff348511953e6ab9c2099a7667f330652f00846",
+    "note": "ASR inspected: full expected phrase, figures and letter names retained; punctuation and numeral formatting are transcription variants."
+  },
+  "en/fa02-08-01": {
+    "checked": true,
+    "take": "",
+    "sha256": "f630d635e1b5063b5be9cbf09ea7abd8ea8047b999f5d82cded69b3fa25632cd",
+    "note": "ASR inspected: full expected phrase, figures and letter names retained; punctuation and numeral formatting are transcription variants."
+  },
+  "zh/fa02-01-01": {
+    "checked": true,
+    "take": "",
+    "sha256": "9cad82d37b0ee80dd9801d02991e4cb1f31c98a0792667174a1468ca90d814a9",
+    "note": "Small and medium ASR inspected. Medium confirms the full phrase and names; Traditional characters and 李奧 are equivalent/homophonic transcription of 里奥."
+  },
+  "zh/fa02-04-02": {
+    "checked": true,
+    "take": "",
+    "sha256": "ef7ae25e714246a5e92c92f7f7fbe5708909876dc5cdef0bcdfbe9eedd2a4754",
+    "note": "ASR inspected: full expected phrase, figures and letter names retained; punctuation and numeral formatting are transcription variants."
+  },
+  "zh/fa02-01-02": {
+    "checked": true,
+    "take": "2",
+    "sha256": "117e049e06b19a727bb51040ac9a180c5cccd00e5a57db63dead49c72102602f",
+    "note": "Replacement take inspected: complete revised phrase, clear 管道连接 / 按下发送键. Traditional characters and the final 啦/了 transcription variant do not alter the message; no appended speech."
+  },
+  "zh/fa02-08-01": {
+    "checked": true,
+    "take": "2",
+    "sha256": "339eb6078e1304337e9161b82a6a749e232531297d46485a32a2604af86b2f84",
+    "note": "Replacement take inspected: complete revised phrase, clear 管道连接 / 按下发送键. Traditional characters and the final 啦/了 transcription variant do not alter the message; no appended speech."
+  }
+}

@@ -1,0 +1,57 @@
+[
+  {
+    "id": "fa02-01-01",
+    "caption": "The note won't fit! How can Mia invite Leo to play?",
+    "spoken": "The note won't fit! How can Mia invite Leo to play?",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak with playful curiosity, as if inviting a child into a little space adventure. Warm, lively, natural connected speech. Clear short sentences.",
+    "speed": 1.1,
+    "scene": 1,
+    "settingsSha256": "ec52f7df5f6cd15234b1a06d8d134d0c8c91fb484d95537c34a499d968d41c7b"
+  },
+  {
+    "id": "fa02-01-02",
+    "caption": "Their space pods are linked by one tiny pipe.",
+    "spoken": "Their space pods are linked by one tiny pipe.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak with playful curiosity, as if inviting a child into a little space adventure. Warm, lively, natural connected speech. Clear short sentences.",
+    "speed": 1.1,
+    "scene": 1,
+    "settingsSha256": "2b1986d9bee5d6d0101111efec9e529cde2c75967d23ff494db7aaf12f4e110f"
+  },
+  {
+    "id": "fa02-04-02",
+    "caption": "Then come L, A and Y. Every eight balls give Leo another letter on his screen.",
+    "spoken": "Then come L, A and Y. Every eight balls give Leo another letter on his screen.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please tell this story with a warm, curious voice. Natural connected speech, clear and conversational. The explanation is calm and unhurried.",
+    "speed": 1.1,
+    "scene": 4,
+    "settingsSha256": "86d9c70138c6425ef34daf2a46f2a2d0e2da9685fb7ee357ac45633b46c1d89d"
+  },
+  {
+    "id": "fa02-05-01",
+    "caption": "Before the game, Mia hid a little gift in one of the ten boxes in Leo's cargo bay.",
+    "spoken": "Before the game, Mia hid a little gift in one of the ten boxes in Leo's cargo bay.",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please tell this story with a warm, curious voice. Natural connected speech, clear and conversational. The explanation is calm and unhurried.",
+    "speed": 1.1,
+    "scene": 5,
+    "settingsSha256": "8616c1a48f2add59f6e6ee539165f1c5a0804b8535bda4c236735cbb837fd636"
+  },
+  {
+    "id": "fa02-08-01",
+    "caption": "Leo presses Send. A gold signal carries his reply: got it!",
+    "spoken": "Leo presses Send. A gold signal carries his reply: got it!",
+    "voice": "louise/en",
+    "mode": "zero-shot-instruct",
+    "instruction": "Please tell this story with a warm, curious voice. Natural connected speech, clear and conversational. The explanation is calm and unhurried.",
+    "speed": 1.1,
+    "scene": 8,
+    "settingsSha256": "be2f5e08815dabf597deca31ded418ed5804b715f1ee5cee31fe229d404e9069"
+  }
+]

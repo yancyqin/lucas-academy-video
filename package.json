@@ -86,7 +86,13 @@
     "fal02:check": "python3 scripts/family-ai-lab-02/verify.py",
     "fal02:backup": "python3 scripts/family-ai-lab-02/backup.py",
     "fal02:orbital:stills": "node scripts/family-ai-lab-02/orbital_render.cjs --stills",
-    "fal02:orbital:preview": "node scripts/family-ai-lab-02/orbital_render.cjs"
+    "fal02:orbital:preview": "node scripts/family-ai-lab-02/orbital_render.cjs",
+    "fal02:orbital:clips": "python3 scripts/family-ai-lab-02/orbital_build.py --clips",
+    "fal02:orbital:build": "python3 scripts/family-ai-lab-02/orbital_build.py",
+    "fal02:orbital:mix": ".venv-align/bin/python scripts/family-ai-lab-02/orbital_mix.py",
+    "fal02:orbital:full:stills": "node scripts/family-ai-lab-02/orbital_full.cjs --stills",
+    "fal02:orbital:final": "node scripts/family-ai-lab-02/orbital_full.cjs --voiced",
+    "fal02:orbital:check": "python3 scripts/family-ai-lab-02/orbital_verify.py"
   },
   "dependencies": {
     "@remotion/cli": "^4.0.484",

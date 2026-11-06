@@ -1,7 +1,7 @@
 {
   "kind": "Silent orbital style and code-animation study, not the complete bilingual film",
   "movie": "out/family-ai-lab-02/orbital-v2/style-study.mp4",
-  "sha256": "8191b68a1e4ed23ef0a97ad728b1f1d7b9fe900c2043fe44af859bcc90069c78",
+  "sha256": "177d24733635c0df964e12ceb2b7e36f61ce5c7b71cb078d874d099a6d10533f",
   "seconds": 42,
   "frames": 1260,
   "size": [
@@ -42,6 +42,16 @@
     "allFrames": "Receiver count matches actual arrivals; monotonic and complete."
   },
   "typecheck": "npx tsc --noEmit passed",
-  "sourceSha256": "c32b6dddc47f4f99f409746abfca213a8a302ca5b3819902796f6b873a01bef7",
-  "visualReview": "Eight study frames inspected for matching materials, code-derived signals, selected box 7, fruit source pictures, real browser display and readable QR. Original v1 audio is not mixed into this study."
+  "sourceSha256": "3ded3d5c345d3120ec2a16ad5b654ff8e21c04794e0f7349cead57e9c1316654",
+  "visualReview": "Eight study frames inspected for matching materials, code-derived signals, selected box 7, fruit source pictures, real browser display and readable QR. Original v1 audio is not mixed into this study.",
+  "cornerCredits": false,
+  "creditRemovalVerification": {
+    "changedPixelBoundsAt720p": [
+      828,
+      687,
+      1214,
+      700
+    ],
+    "pictureAboveFooterUnchanged": true
+  }
 }

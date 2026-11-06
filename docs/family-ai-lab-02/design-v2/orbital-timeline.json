@@ -1,0 +1,679 @@
+{
+  "fps": 30,
+  "durationInFrames": 7907,
+  "narrated": true,
+  "defaultLanguage": "en",
+  "scenes": [
+    "The invitation",
+    "Two tiny signals",
+    "The shared code",
+    "A message arrives",
+    "The hidden box",
+    "How many questions?",
+    "The picnic clue",
+    "Your turn"
+  ],
+  "workingTitle": {
+    "zh": "只有0和1，怎么说一句话？",
+    "en": "How Can 0 and 1 Send a Message?"
+  },
+  "lines": [
+    {
+      "id": "fa02-01-01",
+      "scene": 1,
+      "visual": "world",
+      "zh": "纸条过不去。米娅怎么邀请对面的里奥来玩？",
+      "en": "The note won't fit! How can Mia invite Leo to play?",
+      "leadInSeconds": 1.8,
+      "from": 0,
+      "duration": 199,
+      "speechOffsetFrames": 57,
+      "bodyDurationFrames": 187,
+      "voiceSeconds": {
+        "en": 3.74,
+        "zh": 4.32
+      }
+    },
+    {
+      "id": "fa02-01-02",
+      "scene": 1,
+      "visual": "card",
+      "zh": "两个太空舱，只靠一条管道连接。",
+      "en": "Their space pods are linked by one tiny pipe.",
+      "from": 199,
+      "duration": 117,
+      "speechOffsetFrames": 3,
+      "bodyDurationFrames": 105,
+      "voiceSeconds": {
+        "en": 3.34,
+        "zh": 3.38
+      }
+    },
+    {
+      "id": "fa02-01-03",
+      "scene": 1,
+      "visual": "rules",
+      "zh": "游戏规定，每次只能送一颗珠子。金色表示一，蓝色表示零。",
+      "en": "One little ball goes through at a time. Gold means one. Blue means zero.",
+      "from": 316,
+      "duration": 220,
+      "speechOffsetFrames": 3,
+      "bodyDurationFrames": 208,
+      "voiceSeconds": {
+        "en": 6.82,
+        "zh": 6.76
+      }
+    },
+    {
+      "id": "fa02-01-04",
+      "scene": 1,
+      "visual": "challenge",
+      "zh": "只靠这两种记号，你能把一句话传过去吗？",
+      "en": "Could you send a message with only those two kinds of signal?",
+      "hold": 1.2,
+      "from": 536,
+      "duration": 174,
+      "speechOffsetFrames": 3,
+      "bodyDurationFrames": 126,
+      "voiceSeconds": {
+        "en": 3.8,
+        "zh": 4.1
+      }
+    },
+    {
+      "id": "fa02-02-01",
+      "scene": 2,
+      "visual": "one-bit",
+      "zh": "先看一颗珠子。它只有两种可能。",
+      "en": "Start with one little ball. It has just two possible values.",
+      "from": 710,
+      "duration": 155,
+      "speechOffsetFrames": 3,
+      "bodyDurationFrames": 143,
+      "voiceSeconds": {
+        "en": 4.64,
+        "zh": 3.98
+      }
+    },
+    {
+      "id": "fa02-02-02",
+      "scene": 2,
+      "visual": "two-bits",
+      "zh": "两颗排在一起，就有四种不同的排法。顺序也算数。",
+      "en": "Put two in a row, and there are four different patterns. Their order matters.",
+      "from": 865,
+      "duration": 177,
+      "speechOffsetFrames": 3,
+      "bodyDurationFrames": 165,
+      "voiceSeconds": {
+        "en": 4.9,
+        "zh": 5.4
+      }
+    },
+    {
+      "id": "fa02-02-03",
+      "scene": 2,
+      "visual": "bit-name",
+      "zh": "每个零或一，叫一个比特。现在，把八个比特排成一组。",
+      "en": "Each zero or one is called a bit. Now put eight bits in a group.",
+      "from": 1042,
+      "duration": 204,
+      "speechOffsetFrames": 3,
+      "bodyDurationFrames": 192,
+      "voiceSeconds": {
+        "en": 5.0,
+        "zh": 6.28
+      }
+    },
+    {
+      "id": "fa02-02-04",
+      "scene": 2,
+      "visual": "byte",
+      "zh": "这样一组叫一个字节。它有二百五十六种不同的排法。",
+      "en": "That group is a byte. It can have two hundred and fifty-six different patterns.",
+      "from": 1246,
+      "duration": 195,
+      "speechOffsetFrames": 3,
+      "bodyDurationFrames": 183,
+      "voiceSeconds": {
+        "en": 4.72,
+        "zh": 6.0
+      }
+    },
+    {
+      "id": "fa02-03-01",
+      "scene": 3,
+      "visual": "codebooks",
+      "zh": "两边用同一张表。开玩之前，就得约好每种排法代表什么。",
+      "en": "Before the game, they agreed on the same code table. Both ends must read it the same way.",
+      "from": 1441,
+      "duration": 206,
+      "speechOffsetFrames": 3,
+      "bodyDurationFrames": 194,
+      "voiceSeconds": {
+        "en": 5.52,
+        "zh": 6.36
+      }
+    },
+    {
+      "id": "fa02-03-02",
+      "scene": 3,
+      "visual": "weights",
+      "zh": "从右往左，每一格的数值翻一倍。右边是一，旁边是二，再旁边是四。",
+      "en": "Reading from right to left, each place is worth twice as much: one, two, four, and so on.",
+      "from": 1647,
+      "duration": 242,
+      "speechOffsetFrames": 3,
+      "bodyDurationFrames": 230,
+      "voiceSeconds": {
+        "en": 6.98,
+        "zh": 7.56
+      }
+    },
+    {
+      "id": "fa02-03-03",
+      "scene": 3,
+      "visual": "letter-a",
+      "zh": "只取六十四和一，加起来六十五。表里对应的是字母 A。",
+      "en": "Use the sixty-four and one places. That makes sixty-five: the letter A in their table.",
+      "from": 1889,
+      "duration": 205,
+      "speechOffsetFrames": 3,
+      "bodyDurationFrames": 193,
+      "voiceSeconds": {
+        "en": 6.32,
+        "zh": 5.92
+      }
+    },
+    {
+      "id": "fa02-03-04",
+      "scene": 3,
+      "visual": "padding",
+      "zh": "前面的零也要送。说好八颗一组，就收满八颗再读。",
+      "en": "Send the leading zeros too. They agreed to read a letter after all eight balls arrive.",
+      "from": 2094,
+      "duration": 188,
+      "speechOffsetFrames": 3,
+      "bodyDurationFrames": 176,
+      "voiceSeconds": {
+        "en": 5.74,
+        "zh": 4.86
+      }
+    },
+    {
+      "id": "fa02-03-05",
+      "scene": 3,
+      "visual": "ascii",
+      "zh": "这次用阿斯基表，字母用八位来写。换别的表，就要按那张表的规矩。",
+      "en": "Here they use ASCII letters written with eight bits. Another code table could use different rules.",
+      "from": 2282,
+      "duration": 212,
+      "speechOffsetFrames": 3,
+      "bodyDurationFrames": 200,
+      "voiceSeconds": {
+        "en": 5.48,
+        "zh": 6.54
+      }
+    },
+    {
+      "id": "fa02-04-01",
+      "scene": 4,
+      "visual": "send-p",
+      "zh": "米娅开始发邀请。第一个字母是 P，按编码表，一颗一颗送。",
+      "en": "Mia sends her invitation. The first letter is P. She sends its pattern, one ball at a time.",
+      "minSeconds": 7,
+      "from": 2494,
+      "duration": 277,
+      "speechOffsetFrames": 3,
+      "bodyDurationFrames": 265,
+      "voiceSeconds": {
+        "en": 6.6,
+        "zh": 8.72
+      }
+    },
+    {
+      "id": "fa02-04-02",
+      "scene": 4,
+      "visual": "send-play",
+      "zh": "接着是 L、A、Y。每收满八颗，接收屏上就出现一个字母。",
+      "en": "Then come L, A and Y. Every eight balls give Leo another letter on his screen.",
+      "minSeconds": 12,
+      "from": 2771,
+      "duration": 372,
+      "speechOffsetFrames": 3,
+      "bodyDurationFrames": 360,
+      "voiceSeconds": {
+        "en": 6.2,
+        "zh": 7.38
+      }
+    },
+    {
+      "id": "fa02-04-03",
+      "scene": 4,
+      "visual": "received",
+      "zh": "拼起来是 PLAY，一起来玩！纸条没过去，意思已经到了。",
+      "en": "The letters spell PLAY. The note stayed behind, but the invitation got through.",
+      "minSeconds": 5.4,
+      "from": 3143,
+      "duration": 191,
+      "speechOffsetFrames": 3,
+      "bodyDurationFrames": 179,
+      "voiceSeconds": {
+        "en": 5.26,
+        "zh": 5.84
+      }
+    },
+    {
+      "id": "fa02-05-01",
+      "scene": 5,
+      "visual": "boxes",
+      "zh": "开玩前，米娅还藏了个小礼物。就在里奥面前的十个盒子里。",
+      "en": "Before the game, Mia hid a little gift in one of the ten boxes in Leo's cargo bay.",
+      "minSeconds": 5.8,
+      "from": 3334,
+      "duration": 186,
+      "speechOffsetFrames": 3,
+      "bodyDurationFrames": 174,
+      "voiceSeconds": {
+        "en": 5.52,
+        "zh": 5.2
+      }
+    },
+    {
+      "id": "fa02-05-02",
+      "scene": 5,
+      "visual": "questions-rule",
+      "zh": "他们先约好一套是否问题。里奥按顺序提问，米娅用珠子回答。",
+      "en": "They agreed on a set of yes-or-no questions. Leo follows it. Mia replies with a gold or blue ball.",
+      "from": 3520,
+      "duration": 233,
+      "speechOffsetFrames": 3,
+      "bodyDurationFrames": 221,
+      "voiceSeconds": {
+        "en": 7.26,
+        "zh": 6.76
+      }
+    },
+    {
+      "id": "fa02-05-03",
+      "scene": 5,
+      "visual": "bad-question",
+      "zh": "如果挨个问，是一号吗，是二号吗，没猜中的盒子还剩一大堆。",
+      "en": "Is it box one? Box two? If the answers are no, almost all the boxes remain.",
+      "from": 3753,
+      "duration": 229,
+      "speechOffsetFrames": 3,
+      "bodyDurationFrames": 217,
+      "voiceSeconds": {
+        "en": 6.06,
+        "zh": 7.12
+      }
+    },
+    {
+      "id": "fa02-05-04",
+      "scene": 5,
+      "visual": "guess-1",
+      "zh": "换个问法：号码比五大吗？是。前面五个盒子都不用看了。",
+      "en": "Try this: is the number greater than five? Yes. Five boxes disappear at once.",
+      "from": 3982,
+      "duration": 200,
+      "speechOffsetFrames": 3,
+      "bodyDurationFrames": 188,
+      "voiceSeconds": {
+        "en": 5.96,
+        "zh": 6.14
+      }
+    },
+    {
+      "id": "fa02-05-05",
+      "scene": 5,
+      "visual": "guess-2",
+      "zh": "比八大吗？否。现在只剩六、七、八。",
+      "en": "Greater than eight? No. Only six, seven and eight remain.",
+      "from": 4182,
+      "duration": 200,
+      "speechOffsetFrames": 3,
+      "bodyDurationFrames": 188,
+      "voiceSeconds": {
+        "en": 5.62,
+        "zh": 6.14
+      }
+    },
+    {
+      "id": "fa02-05-06",
+      "scene": 5,
+      "visual": "guess-3",
+      "zh": "比六大吗？是。剩下七和八。",
+      "en": "Greater than six? Yes. That leaves seven and eight.",
+      "from": 4382,
+      "duration": 152,
+      "speechOffsetFrames": 3,
+      "bodyDurationFrames": 140,
+      "voiceSeconds": {
+        "en": 4.54,
+        "zh": 4.02
+      }
+    },
+    {
+      "id": "fa02-05-07",
+      "scene": 5,
+      "visual": "guess-4",
+      "zh": "比七大吗？否。找到了，七号盒子！",
+      "en": "Greater than seven? No. There it is: box seven!",
+      "from": 4534,
+      "duration": 176,
+      "speechOffsetFrames": 3,
+      "bodyDurationFrames": 164,
+      "voiceSeconds": {
+        "en": 4.42,
+        "zh": 5.34
+      }
+    },
+    {
+      "id": "fa02-06-01",
+      "scene": 6,
+      "visual": "tree-three",
+      "zh": "三次是否回答，最多分出八种结果。十个盒子，装不下。",
+      "en": "Three yes-or-no answers can distinguish at most eight outcomes. That cannot cover ten boxes.",
+      "from": 4710,
+      "duration": 217,
+      "speechOffsetFrames": 3,
+      "bodyDurationFrames": 205,
+      "voiceSeconds": {
+        "en": 6.32,
+        "zh": 6.72
+      }
+    },
+    {
+      "id": "fa02-06-02",
+      "scene": 6,
+      "visual": "tree-four",
+      "zh": "四次最多能分出十六种。问题问得合适，最坏四次也能找出这十个里的任何一个。",
+      "en": "Four answers allow sixteen outcomes. With suitable questions, four always suffice for any of the ten boxes.",
+      "from": 4927,
+      "duration": 251,
+      "speechOffsetFrames": 3,
+      "bodyDurationFrames": 239,
+      "voiceSeconds": {
+        "en": 7.22,
+        "zh": 7.84
+      }
+    },
+    {
+      "id": "fa02-06-03",
+      "scene": 6,
+      "visual": "thousand",
+      "zh": "就算有一千个，十次也够。前提是每次尽量把剩下的分成数量接近的两组。",
+      "en": "Even a thousand possibilities need only ten answers, if each question splits the remaining choices as evenly as possible.",
+      "from": 5178,
+      "duration": 258,
+      "speechOffsetFrames": 3,
+      "bodyDurationFrames": 246,
+      "voiceSeconds": {
+        "en": 8.1,
+        "zh": 7.8
+      }
+    },
+    {
+      "id": "fa02-07-01",
+      "scene": 7,
+      "visual": "fruit",
+      "zh": "盒子找到了，里面是哪种点心？候选是香蕉、苹果、葡萄和西瓜。",
+      "en": "The box is found. Which snack is inside: a banana, an apple, grapes, or watermelon?",
+      "from": 5436,
+      "duration": 240,
+      "speechOffsetFrames": 3,
+      "bodyDurationFrames": 228,
+      "voiceSeconds": {
+        "en": 7.44,
+        "zh": 7.48
+      }
+    },
+    {
+      "id": "fa02-07-02",
+      "scene": 7,
+      "visual": "fruit-red",
+      "zh": "先问，图上有红色吗？是。香蕉和葡萄先放一边。",
+      "en": "Is it red in these pictures? Yes. Put the banana and grapes aside.",
+      "from": 5676,
+      "duration": 192,
+      "speechOffsetFrames": 3,
+      "bodyDurationFrames": 180,
+      "voiceSeconds": {
+        "en": 4.5,
+        "zh": 5.88
+      }
+    },
+    {
+      "id": "fa02-07-03",
+      "scene": 7,
+      "visual": "fruit-seeds",
+      "zh": "图上能看见种子吗？能，原来是这块西瓜。两问就找到了。",
+      "en": "Can you see seeds? Yes. It is the watermelon slice. Two questions found it.",
+      "afterHoldSeconds": 5.0,
+      "from": 5868,
+      "duration": 368,
+      "speechOffsetFrames": 3,
+      "bodyDurationFrames": 206,
+      "voiceSeconds": {
+        "en": 6.14,
+        "zh": 6.76
+      }
+    },
+    {
+      "id": "fa02-07-04",
+      "scene": 7,
+      "visual": "fruit-tree",
+      "zh": "这里两问够用，是因为问题把它们分开了。随便问两个问题，可不一定行。",
+      "en": "Two questions work here because the questions separate the choices. Any two questions will not necessarily do.",
+      "from": 6236,
+      "duration": 245,
+      "speechOffsetFrames": 3,
+      "bodyDurationFrames": 233,
+      "voiceSeconds": {
+        "en": 7.4,
+        "zh": 7.64
+      }
+    },
+    {
+      "id": "fa02-08-01",
+      "scene": 8,
+      "visual": "picnic",
+      "zh": "他按下发送键，一颗金色小球传了回去：收到啦！",
+      "en": "Leo presses Send. A gold signal carries his reply: got it!",
+      "minSeconds": 6.0,
+      "from": 6481,
+      "duration": 192,
+      "speechOffsetFrames": 3,
+      "bodyDurationFrames": 180,
+      "voiceSeconds": {
+        "en": 4.82,
+        "zh": 4.94
+      }
+    },
+    {
+      "id": "fa02-08-02",
+      "scene": 8,
+      "visual": "lights",
+      "zh": "用电灯也行：关掉表示零，打开表示一。",
+      "en": "The balls carry our message. A light can send the same signals: off for zero, on for one.",
+      "from": 6673,
+      "duration": 200,
+      "speechOffsetFrames": 3,
+      "bodyDurationFrames": 188,
+      "voiceSeconds": {
+        "en": 6.14,
+        "zh": 4.62
+      }
+    },
+    {
+      "id": "fa02-08-03",
+      "scene": 8,
+      "visual": "lab",
+      "zh": "到网页实验室里，点亮六十四和一，看看会不会出现 A。",
+      "en": "In the online lab, switch on sixty-four and one. See whether the letter A appears.",
+      "from": 6873,
+      "duration": 198,
+      "speechOffsetFrames": 3,
+      "bodyDurationFrames": 186,
+      "voiceSeconds": {
+        "en": 6.1,
+        "zh": 5.2
+      }
+    },
+    {
+      "id": "fa02-08-04",
+      "scene": 8,
+      "visual": "worksheet",
+      "zh": "也可以打印这张表。你写一条消息，给孩子解；再换孩子出题。",
+      "en": "Or print the table. Write a message for your child to decode, then let them make one for you.",
+      "from": 7071,
+      "duration": 209,
+      "speechOffsetFrames": 3,
+      "bodyDurationFrames": 197,
+      "voiceSeconds": {
+        "en": 6.46,
+        "zh": 6.2
+      }
+    },
+    {
+      "id": "fa02-08-05",
+      "scene": 8,
+      "visual": "scope",
+      "zh": "今天只试英文字母。一个字节有八位，不代表每种文字都一个字节就够。",
+      "en": "Today we tried English letters. Eight bits make a byte, but not every character fits in one byte.",
+      "from": 7280,
+      "duration": 249,
+      "speechOffsetFrames": 3,
+      "bodyDurationFrames": 237,
+      "voiceSeconds": {
+        "en": 6.28,
+        "zh": 7.8
+      }
+    },
+    {
+      "id": "fa02-08-06",
+      "scene": 8,
+      "visual": "invite",
+      "zh": "来 Lucas Academy 一起玩：如果你们之间也只有一根小管子，你最想给对方说什么？",
+      "en": "Join us at Lucas Academy. If you had only a tiny pipe between you, what would you tell your friend?",
+      "hold": 5,
+      "from": 7529,
+      "duration": 378,
+      "speechOffsetFrames": 3,
+      "bodyDurationFrames": 216,
+      "voiceSeconds": {
+        "en": 7.08,
+        "zh": 6.9
+      }
+    }
+  ],
+  "storyClips": [
+    {
+      "id": "G1a",
+      "src": "orbital-v2/clips/G1a.mp4",
+      "lastFrame": "orbital-v2/clips/G1a-last.png",
+      "frames": 54,
+      "seconds": 1.8,
+      "sha256": "cc45599fe9661e50def202599b30a274a76e3628259275542ea94465a16ffe1e",
+      "lastFrameSha256": "6e387f5464cc8a0d2be964e2bd19be00e8276bbafc5b9a76e41d13c2991de213",
+      "original": "public/family-ai-lab-02/muse-v2/01-G1a-signal.mp4",
+      "originalSha256": "78527ffb184a7809e302a78dfcfd2955823463b2a6fd6d35dbae964c117256a9",
+      "sourceStartSeconds": 0.8,
+      "sourceEndSeconds": 6.6,
+      "speed": 3.222222222222222,
+      "treatment": "One forward span, muted, 1080p/30 fps; last real frame held only when a narration cue extends beyond the span.",
+      "from": 0,
+      "duration": 54
+    },
+    {
+      "id": "G1b",
+      "src": "orbital-v2/clips/G1b.mp4",
+      "lastFrame": "orbital-v2/clips/G1b-last.png",
+      "frames": 180,
+      "seconds": 6.0,
+      "sha256": "62d2f2323f7a7db18e930cc71950ede39e119207aca1923df2f3fe9f72ea390c",
+      "lastFrameSha256": "54cee69fa8cab5d6ec48e671f09ff4117380d0838396660b1116095d88c643ff",
+      "original": "public/family-ai-lab-02/muse-v2/02-G1b-paper.mp4",
+      "originalSha256": "f4587f162f9a16577795787f493548722fc0bde1df9bb3ee4bbded35986c21a3",
+      "sourceStartSeconds": 0.2,
+      "sourceEndSeconds": 6.2,
+      "speed": 1.0,
+      "treatment": "One forward span, muted, 1080p/30 fps; last real frame held only when a narration cue extends beyond the span.",
+      "from": 54,
+      "duration": 145
+    },
+    {
+      "id": "G2",
+      "src": "orbital-v2/clips/G2.mp4",
+      "lastFrame": "orbital-v2/clips/G2-last.png",
+      "frames": 150,
+      "seconds": 5.0,
+      "sha256": "406a3ba4544b5e0ff7005e0f7ea59b57084a24a20b629f6501a3076410a1dc7f",
+      "lastFrameSha256": "990700f3f78a8d8c3cbd6c00c58a4ae243f4e9c027494e26df4625bd62836eb4",
+      "original": "public/family-ai-lab-02/muse-v2/03-G2-arrival.mp4",
+      "originalSha256": "f84bef494f5f5e9476202f25da33ad0d2ffd058c05684914da372607617ee0e8",
+      "sourceStartSeconds": 1.0,
+      "sourceEndSeconds": 6.0,
+      "speed": 1.0,
+      "treatment": "One forward span, muted, 1080p/30 fps; last real frame held only when a narration cue extends beyond the span.",
+      "from": 3143,
+      "duration": 191
+    },
+    {
+      "id": "G3",
+      "src": "orbital-v2/clips/G3.mp4",
+      "lastFrame": "orbital-v2/clips/G3-last.png",
+      "frames": 174,
+      "seconds": 5.8,
+      "sha256": "c0f9f7a09505cc98b30a801925da4d0ba3b0053c42a20c88c0bbc66fe2ee2336",
+      "lastFrameSha256": "8333b6ae66afbdce22598499d4ba2f0a50dde0adefba090776ad26545995d92b",
+      "original": "public/family-ai-lab-02/muse-v2/04-G3-cargo.mp4",
+      "originalSha256": "c218664b3f779639c5a078957ce4305bacf7b42fa0e7a9319ba180ee4cc86b66",
+      "sourceStartSeconds": 0.2,
+      "sourceEndSeconds": 6.0,
+      "speed": 1.0,
+      "treatment": "One forward span, muted, 1080p/30 fps; last real frame held only when a narration cue extends beyond the span.",
+      "from": 3334,
+      "duration": 186
+    },
+    {
+      "id": "G4",
+      "src": "orbital-v2/clips/G4.mp4",
+      "lastFrame": "orbital-v2/clips/G4-last.png",
+      "frames": 150,
+      "seconds": 5.0,
+      "sha256": "f0fb5351da45ab50c3b04970235f8496711b44c0e260a8423edfdb8832b19978",
+      "lastFrameSha256": "3d01333807bc52b1766fd6db4726c1e220461632db27477b3acdbe8d21627f92",
+      "original": "public/family-ai-lab-02/muse-v2/05-G4-watermelon.mp4",
+      "originalSha256": "066327941ad75c548117eca27ba3b0d3e21248ebb3907e85afc9d58dc3659b09",
+      "sourceStartSeconds": 0.2,
+      "sourceEndSeconds": 5.2,
+      "speed": 1.0,
+      "treatment": "One forward span, muted, 1080p/30 fps; last real frame held only when a narration cue extends beyond the span.",
+      "from": 6074,
+      "duration": 162
+    },
+    {
+      "id": "G5",
+      "src": "orbital-v2/clips/G5.mp4",
+      "lastFrame": "orbital-v2/clips/G5-last.png",
+      "frames": 72,
+      "seconds": 2.4,
+      "sha256": "81ad029ece941e652b59b43ee27155e79262e166cdf85144e10b45e073659c38",
+      "lastFrameSha256": "e58e828e06908c63113748753e3c64e0652fff2486cd9d24db0d0b99cb799f43",
+      "original": "public/family-ai-lab-02/muse-v2/06-G5-reply.mp4",
+      "originalSha256": "e2d2f59fb5997a0a1b1ccc3b9957f274fb1edc0fc6f4f9182eaf0d7ecf00bce4",
+      "sourceStartSeconds": 0.0,
+      "sourceEndSeconds": 2.4,
+      "speed": 1.0,
+      "treatment": "One forward span, muted, 1080p/30 fps; last real frame held only when a narration cue extends beyond the span.",
+      "from": 6481,
+      "duration": 72
+    }
+  ],
+  "scriptSha256": "4179597c331ef8fc6171dc1bd9949af8afba93353702b6dd899aefc9970c97b5",
+  "visualStyle": "orbital-v2",
+  "cornerCredits": false,
+  "delivery": "One clean picture, English default, independent Chinese audio, external subtitles only."
+}

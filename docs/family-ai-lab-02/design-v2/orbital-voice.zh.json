@@ -1,0 +1,46 @@
+[
+  {
+    "id": "fa02-01-01",
+    "caption": "纸条过不去。米娅怎么邀请对面的里奥来玩？",
+    "spoken": "纸条过不去。米亚怎么邀请对面的里奥来玩？",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用轻快、好奇的语气讲这个太空小冒险，像在和孩子聊天。短句自然连贯，亲切活泼。",
+    "speed": 1.1,
+    "scene": 1,
+    "settingsSha256": "735b5362396dff937b277fd9f636b090af5ea71ae25559f6fa3ce70c638f529a"
+  },
+  {
+    "id": "fa02-01-02",
+    "caption": "两个太空舱，只靠一条管道连接。",
+    "spoken": "两个太空舱，只靠一条管道连接。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用轻快、好奇的语气讲这个太空小冒险，像在和孩子聊天。短句自然连贯，亲切活泼。",
+    "speed": 1.1,
+    "scene": 1,
+    "settingsSha256": "833f848816c216bc4597691649e8d13a507982d9620126f23e9e68df17110d2d"
+  },
+  {
+    "id": "fa02-04-02",
+    "caption": "接着是 L、A、Y。每收满八颗，接收屏上就出现一个字母。",
+    "spoken": "接着是字母 L、A、Y。每收满八颗，接收屏上就出现一个字母。",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、清楚的普通话讲故事，像坐在孩子旁边说话。语句连贯，节奏平稳。",
+    "speed": 1.1,
+    "scene": 4,
+    "settingsSha256": "e7e4811ed2505e41d82ea9eefae93a34dfb4fcb9d49efea3b2c7e246179f314c"
+  },
+  {
+    "id": "fa02-08-01",
+    "caption": "他按下发送键，一颗金色小球传了回去：收到啦！",
+    "spoken": "他按下发送键，一颗金色小球传了回去：收到啦！",
+    "voice": "louise/zh",
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、清楚的普通话讲故事，像坐在孩子旁边说话。语句连贯，节奏平稳。",
+    "speed": 1.1,
+    "scene": 8,
+    "settingsSha256": "9827c099f4e2de5bfba47ec984ae35a71a6119de56a3416a3f3e912a4d09045e"
+  }
+]

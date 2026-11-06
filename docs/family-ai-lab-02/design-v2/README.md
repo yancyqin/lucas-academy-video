@@ -1,6 +1,6 @@
 # 科幻开场 · 三套设计稿
 
-**当前执行**：全片科幻改版与每条视频一个分镜的要求见 [full-film-plan.md](full-film-plan.md) 和 [single-shots.md](single-shots.md)。用户已接手在 Muse 手动生成；[六条图片/提示词清单](muse-pack.json)可打包为离线生成包。下方是原始三方向探索，旧复杂开场不再用于生成。
+**当前审核版**：用户选择的深空隔舱已落实到 4 分 23.57 秒双语全片，六条手动生成的 Muse 视频全部接入；画面无字幕和右下角标注。[成片与重建说明](orbital-production.md)、[验证结果](orbital-verification.json)。下方保留原始三方向探索及失败尝试的历史；旧复杂开场已停用，无需继续生成或保存素材。
 2026-11-05：用户否定 v1 绘本画风，要求三个科幻方向，开头要有短视频的画面感。用户已选择 01 深空隔舱，并采用 03 的管内追光视角作为开场切入。已向 Muse 提交十秒动作样片请求，视频服务重试后仍报 502，没有生成片段；见[请求](opening-request.json)与[失败记录](opening-result.json)。三张原画由内置 imagegen 生成；完整提示词在 [prompts.json](prompts.json)，原件位置、尺寸与 SHA256 在 [assets.json](assets.json)。
 
 共同节奏：第一秒就发生动作，用信号的速度、管口的阻挡和朋友的反应带出问题；开头先呈现冲突，解释紧接着跟上。

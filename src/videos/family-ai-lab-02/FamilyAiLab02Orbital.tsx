@@ -5,7 +5,9 @@ import type {Family02Props} from './FamilyAiLab02';
 type Timeline=NonNullable<Family02Props['tl']>;
 type Cue=Timeline['lines'][number];
 type Facts=NonNullable<Family02Props['facts']>;
-export type OrbitalProps=Family02Props & {view?:'study'|'full'};
+type StorySpan={id:string;from:number;duration:number;frames:number;src:string;lastFrame:string};
+type OrbitalTimeline=Omit<Timeline,'lines'> & {lines:(Cue & {speechOffsetFrames?:number;bodyDurationFrames?:number})[];storyClips?:StorySpan[]};
+export type OrbitalProps=Omit<Family02Props,'tl'> & {tl:OrbitalTimeline|null;view?:'study'|'full'};
 const P={white:'#e9faff',muted:'#9fc3ce',cyan:'#68ddff',gold:'#ffbd55',glass:'#05131fe8',edge:'#39728b',steel:'#253745'};
 const FONT="'Avenir Next','Arial',sans-serif",MONO="'SFMono-Regular','Menlo',monospace";
 const f=(n:string)=>staticFile('family-ai-lab-02/'+n);
@@ -14,8 +16,8 @@ const ease=(n:number)=>{const p=clamp(n);return p*p*(3-2*p);};
 
 export const calculateOrbitalMetadata:CalculateMetadataFunction<OrbitalProps>=async({props,abortSignal})=>{
  const read=async(n:string)=>{const r=await fetch(f(n),{signal:abortSignal});if(!r.ok)throw Error('Missing orbital input '+n);return r.json();};
- const [source,facts,capture]=await Promise.all([read('timeline.json'),read('facts.json'),read('capture.json')]);
- let tl=source as Timeline;
+ const [source,facts,capture]=await Promise.all([read(props.view==='full'?'orbital-v2/timeline.json':'timeline.json'),read('facts.json'),read('capture.json')]);
+ let tl=source as OrbitalTimeline;
  if(props.view!=='full'){
   let from=0;
   const selected:[string,number][]=[['byte',150],['letter-a',150],['send-play',210],['guess-4',150],['tree-four',150],['fruit-seeds',150],['lab',180],['worksheet',120]];
@@ -63,7 +65,7 @@ function Codes({cue,local,frame,facts}:{cue:Cue;local:number;frame:number;facts:
  const v=cue.visual,arr=facts.codes.A.bits.split('').map(Number),progress=clamp(local/Math.max(1,cue.duration-30)),count=Math.min(8,Math.floor(progress*9));
  if(v==='codebooks')return <><Title name="The same code." note="Agree before the game."/>{[230,1040].map((x,j)=><Pane key={x} x={x} y={295} w={650} h={510}><T x={x+45} y={360} size={34} fill={j?P.cyan:P.gold}>{j?'Leo':'Mia'} · ASCII</T>{['A','L','P','Y'].map((s,i)=><g key={s}><T x={x+50} y={445+i*95} size={47}>{s}</T><T x={x+170} y={445+i*95} size={32} mono>{facts.codes[s].number}</T><T x={x+298} y={445+i*95} size={32} mono fill={P.cyan}>{facts.codes[s].bits}</T></g>)}</Pane>)}</>;
  return <><Title name={v==='weights'?'Each place doubles.':v==='padding'?'Wait for all 8.':v==='ascii'?'A shared code: ASCII':'64 + 1 = 65 → A'} note={v==='ascii'?'Seven-bit ASCII, with a leading 0 here.':v==='padding'?'Leading zeros travel too.':undefined}/><Platform/>
- {facts.weights.map((w,i)=><g key={w}><T x={330+i*180} y={369} anchor="middle" size={39} fill={arr[i]?P.gold:P.muted} mono>{w}</T><Slot x={330+i*180} y={520} b={v==='weights'?(i===7-Math.min(7,Math.floor(progress*8))?1:0):arr[i]} frame={frame} active={v!=='padding'||i<count}/>{arr[i]===1&&v!=='weights'&&<path d={`M${282+i*180} 665H${378+i*180}`} stroke={P.gold} strokeWidth={4}/>}</g>)}
+ {facts.weights.map((w,i)=><g key={w}><T x={330+i*180} y={369} anchor="middle" size={39} fill={(v==='weights'?i===7-Math.min(7,Math.floor(progress*8)):arr[i]===1)?P.gold:P.muted} mono>{w}</T><Slot x={330+i*180} y={520} b={v==='weights'?(i===7-Math.min(7,Math.floor(progress*8))?1:0):arr[i]} frame={frame} active={v!=='padding'||i<count}/>{arr[i]===1&&v!=='weights'&&<path d={`M${282+i*180} 665H${378+i*180}`} stroke={P.gold} strokeWidth={4}/>}</g>)}
  <T x={960} y={773} anchor="middle" size={52} mono>{v==='padding'?`${count} / 8${count===8?'  →  A':''}`:v==='weights'?'1 → 2 → 4 → 8 → …':facts.codes.A.bits}</T>
  </>;
 }
@@ -89,7 +91,7 @@ function Crate({x,y,n,active,chosen,local}:{x:number;y:number;n:number;active:bo
  <path d="M52 149H173" stroke={chosen?P.gold:P.cyan} strokeWidth={4}/><circle cx={34} cy={68} r={4} fill={P.muted}/><circle cx={191} cy={68} r={4} fill={P.muted}/>
  </g>;}
 function Guess({cue,local,frame,facts}:{cue:Cue;local:number;frame:number;facts:Facts}){const index=cue.visual.startsWith('guess-')?Number(cue.visual.slice(6))-1:-1,answered=local>cue.duration*.42,step=index>=0?facts.boxPath[index]:null;
- const all=Array.from({length:10},(_,i)=>i+1),before=index>0?facts.boxPath[index-1].remaining:all,remaining=step?(answered?step.remaining:before):all;
+ const all=Array.from({length:10},(_,i)=>i+1),before=index>0?facts.boxPath[index-1].remaining:all,remaining=step?(answered?step.remaining:before):cue.visual==='bad-question'?all.filter(n=>n>(local>cue.duration*.55?2:local>cue.duration*.28?1:0)):all;
  return <><Title name={step?`Greater than ${step.threshold}?`:cue.visual==='bad-question'?'Box 1? Box 2?':cue.visual==='questions-rule'?'Agree on the questions.':'Find the hidden gift.'} note={step?`${remaining.length} ${remaining.length===1?'box':'boxes'} left`:'One gift. Ten boxes.'}/>
  {step&&<g><Signal x={1530} y={182} b={step.answer?1:0} r={34} frame={frame}/><T x={1605} y={198} size={39} fill={step.answer?P.gold:P.cyan}>{answered?(step.answer?'YES':'NO'):'…'}</T><T x={1760} y={253} size={26} anchor="end" fill={P.muted}>{index+1} / 4</T></g>}
  {all.map((n,i)=><Crate key={n} x={248+i%5*300} y={390+Math.floor(i/5)*300} n={n} active={remaining.includes(n)} chosen={index===3&&answered&&n===7} local={Math.max(0,local-cue.duration*.42)}/>)}
@@ -118,28 +120,45 @@ function Fruit({cue,local}:{cue:Cue;local:number}){const filter=cue.visual==='fr
  {filter>0&&revealed&&<T x={960} y={925} anchor="middle" size={46} fill={P.gold}>YES</T>}
  </>;}
 
+function FruitTree({local}:{local:number}){return <>
+ <Title name="Choose the next question." note="Two questions can separate these four pictures."/>
+ <path d="M960 330L530 470M960 330L1390 470M530 520L290 700M530 520L730 700M1390 520L1190 700M1390 520L1630 700" fill="none" stroke={P.cyan} strokeOpacity=".45" strokeWidth={3}/>
+ <path d="M960 330L530 470L530 520L730 700" fill="none" stroke={P.gold} strokeWidth={5} strokeDasharray="10 8" strokeDashoffset={-local*1.5}/>
+ <Pane x={800} y={275} w={320} h={85}><T x={960} y={333} anchor="middle" size={40}>Red?</T></Pane>
+ <Pane x={315} y={440} w={430} h={90}><T x={530} y={500} anchor="middle" size={36}>Seeds visible?</T></Pane>
+ <Pane x={1220} y={440} w={340} h={90}><T x={1390} y={500} anchor="middle" size={36}>Yellow?</T></Pane>
+ {[['YES',720,400],['NO',1200,400],['NO',390,610],['YES',640,610],['YES',1250,610],['NO',1515,610]].map(([label,x,y])=><T key={String(x)+String(y)} x={Number(x)} y={Number(y)} anchor="middle" size={27} fill={P.muted}>{label}</T>)}
+ {[fruits[1],fruits[3],fruits[0],fruits[2]].map((fruit,i)=><g key={fruit.name}><image href={f('curriculum/'+fruit.file+'.png')} x={180+i*445} y={680} width={220} height={185} preserveAspectRatio="xMidYMid meet"/><T x={290+i*445} y={920} anchor="middle" size={30} fill={i===1?P.gold:P.white}>{fruit.name}</T></g>)}
+ </>;}
+
+function StoryFootage({shot,frame}:{shot:StorySpan;frame:number}){const elapsed=frame-shot.from;return <>
+ <Sequence from={shot.from} durationInFrames={Math.min(shot.frames,shot.duration)} layout="none"><OffthreadVideo src={f(shot.src)} muted style={{position:'absolute',width:'100%',height:'100%',objectFit:'cover'}}/></Sequence>
+ {elapsed>=shot.frames&&<Img src={f(shot.lastFrame)} style={{position:'absolute',width:'100%',height:'100%',objectFit:'cover'}}/>}
+ </>;}
+
 export const FamilyAiLab02Orbital:FC<OrbitalProps>=({tl,facts,captureFrames=180,view='study'})=>{
  const frame=useCurrentFrame();if(!tl||!facts)return null;
  const cue=tl.lines.find(l=>frame>=l.from&&frame<l.from+l.duration)??tl.lines.at(-1)!,local=frame-cue.from,v=cue.visual;
+ const shot=tl.storyClips?.find(s=>frame>=s.from&&frame<s.from+s.duration);
  const story=cue.scene===1||v==='received'||v==='picnic'||v==='invite',lab=v==='lab',worksheet=v==='worksheet';
- const art=cue.scene===1?'../../design-v2/01-orbital':v==='received'?'story-arrival':v==='picnic'||v==='invite'?'story-arrival':cue.scene===4?'signal-conduit':cue.scene===5||cue.scene===6?'cargo-bay':'lab-workbench';
- const src=cue.scene===1?f('design-v2/01-orbital.png'):f('orbital-v2/art/'+art+'.png');
+ const art=v==='received'?'story-arrival':v==='picnic'||cue.scene===4?'signal-conduit':cue.scene===5||cue.scene===6?'cargo-bay':'lab-workbench';
+ const src=cue.scene===1&&v==='card'?f('design-v2/01-orbital.png'):f('orbital-v2/art/'+art+'.png');
  return <AbsoluteFill style={{background:'#020b12',fontFamily:FONT}}>
-  <Img src={src} style={{position:'absolute',width:'100%',height:'100%',objectFit:'cover'}}/>
-  <AbsoluteFill style={{background:story?'linear-gradient(180deg,#020a12aa,transparent 45%,#020a1233)':'linear-gradient(180deg,#020a12df,#020a1266 38%,#020a1226 75%,#020a1288)'}}/>
+  {shot?<StoryFootage shot={shot} frame={frame}/>:<Img src={src} style={{position:'absolute',width:'100%',height:'100%',objectFit:'cover'}}/>}
+  <AbsoluteFill style={{background:shot?'transparent':story?'linear-gradient(180deg,#020a12aa,transparent 45%,#020a1233)':'linear-gradient(180deg,#020a12df,#020a1266 38%,#020a1226 75%,#020a1288)'}}/>
   <svg width={1920} height={1080} viewBox="0 0 1920 1080" style={{position:'absolute',inset:0}}><Defs/>
-   {cue.scene===1&&<><T x={140} y={145} size={48}>Only 0 and 1.</T>{v==='rules'&&<Pane x={1200} y={290} w={560} h={320}><Signal x={1350} y={440} b={0} r={60} frame={frame}/><Signal x={1610} y={440} b={1} r={60} frame={frame}/></Pane>}</>}
+   {!shot&&cue.scene===1&&<>{v==='card'?<><T x={1780} y={145} anchor="end" size={51}>How Can 0 and 1 Send a Message?</T><T x={1780} y={204} anchor="end" size={25} fill={P.muted}>By Lucas Academy Team</T></>:<><Title name={v==='challenge'?'Only 0 and 1. Can you do it?':'Two signals. One tiny pipe.'}/><Platform/><Signal x={650} y={540} b={0} r={100} frame={frame}/><Signal x={1270} y={540} b={1} r={100} frame={frame}/></>}</>}
    {cue.scene===2&&<Bits cue={cue} local={local} frame={frame}/>}
    {cue.scene===3&&<Codes cue={cue} local={local} frame={frame} facts={facts}/>}
-   {cue.scene===4&&<Message cue={cue} local={local} frame={frame} facts={facts} study={view==='study'}/>}
-   {cue.scene===5&&<Guess cue={cue} local={local} frame={frame} facts={facts}/>}
+   {!shot&&cue.scene===4&&<Message cue={cue} local={local} frame={frame} facts={facts} study={view==='study'}/>}
+   {!shot&&cue.scene===5&&<Guess cue={cue} local={local} frame={frame} facts={facts}/>}
    {cue.scene===6&&<Counts cue={cue} local={local}/>}
-   {cue.scene===7&&<Fruit cue={cue} local={local}/>}
+   {!shot&&cue.scene===7&&(v==='fruit-tree'?<FruitTree local={local}/>:<Fruit cue={cue} local={local}/>)}
    {lab&&<Title name="Try the real lab."/>}{worksheet&&<Title name="Send your own message."/>}
-   {v==='lights'&&<><Title name="Two states. The same idea."/>{[0,1].map((b,i)=><g key={b}><Signal x={620+i*680} y={540} b={b} r={100} frame={frame}/><T x={620+i*680} y={770} anchor="middle" size={50}>{b?'ON = 1':'OFF = 0'}</T></g>)}</>}
+   {v==='picnic'&&!shot&&<><Title name="Got it."/><T x={170} y={330} size={32} fill={P.muted}>Mia</T><T x={1750} y={330} anchor="end" size={32} fill={P.muted}>Leo</T><Signal x={1760-1600*clamp((local-72)/Math.max(1,cue.duration-90))} y={630} b={1} r={38} frame={frame}/></>}
+   {v==='lights'&&<><Title name="Two states. The same idea."/>{[0,1].map((b,i)=><g key={b}>{b?<Signal x={620+i*680} y={540} b={b} r={100} frame={frame}/>:<><circle cx={620} cy={540} r={100} fill="#1a2630" stroke="#536671" strokeWidth={3}/><T x={620} y={571} anchor="middle" mono size={85} fill={P.muted}>0</T></>}<T x={620+i*680} y={770} anchor="middle" size={50}>{b?'ON = 1':'OFF = 0'}</T></g>)}</>}
    {v==='scope'&&<><Title name="A byte is not always a character."/><Pane x={230} y={345} w={650} h={410}><T x={555} y={510} anchor="middle" size={120}>A</T><T x={555} y={670} anchor="middle" size={35}>8 bits in this example</T></Pane><Pane x={1040} y={345} w={650} h={410}><T x={1365} y={510} anchor="middle" size={90}>文 字</T><T x={1365} y={670} anchor="middle" size={32}>Some encodings need more bytes.</T></Pane></>}
    {v==='invite'&&<Title name="What would you tell your friend?"/>}
-   <T x={1820} y={1045} size={18} anchor="end" fill={P.muted}>{cue.scene===7?'AI artwork + animation · Lucas Academy | Fruit · Fluent Emoji (MIT)':lab?'Real browser capture · Lucas Academy':worksheet?'Original worksheet · Lucas Academy':'AI artwork + code animation · Lucas Academy'}</T>
   </svg>
   {lab&&<div style={{position:'absolute',left:135,top:285,width:1265,height:712,background:'#061620',border:'3px solid #68ddff66',borderRadius:12,overflow:'hidden',boxShadow:'0 0 45px #68ddff22'}}>
    <Sequence from={cue.from} durationInFrames={Math.min(captureFrames,cue.duration)} layout="none"><OffthreadVideo src={f('capture/lab.mp4')} muted style={{width:'100%',height:'100%',objectFit:'contain'}}/></Sequence>

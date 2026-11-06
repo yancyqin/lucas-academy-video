@@ -1,0 +1,89 @@
+{
+  "movie": "out/family-ai-lab-02/orbital-v2/delivery/family-ai-lab-02.bilingual.mp4",
+  "durationSeconds": 263.56666666666666,
+  "frames": 7907,
+  "size": [
+    1920,
+    1080
+  ],
+  "fps": 30,
+  "sha256": "7d2d3ee8bc7eb632359a4ba1cee1c251423c0eaa57437072ecab272312e46a0e",
+  "nativeMuseClips": 6,
+  "originalMuseSeconds": 52.0,
+  "selectedVoiceTakes": 72,
+  "reusedV1Takes": 63,
+  "audioTracks": [
+    {
+      "language": "English",
+      "default": true
+    },
+    {
+      "language": "Chinese",
+      "default": false
+    }
+  ],
+  "loudness": [
+    {
+      "input_i": "-16.04",
+      "input_tp": "-0.69",
+      "input_lra": "4.30",
+      "input_thresh": "-27.00",
+      "output_i": "-16.10",
+      "output_tp": "-1.00",
+      "output_lra": "4.10",
+      "output_thresh": "-27.01",
+      "normalization_type": "dynamic",
+      "target_offset": "0.10"
+    },
+    {
+      "input_i": "-16.04",
+      "input_tp": "-0.98",
+      "input_lra": "4.10",
+      "input_thresh": "-27.29",
+      "output_i": "-16.24",
+      "output_tp": "-1.00",
+      "output_lra": "3.70",
+      "output_thresh": "-27.45",
+      "normalization_type": "dynamic",
+      "target_offset": "0.24"
+    }
+  ],
+  "subtitleTracks": 0,
+  "externalSRTs": {
+    "en": 36,
+    "zh-Hans": 36
+  },
+  "cornerCredits": false,
+  "blackSegments": [],
+  "qr": [
+    {
+      "visual": "lab",
+      "seconds": 233.16666666666666,
+      "decodedAt": [
+        "1080p",
+        "720p"
+      ]
+    },
+    {
+      "visual": "worksheet",
+      "seconds": 240.0,
+      "decodedAt": [
+        "1080p",
+        "720p"
+      ]
+    },
+    {
+      "visual": "invite",
+      "seconds": 258.76666666666665,
+      "decodedAt": [
+        "1080p",
+        "720p"
+      ]
+    }
+  ],
+  "sourceScriptSha256": "4179597c331ef8fc6171dc1bd9949af8afba93353702b6dd899aefc9970c97b5",
+  "visualSourceSha256": "d74af07e2363a332632f03cb598d08dcc694726bd26dd97fde6ed3b45eb96c87",
+  "sourceHashesVerified": 13,
+  "artworkHashesVerified": 13,
+  "voiceDecisionsVerified": 72
+}
