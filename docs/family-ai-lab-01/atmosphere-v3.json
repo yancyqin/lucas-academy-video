@@ -1,0 +1,42 @@
+{
+  "visualRevision": 3,
+  "narrationRevision": 2,
+  "ownerDirection": "Whole lesson in the 1957 laboratory atmosphere; vary screens; remove on-picture labels and credits.",
+  "onPictureText": "Keep instructional questions, numbers, code, proper names, dates, interface controls and QR destination. Remove chapter/series headers, provenance badges, byline, method footnote and decorative labels.",
+  "screenBackgrounds": [
+    {
+      "path": "public/family-ai-lab-01/art/instrument-screen-v3.png",
+      "sha256": "09c2edf5ec5fad713f4c647fb5e2bb2d164289dd060b803fc75915542e6ca08c",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "path": "public/family-ai-lab-01/art/projection-screen-v3.png",
+      "sha256": "9b9cdf628cf9bdbd41856ae8388f749bd3ab19154da3ab604833b0e0e252bd60",
+      "width": 1672,
+      "height": 941
+    }
+  ],
+  "originalS1Shell": "public/family-ai-lab-01/muse/G4-last.png",
+  "unchanged": {
+    "pictureIntervals": 77,
+    "durationFrames": 13365,
+    "narrationManifestSha256": "d01b66596a6ba9834ebdb586cece15f4a026a590ac19243139514e98daf9a294",
+    "srtSha256": {
+      "en": "2c539627f78c4f811be47c49a271ca91f7e3fbc004bf7fb6141e6cb34839717f",
+      "zh": "ba1017b09421db26d47d3c39552c1f95a9d019ff2d0b1724f6b56deb01c514c4"
+    },
+    "audio": {
+      "en": {
+        "path": "out/family-ai-lab-01/audio/v2/en.wav",
+        "sha256": "24b64154cb9c91ca0ef10bdc310ae6c1d97018c8a3b56c403855f2608d9260c8"
+      },
+      "zh": {
+        "path": "out/family-ai-lab-01/audio/v2/zh.wav",
+        "sha256": "b73e9f94edd86ae88a790788e83ffb342e0a4bef061159be3a1e6055c0de2610"
+      }
+    }
+  },
+  "removedOverlayCreditCalls": 23,
+  "earlierInputs": "../lucas-academy-video-data/family-ai-lab-01/archive/v2/"
+}

@@ -9,13 +9,15 @@ const ROOT=path.resolve(__dirname,'../..');
 const OUT=path.join(ROOT,'out/family-ai-lab-01');
 const PUB=path.join(ROOT,'tmp/family-ai-lab-01/public');
 const options=new Set(process.argv.slice(2));
-const revision=JSON.parse(fs.readFileSync(path.join(ROOT,'public/family-ai-lab-01/timeline.json'),'utf8')).revision||1;
-const framesDir=path.join(OUT,'frames',...(revision>=2?[`v${revision}`]:[]));
+const timeline=JSON.parse(fs.readFileSync(path.join(ROOT,'public/family-ai-lab-01/timeline.json'),'utf8'));
+const revision=timeline.revision||1;
+const visualRevision=timeline.visualRevision||revision;
+const framesDir=path.join(OUT,'frames',...(visualRevision>=2?[`v${visualRevision}`]:[]));
 const pick=new Set((process.argv.find(s=>s.startsWith('--pick='))||'').slice(7).split(',').filter(Boolean).map(Number));
 const run=(cmd,args)=>{const r=spawnSync(cmd,args,{stdio:'inherit',cwd:ROOT});if(r.status!==0)throw Error(`${cmd} failed: ${r.status}`);};
 async function main(){
  const voiced=options.has('--voiced');
- const delivery=path.join(OUT,voiced?'delivery':'review',...(revision>=2?[`v${revision}`]:[]));
+ const delivery=path.join(OUT,voiced?'delivery':'review',...(visualRevision>=2?[`v${visualRevision}`]:[]));
  fs.mkdirSync(PUB,{recursive:true});
  if(!fs.existsSync(path.join(PUB,'family-ai-lab-01')))fs.symlinkSync(path.join(ROOT,'public/family-ai-lab-01'),path.join(PUB,'family-ai-lab-01'),'dir');
  fs.mkdirSync(framesDir,{recursive:true});fs.mkdirSync(delivery,{recursive:true});
@@ -44,15 +46,23 @@ async function main(){
   const composition=await selectComposition({serveUrl,id:'FamilyAiLab01',puppeteerInstance:browser});
   if(voiced&&!composition.props.tl.narrated)throw Error('Build --voiced and mix both audio tracks first');
   if(revision>=2&&!composition.props.data.intro.ready)throw Error('The verified Muse G4 original is required before rendering the movie');
-  const picture=path.join(OUT,revision>=2?`picture.v${revision}.mp4`:voiced?'picture.voiced.mp4':'picture.mp4');
+  if(visualRevision>=3){
+   const atmosphere=JSON.parse(fs.readFileSync(path.join(ROOT,'docs/family-ai-lab-01/atmosphere-v3.json'),'utf8'));
+   for(const asset of atmosphere.screenBackgrounds){
+    if(createHash('sha256').update(fs.readFileSync(path.join(ROOT,asset.path))).digest('hex')!==asset.sha256)throw Error('Period background hash differs: '+asset.path);
+   }
+  }
+  const picture=path.join(OUT,revision>=2?`picture.v${visualRevision}.mp4`:voiced?'picture.voiced.mp4':'picture.mp4');
   if(revision>=2){
    // Bounded caches and fresh Chromium processes prevent a long capture-heavy
    // film from accumulating decoded frames across its entire duration.
    const signature=createHash('sha256').update(JSON.stringify(composition.props))
     .update(fs.readFileSync(path.join(ROOT,'src/videos/family-ai-lab-01/FamilyAiLab01.tsx')))
+    .update(fs.readFileSync(path.join(ROOT,'src/videos/family-ai-lab-01/PeriodFrame.tsx')))
+    .update(fs.readFileSync(path.join(ROOT,'docs/family-ai-lab-01/atmosphere-v3-prompts.json')))
     .update(fs.readFileSync(path.join(ROOT,'src/Root.tsx')))
     .update(fs.readFileSync(__filename)).digest('hex').slice(0,16);
-   const chunks=path.join(OUT,`chunks-v${revision}-${signature}`);fs.mkdirSync(chunks,{recursive:true});
+   const chunks=path.join(OUT,`chunks-v${visualRevision}-${signature}`);fs.mkdirSync(chunks,{recursive:true});
    await browser.close({silent:true});metadataBrowserClosed=true;
    const parts=[],step=3000,total=composition.durationInFrames;
    for(let start=0,index=0;start<total;start+=step,index++){

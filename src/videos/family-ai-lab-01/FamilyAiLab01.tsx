@@ -6,6 +6,7 @@ import claudeResult from '../../../scripts/perceptron-race/results/claude-fable.
 import astraResult from '../../../scripts/perceptron-race/results/astra-low.json';
 import qwenResult from '../../../scripts/perceptron-race/results/qwen-fast.json';
 import recording from '../../../docs/family-ai-lab-01/capture.json';
+import {PeriodFrame, type PeriodSurface} from './PeriodFrame';
 
 type Lang = 'en' | 'zh';
 type Line = {id:string; scene:number; visual:string; text:Record<Lang,string>; from:number; duration:number; captionFrames:number};
@@ -13,8 +14,8 @@ type Timeline = {fps:number; durationInFrames:number; lines:Line[]; titles:strin
 type VisualData = {pixels:number[]; points:number[]; rounds:number; training:{d:string;yes:boolean}[]; intro:{ready:boolean;frames:number}};
 export type FamilyProps = {tl?:Timeline|null; data?:VisualData|null;};
 const file=(p:string)=>staticFile(`family-ai-lab-01/${p}`);
-const PAPER='#f1ecdf', INK='#172a2c', TEAL='#103e42', GOLD='#efba63', CYAN='#8be0dc', BLUE='#4779d7', ORANGE='#dc8352';
-const FONT="'Avenir Next', 'Arial', 'Hiragino Sans GB', sans-serif";
+const PAPER='#eee3c9', INK='#263a2c', TEAL='#254734', GOLD='#dcb46c', CYAN='#acd3b4', BLUE='#658e71', ORANGE='#bd8257';
+const FONT="'American Typewriter', 'Courier New', 'Hiragino Sans GB', serif";
 const MONO="'SFMono-Regular', 'Menlo', monospace";
 const clamp={extrapolateLeft:'clamp',extrapolateRight:'clamp'} as const;
 const mix=(f:number,a:number,b:number)=>interpolate(f,[a,b],[0,1],clamp);
@@ -29,10 +30,9 @@ export const calculateFamilyMetadata:CalculateMetadataFunction<FamilyProps>=asyn
  return {props:{...props,tl,data:{pixels:picture.pixels,points:model.points,rounds:model.rounds,training,intro}},fps:tl.fps,durationInFrames:tl.durationInFrames};
 };
 
-const Box:FC<{children:ReactNode;style?:CSSProperties}>=({children,style})=><div style={{position:'absolute',boxSizing:'border-box',borderRadius:22,background:'#fffaf0',border:'1px solid #203d3e22',boxShadow:'0 12px 40px #173b3012',...style}}>{children}</div>;
+const Box:FC<{children:ReactNode;style?:CSSProperties}>=({children,style})=><div style={{position:'absolute',boxSizing:'border-box',borderRadius:3,background:'#eee3c9',border:'1px solid #86744c66',boxShadow:'inset 0 0 0 3px #fff3d31c',...style}}>{children}</div>;
 const Label:FC<{children:ReactNode;style?:CSSProperties}>=({children,style})=><div style={{fontSize:30,fontWeight:650,letterSpacing:1,...style}}>{children}</div>;
-const Big:FC<{children:ReactNode;style?:CSSProperties}>=({children,style})=><div style={{fontSize:76,fontWeight:750,lineHeight:1.13,letterSpacing:-2,...style}}>{children}</div>;
-const Credit:FC<{children:ReactNode}>=({children})=>{const screen=useContext(ScreenContext);return <div data-shot-credit style={{position:'absolute',right:screen?140:76,bottom:screen?60:34,fontSize:screen?19:20,color:'#576567',background:'#f6f0e8ed',padding:'7px 15px',borderRadius:4}}>{children}</div>;};
+const Big:FC<{children:ReactNode;style?:CSSProperties}>=({children,style})=><div style={{fontFamily:"'Georgia', 'Times New Roman', serif",fontSize:76,fontWeight:700,lineHeight:1.13,letterSpacing:-1,...style}}>{children}</div>;
 
 /** One unbroken source take followed by its final frame; no video loops. */
 const Take:FC<{name:string;from:number;poster:string;frames?:number;start?:number;rate?:number;fit?:'cover'|'contain';style?:CSSProperties}>=({name,from,poster,frames=300,start=0,rate=1,fit='cover',style})=><AbsoluteFill style={{overflow:'hidden',...style}}>
@@ -53,8 +53,7 @@ const CAT=[129,195,255,153,255,231,126,60];
 const HEART=[102,255,255,255,126,60,24,0];
 const bytes=(values:number[])=>values.flatMap(b=>Array.from({length:8},(_,i)=>(b>>(7-i))&1));
 
-const QrCard:FC<{style?:CSSProperties;large?:boolean}>=({style,large=false})=><Box style={{width:large?370:270,height:large?490:365,padding:large?32:24,textAlign:'center',background:'#fff',...style}}>
- <Label style={{fontSize:large?38:29,color:TEAL,marginBottom:20}}>Try the lab</Label>
+const QrCard:FC<{style?:CSSProperties;large?:boolean}>=({style,large=false})=><Box style={{width:large?370:270,height:large?395:305,padding:large?32:24,textAlign:'center',background:'#fff9e9',...style}}>
  <Img src={file('art/ai-lab-qr.png')} style={{width:large?300:222,height:large?300:222,imageRendering:'pixelated'}}/>
  <div style={{fontSize:large?23:18,color:TEAL,fontWeight:650,marginTop:16}}>ai.lucasacademy.org</div>
 </Box>;
@@ -95,7 +94,7 @@ function PixelRain({tl,data,frame}:{tl:Timeline;data:VisualData;frame:number}){
    <g transform={`translate(${compact?545:695} 205) scale(25)`} opacity={mix(p,.78,.98)}><path d={core} fill={GOLD}/></g>
   </svg>
   <Big style={{position:'absolute',left:95,top:180,fontSize:85,color:PAPER,opacity:1-mix(p,.35,.8)}}>How fast?</Big>
-  <Credit>Pixel animation · real training pictures · Author</Credit>
+
  </>;
 }
 
@@ -126,8 +125,7 @@ function Race({tl,data,frame,line}:{tl:Timeline;data:VisualData;frame:number;lin
     {done&&<div style={{position:'absolute',right:0,top:35,fontSize:30,fontWeight:700,color:s.answer?'#c6f1db':'#f5a985'}}>{s.answer?'YES ✓':'NO ×'}</div>}
    </div>;
   })}
-  <div style={{position:'absolute',left:82,top:compact?990:863,fontSize:compact?17:19,color:'#bbd0c9'}}>2026-11-04 · MacBook Pro · same 20×20 input · medians · warmed JS / reported model times</div>
-  <Credit>Original experiment · Author</Credit>
+
   {line.visual==='mystery'&&<div style={{position:'absolute',right:140,top:345,fontSize:320,fontWeight:700,color:'#b5e6e8',textShadow:'0 0 70px #73dedb55'}}>X<span style={{color:GOLD}}>?</span></div>}
  </>;
 }
@@ -142,7 +140,7 @@ function Ratios({which}:{which:'claude'|'astra'}){
    <Big style={{fontSize:210,color:GOLD,marginTop:40}}>{which==='claude'?'≈':'>'}{count}<span style={{fontSize:80,letterSpacing:-2}}> million</span></Big>
    <Big style={{fontSize:68,marginTop:15}}>times faster than<br/>{which==='claude'?'Claude Fable 5.1':'GPT-6-Astra'}</Big>
   </div>
-  <Credit>Original experiment · median model times · Author</Credit>
+
  </>;
 }
 
@@ -162,7 +160,7 @@ function Pictures({line,frame,tl}:{line:Line;frame:number;tl:Timeline}){
    {line.visual==='cat-bytes'?<div style={{marginTop:24,fontFamily:MONO,fontSize:25,color:TEAL}}>129 195 255 153<br/>255 231 126 60<br/><b style={{fontSize:38,lineHeight:1.8}}>8 bytes</b></div>:
     <Label style={{marginTop:27,color:TEAL,fontSize:29}}>{stage===2?'Black = 1   White = 0':worksheet?'Read a row. Color a row.':'A picture becomes numbers.'}</Label>}
   </div>
-  <Credit>Lucas Academy · {worksheet?'worksheet':'lesson images'}</Credit>
+
  </>;
 }
 
@@ -188,7 +186,7 @@ function Neuron({line,frame,tl}:{line:Line;frame:number;tl:Timeline}){
   <Label style={{position:'absolute',left:1460,top:665}}>{fire?'Fire!':'Enough?'}</Label>
   {line.visual==='neuron-many'&&<Box style={{left:610,top:300,width:1000,height:400,padding:50}}><Big style={{color:TEAL,fontSize:90}}>≈86 billion</Big><Label style={{marginTop:25,fontSize:42}}>neurons in a human brain</Label><Label style={{fontSize:25,marginTop:30,color:'#64716a'}}>We will start with one very simple model.</Label></Box>}
   {strong&&<Box style={{left:590,top:700,width:840,height:105,padding:25,textAlign:'center'}}><Label>Hebb · 1949 · stronger connections</Label></Box>}
-  <Credit>Diagram · Author · simplified neuron</Credit>
+
  </>;
 }
 
@@ -207,7 +205,7 @@ function AppleGame({line,frame}:{line:Line;frame:number}){
    {['Red  +1','Round  +1',...(clues?['Sweet?  +?']:[])].map((c,i)=><Box key={c} style={{position:'relative',marginTop:22,padding:'22px 35px',fontSize:43,color:i===2?BLUE:INK}}>{c}</Box>)}
    <div style={{display:'flex',alignItems:'center',gap:30,marginTop:42}}><div style={{width:96,height:96,borderRadius:60,background:lit?GOLD:'#d0d8cf',border:`4px solid ${TEAL}`,boxShadow:lit?'0 0 55px #e9ad5177':'none'}}/><Label style={{fontSize:38}}>{tomato?'It gets 2 points, too.':clues?'Choose a new clue.':'2 points → light on'}</Label></div>
   </div>
-  <Credit>Classroom game · Lucas Academy</Credit>
+
  </>;
 }
 
@@ -218,7 +216,7 @@ function Code({both=false,train=false}:{both?:boolean;train?:boolean}){
  return <>{parts.map(([name,code],i)=><Box key={name} style={{left:80+i*900,top:210,width:both?860:1760,height:570,padding:32,background:'#0e2c30',color:PAPER}}>
   <Label style={{color:GOLD,marginBottom:35,fontSize:36}}>{name}</Label>
   {code.map((row,j)=><div key={j} style={{whiteSpace:'pre',fontFamily:MONO,fontSize:both?21:35,lineHeight:both?'48px':'57px',color:row.includes('if (picture')?CYAN:row.includes('return')?GOLD:PAPER}}>{row}</div>)}
- </Box>)}<Credit>JavaScript rule · Author · same predict / train logic</Credit></>;
+ </Box>)}</>;
 }
 
 function Lab({line,tl,frame}:{line:Line;tl:Timeline;frame:number}){
@@ -233,7 +231,7 @@ function Lab({line,tl,frame}:{line:Line;tl:Timeline;frame:number}){
    <Take name="capture/lab.mp4" poster={`capture/${poster}.png`} from={start} start={sourceStart} frames={frames} rate={twenty?0.6:0.55} style={{width:1056,height:704,top:0}}/>
   </div>
   <Box style={{left:twenty?1030:1030,top:twenty?260:190,width:twenty?520:520,height:twenty?520:650,padding:30,background:'#f6f0e8f7'}}>
-   <Label style={{fontSize:34,color:TEAL,marginBottom:25}}>{twenty?'The learned points':'Points · enlarged'}</Label>
+   <Label style={{fontSize:34,color:TEAL,marginBottom:25}}>{twenty?'Learned points':'Points'}</Label>
    {twenty?<Img src={file('capture/twenty-points.png')} style={{width:410,height:410,objectFit:'contain',marginLeft:20,imageRendering:'pixelated'}}/>:
     <><div style={{position:'relative',width:380,height:380,overflow:'hidden',marginLeft:40}}>
      <Take name="capture/lab.mp4" poster={`capture/${poster}.png`} from={start} start={sourceStart} frames={frames} rate={0.55} style={{width:1920,height:1280,left:-649,top:-263}}/>
@@ -242,7 +240,7 @@ function Lab({line,tl,frame}:{line:Line;tl:Timeline;frame:number}){
     </div></>}
   </Box>
   <QrCard style={{left:1600,top:230}}/>
-  <Credit>Browser recording · Lucas Academy · {twenty?'trained model restored':'3×3 activity'}</Credit>
+
  </>;
 }
 
@@ -265,7 +263,7 @@ function MarkI({line,data,frame,tl}:{line:Line;data:VisualData;frame:number;tl:T
   </Box>
   <div style={{position:'absolute',left:1570,top:410,width:170,height:170,borderRadius:90,border:`7px solid ${TEAL}`,background:output?GOLD:'#cbcdbb',boxShadow:output?'0 0 70px #eabb6377':'none'}}/>
   <Label style={{position:'absolute',left:1560,top:630,fontSize:40}}>Output</Label>
-  <Credit>Author diagram · simplified Mark I, not a wiring plan</Credit>
+
  </>;
 }
 
@@ -277,7 +275,7 @@ function Report({newspaper=false}:{newspaper?:boolean}){
    <Big style={{fontFamily:"'Georgia', serif",fontSize:newspaper?91:95,color:INK}}>{newspaper?<>New Navy Device<br/>Learns By Doing</>:<>The Perceptron</>}</Big>
    {!newspaper&&<Label style={{fontFamily:"'Georgia', serif",fontSize:44,lineHeight:1.35,marginTop:35}}>A Perceiving and Recognizing Automaton<br/><span style={{fontSize:31}}>Frank Rosenblatt · Report 85-460-1</span></Label>}
   </Box>
-  <Credit>{newspaper?'Headline · The New York Times · typeset recreation':'Title · Rosenblatt 1957 report · typeset recreation'}</Credit>
+
  </>;
 }
 
@@ -296,7 +294,7 @@ function Scale({data,zoom,frame,line}:{data:VisualData;zoom:boolean;frame:number
    <div style={{position:'absolute',left:775,top:550,fontSize:25}}>400<br/><span style={{fontSize:21}}>at this scale</span></div>
    <div style={{position:'absolute',left:1105,top:370,color:PAPER}}><Big style={{fontSize:99,color:GOLD}}>≈8 billion</Big><Label style={{fontSize:34,marginTop:15}}>parameters · Qwen3 8B</Label><Label style={{fontSize:24,marginTop:75,color:CYAN}}>Same area scale</Label></div>
   </>:<div style={{position:'absolute',left:850,top:370}}><Big style={{fontSize:130,color:TEAL}}>≤{data.points.length}</Big><Label style={{fontSize:48,marginTop:25}}>additions per picture</Label><Label style={{fontSize:30,marginTop:35,color:'#647168'}}>Read the points. Add. Decide.</Label></div>}
-  <Credit>{zoom?'Author diagram · Qwen model card · rounded parameter count':'JavaScript predict() · Author'}</Credit>
+
  </>;
 }
 
@@ -312,7 +310,7 @@ function History({line}:{line:Line}){
    <Label style={{fontSize:29,minHeight:80,color:TEAL}}>{h[1]}</Label>
    <Label style={{fontSize:25,color:'#65736a',fontWeight:400}}>{h[2]}</Label>
   </div>)}
-  <Credit>Historical timeline · Author · references in production notes</Credit>
+
  </>;
 }
 
@@ -320,17 +318,17 @@ function Limits({chat=false}:{chat?:boolean}){
  return <>
   <Big style={{position:'absolute',left:100,top:190,color:TEAL,fontSize:72}}>{chat?'Many kinds of questions':'On this test'}</Big>
   {chat?<div style={{position:'absolute',left:120,top:355,width:1640,display:'flex',gap:35}}>{['Explain a story','Help with code','Translate a sentence'].map((c,i)=><Box key={c} style={{position:'relative',width:520,height:325,padding:45,background:i===1?TEAL:'#fffaf0',color:i===1?PAPER:INK}}><div style={{fontSize:75,color:i===1?GOLD:BLUE,marginBottom:55}}>{['“ ”','{ }','A ↔ B'][i]}</div><Label style={{fontSize:37}}>{c}</Label></Box>)}</div>:
-   <><Label style={{position:'absolute',left:115,top:330,fontSize:40}}>Qwen · local · original experiment</Label><div style={{position:'absolute',left:110,top:425,display:'flex',gap:18}}>{qwenResult.rows.map((r,i)=><Box key={i} style={{position:'relative',width:150,height:160,background:r.right?'#dbe8d8':'#f2d8c1',borderRadius:14,padding:23,textAlign:'center'}}><Label style={{fontSize:29}}>NO</Label><div style={{fontSize:55,color:r.right?TEAL:'#ae552a',marginTop:14}}>{r.right?'✓':'×'}</div></Box>)}</div><Big style={{position:'absolute',left:115,top:660,fontSize:92,color:TEAL}}>{qwenResult.right} / {qwenResult.n}<span style={{fontSize:39,marginLeft:35}}>correct</span></Big></>}
-  <Credit>{chat?'Illustration · Author':'Original experiment · Author'}</Credit>
+   <><Label style={{position:'absolute',left:115,top:330,fontSize:40}}>Qwen</Label><div style={{position:'absolute',left:110,top:425,display:'flex',gap:18}}>{qwenResult.rows.map((r,i)=><Box key={i} style={{position:'relative',width:150,height:160,background:r.right?'#dbe8d8':'#f2d8c1',padding:23,textAlign:'center'}}><Label style={{fontSize:29}}>NO</Label><div style={{fontSize:55,color:r.right?TEAL:'#ae552a',marginTop:14}}>{r.right?'✓':'×'}</div></Box>)}</div><Big style={{position:'absolute',left:115,top:660,fontSize:92,color:TEAL}}>{qwenResult.right} / {qwenResult.n}<span style={{fontSize:39,marginLeft:35}}>correct</span></Big></>}
+
  </>;
 }
 
 function Closing({line,tl}:{line:Line;tl:Timeline}){
- if(line.visual==='family') return <><Take name="muse/G3.mp4" poster="muse/G3-last.png" from={at(tl,'family')} style={{height:1080}}/><Credit>AI generated · Muse · illustration</Credit></>;
- if(line.visual==='invite')return <><AbsoluteFill style={{background:TEAL}}/><Label style={{position:'absolute',left:110,top:220,color:CYAN,fontSize:37}}>Lucas Academy</Label><Big style={{position:'absolute',left:110,top:345,fontSize:120,color:PAPER}}>What would you<br/>teach it?</Big><QrCard large style={{right:130,top:240}}/><Credit>Website · Lucas Academy</Credit></>;
+ if(line.visual==='family') return <><Take name="muse/G3.mp4" poster="muse/G3-last.png" from={at(tl,'family')} style={{height:1080}}/></>;
+ if(line.visual==='invite')return <><AbsoluteFill style={{background:TEAL}}/><Label style={{position:'absolute',left:110,top:220,color:CYAN,fontSize:37}}>Lucas Academy</Label><Big style={{position:'absolute',left:110,top:345,fontSize:120,color:PAPER}}>What would you<br/>teach it?</Big><QrCard large style={{right:130,top:240}}/></>;
  return <>
   <div style={{position:'absolute',left:95,top:220,display:'flex',gap:35}}>{['Print','Color','Teach'].map((s,i)=>i===2&&line.visual==='url'?<QrCard key={s} large style={{position:'relative',width:550,height:535,padding:40}}/>:<Box key={s} style={{position:'relative',width:550,height:535,padding:30}}><Label style={{fontSize:48,color:TEAL,marginBottom:25}}>{s}</Label><Img src={file(i===0?'curriculum/worksheet-heart-cat.png':i===1?'curriculum/cat_bits.png':'capture/twenty-trained.png')} style={{width:'100%',height:370,objectFit:'contain'}}/></Box>)}</div>
-  <Label style={{position:'absolute',left:100,top:795,fontSize:38,color:TEAL}}>{line.visual==='url'?'ai.lucasacademy.org':'Try it together.'}</Label><Credit>Lucas Academy · worksheets and browser lab</Credit>
+  <Label style={{position:'absolute',left:100,top:795,fontSize:38,color:TEAL}}>{line.visual==='url'?'ai.lucasacademy.org':'Try it together.'}</Label>
  </>;
 }
 
@@ -341,9 +339,8 @@ function SpeedTitle({tl}:{tl:Timeline}){
   <Big style={{position:'absolute',left:90,top:245,fontSize:130,color:GOLD}}>{tl.values.claude_million_en} MILLION ×</Big>
   <Label style={{position:'absolute',left:95,top:470,color:PAPER,fontSize:43}}>GPT-6-Astra</Label>
   <Big style={{position:'absolute',left:90,top:545,fontSize:130,color:'#baffb0'}}>{tl.values.astra_ten_million_en} MILLION ×</Big>
-  <Label style={{position:'absolute',left:100,top:760,color:CYAN,fontSize:40}}>FASTER IN THIS TASK</Label>
-  <Label style={{position:'absolute',left:100,top:930,color:PAPER,fontSize:30}}>By Lucas Academy Team</Label>
-  <Credit>Original experiment · AI generated illustration</Credit>
+  <Label style={{position:'absolute',left:100,top:760,color:CYAN,fontSize:40}}>FASTER</Label>
+
  </>;
 }
 
@@ -354,7 +351,7 @@ function TimeTravelIntro({line,data,frame}:{line:Line;data:VisualData;frame:numb
 
   <Label style={{position:'absolute',left:100,top:85,color:PAPER,fontSize:44,textShadow:'0 2px 18px #00120c',opacity:1-mix(f,80,120)}}>Claude Fable 5.1  +  GPT-6-Astra</Label>
   <Big style={{position:'absolute',left:110,top:190,color:GOLD,fontSize:140,textShadow:'0 4px 30px #00120c',opacity:mix(f,85,115)*(1-mix(f,205,245))}}>1957</Big>
-  <Credit>AI generated · Muse · imagined time travel</Credit>
+
  </>;
 }
 
@@ -367,12 +364,9 @@ function RetroScreen({children,frame,tl}:{children:ReactNode;frame:number;line:L
    <ScreenContext.Provider value={true}>
     <div style={{position:'absolute',left:310,top:82,width:1600,height:1050,transform:'scale(0.8)',transformOrigin:'top left',overflow:'hidden',fontFamily:FONT}}>
      {children}
-     <Label style={{position:'absolute',left:82,top:100,fontSize:27,color:CYAN,letterSpacing:3}}>FAMILY AI LAB</Label>
-     <Label style={{position:'absolute',right:95,top:100,fontSize:28,color:PAPER}}>The same picture</Label>
     </div>
    </ScreenContext.Provider>
   </div>
-  <div style={{position:'absolute',right:65,bottom:18,fontSize:17,color:'#c3ddd1'}}>Muse · imagined lab | Screen · original records and author animation</div>
  </AbsoluteFill>;
 }
 
@@ -386,7 +380,7 @@ function Scope({line,data}:{line:Line;data:VisualData}){
    <Label style={{fontSize:43,marginTop:45,lineHeight:1.35}}>{learning?'Examples → points → a decision':'This race does not rank overall AI ability.'}</Label>
    <Label style={{fontSize:29,marginTop:40,color:CYAN}}>{learning?'Paper, pencils and the browser lab':'A specialized model, on a specific picture task'}</Label>
   </Box>
-  <Credit>Original experiment · explanation and diagram by author</Credit>
+
  </>;
 }
 
@@ -394,19 +388,19 @@ function Visual({line,tl,data,frame}:{line:Line;tl:Timeline;data:VisualData;fram
  const v=line.visual;
  if(v==='pixel-rain')return <PixelRain tl={tl} data={data} frame={frame}/>;
  if(v.startsWith('ratio-'))return <Ratios which={v==='ratio-claude'?'claude':'astra'}/>;
- if(v==='terminal')return <><div style={{position:'absolute',left:70,top:235,width:1460,height:620,overflow:'hidden',background:'#000',borderRadius:18}}><Take name="capture/terminal-view.mp4" poster="capture/terminal-view.png" from={line.from} frames={90} fit="contain" style={{height:'100%',width:'100%'}}/></div><Credit>Real terminal recording · saved original results · Author</Credit></>;
+ if(v==='terminal')return <><div style={{position:'absolute',left:70,top:235,width:1460,height:620,overflow:'hidden',background:'#000',borderRadius:18}}><Take name="capture/terminal-view.mp4" poster="capture/terminal-view.png" from={line.from} frames={90} fit="contain" style={{height:'100%',width:'100%'}}/></div></>;
  if(line.scene===1)return <Race tl={tl} data={data} frame={frame} line={line}/>;
  if(v==='title')return <SpeedTitle tl={tl}/>;
- if(v==='time-travel')return <><Take name="muse/G1.mp4" poster="muse/G1-last.png" from={at(tl,'title')} style={{height:1080}}/><Big style={{position:'absolute',left:100,top:225,fontFamily:"'Georgia', serif",fontSize:180,color:'#fff3d8',textShadow:'0 3px 25px #18201a'}}>1957</Big><Credit>AI generated · Muse · illustration</Credit></>;
+ if(v==='time-travel')return <><Take name="muse/G1.mp4" poster="muse/G1-last.png" from={at(tl,'title')} style={{height:1080}}/><Big style={{position:'absolute',left:100,top:225,fontFamily:"'Georgia', serif",fontSize:180,color:'#fff3d8',textShadow:'0 3px 25px #18201a'}}>1957</Big></>;
  if(line.scene===3)return <Pictures line={line} tl={tl} frame={frame}/>;
  if(v.startsWith('apple-')||v==='tomato')return <AppleGame line={line} frame={frame}/>;
  if(line.scene===4)return <Neuron line={line} tl={tl} frame={frame}/>;
  if(v.startsWith('lab-'))return <Lab line={line} tl={tl} frame={frame}/>;
  if(v.startsWith('code-')||v==='reveal-code')return <Code both={v==='code-both'||v==='reveal-code'} train={v==='code-train'}/>;
- if(v==='reveal'||v==='reveal-trained')return <><AbsoluteFill style={{background:TEAL}}/><Label style={{position:'absolute',left:110,top:215,fontSize:48,color:CYAN}}>X =</Label><Big style={{position:'absolute',left:110,top:330,fontSize:170,color:GOLD}}>Perceptron</Big><Label style={{position:'absolute',left:125,top:600,fontSize:47,color:PAPER}}>{v==='reveal-trained'?`${xResult.training.pictures} training pictures · ${xResult.right}/${xResult.n} test answers correct`:'Frank Rosenblatt · 1957'}</Label><Credit>Original experiment and Rosenblatt 1957 · Author</Credit></>;
+ if(v==='reveal'||v==='reveal-trained')return <><AbsoluteFill style={{background:TEAL}}/><Label style={{position:'absolute',left:110,top:215,fontSize:48,color:CYAN}}>X =</Label><Big style={{position:'absolute',left:110,top:330,fontSize:170,color:GOLD}}>Perceptron</Big><Label style={{position:'absolute',left:125,top:600,fontSize:47,color:PAPER}}>{v==='reveal-trained'?`${xResult.training.pictures} training pictures · ${xResult.right}/${xResult.n} test answers correct`:'Frank Rosenblatt · 1957'}</Label></>;
  if(v==='report'||v==='newspaper')return <Report newspaper={v==='newspaper'}/>;
  if(v.startsWith('mark-'))return <MarkI line={line} tl={tl} data={data} frame={frame}/>;
- if(v==='vintage-lab')return <><Take name="muse/G2.mp4" poster="muse/G2-last.png" from={line.from} rate={1} style={{height:1080}}/><Credit>AI generated · Muse · imagined computer room</Credit></>;
+ if(v==='vintage-lab')return <><Take name="muse/G2.mp4" poster="muse/G2-last.png" from={line.from} rate={1} style={{height:1080}}/></>;
  if(v==='scale'||v==='scale-zoom')return <Scale data={data} zoom={v==='scale-zoom'} frame={frame} line={line}/>;
  if(v.startsWith('timeline-'))return <History line={line}/>;
  if(v.startsWith('scope-'))return <Scope line={line} data={data}/>;
@@ -423,13 +417,14 @@ export const FamilyAiLab01:FC<FamilyProps>=({tl,data})=>{
   if(line.visual==='time-travel-intro')return <AbsoluteFill style={{fontFamily:FONT,background:TEAL}}><TimeTravelIntro line={line} data={data} frame={frame}/></AbsoluteFill>;
   return <RetroScreen frame={frame} line={line} tl={tl}><Visual line={line} tl={tl} data={data} frame={frame}/></RetroScreen>;
  }
- const full=['title','vintage-lab','family'].includes(line.visual);
- const dark=full||['reveal','reveal-trained','invite'].includes(line.visual);
- return <AbsoluteFill style={{fontFamily:FONT,background:dark?TEAL:PAPER,color:INK}}>
-  <AbsoluteFill style={{backgroundImage:'linear-gradient(#35665108 1px,transparent 1px),linear-gradient(90deg,#35665108 1px,transparent 1px)',backgroundSize:'40px 40px'}}/>
-  <div style={{position:'absolute',left:0,top:full?0:75,width:1920,height:full?1080:930}}><Visual line={line} tl={tl} data={data} frame={frame}/></div>
-  {full&&<div style={{position:'absolute',top:0,left:0,right:0,height:130,background:'linear-gradient(#092b2d99,transparent)'}}/>}
-  <div style={{position:'absolute',left:80,top:56,color:dark?CYAN:TEAL,fontSize:24,fontWeight:650,letterSpacing:4,textTransform:'uppercase'}}>Family AI Lab</div>
-  <div style={{position:'absolute',right:80,top:52,color:dark?'#d4dfd4':TEAL,fontSize:31,fontWeight:650}}>{tl.titles[line.scene-1]}</div>
+ if(line.visual==='title')return <AbsoluteFill style={{fontFamily:FONT}}><SpeedTitle tl={tl}/></AbsoluteFill>;
+ const footage=['vintage-lab','family'].includes(line.visual);
+ const paper=line.scene===3||line.visual.startsWith('apple-')||line.visual==='tomato'||['report','newspaper','family','start','url'].includes(line.visual)||line.visual.startsWith('timeline-');
+ const surface:PeriodSurface=paper?'projection':'instrument';
+ const from=sceneAt(tl,line.scene);
+ return <AbsoluteFill style={{fontFamily:FONT,color:INK}}>
+  <PeriodFrame surface={surface} frame={frame} from={from} footage={footage}>
+   <Visual line={line} tl={tl} data={data} frame={frame}/>
+  </PeriodFrame>
  </AbsoluteFill>;
 };

@@ -16,7 +16,8 @@ def main():
     delivery = OUT / ('delivery' if voiced else 'review')
     tl = json.loads((ROOT / "public/family-ai-lab-01/timeline.json").read_text())
     revision=tl.get('revision',1)
-    if revision>=2:delivery=delivery/f'v{revision}'
+    visual_revision=tl.get('visualRevision',revision)
+    if visual_revision>=2:delivery=delivery/f'v{visual_revision}'
     selected = json.loads((ROOT / "docs/family-ai-lab-01/selected-data.json").read_text())
     if voiced:
         assert tl.get('narrated')
@@ -96,6 +97,17 @@ def main():
         accepted=json.loads((ROOT/'docs/family-ai-lab-01/accepted-script-v2.json').read_text())
         for name,digest in accepted['sha256'].items():
             assert hashlib.sha256((ROOT/'docs/family-ai-lab-01'/name).read_bytes()).hexdigest()==digest,name
+    if visual_revision>=3:
+        atmosphere=json.loads((ROOT/'docs/family-ai-lab-01/atmosphere-v3.json').read_text())
+        assert atmosphere['unchanged']['durationFrames']==tl['durationInFrames']
+        inputs=ROOT/'public/family-ai-lab-01'
+        assert hashlib.sha256((inputs/'narration.json').read_bytes()).hexdigest()==atmosphere['unchanged']['narrationManifestSha256']
+        for asset in atmosphere['screenBackgrounds']:
+            assert hashlib.sha256((ROOT/asset['path']).read_bytes()).hexdigest()==asset['sha256'],asset['path']
+        for lang in ('en','zh'):
+            assert hashlib.sha256((inputs/f'review.{lang}.srt').read_bytes()).hexdigest()==atmosphere['unchanged']['srtSha256'][lang]
+            sound=atmosphere['unchanged']['audio'][lang]
+            assert hashlib.sha256((ROOT/sound['path']).read_bytes()).hexdigest()==sound['sha256']
     check = subprocess.run(["ffmpeg", "-hide_banner", "-i", str(film), "-vf", "blackdetect=d=0.07:pix_th=0.06:pic_th=0.985", "-an", "-sn", "-f", "null", "-"], text=True, capture_output=True, check=True)
     black = [l for l in check.stderr.splitlines() if "black_start:" in l]
     assert not black, black
@@ -103,6 +115,11 @@ def main():
               "audioTracks": len(audio), "subtitleTracks": [] if revision>=2 else [{"language": "English", "default": True}, {"language": "Simplified Chinese", "default": False}],
               "captions": "no embedded or burned captions; external SRTs only; no reserved subtitle band" if revision>=2 else "separate selectable tracks, not burned in", "cueCountPerLanguage": len(tl["lines"]),
               "blackSegments": black, "covers": f"{len(covers)} PNGs, 1280x720", "baselineHashes": "all selected originals unchanged"}
+    result['visualRevision']=visual_revision
+    result['narrationRevision']=revision
+    if visual_revision>=3:
+        result['atmosphere']='1957 CRT, instrument console and classroom projection screen; no chapter, series or source overlays'
+        result['unchangedNarration']='v2 WAVs, selected narration manifest and both external SRTs verified by SHA256'
     if voiced:
         levels = {}
         for index, lang in enumerate(('en','zh')):

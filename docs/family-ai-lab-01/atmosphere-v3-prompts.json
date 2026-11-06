@@ -1,0 +1,26 @@
+{
+  "tool": "built-in image_gen",
+  "purpose": "Owner-requested 1957 atmosphere throughout the film, with no on-picture source or chapter labels.",
+  "references": [
+    "public/family-ai-lab-01/muse/G4-last.png",
+    "public/family-ai-lab-01/art/cover-v2-bg.png"
+  ],
+  "assets": [
+    {
+      "path": "public/family-ai-lab-01/art/instrument-screen-v3.png",
+      "prompt": "Use case: historical-scene. Asset type: full-frame 16:9 video compositing background, 1920x1080. Reference images establish the same warm 1957 laboratory world as the existing CRT and green-seven cover. Create a cinematic, straight-on close view of a different large laboratory display built into a matte dark olive metal console, thin aged brass bezel, Bakelite knobs, a few small amber pilot lights and analog meter details along the bottom edge, vacuum-tube warmth at the edges. The single very large flat-front rectangular glass screen must be completely blank, uniform near-black green, unobstructed and almost fill the picture: approximately x=120 to1800 and y=70 to950 in a1920x1080 frame. Keep all knobs and instruments outside this clear screen. Precise front-on camera, horizontal and vertical screen edges, minimal perspective, gently rounded corners, substantial thin physical bezel. Rich tangible mid-century materials, restrained green phosphor and amber lighting, sharp and realistic, beautifully photographed. No writing, numbers, letters, logos, labels, watermarks, images or diagrams anywhere. Do not draw a seven. Keep the glass almost free of reflections so lesson graphics can be composited into it. One complete continuous background, not a collage.",
+      "sha256": "09c2edf5ec5fad713f4c647fb5e2bb2d164289dd060b803fc75915542e6ca08c",
+      "original": "/Users/yqin/.codex/generated_images/01a1aa7e-c7b5-7e71-9b62-4a4e8026d5dc/exec-c1fed0f3-3490-4bf1-bf3f-60b95d3da741.png",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "path": "public/family-ai-lab-01/art/projection-screen-v3.png",
+      "prompt": "Use case: historical-scene. Asset type: full-frame 16:9 video compositing background, 1920x1080. Reference images establish the same warm 1957 laboratory world as the existing CRT and green-seven cover. Create a cinematic, perfectly front-on large cream projection screen in a1957 research classroom. The warm ivory matte screen is entirely blank, unobstructed, nearly rectangular with only very slightly rounded edges, fills approximately x=120 to1800 and y=70 to950 in a1920x1080 frame. It has a slim dark wooden/brass frame. Outside the screen show just a little warm walnut desk and dark olive lab wall, a vintage film-projector lens at the lower left edge, a pencil and coiled cable low at the bottom edge, soft tungsten glow. Screen edges horizontal and vertical, minimal perspective, no large objects overlapping the clear central screen. The screen surface has extremely subtle aged paper texture, evenly lit and low contrast for teaching graphics. Rich photographic depth, restrained olive, walnut, brass and ivory palette matching the reference laboratory, calm cinematic period atmosphere. No writing, numbers, letters, logos, labels, watermarks, images or diagrams anywhere. One complete continuous background, not a collage.",
+      "sha256": "9b9cdf628cf9bdbd41856ae8388f749bd3ab19154da3ab604833b0e0e252bd60",
+      "original": "/Users/yqin/.codex/generated_images/01a1aa7e-c7b5-7e71-9b62-4a4e8026d5dc/exec-be7ba06a-4da3-40da-b2f1-730d7b5cee1c.png",
+      "width": 1672,
+      "height": 941
+    }
+  ]
+}

@@ -105,7 +105,7 @@ def main():
     lines[-1]["duration"] += 5 * FPS
     lines[-1]["captionFrames"] += 5 * FPS
     frame += 5 * FPS
-    tl = {"fps": FPS, "revision":revision, "defaultLanguage": "en", "durationInFrames": frame, "lines": lines,
+    tl = {"fps": FPS, "revision":revision, "visualRevision":source.get('visualRevision',revision), "defaultLanguage": "en", "durationInFrames": frame, "lines": lines,
           "titles": titles["en"], "values": values,
           "dataSelection": "original full round, explicitly retained by owner; no reruns",
           "delivery": "one picture, English default, independent Chinese audio/subtitles" if narrated else "one picture, English labels, English default captions, separate Chinese captions; audio deferred",

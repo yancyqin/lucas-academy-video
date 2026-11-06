@@ -1,6 +1,7 @@
 {
-  "notes": "Owner-edited Chinese v2 script drives production. Original result JSONs only, no benchmark/race-contender calls. S1 lands on the retro screen; remaining S1 is composited inside. No embedded captions or subtitle band.",
+  "notes": "Owner-edited Chinese v2 narration and timing are retained. Visual v3 presents the whole course inside the 1957 laboratory world: original CRT, instrument console and classroom projector. No chapter, series, source-credit or method overlays; provenance remains in documents. Original result JSONs only, no benchmark/race-contender calls. No embedded captions or subtitle band.",
   "revision": 2,
+  "visualRevision": 3,
   "lines": [
     [1,"time-travel-intro","我们带上 Claude Fable 5.1 和 GPT-6-Astra，穿越到一九五七年，来场模型速度大比拼！","Let’s take Claude Fable 5.1 and GPT-6-Astra back to 1957 for an AI speed race!"],
     [1,"pixel-rain","电脑认出一个七，到底能有多快？","How fast can a computer recognize a seven?"],
