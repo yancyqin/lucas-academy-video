@@ -1,0 +1,58 @@
+{
+  "repository": "/Users/yqin/repo/playground/lucas-academy-ai",
+  "commit": "3dddf4192d148645ef0f677afbb4f6b734d4edbd",
+  "inputs": [
+    {
+      "path": "L1-beginner/media/heart_photo.png",
+      "sha256": "32ca0179994b7fb1738eb6e2adb67d0f9746aa18ccae1145118a1e9a148d610c"
+    },
+    {
+      "path": "L1-beginner/media/heart_mosaic.png",
+      "sha256": "c2133d7713657148411d06131955748a7d61d95a7b58b219e0172e91d78a3b51"
+    },
+    {
+      "path": "L1-beginner/media/heart_bits.png",
+      "sha256": "6c92b590edcbc9be26f5b2e1c63844c2c4e96c243390074591558abffca1faa0"
+    },
+    {
+      "path": "L1-beginner/media/cat_photo.png",
+      "sha256": "9ec8c39066a528e58219c70cc87c59da3a78c37834b978c348b483e26a394d29"
+    },
+    {
+      "path": "L1-beginner/media/cat_mosaic.png",
+      "sha256": "511c9defb14326189357d6639d55cfc5f25e800c7b100c4e908c5080ce11eaba"
+    },
+    {
+      "path": "L1-beginner/media/cat_bits.png",
+      "sha256": "3455f8e0dc06c2a5f3c525526e404caafb12661ef883d07c081bfbe2e30e7c6b"
+    },
+    {
+      "path": "L1-beginner/media/red_apple_3d.png",
+      "sha256": "7e37f4ad4d227d283f9afad0605fcddf67406bf8c6c4964419efbd23de7ad60c"
+    },
+    {
+      "path": "L1-beginner/media/tomato_3d.png",
+      "sha256": "563f6a0c3b5f7bc614689ecb724a169eab3cfc8fff9c866654529d0692b8033e"
+    },
+    {
+      "path": "assets/print/how-computers-see/worksheets.pdf",
+      "sha256": "76fe8a9b2a31a17eb4b09c97193fdc5681ceafed19de94d064682397195f5c86"
+    },
+    {
+      "path": "assets/print/how-computers-see/teacher-guide.pdf",
+      "sha256": "8b41023bf12d86c0a246bc6941d37ddc66829293eba80e3e94506b98d33aaa5e"
+    },
+    {
+      "path": "assets/print/how-computers-see/2.jpg",
+      "sha256": "58388bfed093eff28b8d2367d90d01159ad390907ce61ed61906cdb37fb1b639"
+    },
+    {
+      "path": "assets/print/how-computers-see/3.jpg",
+      "sha256": "4aa0f7015176411ae4e7999812887101aed9acecaa7c7e9467a1991ab97565be"
+    },
+    {
+      "path": "assets/print/how-computers-see/1.jpg",
+      "sha256": "087d3cc6a7df835f42ee77edd32f1cfcd110281cadf9c51b4ddeacad990a0c98"
+    }
+  ]
+}

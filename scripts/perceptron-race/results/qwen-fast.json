@@ -1,0 +1,129 @@
+{
+  "system": "qwen-fast",
+  "setting": "qwen3:8b on this Mac, thinking off",
+  "right": 5,
+  "n": 10,
+  "median_wall": 0.5454235415018047,
+  "min_wall": 0.44947166700148955,
+  "max_wall": 0.7228074170125183,
+  "median_model": 0.5429812705,
+  "cold_start": {
+    "text": "OK.",
+    "wall": 6.235111041998607,
+    "model": 6.186267792,
+    "load": 5.841215334,
+    "output_tokens": 3
+  },
+  "rows": [
+    {
+      "picture": "seven-a",
+      "answer": true,
+      "said": false,
+      "right": false,
+      "text": "NO",
+      "wall": 0.7228074170125183,
+      "model": 0.719752916,
+      "load": 0.137997375,
+      "output_tokens": 2
+    },
+    {
+      "picture": "one-a",
+      "answer": false,
+      "said": false,
+      "right": true,
+      "text": "NO",
+      "wall": 0.6032319170044502,
+      "model": 0.60025375,
+      "load": 0.115935042,
+      "output_tokens": 2
+    },
+    {
+      "picture": "seven-b",
+      "answer": true,
+      "said": false,
+      "right": false,
+      "text": "NO",
+      "wall": 0.5743886249983916,
+      "model": 0.57095325,
+      "load": 0.143570667,
+      "output_tokens": 2
+    },
+    {
+      "picture": "one-b",
+      "answer": false,
+      "said": false,
+      "right": true,
+      "text": "NO",
+      "wall": 0.5390140829986194,
+      "model": 0.53625875,
+      "load": 0.110613333,
+      "output_tokens": 2
+    },
+    {
+      "picture": "seven-c",
+      "answer": true,
+      "said": false,
+      "right": false,
+      "text": "NO",
+      "wall": 0.452049542000168,
+      "model": 0.448351083,
+      "load": 0.111152167,
+      "output_tokens": 2
+    },
+    {
+      "picture": "one-c",
+      "answer": false,
+      "said": false,
+      "right": true,
+      "text": "NO",
+      "wall": 0.44947166700148955,
+      "model": 0.445761084,
+      "load": 0.111124375,
+      "output_tokens": 2
+    },
+    {
+      "picture": "seven-d",
+      "answer": true,
+      "said": false,
+      "right": false,
+      "text": "NO",
+      "wall": 0.46187420800561085,
+      "model": 0.458609333,
+      "load": 0.112648458,
+      "output_tokens": 2
+    },
+    {
+      "picture": "one-d",
+      "answer": false,
+      "said": false,
+      "right": true,
+      "text": "NO",
+      "wall": 0.5582722090039169,
+      "model": 0.556045292,
+      "load": 0.122061,
+      "output_tokens": 2
+    },
+    {
+      "picture": "seven-e",
+      "answer": true,
+      "said": false,
+      "right": false,
+      "text": "NO",
+      "wall": 0.4606391670095036,
+      "model": 0.458136417,
+      "load": 0.11416325,
+      "output_tokens": 2
+    },
+    {
+      "picture": "one-e",
+      "answer": false,
+      "said": false,
+      "right": true,
+      "text": "NO",
+      "wall": 0.55183300000499,
+      "model": 0.549703791,
+      "load": 0.114584583,
+      "output_tokens": 2
+    }
+  ]
+}

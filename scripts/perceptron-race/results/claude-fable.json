@@ -1,0 +1,123 @@
+{
+  "system": "claude-fable",
+  "setting": "claude-fable-5-1 via claude -p",
+  "right": 10,
+  "n": 10,
+  "median_wall": 2.485808958495909,
+  "min_wall": 2.3300843329925556,
+  "max_wall": 5.093481832998805,
+  "median_model": 1.146,
+  "cold_start": null,
+  "rows": [
+    {
+      "picture": "seven-a",
+      "answer": true,
+      "said": true,
+      "right": true,
+      "text": "YES",
+      "wall": 2.3465224579995265,
+      "model": 1.006,
+      "output_tokens": 4,
+      "error": false
+    },
+    {
+      "picture": "one-a",
+      "answer": false,
+      "said": false,
+      "right": true,
+      "text": "NO",
+      "wall": 5.093481832998805,
+      "model": 3.797,
+      "output_tokens": 165,
+      "error": false
+    },
+    {
+      "picture": "seven-b",
+      "answer": true,
+      "said": true,
+      "right": true,
+      "text": "YES",
+      "wall": 2.6738170409953455,
+      "model": 1.312,
+      "output_tokens": 4,
+      "error": false
+    },
+    {
+      "picture": "one-b",
+      "answer": false,
+      "said": false,
+      "right": true,
+      "text": "NO",
+      "wall": 2.3300843329925556,
+      "model": 1.015,
+      "output_tokens": 4,
+      "error": false
+    },
+    {
+      "picture": "seven-c",
+      "answer": true,
+      "said": true,
+      "right": true,
+      "text": "YES",
+      "wall": 2.547047249987372,
+      "model": 1.173,
+      "output_tokens": 4,
+      "error": false
+    },
+    {
+      "picture": "one-c",
+      "answer": false,
+      "said": false,
+      "right": true,
+      "text": "NO",
+      "wall": 2.639634874998592,
+      "model": 1.343,
+      "output_tokens": 4,
+      "error": false
+    },
+    {
+      "picture": "seven-d",
+      "answer": true,
+      "said": true,
+      "right": true,
+      "text": "YES",
+      "wall": 2.4360003329929896,
+      "model": 1.033,
+      "output_tokens": 4,
+      "error": false
+    },
+    {
+      "picture": "one-d",
+      "answer": false,
+      "said": false,
+      "right": true,
+      "text": "NO",
+      "wall": 2.535617583998828,
+      "model": 1.221,
+      "output_tokens": 4,
+      "error": false
+    },
+    {
+      "picture": "seven-e",
+      "answer": true,
+      "said": true,
+      "right": true,
+      "text": "YES",
+      "wall": 2.3732327920006355,
+      "model": 1.09,
+      "output_tokens": 4,
+      "error": false
+    },
+    {
+      "picture": "one-e",
+      "answer": false,
+      "said": false,
+      "right": true,
+      "text": "NO",
+      "wall": 2.339756874993327,
+      "model": 1.119,
+      "output_tokens": 4,
+      "error": false
+    }
+  ]
+}

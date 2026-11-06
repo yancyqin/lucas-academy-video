@@ -1,0 +1,175 @@
+{
+  "page_12_examples": {
+    "system": "Perceptron (Rosenblatt rule), CPython",
+    "setting": "trained on 12 pictures; Python 3.15.1 on arm64",
+    "training": {
+      "pictures": 12,
+      "rounds": 3,
+      "median_seconds": 0.00036193749838275835
+    },
+    "right": 6,
+    "n": 10,
+    "median_seconds": 4.210542724831612e-06,
+    "min_seconds": 3.864608350704657e-06,
+    "max_seconds": 4.43120834970614e-06,
+    "rows": [
+      {
+        "picture": "seven-a",
+        "answer": true,
+        "said": true,
+        "right": true,
+        "seconds": 4.20038750016829e-06
+      },
+      {
+        "picture": "one-a",
+        "answer": false,
+        "said": true,
+        "right": false,
+        "seconds": 4.0585854003438725e-06
+      },
+      {
+        "picture": "seven-b",
+        "answer": true,
+        "said": true,
+        "right": true,
+        "seconds": 4.256356249970849e-06
+      },
+      {
+        "picture": "one-b",
+        "answer": false,
+        "said": true,
+        "right": false,
+        "seconds": 3.864608350704657e-06
+      },
+      {
+        "picture": "seven-c",
+        "answer": true,
+        "said": false,
+        "right": false,
+        "seconds": 4.43120834970614e-06
+      },
+      {
+        "picture": "one-c",
+        "answer": false,
+        "said": false,
+        "right": true,
+        "seconds": 4.14632085012272e-06
+      },
+      {
+        "picture": "seven-d",
+        "answer": true,
+        "said": true,
+        "right": true,
+        "seconds": 4.2529187499894765e-06
+      },
+      {
+        "picture": "one-d",
+        "answer": false,
+        "said": false,
+        "right": true,
+        "seconds": 4.305439550080337e-06
+      },
+      {
+        "picture": "seven-e",
+        "answer": true,
+        "said": true,
+        "right": true,
+        "seconds": 4.220697949494933e-06
+      },
+      {
+        "picture": "one-e",
+        "answer": false,
+        "said": true,
+        "right": false,
+        "seconds": 4.04108545044437e-06
+      }
+    ]
+  },
+  "many_examples": {
+    "system": "Perceptron (Rosenblatt rule), CPython",
+    "setting": "trained on 419 pictures; Python 3.15.1 on arm64",
+    "training": {
+      "pictures": 419,
+      "rounds": 27,
+      "median_seconds": 0.09892987500643358
+    },
+    "right": 10,
+    "n": 10,
+    "median_seconds": 4.322042724743369e-06,
+    "min_seconds": 4.12325210054405e-06,
+    "max_seconds": 4.469045800215099e-06,
+    "rows": [
+      {
+        "picture": "seven-a",
+        "answer": true,
+        "said": true,
+        "right": true,
+        "seconds": 4.201733350055293e-06
+      },
+      {
+        "picture": "one-a",
+        "answer": false,
+        "said": false,
+        "right": true,
+        "seconds": 4.3051499997091015e-06
+      },
+      {
+        "picture": "seven-b",
+        "answer": true,
+        "said": true,
+        "right": true,
+        "seconds": 4.338935449777637e-06
+      },
+      {
+        "picture": "one-b",
+        "answer": false,
+        "said": false,
+        "right": true,
+        "seconds": 4.208062500401866e-06
+      },
+      {
+        "picture": "seven-c",
+        "answer": true,
+        "said": true,
+        "right": true,
+        "seconds": 4.350350000459003e-06
+      },
+      {
+        "picture": "one-c",
+        "answer": false,
+        "said": false,
+        "right": true,
+        "seconds": 4.469045800215099e-06
+      },
+      {
+        "picture": "seven-d",
+        "answer": true,
+        "said": true,
+        "right": true,
+        "seconds": 4.3548875000851696e-06
+      },
+      {
+        "picture": "one-d",
+        "answer": false,
+        "said": false,
+        "right": true,
+        "seconds": 4.3791333497210875e-06
+      },
+      {
+        "picture": "seven-e",
+        "answer": true,
+        "said": true,
+        "right": true,
+        "seconds": 4.283856249821838e-06
+      },
+      {
+        "picture": "one-e",
+        "answer": false,
+        "said": false,
+        "right": true,
+        "seconds": 4.12325210054405e-06
+      }
+    ]
+  },
+  "machine": "macOS-26.7.2-arm64-arm-64bit-Mach-O"
+}

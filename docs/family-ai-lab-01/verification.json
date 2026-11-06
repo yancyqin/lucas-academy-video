@@ -1,0 +1,132 @@
+{
+  "durationSeconds": 445.5,
+  "video": "1920x1080, 30 fps",
+  "audioTracks": 2,
+  "subtitleTracks": [],
+  "captions": "no embedded or burned captions; external SRTs only; no reserved subtitle band",
+  "cueCountPerLanguage": 77,
+  "blackSegments": [],
+  "covers": {
+    "cover-v2.en.png": {
+      "dimensions": "1280x720",
+      "sha256": "3a7f58e45002a2d7e9260b933f99812c5380b7ebfe5d2c3981cc1d04acd0e6a4"
+    },
+    "cover-v2.zh.png": {
+      "dimensions": "1280x720",
+      "sha256": "c87d30e7a707ff69805a09d07a9485a735af090fa3e5667b9f18562cc6144ab9"
+    }
+  },
+  "baselineHashes": "all selected originals unchanged",
+  "audioLoudness": {
+    "en": {
+      "input_i": "-16.01",
+      "input_tp": "-0.98",
+      "input_lra": "3.60",
+      "input_thresh": "-26.65",
+      "output_i": "-15.97",
+      "output_tp": "-1.00",
+      "output_lra": "3.60",
+      "output_thresh": "-26.61",
+      "normalization_type": "dynamic",
+      "target_offset": "-0.03"
+    },
+    "zh": {
+      "input_i": "-15.98",
+      "input_tp": "-0.93",
+      "input_lra": "7.10",
+      "input_thresh": "-26.71",
+      "output_i": "-15.89",
+      "output_tp": "-1.00",
+      "output_lra": "7.00",
+      "output_thresh": "-26.63",
+      "normalization_type": "dynamic",
+      "target_offset": "-0.11"
+    }
+  },
+  "revision": 2,
+  "filmSha256": "5fe0d2239e200a4ed4ddd9bdc35e869c6d13f63ca08995311474163ea978504c",
+  "audioSelection": [
+    {
+      "language": "eng",
+      "default": true
+    },
+    {
+      "language": "zho",
+      "default": false
+    }
+  ],
+  "sourceAssetSha256Checks": 26,
+  "narrationQA": {
+    "selectedSentences": 154,
+    "reusedHashVerifiedTakes": 119,
+    "newOrReplacedTakes": 35,
+    "selectedRetakes": 3,
+    "AIWordTimes": {
+      "en/fa01-01-01": [
+        {
+          "start": 6.92,
+          "end": 7.28
+        }
+      ],
+      "en/fa01-03-01": [
+        {
+          "start": 1.8,
+          "end": 2.26
+        }
+      ],
+      "en/fa01-05-01": [
+        {
+          "start": 3.0,
+          "end": 3.54
+        }
+      ],
+      "en/fa01-07-09": [
+        {
+          "start": 3.04,
+          "end": 3.36
+        }
+      ],
+      "zh/fa01-03-01": [
+        {
+          "start": 1.72,
+          "end": 1.98
+        }
+      ],
+      "zh/fa01-05-01": [
+        {
+          "start": 3.34,
+          "end": 3.62
+        }
+      ]
+    }
+  },
+  "qr": {
+    "target": "https://ai.lucasacademy.org/",
+    "decodedFromFinalMovieFrames": [
+      "frames/v2/final-lab.png",
+      "frames/v2/final-invite.png"
+    ],
+    "alsoDecodedAt1280x720": true
+  },
+  "visualQA": "77 cue samples and five final movie frames inspected. S1 uses the exact G4 ending frame as one continuous CRT shell; race and saved records remain inside its aperture. No caption strip or burned subtitles. Actual 419 training pictures interleaved. Final terminal frame excludes shell username, hostname and cursor.",
+  "backupRestore": "359 public input files restored into an empty directory and compared byte for byte, including all 154 selected v2 narration WAVs.",
+  "render": {
+    "frameCount": 13365,
+    "chunks": 5,
+    "framesPerChunk": 3000,
+    "workers": 2,
+    "cacheMiB": {
+      "offthreadVideo": 256,
+      "media": 128
+    },
+    "successfulLog": "tmp/family-ai-lab-01/v2-final-render-segmented.log"
+  },
+  "typecheck": "npx tsc --noEmit passed",
+  "s1Preview": {
+    "path": "out/family-ai-lab-01/delivery/v2/s1-preview.mp4",
+    "durationSeconds": 49.301,
+    "videoFrames": 1479,
+    "audioTracks": 2,
+    "subtitleTracks": 0
+  }
+}

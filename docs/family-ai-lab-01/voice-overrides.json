@@ -1,0 +1,22 @@
+{
+  "zh/fa01-03-10": {
+    "spoken": "每航八个零和一，刚好装进一个字节。",
+    "reason": "航 forces háng for the row sense of 行; captions retain 每行."
+  },
+  "zh/fa01-04-02": {
+    "spoken": "先借助大脑里的一个神经元，来想一想。",
+    "reason": "Make 借助 and the reduplicated verb unambiguous without changing the analogy."
+  },
+  "zh/fa01-04-05": {
+    "spoken": "人脑里的神经元，大约有八百六十亿。",
+    "reason": "Place the critical 亿 unit at the phrase end so it is clearly voiced."
+  },
+  "zh/fa01-07-03": {
+    "spoken": "本机那个千问模型，参数大约有八十亿。",
+    "reason": "Keep the critical 亿 unit clearly at the phrase end; the model card count is rounded to eight billion in the film."
+  },
+  "zh/fa01-07-12": {
+    "spoken": "比如，这次本机的千问，只答对了五张。",
+    "reason": "A short pause clarifies 比如 and 本机; the owner’s wording and result are unchanged."
+  }
+}

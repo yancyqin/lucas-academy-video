@@ -26,6 +26,13 @@ a sentence. Both run locally on this Mac.
   MiniMax video-generation experience: credential location (no secrets), API
   workflow, reference-frame geometry, prompting, quota safeguards, and real
   validation results and limitations. Read before starting another video project.
+- [`FAMILY-AI-LAB-01.md`](./FAMILY-AI-LAB-01.md) -- the perceptron experiment film.
+  Its owner-approved delivery is one picture with simple English labels and Louise
+  narration: English plays by default, with a separate Chinese audio track. The v2
+  opening travels into a retro screen, where the remaining S1 shots play. The MP4
+  has no subtitles or reserved caption strip; English/Chinese SRTs are separate files.
+  [Production notes](./docs/family-ai-lab-01/production.md) record the original experiment
+  selection, media backup and `fal01:*` commands.
 
 ## YouTube covers
 

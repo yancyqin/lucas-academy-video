@@ -1,0 +1,16 @@
+{
+  "tool": "built-in image_gen",
+  "status": "cover style candidate for owner review; not approved for video",
+  "source": "/Users/yqin/.codex/generated_images/01a1aa7e-c7b5-7e71-9b62-4a4e8026d5dc/exec-0b8fecca-2458-46d2-afd4-fe3dcf722cb1.png",
+  "workspaceAsset": "public/family-ai-lab-01/art/cover-v2-bg.png",
+  "references": [
+    "public/family-ai-lab-01/art/cover-3.png",
+    "public/family-ai-lab-01/art/cover-1.png",
+    "/Users/yqin/Desktop/Screenshot 2026-11-05 at 8.29.26 AM.png"
+  ],
+  "prompt": "Use case: ads-marketing. Asset type: 16:9 YouTube thumbnail background ONLY, no typography. Create the next version of the supplied cover concept. Image 1 is the primary reference: preserve its vivid emerald phosphor pixel digit 7, curved luminous glass and deep forest-green cinematic atmosphere. Change the instrument's outer enclosure to feel much more technologically advanced: precision-machined graphite/titanium, elegant angular layered bezel, subtle cyan illuminated seams, floating glass layers and a few restrained warm brass accents. Less antique wood/bakelite, more sophisticated scientific instrument, but retain a hint of the 1957 laboratory through one softly lit amber vacuum tube in the far background. Image 2 is the reference for flowing cyan light ribbons along the reflective bench. Image 3 is a crop showing exactly the kind of thin luminous filaments with tiny traveling points the owner likes; ignore its rounded crop corners and UI overlay. Add those flowing cyan light ribbons, with a smaller warm gold filament, crossing the lower part of the composition and curling toward the 7 instrument like a time-travel energy stream. They should feel fluid, elegant and alive, not a solid graphic banner. Main instrument in the RIGHT THIRD, screen with a very legible bright green pictorial 7 as the focal subject. Keep the LEFT 62 PERCENT dark and quiet, clean open negative space for large text to be typeset later. Keep ribbons mostly below the title zone, near the lower fifth; do not clutter the middle-left. High-end cinematic product photography, tactile metal and glowing glass, sharp screen, controlled depth of field, green/teal shadows and amber rim light. Wide landscape 16:9. NO typography, no model names, no words, no labels, no logo, no watermark, no decorative text bands. Only the pictorial digit 7 is allowed. Do not reproduce the old large brass dial or wooden tabletop as the dominant design. The result will also be a style reference for a later time-travel video, so make the luminous pathways feel like a subtle portal.",
+  "referenceSnapshot": {
+    "path": "public/family-ai-lab-01/art/references/light-stream-20261105.png",
+    "sha256": "254735890b63e659049f5d51a47afffe8146099d3c7797bbc4cdedb4491b5af1"
+  }
+}

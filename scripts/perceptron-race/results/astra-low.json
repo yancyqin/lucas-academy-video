@@ -1,0 +1,193 @@
+{
+  "system": "astra-low",
+  "setting": "gpt-6-astra via codex exec, reasoning low",
+  "right": 10,
+  "n": 10,
+  "median_wall": 5.875006416499673,
+  "min_wall": 4.936644542001886,
+  "max_wall": 6.66081524999754,
+  "median_model": 4.047677249502158,
+  "cold_start": null,
+  "rows": [
+    {
+      "picture": "seven-a",
+      "answer": true,
+      "said": true,
+      "right": true,
+      "text": "YES",
+      "wall": 6.66081524999754,
+      "model": 5.005266583000775,
+      "output_tokens": 5,
+      "reasoning_tokens": 0,
+      "events": [
+        "thread.started",
+        "turn.started",
+        "item.completed",
+        "turn.completed"
+      ],
+      "stderr_tail": ""
+    },
+    {
+      "picture": "one-a",
+      "answer": false,
+      "said": false,
+      "right": true,
+      "text": "NO",
+      "wall": 4.952803334002965,
+      "model": 3.0723261660023127,
+      "output_tokens": 5,
+      "reasoning_tokens": 0,
+      "events": [
+        "thread.started",
+        "turn.started",
+        "item.completed",
+        "turn.completed"
+      ],
+      "stderr_tail": ""
+    },
+    {
+      "picture": "seven-b",
+      "answer": true,
+      "said": true,
+      "right": true,
+      "text": "YES",
+      "wall": 5.956483375004609,
+      "model": 3.9275486249971436,
+      "output_tokens": 5,
+      "reasoning_tokens": 0,
+      "events": [
+        "thread.started",
+        "turn.started",
+        "item.completed",
+        "turn.completed"
+      ],
+      "stderr_tail": ""
+    },
+    {
+      "picture": "one-b",
+      "answer": false,
+      "said": false,
+      "right": true,
+      "text": "NO",
+      "wall": 6.096066875004908,
+      "model": 4.481505249990732,
+      "output_tokens": 5,
+      "reasoning_tokens": 0,
+      "events": [
+        "thread.started",
+        "turn.started",
+        "item.completed",
+        "turn.completed"
+      ],
+      "stderr_tail": ""
+    },
+    {
+      "picture": "seven-c",
+      "answer": true,
+      "said": true,
+      "right": true,
+      "text": "YES",
+      "wall": 5.832162334001623,
+      "model": 4.02696695800114,
+      "output_tokens": 5,
+      "reasoning_tokens": 0,
+      "events": [
+        "thread.started",
+        "turn.started",
+        "item.completed",
+        "turn.completed"
+      ],
+      "stderr_tail": ""
+    },
+    {
+      "picture": "one-c",
+      "answer": false,
+      "said": false,
+      "right": true,
+      "text": "NO",
+      "wall": 5.8610868329997174,
+      "model": 4.140249459000188,
+      "output_tokens": 5,
+      "reasoning_tokens": 0,
+      "events": [
+        "thread.started",
+        "turn.started",
+        "item.completed",
+        "turn.completed"
+      ],
+      "stderr_tail": ""
+    },
+    {
+      "picture": "seven-d",
+      "answer": true,
+      "said": true,
+      "right": true,
+      "text": "YES",
+      "wall": 4.936644542001886,
+      "model": 3.1904523330013035,
+      "output_tokens": 5,
+      "reasoning_tokens": 0,
+      "events": [
+        "thread.started",
+        "turn.started",
+        "item.completed",
+        "turn.completed"
+      ],
+      "stderr_tail": ""
+    },
+    {
+      "picture": "one-d",
+      "answer": false,
+      "said": false,
+      "right": true,
+      "text": "NO",
+      "wall": 6.230047042001388,
+      "model": 4.482804790997761,
+      "output_tokens": 5,
+      "reasoning_tokens": 0,
+      "events": [
+        "thread.started",
+        "turn.started",
+        "item.completed",
+        "turn.completed"
+      ],
+      "stderr_tail": ""
+    },
+    {
+      "picture": "seven-e",
+      "answer": true,
+      "said": true,
+      "right": true,
+      "text": "YES",
+      "wall": 5.00914208299946,
+      "model": 3.2555958750017453,
+      "output_tokens": 5,
+      "reasoning_tokens": 0,
+      "events": [
+        "thread.started",
+        "turn.started",
+        "item.completed",
+        "turn.completed"
+      ],
+      "stderr_tail": ""
+    },
+    {
+      "picture": "one-e",
+      "answer": false,
+      "said": false,
+      "right": true,
+      "text": "NO",
+      "wall": 5.888925999999628,
+      "model": 4.068387541003176,
+      "output_tokens": 5,
+      "reasoning_tokens": 0,
+      "events": [
+        "thread.started",
+        "turn.started",
+        "item.completed",
+        "turn.completed"
+      ],
+      "stderr_tail": ""
+    }
+  ]
+}

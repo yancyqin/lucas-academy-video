@@ -1,0 +1,62 @@
+[
+  {
+    "design": 1,
+    "lang": "zh",
+    "path": "out/family-ai-lab-01/cover/design-1.zh.png",
+    "size": [
+      1280,
+      720
+    ],
+    "textSource": "code + original JSON only"
+  },
+  {
+    "design": 1,
+    "lang": "en",
+    "path": "out/family-ai-lab-01/cover/design-1.en.png",
+    "size": [
+      1280,
+      720
+    ],
+    "textSource": "code + original JSON only"
+  },
+  {
+    "design": 2,
+    "lang": "zh",
+    "path": "out/family-ai-lab-01/cover/design-2.zh.png",
+    "size": [
+      1280,
+      720
+    ],
+    "textSource": "code + original JSON only"
+  },
+  {
+    "design": 2,
+    "lang": "en",
+    "path": "out/family-ai-lab-01/cover/design-2.en.png",
+    "size": [
+      1280,
+      720
+    ],
+    "textSource": "code + original JSON only"
+  },
+  {
+    "design": 3,
+    "lang": "zh",
+    "path": "out/family-ai-lab-01/cover/design-3.zh.png",
+    "size": [
+      1280,
+      720
+    ],
+    "textSource": "code + original JSON only"
+  },
+  {
+    "design": 3,
+    "lang": "en",
+    "path": "out/family-ai-lab-01/cover/design-3.en.png",
+    "size": [
+      1280,
+      720
+    ],
+    "textSource": "code + original JSON only"
+  }
+]

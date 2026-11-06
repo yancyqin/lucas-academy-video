@@ -1,0 +1,11 @@
+  seven-a  answer YES said True  right  wall 4.75 s  model 1.27 s  reply 'YES'
+  one-a    answer NO  said False right  wall 6.96 s  model 3.82 s  reply 'NO'
+  seven-b  answer YES said True  right  wall 2.73 s  model 1.10 s  reply 'YES'
+  one-b    answer NO  said False right  wall 4.42 s  model 2.68 s  reply 'NO'
+  seven-c  answer YES said True  right  wall 3.79 s  model 2.34 s  reply 'YES'
+  one-c    answer NO  said False right  wall 4.10 s  model 2.54 s  reply 'NO'
+  seven-d  answer YES said True  right  wall 5.06 s  model 1.95 s  reply 'YES'
+  one-d    answer NO  said False right  wall 5.00 s  model 1.89 s  reply 'NO'
+  seven-e  answer YES said True  right  wall 2.36 s  model 1.01 s  reply 'YES'
+  one-e    answer NO  said False right  wall 4.42 s  model 1.32 s  reply 'NO'
+claude-fable: 10/10 right, median wall 4.42 s, median model 1.92 s

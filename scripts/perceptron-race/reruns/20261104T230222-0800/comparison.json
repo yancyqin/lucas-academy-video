@@ -1,0 +1,40 @@
+{
+  "status": "stopped_at_requested_30_percent_gate",
+  "timestamp": "20261104T230222-0800",
+  "node": "v22.23.1 arm64",
+  "base_main": "7f05c76fcee3f414c966731ade4a86bad3849266",
+  "local_checkpoint": "946b274",
+  "threshold_percent": 30,
+  "checks": [
+    {
+      "system": "perceptron-js",
+      "metric": "median_seconds",
+      "baseline_seconds": 3.7352656249999996e-07,
+      "rerun_seconds": 3.7536547925e-07,
+      "change_percent": 0.4923121765938676,
+      "right": 10,
+      "n": 10,
+      "over_30_percent": false,
+      "baseline_sha256": "de92518173cf7cbd78d5f12d0bc1dc613d8179c710a3e4b786791f12421c3b08",
+      "rerun_sha256": "ae5e53def0cd27ff415d18b20056fc99d7c8e7599391cf317c2ca85e77f1329f"
+    },
+    {
+      "system": "claude-fable",
+      "metric": "median_model",
+      "baseline_seconds": 1.146,
+      "rerun_seconds": 1.9205,
+      "change_percent": 67.58289703315883,
+      "right": 10,
+      "n": 10,
+      "over_30_percent": true,
+      "baseline_sha256": "3551368a8c7cb006506832963e8c6225b222b048fe60f46b9c110295c05b386f",
+      "rerun_sha256": "fede63d5e78c4df5a79a412eff16b4c55c952ee3db4af62f40d662fa635f704e"
+    }
+  ],
+  "not_rerun": [
+    "astra-low",
+    "qwen-fast"
+  ],
+  "production_started": false,
+  "original_results_modified": false
+}
