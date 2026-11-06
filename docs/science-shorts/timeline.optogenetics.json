@@ -4,7 +4,7 @@
   "width": 1080,
   "height": 1920,
   "defaultLanguage": "en",
-  "durationInFrames": 1958,
+  "durationInFrames": 2243,
   "narrated": true,
   "lines": [
     {
@@ -99,12 +99,22 @@
     },
     {
       "id": "o10",
-      "visual": "question",
+      "visual": "brain",
       "from": 1755,
-      "duration": 203,
+      "duration": 185,
       "text": {
-        "en": "How would you turn a picture into a message that someone else could receive?",
-        "zh": "你会怎样把一幅画面，变成能传过去的消息？"
+        "en": "Starting with a light signal, we can explore how the brain processes information.",
+        "zh": "从一个光信号开始，我们能一点点研究大脑怎样处理信息。"
+      }
+    },
+    {
+      "id": "o11",
+      "visual": "question",
+      "from": 1940,
+      "duration": 303,
+      "text": {
+        "en": "At Lucas Academy, we explore step by step: how do brains think, and how does AI learn?",
+        "zh": "在 Lucas Academy，我们一起一点点探索：大脑如何思考，AI 又如何学习？"
       }
     }
   ],
@@ -207,15 +217,15 @@
     },
     {
       "first": "o10",
-      "last": "o10",
+      "last": "o11",
       "asset": "opto-dots",
       "in": 4.5,
       "out": 10,
       "layout": "portrait",
       "focus": 0.5,
       "from": 1755,
-      "duration": 203,
-      "rate": 0.812807881773399
+      "duration": 488,
+      "rate": 0.33811475409836067
     }
   ],
   "voices": {
@@ -276,9 +286,15 @@
       },
       "o10": {
         "path": "narration/en/o10.wav",
-        "sha256": "811add6bd6af695781a4a6b088a0dfac1536c4eaf1261a816f012080cf4f7833",
-        "seconds": 4.36,
-        "settingsSha256": "fe998ed779be4453c6a375345b9e56156de73942abc9a84a91c9abfd71f73c6e"
+        "sha256": "726816d9147b7e5d129933ff73734dc6e81e31e50e22833e62c3e711add76e6c",
+        "seconds": 5.52,
+        "settingsSha256": "8240fd7099343c0137de08b1e1ff3482bea765e4da5648be0c0295c7a2f37ec7"
+      },
+      "o11": {
+        "path": "narration/en/o11.wav",
+        "sha256": "106fc3b204f91d86fa80882b2b68ab5e9d6b2a252f36e2d5c6d73e11ae919c31",
+        "seconds": 7.04,
+        "settingsSha256": "018b8ce9f834d57f9700bea2c6f6ad76be8936e84a98be1f8ee3d511e4c40dc0"
       }
     },
     "zh": {
@@ -338,9 +354,15 @@
       },
       "o10": {
         "path": "narration/zh/o10.wav",
-        "sha256": "9e934cba198110746bf3278d0f22bc06decea306726a4f6889c231919b2f4d2d",
-        "seconds": 4.32,
-        "settingsSha256": "e3f470b0ecb27e2bd2f53a372d06ef6d5f14cbffedaed842a6a7ef4d8cfda912"
+        "sha256": "979be0a67a6544f709a8d25e2a8f8ce5c5396da99fe66b2fe97e22eab2839a04",
+        "seconds": 5.78,
+        "settingsSha256": "74264a1c25ca59c60147d7158ba00489422f51ee9b7cc13712bfdd069fb25149"
+      },
+      "o11": {
+        "path": "narration/zh/o11.wav",
+        "sha256": "080a232f9e5fab1dcfa096bafdfbfa4603c9fb4feb4ac5f79f384ba0f5ba41ee",
+        "seconds": 7.7,
+        "settingsSha256": "b1276cb2de6ce84919e336f606894440c2f4800682a61af01a79b8756907c9d6"
       }
     }
   },

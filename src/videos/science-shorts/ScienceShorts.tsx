@@ -1,5 +1,5 @@
 import type {CSSProperties, FC, ReactNode} from 'react';
-import {AbsoluteFill, Img, OffthreadVideo, Sequence, interpolate, staticFile, useCurrentFrame, type CalculateMetadataFunction} from 'remotion';
+import {AbsoluteFill, OffthreadVideo, Sequence, interpolate, staticFile, useCurrentFrame, type CalculateMetadataFunction} from 'remotion';
 
 type Film='perceptron'|'optogenetics';
 type Line={id:string;visual:string;from:number;duration:number;text:Record<'en'|'zh',string>};
@@ -71,6 +71,40 @@ function Race({tl,data,frame}:{tl:Timeline;data:Data;frame:number}){
  </>;
 }
 
+function MatrixBridge({line,frame}:{line:Line;frame:number}){
+ const f=frame-line.from,p=progress(f,0,Math.max(1,line.duration-35));
+ return <>
+  <AbsoluteFill style={{background:'#001b1b80'}}/>
+  <Title size={90}>A weighted sum.<br/>A matrix product.</Title>
+  <Key top={535} size={61} color={C.gold} style={{fontFamily:SERIF}}>x₁w₁ + x₂w₂ + …</Key>
+  <svg width={1080} height={850} style={{position:'absolute',top:690}}>
+   <g opacity={Math.min(1,p*3)}>
+    <text x={145} y={80} fill={C.cream} fontFamily={FONT} fontSize={42}>Weights</text>
+    <path d="M140 115h-25v125h25 M905 115h25v125h-25" stroke={C.gold} strokeWidth={7} fill="none"/>
+    {['w₁','w₂','⋯','wₙ'].map((label,i)=><text key={label} x={195+i*200} y={200} fill={C.gold} fontFamily={SERIF} fontSize={74}>{label}</text>)}
+   </g>
+   <g opacity={Math.max(0,Math.min(1,(p-.15)*3))}>
+    <text x={500} y={320} fill={C.cream} fontSize={80} fontFamily={SERIF}>×</text>
+    <text x={200} y={380} fill={C.cream} fontFamily={FONT} fontSize={42}>Pixels</text>
+    <path d="M230 415h-25v290h25 M360 415h25v290h-25" stroke={C.mint} strokeWidth={7} fill="none"/>
+    {['x₁','x₂','⋮','xₙ'].map((label,i)=><text key={label} x={250} y={470+i*69} fill={C.mint} fontFamily={SERIF} fontSize={60}>{label}</text>)}
+    <text x={470} y={580} fill={C.cream} fontFamily={SERIF} fontSize={90}>=</text>
+    <text x={615} y={580} fill={C.gold} fontFamily={SERIF} fontSize={86}>score</text>
+   </g>
+  </svg>
+  <Key top={1570} size={52}>A basic operation in today’s AI</Key>
+ </>;
+}
+
+function LearningInvite({topic}:{topic:'perceptron'|'brain'}){
+ return <>
+  <AbsoluteFill style={{background:'linear-gradient(#001b1b70,#001b1b22,#001b1b99)'}}/>
+  <Title top={235} size={86}>Lucas Academy</Title>
+  <Key top={410} size={58} color={C.gold}>Learn, step by step.</Key>
+  <Key top={1210} size={topic==='brain'?74:85}>{topic==='brain'?<>How do brains think?<br/><br/>How does AI learn?</>:<>What would<br/>you teach AI?</>}</Key>
+ </>;
+}
+
 function Perceptron({line,tl,data,frame}:{line:Line;tl:Timeline;data:Data;frame:number}){
  const f=frame-line.from,visual=line.visual;
  if(visual==='portal')return <><Title size={154} top={225} style={{color:C.gold}}>1957</Title><Key top={420} size={54}>Claude Fable 5.1<br/>+ GPT-6-Astra</Key><Key top={1450} size={82}>Let’s race.</Key></>;
@@ -94,12 +128,8 @@ function Perceptron({line,tl,data,frame}:{line:Line;tl:Timeline;data:Data;frame:
  </>;
  if(visual==='scope')return <><Title top={260} size={112} style={{color:C.gold}}>ONE TASK</Title><Key top={690} size={82}>Fast here ≠<br/>smarter overall.</Key><div style={{position:'absolute',left:380,top:1180}}><PixelGrid pixels={data.pixels} size={300}/></div></>;
  if(visual==='family')return <><Title size={95}>You can<br/>train one.</Title><Key top={1490} size={49}>Paper. Pencils. Examples.</Key></>;
- return <>
-  <AbsoluteFill style={{background:'linear-gradient(#001b1bb8,#001b1b33,#001b1bb8)'}}/>
-  <Title size={100}>What would<br/>you teach it?</Title>
-  <div style={{position:'absolute',left:260,top:960,width:520,height:520,padding:30,boxSizing:'border-box',background:'#fffef4',borderRadius:4}}><Img src={file('ai-lab-qr.png')} style={{width:460,height:460,imageRendering:'pixelated'}}/></div>
-  <Key top={1560} size={43} style={{textAlign:'center',left:40,right:80}}>ai.lucasacademy.org</Key>
- </>;
+ if(visual==='matrix')return <MatrixBridge line={line} frame={frame}/>;
+ return <LearningInvite topic="perceptron"/>;
 }
 
 function LightGate({frame,line}:{frame:number;line:Line}){
@@ -132,7 +162,22 @@ function Optogenetics({line,frame}:{line:Line;frame:number}){
  if(v==='decode')return <><Title size={124} style={{color:C.amber}}>DECODE</Title><Key top={1310} size={78}>Signals → objects</Key><Key top={1480} size={52}>The brain learns.</Key></>;
  if(v==='touch')return <><Title size={84}>After months<br/>of training…</Title><Key top={1450} size={60}>Locate. Reach. Touch.</Key></>;
  if(v==='limits')return <><Title size={108} style={{color:C.amber}}>PARTIAL<br/>RECOVERY</Title><Panel style={{top:1070,padding:44}}><div style={{fontSize:53,lineHeight:1.8,color:C.cream}}>One patient.<br/>Glasses still needed.<br/>Not normal vision.</div></Panel></>;
- return <><Title size={94} top={270}>How would you<br/>send a picture?</Title><Key top={1360} size={55}>Picture → Code<br/>→ Message</Key></>;
+ if(v==='brain'){
+  const f=frame-line.from;
+  return <>
+   <Title size={89}>How does a brain<br/>read a signal?</Title>
+   <svg width={1080} height={800} style={{position:'absolute',top:590}}>
+    {Array.from({length:3},(_,i)=><g key={i}>
+     <path d={`M${160+i*325} 400L${350+i*150} 210 M${160+i*325} 400L${350+i*150} 590`} stroke={C.amber} strokeWidth={5} opacity={.35}/>
+     <circle cx={160+i*325} cy={400} r={55} fill="#18312d" stroke={C.amber} strokeWidth={6}/>
+     <circle cx={350+i*150} cy={i%2?590:210} r={23+7*Math.sin(f/10+i)} fill={C.amber} opacity={.6}/>
+    </g>)}
+    <circle cx={160+650*((f%100)/100)} cy={400} r={14} fill={C.cream}/>
+   </svg>
+   <Key top={1480} size={62}>Light → Signals → Meaning</Key>
+  </>;
+ }
+ return <LearningInvite topic="brain"/>;
 }
 
 export const ScienceShort:FC<Props>=({film,tl,data})=>{

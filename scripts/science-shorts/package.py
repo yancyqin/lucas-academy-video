@@ -8,15 +8,15 @@ from common import ROOT,OUT,DOCS,sha
 sys.path.insert(0,str(ROOT/'scripts'))
 from youtube_tags import hashtags,tags
 
-DEST=Path('/Users/yqin/Desktop/感知机与光遗传学-竖屏短片')
+DEST=Path('/Users/yqin/Desktop/感知机与光遗传学-竖屏短片-v2')
 COPY={
  'perceptron':{
-  'en':('How did a 1957 model win this AI speed race?','Claude Fable 5.1 and GPT-6-Astra travel back to 1957 for a tiny recognition race. Meet the perceptron, then try training one with your child.\n\nThis compares speed on one specialized task. It does not rank overall model ability. Figures come from the preserved original experiment round.\n\nTry the lab: https://ai.lucasacademy.org/'),
-  'zh':('一九五七年的模型，怎么跑赢大模型？','带上 Claude Fable 5.1 和 GPT-6-Astra，穿越到一九五七年，来场认数字的速度比赛。\n\n这是专项任务的速度对比，不代表模型整体能力的强弱。实验沿用原始整轮数据。格子纸、几支笔，你和孩子也能试着训练一个。\n\n实验室：https://ai.lucasacademy.org/'),
+  'en':('How did a 1957 model win this AI speed race?','Claude Fable 5.1 and GPT-6-Astra travel back to 1957 for a tiny recognition race. Meet the perceptron, then follow its weighted sum to matrix multiplication, a basic operation in today’s AI. At Lucas Academy, we learn step by step.\n\nThis compares speed on one specialized task. It does not rank overall model ability. Figures come from the preserved original experiment round.\n\nTry the lab: https://ai.lucasacademy.org/'),
+  'zh':('一九五七年的模型，怎么跑赢大模型？','带上 Claude Fable 5.1 和 GPT-6-Astra，穿越到一九五七年，来场认数字的速度比赛。\n\n从黑格子的加权求和，到矩阵乘法，再到今天的人工智能。在 Lucas Academy，我们一起一点一点学。\n\n这是专项任务的速度对比，不代表模型整体能力的强弱。实验沿用原始整轮数据。\n\n实验室：https://ai.lucasacademy.org/'),
   'tags':['perceptron','ai','machinelearning','shorts']},
  'optogenetics':{
-  'en':('How did light help a blind patient find a notebook?','A clue from tiny algae leads to a light-sensitive switch, special glasses, and a way to encode visual information.\n\nThe published 2021 case reported partial recovery in one patient. Glasses were still needed; normal vision had not returned. The moving scenes are owner-made illustrations, not documentary patient footage or a simulation of what the patient saw.\n\nPrimary paper: https://pubmed.ncbi.nlm.nih.gov/34031601/'),
-  'zh':('光怎么帮一位失明的人找到笔记本？','线索藏在绿藻里。光开关、特制眼镜、编码和解码，一起把画面变成能传过去的消息。\n\n影片讲的是二零二一年发表的一位病人的部分恢复。他仍需要眼镜，没有恢复正常视力。动态镜头是自制示意素材，并非病人实拍，也不模拟他看到的画面。\n\n原始论文：https://pubmed.ncbi.nlm.nih.gov/34031601/'),
+  'en':('How did light help a blind patient find a notebook?','A clue from tiny algae leads to a light-sensitive switch, special glasses, and a way to encode visual information. At Lucas Academy, we explore step by step: how do brains think, and how does AI learn?\n\nThe published 2021 case reported partial recovery in one patient. Glasses were still needed; normal vision had not returned. The moving scenes are owner-made illustrations, not documentary patient footage or a simulation of what the patient saw.\n\nPrimary paper: https://pubmed.ncbi.nlm.nih.gov/34031601/'),
+  'zh':('光怎么帮一位失明的人找到笔记本？','线索藏在绿藻里。光开关、特制眼镜、编码和解码，一起把画面变成能传过去的消息。\n\n在 Lucas Academy，我们一起一点点探索：大脑如何思考，AI 又如何学习？\n\n影片讲的是二零二一年发表的一位病人的部分恢复。他仍需要眼镜，没有恢复正常视力。动态镜头是自制示意素材，并非病人实拍，也不模拟他看到的画面。\n\n原始论文：https://pubmed.ncbi.nlm.nih.gov/34031601/'),
   'tags':['optogenetics','informatics','neuroscience','shorts']}}
 
 
@@ -37,10 +37,12 @@ def main():
             text=f'【标题 / Title】\n{title}\n\n【简介 / Description】\n{description}\n\n{hashtags(info["tags"])}\n\n【标签 / Tags】\n{tags(info["tags"])}\n\n【上传设置 / Upload settings】\n1080×1920, 30 fps. English default audio. Add zh.m4a as Chinese audio; en.srt / zh-Hans.srt are external subtitle files. No captions are burned into the picture.\n'
             target=folder/f'youtube.{lang}.txt';target.write_text(text);copied.append(target)
     readme=DEST/'先读我.txt'
-    readme.write_text('''两部竖屏浓缩短片
+    durations={film:round(info['durationSeconds']) for film,info in verification['films'].items()}
+    readme.write_text(f'''两部竖屏浓缩短片 · v2
 
-perceptron：感知机，约64秒。
-optogenetics：光遗传学，约65秒。
+perceptron：感知机，约{durations['perceptron']}秒。结尾去掉二维码，连接矩阵乘法与现代AI。
+optogenetics：光遗传学，约{durations['optogenetics']}秒。结尾连接大脑如何思考、AI如何学习。
+两部均以在Lucas Academy一点点学习的邀请收尾。
 
 每个文件夹内：
 *.bilingual.mp4：一份共用画面，1080×1920，30fps；英文默认，中文为第二音轨。

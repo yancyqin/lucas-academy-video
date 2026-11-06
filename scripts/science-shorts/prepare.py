@@ -35,7 +35,6 @@ def stage_inputs():
         probe=json.loads(subprocess.check_output(['ffprobe','-v','error','-select_streams','v:0','-show_entries','stream=width,height,r_frame_rate:format=duration','-of','json',str(dest)]))
         assets[name]={'path':dest.name,'sha256':digest,'original':str(path),'seconds':float(probe['format']['duration']),
                       'width':probe['streams'][0]['width'],'height':probe['streams'][0]['height'],'credit':'Owner-made Muse illustration; not documentary patient footage'}
-    shutil.copy2(family/'art/ai-lab-qr.png',PUBLIC/'ai-lab-qr.png')
     pixels=json.loads((family/'picture.json').read_text())['pixels']
     weights=json.loads((family/'trained-model.json').read_text())['points']
     tiles=json.loads((family/'training-tiles.json').read_text())

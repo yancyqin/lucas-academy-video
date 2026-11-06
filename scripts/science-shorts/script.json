@@ -16,7 +16,8 @@
         {"id":"p07","visual":"train","zh":"{train_n_zh}张例子，让它把这些分数一点点调好。","en":"It learned from {train_n} examples, adjusting those points along the way."},
         {"id":"p08","visual":"scope","zh":"专项任务跑得快，不代表整体能力更强。","en":"Winning this specialized speed test doesn’t make it smarter overall."},
         {"id":"p09","visual":"family","zh":"格子纸，几支笔，你和孩子也能训练一个。","en":"Grid paper, a few pencils, and you can try training one with your child."},
-        {"id":"p10","visual":"invite","zh":"你和孩子想先教它认什么？","en":"What would you and your child teach it to recognize first?"}
+        {"id":"p10","visual":"matrix","zh":"刚才的加权求和，可以写成矩阵相乘。这也是今天 AI 的基础运算。","en":"That weighted sum can be written as matrix multiplication, one of today’s basic AI operations.","spoken":{"zh":"刚才的加权求和，可以写成矩阵相乘。这也是今天人工智能的基础运算。"}},
+        {"id":"p11","visual":"invite","zh":"在 Lucas Academy，我们一起一点一点学。你想让 AI 学会什么？","en":"At Lucas Academy, we learn step by step. What would you teach AI?","spoken":{"zh":"在卢卡斯学院，我们一起一点一点学。你想让人工智能学会什么？"}}
       ],
       "shots": [
         {"first":"p01","last":"p01","asset":"perceptron-portal","in":0,"out":10,"layout":"portrait","focus":0.57},
@@ -24,7 +25,9 @@
         {"first":"p04","last":"p05","asset":"perceptron-1957","in":0,"out":10,"layout":"portrait","focus":0.57},
         {"first":"p06","last":"p07","asset":"perceptron-lab","in":0,"out":10,"layout":"portrait","focus":0.65},
         {"first":"p08","last":"p08","asset":"perceptron-portal","in":7,"out":10,"layout":"portrait","focus":0.52},
-        {"first":"p09","last":"p10","asset":"perceptron-family","in":0,"out":10,"layout":"portrait","focus":0.66}
+        {"first":"p09","last":"p09","asset":"perceptron-family","in":0,"out":6,"layout":"portrait","focus":0.66},
+        {"first":"p10","last":"p10","asset":"perceptron-lab","in":0,"out":10,"layout":"portrait","focus":0.65},
+        {"first":"p11","last":"p11","asset":"perceptron-family","in":6,"out":10,"layout":"portrait","focus":0.66}
       ]
     },
     "optogenetics": {
@@ -39,7 +42,8 @@
         {"id":"o07","visual":"decode","zh":"大脑再学着把光信号读成东西的样子。这叫解码。","en":"The brain learns to read those signals as objects. That is decoding."},
         {"id":"o08","visual":"touch","zh":"练了几个月，他能找到一些物体，还能伸手去摸。","en":"After months of training, he could locate some objects and reach out to touch them."},
         {"id":"o09","visual":"limits","zh":"这是一位病人的部分恢复。他仍需要眼镜，也没恢复正常视力。","en":"This was partial recovery in one patient. He still needed the glasses, and normal vision had not returned."},
-        {"id":"o10","visual":"question","zh":"你会怎样把一幅画面，变成能传过去的消息？","en":"How would you turn a picture into a message that someone else could receive?"}
+        {"id":"o10","visual":"brain","zh":"从一个光信号开始，我们能一点点研究大脑怎样处理信息。","en":"Starting with a light signal, we can explore how the brain processes information."},
+        {"id":"o11","visual":"question","zh":"在 Lucas Academy，我们一起一点点探索：大脑如何思考，AI 又如何学习？","en":"At Lucas Academy, we explore step by step: how do brains think, and how does AI learn?","spoken":{"zh":"在卢卡斯学院，我们一起一点点探索：大脑如何思考，人工智能又如何学习？"}}
       ],
       "shots": [
         {"first":"o01","last":"o01","asset":"opto-touch","in":0,"out":4.5,"layout":"wide","focus":0.4},
@@ -50,7 +54,7 @@
         {"first":"o07","last":"o07","asset":"opto-dots","in":0,"out":4.5,"layout":"portrait","focus":0.55},
         {"first":"o08","last":"o08","asset":"opto-touch","in":4.5,"out":10,"layout":"wide","focus":0.4},
         {"first":"o09","last":"o09","asset":"opto-goggles","in":5,"out":10,"layout":"portrait","focus":0.5},
-        {"first":"o10","last":"o10","asset":"opto-dots","in":4.5,"out":10,"layout":"portrait","focus":0.5}
+        {"first":"o10","last":"o11","asset":"opto-dots","in":4.5,"out":10,"layout":"portrait","focus":0.5}
       ]
     }
   }

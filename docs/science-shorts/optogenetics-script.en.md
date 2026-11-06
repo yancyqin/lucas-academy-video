@@ -20,4 +20,6 @@
 
 **o09** This was partial recovery in one patient. He still needed the glasses, and normal vision had not returned.
 
-**o10** How would you turn a picture into a message that someone else could receive?
+**o10** Starting with a light signal, we can explore how the brain processes information.
+
+**o11** At Lucas Academy, we explore step by step: how do brains think, and how does AI learn?

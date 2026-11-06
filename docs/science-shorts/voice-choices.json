@@ -73,11 +73,11 @@
   },
   "en/p10": {
     "checked": true,
-    "take": "",
+    "take": "3",
     "asrModel": "medium",
-    "sha256": "b138fc923558b6568afa01024bcdf2a21f6e1fdce6765f2d888f254dd1c7b8d3",
-    "heard": "What would you and your child teach it to recognize first?",
-    "note": "Transcript reviewed against the intended spoken line; numeric spellings and homophones normalized."
+    "sha256": "1add021e9431385a941d3b24aaee655cd91cdc1aec5d5d0a2da69f21fff3eb41",
+    "heard": "That weighted sum can be written as matrix multiplication, one of today's basic AI operations.",
+    "note": "Revised learning invitation / bridge; medium transcript checked, Chinese name homophones normalized."
   },
   "zh/p01": {
     "checked": true,
@@ -153,11 +153,11 @@
   },
   "zh/p10": {
     "checked": true,
-    "take": "",
-    "asrModel": "medium",
-    "sha256": "ecad12bdabf9dda11dc1f4377720db106bdcbc4a69e0bb525d49a5a039946e11",
-    "heard": "你和孩子,想先教他认什么?",
-    "note": "Transcript reviewed against the intended spoken line; numeric spellings and homophones normalized."
+    "take": "4",
+    "asrModel": "medium + mathematical vocabulary recheck",
+    "sha256": "b545fe55740af4567a8f768e93fd2b342ae9918d811545fbba224e1de2b01c03",
+    "heard": "刚才的加权求和可以写成矩阵向乘,这是今天人工智能的基础运算。",
+    "note": "Mathematics-vocabulary recheck confirms 矩阵; 加全/加权 and 向乘/相乘 are ASR spellings of the spoken mathematical phrase. Retake splits the explanation into two short sentences. Independent English take says matrix multiplication."
   },
   "en/o01": {
     "checked": true,
@@ -233,11 +233,11 @@
   },
   "en/o10": {
     "checked": true,
-    "take": "",
-    "asrModel": "small",
-    "sha256": "811add6bd6af695781a4a6b088a0dfac1536c4eaf1261a816f012080cf4f7833",
-    "heard": "How would you turn a picture into a message that someone else could receive?",
-    "note": "Transcript reviewed against intended speech, retaining single patient, partial recovery and glasses; homophones normalized."
+    "take": "3",
+    "asrModel": "medium",
+    "sha256": "726816d9147b7e5d129933ff73734dc6e81e31e50e22833e62c3e711add76e6c",
+    "heard": "Starting with the light signal, we can explore how the brain processes information.",
+    "note": "Revised learning invitation / bridge; medium transcript checked, Chinese name homophones normalized."
   },
   "zh/o01": {
     "checked": true,
@@ -313,10 +313,42 @@
   },
   "zh/o10": {
     "checked": true,
-    "take": "",
-    "asrModel": "small",
-    "sha256": "9e934cba198110746bf3278d0f22bc06decea306726a4f6889c231919b2f4d2d",
-    "heard": "你会怎样把一幅画面变成能传过去的消息?",
-    "note": "Transcript reviewed against intended speech, retaining single patient, partial recovery and glasses; homophones normalized."
+    "take": "3",
+    "asrModel": "medium",
+    "sha256": "979be0a67a6544f709a8d25e2a8f8ce5c5396da99fe66b2fe97e22eab2839a04",
+    "heard": "从一个光信号开始,我们能一点点研究大脑怎样处理信息。",
+    "note": "Revised learning invitation / bridge; medium transcript checked, Chinese name homophones normalized."
+  },
+  "en/p11": {
+    "checked": true,
+    "take": "3",
+    "asrModel": "medium",
+    "sha256": "db60accb6015d55ddc6e283fdc29835f88958e201f7a758144b97b8ccfb9bdbc",
+    "heard": "At Lucas Academy, we learn step by step. What would you teach AI?",
+    "note": "Revised learning invitation / bridge; medium transcript checked, Chinese name homophones normalized."
+  },
+  "en/o11": {
+    "checked": true,
+    "take": "3",
+    "asrModel": "medium",
+    "sha256": "106fc3b204f91d86fa80882b2b68ab5e9d6b2a252f36e2d5c6d73e11ae919c31",
+    "heard": "At Lucas Academy, we explore step by step. How do brains think and how does AI learn?",
+    "note": "Revised learning invitation / bridge; medium transcript checked, Chinese name homophones normalized."
+  },
+  "zh/p11": {
+    "checked": true,
+    "take": "3",
+    "asrModel": "medium",
+    "sha256": "a72cc26ca1a8b777bb4d7c3da7f87a92be338588d88aa4fbc434a6bb7e705547",
+    "heard": "在路卡斯学院,我们一起一点一点学。你想让人工智能学会什么?",
+    "note": "Revised learning invitation / bridge; medium transcript checked, Chinese name homophones normalized."
+  },
+  "zh/o11": {
+    "checked": true,
+    "take": "3",
+    "asrModel": "medium",
+    "sha256": "080a232f9e5fab1dcfa096bafdfbfa4603c9fb4feb4ac5f79f384ba0f5ba41ee",
+    "heard": "在卢卡斯学院,我们一起一点点探索,大脑如何思考,人工智能又如何学习。",
+    "note": "Revised learning invitation / bridge; medium transcript checked, Chinese name homophones normalized."
   }
 }

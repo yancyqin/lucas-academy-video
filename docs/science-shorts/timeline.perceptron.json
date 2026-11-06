@@ -4,7 +4,7 @@
   "width": 1080,
   "height": 1920,
   "defaultLanguage": "en",
-  "durationInFrames": 1919,
+  "durationInFrames": 2228,
   "narrated": true,
   "lines": [
     {
@@ -99,12 +99,22 @@
     },
     {
       "id": "p10",
-      "visual": "invite",
+      "visual": "matrix",
       "from": 1713,
-      "duration": 206,
+      "duration": 233,
       "text": {
-        "en": "What would you and your child teach it to recognize first?",
-        "zh": "你和孩子想先教它认什么？"
+        "en": "That weighted sum can be written as matrix multiplication, one of today’s basic AI operations.",
+        "zh": "刚才的加权求和，可以写成矩阵相乘。这也是今天 AI 的基础运算。"
+      }
+    },
+    {
+      "id": "p11",
+      "visual": "invite",
+      "from": 1946,
+      "duration": 282,
+      "text": {
+        "en": "At Lucas Academy, we learn step by step. What would you teach AI?",
+        "zh": "在 Lucas Academy，我们一起一点一点学。你想让 AI 学会什么？"
       }
     }
   ],
@@ -171,15 +181,39 @@
     },
     {
       "first": "p09",
-      "last": "p10",
+      "last": "p09",
       "asset": "perceptron-family",
       "in": 0,
-      "out": 10,
+      "out": 6,
       "layout": "portrait",
       "focus": 0.66,
       "from": 1569,
-      "duration": 350,
-      "rate": 0.8571428571428572
+      "duration": 144,
+      "rate": 1.25
+    },
+    {
+      "first": "p10",
+      "last": "p10",
+      "asset": "perceptron-lab",
+      "in": 0,
+      "out": 10,
+      "layout": "portrait",
+      "focus": 0.65,
+      "from": 1713,
+      "duration": 233,
+      "rate": 1.2875536480686696
+    },
+    {
+      "first": "p11",
+      "last": "p11",
+      "asset": "perceptron-family",
+      "in": 6,
+      "out": 10,
+      "layout": "portrait",
+      "focus": 0.66,
+      "from": 1946,
+      "duration": 282,
+      "rate": 0.425531914893617
     }
   ],
   "voices": {
@@ -240,9 +274,15 @@
       },
       "p10": {
         "path": "narration/en/p10.wav",
-        "sha256": "b138fc923558b6568afa01024bcdf2a21f6e1fdce6765f2d888f254dd1c7b8d3",
-        "seconds": 4.46,
-        "settingsSha256": "f120de6ad222303b830f6ac00179e93e427e59d84e30ac3f4b59b2b4cbe8662d"
+        "sha256": "1add021e9431385a941d3b24aaee655cd91cdc1aec5d5d0a2da69f21fff3eb41",
+        "seconds": 7.38,
+        "settingsSha256": "1d398bd9e78851a2d5149329b8e2d0c6a060bb0db71580cae84d422792d07b96"
+      },
+      "p11": {
+        "path": "narration/en/p11.wav",
+        "sha256": "db60accb6015d55ddc6e283fdc29835f88958e201f7a758144b97b8ccfb9bdbc",
+        "seconds": 5.04,
+        "settingsSha256": "bbb0975e32325ea26a13ebbab44979d3a282e835670f463d99a53a45d527e47f"
       }
     },
     "zh": {
@@ -302,9 +342,15 @@
       },
       "p10": {
         "path": "narration/zh/p10.wav",
-        "sha256": "ecad12bdabf9dda11dc1f4377720db106bdcbc4a69e0bb525d49a5a039946e11",
-        "seconds": 3.12,
-        "settingsSha256": "d4cb9ffae83214a4551d16c39c6e65f9975e153d6bb00ff47bf2cf24e3bfedc0"
+        "sha256": "b545fe55740af4567a8f768e93fd2b342ae9918d811545fbba224e1de2b01c03",
+        "seconds": 6.46,
+        "settingsSha256": "4761ffdbc15777188ab2237917cf60a8b1c4da83320931e698c1273390188fb7"
+      },
+      "p11": {
+        "path": "narration/zh/p11.wav",
+        "sha256": "a72cc26ca1a8b777bb4d7c3da7f87a92be338588d88aa4fbc434a6bb7e705547",
+        "seconds": 7.0,
+        "settingsSha256": "e196495367f805448b7ee983e38dc2aabbf7188d7ba71cedf7e24d89e7c88ed1"
       }
     }
   },

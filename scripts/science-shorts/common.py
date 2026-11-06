@@ -36,7 +36,8 @@ def plans(lang):
     for film,info in SOURCE['films'].items():
         for index,item in enumerate(info['lines']):
             caption=item[lang].format(**vals)
-            row={'film':film,'id':item['id'],'caption':caption,'spoken':voice.spoken_text(caption,lang),
+            spoken=item.get('spoken',{}).get(lang,caption)
+            row={'film':film,'id':item['id'],'caption':caption,'spoken':voice.spoken_text(spoken,lang),
                  'voice':f'louise/{lang}','speed':1.1,'mode':'zero-shot-instruct',
                  'instruction':voice.OPENING_TONE[lang] if index<2 else voice.TONE[lang]}
             if item.get('reuseFamilyCue'):row['reuseFamilyCue']=item['reuseFamilyCue']

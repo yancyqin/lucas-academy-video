@@ -103,13 +103,24 @@
   {
     "film": "perceptron",
     "id": "p10",
-    "caption": "你和孩子想先教它认什么？",
-    "spoken": "你和孩子想先教它认什么？",
+    "caption": "刚才的加权求和，可以写成矩阵相乘。这也是今天 AI 的基础运算。",
+    "spoken": "刚才的加权求和，可以写成矩阵相乘。这也是今天人工智能的基础运算。",
     "voice": "louise/zh",
     "speed": 1.1,
     "mode": "zero-shot-instruct",
     "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
-    "settingsSha256": "d4cb9ffae83214a4551d16c39c6e65f9975e153d6bb00ff47bf2cf24e3bfedc0"
+    "settingsSha256": "4761ffdbc15777188ab2237917cf60a8b1c4da83320931e698c1273390188fb7"
+  },
+  {
+    "film": "perceptron",
+    "id": "p11",
+    "caption": "在 Lucas Academy，我们一起一点一点学。你想让 AI 学会什么？",
+    "spoken": "在卢卡斯学院，我们一起一点一点学。你想让人工智能学会什么？",
+    "voice": "louise/zh",
+    "speed": 1.1,
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "settingsSha256": "e196495367f805448b7ee983e38dc2aabbf7188d7ba71cedf7e24d89e7c88ed1"
   },
   {
     "film": "optogenetics",
@@ -213,12 +224,23 @@
   {
     "film": "optogenetics",
     "id": "o10",
-    "caption": "你会怎样把一幅画面，变成能传过去的消息？",
-    "spoken": "你会怎样把一幅画面，变成能传过去的消息？",
+    "caption": "从一个光信号开始，我们能一点点研究大脑怎样处理信息。",
+    "spoken": "从一个光信号开始，我们能一点点研究大脑怎样处理信息。",
     "voice": "louise/zh",
     "speed": 1.1,
     "mode": "zero-shot-instruct",
     "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
-    "settingsSha256": "e3f470b0ecb27e2bd2f53a372d06ef6d5f14cbffedaed842a6a7ef4d8cfda912"
+    "settingsSha256": "74264a1c25ca59c60147d7158ba00489422f51ee9b7cc13712bfdd069fb25149"
+  },
+  {
+    "film": "optogenetics",
+    "id": "o11",
+    "caption": "在 Lucas Academy，我们一起一点点探索：大脑如何思考，AI 又如何学习？",
+    "spoken": "在卢卡斯学院，我们一起一点点探索：大脑如何思考，人工智能又如何学习？",
+    "voice": "louise/zh",
+    "speed": 1.1,
+    "mode": "zero-shot-instruct",
+    "instruction": "请用亲切、好奇的语气，像和家长、孩子一起发现一件有意思的事那样说。自然聊天，清楚，不用播报腔。",
+    "settingsSha256": "b1276cb2de6ce84919e336f606894440c2f4800682a61af01a79b8756907c9d6"
   }
 ]

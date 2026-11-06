@@ -1,17 +1,17 @@
-"""Preserve the nine existing source clips and the forty checked narration takes."""
+"""Preserve existing source clips and the revised checked narration takes."""
 import json
 import shutil
 from common import ROOT,PUBLIC,DOCS,sha
 
-BACKUP=ROOT.parent/'lucas-academy-video-data/science-shorts-20261106'
+BACKUP=ROOT.parent/'lucas-academy-video-data/science-shorts-20261106-v2'
 
 
 def main():
     data=json.loads((PUBLIC/'data.json').read_text())
     inputs=[PUBLIC/asset['path'] for asset in data['assets'].values()]
-    inputs+=[PUBLIC/name for name in ('data.json','ai-lab-qr.png','timeline.perceptron.json','timeline.optogenetics.json')]
+    inputs+=[PUBLIC/name for name in ('data.json','timeline.perceptron.json','timeline.optogenetics.json')]
     inputs+=sorted((PUBLIC/'narration').rglob('*.wav'))
-    assert len(inputs)==53
+    assert len(inputs)==56
     for source in inputs:
         target=BACKUP/'public'/PUBLIC.name/source.relative_to(PUBLIC)
         target.parent.mkdir(parents=True,exist_ok=True)
@@ -39,7 +39,7 @@ print('Verified backup and restored',len(sources),'inputs to',target)
     (BACKUP/'restore.py').write_text(restore)
     (BACKUP/'README.md').write_text('''# Perceptron and optogenetics vertical story shorts
 
-Nine existing owner-made Muse clips, forty selected checked Louise WAVs, original-result-derived pixels/points/training paths, QR and both narrated timelines. No new media download or generation was needed. Source clip audio is muted. Four approved full-film narration cues were reused exactly; the other selected cues were newly narrated locally. Selected Chinese retakes and both ASR records are in records/.
+Nine existing owner-made Muse clips, forty-four selected checked Louise WAVs, original-result-derived pixels/points/training paths and both narrated timelines. The perceptron closes with matrix multiplication rather than a QR; both films invite step-by-step learning at Lucas Academy. No new source-media download or generation was needed. Source clip audio is muted. Four approved full-film narration cues were reused exactly; the other selected cues were newly narrated locally. Selected retakes and ASR records are in records/. The v1 backup remains separate and untouched.
 
 Run `python3 restore.py /absolute/path/to/lucas-academy-video`. It validates every SHA256 before writing and refuses differing existing inputs. With the code checkout present, run `python3 scripts/science-shorts/prepare.py --restored`, `.venv-align/bin/python scripts/science-shorts/mix.py`, and `node scripts/science-shorts/render.cjs --movie`. This route requires neither the original full-film public folders nor a voice-generation rerun. It preserves the same bilingual timing and external SRTs.
 ''')

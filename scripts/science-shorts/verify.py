@@ -3,7 +3,7 @@ import argparse
 import json
 import re
 import subprocess
-from common import ROOT,PUBLIC,DOCS,OUT,sha,plans
+from common import ROOT,PUBLIC,DOCS,OUT,SOURCE,sha,plans
 from prepare import stamp
 
 
@@ -18,7 +18,7 @@ def audio_hash(path,stream):
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--film');args=parser.parse_args()
     data=json.loads((PUBLIC/'data.json').read_text());choices=json.loads((DOCS/'voice-choices.json').read_text())
-    assert len(choices)==40 and all(item['checked'] for item in choices.values())
+    assert len(choices)==sum(len(info['lines']) for info in SOURCE['films'].values())*2 and all(item['checked'] for item in choices.values())
     asr={}
     for name in ('small','medium'):
         asr.update(json.loads((DOCS/f'asr-{name}.json').read_text()))
@@ -36,7 +36,9 @@ def main():
             decision=choices[f'{lang}/{row["id"]}'];name=row['id']+(f'.take{decision["take"]}' if decision.get('take') else '')
             assert asr[f'{lang}/{name}']['sha256']==decision['sha256']
             assert sha(PUBLIC/f'narration/{lang}/{row["id"]}.wav')==decision['sha256']
-    report={'originalResultSha256':original_hashes,'sourceClips':len(data['assets']),'selectedCheckedVoices':len(choices),'films':{}}
+    previous=json.loads((DOCS/'verification.json').read_text()) if args.film and (DOCS/'verification.json').exists() else {}
+    checked_films={name:item for name,item in previous.get('films',{}).items() if item.get('revision')==2}
+    report={'revision':2,'originalResultSha256':original_hashes,'sourceClips':len(data['assets']),'selectedCheckedVoices':len(choices),'films':checked_films}
     for film in ('perceptron','optogenetics'):
         if args.film and args.film!=film:continue
         tl=json.loads((PUBLIC/f'timeline.{film}.json').read_text());assert tl['narrated']
@@ -55,7 +57,7 @@ def main():
             assert race['duration']/fps>data['metrics']['astra']['median_model']+.5
         for lang,filename in (('en','en'),('zh','zh-Hans')):
             blocks=re.split(r'\n\s*\n',(folder/f'{filename}.srt').read_text().strip())
-            assert len(blocks)==len(tl['lines'])==10
+            assert len(blocks)==len(tl['lines'])==11
             for index,(block,line) in enumerate(zip(blocks,tl['lines']),1):
                 rows=block.splitlines();assert rows[0]==str(index)
                 assert rows[1]==f'{stamp(line["from"]/fps)} --> {stamp((line["from"]+line["duration"]-round(.28*fps))/fps)}'
@@ -86,15 +88,17 @@ def main():
             subprocess.run(['ffmpeg','-v','error','-y','-ss',str(seconds),'-i',str(movie),'-frames:v','1','-vf','scale=540:960',str(frames/f'{line["id"]}.png')],check=True)
         qr=None
         if film=='perceptron':
-            # Vision reads the delivered compressed frame at phone-preview resolution.
+            # The revised educational ending has no QR in either closing beat.
             scanner=ROOT/'tmp/science-shorts/scan-qr'
             subprocess.run(['swiftc',str(ROOT/'scripts/science-shorts/scan_qr.swift'),'-o',str(scanner)],check=True)
-            qr=subprocess.check_output([str(scanner),str(frames/'p10.png')],text=True).strip()
-            assert qr=='https://ai.lucasacademy.org/',qr
-        item={'durationSeconds':total/fps,'video':'1080x1920, 30fps','audio':[{'language':s['tags']['language'],'default':bool(s['disposition']['default'])} for s in audio],
-              'subtitleTracks':0,'externalCuesPerLanguage':10,'blackSegments':black_segments,'audioLoudness':levels,
+            for name in ('p10','p11'):
+                found=subprocess.check_output([str(scanner),str(frames/f'{name}.png')],text=True).strip()
+                assert not found,found
+            qr='Absent from both revised closing beats'
+        item={'revision':2,'durationSeconds':total/fps,'video':'1080x1920, 30fps','audio':[{'language':s['tags']['language'],'default':bool(s['disposition']['default'])} for s in audio],
+              'subtitleTracks':0,'externalCuesPerLanguage':len(tl['lines']),'blackSegments':black_segments,'audioLoudness':levels,
               'standaloneAudio':'AAC payloads match the movie bit for bit','movingFootageCoverage':1.0,'shotCount':len(tl['shots']),
-              'qrAt540px':qr,'sha256':sha(movie),'bytes':movie.stat().st_size}
+              'qrCheck':qr,'sha256':sha(movie),'bytes':movie.stat().st_size}
         report['films'][film]=item
         print(film,round(total/fps,2),'s; streams, captions, selected takes, source hashes, QR and levels passed',flush=True)
     (DOCS/'verification.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')

@@ -20,4 +20,6 @@
 
 **p09** Grid paper, a few pencils, and you can try training one with your child.
 
-**p10** What would you and your child teach it to recognize first?
+**p10** That weighted sum can be written as matrix multiplication, one of today’s basic AI operations.
+
+**p11** At Lucas Academy, we learn step by step. What would you teach AI?

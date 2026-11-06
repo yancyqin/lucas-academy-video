@@ -5263,5 +5263,404 @@
       }
     ],
     "similarity": 1.0
+  },
+  "en/p10.take3": {
+    "sha256": "1add021e9431385a941d3b24aaee655cd91cdc1aec5d5d0a2da69f21fff3eb41",
+    "expected": "That weighted sum can be written as matrix multiplication, one of today’s basic AI operations.",
+    "heard": "That weighted sum can be written as matrix multiplication, one of today's basic AI operations.",
+    "model": "small",
+    "seconds": 7.38,
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0.0,
+        "end": 6.3,
+        "text": " That weighted sum can be written as matrix multiplication, one of today's basic AI operations.",
+        "tokens": [
+          50364,
+          663,
+          32807,
+          2408,
+          393,
+          312,
+          3720,
+          382,
+          8141,
+          27290,
+          11,
+          472,
+          295,
+          965,
+          311,
+          3875,
+          7318,
+          7705,
+          13,
+          50714
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.23635196685791016,
+        "compression_ratio": 1.0681818181818181,
+        "no_speech_prob": 0.008164806291460991,
+        "words": [
+          {
+            "word": " That",
+            "start": 0.0,
+            "end": 0.48,
+            "probability": 0.7918424606323242
+          },
+          {
+            "word": " weighted",
+            "start": 0.48,
+            "end": 0.7,
+            "probability": 0.6690164804458618
+          },
+          {
+            "word": " sum",
+            "start": 0.7,
+            "end": 1.06,
+            "probability": 0.9991577863693237
+          },
+          {
+            "word": " can",
+            "start": 1.06,
+            "end": 1.48,
+            "probability": 0.991157054901123
+          },
+          {
+            "word": " be",
+            "start": 1.48,
+            "end": 1.64,
+            "probability": 0.9981156587600708
+          },
+          {
+            "word": " written",
+            "start": 1.64,
+            "end": 1.88,
+            "probability": 0.9973994493484497
+          },
+          {
+            "word": " as",
+            "start": 1.88,
+            "end": 2.3,
+            "probability": 0.9976741671562195
+          },
+          {
+            "word": " matrix",
+            "start": 2.3,
+            "end": 2.82,
+            "probability": 0.6130994558334351
+          },
+          {
+            "word": " multiplication,",
+            "start": 2.82,
+            "end": 3.7,
+            "probability": 0.989632248878479
+          },
+          {
+            "word": " one",
+            "start": 4.12,
+            "end": 4.38,
+            "probability": 0.9953436255455017
+          },
+          {
+            "word": " of",
+            "start": 4.38,
+            "end": 4.54,
+            "probability": 0.9989544153213501
+          },
+          {
+            "word": " today's",
+            "start": 4.54,
+            "end": 4.94,
+            "probability": 0.9920695424079895
+          },
+          {
+            "word": " basic",
+            "start": 4.94,
+            "end": 5.3,
+            "probability": 0.993219792842865
+          },
+          {
+            "word": " AI",
+            "start": 5.3,
+            "end": 5.66,
+            "probability": 0.9524872899055481
+          },
+          {
+            "word": " operations.",
+            "start": 5.66,
+            "end": 6.3,
+            "probability": 0.9925730228424072
+          }
+        ]
+      }
+    ],
+    "similarity": 1.0
+  },
+  "zh/p10.take3": {
+    "sha256": "1c4005d18ef68b27cd3ed6a84eed3d677dda837ee2b6c5d3576c2f1b489e3d47",
+    "expected": "刚才的加权求和，写成矩阵乘法，就是今天人工智能的基础运算之一。",
+    "heard": "刚才的《加权求和》 写成《举证陈法》就是今天人工智能的基础运算之一。",
+    "model": "small",
+    "seconds": 6.5,
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0.0,
+        "end": 3.86,
+        "text": "刚才的《加权求和》 写成《举证陈法》",
+        "tokens": [
+          50364,
+          49160,
+          18888,
+          1546,
+          9806,
+          9990,
+          4422,
+          225,
+          32718,
+          12565,
+          9782,
+          220,
+          5676,
+          247,
+          11336,
+          9806,
+          940,
+          122,
+          5233,
+          223,
+          8842,
+          230,
+          11148,
+          9782,
+          50544
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.23254759046766493,
+        "compression_ratio": 0.9009009009009009,
+        "no_speech_prob": 0.007953818887472153,
+        "words": [
+          {
+            "word": "刚",
+            "start": 0.0,
+            "end": 0.5,
+            "probability": 0.03649892285466194
+          },
+          {
+            "word": "才",
+            "start": 0.5,
+            "end": 0.68,
+            "probability": 0.9933630228042603
+          },
+          {
+            "word": "的",
+            "start": 0.68,
+            "end": 0.78,
+            "probability": 0.9812989830970764
+          },
+          {
+            "word": "《",
+            "start": 0.78,
+            "end": 0.86,
+            "probability": 0.11857500672340393
+          },
+          {
+            "word": "加",
+            "start": 0.86,
+            "end": 0.96,
+            "probability": 0.5846722722053528
+          },
+          {
+            "word": "权",
+            "start": 0.96,
+            "end": 1.14,
+            "probability": 0.955689013004303
+          },
+          {
+            "word": "求",
+            "start": 1.14,
+            "end": 1.32,
+            "probability": 0.8551163077354431
+          },
+          {
+            "word": "和",
+            "start": 1.32,
+            "end": 1.6,
+            "probability": 0.7640632390975952
+          },
+          {
+            "word": "》",
+            "start": 1.6,
+            "end": 2.04,
+            "probability": 0.9678860902786255
+          },
+          {
+            "word": " 写",
+            "start": 2.12,
+            "end": 2.22,
+            "probability": 0.9896714985370636
+          },
+          {
+            "word": "成",
+            "start": 2.22,
+            "end": 2.46,
+            "probability": 0.9722522497177124
+          },
+          {
+            "word": "《",
+            "start": 2.46,
+            "end": 2.66,
+            "probability": 0.3718893229961395
+          },
+          {
+            "word": "举",
+            "start": 2.66,
+            "end": 2.8,
+            "probability": 0.8690608739852905
+          },
+          {
+            "word": "证",
+            "start": 2.8,
+            "end": 3.0,
+            "probability": 0.874867707490921
+          },
+          {
+            "word": "陈",
+            "start": 3.0,
+            "end": 3.22,
+            "probability": 0.639814019203186
+          },
+          {
+            "word": "法",
+            "start": 3.22,
+            "end": 3.44,
+            "probability": 0.971524178981781
+          },
+          {
+            "word": "》",
+            "start": 3.44,
+            "end": 3.86,
+            "probability": 0.989563524723053
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "seek": 0,
+        "start": 3.86,
+        "end": 6.4,
+        "text": "就是今天人工智能的基础运算之一。",
+        "tokens": [
+          50544,
+          5620,
+          12074,
+          4035,
+          23323,
+          5094,
+          118,
+          8225,
+          1546,
+          26008,
+          38114,
+          222,
+          3316,
+          238,
+          19497,
+          9574,
+          2257,
+          1543,
+          50694
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.23254759046766493,
+        "compression_ratio": 0.9009009009009009,
+        "no_speech_prob": 0.007953818887472153,
+        "words": [
+          {
+            "word": "就是",
+            "start": 3.86,
+            "end": 4.0,
+            "probability": 0.5259095430374146
+          },
+          {
+            "word": "今天",
+            "start": 4.0,
+            "end": 4.34,
+            "probability": 0.9827134609222412
+          },
+          {
+            "word": "人",
+            "start": 4.34,
+            "end": 4.66,
+            "probability": 0.9287077784538269
+          },
+          {
+            "word": "工",
+            "start": 4.66,
+            "end": 4.82,
+            "probability": 0.9736717939376831
+          },
+          {
+            "word": "智",
+            "start": 4.82,
+            "end": 5.02,
+            "probability": 0.9891661703586578
+          },
+          {
+            "word": "能",
+            "start": 5.02,
+            "end": 5.14,
+            "probability": 0.9827755093574524
+          },
+          {
+            "word": "的",
+            "start": 5.14,
+            "end": 5.3,
+            "probability": 0.9925199747085571
+          },
+          {
+            "word": "基",
+            "start": 5.3,
+            "end": 5.54,
+            "probability": 0.9954366087913513
+          },
+          {
+            "word": "础",
+            "start": 5.54,
+            "end": 5.74,
+            "probability": 0.9932736456394196
+          },
+          {
+            "word": "运",
+            "start": 5.74,
+            "end": 5.88,
+            "probability": 0.9789266586303711
+          },
+          {
+            "word": "算",
+            "start": 5.88,
+            "end": 6.06,
+            "probability": 0.9789663553237915
+          },
+          {
+            "word": "之",
+            "start": 6.06,
+            "end": 6.24,
+            "probability": 0.9951978325843811
+          },
+          {
+            "word": "一。",
+            "start": 6.24,
+            "end": 6.4,
+            "probability": 0.9893286824226379
+          }
+        ]
+      }
+    ],
+    "similarity": 0.893
   }
 }

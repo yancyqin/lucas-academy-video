@@ -103,13 +103,24 @@
   {
     "film": "perceptron",
     "id": "p10",
-    "caption": "What would you and your child teach it to recognize first?",
-    "spoken": "What would you and your child teach it to recognize first?",
+    "caption": "That weighted sum can be written as matrix multiplication, one of today’s basic AI operations.",
+    "spoken": "That weighted sum can be written as matrix multiplication, one of today’s basic AI operations.",
     "voice": "louise/en",
     "speed": 1.1,
     "mode": "zero-shot-instruct",
     "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
-    "settingsSha256": "f120de6ad222303b830f6ac00179e93e427e59d84e30ac3f4b59b2b4cbe8662d"
+    "settingsSha256": "1d398bd9e78851a2d5149329b8e2d0c6a060bb0db71580cae84d422792d07b96"
+  },
+  {
+    "film": "perceptron",
+    "id": "p11",
+    "caption": "At Lucas Academy, we learn step by step. What would you teach AI?",
+    "spoken": "At Lucas Academy, we learn step by step. What would you teach AI?",
+    "voice": "louise/en",
+    "speed": 1.1,
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "settingsSha256": "bbb0975e32325ea26a13ebbab44979d3a282e835670f463d99a53a45d527e47f"
   },
   {
     "film": "optogenetics",
@@ -213,12 +224,23 @@
   {
     "film": "optogenetics",
     "id": "o10",
-    "caption": "How would you turn a picture into a message that someone else could receive?",
-    "spoken": "How would you turn a picture into a message that someone else could receive?",
+    "caption": "Starting with a light signal, we can explore how the brain processes information.",
+    "spoken": "Starting with a light signal, we can explore how the brain processes information.",
     "voice": "louise/en",
     "speed": 1.1,
     "mode": "zero-shot-instruct",
     "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
-    "settingsSha256": "fe998ed779be4453c6a375345b9e56156de73942abc9a84a91c9abfd71f73c6e"
+    "settingsSha256": "8240fd7099343c0137de08b1e1ff3482bea765e4da5648be0c0295c7a2f37ec7"
+  },
+  {
+    "film": "optogenetics",
+    "id": "o11",
+    "caption": "At Lucas Academy, we explore step by step: how do brains think, and how does AI learn?",
+    "spoken": "At Lucas Academy, we explore step by step: how do brains think, and how does AI learn?",
+    "voice": "louise/en",
+    "speed": 1.1,
+    "mode": "zero-shot-instruct",
+    "instruction": "Please speak in a warm, curious voice, like discovering something interesting together with parents and children. Clear, natural and conversational.",
+    "settingsSha256": "018b8ce9f834d57f9700bea2c6f6ad76be8936e84a98be1f8ee3d511e4c40dc0"
   }
 ]

@@ -8,6 +8,7 @@ const OUT=path.join(ROOT,'out/science-shorts');
 const PUB=path.join(ROOT,'tmp/science-shorts/public');
 const options=new Set(process.argv.slice(2));
 const films=(process.argv.find(arg=>arg.startsWith('--film='))||'--film=perceptron,optogenetics').slice(7).split(',');
+const cues=process.argv.find(arg=>arg.startsWith('--cues='))?.slice(7).split(',');
 const run=(name,args)=>{const result=spawnSync(name,args,{cwd:ROOT,stdio:'inherit'});if(result.status!==0)throw Error(`${name} failed: ${result.status}`);};
 
 async function main(){
@@ -22,11 +23,11 @@ async function main(){
    const composition=await selectComposition({serveUrl,id:film==='perceptron'?'PerceptronShort':'OptogeneticsShort',puppeteerInstance:browser});
    const folder=path.join(OUT,film),frames=path.join(folder,'frames');fs.mkdirSync(frames,{recursive:true});
    if(!options.has('--movie')){
-    for(const line of composition.props.tl.lines){
+    for(const line of composition.props.tl.lines.filter(line=>!cues||cues.includes(line.id))){
      await renderStill({composition,serveUrl,puppeteerInstance:browser,frame:line.from+Math.floor(line.duration*.55),output:path.join(frames,line.id+'.png'),scale:.5});
      console.log('Frame',film,line.id);
     }
-    for(const shot of composition.props.tl.shots.filter(s=>s.layout!=='portrait')){
+    for(const shot of composition.props.tl.shots.filter(s=>!cues&&s.layout!=='portrait')){
      for(const [label,fraction] of [['start',.08],['end',.93]])await renderStill({composition,serveUrl,puppeteerInstance:browser,
       frame:shot.from+Math.floor(shot.duration*fraction),output:path.join(frames,`${shot.first}-${label}.png`),scale:.5});
     }
