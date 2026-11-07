@@ -34,6 +34,8 @@ def main():
         assert sha(target)==digest
     full=json.loads((DOC/'design-v2/orbital-verification.json').read_text());short=json.loads((DOC/'design-v2/short/verification.json').read_text())
     full_movie=ROOT/full['movie'];short_movie=ROOT/short['movie'];assert sha(full_movie)==full['sha256'] and sha(short_movie)==short['sha256']
+    short_cover=json.loads((DOC/'design-v2/short/cover.json').read_text());assert short_cover['sourceMovieSha256']==short['sha256'] and short_cover['sourceFrame']==0
+    for cover in short_cover['covers'].values():assert sha(ROOT/cover['file'])==cover['sha256']
     meta=json.loads((DOC/'youtube.json').read_text())
     assert all(r['sourceMovieSha256']==(full if key.startswith('long/') else short)['sha256'] for key,r in meta.items())
     tl=json.loads((ROOT/'public/family-ai-lab-02/orbital-v2/short/timeline.json').read_text());start=next(r['from'] for r in tl['lines'] if r['visual']=='friends');ending=OUT/'short/delivery/ending-internet-ai.mp4';ending_receipt=ending.with_suffix('.json')
@@ -52,6 +54,7 @@ def main():
       (short_movie,'02-竖屏短片/0和1能聊天吗-竖屏短片.mp4'),(ending,'02-竖屏短片/结尾审核-互联网AI.mp4'),
       (OUT/'short/delivery/en.srt','02-竖屏短片/0和1能聊天吗-竖屏短片.en.srt'),(OUT/'short/delivery/zh-Hans.srt','02-竖屏短片/0和1能聊天吗-竖屏短片.zh-Hans.srt'),
       (OUT/'cover/family-ai-lab-02.en.png','03-封面/英文封面.png'),(OUT/'cover/family-ai-lab-02.zh.png','03-封面/中文封面.png'),
+      (OUT/'short/cover/family-ai-lab-02.short.en.png','03-封面/Shorts-英文封面.png'),(OUT/'short/cover/family-ai-lab-02.short.zh.png','03-封面/Shorts-中文封面.png'),
       (OUT/'delivery/credits.md','素材来源说明.md'),(OUT/'delivery/fluentui-emoji-LICENSE.txt','Fluent-Emoji-LICENSE.txt'),
     ]
     for kind,label in [('long','长片'),('short','Shorts')]:
@@ -61,7 +64,7 @@ def main():
 
 01-长片：4分24.73秒，1920×1080；另附最新30秒开头审核片。
 02-竖屏短片：{short['seconds']:.2f}秒，1080×1920，9:16；结尾连接互联网和AI，带俏皮的分享问题。
-03-封面：中英文各一张，1280×720，使用长片首帧。
+03-封面：长片中英文各一张，1280×720；Shorts中英文各一张，1080×1920。分别使用对应影片首帧加标题。
 04-YouTube文案：长片、Shorts各有中英文标题、简介、hashtags、Studio标签和上传设置。
 
 两部影片默认英语，并含独立中文音轨。播放器可切换音轨；字幕为单独SRT文件。

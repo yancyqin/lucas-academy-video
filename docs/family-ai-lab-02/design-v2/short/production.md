@@ -8,6 +8,7 @@
 
 - `out/family-ai-lab-02/orbital-v2/short/delivery/family-ai-lab-02.short.bilingual.mp4`
 - 同目录 `en.srt`、`zh-Hans.srt`，以及新结尾审核片 `ending-internet-ai.mp4`
+- `out/family-ai-lab-02/orbital-v2/short/cover/family-ai-lab-02.short.en.png`、`.zh.png`：1080×1920 竖屏封面，桌面交付为 `03-封面/Shorts-英文封面.png` 与 `Shorts-中文封面.png`
 - 桌面 `0和1能聊天吗-交付/02-竖屏短片/`：完整短片、结尾审核片、独立字幕和从最终影片无损提取的中英文 M4A
 - [中文文案](short-script.zh.md)、[English](short-script.en.md)、[时间线](short-timeline.json)、[素材区间](short-clips.json)、[成片检查](verification.json)
 
@@ -59,6 +60,7 @@ npm run fal02:short:mix
 npm run fal02:short:stills
 npm run fal02:short:final
 npm run fal02:short:check
+.venv-align/bin/python scripts/family-ai-lab-02/short_cover.py
 python3 scripts/family-ai-lab-02/youtube.py
 python3 scripts/family-ai-lab-02/deliver.py
 npm run fal02:backup
@@ -66,7 +68,7 @@ npm run fal02:backup
 
 重录才需要私有 Louise profile；正常重建无需再生成 Muse 素材或语音。全部原始短片配音单独保存在数据备份的 `raw-narration-short/`，附设置与 SHA256SUMS。[恢复核对](backup.json)。
 
-Shorts 上传标题：**Can 0 and 1 Connect the World? / 0和1，能连起全世界吗？**。
+Shorts 封面沿用已确认片名：**Can 0 and 1 Talk? / 0和1，能聊天吗？**。中英文各一张，1080×1920。底图直接取最终竖屏视频第 0 帧，标题放在上方空位，手、纸条与管口所在区域保持原画面。[封面记录](cover.json)。
 
 YouTube 长片与 Shorts 各有中英文标题、简介和 tags，默认标签来自 `scripts/youtube_tags.py`。文案是同一影片的语言本地化资料：[English long](../../youtube/long.en.txt)、[中文长片](../../youtube/long.zh.txt)、[English Shorts](../../youtube/short.en.txt)、[中文 Shorts](../../youtube/short.zh.txt)。
 

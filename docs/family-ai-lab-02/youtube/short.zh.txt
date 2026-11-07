@@ -1,5 +1,5 @@
 【标题 / Title】
-0和1，能连起全世界吗？
+0和1，能聊天吗？
 
 【简介 / Description】
 纸条卡住了，邀请却送到了！
@@ -25,7 +25,7 @@
 独立中文配音 / Chinese audio: 02-竖屏短片/中文音轨.m4a
 独立英文配音 / English audio: 02-竖屏短片/英文音轨.m4a
 字幕 / Captions: 02-竖屏短片/0和1能聊天吗-竖屏短片.en.srt; 02-竖屏短片/0和1能聊天吗-竖屏短片.zh-Hans.srt
-封面 / Thumbnail: 视频首帧 / First frame of the short
+封面 / Thumbnail: 03-封面/Shorts-中文封面.png
 画幅 / Aspect: 9:16
 中英文标题与简介用于同一影片的语言版本 / Localized metadata for one shared video
 类别 / Category: Education

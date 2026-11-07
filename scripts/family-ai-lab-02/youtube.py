@@ -9,7 +9,7 @@ from youtube_tags import hashtags,tags,DEFAULT
 COURSE='https://ai.lucasacademy.org/courses/zero-and-one/'
 TITLES={
  'long':{'en':'Can 0 and 1 Talk?','zh':'0和1，能聊天吗？'},
- 'short':{'en':'Can 0 and 1 Connect the World?','zh':'0和1，能连起全世界吗？'},
+ 'short':{'en':'Can 0 and 1 Talk?','zh':'0和1，能聊天吗？'},
 }
 TOPICS={
  'long':{'en':['binary','bitsandbytes','ascii','computerscience','codingforkids','familyailab'],'zh':['二进制','信息编码','ascii','计算机科学','少儿编程','亲子学习','家庭ai实验室']},
@@ -48,7 +48,7 @@ def text(kind,lang,tl):
         if kind=='long':credit+='\n网页录屏与学习单：Lucas Academy；水果图片：Microsoft Fluent Emoji（MIT）。'
     own=TOPICS[kind][lang];sections.extend([credit,hashtags(own)]);description='\n\n'.join(sections);studio=tags(own)
     folder='01-长片' if kind=='long' else '02-竖屏短片';stem='0和1能聊天吗-双语长片' if kind=='long' else '0和1能聊天吗-竖屏短片'
-    cover=f'03-封面/{"英文" if lang=="en" else "中文"}封面.png' if kind=='long' else '视频首帧 / First frame of the short'
+    cover=f'03-封面/{"英文" if lang=="en" else "中文"}封面.png' if kind=='long' else f'03-封面/Shorts-{"英文" if lang=="en" else "中文"}封面.png'
     settings=(f'主视频 / Main video: {folder}/{stem}.mp4\n'
               '原始语言 / Original language: English\n'
               f'独立中文配音 / Chinese audio: {folder}/中文音轨.m4a\n'

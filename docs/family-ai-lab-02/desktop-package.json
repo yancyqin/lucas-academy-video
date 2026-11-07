@@ -85,6 +85,14 @@
       "bytes": 1146739,
       "sha256": "1eb8416f1973483bdb4ea150b5d0e098f16f6f06ed480bc79e2c18d3801d87fe"
     },
+    "03-封面/Shorts-中文封面.png": {
+      "bytes": 1008844,
+      "sha256": "bbf57e87e19bf54c055b830ceb6d357c31c9f50db452a59476d413088c00613e"
+    },
+    "03-封面/Shorts-英文封面.png": {
+      "bytes": 987151,
+      "sha256": "55d98ebd844c14882d7e963a5cbef83d0629960de748b21abeed48ebe27d9769"
+    },
     "03-封面/中文封面.png": {
       "bytes": 1015324,
       "sha256": "6a0b4ff45f59d5e12e9214cfd3f1f31b3e2a30ad9173c91c89aceeb76bcc7a2c"
@@ -94,12 +102,12 @@
       "sha256": "5036a7318846f4e5c5818ef25b0adde2d786738218834b13c31c760a776b089f"
     },
     "04-YouTube文案/YouTube-Shorts-English.txt": {
-      "bytes": 1728,
-      "sha256": "d787190d64e83667b5cb03d5e942332abd421984d89d47d6f6a134434b86111c"
+      "bytes": 1709,
+      "sha256": "be8bba3ee62298aa36b119d50a5ea1b51db8b799b7d7984516c178ff46a7aaec"
     },
     "04-YouTube文案/YouTube-Shorts-中文.txt": {
-      "bytes": 1690,
-      "sha256": "2fb10792c4d25caec0413dfc4add7313872bb00c66223be967819894e707ba36"
+      "bytes": 1675,
+      "sha256": "cbdf6c08af2e7ac463e15fb80c183f34e9c9201bbdf538eba2174193880c7386"
     },
     "04-YouTube文案/YouTube-长片-English.txt": {
       "bytes": 2027,
@@ -114,8 +122,8 @@
       "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
     },
     "使用说明.txt": {
-      "bytes": 947,
-      "sha256": "03d5e473c7ea1a699cd39039022b0c55a00780640ddde340ab837ad1cab18bea"
+      "bytes": 1014,
+      "sha256": "1f216941d9897cc32ce35c654f822bf39fd654079bc0ab6fe2d84a36b3a3f05a"
     },
     "素材来源说明.md": {
       "bytes": 1513,
