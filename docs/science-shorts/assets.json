@@ -1,0 +1,83 @@
+{
+  "perceptron-portal": {
+    "path": "perceptron-portal.mp4",
+    "sha256": "a70230fb111e0b8464609955b5269a5f2eaf6dcca1ca15d2369df4a43fbb425c",
+    "original": "/Users/yqin/repo/playground/lucas-academy-video/public/family-ai-lab-01/muse/G4-time-travel-v2.mp4",
+    "seconds": 10.0,
+    "width": 1280,
+    "height": 720,
+    "credit": "Owner-made Muse illustration; not documentary patient footage"
+  },
+  "perceptron-1957": {
+    "path": "perceptron-1957.mp4",
+    "sha256": "ba0781973452f25bb3aab199a2ee14e5b6080e0c725061ca627674d3ffd4338e",
+    "original": "/Users/yqin/repo/playground/lucas-academy-video/public/family-ai-lab-01/muse/G1.mp4",
+    "seconds": 10.0,
+    "width": 1280,
+    "height": 720,
+    "credit": "Owner-made Muse illustration; not documentary patient footage"
+  },
+  "perceptron-lab": {
+    "path": "perceptron-lab.mp4",
+    "sha256": "04c65fc4f8611b62f03ce2225fa968def50312d66f27eaf73598b9d8a025d055",
+    "original": "/Users/yqin/repo/playground/lucas-academy-video/public/family-ai-lab-01/muse/G2.mp4",
+    "seconds": 10.0,
+    "width": 1280,
+    "height": 720,
+    "credit": "Owner-made Muse illustration; not documentary patient footage"
+  },
+  "perceptron-family": {
+    "path": "perceptron-family.mp4",
+    "sha256": "6097e89c3e14d0875a753fc8ea4e74b7c49311e1a3c8a56e6917e6851e740066",
+    "original": "/Users/yqin/repo/playground/lucas-academy-video/public/family-ai-lab-01/muse/G3.mp4",
+    "seconds": 10.0,
+    "width": 1280,
+    "height": 720,
+    "credit": "Owner-made Muse illustration; not documentary patient footage"
+  },
+  "opto-algae": {
+    "path": "opto-algae.mp4",
+    "sha256": "d27176423b72af75d0aceb15b3efd09ad56e8af3eb24bcb25574483875e88455",
+    "original": "/Users/yqin/repo/playground/lucas-academy-video-data/fun-informatics-04/muse/G2-1.mp4",
+    "seconds": 10.0,
+    "width": 1280,
+    "height": 720,
+    "credit": "Owner-made Muse illustration; not documentary patient footage"
+  },
+  "opto-goggles": {
+    "path": "opto-goggles.mp4",
+    "sha256": "3822414a29e44e23803704639c3ede855a804ce8afdb3433880df1e29e4f5ff0",
+    "original": "/Users/yqin/repo/playground/lucas-academy-video-data/fun-informatics-04/muse/G3-1.mp4",
+    "seconds": 10.0,
+    "width": 1280,
+    "height": 720,
+    "credit": "Owner-made Muse illustration; not documentary patient footage"
+  },
+  "opto-dots": {
+    "path": "opto-dots.mp4",
+    "sha256": "9661d3032aa4b29cc18175959842fddb372acd06cc91ec59ad3732709083b60c",
+    "original": "/Users/yqin/repo/playground/lucas-academy-video-data/fun-informatics-04/muse/G4-1.mp4",
+    "seconds": 10.0,
+    "width": 1280,
+    "height": 720,
+    "credit": "Owner-made Muse illustration; not documentary patient footage"
+  },
+  "opto-touch": {
+    "path": "opto-touch.mp4",
+    "sha256": "6e116d4143f3dec0d7faa8e04c8fdac357c21c3dda5aeee8eb1df940401acff1",
+    "original": "/Users/yqin/repo/playground/lucas-academy-video-data/fun-informatics-04/muse/G5-1.mp4",
+    "seconds": 10.0,
+    "width": 1280,
+    "height": 720,
+    "credit": "Owner-made Muse illustration; not documentary patient footage"
+  },
+  "opto-camera": {
+    "path": "opto-camera.mp4",
+    "sha256": "e86a443fd7e2e9b766fb40fead550fe189686d0510425a5d44682c12704f9d46",
+    "original": "/Users/yqin/repo/playground/lucas-academy-video-data/fun-informatics-04/muse/G6-1.mp4",
+    "seconds": 10.0,
+    "width": 1280,
+    "height": 720,
+    "credit": "Owner-made Muse illustration; not documentary patient footage"
+  }
+}
