@@ -19,6 +19,7 @@ python3 scripts/science-shorts/prepare.py
 .venv-align/bin/python scripts/science-shorts/mix.py
 node scripts/science-shorts/render.cjs --movie
 python3 scripts/science-shorts/verify.py
+node scripts/science-shorts/covers.cjs
 python3 scripts/science-shorts/package.py
 python3 scripts/science-shorts/backup.py
 ```
@@ -26,6 +27,8 @@ python3 scripts/science-shorts/backup.py
 Use `--film perceptron` or `--film optogenetics` for Python commands that accept it, and `--film=perceptron` / `--film=optogenetics` for the renderer. `node scripts/science-shorts/render.cjs --stills` creates layout frames without producing a movie.
 
 Finished files are in `out/science-shorts/{perceptron,optogenetics}/`: bilingual MP4, independent EN/ZH M4As and EN/ZH SRTs. The revised desktop upload package is `/Users/yqin/Desktop/感知机与光遗传学-竖屏短片-v3/`. The original package remains untouched; v1 and v2 output files are also preserved under `out/science-shorts/archive/`. Neither movie has embedded or burned subtitles. Nothing has been published to a video platform.
+
+Each film now has separate Chinese and English cover designs: primary 1080×1920 JPEGs plus 1280×720 versions. `cover.zh.jpg` and `cover.en.jpg` are the portrait files in each desktop film folder; `cover.landscape.zh.jpg` and `cover.landscape.en.jpg` are the landscape files. The perceptron uses the owner-selected 00:02 unlettered time-travel frame with the approved 300万/1000万 (3 million/10 million) headlines and the original pixel seven. Optogenetics uses its existing amber-goggles footage and the approved one-minute 2026 Nobel hook. All text and the pixel-seven drawing are rendered in code, with no new bitmap generation, logo, QR or series ribbon. Canonical model names remain unchanged on the Chinese design. Sources, timestamps, dimensions and output hashes are in covers.json; cover checks are in covers-verification.json. The separate `src/science-short-covers.tsx` entry avoids the shared composition registry. Cover backgrounds are re-extracted from already backed-up clips when rebuilding.
 
 Revised inputs are backed up under `../lucas-academy-video-data/science-shorts-20261106-v3/` with SHA256SUMS and a refusal-to-overwrite restore script. The v1 and v2 backups remain separate. After restoring, use `python3 scripts/science-shorts/prepare.py --restored` to rebuild captions and timing directly from the preserved selected voices. This produces the same cue intervals and shot rates without requiring the old full-film public directories or regenerating narration.
 

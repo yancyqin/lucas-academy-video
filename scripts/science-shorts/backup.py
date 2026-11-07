@@ -44,6 +44,8 @@ print('Verified backup and restored',len(sources),'inputs to',target)
 Nine existing owner-made Muse source clips, forty selected checked Louise WAVs, original-result-derived pixels/points/training paths and both narrated timelines. Optogenetics opens on the 2026 Nobel Prize in Medicine and runs exactly one minute. The perceptron ends with "What do you want to learn about AI today?" and has no QR. Both films invite step-by-step learning at Lucas Academy. No new source-media download or generation was needed. Source clip audio is muted. Four approved full-film narration cues were reused exactly; the other selected cues were narrated locally. Selected retakes and ASR records are in records/. The v1 and v2 backups remain separate and untouched.
 
 Run `python3 restore.py /absolute/path/to/lucas-academy-video`. It validates every SHA256 before writing and refuses differing existing inputs. With the code checkout present, run `python3 scripts/science-shorts/prepare.py --restored`, `.venv-align/bin/python scripts/science-shorts/mix.py`, and `node scripts/science-shorts/render.cjs --movie`. This route requires neither the original full-film public folders nor a voice-generation rerun. It preserves the same bilingual timing and external SRTs.
+
+Run `node scripts/science-shorts/covers.cjs` to regenerate both languages of the portrait and landscape covers from the backed-up source clips, then `python3 scripts/science-shorts/package.py` to include them in the desktop package. Cover frame timestamps and hashes are recorded in records/covers.json.
 ''')
     files=sorted(p for p in BACKUP.rglob('*') if p.is_file() and p.name!='SHA256SUMS')
     (BACKUP/'SHA256SUMS').write_text(''.join(f'{sha(p)}  {p.relative_to(BACKUP)}\n' for p in files))

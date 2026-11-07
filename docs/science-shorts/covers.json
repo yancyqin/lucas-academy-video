@@ -1,0 +1,146 @@
+{
+  "designs": 4,
+  "files": 8,
+  "sourceFrames": {
+    "perceptron": {
+      "path": "public/science-shorts-20261105/perceptron-portal.mp4",
+      "sha256": "a70230fb111e0b8464609955b5269a5f2eaf6dcca1ca15d2369df4a43fbb425c",
+      "seconds": 2,
+      "background": "public/science-shorts-20261105/cover/perceptron.png",
+      "backgroundSha256": "3716d077936d3b90d1c6849bf2abadd4d5db0c9b484870f23abe6cd89fcb7e99"
+    },
+    "optogenetics": {
+      "path": "public/science-shorts-20261105/opto-goggles.mp4",
+      "sha256": "3822414a29e44e23803704639c3ede855a804ce8afdb3433880df1e29e4f5ff0",
+      "seconds": 1.25,
+      "background": "public/science-shorts-20261105/cover/optogenetics.png",
+      "backgroundSha256": "855a5b2ac48b093d1066f799f6c089a4ad144951f977eba645215c42ebbcb8a5"
+    }
+  },
+  "copy": {
+    "perceptron": {
+      "zh": [
+        "比Claude Fable 5.1快300万倍",
+        "比GPT-6-Astra快1000万倍！"
+      ],
+      "en": [
+        "3 million times faster than Claude Fable 5.1",
+        "10 million times faster than GPT-6-Astra"
+      ]
+    },
+    "optogenetics": {
+      "zh": [
+        "1分钟了解",
+        "2026诺贝尔奖",
+        "光遗传学",
+        "生理学或医学奖"
+      ],
+      "en": [
+        "In 1 minute",
+        "2026 Nobel Prize",
+        "Optogenetics",
+        "Physiology or Medicine"
+      ]
+    }
+  },
+  "typography": "One language per cover; canonical model names preserved. All wording, digits and the original test-picture seven are code-rendered. No logo, series ribbon or QR.",
+  "framing": "Perceptron landscape keeps the complete owner-selected 00:02 source frame; portrait uses the film's fixed center framing. Optogenetics portrait keeps the complete goggles frame in a wide insert.",
+  "covers": [
+    {
+      "film": "perceptron",
+      "language": "zh",
+      "shape": "portrait",
+      "path": "out/science-shorts/cover/perceptron/cover.portrait.zh.jpg",
+      "size": [
+        1080,
+        1920
+      ],
+      "bytes": 336871,
+      "sha256": "bf836bb966007ac3e0e17f283dcfd18cd6ed054a152130b76a0e2cf02783050e"
+    },
+    {
+      "film": "perceptron",
+      "language": "zh",
+      "shape": "landscape",
+      "path": "out/science-shorts/cover/perceptron/cover.landscape.zh.jpg",
+      "size": [
+        1280,
+        720
+      ],
+      "bytes": 188913,
+      "sha256": "0e75cd8b57a456f8ca550ca48ef13730a0e01366274eb1f405290dd9fb5974c7"
+    },
+    {
+      "film": "perceptron",
+      "language": "en",
+      "shape": "portrait",
+      "path": "out/science-shorts/cover/perceptron/cover.portrait.en.jpg",
+      "size": [
+        1080,
+        1920
+      ],
+      "bytes": 323409,
+      "sha256": "abf7f4edbd1e8b96f61094966148620987c02ef733fd7210fa9eece0e2f5d674"
+    },
+    {
+      "film": "perceptron",
+      "language": "en",
+      "shape": "landscape",
+      "path": "out/science-shorts/cover/perceptron/cover.landscape.en.jpg",
+      "size": [
+        1280,
+        720
+      ],
+      "bytes": 180648,
+      "sha256": "4286f5e30956a466e5c626e8717f91a116aa87323747f4486c717aac58df0f86"
+    },
+    {
+      "film": "optogenetics",
+      "language": "zh",
+      "shape": "portrait",
+      "path": "out/science-shorts/cover/optogenetics/cover.portrait.zh.jpg",
+      "size": [
+        1080,
+        1920
+      ],
+      "bytes": 213451,
+      "sha256": "1ff37010852fe5b5050c045e1d020c82d9d3c2fe573e92af716d78f218c72c5b"
+    },
+    {
+      "film": "optogenetics",
+      "language": "zh",
+      "shape": "landscape",
+      "path": "out/science-shorts/cover/optogenetics/cover.landscape.zh.jpg",
+      "size": [
+        1280,
+        720
+      ],
+      "bytes": 138834,
+      "sha256": "af7ced02286c024d8efc00b93f4180782df2716f3cdda16445a71064142b3682"
+    },
+    {
+      "film": "optogenetics",
+      "language": "en",
+      "shape": "portrait",
+      "path": "out/science-shorts/cover/optogenetics/cover.portrait.en.jpg",
+      "size": [
+        1080,
+        1920
+      ],
+      "bytes": 195479,
+      "sha256": "42ed22afc1922974a200262869e058f049569d681d1477627db160fa79b92b86"
+    },
+    {
+      "film": "optogenetics",
+      "language": "en",
+      "shape": "landscape",
+      "path": "out/science-shorts/cover/optogenetics/cover.landscape.en.jpg",
+      "size": [
+        1280,
+        720
+      ],
+      "bytes": 129356,
+      "sha256": "d4beaa0487f2412b18e878db0e8bf218faed74dcfaf531e1f5ab509ac0fbdc9f"
+    }
+  ]
+}

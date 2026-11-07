@@ -22,6 +22,8 @@ COPY={
 
 def main():
     verification=json.loads((DOCS/'verification.json').read_text());assert len(verification['films'])==2
+    covers=json.loads((DOCS/'covers.json').read_text())['covers']
+    assert len(covers)==8
     DEST.mkdir(parents=True,exist_ok=True);copied=[]
     for film,info in COPY.items():
         folder=DEST/film;folder.mkdir(exist_ok=True)
@@ -30,6 +32,13 @@ def main():
             if name.endswith('.mp4'):assert sha(source)==verification['films'][film]['sha256']
             target=folder/name
             if target.exists():assert sha(target)==sha(source),'Refusing differing existing package file: '+str(target)
+            else:shutil.copy2(source,target)
+            assert sha(source)==sha(target);copied.append(target)
+        for cover in (item for item in covers if item['film']==film):
+            source=ROOT/cover['path'];assert sha(source)==cover['sha256']
+            name=f'cover.{cover["language"]}.jpg' if cover['shape']=='portrait' else f'cover.landscape.{cover["language"]}.jpg'
+            target=folder/name
+            if target.exists():assert sha(target)==sha(source),'Refusing differing existing cover: '+str(target)
             else:shutil.copy2(source,target)
             assert sha(source)==sha(target);copied.append(target)
         for lang in ('en','zh'):
@@ -49,6 +58,8 @@ optogenetics：光遗传学，{durations['optogenetics']}秒。开场：1分钟�
 en.m4a / zh.m4a：可单独上传的中英文音轨，与MP4内音轨一致。
 en.srt / zh-Hans.srt：中英文独立字幕，画面没有烧录字幕。
 youtube.en.txt / youtube.zh.txt：中英文标题、简介、标签和上传设置。
+cover.zh.jpg / cover.en.jpg：中文、英文独立竖版封面，1080×1920。
+cover.landscape.zh.jpg / cover.landscape.en.jpg：同设计的横版封面，1280×720。
 
 如播放器默认播放英文，可在“音轨”中切换中文。上传平台若需要独立配音，使用zh.m4a。
 使用本机已有的Muse动态素材，没有额外下载。实验沿用原始数据，没有重跑。

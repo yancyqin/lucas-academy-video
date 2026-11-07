@@ -1,0 +1,89 @@
+{
+  "designs": 4,
+  "files": 8,
+  "dimensionAndHashChecksPassed": true,
+  "allEightImagesVisuallyInspected": true,
+  "englishOcrKeyWordsPassed": true,
+  "chineseReview": "Visually checked against code typography and original-result-derived 300万/1000万 values. Generic English-priority OCR is not used to certify Chinese characters.",
+  "languagePolicy": "Separate zh/en artwork; canonical model names preserved on zh.",
+  "maxBytes": 336871,
+  "noQrOrSeriesRibbon": true,
+  "unchangedVideoSha256": {
+    "perceptron": "68f7d0f837a3fd94e498c3acb1c528e7dde0cf808a0e2a9c15b5b135f18079e8",
+    "optogenetics": "f104ac721f98978594260b355321f9d8caee538cc5f88743a8e10f55e9870b02"
+  },
+  "covers": [
+    {
+      "path": "out/science-shorts/cover/perceptron/cover.portrait.zh.jpg",
+      "bytes": 336871,
+      "sha256": "bf836bb966007ac3e0e17f283dcfd18cd6ed054a152130b76a0e2cf02783050e",
+      "size": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "path": "out/science-shorts/cover/perceptron/cover.landscape.zh.jpg",
+      "bytes": 188913,
+      "sha256": "0e75cd8b57a456f8ca550ca48ef13730a0e01366274eb1f405290dd9fb5974c7",
+      "size": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "out/science-shorts/cover/perceptron/cover.portrait.en.jpg",
+      "bytes": 323409,
+      "sha256": "abf7f4edbd1e8b96f61094966148620987c02ef733fd7210fa9eece0e2f5d674",
+      "size": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "path": "out/science-shorts/cover/perceptron/cover.landscape.en.jpg",
+      "bytes": 180648,
+      "sha256": "4286f5e30956a466e5c626e8717f91a116aa87323747f4486c717aac58df0f86",
+      "size": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "out/science-shorts/cover/optogenetics/cover.portrait.zh.jpg",
+      "bytes": 213451,
+      "sha256": "1ff37010852fe5b5050c045e1d020c82d9d3c2fe573e92af716d78f218c72c5b",
+      "size": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "path": "out/science-shorts/cover/optogenetics/cover.landscape.zh.jpg",
+      "bytes": 138834,
+      "sha256": "af7ced02286c024d8efc00b93f4180782df2716f3cdda16445a71064142b3682",
+      "size": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "out/science-shorts/cover/optogenetics/cover.portrait.en.jpg",
+      "bytes": 195479,
+      "sha256": "42ed22afc1922974a200262869e058f049569d681d1477627db160fa79b92b86",
+      "size": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "path": "out/science-shorts/cover/optogenetics/cover.landscape.en.jpg",
+      "bytes": 129356,
+      "sha256": "d4beaa0487f2412b18e878db0e8bf218faed74dcfaf531e1f5ab509ac0fbdc9f",
+      "size": [
+        1280,
+        720
+      ]
+    }
+  ]
+}
