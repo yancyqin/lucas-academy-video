@@ -1,0 +1,939 @@
+{
+  "status": "complete",
+  "desktopPackageWasAlreadyAbsent": "/Users/yqin/Desktop/感知机与光遗传学-竖屏短片-v3",
+  "delivery": "/Users/yqin/repo/playground/lucas-academy-video/out/science-shorts/delivery",
+  "approvedDeliveryContentHashesUnchanged": true,
+  "deliveryFiles": 24,
+  "protectedPublicInputs": 52,
+  "protectedVoiceFiles": 80,
+  "sourceBackups": [
+    {
+      "path": "/Users/yqin/repo/playground/lucas-academy-video-data/science-shorts-20261106",
+      "verifiedFiles": 71
+    },
+    {
+      "path": "/Users/yqin/repo/playground/lucas-academy-video-data/science-shorts-20261106-v2",
+      "verifiedFiles": 77
+    },
+    {
+      "path": "/Users/yqin/repo/playground/lucas-academy-video-data/science-shorts-20261106-v3",
+      "verifiedFiles": 76
+    }
+  ],
+  "removals": [
+    {
+      "group": "exports",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/out/science-shorts/bundle-fYhcg8",
+      "bytes": 19986709,
+      "files": 37,
+      "directory": true
+    },
+    {
+      "group": "exports",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/out/science-shorts/bundle-Jhwr5C",
+      "bytes": 19993085,
+      "files": 37,
+      "directory": true
+    },
+    {
+      "group": "exports",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/out/science-shorts/bundle-8Juh8T",
+      "bytes": 19994861,
+      "files": 37,
+      "directory": true
+    },
+    {
+      "group": "exports",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/out/science-shorts/archive",
+      "bytes": 521509172,
+      "files": 44,
+      "directory": true
+    },
+    {
+      "group": "exports",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/out/science-shorts/bundle-yQZpnA",
+      "bytes": 19980097,
+      "files": 37,
+      "directory": true
+    },
+    {
+      "group": "exports",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/out/science-shorts/bundle-y9Svnb",
+      "bytes": 19980029,
+      "files": 37,
+      "directory": true
+    },
+    {
+      "group": "exports",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/out/science-shorts/bundle-EDXjGJ",
+      "bytes": 19994861,
+      "files": 37,
+      "directory": true
+    },
+    {
+      "group": "exports",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/out/science-shorts/bundle-zY8cZq",
+      "bytes": 19993420,
+      "files": 37,
+      "directory": true
+    },
+    {
+      "group": "exports",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/out/science-shorts/bundle-1jFGOi",
+      "bytes": 19986709,
+      "files": 37,
+      "directory": true
+    },
+    {
+      "group": "exports",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/out/science-shorts/perceptron",
+      "bytes": 180637521,
+      "files": 33,
+      "directory": true
+    },
+    {
+      "group": "exports",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/out/science-shorts/optogenetics",
+      "bytes": 99229963,
+      "files": 43,
+      "directory": true
+    },
+    {
+      "group": "exports",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/out/science-shorts/bundle-siUsct",
+      "bytes": 19994861,
+      "files": 37,
+      "directory": true
+    },
+    {
+      "group": "exports",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/out/science-shorts/bundle-rJIzVN",
+      "bytes": 19993755,
+      "files": 37,
+      "directory": true
+    },
+    {
+      "group": "exports",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/out/science-shorts/cover",
+      "bytes": 21675785,
+      "files": 45,
+      "directory": true
+    },
+    {
+      "group": "temporary",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/tmp/science-shorts-v3-hook-layout.log",
+      "bytes": 46,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "temporary",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/tmp/science-shorts-v3-perceptron-render.log",
+      "bytes": 274,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "temporary",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/tmp/science-short-covers-git.json",
+      "bytes": 715,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "temporary",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/tmp/science-shorts-v2-opto-render.log",
+      "bytes": 300,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "temporary",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/tmp/science-shorts-ending-asr.log",
+      "bytes": 822,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "temporary",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/tmp/science-shorts-v2-pr-body.md",
+      "bytes": 2064,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "temporary",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/tmp/science-shorts-v3-patient-retake.log",
+      "bytes": 2022,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "temporary",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/tmp/science-shorts-v3-asr.log",
+      "bytes": 567,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "temporary",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/tmp/science-shorts-ending-zh.log",
+      "bytes": 5125,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "temporary",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/tmp/science-shorts-pr-body.md",
+      "bytes": 1585,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "temporary",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/tmp/science-shorts-v3-zh-voice.log",
+      "bytes": 5037,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "temporary",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/tmp/science-shorts-covers.log",
+      "bytes": 336,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "temporary",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/tmp/science-shorts-perceptron-final.log",
+      "bytes": 274,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "temporary",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/tmp/science-shorts-v2-records",
+      "bytes": 328606,
+      "files": 19,
+      "directory": true
+    },
+    {
+      "group": "temporary",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/tmp/science-shorts-ending-matrix-retake.log",
+      "bytes": 2046,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "temporary",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/tmp/science-shorts-v2-git.json",
+      "bytes": 1511,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "temporary",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/tmp/science-shorts-v3-git.json",
+      "bytes": 1383,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "temporary",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/tmp/science-shorts-v2-opto-verify.log",
+      "bytes": 93,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "temporary",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/tmp/science-shorts-v3-perceptron-verify.log",
+      "bytes": 91,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "temporary",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/tmp/science-shorts-ending-en.log",
+      "bytes": 5012,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "temporary",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/tmp/science-shorts-v3-opto-picture-timeline.json",
+      "bytes": 9950,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "temporary",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/tmp/science-shorts-layout.log",
+      "bytes": 440,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "temporary",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/tmp/science-shorts-verification.log",
+      "bytes": 184,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "temporary",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/tmp/science-shorts-layout-v2.log",
+      "bytes": 230,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "temporary",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/tmp/science-short-covers-pr-body.md",
+      "bytes": 3040,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "temporary",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/tmp/science-shorts-opto-take2.log",
+      "bytes": 194,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "temporary",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/tmp/science-shorts-en-voice.log",
+      "bytes": 19119,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "temporary",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/tmp/science-shorts-v1-records",
+      "bytes": 258022,
+      "files": 16,
+      "directory": true
+    },
+    {
+      "group": "temporary",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/tmp/science-shorts-git.json",
+      "bytes": 1555,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "temporary",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/tmp/science-shorts",
+      "bytes": 70054,
+      "files": 2,
+      "directory": true
+    },
+    {
+      "group": "temporary",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/tmp/science-shorts-cover-ocr",
+      "bytes": 96968,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "temporary",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/tmp/science-shorts-v2-perceptron-render.log",
+      "bytes": 274,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "temporary",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/tmp/science-shorts-v2-matrix-asr.log",
+      "bytes": 114,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "temporary",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/tmp/science-shorts-v2-perceptron-verify.log",
+      "bytes": 91,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "temporary",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/tmp/science-shorts-ending-layout.log",
+      "bytes": 88,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "temporary",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/tmp/science-shorts-medium.log",
+      "bytes": 419,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "temporary",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/tmp/science-shorts-v3-en-voice.log",
+      "bytes": 4018,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "temporary",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/tmp/science-shorts-v3-pr-body.md",
+      "bytes": 2449,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "temporary",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/tmp/science-shorts-v3-optogenetics-verify.log",
+      "bytes": 92,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "temporary",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/tmp/science-shorts-zh-retakes.log",
+      "bytes": 4041,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "temporary",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/tmp/science-shorts-medium-extra.log",
+      "bytes": 333,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "temporary",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/tmp/science-shorts-cover-ocr.json",
+      "bytes": 1590,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "temporary",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/tmp/science-shorts-v3-patient-final-asr.log",
+      "bytes": 98,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "temporary",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/tmp/science-shorts-ending-p10-small.log",
+      "bytes": 232,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "temporary",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/tmp/science-shorts-cover-ocr.swift",
+      "bytes": 640,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "temporary",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/tmp/science-shorts-asr.log",
+      "bytes": 3343,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "temporary",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/tmp/science-shorts-v3-algae-asr.log",
+      "bytes": 78,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "temporary",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/tmp/science-shorts-optogenetics-final.log",
+      "bytes": 300,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "temporary",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/tmp/science-shorts-pr.json",
+      "bytes": 195,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "temporary",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/tmp/science-shorts-p05-take2.log",
+      "bytes": 78,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "temporary",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/tmp/science-shorts-zh-voice.log",
+      "bytes": 18828,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "temporary",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/tmp/science-shorts-v2-matrix-domain.log",
+      "bytes": 89,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "temporary",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/tmp/science-shorts-v3-patient-small.log",
+      "bytes": 202,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "temporary",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/tmp/science-shorts-v3-optogenetics-render.log",
+      "bytes": 300,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-working-inputs",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/public/science-shorts-20261105/opto-G2-1.mp4",
+      "bytes": 2337307,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-working-inputs",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/public/science-shorts-20261105/opto-G6-1.mp4",
+      "bytes": 2712740,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-working-inputs",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/public/science-shorts-20261105/opto-G4-1.mp4",
+      "bytes": 5927990,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-working-inputs",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/public/science-shorts-20261105/opto-G3-1.mp4",
+      "bytes": 2881136,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-working-inputs",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/public/science-shorts-20261105/opto-G5-1.mp4",
+      "bytes": 1946364,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-working-inputs",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/public/science-shorts-20261105/opto-G3-1.png",
+      "bytes": 526095,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-working-inputs",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/public/science-shorts-20261105/ai-lab-qr.png",
+      "bytes": 2205,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-working-inputs",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/public/science-shorts-20261105/opto-G5-1.png",
+      "bytes": 558663,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-working-inputs",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/public/science-shorts-20261105/opto-G2-1.png",
+      "bytes": 584023,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-working-inputs",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/public/science-shorts-20261105/opto-G4-1.png",
+      "bytes": 631005,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-working-inputs",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/public/science-shorts-20261105/perceptron-G3.png",
+      "bytes": 1052288,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-working-inputs",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/public/science-shorts-20261105/perceptron-G4-time-travel-v2.png",
+      "bytes": 1052579,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-working-inputs",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/public/science-shorts-20261105/perceptron-G2.png",
+      "bytes": 982861,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-working-inputs",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/public/science-shorts-20261105/opto-G6-1.png",
+      "bytes": 795811,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-working-inputs",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/public/science-shorts-20261105/perceptron-G1.png",
+      "bytes": 821606,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-working-inputs",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/public/science-shorts-20261105/cover/optogenetics.png",
+      "bytes": 492055,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-working-inputs",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/public/science-shorts-20261105/cover/perceptron.png",
+      "bytes": 1023545,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-working-inputs",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/public/science-shorts-20261105/narration/zh/o10.wav",
+      "bytes": 277484,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-working-inputs",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/public/science-shorts-20261105/narration/zh/o04.wav",
+      "bytes": 239084,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-working-inputs",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/public/science-shorts-20261105/narration/en/o10.wav",
+      "bytes": 265004,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-working-inputs",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/public/science-shorts-20261105/narration/en/o04.wav",
+      "bytes": 303404,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-voice-takes",
+      "path": "/Users/yqin/repo/playground/lucas-academy-media/outputs/louise/en/science-shorts-v1/s1.10/p11.take3.json",
+      "bytes": 664,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-voice-takes",
+      "path": "/Users/yqin/repo/playground/lucas-academy-media/outputs/louise/en/science-shorts-v1/s1.10/o10.take3.wav",
+      "bytes": 265004,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-voice-takes",
+      "path": "/Users/yqin/repo/playground/lucas-academy-media/outputs/louise/en/science-shorts-v1/s1.10/p10.wav",
+      "bytes": 214124,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-voice-takes",
+      "path": "/Users/yqin/repo/playground/lucas-academy-media/outputs/louise/en/science-shorts-v1/s1.10/o05.json",
+      "bytes": 713,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-voice-takes",
+      "path": "/Users/yqin/repo/playground/lucas-academy-media/outputs/louise/en/science-shorts-v1/s1.10/o01.wav",
+      "bytes": 250604,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-voice-takes",
+      "path": "/Users/yqin/repo/playground/lucas-academy-media/outputs/louise/en/science-shorts-v1/s1.10/p11.take3.wav",
+      "bytes": 241964,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-voice-takes",
+      "path": "/Users/yqin/repo/playground/lucas-academy-media/outputs/louise/en/science-shorts-v1/s1.10/p10.json",
+      "bytes": 650,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-voice-takes",
+      "path": "/Users/yqin/repo/playground/lucas-academy-media/outputs/louise/en/science-shorts-v1/s1.10/o05.wav",
+      "bytes": 259244,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-voice-takes",
+      "path": "/Users/yqin/repo/playground/lucas-academy-media/outputs/louise/en/science-shorts-v1/s1.10/o04.json",
+      "bytes": 760,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-voice-takes",
+      "path": "/Users/yqin/repo/playground/lucas-academy-media/outputs/louise/en/science-shorts-v1/s1.10/o10.wav",
+      "bytes": 209324,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-voice-takes",
+      "path": "/Users/yqin/repo/playground/lucas-academy-media/outputs/louise/en/science-shorts-v1/s1.10/o04.wav",
+      "bytes": 303404,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-voice-takes",
+      "path": "/Users/yqin/repo/playground/lucas-academy-media/outputs/louise/en/science-shorts-v1/s1.10/o10.take3.json",
+      "bytes": 698,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-voice-takes",
+      "path": "/Users/yqin/repo/playground/lucas-academy-media/outputs/louise/en/science-shorts-v1/s1.10/o10.json",
+      "bytes": 688,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-voice-takes",
+      "path": "/Users/yqin/repo/playground/lucas-academy-media/outputs/louise/en/science-shorts-v1/s1.10/o01.json",
+      "bytes": 705,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-voice-takes",
+      "path": "/Users/yqin/repo/playground/lucas-academy-media/outputs/louise/zh/science-shorts-v1/s1.10/o02.take2.wav",
+      "bytes": 335084,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-voice-takes",
+      "path": "/Users/yqin/repo/playground/lucas-academy-media/outputs/louise/zh/science-shorts-v1/s1.10/o05.take2.json",
+      "bytes": 715,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-voice-takes",
+      "path": "/Users/yqin/repo/playground/lucas-academy-media/outputs/louise/zh/science-shorts-v1/s1.10/p11.take3.json",
+      "bytes": 691,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-voice-takes",
+      "path": "/Users/yqin/repo/playground/lucas-academy-media/outputs/louise/zh/science-shorts-v1/s1.10/o10.take3.wav",
+      "bytes": 277484,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-voice-takes",
+      "path": "/Users/yqin/repo/playground/lucas-academy-media/outputs/louise/zh/science-shorts-v1/s1.10/o02.json",
+      "bytes": 667,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-voice-takes",
+      "path": "/Users/yqin/repo/playground/lucas-academy-media/outputs/louise/zh/science-shorts-v1/s1.10/p10.take3.wav",
+      "bytes": 312044,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-voice-takes",
+      "path": "/Users/yqin/repo/playground/lucas-academy-media/outputs/louise/zh/science-shorts-v1/s1.10/o05.take5.wav",
+      "bytes": 312044,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-voice-takes",
+      "path": "/Users/yqin/repo/playground/lucas-academy-media/outputs/louise/zh/science-shorts-v1/s1.10/p10.wav",
+      "bytes": 149804,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-voice-takes",
+      "path": "/Users/yqin/repo/playground/lucas-academy-media/outputs/louise/zh/science-shorts-v1/s1.10/o05.json",
+      "bytes": 685,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-voice-takes",
+      "path": "/Users/yqin/repo/playground/lucas-academy-media/outputs/louise/zh/science-shorts-v1/s1.10/o01.wav",
+      "bytes": 177644,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-voice-takes",
+      "path": "/Users/yqin/repo/playground/lucas-academy-media/outputs/louise/zh/science-shorts-v1/s1.10/p05.wav",
+      "bytes": 261164,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-voice-takes",
+      "path": "/Users/yqin/repo/playground/lucas-academy-media/outputs/louise/zh/science-shorts-v1/s1.10/o02.wav",
+      "bytes": 261164,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-voice-takes",
+      "path": "/Users/yqin/repo/playground/lucas-academy-media/outputs/louise/zh/science-shorts-v1/s1.10/o02.take2.json",
+      "bytes": 685,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-voice-takes",
+      "path": "/Users/yqin/repo/playground/lucas-academy-media/outputs/louise/zh/science-shorts-v1/s1.10/p11.take3.wav",
+      "bytes": 336044,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-voice-takes",
+      "path": "/Users/yqin/repo/playground/lucas-academy-media/outputs/louise/zh/science-shorts-v1/s1.10/o05.take2.wav",
+      "bytes": 305324,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-voice-takes",
+      "path": "/Users/yqin/repo/playground/lucas-academy-media/outputs/louise/zh/science-shorts-v1/s1.10/p10.json",
+      "bytes": 599,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-voice-takes",
+      "path": "/Users/yqin/repo/playground/lucas-academy-media/outputs/louise/zh/science-shorts-v1/s1.10/o05.wav",
+      "bytes": 303404,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-voice-takes",
+      "path": "/Users/yqin/repo/playground/lucas-academy-media/outputs/louise/zh/science-shorts-v1/s1.10/o04.json",
+      "bytes": 673,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-voice-takes",
+      "path": "/Users/yqin/repo/playground/lucas-academy-media/outputs/louise/zh/science-shorts-v1/s1.10/o10.wav",
+      "bytes": 207404,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-voice-takes",
+      "path": "/Users/yqin/repo/playground/lucas-academy-media/outputs/louise/zh/science-shorts-v1/s1.10/o04.wav",
+      "bytes": 239084,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-voice-takes",
+      "path": "/Users/yqin/repo/playground/lucas-academy-media/outputs/louise/zh/science-shorts-v1/s1.10/o05.take5.json",
+      "bytes": 702,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-voice-takes",
+      "path": "/Users/yqin/repo/playground/lucas-academy-media/outputs/louise/zh/science-shorts-v1/s1.10/p05.json",
+      "bytes": 671,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-voice-takes",
+      "path": "/Users/yqin/repo/playground/lucas-academy-media/outputs/louise/zh/science-shorts-v1/s1.10/o10.take3.json",
+      "bytes": 685,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-voice-takes",
+      "path": "/Users/yqin/repo/playground/lucas-academy-media/outputs/louise/zh/science-shorts-v1/s1.10/p10.take3.json",
+      "bytes": 704,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-voice-takes",
+      "path": "/Users/yqin/repo/playground/lucas-academy-media/outputs/louise/zh/science-shorts-v1/s1.10/o10.json",
+      "bytes": 649,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "unused-voice-takes",
+      "path": "/Users/yqin/repo/playground/lucas-academy-media/outputs/louise/zh/science-shorts-v1/s1.10/o01.json",
+      "bytes": 654,
+      "files": 1,
+      "directory": false
+    },
+    {
+      "group": "python-cache",
+      "path": "/Users/yqin/repo/playground/lucas-academy-video/scripts/science-shorts/__pycache__",
+      "bytes": 75061,
+      "files": 10,
+      "directory": true
+    }
+  ],
+  "deleteBytes": 1054529713,
+  "deleteFiles": 694,
+  "postCleanupDeliveryHashesVerified": true,
+  "retainedDeliveryFiles": 24
+}
