@@ -66,6 +66,8 @@ npm run fal02:backup
 
 重录才需要私有 Louise profile；正常重建无需再生成 Muse 素材或语音。全部原始短片配音单独保存在数据备份的 `raw-narration-short/`，附设置与 SHA256SUMS。[恢复核对](backup.json)。
 
-YouTube 长片与 Shorts 各有中英文标题、简介和 tags，使用已确认片名，默认标签来自 `scripts/youtube_tags.py`。文案是同一影片的语言本地化资料：[English long](../../youtube/long.en.txt)、[中文长片](../../youtube/long.zh.txt)、[English Shorts](../../youtube/short.en.txt)、[中文 Shorts](../../youtube/short.zh.txt)。
+Shorts 上传标题：**Can 0 and 1 Connect the World? / 0和1，能连起全世界吗？**。
+
+YouTube 长片与 Shorts 各有中英文标题、简介和 tags，默认标签来自 `scripts/youtube_tags.py`。文案是同一影片的语言本地化资料：[English long](../../youtube/long.en.txt)、[中文长片](../../youtube/long.zh.txt)、[English Shorts](../../youtube/short.en.txt)、[中文 Shorts](../../youtube/short.zh.txt)。
 
 实际成片核对：1,707 帧、双 AAC 默认标记、零字幕轨、每语言 11 条外置字幕、无黑场。英语 -16.17 LUFS / -0.95 dBTP，中文 -16.00 / -0.98。二维码在原尺寸和 720 像素宽版本均可解码。最终英语 AAC 的 11 条旁白经 medium 复核，归一化标点与数字格式后逐词一致；原始整轨 ASR 在配乐尾段多识别一个 you，原样保留并注明旁白实际结束时间：[成片听写](mixed-asr.en.json)。长片与两张封面保持原交付。

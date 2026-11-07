@@ -34,8 +34,8 @@
   ],
   "files": {
     ".DS_Store": {
-      "bytes": 6148,
-      "sha256": "0b5b1dd9ab257e6f5d38f51d8efb880b3b94c8457002d10eb78514b3d09175bf"
+      "bytes": 8196,
+      "sha256": "ad9d6e5b7a33bfd8d55f7701e764bc6e04cd500676b604e55861b7748620ea6a"
     },
     "01-长片/0和1能聊天吗-双语长片.en.srt": {
       "bytes": 4122,
@@ -94,12 +94,12 @@
       "sha256": "5036a7318846f4e5c5818ef25b0adde2d786738218834b13c31c760a776b089f"
     },
     "04-YouTube文案/YouTube-Shorts-English.txt": {
-      "bytes": 1715,
-      "sha256": "895b050ba59fdc67809b5f084b67e032271373c299685962d5a6b98b5a6e08b3"
+      "bytes": 1728,
+      "sha256": "d787190d64e83667b5cb03d5e942332abd421984d89d47d6f6a134434b86111c"
     },
     "04-YouTube文案/YouTube-Shorts-中文.txt": {
-      "bytes": 1681,
-      "sha256": "634dfc840cb171e773ad3c1d1a6d81fb797285f3eeb470b745450a75706f25ef"
+      "bytes": 1690,
+      "sha256": "2fb10792c4d25caec0413dfc4add7313872bb00c66223be967819894e707ba36"
     },
     "04-YouTube文案/YouTube-长片-English.txt": {
       "bytes": 2027,

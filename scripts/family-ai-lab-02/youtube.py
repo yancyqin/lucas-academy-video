@@ -7,7 +7,10 @@ sys.path.insert(0,str(ROOT/'scripts'))
 from youtube_tags import hashtags,tags,DEFAULT
 
 COURSE='https://ai.lucasacademy.org/courses/zero-and-one/'
-TITLES={'en':'Can 0 and 1 Talk?','zh':'0和1，能聊天吗？'}
+TITLES={
+ 'long':{'en':'Can 0 and 1 Talk?','zh':'0和1，能聊天吗？'},
+ 'short':{'en':'Can 0 and 1 Connect the World?','zh':'0和1，能连起全世界吗？'},
+}
 TOPICS={
  'long':{'en':['binary','bitsandbytes','ascii','computerscience','codingforkids','familyailab'],'zh':['二进制','信息编码','ascii','计算机科学','少儿编程','亲子学习','家庭ai实验室']},
  'short':{'en':['shorts','binary','internet','aiforkids','artificialintelligence','codingforkids','familyailab'],'zh':['shorts','二进制','互联网','人工智能','少儿编程','亲子学习','家庭ai实验室']},
@@ -22,6 +25,7 @@ def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 
 
 def text(kind,lang,tl):
+    title=TITLES[kind][lang]
     if kind=='long':
         intro=("Mia's paper note will not fit through the pipe. She and Leo try a shared code: gold for one, blue for zero.\n\nSend PLAY, follow yes-or-no clues to a hidden gift, and find the watermelon snack. Then try a message of your own with the browser lab or a printed code table.\n\nA story for families about binary messages, bits, bytes and asking useful questions." if lang=='en' else
                '米娅的纸条塞不进管子。她和里奥先约好：金色表示一，蓝色表示零。\n\n把 PLAY 传过去，再用是否问题找出藏礼物的箱子，看看里面是什么点心。看完也能和孩子试试：打开网页实验室，或者打印编码表，互相出一道消息题。\n\n跟着两个朋友的小冒险，认识比特、字节、编码和提问的方法。')
@@ -54,12 +58,12 @@ def text(kind,lang,tl):
               f'画幅 / Aspect: {"16:9" if kind=="long" else "9:16"}\n'
               '中英文标题与简介用于同一影片的语言版本 / Localized metadata for one shared video\n'
               '类别 / Category: Education')
-    output=f'【标题 / Title】\n{TITLES[lang]}\n\n【简介 / Description】\n{description}\n\n【标签 / Tags】\n{studio}\n\n【上传设置 / Upload settings】\n{settings}\n'
-    assert len(TITLES[lang])<=100 and len(description)<5000 and len(studio)<=500
+    output=f'【标题 / Title】\n{title}\n\n【简介 / Description】\n{description}\n\n【标签 / Tags】\n{studio}\n\n【上传设置 / Upload settings】\n{settings}\n'
+    assert len(title)<=100 and len(description)<5000 and len(studio)<=500
     assert description.splitlines()[-1]==hashtags(own) and studio==studio.lower()
     assert description.splitlines()[-1].split()[:len(DEFAULT)]==['#'+t for t in DEFAULT]
     assert all(t.startswith('#') and ' ' not in t for t in studio.split())
-    return output,{'title':TITLES[lang],'description':description,'tags':studio,'hashtagLine':hashtags(own),'uploadSettings':settings}
+    return output,{'title':title,'description':description,'tags':studio,'hashtagLine':hashtags(own),'uploadSettings':settings}
 
 
 def main():
