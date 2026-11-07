@@ -1,0 +1,379 @@
+{
+  "fps": 30,
+  "durationInFrames": 1707,
+  "aspect": "portrait",
+  "workingTitle": {
+    "en": "Can 0 and 1 Talk?",
+    "zh": "0和1，能聊天吗？"
+  },
+  "lines": [
+    {
+      "id": "fa02-01-01",
+      "scene": 1,
+      "visual": "paper",
+      "en": "This note is too big. How can Mia invite Leo to play?",
+      "zh": "纸条过不去。米娅怎么邀请对面的里奥来玩？",
+      "minSeconds": 6.2,
+      "leadInSeconds": 0.3,
+      "from": 0,
+      "duration": 186,
+      "speechOffsetFrames": 12,
+      "voiceSeconds": {
+        "en": 5.4,
+        "zh": 4.32
+      }
+    },
+    {
+      "id": "fa02s-02",
+      "scene": 2,
+      "visual": "code",
+      "en": "They share a code. Gold is one. Blue is zero.",
+      "zh": "约好一张表。金色是一，蓝色是零。",
+      "minSeconds": 4.6,
+      "from": 186,
+      "duration": 157,
+      "speechOffsetFrames": 3,
+      "voiceSeconds": {
+        "en": 4.42,
+        "zh": 4.72
+      }
+    },
+    {
+      "id": "fa02s-03",
+      "scene": 3,
+      "visual": "arrival",
+      "en": "Yes! His screen says PLAY. The invitation got through!",
+      "zh": "可以！邀请送到了。一起玩吧！",
+      "minSeconds": 4.6,
+      "voice": {
+        "en": {
+          "spoken": "Yes! His screen says play. The invitation got through!"
+        }
+      },
+      "from": 343,
+      "duration": 138,
+      "speechOffsetFrames": 3,
+      "voiceSeconds": {
+        "en": 3.84,
+        "zh": 2.64
+      }
+    },
+    {
+      "id": "fa02s-04",
+      "scene": 4,
+      "visual": "cargo",
+      "en": "A gift is hidden in one of ten boxes.",
+      "zh": "礼物藏在十个箱子里。里奥要找出来。",
+      "minSeconds": 4.6,
+      "from": 481,
+      "duration": 138,
+      "speechOffsetFrames": 3,
+      "voiceSeconds": {
+        "en": 2.76,
+        "zh": 3.56
+      }
+    },
+    {
+      "id": "fa02s-05",
+      "scene": 5,
+      "visual": "questions",
+      "en": "Four yes-or-no answers lead him to box seven.",
+      "zh": "四个回答，七号箱找到了！",
+      "minSeconds": 4.4,
+      "from": 619,
+      "duration": 132,
+      "speechOffsetFrames": 3,
+      "voiceSeconds": {
+        "en": 3.88,
+        "zh": 2.86
+      }
+    },
+    {
+      "id": "fa02s-06",
+      "scene": 6,
+      "visual": "snack",
+      "en": "Watermelon! Now it's Leo's turn to send a message.",
+      "zh": "是西瓜！这回，轮到里奥回信。",
+      "minSeconds": 5.0,
+      "from": 751,
+      "duration": 150,
+      "speechOffsetFrames": 3,
+      "voiceSeconds": {
+        "en": 3.96,
+        "zh": 3.34
+      }
+    },
+    {
+      "id": "fa02-08-01",
+      "scene": 7,
+      "visual": "reply",
+      "en": "Leo presses Send. A gold signal carries his reply: got it!",
+      "zh": "他按下发送键，一颗金色小球传了回去：收到啦！",
+      "minSeconds": 5.8,
+      "from": 901,
+      "duration": 174,
+      "speechOffsetFrames": 3,
+      "voiceSeconds": {
+        "en": 4.82,
+        "zh": 4.94
+      }
+    },
+    {
+      "id": "fa02s-08",
+      "scene": 8,
+      "visual": "friends",
+      "en": "Our tiny pipe connects two friends.",
+      "zh": "两个朋友，就用小管子传话。",
+      "minSeconds": 2.8,
+      "from": 1075,
+      "duration": 111,
+      "speechOffsetFrames": 3,
+      "voiceSeconds": {
+        "en": 3.2,
+        "zh": 2.98
+      }
+    },
+    {
+      "id": "fa02s-09",
+      "scene": 9,
+      "visual": "world",
+      "en": "The internet connects the world!",
+      "zh": "互联网连起全世界！",
+      "minSeconds": 2.8,
+      "from": 1186,
+      "duration": 107,
+      "speechOffsetFrames": 3,
+      "voiceSeconds": {
+        "en": 3.04,
+        "zh": 2.24
+      }
+    },
+    {
+      "id": "fa02s-10",
+      "scene": 10,
+      "visual": "online",
+      "en": "Videos, messages, even chats with AI—all use zeros and ones.",
+      "zh": "视频、消息、AI聊天，全都用零和一。",
+      "minSeconds": 5.4,
+      "voice": {
+        "en": {
+          "spoken": "Videos, messages, even chats with AI, all use zeros and ones.",
+          "instruction": "Please speak warmly and clearly, with natural connected speech. Say AI smoothly as the familiar two-letter name, without a long gap. Keep the story light and curious."
+        },
+        "zh": {
+          "spoken": "视频、消息、人工智能聊天，全都用零和一。"
+        }
+      },
+      "from": 1293,
+      "duration": 162,
+      "speechOffsetFrames": 3,
+      "voiceSeconds": {
+        "en": 4.6,
+        "zh": 4.72
+      }
+    },
+    {
+      "id": "fa02s-11",
+      "scene": 11,
+      "visual": "invite",
+      "en": "A funny story? A new game? What will you share today?",
+      "zh": "一个好玩的故事？一个新游戏？今天你想分享什么？",
+      "minSeconds": 5.4,
+      "voice": {
+        "en": {
+          "speed": 1.0,
+          "instruction": "Ask each question slowly, playfully, and clearly, like chatting with a child. Pause for half a second after story and after game. Keep the last question warm and inviting."
+        },
+        "zh": {
+          "instruction": "像和孩子聊天一样，轻快、俏皮地问这三个小问题。短句清楚亲切，问题之间自然稍停。"
+        }
+      },
+      "from": 1455,
+      "duration": 252,
+      "speechOffsetFrames": 3,
+      "voiceSeconds": {
+        "en": 4.0,
+        "zh": 7.88
+      }
+    }
+  ],
+  "storyClips": [
+    {
+      "id": "G1b",
+      "visual": "paper",
+      "from": 0,
+      "duration": 186,
+      "frames": 186,
+      "src": "orbital-v2/short/clips/G1b-paper.mp4",
+      "lastFrame": "orbital-v2/short/clips/G1b-paper-last.png",
+      "sha256": "4329c5d76d5f663e23430e150a3e53e8d7dde6bd2a39a17f1728c47fa2bfea06",
+      "lastFrameSha256": "fa42daf6c4b59692cef32424576ff7a84c5765fb0e370cd80478554607ca0445",
+      "original": "public/family-ai-lab-02/muse-v2/02-G1b-paper.mp4",
+      "originalSha256": "f4587f162f9a16577795787f493548722fc0bde1df9bb3ee4bbded35986c21a3",
+      "sourceStartSeconds": 0.2,
+      "sourceEndSeconds": 7.7,
+      "speed": 1.2096774193548387,
+      "signature": "97d2eea09b74f25173110ca5e583e03fbc118f4ed43c4f547067ea07dea17d66"
+    },
+    {
+      "id": "G1a",
+      "visual": "code",
+      "from": 186,
+      "duration": 157,
+      "frames": 157,
+      "src": "orbital-v2/short/clips/G1a-code.mp4",
+      "lastFrame": "orbital-v2/short/clips/G1a-code-last.png",
+      "sha256": "1a03b2a2383b91840c02963b3da07e0649033edb7e53bdf832e50539d73416fc",
+      "lastFrameSha256": "3a75fd9f9d95d53d7cb18a8c9394438317951d22bdcedc8cc599d058c6279c3f",
+      "original": "public/family-ai-lab-02/muse-v2/01-G1a-signal.mp4",
+      "originalSha256": "78527ffb184a7809e302a78dfcfd2955823463b2a6fd6d35dbae964c117256a9",
+      "sourceStartSeconds": 0.8,
+      "sourceEndSeconds": 7.8,
+      "speed": 1.3375796178343948,
+      "signature": "3c5920009fd8d835eb1fc3d26c4b1435ed581fb1fa23179f69564980133c0e76"
+    },
+    {
+      "id": "G2",
+      "visual": "arrival",
+      "from": 343,
+      "duration": 138,
+      "frames": 138,
+      "src": "orbital-v2/short/clips/G2-arrival.mp4",
+      "lastFrame": "orbital-v2/short/clips/G2-arrival-last.png",
+      "sha256": "92f62b8ffc0437c440809eac5951b2aae14492042d4a2a7b07eeb7d23e57a4e4",
+      "lastFrameSha256": "d9fd0c9ed66d8fc0d829f12e1641f7ba51407ca96ba70ceb880479f1ce674e6e",
+      "original": "public/family-ai-lab-02/muse-v2/03-G2-arrival.mp4",
+      "originalSha256": "f84bef494f5f5e9476202f25da33ad0d2ffd058c05684914da372607617ee0e8",
+      "sourceStartSeconds": 1,
+      "sourceEndSeconds": 6,
+      "speed": 1.0869565217391306,
+      "signature": "4fc9886c67379c1a07f853ce0b14b55886430c474312f2d281ef64700618a490"
+    },
+    {
+      "id": "G3",
+      "visual": "cargo",
+      "from": 481,
+      "duration": 138,
+      "frames": 138,
+      "src": "orbital-v2/short/clips/G3-cargo.mp4",
+      "lastFrame": "orbital-v2/short/clips/G3-cargo-last.png",
+      "sha256": "62e000f3b3de62716f824848c3bc879a42038652125cc7e1e22e1ee0f391afa4",
+      "lastFrameSha256": "7c6576781fe5852e1bd2474399d1d17130d6521696f45d6db20b9d1344aee75d",
+      "original": "public/family-ai-lab-02/muse-v2/04-G3-cargo.mp4",
+      "originalSha256": "c218664b3f779639c5a078957ce4305bacf7b42fa0e7a9319ba180ee4cc86b66",
+      "sourceStartSeconds": 0.2,
+      "sourceEndSeconds": 6,
+      "speed": 1.2608695652173914,
+      "signature": "b0bca25ebde0c8a4bad9b0c9c93133b76854ab975738cbf1d8dccdfb12b7c07d"
+    },
+    {
+      "id": "G4",
+      "visual": "snack",
+      "from": 784,
+      "duration": 117,
+      "frames": 117,
+      "src": "orbital-v2/short/clips/G4-snack.mp4",
+      "lastFrame": "orbital-v2/short/clips/G4-snack-last.png",
+      "sha256": "8dd95fc97e206932a13d215417202b308aa93b6a8da2c340fde8a14d8cd64b6e",
+      "lastFrameSha256": "fad8309c8e45d718eaecda4a0d11ddef46e7ab0d48353dad498d8ffbac923386",
+      "original": "public/family-ai-lab-02/muse-v2/05-G4-watermelon.mp4",
+      "originalSha256": "066327941ad75c548117eca27ba3b0d3e21248ebb3907e85afc9d58dc3659b09",
+      "sourceStartSeconds": 0.2,
+      "sourceEndSeconds": 5.2,
+      "speed": 1.2820512820512822,
+      "signature": "5642052a2c06b2a46b4ce0053125870ad377b7e53bccfab73cb980b3621aed22"
+    },
+    {
+      "id": "G5",
+      "visual": "reply",
+      "from": 901,
+      "duration": 174,
+      "frames": 174,
+      "src": "orbital-v2/short/clips/G5-reply.mp4",
+      "lastFrame": "orbital-v2/short/clips/G5-reply-last.png",
+      "sha256": "ff062d7d27046ae08dfeed5c48d3b42b87cb67a8e069b20c5aa17137c62d9299",
+      "lastFrameSha256": "f4c39a43410462c01b70dacb3cada912445a52059a8bcf475c0741068e508fc2",
+      "original": "public/family-ai-lab-02/muse-v2/06-G5-reply.mp4",
+      "originalSha256": "e2d2f59fb5997a0a1b1ccc3b9957f274fb1edc0fc6f4f9182eaf0d7ecf00bce4",
+      "sourceStartSeconds": 0,
+      "sourceEndSeconds": 5.8,
+      "speed": 1.0,
+      "signature": "b8ac92932b25fab680b1afc84afc29f400b462ac2f8db920ac8505b4b62b1bb0"
+    },
+    {
+      "id": "G1b",
+      "visual": "friends",
+      "from": 1075,
+      "duration": 111,
+      "frames": 111,
+      "src": "orbital-v2/short/clips/G1b-friends.mp4",
+      "lastFrame": "orbital-v2/short/clips/G1b-friends-last.png",
+      "sha256": "e7cd1c83a82c39b6b041061ba593479010e56b04db694be94bbb437fad3ec816",
+      "lastFrameSha256": "33ca215b9440ed74d37fc4581b366b2be4fc008b9321e61accd26db8560029cd",
+      "original": "public/family-ai-lab-02/muse-v2/02-G1b-paper.mp4",
+      "originalSha256": "f4587f162f9a16577795787f493548722fc0bde1df9bb3ee4bbded35986c21a3",
+      "sourceStartSeconds": 7.7,
+      "sourceEndSeconds": 10,
+      "speed": 0.6216216216216215,
+      "signature": "14386ccf899d1c31f0b60ae6b8d5a3bcbe439e43503ecb17ecd1a20ce4fc03cb"
+    },
+    {
+      "id": "G1a",
+      "visual": "world",
+      "from": 1186,
+      "duration": 107,
+      "frames": 107,
+      "src": "orbital-v2/short/clips/G1a-world.mp4",
+      "lastFrame": "orbital-v2/short/clips/G1a-world-last.png",
+      "sha256": "de83310677263f6a7fca5ce1083c1741f62ad62f6adc985e225b3c6f88ee25e9",
+      "lastFrameSha256": "a10e690a97ff93d4c9e0e0ee4f3c65baac1bb7e70801019630409e968404e33f",
+      "original": "public/family-ai-lab-02/muse-v2/01-G1a-signal.mp4",
+      "originalSha256": "78527ffb184a7809e302a78dfcfd2955823463b2a6fd6d35dbae964c117256a9",
+      "sourceStartSeconds": 7.8,
+      "sourceEndSeconds": 10,
+      "speed": 0.6168224299065421,
+      "signature": "428fb944e090a36942e76d10ecce61b804705b464acf9ffc57af1cd9a4dc8a43"
+    },
+    {
+      "id": "G5",
+      "visual": "online",
+      "from": 1293,
+      "duration": 162,
+      "frames": 162,
+      "src": "orbital-v2/short/clips/G5-online.mp4",
+      "lastFrame": "orbital-v2/short/clips/G5-online-last.png",
+      "sha256": "61ed2c188797fb9017cfb4d7f8dc6849fdf0855ebf45448b221551d007fcd146",
+      "lastFrameSha256": "1771dabf8e4023ddb022b27cf5c55d6067d3818d57351d0a94e3f1dd622c77f3",
+      "original": "public/family-ai-lab-02/muse-v2/06-G5-reply.mp4",
+      "originalSha256": "e2d2f59fb5997a0a1b1ccc3b9957f274fb1edc0fc6f4f9182eaf0d7ecf00bce4",
+      "sourceStartSeconds": 5.8,
+      "sourceEndSeconds": 10,
+      "speed": 0.7777777777777778,
+      "signature": "56d443dcd4294c68f709b4503f054e7fa3b97ca4e2691c2e4792c33bb9a93c33"
+    },
+    {
+      "id": "G4",
+      "visual": "invite",
+      "from": 1455,
+      "duration": 252,
+      "frames": 252,
+      "src": "orbital-v2/short/clips/G4-invite.mp4",
+      "lastFrame": "orbital-v2/short/clips/G4-invite-last.png",
+      "sha256": "ec910c6cf3e761f24ea55328e19fcf4e93d627d26b27198330a180d1cfbc1fc5",
+      "lastFrameSha256": "31a09e75f00b4b5a5dc79fd2806fbca245b6ac90bb8cc3f924991865beaa0985",
+      "original": "public/family-ai-lab-02/muse-v2/05-G4-watermelon.mp4",
+      "originalSha256": "066327941ad75c548117eca27ba3b0d3e21248ebb3907e85afc9d58dc3659b09",
+      "sourceStartSeconds": 5.2,
+      "sourceEndSeconds": 9.6,
+      "speed": 0.5238095238095237,
+      "signature": "62e76b493a042f30be1ece974829eb38392e552ecfcffe36a33b34a2bf4995bd"
+    }
+  ],
+  "museOriginalCount": 6,
+  "museCoverageSeconds": 51.4,
+  "museCoverageFraction": 0.9033391915641477,
+  "scriptSha256": "75c7af290ab845efe34a77f02c2508ca3d3add116a3cfd1337399c81b84aa85c",
+  "cornerCredits": false,
+  "defaultLanguage": "en",
+  "delivery": "One picture, English default and Chinese independent audio, external SRTs only."
+}

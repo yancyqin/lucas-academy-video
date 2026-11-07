@@ -1,0 +1,64 @@
+{
+  "created": "2026-11-05",
+  "generationOwner": "owner manually in Muse; automatic submission stopped",
+  "settings": {
+    "seconds": 6,
+    "aspectRatio": "16:9",
+    "oneShot": true,
+    "fixedCamera": true,
+    "noSpeech": true,
+    "noSubtitles": true
+  },
+  "commonZh": "生成一条6秒、16:9的写实电影科幻视频。全程一个连续镜头，固定机位，不切镜、不变焦。保持参考图的人物、材质和光色。没有文字、数字、Logo、旁白、对白或字幕。只返回这一条独立视频原片。",
+  "commonEn": "Create one six-second 16:9 realistic cinematic science-fiction video from the attached image. One continuous shot with a fixed camera. No cuts, zoom, text, digits, logos, narration, speech or subtitles. Return one separate downloadable original video.",
+  "shots": [
+    {
+      "id": "G1a",
+      "name": "signal",
+      "title": "信号穿管",
+      "reference": "signal-conduit.png",
+      "zh": "固定机位，玻璃管侧面的微距镜头。一束紧凑的金色光信号从左侧进入，沿透明管道穿过画面，从右侧离开。保持管道、金属接口、背景和光线稳定，玻璃有真实折射，光信号带一条短尾迹。",
+      "en": "Fixed macro side view of the same transparent glass tube. One compact amber light pulse enters from the left, travels through the tube, and exits on the right. Keep the tube, collars, background and lighting stable. Real glass refraction and a short bright trail."
+    },
+    {
+      "id": "G1b",
+      "name": "paper",
+      "title": "纸条受阻",
+      "reference": "g1-paper-single.png",
+      "zh": "固定近景，保留参考图中同一个女孩、手、折好的纸条和狭窄金属接口。女孩轻轻把纸条推向小孔，纸条抵住金属边缘，略微弯折，女孩停止用力。手指和纸条保持自然，不出现光球或其他人物。",
+      "en": "Fixed close-up of the same girl's hand, folded paper and narrow metal port. She gently pushes the paper against the opening. The edge meets the collar and the paper bends slightly because it will not fit, so she stops pushing. Preserve her face, fingers, suit and port. No signal ball or other character."
+    },
+    {
+      "id": "G2",
+      "name": "arrival",
+      "title": "收到邀请",
+      "reference": "story-arrival.png",
+      "zh": "固定中近景，保留参考图中同一个男孩和接收终端。男孩把目光和头轻轻转向身旁的接收口，露出好奇、开心的笑容。双手自然放在终端旁，保持人物、服装、环境和光线一致。",
+      "en": "Fixed medium-close view of the same boy at the receiver. He turns his eyes and head toward the receive port, then smiles with curiosity. His hands remain relaxed on the console. Preserve the reference's face, flight suit, orbital interior and lighting."
+    },
+    {
+      "id": "G3",
+      "name": "cargo",
+      "title": "走向货舱",
+      "reference": "story-cargo.png",
+      "zh": "固定中景，保留参考图中同一个男孩、太空舱货舱和金属箱。男孩沿参考图中的方向，自然地朝关闭的金属箱走两步。保持箱子关闭，保持人物、衣服、货舱轨道和灯光一致。",
+      "en": "Fixed medium-wide view of the same boy in the orbital cargo bay. He takes two natural steps toward the closed metal storage boxes. Preserve his face, suit, cargo rails and lighting. Keep the boxes closed with no fruit reveal."
+    },
+    {
+      "id": "G4",
+      "name": "watermelon",
+      "title": "西瓜揭晓",
+      "reference": "story-watermelon.png",
+      "zh": "固定中近景，保留参考图中同一个男孩、已经打开的金属箱和手中的西瓜片。男孩把已经拿在手里的西瓜片轻轻举高一点，开心地看着它。另一只手自然放在箱盖上，保持手指、果肉、瓜籽和箱子稳定。",
+      "en": "Fixed medium-close view of the same boy beside the already open metal box. He gently raises the watermelon slice already in his hand a little and looks at it with delight. His other hand rests on the lid. Keep his face, fingers, fruit and box stable."
+    },
+    {
+      "id": "G5",
+      "name": "reply",
+      "title": "按键回信",
+      "reference": "story-reply.png",
+      "zh": "固定近景，保留参考图中同一个男孩、双手、西瓜和金色发送键。男孩用右手食指按下一次发送键，另一只手继续拿着西瓜。保持手指接触按键的动作自然，人物、道具和背景稳定，不切换到另一个人物。",
+      "en": "Fixed close-up of the same boy at the sender, holding a watermelon slice in his left hand. He presses the physical amber send switch once with his right index finger. Keep his face, fruit, hands, switch and background stable. No other character or second action."
+    }
+  ]
+}

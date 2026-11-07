@@ -1,0 +1,75 @@
+{
+  "baselineCommit": "451ed44a6c380c7a66696d067cc7323a27855502",
+  "ownerRevision": "Paper shot first and longer, launch around 0:22, explicit Yes / 可以 after the launch before explanation, clearer first English line; approved title Can 0 and 1 Talk? / 0和1，能聊天吗？ and covers using video frame zero.",
+  "opening": {
+    "paperSeconds": 7.5,
+    "launchAtSeconds": 22.4,
+    "returnToExplanationAtSeconds": 24.2,
+    "affirmationAtSeconds": 24.3
+  },
+  "firstEnglishLine": {
+    "before": "The note won't fit! How can Mia invite Leo to play?",
+    "after": "This note is too big. How can Mia invite Leo to play?",
+    "take": "outputs/louise/en/family-ai-lab-02-v2/s1.00/fa02-01-01.take2.wav",
+    "seconds": 5.4,
+    "speed": 1.0,
+    "sha256": "7955c5fd1b42b70873ece6ff2f1d5e87be60913df12880b62133230531cb3974",
+    "asr": "Every expected word transcribed correctly."
+  },
+  "unchangedVoiceSelections": 69,
+  "unchangedChineseVoiceSelections": 35,
+  "unchangedLaterCues": 31,
+  "laterCueShiftFrames": 35,
+  "laterCueDurationsAndContentUnchanged": true,
+  "unchangedMuseEditingDerivatives": [
+    "G1a",
+    "G2",
+    "G3",
+    "G4",
+    "G5"
+  ],
+  "sameVisualRenderer": false,
+  "durationSeconds": 264.73333333333335,
+  "frames": 7942,
+  "mixedOpeningCheck": {
+    "source": "out/family-ai-lab-02/orbital-v2/delivery/opening-yes.mp4",
+    "sourceSha256": "1b0946f071737283cba8a867bddc13ad422e400be1921193a47eba98c9332b5d",
+    "model": "Whisper medium",
+    "language": "en",
+    "excerpts": [
+      {
+        "startSeconds": 0,
+        "durationSeconds": 6.5,
+        "heard": "This note is too big. How can Mia invite Leo to play?",
+        "expectedWordsAllPresent": true
+      },
+      {
+        "startSeconds": 24.1,
+        "durationSeconds": 5.9,
+        "heard": "Yes, start with one little ball. It has just two possible values.",
+        "expectedWordsAllPresent": true
+      }
+    ]
+  },
+  "approvedTitle": {
+    "zh": "0和1，能聊天吗？",
+    "en": "Can 0 and 1 Talk?"
+  },
+  "changedVoiceSelections": [
+    "en/fa02-01-01",
+    "en/fa02-02-01",
+    "zh/fa02-02-01"
+  ],
+  "rendererChange": "Read the owner-approved title from the timeline on the opening title card.",
+  "affirmation": {
+    "cue": "fa02-02-01",
+    "en": "Yes! Start with one little ball. It has just two possible values.",
+    "zh": "可以！先看一颗珠子。它只有两种可能。",
+    "speechBeginsAtSeconds": 24.3,
+    "yesWordEndSeconds": 24.72,
+    "followingExplanationAtSeconds": 25.24,
+    "timingSource": "Whisper word timestamps on the selected English take, placed at its actual cue speech offset."
+  },
+  "finalMovieSha256": "9de7cfdfd74706a0dabeee359fd487328b2c8b4366b540a4bdef5c3a1c7b9bbb",
+  "coverFrameMatchesFinalMovie": true
+}

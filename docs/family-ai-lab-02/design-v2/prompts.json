@@ -1,0 +1,78 @@
+{
+  "tool": "built-in imagegen",
+  "stage": "Three science-fiction opening design directions, requested after rejection of the storybook version. These are visual designs, not generated video footage.",
+  "items": [
+    {
+      "id": "01-orbital",
+      "title": "深空隔舱",
+      "prompt": "Use case: stylized-concept. Asset type: a SINGLE dramatic opening shot from a premium science-fiction short film about two friends communicating through a narrow pipe that only accepts two signal states. Landscape 16:9, edge-to-edge cinematic image. This is a film frame, not a poster, slide, mood board or user interface. High-end photorealistic CGI, physically believable lighting, natural anatomy, tangible materials, convincing spatial depth and one clear focal action. Exactly two fictional young friends, a girl and boy around twelve, if people are visible; clothed in practical futuristic clothes, no mascot proportions. Two signal types are distinguished by amber and ice-blue light. No typography, captions, logos, watermarks, charts, split screens, decorative HUD clutter or readable symbols. Family-friendly adventure, no violence. The image must feel caught in the middle of a moving shot, with selective directional motion blur, sharp subject and foreground-to-background parallax.\nDirection A — orbital separation. Inside an orbital research capsule, a transparent narrow communication conduit sweeps extremely close across the lens from the lower foreground, extending through the vacuum to a second small capsule in the distance. An intense amber signal pulse is racing toward the camera inside the glass, its highlight sharp and its trailing reflections streaked; a dim cool-blue pulse is farther along the same physical tube. A fictional twelve-year-old girl, dark hair tied back, in a graphite and off-white flight suit, is seen in close three-quarter profile at one edge, pushing a folded paper message against a connector that is visibly too narrow. Her friend, a boy of the same age, is visible at the lit circular window of the distant capsule. A huge softly lit ringed planet occupies the deep background through the viewport. The narrow tube is the only visual connection between the two spaces. Shot with a 24 mm cinema lens, low near the conduit, strong perspective, subtle anamorphic flare, navy-black space, warm amber and restrained cyan rim light. Real glass refraction, brushed titanium, window reflections and gentle volumetric haze. Faces show curiosity and urgency to communicate, not fear. Clear readable action and tangible scale; premium feature-film visual effects.",
+      "shots": [
+        [
+          "0.0–0.8s",
+          "黑场中一道金色脉冲从管道深处冲到镜头前，伴随短促的“嗖”。"
+        ],
+        [
+          "0.8–2.5s",
+          "镜头顺着玻璃管急速拉出，才看见两座隔开的太空舱与巨大的行星。"
+        ],
+        [
+          "2.5–5.0s",
+          "近景：女孩把邀请纸条推向窄小的管口，纸条被挡住。"
+        ],
+        [
+          "5.0–8.0s",
+          "她换成两种信号，朋友那边的接收灯亮起，留下“怎么传一句话”的悬念。"
+        ]
+      ],
+      "hookZh": "两座太空舱之间，只能发送零和一。怎么把一句话送过去？"
+    },
+    {
+      "id": "02-neon",
+      "title": "霓虹双城",
+      "prompt": "Use case: stylized-concept. Asset type: a SINGLE dramatic opening shot from a premium science-fiction short film about two friends communicating through a narrow pipe that only accepts two signal states. Landscape 16:9, edge-to-edge cinematic image. This is a film frame, not a poster, slide, mood board or user interface. High-end photorealistic CGI, physically believable lighting, natural anatomy, tangible materials, convincing spatial depth and one clear focal action. Exactly two fictional young friends, a girl and boy around twelve, if people are visible; clothed in practical futuristic clothes, no mascot proportions. Two signal types are distinguished by amber and ice-blue light. No typography, captions, logos, watermarks, charts, split screens, decorative HUD clutter or readable symbols. Family-friendly adventure, no violence. The image must feel caught in the middle of a moving shot, with selective directional motion blur, sharp subject and foreground-to-background parallax.\nDirection B — rooftop message across a neon city. A single coherent cinematic shot over a rain-soaked futuristic city canyon at blue hour, viewed from just inside one compact rooftop communication booth. A fictional twelve-year-old girl in a weatherproof amber jacket leans forward and jams a folded invitation against the tiny mouth of a polished transparent message tube; the paper stops at the throat, while one brilliant ice-blue signal orb shoots past the camera along the same tube. The thin tube arcs across the huge open city gap to another rooftop booth, where her twelve-year-old friend in a dark teal jacket watches for the signal. No extra people. Camera is inches from the near tube mouth, making its chrome collar and rain droplets large in the foreground; the girl is sharp in the middle distance, opposite booth and layered city lights recede into depth. Dynamic three-quarter composition, a slight energetic five-degree camera tilt, reflected magenta city light, amber signal accents and deep teal shadows. Wet glass, fine rain caught in light, worn anodized metal, believable face and hands. Strong storytelling action, speed, cinematic contrast, art-directed restrained lighting rather than an indiscriminate wall of neon. A premium live-action/CG adventure still. Full 16:9 composition, no frames or text.",
+      "shots": [
+        [
+          "0.0–0.8s",
+          "雨滴在管口发亮；一道蓝色信号贴着镜头掠过。"
+        ],
+        [
+          "0.8–2.2s",
+          "镜头甩向女孩，纸条正撞在管口，动作停顿半拍。"
+        ],
+        [
+          "2.2–4.5s",
+          "沿管道横穿楼宇间隙，霓虹与雨水在玻璃上高速后退。"
+        ],
+        [
+          "4.5–8.0s",
+          "对面男孩等到了两种信号，却还读不出邀请的意思，故事进入编码。"
+        ]
+      ],
+      "hookZh": "纸条过不去。对面能收到的，只有零和一。你会怎么发这条邀请？"
+    },
+    {
+      "id": "03-photon",
+      "title": "光子隧道",
+      "prompt": "Use case: stylized-concept. Asset type: a SINGLE dramatic opening shot from a premium science-fiction short film about two friends communicating through a narrow pipe that only accepts two signal states. Landscape 16:9, edge-to-edge cinematic image. This is a film frame, not a poster, slide, mood board or user interface. High-end photorealistic CGI, physically believable lighting, natural anatomy, tangible materials, convincing spatial depth and one clear focal action. Exactly two fictional young friends, a girl and boy around twelve, if people are visible; clothed in practical futuristic clothes, no mascot proportions. Two signal types are distinguished by amber and ice-blue light. No typography, captions, logos, watermarks, charts, split screens, decorative HUD clutter or readable symbols. Family-friendly adventure, no violence. The image must feel caught in the middle of a moving shot, with selective directional motion blur, sharp subject and foreground-to-background parallax.\nDirection C — ride inside the signal pipe. An exhilarating macro-to-micro cinematic camera move INSIDE a narrow transparent optical message conduit, looking toward its distant receiving port. One brilliant amber signal pulse, represented as a small luminous core wrapped in optical caustics, is whipping around a curved glass wall only inches from the lens, sharply focused against directional blue light streaks. A cool ice-blue pulse farther down the conduit establishes the second signal state. Curved transparent glass, physical internal ribs, tiny scratches, refracted highlights and polished graphite connector parts create strong close foreground layers and an extreme vanishing point. Through the circular opening at the far end, a fictional twelve-year-old boy's curious eye and the fingers of his hand are visible at the receiving device, naturally scaled outside the small tube; at the near edge, only the girl's fingertips are visible operating the sender. This must feel like an actual camera flying down a real small conduit, not an abstract screensaver or a magical empty wormhole. A luminous core passes close enough to cast amber light on the metal and glass, while the far face remains a recognizably human story destination. Precision macro cinematography, dark graphite, crystal glass, cobalt-blue highlights, warm amber core, shallow near-field depth of field, controlled bloom, visceral velocity and premium photorealistic CGI. No binary digits or symbols and no quantum-computing motifs. Full cinematic 16:9 frame.",
+      "shots": [
+        [
+          "0.0–1.0s",
+          "一粒发光信号擦着镜头冲过，整个画面被玻璃折射和光轨带动。"
+        ],
+        [
+          "1.0–3.2s",
+          "镜头追进细管，在一个弯道急转，后方亮起另一种颜色。"
+        ],
+        [
+          "3.2–5.0s",
+          "忽然拉到管外，才看清刚才像隧道的空间，其实只是一根细管。"
+        ],
+        [
+          "5.0–8.0s",
+          "朋友的眼睛出现在接收端，手指按下接收键，画面进入八个信号拼一个字母。"
+        ]
+      ],
+      "hookZh": "跟上这一粒信号。它只有零和一，却要替朋友带一句话。"
+    }
+  ]
+}
