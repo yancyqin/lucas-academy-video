@@ -1,0 +1,101 @@
+{
+  "master": "the-wild-raw-1080p30.mp4",
+  "preview": "the-wild-raw-preview-720p.mp4",
+  "durationSeconds": 51.0,
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "frameCount": 1530,
+  "videoOnly": true,
+  "addedText": false,
+  "promptOverlay": false,
+  "blackFramesDetected": false,
+  "decodePassed": true,
+  "statesCaptured": [
+    "air",
+    "climb",
+    "glide",
+    "ground",
+    "swim"
+  ],
+  "eventsCaptured": [
+    "glide",
+    "jump",
+    "lunge",
+    "mantle"
+  ],
+  "takes": [
+    {
+      "file": "takes/01-walk-sprint-jump-glide.mp4",
+      "duration": 14.0,
+      "frames": 420,
+      "bytes": 19798428
+    },
+    {
+      "file": "takes/02-climb-lunge-mantle.mp4",
+      "duration": 8.0,
+      "frames": 240,
+      "bytes": 9275660
+    },
+    {
+      "file": "takes/03-swim-coast.mp4",
+      "duration": 5.0,
+      "frames": 150,
+      "bytes": 8112544
+    },
+    {
+      "file": "takes/04-whispering-forest.mp4",
+      "duration": 5.0,
+      "frames": 150,
+      "bytes": 6953342
+    },
+    {
+      "file": "takes/05-frost-peaks.mp4",
+      "duration": 5.0,
+      "frames": 150,
+      "bytes": 1978989
+    },
+    {
+      "file": "takes/06-sunset-dunes.mp4",
+      "duration": 5.0,
+      "frames": 150,
+      "bytes": 3704301
+    },
+    {
+      "file": "takes/07-quality-low-medium-high.mp4",
+      "duration": 5.0,
+      "frames": 150,
+      "bytes": 2814634
+    },
+    {
+      "file": "takes/08-touch-controls.mp4",
+      "duration": 4.0,
+      "frames": 120,
+      "bytes": 3791770
+    }
+  ],
+  "sha256": "61b76cfac0f270c94f804ce3eae2cc510ef5c00d20f560ee5bbbb0ac37d969b0",
+  "bytes": 56221950,
+  "repositorySubmission": "Owner approved; archived in lucas-academy-video/wild-raw/2026-11-07 with source footage and scripts.",
+  "visualReview": {
+    "passed": true,
+    "contactSheet": "review-contact-sheet.jpg",
+    "checked": "Movement/glide, climb/mantle, water, forest, snowy peak, dunes, quality control and touch control frames."
+  },
+  "previewBytes": 9582263,
+  "pipelineFiles": {
+    "record-wild.mjs": "1803d25cb778262200e9ed9081b992f3d5259e6adaa56e35cc949bb9d2f65bf0",
+    "finish-wild.py": "328e87f9dd3fcbdce0dc99d7be05afcc90f64c3403bf75d028598cf58051e180",
+    "reconstructed-prompt.en.txt": "65112ce55a38348a844ad88c6f49f696fb9a3f8553072a7661542a29ad64be85"
+  },
+  "reviewedPipelineFiles": {
+    "source/record-wild.reviewed.mjs": "c6d19b83b22edf6732791db6cca1307c982d0567c8ec7e8489121a14bb6f6382",
+    "source/finish-wild.reviewed.py": "5c0818191b2e2217c4ae0a2a0cdedf91e7c81e84ecf3af1f9849768ef37903a3"
+  },
+  "importValidation": {
+    "approvedMediaBytesUnchanged": true,
+    "date": "2026-11-07",
+    "originalDelivery": "Movies/The-Wild/2026-11-07",
+    "scriptChanges": "Portable Playwright resolution, explicit output directory, optional source revision/date and read-only verification."
+  }
+}
