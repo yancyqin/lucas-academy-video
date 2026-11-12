@@ -110,3 +110,6 @@ public/family-ai-lab-02/
 
 # Two native portrait story shorts; media backed up in sibling video-data.
 public/science-shorts-20261105/
+
+# 「动物想什么？AI 知道吗？」: staged clips, stills and the timelines (scripts/ai-animal-mind/assets.py, build_timeline.py, build_short.py)
+public/ai-animal-mind/

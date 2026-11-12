@@ -1,0 +1,256 @@
+{
+  "assets": [
+    {
+      "path": "references/G01-sunset-hill.png",
+      "tool": "codex exec · image_generation",
+      "created": "2026-11-10",
+      "use": "am00-04..07 一个人，两只猴子，一起看夕阳；am13-01",
+      "reference": null,
+      "intent": "Seen from behind and a little to the side: a man in a light field shirt sits alone on a grassy hilltop ridge in East Africa, looking out over a wide calm lake at sunset. Two wild vervet monkeys sit on the grass close beside him, also facing the lake, about an arm's length apart from him. The sun is just above the far shore and lays a golden path across the water; the sky glows orange and rose. Warm backlight, soft rim light on the monkeys' fur, peaceful. Realistic photograph, natural colours, not an illustration, not a cartoon. No text, letters, numbers, signs, labels, watermarks or logos anywhere. Landscape 16:9, the largest native size, no software upscale.",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "86ef186f668267ad16f71caf4ec52df260524454b0ecba9a219824e5d5f90823",
+      "bytes": 2164284
+    },
+    {
+      "path": "references/G02-handshake.png",
+      "tool": "codex exec · image_generation",
+      "created": "2026-11-10",
+      "use": "am00-06 它们先握了握手",
+      "reference": null,
+      "intent": "Close-up at golden hour on a grassy hillside: two wild vervet monkeys facing each other, each reaching out a hand so their hands are just about to clasp in a friendly greeting. Warm low sun behind them, glowing rim light on their fur, the lake and evening sky softly out of focus. Realistic photograph, natural colours, not an illustration, not a cartoon. No text, letters, numbers, signs, labels, watermarks or logos anywhere. Landscape 16:9, the largest native size, no software upscale.",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "a9fec247933529e219b8d9a9a8f4e27f8d85ff0329c90d1382d952ecd789e6b6",
+      "bytes": 2478215
+    },
+    {
+      "path": "references/G05-hans.png",
+      "tool": "codex exec · image_generation",
+      "created": "2026-11-10",
+      "use": "am06-01..02 一匹会算术的马，汉斯",
+      "reference": null,
+      "intent": "A sunny cobblestone courtyard in Berlin around 1904, photographed in gently faded early-1900s colours: a handsome dark-brown horse stands calmly in the middle; beside it an elderly man with a white beard, a black wide-brimmed hat and a long dark coat looks at the horse; a small crowd of curious men and women in early-1900s clothes and hats stand around them watching. A small blank slate board on a wooden easel stands near the horse. Period-accurate buildings with tall windows. Realistic photograph, natural colours, not an illustration, not a cartoon. No text, letters, numbers, signs, labels, watermarks or logos anywhere. Landscape 16:9, the largest native size, no software upscale.",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "fd3a91094aaed265f48450058a5465b00f7b0fb26355a2101bc0154d9a8c1ecf",
+      "bytes": 2960174
+    },
+    {
+      "path": "references/G05b-hoof.png",
+      "tool": "codex exec · image_generation",
+      "created": "2026-11-10",
+      "use": "am06-02 用蹄子一下一下敲出答案",
+      "reference": null,
+      "intent": "Low close-up of a dark-brown horse's front leg and hoof raised a little above old grey cobblestones, about to tap the ground, in warm morning sunlight in a 1900s courtyard; the hems of a few onlookers' long coats softly out of focus in the background. Realistic photograph, natural colours, not an illustration, not a cartoon. No text, letters, numbers, signs, labels, watermarks or logos anywhere. Landscape 16:9, the largest native size, no software upscale.",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "76ce6873d5dbb35f049f7f8d8bf441d0218bbf76340d092733ed7376d36daf60",
+      "bytes": 2282720
+    },
+    {
+      "path": "references/G06-pigeon-paintings.png",
+      "tool": "codex exec · image_generation",
+      "created": "2026-11-10",
+      "use": "am11-02 鸽子看画（莫奈 / 毕加索）",
+      "reference": null,
+      "intent": "A grey city pigeon stands on a pale wooden table in a bright, quiet room, its head turned toward two small framed paintings propped up side by side on the table. The left painting is an Impressionist oil painting of a water-lily pond in soft blues, greens and pinks with loose dabbed brushstrokes. The right painting is a Cubist-style oil painting of fragmented angular planes in browns, ochres and greys. Neither painting copies any real artwork. Soft window daylight. Realistic photograph, natural colours, not an illustration, not a cartoon. No text, letters, numbers, signs, labels, watermarks or logos anywhere. Landscape 16:9, the largest native size, no software upscale.",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "607ac348f1340469eb0870d1075bf608632737aa5ee366f60bdddd9835887868",
+      "bytes": 2636337
+    },
+    {
+      "path": "references/G07-tamarin-quiet.png",
+      "tool": "codex exec · image_generation",
+      "created": "2026-11-10",
+      "use": "am11-06 小猴子选了没有声音的那边",
+      "reference": null,
+      "intent": "A tiny cotton-top tamarin monkey with its white crest sits in the middle of a cosy, clean wooden play enclosure that has two halves. On the left side a small round speaker sits on a little shelf. The right side is an empty, calm corner with a soft folded blanket. The tamarin is turning its head toward the quiet right side. Warm, soft light. Realistic photograph, natural colours, not an illustration, not a cartoon. No text, letters, numbers, signs, labels, watermarks or logos anywhere. Landscape 16:9, the largest native size, no software upscale.",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "e125f17c68d53e34987a5b1b5cb6bb0624ee7cc0aa571c8b79245dfc6132c55c",
+      "bytes": 2415576
+    },
+    {
+      "path": "references/G08-chinchilla-music.png",
+      "tool": "codex exec · image_generation",
+      "created": "2026-11-10",
+      "use": "am11-04 老鼠跟着拍子点头（画面用龙猫）",
+      "reference": null,
+      "intent": "A fluffy grey chinchilla sits upright on a wooden shelf next to a small cream-coloured vintage table radio, its big round ears up as if listening closely to the music. Warm, cosy home lighting, a softly blurred bookshelf behind. Realistic photograph, natural colours, not an illustration, not a cartoon. No text, letters, numbers, signs, labels, watermarks or logos anywhere. Landscape 16:9, the largest native size, no software upscale.",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "7a4dd5f19cb5160b9c0ce46dfb0d304fec8958f7b7c019a77ea9f58ed452032f",
+      "bytes": 2284888
+    },
+    {
+      "path": "references/G09-elephant-speaker.png",
+      "tool": "codex exec · image_generation",
+      "created": "2026-11-10",
+      "use": "am03-03..04 把录音放给大象听",
+      "reference": null,
+      "intent": "African savanna at golden hour: a small black loudspeaker on a short tripod stands in the dry grass in the foreground. In the middle distance an African elephant has turned toward it, ears spread wide, trunk slightly raised, about to walk toward the speaker. Acacia trees on the horizon, warm dusty light. Realistic photograph, natural colours, not an illustration, not a cartoon. No text, letters, numbers, signs, labels, watermarks or logos anywhere. Landscape 16:9, the largest native size, no software upscale.",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "1a83b17d9a743dfb597386064f5473dbb74826130d88602a6b15a842d002e0bf",
+      "bytes": 2838125
+    },
+    {
+      "path": "references/G10-dolphin-scarf.png",
+      "tool": "codex exec · image_generation",
+      "created": "2026-11-11",
+      "use": "am05-01..02 和海豚一起造几个新词（11-11 Yancy：换成穿比基尼、不戴面镜和呼吸管的人）",
+      "reference": null,
+      "intent": "Underwater in clear turquoise shallow sea with sunbeams: a young woman in a simple one-colour bikini swims freely, seen from the side, her face uncovered: no mask, no goggles, no snorkel, no glasses, eyes open, long hair floating. She holds out a bright red scarf; an Atlantic spotted dolphin swims close in front of the scarf, curious, its spotted skin clearly visible. Sandy bottom below, light ripples. Natural, documentary feel. Realistic photograph, natural colours, not an illustration, not a cartoon. No text, letters, numbers, signs, labels, watermarks or logos anywhere. Landscape 16:9, the largest native size, no software upscale.",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "56a7c04975210130561a45f8596f7709f2584289d970c9a7bc94aee1aad4b4aa",
+      "bytes": 2525923
+    },
+    {
+      "path": "references/G11a-dog-vacuum.png",
+      "tool": "codex exec · image_generation",
+      "created": "2026-11-10",
+      "use": "am09-02 狗旁边有一个吸尘器",
+      "reference": null,
+      "intent": "A medium-sized tan and white mixed-breed dog sits on a light wooden floor in a bright, plain living room, facing the camera, with a neutral, hard-to-read expression: mouth closed, ears half up, eyes looking slightly to the side. Right next to the dog stands an upright grey vacuum cleaner. Soft daylight, eye-level camera, the dog in the centre of the frame. Realistic photograph, natural colours, not an illustration, not a cartoon. No text, letters, numbers, signs, labels, watermarks or logos anywhere. Landscape 16:9, the largest native size, no software upscale.",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "febbedd0b13f3a1071b5c1d21ebd04edbf79678995354daf5bf65c06c934faf8",
+      "bytes": 2108475
+    },
+    {
+      "path": "references/G11b-dog-leash.png",
+      "tool": "codex exec · image_generation",
+      "created": "2026-11-10",
+      "use": "am09-02 狗旁边是一根牵引绳",
+      "reference": "references/G11a-dog-vacuum.png",
+      "intent": "The same dog as in the attached picture, in exactly the same pose, expression, position, lighting and camera angle, in the same room and on the same floor. The only change: the grey vacuum cleaner is gone, and in its place a red dog leash lies coiled on the floor right next to the dog. Nothing else changes. Realistic photograph, natural colours, not an illustration, not a cartoon. No text, letters, numbers, signs, labels, watermarks or logos anywhere. Landscape 16:9, the largest native size, no software upscale.",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "d459a698e0716e78870e92841c700e53100a94edfbbbc42906e987cbb5246b01",
+      "bytes": 2031311
+    }
+  ],
+  "covers": [
+    {
+      "path": "covers/gen/cover-a-sunset-monkey.zh.png",
+      "tool": "codex exec · image_generation",
+      "created": "2026-11-11",
+      "intent": "A YouTube thumbnail for an educational science video for parents and curious kids, 16:9 landscape, the largest native size. Photorealistic, natural colours, cinematic light, one strong subject, uncluttered; not a cartoon, not an illustration. A wild monkey sits on a rock on a hilltop, seen from behind and a little to the side, quietly watching a huge glowing orange sun setting over a calm lake; warm rim light on its fur; a wide, calm sky. Title text: 第一行「动物想什么？」，第二行「AI 知道吗？」. The title is part of the design: huge, bold, clean modern lettering that is easy to read on a phone, white with a soft shadow, the word AI picked out in one tasteful accent colour that suits the picture; set in the open part of the picture so it never covers the animal's face. Exactly two lines of text and nothing else: no logo, no small print, no watermark, no other letters, numbers or signs anywhere. Spell the title exactly as given, every character correct. ",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "05d35c89dbc7954b92dc5db3ade6fea1dc38c72b5786c75e18b263da9e48781c",
+      "bytes": 1879198
+    },
+    {
+      "path": "covers/gen/cover-b-monkey-face.zh.png",
+      "tool": "codex exec · image_generation",
+      "created": "2026-11-11",
+      "intent": "A YouTube thumbnail for an educational science video for parents and curious kids, 16:9 landscape, the largest native size. Photorealistic, natural colours, cinematic light, one strong subject, uncluttered; not a cartoon, not an illustration. A close portrait of a thoughtful macaque monkey in warm evening light, its eyes looking off into the distance, as if wondering; beside its head, very faint thin glowing lines like sound waves drift in the air, subtle and elegant, hinting at AI listening; a dark, softly blurred background. Title text: 第一行「动物想什么？」，第二行「AI 知道吗？」. The title is part of the design: huge, bold, clean modern lettering that is easy to read on a phone, white with a soft shadow, the word AI picked out in one tasteful accent colour that suits the picture; set in the open part of the picture so it never covers the animal's face. Exactly two lines of text and nothing else: no logo, no small print, no watermark, no other letters, numbers or signs anywhere. Spell the title exactly as given, every character correct. ",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "96d8ce5cebeca64eab9efcd6f8985254450aa1aea2f6cd44a65d2208ed72115b",
+      "bytes": 2214789
+    },
+    {
+      "path": "covers/gen/cover-c-dolphin.zh.png",
+      "tool": "codex exec · image_generation",
+      "created": "2026-11-11",
+      "intent": "A YouTube thumbnail for an educational science video for parents and curious kids, 16:9 landscape, the largest native size. Photorealistic, natural colours, cinematic light, one strong subject, uncluttered; not a cartoon, not an illustration. Underwater in clear blue sea with sunbeams: an Atlantic spotted dolphin swims toward the camera, curious and close, its spotted skin sharp; faint thin rings of light ripple out from its head like sound waves, subtle and realistic; deep blue open water above. Title text: 第一行「动物想什么？」，第二行「AI 知道吗？」. The title is part of the design: huge, bold, clean modern lettering that is easy to read on a phone, white with a soft shadow, the word AI picked out in one tasteful accent colour that suits the picture; set in the open part of the picture so it never covers the animal's face. Exactly two lines of text and nothing else: no logo, no small print, no watermark, no other letters, numbers or signs anywhere. Spell the title exactly as given, every character correct. ",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "9f1d7535265f1856dc2fef48152fe249bd90dba2e27fa89141bfe36d9572131c",
+      "bytes": 1909743
+    },
+    {
+      "path": "covers/gen/cover-d-surprised-swimmer.zh.png",
+      "tool": "codex exec · image_generation",
+      "created": "2026-11-11",
+      "intent": "A YouTube thumbnail for an educational science video for parents and curious kids, 16:9 landscape, the largest native size. Photorealistic, natural colours, cinematic light, one strong subject, uncluttered; not a cartoon, not an illustration. Use the two attached images as references. Image 1 shows the woman: keep her the same person (face, long dark hair, red bikini). Image 2 shows the colour scheme and title style to match: deep blue sea with sunbeams from above, a bold white title with the word AI in the same bright cyan. The new picture: underwater, the same young woman seen from the waist up, turned toward the camera, with a surprised, delighted expression (eyebrows raised, eyes wide, mouth a little open), as if the dolphin had just told her something; her hair floating; no mask, no goggles, no snorkel. An Atlantic spotted dolphin is right beside her face, looking at her curiously, its spotted skin sharp. Deep blue open water above for the title. Title text: 第一行「动物想什么？」，第二行「AI 知道吗？」. The title is part of the design: huge, bold, clean modern lettering that is easy to read on a phone, white with a soft shadow, the word AI picked out in one tasteful accent colour that suits the picture; set in the open part of the picture so it never covers the animal's face. Exactly two lines of text and nothing else: no logo, no small print, no watermark, no other letters, numbers or signs anywhere. Spell the title exactly as given, every character correct. ",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "85162aea3eda810a766e3bf28e196d30aa05d5be754c0dd2700dca451dca0120",
+      "bytes": 2286825
+    },
+    {
+      "path": "covers/gen/cover-a-sunset-monkey.en.png",
+      "tool": "codex exec · image_generation",
+      "created": "2026-11-11",
+      "intent": "Edit the attached thumbnail: keep the picture exactly as it is (same subject, composition, light and colours) and replace its title with the English title, line one \"What Are Animals Thinking?\", line two \"Does AI Know?\", in the same style, size and place. The title is part of the design: huge, bold, clean modern lettering that is easy to read on a phone, white with a soft shadow, the word AI picked out in one tasteful accent colour that suits the picture; set in the open part of the picture so it never covers the animal's face. Exactly two lines of text and nothing else: no logo, no small print, no watermark, no other letters, numbers or signs anywhere. Spell the title exactly as given, every character correct. 16:9 landscape, the largest native size.",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "27a2bbfb5aefdf9d24cd33bfea9d4b8c20881148cf2ac08bc6d7c0c97fdb7f4d",
+      "bytes": 1840088
+    },
+    {
+      "path": "covers/gen/cover-b-monkey-face.en.png",
+      "tool": "codex exec · image_generation",
+      "created": "2026-11-11",
+      "intent": "Edit the attached thumbnail: keep the picture exactly as it is (same subject, composition, light and colours) and replace its title with the English title, line one \"What Are Animals Thinking?\", line two \"Does AI Know?\", in the same style, size and place. The title is part of the design: huge, bold, clean modern lettering that is easy to read on a phone, white with a soft shadow, the word AI picked out in one tasteful accent colour that suits the picture; set in the open part of the picture so it never covers the animal's face. Exactly two lines of text and nothing else: no logo, no small print, no watermark, no other letters, numbers or signs anywhere. Spell the title exactly as given, every character correct. 16:9 landscape, the largest native size.",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "7c0457d862265ba6f2f5e9373f15d3e726ac4c3389fdffaf9b124dfc20584dba",
+      "bytes": 2091839
+    },
+    {
+      "path": "covers/gen/cover-c-dolphin.en.png",
+      "tool": "codex exec · image_generation",
+      "created": "2026-11-11",
+      "intent": "Edit the attached thumbnail: keep the picture exactly as it is (same subject, composition, light and colours) and replace its title with the English title, line one \"What Are Animals Thinking?\", line two \"Does AI Know?\", in the same style, size and place. The title is part of the design: huge, bold, clean modern lettering that is easy to read on a phone, white with a soft shadow, the word AI picked out in one tasteful accent colour that suits the picture; set in the open part of the picture so it never covers the animal's face. Exactly two lines of text and nothing else: no logo, no small print, no watermark, no other letters, numbers or signs anywhere. Spell the title exactly as given, every character correct. 16:9 landscape, the largest native size.",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "3c5d02d1897df2fd094351f1dedc69913ca24e5ae5a44ecc413355aa03e69cdf",
+      "bytes": 1828905
+    },
+    {
+      "path": "covers/gen/cover-d-surprised-swimmer.en.png",
+      "tool": "codex exec · image_generation",
+      "created": "2026-11-11",
+      "intent": "Edit the attached thumbnail: keep the picture exactly as it is (same subject, composition, light and colours) and replace its title with the English title, line one \"What Are Animals Thinking?\", line two \"Does AI Know?\", in the same style, size and place. The title is part of the design: huge, bold, clean modern lettering that is easy to read on a phone, white with a soft shadow, the word AI picked out in one tasteful accent colour that suits the picture; set in the open part of the picture so it never covers the animal's face. Exactly two lines of text and nothing else: no logo, no small print, no watermark, no other letters, numbers or signs anywhere. Spell the title exactly as given, every character correct. 16:9 landscape, the largest native size.",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "5ad0bd9a62c42040b5ae34be99d07fc56a81672ecb66066a22566cf99e847817",
+      "bytes": 2207378
+    }
+  ]
+}
