@@ -22,7 +22,21 @@ OUT = REPO / "out/leaf-truck"
 PUB, BUILD = OUT / "public", OUT / "build"
 BASE = Path("/Users/yqin/repo/playground/lucas-academy-video/out/autonomous-driving-seven-ways/source")
 MUSE = Path("/Users/yqin/repo/playground/lucas-academy-video-data/leaf-truck/muse")   # Yancy's Muse clips G1–G8 (SOURCES.json)
-MUSIC = Path("/Users/yqin/repo/playground/lucas-academy-video-data/fun-informatics-03/public/music/mozart-k265-renzi.mp3")
+# Yancy 11-12: 「不要用小星星了」, then 「可以用 降D大调前奏曲 升C小调夜曲」. All from Musopen "Set Chopin Free" (CC0;
+# lucas-academy-video-data/leaf-truck/music/SOURCES.md). One picture serves every version: `mix <name>`.
+#   name: (file, [(film s, source s), ...]) — the source plays on from each point; 3 s equal-power crossfades.
+MUSIC_DIR = Path("/Users/yqin/repo/playground/lucas-academy-video-data/leaf-truck/music/raw")
+MUSICS = {
+    # Waltz in C-sharp minor, Op. 64 No. 2 (Olga Gurevich), complete: più mosso under the 47 stops and the chain reaction
+    "waltz": ("chopin-waltz-op64-2-musopen.flac", [(0.0, 0.0)]),
+    # Nocturne in C-sharp minor, B. 49 (Frank Lévy), complete: 225 s, ends in C-sharp major as the end card fades
+    "nocturne": ("chopin-nocturne-b49-musopen.flac", [(0.0, 0.0)]),
+    # Prelude in D-flat major, Op. 28 No. 15 (Jeannette Fang): straight to the voice gap before lf06-04, where the
+    # C-sharp minor middle (first climax under the chain reaction) gives way to the D-flat return (source 4:17, just after the last climax)
+    "prelude": ("chopin-prelude-op28-15-musopen.flac", [(0.0, 0.0), (165.5, 257.0)]),
+}
+MUSIC_PICK = "waltz"
+MUSIC_END = 226.0   # s: film time by which every version's last chord has died away
 FPS, RATE = 24, 48000
 LANGS = ("en", "zh")
 TARGET = "I=-16:TP=-1.5:LRA=9"
@@ -83,14 +97,15 @@ def lines(lang):
 QUESTION_PAUSE = {"lf04-04": 3.0}
 SECTION_GAP = .9
 EDIT = [  # first line id → shot; a shot lasts until the next one starts
-    ("lf01-01", {"kind": "clip", "src": "clips/G1.mp4", "start": 0, "rate": .85, "badge": "recon"}),
+    # Muse clips wobble for their first ~8 frames (Yancy 11-12: 「前半秒晃一下」), so none starts before 0.5 s
+    ("lf01-01", {"kind": "clip", "src": "clips/G1.mp4", "start": .5, "rate": .8, "badge": "recon"}),
     ("lf01-03", {"kind": "clip", "src": "clips/truck.mp4", "start": 1.2, "badge": "recon"}),
-    ("lf01-04", {"kind": "clip", "src": "clips/G8.mp4", "start": 0, "rate": .8, "badge": "recon"}),
-    ("lf01-05", {"kind": "clip", "src": "clips/G2.mp4", "start": 0, "rate": .75, "badge": "recon"}),
+    ("lf01-04", {"kind": "clip", "src": "clips/G8.mp4", "start": .5, "rate": .8, "badge": "recon"}),
+    ("lf01-05", {"kind": "clip", "src": "clips/G2.mp4", "start": .5, "rate": .75, "badge": "recon"}),
     ("title", {"kind": "title"}),
     ("lf02-01", {"kind": "counter"}),
-    ("lf02-02", {"kind": "clip", "src": "clips/G3.mp4", "start": 0, "jolt": 2.0, "badge": "recon"}),
-    ("lf02-03", {"kind": "clip", "src": "clips/G4.mp4", "start": 0, "rate": .5, "badge": "recon",
+    ("lf02-02", {"kind": "clip", "src": "clips/G3.mp4", "start": .5, "jolt": 2.0, "badge": "recon"}),
+    ("lf02-03", {"kind": "clip", "src": "clips/G4.mp4", "start": .5, "rate": .5, "badge": "recon",
                  "labels": [{"en": "14.4 cm", "zh": "只有一掌高 · a hand's height", "x": 1440, "y": 430, "at": 3.2, "arrow": True}]}),
     ("lf02-04", {"kind": "split"}),
     ("lf03-01", {"kind": "clip", "src": "clips/G5.mp4", "start": 5.0, "badge": "recon"}),
@@ -103,7 +118,7 @@ EDIT = [  # first line id → shot; a shot lasts until the next one starts
     ("lf04-04", {"kind": "ab", "reveal": False}),
     ("lf04-05", {"kind": "ab", "reveal": True}),
     ("lf04-06", {"kind": "lidar"}),
-    ("lf05-01", {"kind": "clip", "src": "clips/G6.mp4", "start": 0, "badge": "recon"}),
+    ("lf05-01", {"kind": "clip", "src": "clips/G6.mp4", "start": .5, "badge": "recon"}),
     ("lf05-02", {"kind": "ripple"}),
     ("lf06-01", {"kind": "dial"}),
     ("lf06-03", {"kind": "goal"}),
@@ -112,17 +127,12 @@ EDIT = [  # first line id → shot; a shot lasts until the next one starts
     ("lf07-03", {"kind": "clip", "src": "clips/plane.mp4", "start": 1.4}),
     ("lf07-04", {"kind": "clip", "src": "clips/keys.mp4", "start": 0}),
     ("lf07-05", {"kind": "together"}),
-    ("lf07-06", {"kind": "clip", "src": "clips/G7.mp4", "start": 0, "badge": "recon"}),
+    ("lf07-06", {"kind": "clip", "src": "clips/G7.mp4", "start": .5, "badge": "recon"}),
     ("end", {"kind": "end"}),
 ]
 TAGS = {"lf03-04": ("Divergent → Critical", "发散 → 批判"), "lf04-04": ("Critical thinking", "批判性思维"),
         "lf05-01": ("Systems thinking", "系统思维"), "lf06-03": ("Backward thinking", "逆向思维"),
         "lf06-04": ("Integrative thinking", "综合思维")}
-MUSIC_PLAN = {  # section → K.265 passages (s) in order, cut at the pauses between variations
-    "LF01": [(3.9, 48.0), (49.0, 89.9)], "LF02": [(49.0, 89.9), (91.2, 132.8)], "LF03": [(220.8, 260.5)],
-    "LF04": [(91.2, 132.8), (134.1, 176.1)], "LF05": [(134.1, 176.1)], "LF06": [(498.0, 567.4)],
-    "LF07": [(3.9, 48.0), (651.0, 724.0)],
-}
 
 
 def plan():
@@ -145,8 +155,8 @@ def plan():
         out_lines.append({"id": i, "at": round(t, 3), "len": round(length[i], 3),
                           "text": {l: rows[l][i]["text"] for l in LANGS}})
         t += length[i] + (QUESTION_PAUSE.get(i, 1.3) if q else .4)
-    starts["end"] = t + .6
-    total = starts["end"] + 4.5
+    starts["end"] = t + 2.3            # the sunset shot runs on a little before the end card
+    total = max(starts["end"] + 4.5, MUSIC_END + 2.5)
     frames = int(np.ceil(total * FPS))
     shots = []
     for k, (key, spec) in enumerate(EDIT):
@@ -185,35 +195,27 @@ def render(scale="0.5"):
 
 
 # ---------------------------------------------------------------- sound
-def music_bed(tl):
-    secs = sorted(tl["sections"].items(), key=lambda kv: kv[1])
-    total = tl["frames"] / FPS
-    bed = np.zeros(int(total * RATE), np.float32)
-    xf = int(2.0 * RATE)
-    for n, (name, at) in enumerate(secs):
-        if name == "END":
-            continue
-        end = secs[n + 1][1] if n + 1 < len(secs) else total
-        if name == "LF07":
-            end = total
-        need = int((end - at) * RATE) + xf
-        pieces = []
-        for a, b in MUSIC_PLAN[name] * 3:
-            pcm = subprocess.run(["ffmpeg", "-v", "error", "-ss", str(a), "-t", str(b - a), "-i", str(MUSIC), "-ac", "1",
-                                  "-ar", str(RATE), "-f", "f32le", "-"], capture_output=True, check=True).stdout
-            pieces.append(np.frombuffer(pcm, np.float32))
-            if sum(map(len, pieces)) >= need:
-                break
-        seg = np.concatenate(pieces)[:need]
-        ramp = np.ones(len(seg), np.float32)
-        ramp[:xf] = np.linspace(0, 1, xf)
-        if name != "LF07":
-            ramp[-xf:] = np.linspace(1, 0, xf)
-        else:
-            ramp[-int(4 * RATE):] = np.linspace(1, 0, int(4 * RATE))
-        s = max(0, int(at * RATE) - xf // 2)
-        seg = (seg * ramp)[:len(bed) - s]
-        bed[s:s + len(seg)] += seg
+def music_bed(tl, name):
+    """The chosen piece laid on the film by its (film, source) points; ducking and edge fades come from duck()."""
+    path, segs = MUSICS[name]
+    n = int(tl["frames"] / FPS * RATE)
+    pcm = subprocess.run(["ffmpeg", "-v", "error", "-i", str(MUSIC_DIR / path), "-ac", "1", "-ar", str(RATE), "-f", "f32le",
+                          "-"], capture_output=True, check=True).stdout
+    x = np.frombuffer(pcm, np.float32)
+    bed = np.zeros(n, np.float32)
+    xf = int(3.0 * RATE)
+    for k, (film, src) in enumerate(segs):
+        a = int(film * RATE) - (xf // 2 if k else 0)
+        b = int(segs[k + 1][0] * RATE) + xf // 2 if k + 1 < len(segs) else n
+        s0 = int(src * RATE) - (int(film * RATE) - a)
+        seg = np.pad(x[s0:s0 + (b - a)], (0, max(0, (b - a) - len(x[s0:s0 + (b - a)]))))
+        env = np.ones(b - a, np.float32)
+        ramp = np.linspace(0, np.pi / 2, xf)
+        if k:
+            env[:xf] = np.sin(ramp)
+        if k + 1 < len(segs):
+            env[-xf:] = np.cos(ramp)
+        bed[a:b] += seg * env
     return bed
 
 
@@ -323,10 +325,10 @@ def stamp(x):
     return f"{ms // 3600000:02}:{ms // 60000 % 60:02}:{ms // 1000 % 60:02},{ms % 1000:03}"
 
 
-def mix():
+def mix(music=MUSIC_PICK):
     tl = json.loads((BUILD / "timeline.json").read_text())
     n = int(tl["frames"] / FPS * RATE)
-    bed = music_bed(tl)[:n]
+    bed = music_bed(tl, music)[:n]
     bed = np.pad(bed, (0, n - len(bed)))
     fx = fx_bed(tl, n)
     tracks = {}
@@ -349,7 +351,7 @@ def mix():
         v_rms = float(np.sqrt((voiced ** 2).mean()))
         b_rms = float(np.sqrt((bed[np.abs(bed) > 1e-4] ** 2).mean()))
         mixdown = voice + duck(bed, spans, v_rms, b_rms) + fx * v_rms * 10 ** (FX_DB / 20)
-        path = BUILD / f"mix-{lang}.wav"
+        path = BUILD / f"mix-{lang}.{music}.wav"
         run("ffmpeg", "-v", "error", "-y", "-f", "f32le", "-ar", RATE, "-ac", 1, "-i", "-", "-c:a", "pcm_s16le", path,
             input=np.clip(mixdown, -1, 1).astype(np.float32).tobytes())
         tracks[lang] = path
@@ -364,7 +366,7 @@ def mix():
         st = json.loads(err[err.rfind("{"):err.rfind("}") + 1])
         norm[lang] = (f"loudnorm={TARGET}:measured_I={st['input_i']}:measured_TP={st['input_tp']}:measured_LRA={st['input_lra']}:"
                       f"measured_thresh={st['input_thresh']}:offset={st['target_offset']}:linear=true")
-    out = BUILD / "leaf-truck.draft.mp4"
+    out = BUILD / f"leaf-truck.{music}.mp4"
     run("ffmpeg", "-v", "error", "-y", "-i", BUILD / "picture.mp4", "-i", tracks["en"], "-i", tracks["zh"],
         "-map", "0:v:0", "-map", "1:a:0", "-map", "2:a:0", "-c:v", "copy", "-filter:a:0", norm["en"], "-filter:a:1", norm["zh"],
         "-c:a", "aac", "-b:a", "160k", "-ac", 1, "-ar", 48000, "-shortest",
@@ -381,4 +383,7 @@ def mix():
 
 if __name__ == "__main__":
     cmd = sys.argv[1]
-    {"assets": assets, "plan": plan, "mix": mix}.get(cmd, lambda: render(*sys.argv[2:]))()
+    if cmd == "mix":
+        mix(*sys.argv[2:3])
+    else:
+        {"assets": assets, "plan": plan}.get(cmd, lambda: render(*sys.argv[2:]))()

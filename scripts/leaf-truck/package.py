@@ -1,12 +1,15 @@
 """Upload folder for 「一片落叶，为什么让卡车急刹车？」 on the Desktop: the film (English default + Mandarin track), the
 Mandarin track as m4a, both SRTs, both covers (+ the alternate pair), both descriptions.
 
-    python3 scripts/leaf-truck/package.py
+    python3 scripts/leaf-truck/package.py [--update]
+
+--update rewrites the files of an existing Desktop folder in place instead of making 「…-上传-2」.
 """
 import hashlib
 import json
 import shutil
 import subprocess
+import sys
 import tempfile
 from pathlib import Path
 
@@ -18,10 +21,10 @@ COVERS = Path("/Users/yqin/repo/playground/lucas-academy-video-data/leaf-truck/c
 NAME = "一片落叶为什么让卡车急刹车-上传"
 STEM = "一片落叶"
 COVER, ALT = "cover-a-leaves", "cover-b-brake"
+MUSIC = "waltz"   # the mix build.py made: build/leaf-truck.<MUSIC>.mp4 (Yancy 11-12 picked the waltz)
 
 AWARD = "https://www.iru.org/system/files/AWARD_Impact%20Assessment_D7.3.pdf"
-COMMONS = "https://commons.wikimedia.org/wiki/File:Mozart_-_12_Variations_K._265_-_Simone_Renzi.mp3"
-CCBY = "https://creativecommons.org/licenses/by/3.0/"
+MUSOPEN = "https://archive.org/details/musopen-chopin-complete-works-flac"
 PEXELS = "Yaroslav Shuraev, RDNE Stock project, Anastasia Shuraeva"
 DEFAULT_TAGS = ["education", "parenting", "art", "arthistory", "stem", "bilingual", "bilingualchildren", "lucas_academy"]
 OWN_TAGS = {
@@ -78,11 +81,10 @@ def description(lang):
 作者 Yancy Qin | Lucas Academy
 旁白使用 Louise 的授权声线
 
-音乐：W. A. Mozart, 12 Variations on "Ah vous dirai-je, Maman", K. 265（莫扎特《小星星变奏曲》）。
-钢琴及录音：Simone Renzi。录音许可：CC BY 3.0。
-{COMMONS}
-{CCBY}
-本片剪用了其中几段变奏，并调整了音量。
+音乐：肖邦《升 c 小调圆舞曲》Op. 64 No. 2，Olga Gurevich 演奏。
+录音：Musopen「Set Chopin Free」肖邦全集，CC0 1.0（放弃版权，进入公有领域）。
+{MUSOPEN}
+全曲使用，调整了音量。
 素材：Pexels 视频（{PEXELS.replace(", ", "、")}）
 
 {hashtags}
@@ -116,11 +118,10 @@ The truck and road scenes are AI-generated reconstructions, not real footage.
 By Yancy Qin | Lucas Academy
 The narrator uses Louise's licensed voice.
 
-Music: W. A. Mozart, 12 Variations on "Ah vous dirai-je, Maman" (Twinkle, Twinkle, Little Star), K. 265.
-Piano and recording: Simone Renzi, licensed under CC BY 3.0.
-{COMMONS}
-{CCBY}
-Modifications: excerpts of several variations; volume adjusted.
+Music: Chopin, Waltz in C-sharp minor, Op. 64 No. 2, played by Olga Gurevich.
+Recording: Musopen "Set Chopin Free", The Complete Works of Frédéric Chopin, CC0 1.0 (public domain dedication).
+{MUSOPEN}
+The complete piece; volume adjusted.
 Footage: Pexels videos ({PEXELS})
 
 {hashtags}
@@ -142,10 +143,11 @@ def sha(path):
 
 
 def main():
-    film = BUILD / "leaf-truck.draft.mp4"
+    film = BUILD / f"leaf-truck.{MUSIC}.mp4"
     root = Path.home() / "Desktop" / NAME
+    update = "--update" in sys.argv and root.is_dir()
     dest, n = root, 2
-    while dest.exists():
+    while dest.exists() and not update:
         dest, n = root.with_name(f"{NAME}-{n}"), n + 1
     with tempfile.TemporaryDirectory(prefix=".leaf-upload-", dir=dest.parent) as tmp:
         folder = Path(tmp) / dest.name
@@ -166,7 +168,11 @@ def main():
                 shutil.copy2(jpg, folder / f"{name}.{lang}.jpg")
         for lang in ("zh", "en"):
             (folder / f"youtube-description.{lang}.txt").write_text(description(lang), encoding="utf-8")
-        folder.rename(dest)
+        if update:
+            for f in folder.iterdir():
+                f.replace(dest / f.name)
+        else:
+            folder.rename(dest)
     print(dest)
     for f in sorted(dest.iterdir()):
         print(f"  {f.name}  {f.stat().st_size:,}")
