@@ -1,0 +1,120 @@
+{
+  "revision": 3,
+  "originalResultSha256": {
+    "perceptron-js.json": "de92518173cf7cbd78d5f12d0bc1dc613d8179c710a3e4b786791f12421c3b08",
+    "claude-fable.json": "3551368a8c7cb006506832963e8c6225b222b048fe60f46b9c110295c05b386f",
+    "astra-low.json": "77bead1fe510ef71339cd84bd94dcc45526fbd051ca9e53fd8448721eadf8bcb",
+    "qwen-fast.json": "2350b2fe9aede4e23c0562f747c4a2a647608809d00987ef7e1e216196f3d4d7"
+  },
+  "sourceClips": 9,
+  "selectedCheckedVoices": 40,
+  "films": {
+    "perceptron": {
+      "revision": 3,
+      "durationSeconds": 74.93333333333334,
+      "video": "1080x1920, 30fps",
+      "audio": [
+        {
+          "language": "eng",
+          "default": true
+        },
+        {
+          "language": "zho",
+          "default": false
+        }
+      ],
+      "subtitleTracks": 0,
+      "externalCuesPerLanguage": 11,
+      "blackSegments": [],
+      "audioLoudness": {
+        "en": {
+          "input_i": "-16.01",
+          "input_tp": "-0.99",
+          "input_lra": "3.80",
+          "input_thresh": "-26.60",
+          "output_i": "-15.87",
+          "output_tp": "-1.00",
+          "output_lra": "3.80",
+          "output_thresh": "-26.47",
+          "normalization_type": "dynamic",
+          "target_offset": "-0.13"
+        },
+        "zh": {
+          "input_i": "-15.99",
+          "input_tp": "-0.99",
+          "input_lra": "5.40",
+          "input_thresh": "-26.65",
+          "output_i": "-15.88",
+          "output_tp": "-1.00",
+          "output_lra": "4.30",
+          "output_thresh": "-26.54",
+          "normalization_type": "dynamic",
+          "target_offset": "-0.12"
+        }
+      },
+      "standaloneAudio": "AAC payloads match the movie bit for bit",
+      "movingFootageCoverage": 1.0,
+      "shotCount": 8,
+      "qrCheck": "Absent from both revised closing beats",
+      "sha256": "68f7d0f837a3fd94e498c3acb1c528e7dde0cf808a0e2a9c15b5b135f18079e8",
+      "bytes": 69286897
+    },
+    "optogenetics": {
+      "revision": 3,
+      "durationSeconds": 60.0,
+      "video": "1080x1920, 30fps",
+      "audio": [
+        {
+          "language": "eng",
+          "default": true
+        },
+        {
+          "language": "zho",
+          "default": false
+        }
+      ],
+      "subtitleTracks": 0,
+      "externalCuesPerLanguage": 9,
+      "blackSegments": [],
+      "audioLoudness": {
+        "en": {
+          "input_i": "-16.04",
+          "input_tp": "-0.99",
+          "input_lra": "3.50",
+          "input_thresh": "-26.61",
+          "output_i": "-15.93",
+          "output_tp": "-1.00",
+          "output_lra": "3.40",
+          "output_thresh": "-26.50",
+          "normalization_type": "dynamic",
+          "target_offset": "-0.07"
+        },
+        "zh": {
+          "input_i": "-15.99",
+          "input_tp": "-0.99",
+          "input_lra": "4.50",
+          "input_thresh": "-26.66",
+          "output_i": "-15.87",
+          "output_tp": "-1.00",
+          "output_lra": "4.50",
+          "output_thresh": "-26.57",
+          "normalization_type": "dynamic",
+          "target_offset": "-0.13"
+        }
+      },
+      "standaloneAudio": "AAC payloads match the movie bit for bit",
+      "movingFootageCoverage": 1.0,
+      "shotCount": 8,
+      "qrCheck": null,
+      "sha256": "f104ac721f98978594260b355321f9d8caee538cc5f88743a8e10f55e9870b02",
+      "bytes": 30719039
+    }
+  },
+  "backupRestore": {
+    "inputs": 52,
+    "sha256Verified": true,
+    "cleanRestorePassed": true,
+    "differingFileRefused": true,
+    "restoredTimelineMatchesOriginal": true
+  }
+}
