@@ -14,6 +14,8 @@ import {MiddleIncomeTrapVideo, calculateMitMetadata} from './videos/middle-incom
 import {MiddleIncomeTrapCover, MiddleIncomeTrapCoverEn} from './videos/middle-income-trap/Cover';
 import {AiSycophancyVideo, calculateAsMetadata} from './videos/ai-sycophancy/AiSycophancyVideo';
 import {FunInformatics04Video, calculateFi04Metadata} from './videos/fun-informatics-04/FunInformatics04Video';
+import {AiAnimalMindVideo, calculateAiAnimalMetadata} from './videos/ai-animal-mind/AiAnimalMindVideo';
+import {AiAnimalShort, calculateAiAnimalShortMetadata} from './videos/ai-animal-mind/AiAnimalShort';
 import {Screen as AsScreen, calculateScreenMetadata} from './videos/ai-sycophancy/Screen';
 import {WeeklyCover, WeeklyEpisode, calculateWeeklyMetadata} from './videos/weekly/WeeklyEpisode';
 import {Cube2x2Cover, Cube2x2Video, calculateCubeMetadata} from './videos/cube-2x2/Cube2x2Video';
@@ -352,6 +354,8 @@ export const Root: FC = () => {
       <Composition id="FamilyAiLab01Zh" component={FamilyAiLab01} fps={30} width={1920} height={1080} durationInFrames={13000} defaultProps={{tl:null,data:null}} calculateMetadata={calculateFamilyMetadata} />
       <Composition id="FunInformatics04Zh" component={FunInformatics04Video} durationInFrames={18000} fps={30} width={1920} height={1080} defaultProps={{tl:null, lang:'zh' as const}} calculateMetadata={calculateFi04Metadata} />
       <Composition id="FunInformatics04En" component={FunInformatics04Video} durationInFrames={18000} fps={30} width={1920} height={1080} defaultProps={{tl:null, lang:'en' as const}} calculateMetadata={calculateFi04Metadata} />
+      <Composition id="AiAnimalMind" component={AiAnimalMindVideo} durationInFrames={18000} fps={30} width={1920} height={1080} defaultProps={{tl:null}} calculateMetadata={calculateAiAnimalMetadata} />
+      <Composition id="AiAnimalShort" component={AiAnimalShort} durationInFrames={1800} fps={30} width={1080} height={1920} defaultProps={{short:"ocean", tl:null}} calculateMetadata={calculateAiAnimalShortMetadata} />
       <Composition id="AsScreen" component={AsScreen} durationInFrames={300} fps={30} width={720} height={1560} defaultProps={{kind:'G1', width:720, height:1560, seconds:10, cues:[2,4], lines:['您的这个想法真是太深刻、太有远见了！','不得不说，您的观察力非常敏锐。']}} calculateMetadata={calculateScreenMetadata} />
       <Composition id="NewsEducation01Cover" component={NewsEducation01Cover} durationInFrames={1} fps={30} width={1280} height={720} />
       <Composition id="NewsEducation01CoverEn" component={NewsEducation01CoverEn} durationInFrames={1} fps={30} width={1280} height={720} />

@@ -1,0 +1,22 @@
+<!doctype html>
+<!-- YouTube cover for 「AI 知道动物在想什么吗？」 (README "YouTube covers"): the G10 frame (Yancy 11-11: 「封面用G10来做」),
+     the title alone, one language per cover, no ribbon (a standalone film). cover.py fills BG, TITLE, POS, FAMILY, WEIGHT,
+     SIZE, SPACING and KEY and renders it at 1280×720 with headless Chrome. -->
+<html lang="LANG">
+<head>
+<meta charset="utf-8">
+<style>
+  html, body { margin: 0; width: 1280px; height: 720px; overflow: hidden; background: #0b2a33; }
+  .bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; }
+  .text { position: absolute; POS; }
+  .title { font-family: FAMILY; font-weight: WEIGHT; font-size: SIZEpx; line-height: 1.12; letter-spacing: SPACING;
+    color: #ffffff; white-space: nowrap;
+    text-shadow: 0 0 2px rgba(20,8,6,.55), 0 3px 10px rgba(20,8,6,.45), 0 8px 34px rgba(0,0,0,.45); }
+  .key { color: KEY; }
+</style>
+</head>
+<body>
+  <img class="bg" src="BG">
+  <div class="text"><div class="title">TITLE</div></div>
+</body>
+</html>

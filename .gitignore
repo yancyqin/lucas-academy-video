@@ -105,3 +105,6 @@ public/ai-sycophancy/
 
 # Family AI Lab 01 generated assets and captures; backed up in sibling video-data.
 public/family-ai-lab-01/
+
+# 「动物想什么？AI 知道吗？」: staged clips, stills and the timelines (scripts/ai-animal-mind/assets.py, build_timeline.py, build_short.py)
+public/ai-animal-mind/
