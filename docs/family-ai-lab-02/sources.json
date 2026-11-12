@@ -1,0 +1,83 @@
+{
+  "courseUrl": "https://ai.lucasacademy.org/courses/zero-and-one/",
+  "curriculumCommit": "9c24bbdf0dbe06d2a8b1c584e06def7860c872c9",
+  "ownerStory": "L1-beginner/course.md, opening paragraph",
+  "adaptation": "Mia, Leo, the invitation, two treehouses and gift are new story details. Shared code table, bit/byte, number guessing and fruit clues follow the owner lesson. The perceptron extension is left for the preceding film.",
+  "sources": [
+    {
+      "source": "L1-beginner/course.md",
+      "path": "source/course.md",
+      "sha256": "cc9f563f2155b16645192f1b39f7f0cdf31889426e957d53f4d6f1fbc23e3cff"
+    },
+    {
+      "source": "courses/zero-and-one/index.html",
+      "path": "source/lesson.html",
+      "sha256": "37bd4bcf66390d2e077e454f1da3b3c23aaa0525f0330b461184c3cab9357ab1"
+    },
+    {
+      "source": "assets/print/zero-and-one/1.jpg",
+      "path": "curriculum/worksheet-front.jpg",
+      "sha256": "8c7f707ad79b59c625ee11b920a6854b3d8bc46fcc2cd706e65405d18f492d76"
+    },
+    {
+      "source": "assets/print/zero-and-one/2.jpg",
+      "path": "curriculum/worksheet-back.jpg",
+      "sha256": "d3524d836a14f4419baeb3204ac824b8cf40957f155a4f46c7bac61ad0874244"
+    },
+    {
+      "source": "L1-beginner/media/red_apple_3d.png",
+      "path": "curriculum/red_apple_3d.png",
+      "sha256": "7e37f4ad4d227d283f9afad0605fcddf67406bf8c6c4964419efbd23de7ad60c"
+    },
+    {
+      "source": "L1-beginner/media/banana_3d.png",
+      "path": "curriculum/banana_3d.png",
+      "sha256": "b82cd3cc7e56e70026b599aeec5d811568b507adc96473bf854096f5e67d92a5"
+    },
+    {
+      "source": "L1-beginner/media/grapes_3d.png",
+      "path": "curriculum/grapes_3d.png",
+      "sha256": "862ea99e063a228682b5b2da59613ddb2e64d7ad0144712125eb34d9cd2fa36d"
+    },
+    {
+      "source": "L1-beginner/media/watermelon_3d.png",
+      "path": "curriculum/watermelon_3d.png",
+      "sha256": "00bacc111ae855cf0621d35ba987d519c07fb4103500edc4af2152fa6d27177e"
+    },
+    {
+      "source": "assets/labs/binary.html",
+      "path": "lab/binary.html",
+      "sha256": "cf193a45d3d8da92fecc143b3a7682939429a87a968a17cd6808719241d162bd"
+    },
+    {
+      "source": "assets/labs/lab.css",
+      "path": "lab/lab.css",
+      "sha256": "f51f2458bc7178b6c79735c837640ff919710ac606df372412db2fb9c1a889eb"
+    },
+    {
+      "source": "assets/labs/lab.js",
+      "path": "lab/lab.js",
+      "sha256": "afbb2359d4dd3be8584d8e63e22a1e26c227d82b25fcec36c8a37e7b43046676"
+    },
+    {
+      "source": "assets/labs/math.js",
+      "path": "lab/math.js",
+      "sha256": "e8bbf29f36e29178aca66a4d0a93e850b68345eb536cdf496b5f79cf3e1f7efa"
+    },
+    {
+      "source": "https://ai.lucasacademy.org/courses/zero-and-one/",
+      "path": "source/live-lesson.html",
+      "sha256": "5faf132732369aa921ac7d29978e053f72bc9fae70ac4da5544cf49d49490af7"
+    }
+  ],
+  "references": [
+    {
+      "url": "https://www.rfc-editor.org/rfc/rfc20",
+      "use": "7-bit ASCII embedded in an 8-bit byte with high bit zero; A=65."
+    },
+    {
+      "url": "https://www.csunplugged.org/en/topics/binary-numbers/whats-it-all-about/",
+      "use": "Two states represent a bit; eight bits group into a byte."
+    }
+  ]
+}

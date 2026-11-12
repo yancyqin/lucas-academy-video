@@ -1,0 +1,57 @@
+{
+  "kind": "Silent orbital style and code-animation study, not the complete bilingual film",
+  "movie": "out/family-ai-lab-02/orbital-v2/style-study.mp4",
+  "sha256": "177d24733635c0df964e12ceb2b7e36f61ce5c7b71cb078d874d099a6d10533f",
+  "seconds": 42,
+  "frames": 1260,
+  "size": [
+    1280,
+    720
+  ],
+  "fps": 30,
+  "audioTracks": 0,
+  "subtitleTracks": 0,
+  "blackSegments": [],
+  "qrFrames": [
+    {
+      "visual": "lab",
+      "seconds": 36.06666666666667,
+      "decoded": "QR verified: https://ai.lucasacademy.org/courses/zero-and-one/"
+    },
+    {
+      "visual": "worksheet",
+      "seconds": 40.7,
+      "decoded": "QR verified: https://ai.lucasacademy.org/courses/zero-and-one/"
+    }
+  ],
+  "generatedMasters": 10,
+  "selectedAssets": 8,
+  "allOriginalAndCopyHashesMatch": true,
+  "messageQA": {
+    "decoded": "PLAY",
+    "fullCueRanges": [
+      [
+        0,
+        8
+      ],
+      [
+        8,
+        32
+      ]
+    ],
+    "allFrames": "Receiver count matches actual arrivals; monotonic and complete."
+  },
+  "typecheck": "npx tsc --noEmit passed",
+  "sourceSha256": "3ded3d5c345d3120ec2a16ad5b654ff8e21c04794e0f7349cead57e9c1316654",
+  "visualReview": "Eight study frames inspected for matching materials, code-derived signals, selected box 7, fruit source pictures, real browser display and readable QR. Original v1 audio is not mixed into this study.",
+  "cornerCredits": false,
+  "creditRemovalVerification": {
+    "changedPixelBoundsAt720p": [
+      828,
+      687,
+      1214,
+      700
+    ],
+    "pictureAboveFooterUnchanged": true
+  }
+}

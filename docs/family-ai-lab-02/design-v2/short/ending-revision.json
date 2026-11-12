@@ -1,0 +1,68 @@
+{
+  "approvedConcept": [
+    "two friends",
+    "internet connects world",
+    "videos/messages/AI use zeros and ones",
+    "playful invitation to share"
+  ],
+  "firstSevenCuesAndFourteenVoicesUnchangedFrom": "d3897beb7b9c8dbf7367842eb7e04877a8ae27ca",
+  "durationSeconds": 56.9,
+  "frames": 1707,
+  "rawShortTakesRetained": 26,
+  "selectedTakes": 22,
+  "noNewMuseSaves": true,
+  "endingScript": [
+    {
+      "id": "fa02s-08",
+      "scene": 8,
+      "visual": "friends",
+      "en": "Our tiny pipe connects two friends.",
+      "zh": "两个朋友，就用小管子传话。",
+      "minSeconds": 2.8
+    },
+    {
+      "id": "fa02s-09",
+      "scene": 9,
+      "visual": "world",
+      "en": "The internet connects the world!",
+      "zh": "互联网连起全世界！",
+      "minSeconds": 2.8
+    },
+    {
+      "id": "fa02s-10",
+      "scene": 10,
+      "visual": "online",
+      "en": "Videos, messages, even chats with AI—all use zeros and ones.",
+      "zh": "视频、消息、AI聊天，全都用零和一。",
+      "minSeconds": 5.4,
+      "voice": {
+        "en": {
+          "spoken": "Videos, messages, even chats with AI, all use zeros and ones.",
+          "instruction": "Please speak warmly and clearly, with natural connected speech. Say AI smoothly as the familiar two-letter name, without a long gap. Keep the story light and curious."
+        },
+        "zh": {
+          "spoken": "视频、消息、人工智能聊天，全都用零和一。"
+        }
+      }
+    },
+    {
+      "id": "fa02s-11",
+      "scene": 11,
+      "visual": "invite",
+      "en": "A funny story? A new game? What will you share today?",
+      "zh": "一个好玩的故事？一个新游戏？今天你想分享什么？",
+      "minSeconds": 5.4,
+      "voice": {
+        "en": {
+          "speed": 1.0,
+          "instruction": "Ask each question slowly, playfully, and clearly, like chatting with a child. Pause for half a second after story and after game. Keep the last question warm and inviting."
+        },
+        "zh": {
+          "instruction": "像和孩子聊天一样，轻快、俏皮地问这三个小问题。短句清楚亲切，问题之间自然稍停。"
+        }
+      }
+    }
+  ],
+  "englishAiAsrWordSeconds": 0.36,
+  "englishAiAsrModel": "Whisper medium"
+}

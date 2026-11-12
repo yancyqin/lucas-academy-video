@@ -1,0 +1,21 @@
+{
+  "file": "out/family-ai-lab-02/orbital-v2/delivery/opening-yes.mp4",
+  "frames": 900,
+  "seconds": 30.0,
+  "size": [
+    1280,
+    720
+  ],
+  "audioTracks": [
+    "English default",
+    "Chinese"
+  ],
+  "scope": "Complete S1, including the moved launch, explicit Yes / 可以, and the complete first explanation.",
+  "opening": {
+    "paperSeconds": 7.5,
+    "launchAtSeconds": 22.4,
+    "returnToExplanationAtSeconds": 24.2,
+    "affirmationAtSeconds": 24.3
+  },
+  "sha256": "1b0946f071737283cba8a867bddc13ad422e400be1921193a47eba98c9332b5d"
+}

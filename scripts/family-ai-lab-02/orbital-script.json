@@ -1,0 +1,302 @@
+{
+  "revision": "orbital-v2-opening-order-2026-11-05",
+  "workingTitle": {
+    "zh": "0和1，能聊天吗？",
+    "en": "Can 0 and 1 Talk?"
+  },
+  "source": "https://ai.lucasacademy.org/courses/zero-and-one/",
+  "direction": "Orbital pods; one shot per Muse clip; clean picture; English default plus independent Chinese audio.",
+  "opening": {
+    "paperSeconds": 7.5,
+    "launchAtSeconds": 22.4,
+    "launchAfterVisual": "challenge"
+  },
+  "scenes": [
+    "The invitation",
+    "Two tiny signals",
+    "The shared code",
+    "A message arrives",
+    "The hidden box",
+    "How many questions?",
+    "The picnic clue",
+    "Your turn"
+  ],
+  "lines": [
+    {
+      "id": "fa02-01-01",
+      "scene": 1,
+      "visual": "world",
+      "zh": "纸条过不去。米娅怎么邀请对面的里奥来玩？",
+      "en": "This note is too big. How can Mia invite Leo to play?",
+      "leadInSeconds": 0.3,
+      "minSeconds": 6.4,
+      "voice": {
+        "en": {
+          "speed": 1.0,
+          "instruction": "Please speak clearly and warmly to a child. Say the first short sentence at a relaxed pace, with every word distinct. Briefly pause after big. Then ask the question with natural playful curiosity. Keep Mia and Leo clear."
+        }
+      }
+    },
+    {
+      "id": "fa02-01-02",
+      "scene": 1,
+      "visual": "card",
+      "zh": "两个太空舱，只靠一条管道连接。",
+      "en": "Their space pods are linked by one tiny pipe."
+    },
+    {
+      "id": "fa02-01-03",
+      "scene": 1,
+      "visual": "rules",
+      "zh": "游戏规定，每次只能送一颗珠子。金色表示一，蓝色表示零。",
+      "en": "One little ball goes through at a time. Gold means one. Blue means zero."
+    },
+    {
+      "id": "fa02-01-04",
+      "scene": 1,
+      "visual": "challenge",
+      "zh": "只靠这两种记号，你能把一句话传过去吗？",
+      "en": "Could you send a message with only those two kinds of signal?",
+      "hold": 1.2
+    },
+    {
+      "id": "fa02-02-01",
+      "scene": 2,
+      "visual": "one-bit",
+      "zh": "可以！先看一颗珠子。它只有两种可能。",
+      "en": "Yes! Start with one little ball. It has just two possible values.",
+      "voice": {
+        "en": {
+          "instruction": "Begin with a bright, clear, confident Yes! Briefly pause, then continue the explanation calmly and clearly, as if exploring with a child. Natural connected speech."
+        },
+        "zh": {
+          "instruction": "开头先清楚、有精神地说「可以」，稍停一下，再用亲切平稳的语气继续讲解，像坐在孩子旁边说话。"
+        }
+      }
+    },
+    {
+      "id": "fa02-02-02",
+      "scene": 2,
+      "visual": "two-bits",
+      "zh": "两颗排在一起，就有四种不同的排法。顺序也算数。",
+      "en": "Put two in a row, and there are four different patterns. Their order matters."
+    },
+    {
+      "id": "fa02-02-03",
+      "scene": 2,
+      "visual": "bit-name",
+      "zh": "每个零或一，叫一个比特。现在，把八个比特排成一组。",
+      "en": "Each zero or one is called a bit. Now put eight bits in a group."
+    },
+    {
+      "id": "fa02-02-04",
+      "scene": 2,
+      "visual": "byte",
+      "zh": "这样一组叫一个字节。它有二百五十六种不同的排法。",
+      "en": "That group is a byte. It can have two hundred and fifty-six different patterns."
+    },
+    {
+      "id": "fa02-03-01",
+      "scene": 3,
+      "visual": "codebooks",
+      "zh": "两边用同一张表。开玩之前，就得约好每种排法代表什么。",
+      "en": "Before the game, they agreed on the same code table. Both ends must read it the same way."
+    },
+    {
+      "id": "fa02-03-02",
+      "scene": 3,
+      "visual": "weights",
+      "zh": "从右往左，每一格的数值翻一倍。右边是一，旁边是二，再旁边是四。",
+      "en": "Reading from right to left, each place is worth twice as much: one, two, four, and so on."
+    },
+    {
+      "id": "fa02-03-03",
+      "scene": 3,
+      "visual": "letter-a",
+      "zh": "只取六十四和一，加起来六十五。表里对应的是字母 A。",
+      "en": "Use the sixty-four and one places. That makes sixty-five: the letter A in their table."
+    },
+    {
+      "id": "fa02-03-04",
+      "scene": 3,
+      "visual": "padding",
+      "zh": "前面的零也要送。说好八颗一组，就收满八颗再读。",
+      "en": "Send the leading zeros too. They agreed to read a letter after all eight balls arrive."
+    },
+    {
+      "id": "fa02-03-05",
+      "scene": 3,
+      "visual": "ascii",
+      "zh": "这次用阿斯基表，字母用八位来写。换别的表，就要按那张表的规矩。",
+      "en": "Here they use ASCII letters written with eight bits. Another code table could use different rules."
+    },
+    {
+      "id": "fa02-04-01",
+      "scene": 4,
+      "visual": "send-p",
+      "zh": "米娅开始发邀请。第一个字母是 P，按编码表，一颗一颗送。",
+      "en": "Mia sends her invitation. The first letter is P. She sends its pattern, one ball at a time.",
+      "minSeconds": 7
+    },
+    {
+      "id": "fa02-04-02",
+      "scene": 4,
+      "visual": "send-play",
+      "zh": "接着是 L、A、Y。每收满八颗，接收屏上就出现一个字母。",
+      "en": "Then come L, A and Y. Every eight balls give Leo another letter on his screen.",
+      "minSeconds": 12
+    },
+    {
+      "id": "fa02-04-03",
+      "scene": 4,
+      "visual": "received",
+      "zh": "拼起来是 PLAY，一起来玩！纸条没过去，意思已经到了。",
+      "en": "The letters spell PLAY. The note stayed behind, but the invitation got through.",
+      "minSeconds": 5.4
+    },
+    {
+      "id": "fa02-05-01",
+      "scene": 5,
+      "visual": "boxes",
+      "zh": "开玩前，米娅还藏了个小礼物。就在里奥面前的十个盒子里。",
+      "en": "Before the game, Mia hid a little gift in one of the ten boxes in Leo's cargo bay.",
+      "minSeconds": 5.8
+    },
+    {
+      "id": "fa02-05-02",
+      "scene": 5,
+      "visual": "questions-rule",
+      "zh": "他们先约好一套是否问题。里奥按顺序提问，米娅用珠子回答。",
+      "en": "They agreed on a set of yes-or-no questions. Leo follows it. Mia replies with a gold or blue ball."
+    },
+    {
+      "id": "fa02-05-03",
+      "scene": 5,
+      "visual": "bad-question",
+      "zh": "如果挨个问，是一号吗，是二号吗，没猜中的盒子还剩一大堆。",
+      "en": "Is it box one? Box two? If the answers are no, almost all the boxes remain."
+    },
+    {
+      "id": "fa02-05-04",
+      "scene": 5,
+      "visual": "guess-1",
+      "zh": "换个问法：号码比五大吗？是。前面五个盒子都不用看了。",
+      "en": "Try this: is the number greater than five? Yes. Five boxes disappear at once."
+    },
+    {
+      "id": "fa02-05-05",
+      "scene": 5,
+      "visual": "guess-2",
+      "zh": "比八大吗？否。现在只剩六、七、八。",
+      "en": "Greater than eight? No. Only six, seven and eight remain."
+    },
+    {
+      "id": "fa02-05-06",
+      "scene": 5,
+      "visual": "guess-3",
+      "zh": "比六大吗？是。剩下七和八。",
+      "en": "Greater than six? Yes. That leaves seven and eight."
+    },
+    {
+      "id": "fa02-05-07",
+      "scene": 5,
+      "visual": "guess-4",
+      "zh": "比七大吗？否。找到了，七号盒子！",
+      "en": "Greater than seven? No. There it is: box seven!"
+    },
+    {
+      "id": "fa02-06-01",
+      "scene": 6,
+      "visual": "tree-three",
+      "zh": "三次是否回答，最多分出八种结果。十个盒子，装不下。",
+      "en": "Three yes-or-no answers can distinguish at most eight outcomes. That cannot cover ten boxes."
+    },
+    {
+      "id": "fa02-06-02",
+      "scene": 6,
+      "visual": "tree-four",
+      "zh": "四次最多能分出十六种。问题问得合适，最坏四次也能找出这十个里的任何一个。",
+      "en": "Four answers allow sixteen outcomes. With suitable questions, four always suffice for any of the ten boxes."
+    },
+    {
+      "id": "fa02-06-03",
+      "scene": 6,
+      "visual": "thousand",
+      "zh": "就算有一千个，十次也够。前提是每次尽量把剩下的分成数量接近的两组。",
+      "en": "Even a thousand possibilities need only ten answers, if each question splits the remaining choices as evenly as possible."
+    },
+    {
+      "id": "fa02-07-01",
+      "scene": 7,
+      "visual": "fruit",
+      "zh": "盒子找到了，里面是哪种点心？候选是香蕉、苹果、葡萄和西瓜。",
+      "en": "The box is found. Which snack is inside: a banana, an apple, grapes, or watermelon?"
+    },
+    {
+      "id": "fa02-07-02",
+      "scene": 7,
+      "visual": "fruit-red",
+      "zh": "先问，图上有红色吗？是。香蕉和葡萄先放一边。",
+      "en": "Is it red in these pictures? Yes. Put the banana and grapes aside."
+    },
+    {
+      "id": "fa02-07-03",
+      "scene": 7,
+      "visual": "fruit-seeds",
+      "zh": "图上能看见种子吗？能，原来是这块西瓜。两问就找到了。",
+      "en": "Can you see seeds? Yes. It is the watermelon slice. Two questions found it.",
+      "afterHoldSeconds": 5.0
+    },
+    {
+      "id": "fa02-07-04",
+      "scene": 7,
+      "visual": "fruit-tree",
+      "zh": "这里两问够用，是因为问题把它们分开了。随便问两个问题，可不一定行。",
+      "en": "Two questions work here because the questions separate the choices. Any two questions will not necessarily do."
+    },
+    {
+      "id": "fa02-08-01",
+      "scene": 8,
+      "visual": "picnic",
+      "zh": "他按下发送键，一颗金色小球传了回去：收到啦！",
+      "en": "Leo presses Send. A gold signal carries his reply: got it!",
+      "minSeconds": 6.0
+    },
+    {
+      "id": "fa02-08-02",
+      "scene": 8,
+      "visual": "lights",
+      "zh": "用电灯也行：关掉表示零，打开表示一。",
+      "en": "The balls carry our message. A light can send the same signals: off for zero, on for one."
+    },
+    {
+      "id": "fa02-08-03",
+      "scene": 8,
+      "visual": "lab",
+      "zh": "到网页实验室里，点亮六十四和一，看看会不会出现 A。",
+      "en": "In the online lab, switch on sixty-four and one. See whether the letter A appears."
+    },
+    {
+      "id": "fa02-08-04",
+      "scene": 8,
+      "visual": "worksheet",
+      "zh": "也可以打印这张表。你写一条消息，给孩子解；再换孩子出题。",
+      "en": "Or print the table. Write a message for your child to decode, then let them make one for you."
+    },
+    {
+      "id": "fa02-08-05",
+      "scene": 8,
+      "visual": "scope",
+      "zh": "今天只试英文字母。一个字节有八位，不代表每种文字都一个字节就够。",
+      "en": "Today we tried English letters. Eight bits make a byte, but not every character fits in one byte."
+    },
+    {
+      "id": "fa02-08-06",
+      "scene": 8,
+      "visual": "invite",
+      "zh": "来 Lucas Academy 一起玩：如果你们之间也只有一根小管子，你最想给对方说什么？",
+      "en": "Join us at Lucas Academy. If you had only a tiny pipe between you, what would you tell your friend?",
+      "hold": 5
+    }
+  ]
+}

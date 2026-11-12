@@ -1,0 +1,44 @@
+【标题 / Title】
+Can 0 and 1 Talk?
+
+【简介 / Description】
+Mia's paper note will not fit through the pipe. She and Leo try a shared code: gold for one, blue for zero.
+
+Send PLAY, follow yes-or-no clues to a hidden gift, and find the watermelon snack. Then try a message of your own with the browser lab or a printed code table.
+
+A story for families about binary messages, bits, bytes and asking useful questions.
+
+Try the browser lab and printable worksheets: https://ai.lucasacademy.org/courses/zero-and-one/
+
+Chapters
+00:00 A note that will not fit
+00:24 Two tiny signals
+00:49 A shared code
+01:24 PLAY arrives
+01:52 Find the hidden gift
+02:38 Why four questions?
+03:02 The watermelon clue
+03:37 Your turn
+
+ASCII reference: https://www.rfc-editor.org/rfc/rfc20
+
+By Lucas Academy Team
+Narration: Louise, synthetic voice in English and Chinese.
+Fictional space scenes: Muse. Environment artwork: ImageGen. Teaching graphics, original music and sound effects: Lucas Academy.
+Browser recording and worksheets: Lucas Academy. Fruit illustrations: Microsoft Fluent Emoji (MIT).
+
+#education #parenting #art #arthistory #stem #bilingual #bilingualchildren #lucas_academy #binary #bitsandbytes #ascii #computerscience #codingforkids #familyailab
+
+【标签 / Tags】
+#binary #bitsandbytes #ascii #computerscience #codingforkids #familyailab #education #parenting #art #arthistory #stem #bilingual #bilingualchildren #lucas_academy
+
+【上传设置 / Upload settings】
+主视频 / Main video: 01-长片/0和1能聊天吗-双语长片.mp4
+原始语言 / Original language: English
+独立中文配音 / Chinese audio: 01-长片/中文音轨.m4a
+独立英文配音 / English audio: 01-长片/英文音轨.m4a
+字幕 / Captions: 01-长片/0和1能聊天吗-双语长片.en.srt; 01-长片/0和1能聊天吗-双语长片.zh-Hans.srt
+封面 / Thumbnail: 03-封面/英文封面.png
+画幅 / Aspect: 16:9
+中英文标题与简介用于同一影片的语言版本 / Localized metadata for one shared video
+类别 / Category: Education

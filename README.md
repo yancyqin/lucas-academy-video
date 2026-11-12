@@ -33,6 +33,10 @@ a sentence. Both run locally on this Mac.
   has no subtitles or reserved caption strip; English/Chinese SRTs are separate files.
   [Production notes](./docs/family-ai-lab-01/production.md) record the original experiment
   selection, media backup and `fal01:*` commands.
+- [`FAMILY-AI-LAB-02.md`](./FAMILY-AI-LAB-02.md) -- the owner's thin-pipe story:
+  two friends encode an invitation, find a hidden gift with yes/no questions and
+  identify its snack. Animated characters and code-derived beads/trees/boxes,
+  English default narration, independent Chinese audio and external SRTs.
 
 ## YouTube covers
 
