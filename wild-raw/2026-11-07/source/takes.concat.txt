@@ -1,0 +1,8 @@
+file '../takes/01-walk-sprint-jump-glide.mp4'
+file '../takes/02-climb-lunge-mantle.mp4'
+file '../takes/03-swim-coast.mp4'
+file '../takes/04-whispering-forest.mp4'
+file '../takes/05-frost-peaks.mp4'
+file '../takes/06-sunset-dunes.mp4'
+file '../takes/07-quality-low-medium-high.mp4'
+file '../takes/08-touch-controls.mp4'

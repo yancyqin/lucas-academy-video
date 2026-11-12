@@ -10,7 +10,9 @@ The 77 matching Chinese/English entries, selected Louise takes, sentence boundar
 - Style preview: `out/family-ai-lab-01/delivery/v3/style-preview.mp4`, a 54-second tour cut from nine scenes in the actual final movie, retaining English/Chinese audio.
 - External captions: `out/family-ai-lab-01/delivery/v3/en.srt` and `zh-Hans.srt`.
 - Separate narration: `out/family-ai-lab-01/audio/v2/en.m4a` and `zh.m4a`.
-- Selected cover: `out/family-ai-lab-01/cover/cover-v2.{en,zh}.png`, 1280×720. [Cover copy and hashes](cover-v2.json); [built-in ImageGen background prompt](cover-v2-prompt.json).
+- Desktop upload package: `/Users/yqin/Desktop/家庭AI实验室-感知机-上传/`. It contains the approved full film, independent English/Chinese AAC audio extracted without re-encoding, both external SRTs, the two selected JPG covers, localized upload copy and SHA256SUMS. [Package receipt](upload-package.json).
+- Selected upload cover: `out/family-ai-lab-01/cover/cover-frame-02.{en,zh}.{jpg,png}`, 1280×720. Yancy selected the background at 00:02 of the approved film. It is extracted from the matching unlettered Muse source, preserving the shot composition; accepted headlines and teaser are typeset by code with a local contrast overlay. [Frame selection, copy and hashes](cover-frame-02.json).
+- The preceding `cover-v2.{en,zh}.png` pair and its ImageGen background remain the S2 title-card theme; the approved film is unchanged by the upload-cover update.
 - Production narration: [Chinese](zh-script.md), [English](en-script.md). Accepted edited reviews: [Chinese](full-review-v2.zh.md), [English](full-review-v2.en.md), with [hashes](accepted-script-v2.json).
 - Earlier deliveries remain in `out/family-ai-lab-01/delivery/` and `delivery/v2/`; their production inputs are preserved in the local data backup’s `archive/v1/` and `archive/v2/`.
 
@@ -74,12 +76,15 @@ python3 ../lucas-academy-video-data/family-ai-lab-01/restore.py "$PWD"
 npm run fal01:timeline:voiced
 npm run fal01:voice:mix
 npm run fal01:cover:v2
+.venv-align/bin/python scripts/family-ai-lab-01/cover_frame.py
 node scripts/family-ai-lab-01/render.cjs --stills
 npm run fal01:final
 npm run fal01:check:final
 python3 scripts/family-ai-lab-01/style_preview.py
 npm run fal01:backup
 ```
+
+Create the desktop upload folder with `python3 scripts/family-ai-lab-01/package.py`. It verifies the approved film hash, identical encoded audio payloads, external subtitle copies, cover dimensions and every package checksum. It refuses to replace an existing upload folder. Upload descriptions use the shared `youtube_tags.py` defaults and the repository's four-section layout; English is the original language and Chinese metadata describes the same film.
 
 The renderer separates `visualRevision: 3` from `revision: 2`: pictures, stills and delivery go to v3 directories while the checked v2 narration mix is reused. It refuses to render without the verified Muse G4 original. All three composition IDs produce the same clean picture; legacy language aliases no longer burn captions. SRTs are copied beside the movie and never muxed into it.
 

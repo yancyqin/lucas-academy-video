@@ -1,0 +1,1888 @@
+{
+  "en/fa02-01-01": {
+    "sha256": "02ffa5a4c0bc4edf2224b4cf61c8e3488a55f53daae79c1bbe34b511cba36914",
+    "expected": "The note won't fit! How can Mia invite Leo to play?",
+    "heard": "The note won't fit. How can Mia invite Leo to play?",
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0.0,
+        "end": 3.54,
+        "text": " The note won't fit. How can Mia invite Leo to play?",
+        "tokens": [
+          50364,
+          440,
+          3637,
+          1582,
+          380,
+          3318,
+          13,
+          1012,
+          393,
+          28545,
+          7980,
+          19344,
+          281,
+          862,
+          30,
+          50548
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.28128943723790784,
+        "compression_ratio": 0.8793103448275862,
+        "no_speech_prob": 0.04024435207247734,
+        "words": [
+          {
+            "word": " The",
+            "start": 0.0,
+            "end": 0.18,
+            "probability": 0.4807278513908386
+          },
+          {
+            "word": " note",
+            "start": 0.18,
+            "end": 0.46,
+            "probability": 0.9379820823669434
+          },
+          {
+            "word": " won't",
+            "start": 0.46,
+            "end": 0.72,
+            "probability": 0.9952764809131622
+          },
+          {
+            "word": " fit.",
+            "start": 0.72,
+            "end": 0.94,
+            "probability": 0.9884137511253357
+          },
+          {
+            "word": " How",
+            "start": 1.68,
+            "end": 1.88,
+            "probability": 0.9886067509651184
+          },
+          {
+            "word": " can",
+            "start": 1.88,
+            "end": 2.12,
+            "probability": 0.9948899745941162
+          },
+          {
+            "word": " Mia",
+            "start": 2.12,
+            "end": 2.34,
+            "probability": 0.9534738063812256
+          },
+          {
+            "word": " invite",
+            "start": 2.34,
+            "end": 2.8,
+            "probability": 0.9917681217193604
+          },
+          {
+            "word": " Leo",
+            "start": 2.8,
+            "end": 3.12,
+            "probability": 0.9699768424034119
+          },
+          {
+            "word": " to",
+            "start": 3.12,
+            "end": 3.3,
+            "probability": 0.9982946515083313
+          },
+          {
+            "word": " play?",
+            "start": 3.3,
+            "end": 3.54,
+            "probability": 0.9984316229820251
+          }
+        ]
+      }
+    ],
+    "model": "small"
+  },
+  "en/fa02-01-02": {
+    "sha256": "8f778be537670c05ab69903cfb1bf0fc9b9f124a5ee0a7c63887bd902c4173e2",
+    "expected": "Their space pods are linked by one tiny pipe.",
+    "heard": "Their space pods are linked by one tiny pipe.",
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0.0,
+        "end": 3.0,
+        "text": " Their space pods are linked by one tiny pipe.",
+        "tokens": [
+          50364,
+          6710,
+          1901,
+          31925,
+          366,
+          9408,
+          538,
+          472,
+          5870,
+          11240,
+          13,
+          50528
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.29607022725618803,
+        "compression_ratio": 0.8490566037735849,
+        "no_speech_prob": 0.011080624535679817,
+        "words": [
+          {
+            "word": " Their",
+            "start": 0.0,
+            "end": 0.76,
+            "probability": 0.8160776495933533
+          },
+          {
+            "word": " space",
+            "start": 0.76,
+            "end": 1.0,
+            "probability": 0.8566772937774658
+          },
+          {
+            "word": " pods",
+            "start": 1.0,
+            "end": 1.32,
+            "probability": 0.9822061061859131
+          },
+          {
+            "word": " are",
+            "start": 1.32,
+            "end": 1.52,
+            "probability": 0.9975766539573669
+          },
+          {
+            "word": " linked",
+            "start": 1.52,
+            "end": 1.74,
+            "probability": 0.9975866079330444
+          },
+          {
+            "word": " by",
+            "start": 1.74,
+            "end": 2.02,
+            "probability": 0.9970701932907104
+          },
+          {
+            "word": " one",
+            "start": 2.02,
+            "end": 2.32,
+            "probability": 0.9773319363594055
+          },
+          {
+            "word": " tiny",
+            "start": 2.32,
+            "end": 2.7,
+            "probability": 0.9845319390296936
+          },
+          {
+            "word": " pipe.",
+            "start": 2.7,
+            "end": 3.0,
+            "probability": 0.9945858716964722
+          }
+        ]
+      }
+    ],
+    "model": "small"
+  },
+  "en/fa02-04-02": {
+    "sha256": "8d92978550331cb86729a4d638ae74e99b54e89b3f5e58d8ed5b00ef8b0cd52e",
+    "expected": "Then come L, A and Y. Every eight balls give Leo another letter on his screen.",
+    "heard": "Then, come L, A and Y. Every eight balls give Leo another letter on his screen.",
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0.0,
+        "end": 2.18,
+        "text": " Then, come L, A and Y.",
+        "tokens": [
+          50364,
+          1396,
+          11,
+          808,
+          441,
+          11,
+          316,
+          293,
+          398,
+          13,
+          50506
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.2571183013916016,
+        "compression_ratio": 0.9875,
+        "no_speech_prob": 0.009347460232675076,
+        "words": [
+          {
+            "word": " Then,",
+            "start": 0.0,
+            "end": 0.28,
+            "probability": 0.7635077238082886
+          },
+          {
+            "word": " come",
+            "start": 0.54,
+            "end": 0.76,
+            "probability": 0.8144646286964417
+          },
+          {
+            "word": " L,",
+            "start": 0.76,
+            "end": 1.1,
+            "probability": 0.8460557460784912
+          },
+          {
+            "word": " A",
+            "start": 1.36,
+            "end": 1.68,
+            "probability": 0.9899277091026306
+          },
+          {
+            "word": " and",
+            "start": 1.68,
+            "end": 1.92,
+            "probability": 0.5984311699867249
+          },
+          {
+            "word": " Y.",
+            "start": 1.92,
+            "end": 2.18,
+            "probability": 0.9963250756263733
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "seek": 0,
+        "start": 2.76,
+        "end": 6.0,
+        "text": " Every eight balls give Leo another letter on his screen.",
+        "tokens": [
+          50506,
+          2048,
+          3180,
+          9803,
+          976,
+          19344,
+          1071,
+          5063,
+          322,
+          702,
+          2568,
+          13,
+          50680
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.2571183013916016,
+        "compression_ratio": 0.9875,
+        "no_speech_prob": 0.009347460232675076,
+        "words": [
+          {
+            "word": " Every",
+            "start": 2.76,
+            "end": 3.1,
+            "probability": 0.9649660587310791
+          },
+          {
+            "word": " eight",
+            "start": 3.1,
+            "end": 3.38,
+            "probability": 0.6095485091209412
+          },
+          {
+            "word": " balls",
+            "start": 3.38,
+            "end": 3.74,
+            "probability": 0.9857111573219299
+          },
+          {
+            "word": " give",
+            "start": 3.74,
+            "end": 4.2,
+            "probability": 0.6758245229721069
+          },
+          {
+            "word": " Leo",
+            "start": 4.2,
+            "end": 4.52,
+            "probability": 0.9860652685165405
+          },
+          {
+            "word": " another",
+            "start": 4.52,
+            "end": 5.0,
+            "probability": 0.9910981059074402
+          },
+          {
+            "word": " letter",
+            "start": 5.0,
+            "end": 5.36,
+            "probability": 0.9984673857688904
+          },
+          {
+            "word": " on",
+            "start": 5.36,
+            "end": 5.62,
+            "probability": 0.9980237483978271
+          },
+          {
+            "word": " his",
+            "start": 5.62,
+            "end": 5.76,
+            "probability": 0.9927478432655334
+          },
+          {
+            "word": " screen.",
+            "start": 5.76,
+            "end": 6.0,
+            "probability": 0.9860365390777588
+          }
+        ]
+      }
+    ],
+    "model": "small"
+  },
+  "en/fa02-05-01": {
+    "sha256": "75163e81e80f7e0cac611212cff348511953e6ab9c2099a7667f330652f00846",
+    "expected": "Before the game, Mia hid a little gift in one of the ten boxes in Leo's cargo bay.",
+    "heard": "Before the game, Mia hid a little gift in one of the 10 boxes in Leo's cargo bay.",
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0.0,
+        "end": 5.3,
+        "text": " Before the game, Mia hid a little gift in one of the 10 boxes in Leo's cargo bay.",
+        "tokens": [
+          50364,
+          4546,
+          264,
+          1216,
+          11,
+          28545,
+          16253,
+          257,
+          707,
+          5306,
+          294,
+          472,
+          295,
+          264,
+          1266,
+          9002,
+          294,
+          19344,
+          311,
+          19449,
+          13642,
+          13,
+          50639
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.20585872729619345,
+        "compression_ratio": 1.0125,
+        "no_speech_prob": 0.008293344639241695,
+        "words": [
+          {
+            "word": " Before",
+            "start": 0.0,
+            "end": 0.5,
+            "probability": 0.9485529661178589
+          },
+          {
+            "word": " the",
+            "start": 0.5,
+            "end": 0.7,
+            "probability": 0.9972986578941345
+          },
+          {
+            "word": " game,",
+            "start": 0.7,
+            "end": 0.96,
+            "probability": 0.9988678693771362
+          },
+          {
+            "word": " Mia",
+            "start": 1.34,
+            "end": 1.5,
+            "probability": 0.9305006861686707
+          },
+          {
+            "word": " hid",
+            "start": 1.5,
+            "end": 1.88,
+            "probability": 0.932966947555542
+          },
+          {
+            "word": " a",
+            "start": 1.88,
+            "end": 2.04,
+            "probability": 0.9977728724479675
+          },
+          {
+            "word": " little",
+            "start": 2.04,
+            "end": 2.18,
+            "probability": 0.9938969016075134
+          },
+          {
+            "word": " gift",
+            "start": 2.18,
+            "end": 2.52,
+            "probability": 0.9983982443809509
+          },
+          {
+            "word": " in",
+            "start": 2.52,
+            "end": 2.86,
+            "probability": 0.9939905405044556
+          },
+          {
+            "word": " one",
+            "start": 2.86,
+            "end": 2.96,
+            "probability": 0.9940537810325623
+          },
+          {
+            "word": " of",
+            "start": 2.96,
+            "end": 3.08,
+            "probability": 0.9962478280067444
+          },
+          {
+            "word": " the",
+            "start": 3.08,
+            "end": 3.2,
+            "probability": 0.9893335700035095
+          },
+          {
+            "word": " 10",
+            "start": 3.2,
+            "end": 3.44,
+            "probability": 0.5474748015403748
+          },
+          {
+            "word": " boxes",
+            "start": 3.44,
+            "end": 3.84,
+            "probability": 0.996576726436615
+          },
+          {
+            "word": " in",
+            "start": 3.84,
+            "end": 4.28,
+            "probability": 0.9890350699424744
+          },
+          {
+            "word": " Leo's",
+            "start": 4.28,
+            "end": 4.7,
+            "probability": 0.9797443449497223
+          },
+          {
+            "word": " cargo",
+            "start": 4.7,
+            "end": 5.0,
+            "probability": 0.6354882121086121
+          },
+          {
+            "word": " bay.",
+            "start": 5.0,
+            "end": 5.3,
+            "probability": 0.9781216382980347
+          }
+        ]
+      }
+    ],
+    "model": "small"
+  },
+  "en/fa02-08-01": {
+    "sha256": "f630d635e1b5063b5be9cbf09ea7abd8ea8047b999f5d82cded69b3fa25632cd",
+    "expected": "Leo presses Send. A gold signal carries his reply: got it!",
+    "heard": "Leo presses send. A gold signal carries his reply. Got it.",
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0.0,
+        "end": 4.54,
+        "text": " Leo presses send. A gold signal carries his reply. Got it.",
+        "tokens": [
+          50364,
+          19344,
+          40892,
+          2845,
+          13,
+          316,
+          3821,
+          6358,
+          16402,
+          702,
+          16972,
+          13,
+          5803,
+          309,
+          13,
+          50594
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.42032656950109143,
+        "compression_ratio": 0.8923076923076924,
+        "no_speech_prob": 0.025942696258425713,
+        "words": [
+          {
+            "word": " Leo",
+            "start": 0.0,
+            "end": 0.52,
+            "probability": 0.86397385597229
+          },
+          {
+            "word": " presses",
+            "start": 0.52,
+            "end": 0.84,
+            "probability": 0.7880414128303528
+          },
+          {
+            "word": " send.",
+            "start": 0.84,
+            "end": 1.26,
+            "probability": 0.19651930034160614
+          },
+          {
+            "word": " A",
+            "start": 1.82,
+            "end": 2.06,
+            "probability": 0.9814156293869019
+          },
+          {
+            "word": " gold",
+            "start": 2.06,
+            "end": 2.26,
+            "probability": 0.971336841583252
+          },
+          {
+            "word": " signal",
+            "start": 2.26,
+            "end": 2.7,
+            "probability": 0.9989196062088013
+          },
+          {
+            "word": " carries",
+            "start": 2.7,
+            "end": 3.2,
+            "probability": 0.9833464622497559
+          },
+          {
+            "word": " his",
+            "start": 3.2,
+            "end": 3.42,
+            "probability": 0.9921514987945557
+          },
+          {
+            "word": " reply.",
+            "start": 3.42,
+            "end": 3.8,
+            "probability": 0.9995373487472534
+          },
+          {
+            "word": " Got",
+            "start": 4.24,
+            "end": 4.4,
+            "probability": 0.9495446681976318
+          },
+          {
+            "word": " it.",
+            "start": 4.4,
+            "end": 4.54,
+            "probability": 0.9880144000053406
+          }
+        ]
+      }
+    ],
+    "model": "small"
+  },
+  "zh/fa02-01-01": {
+    "sha256": "9cad82d37b0ee80dd9801d02991e4cb1f31c98a0792667174a1468ca90d814a9",
+    "expected": "纸条过不去。米亚怎么邀请对面的里奥来玩？",
+    "heard": "指條過不去,米亞怎麼邀請對面的李耀來玩?",
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0.0,
+        "end": 4.1,
+        "text": "指條過不去,米亞怎麼邀請對面的李耀來玩?",
+        "tokens": [
+          50364,
+          25922,
+          31106,
+          8816,
+          1960,
+          6734,
+          11,
+          27742,
+          42552,
+          11614,
+          3023,
+          222,
+          16302,
+          2855,
+          8833,
+          1546,
+          31206,
+          4450,
+          222,
+          3763,
+          19912,
+          30,
+          50580
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.4658483664194743,
+        "compression_ratio": 0.835820895522388,
+        "no_speech_prob": 0.08751329779624939,
+        "words": [
+          {
+            "word": "指",
+            "start": 0.0,
+            "end": 0.54,
+            "probability": 0.29588472843170166
+          },
+          {
+            "word": "條",
+            "start": 0.54,
+            "end": 0.78,
+            "probability": 0.656502366065979
+          },
+          {
+            "word": "過",
+            "start": 0.78,
+            "end": 0.94,
+            "probability": 0.9642360806465149
+          },
+          {
+            "word": "不",
+            "start": 0.94,
+            "end": 1.08,
+            "probability": 0.9897693395614624
+          },
+          {
+            "word": "去,",
+            "start": 1.08,
+            "end": 1.32,
+            "probability": 0.9992959499359131
+          },
+          {
+            "word": "米",
+            "start": 1.82,
+            "end": 2.2,
+            "probability": 0.7292550802230835
+          },
+          {
+            "word": "亞",
+            "start": 2.2,
+            "end": 2.46,
+            "probability": 0.8470089435577393
+          },
+          {
+            "word": "怎麼",
+            "start": 2.46,
+            "end": 2.74,
+            "probability": 0.8090256452560425
+          },
+          {
+            "word": "邀",
+            "start": 2.74,
+            "end": 2.96,
+            "probability": 0.9925424754619598
+          },
+          {
+            "word": "請",
+            "start": 2.96,
+            "end": 3.12,
+            "probability": 0.9961822628974915
+          },
+          {
+            "word": "對",
+            "start": 3.12,
+            "end": 3.24,
+            "probability": 0.9874894022941589
+          },
+          {
+            "word": "面",
+            "start": 3.24,
+            "end": 3.42,
+            "probability": 0.986716628074646
+          },
+          {
+            "word": "的",
+            "start": 3.42,
+            "end": 3.52,
+            "probability": 0.991031289100647
+          },
+          {
+            "word": "李",
+            "start": 3.52,
+            "end": 3.66,
+            "probability": 0.3427460193634033
+          },
+          {
+            "word": "耀",
+            "start": 3.66,
+            "end": 3.78,
+            "probability": 0.5919892564415932
+          },
+          {
+            "word": "來",
+            "start": 3.78,
+            "end": 3.92,
+            "probability": 0.8415417671203613
+          },
+          {
+            "word": "玩?",
+            "start": 3.92,
+            "end": 4.1,
+            "probability": 0.9991258978843689
+          }
+        ]
+      }
+    ],
+    "model": "small"
+  },
+  "zh/fa02-01-02": {
+    "sha256": "32551b538bc1aef7a0a98ecef2d805da8faa2dfb07cb16df5c0ca267a014bf70",
+    "expected": "两座太空舱之间，只连着这根细管。",
+    "heard": "两座台空舱之间只连着这根吸管",
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0.0,
+        "end": 3.06,
+        "text": "两座台空舱之间只连着这根吸管",
+        "tokens": [
+          50364,
+          36257,
+          6346,
+          100,
+          15433,
+          23322,
+          10256,
+          109,
+          9574,
+          31685,
+          14003,
+          3316,
+          252,
+          20708,
+          5562,
+          31337,
+          46431,
+          23131,
+          50528
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.3033466100692749,
+        "compression_ratio": 0.7924528301886793,
+        "no_speech_prob": 0.03595782071352005,
+        "words": [
+          {
+            "word": "两",
+            "start": 0.0,
+            "end": 0.42,
+            "probability": 0.44456663727760315
+          },
+          {
+            "word": "座",
+            "start": 0.42,
+            "end": 0.62,
+            "probability": 0.9968021810054779
+          },
+          {
+            "word": "台",
+            "start": 0.62,
+            "end": 0.74,
+            "probability": 0.8341583013534546
+          },
+          {
+            "word": "空",
+            "start": 0.74,
+            "end": 0.88,
+            "probability": 0.8722646236419678
+          },
+          {
+            "word": "舱",
+            "start": 0.88,
+            "end": 1.06,
+            "probability": 0.8466719090938568
+          },
+          {
+            "word": "之",
+            "start": 1.06,
+            "end": 1.22,
+            "probability": 0.9849600195884705
+          },
+          {
+            "word": "间",
+            "start": 1.22,
+            "end": 1.44,
+            "probability": 0.9976056814193726
+          },
+          {
+            "word": "只",
+            "start": 1.44,
+            "end": 2.04,
+            "probability": 0.7958709001541138
+          },
+          {
+            "word": "连",
+            "start": 2.04,
+            "end": 2.28,
+            "probability": 0.9703030586242676
+          },
+          {
+            "word": "着",
+            "start": 2.28,
+            "end": 2.42,
+            "probability": 0.988000214099884
+          },
+          {
+            "word": "这",
+            "start": 2.42,
+            "end": 2.54,
+            "probability": 0.9788426160812378
+          },
+          {
+            "word": "根",
+            "start": 2.54,
+            "end": 2.7,
+            "probability": 0.6798760890960693
+          },
+          {
+            "word": "吸",
+            "start": 2.7,
+            "end": 2.9,
+            "probability": 0.41807740926742554
+          },
+          {
+            "word": "管",
+            "start": 2.9,
+            "end": 3.06,
+            "probability": 0.9975926280021667
+          }
+        ]
+      }
+    ],
+    "model": "small"
+  },
+  "zh/fa02-04-02": {
+    "sha256": "ef7ae25e714246a5e92c92f7f7fbe5708909876dc5cdef0bcdfbe9eedd2a4754",
+    "expected": "接着是字母 L、A、Y。每收满八颗，接收屏上就出现一个字母。",
+    "heard": "接着是字母L,A,Y每收满8颗,接收屏上就出现一个字母",
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0.0,
+        "end": 2.86,
+        "text": "接着是字母L,A,Y",
+        "tokens": [
+          50364,
+          14468,
+          20708,
+          1541,
+          22381,
+          35744,
+          43,
+          11,
+          32,
+          11,
+          56,
+          50518
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.36537978228400736,
+        "compression_ratio": 0.8933333333333333,
+        "no_speech_prob": 0.007711402140557766,
+        "words": [
+          {
+            "word": "接",
+            "start": 0.0,
+            "end": 0.34,
+            "probability": 0.9521738886833191
+          },
+          {
+            "word": "着",
+            "start": 0.34,
+            "end": 0.48,
+            "probability": 0.8083826899528503
+          },
+          {
+            "word": "是",
+            "start": 0.48,
+            "end": 0.6,
+            "probability": 0.8838050961494446
+          },
+          {
+            "word": "字",
+            "start": 0.6,
+            "end": 0.76,
+            "probability": 0.9974055886268616
+          },
+          {
+            "word": "母",
+            "start": 0.76,
+            "end": 0.96,
+            "probability": 0.9584510326385498
+          },
+          {
+            "word": "L,",
+            "start": 0.96,
+            "end": 1.32,
+            "probability": 0.5355741381645203
+          },
+          {
+            "word": "A,",
+            "start": 1.72,
+            "end": 2.08,
+            "probability": 0.8824990391731262
+          },
+          {
+            "word": "Y",
+            "start": 2.54,
+            "end": 2.86,
+            "probability": 0.9935848116874695
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "seek": 0,
+        "start": 3.8199999999999994,
+        "end": 7.24,
+        "text": "每收满8颗,接收屏上就出现一个字母",
+        "tokens": [
+          50556,
+          23664,
+          18681,
+          15868,
+          94,
+          23,
+          12501,
+          245,
+          11,
+          14468,
+          18681,
+          9636,
+          237,
+          5708,
+          3111,
+          7781,
+          20204,
+          20182,
+          22381,
+          35744,
+          50736
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.36537978228400736,
+        "compression_ratio": 0.8933333333333333,
+        "no_speech_prob": 0.007711402140557766,
+        "words": [
+          {
+            "word": "每",
+            "start": 3.8199999999999994,
+            "end": 4.22,
+            "probability": 0.9270757436752319
+          },
+          {
+            "word": "收",
+            "start": 4.22,
+            "end": 4.42,
+            "probability": 0.5414955019950867
+          },
+          {
+            "word": "满",
+            "start": 4.42,
+            "end": 4.6,
+            "probability": 0.9639666378498077
+          },
+          {
+            "word": "8",
+            "start": 4.6,
+            "end": 4.88,
+            "probability": 0.6446786522865295
+          },
+          {
+            "word": "颗,",
+            "start": 4.88,
+            "end": 5.02,
+            "probability": 0.9522216618061066
+          },
+          {
+            "word": "接",
+            "start": 5.44,
+            "end": 5.62,
+            "probability": 0.9039072394371033
+          },
+          {
+            "word": "收",
+            "start": 5.62,
+            "end": 5.86,
+            "probability": 0.9947768449783325
+          },
+          {
+            "word": "屏",
+            "start": 5.86,
+            "end": 6.1,
+            "probability": 0.7988443076610565
+          },
+          {
+            "word": "上",
+            "start": 6.1,
+            "end": 6.3,
+            "probability": 0.9252707362174988
+          },
+          {
+            "word": "就",
+            "start": 6.3,
+            "end": 6.44,
+            "probability": 0.9392593502998352
+          },
+          {
+            "word": "出",
+            "start": 6.44,
+            "end": 6.6,
+            "probability": 0.9901976585388184
+          },
+          {
+            "word": "现",
+            "start": 6.6,
+            "end": 6.74,
+            "probability": 0.9941743016242981
+          },
+          {
+            "word": "一个",
+            "start": 6.74,
+            "end": 6.88,
+            "probability": 0.9499128460884094
+          },
+          {
+            "word": "字",
+            "start": 6.88,
+            "end": 7.08,
+            "probability": 0.9988923668861389
+          },
+          {
+            "word": "母",
+            "start": 7.08,
+            "end": 7.24,
+            "probability": 0.9929432272911072
+          }
+        ]
+      }
+    ],
+    "model": "small"
+  },
+  "zh/fa02-08-01": {
+    "sha256": "cefd265dc3adf388edca962a1b2ad9f5edb65171b6c5ff47bbbd6674b2189885",
+    "expected": "里奥按下发送键，送回一颗金色信号球：收到啦！",
+    "heard": "你要按下发送键,送回一颗金色信号球。收到了!",
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0.0,
+        "end": 3.64,
+        "text": "你要按下发送键,送回一颗金色信号球。",
+        "tokens": [
+          50364,
+          32085,
+          26613,
+          4438,
+          28926,
+          29309,
+          23049,
+          106,
+          11,
+          29309,
+          8350,
+          2257,
+          12501,
+          245,
+          19117,
+          17673,
+          17665,
+          26987,
+          28533,
+          1543,
+          50564
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.30978146305790655,
+        "compression_ratio": 0.8493150684931506,
+        "no_speech_prob": 0.057426419109106064,
+        "words": [
+          {
+            "word": "你要",
+            "start": 0.0,
+            "end": 0.6,
+            "probability": 0.5396291613578796
+          },
+          {
+            "word": "按",
+            "start": 0.6,
+            "end": 0.84,
+            "probability": 0.9918020367622375
+          },
+          {
+            "word": "下",
+            "start": 0.84,
+            "end": 1.02,
+            "probability": 0.9969826340675354
+          },
+          {
+            "word": "发",
+            "start": 1.02,
+            "end": 1.18,
+            "probability": 0.5302808880805969
+          },
+          {
+            "word": "送",
+            "start": 1.18,
+            "end": 1.36,
+            "probability": 0.9870928525924683
+          },
+          {
+            "word": "键,",
+            "start": 1.36,
+            "end": 1.64,
+            "probability": 0.8699963986873627
+          },
+          {
+            "word": "送",
+            "start": 1.96,
+            "end": 2.18,
+            "probability": 0.9944644570350647
+          },
+          {
+            "word": "回",
+            "start": 2.18,
+            "end": 2.36,
+            "probability": 0.9514484405517578
+          },
+          {
+            "word": "一",
+            "start": 2.36,
+            "end": 2.54,
+            "probability": 0.9690136909484863
+          },
+          {
+            "word": "颗",
+            "start": 2.54,
+            "end": 2.68,
+            "probability": 0.9829178750514984
+          },
+          {
+            "word": "金",
+            "start": 2.68,
+            "end": 2.9,
+            "probability": 0.9645914435386658
+          },
+          {
+            "word": "色",
+            "start": 2.9,
+            "end": 3.1,
+            "probability": 0.99954754114151
+          },
+          {
+            "word": "信",
+            "start": 3.1,
+            "end": 3.26,
+            "probability": 0.986299455165863
+          },
+          {
+            "word": "号",
+            "start": 3.26,
+            "end": 3.42,
+            "probability": 0.986676812171936
+          },
+          {
+            "word": "球。",
+            "start": 3.42,
+            "end": 3.64,
+            "probability": 0.9870834350585938
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "seek": 0,
+        "start": 4.44,
+        "end": 5.04,
+        "text": "收到了!",
+        "tokens": [
+          50564,
+          18681,
+          21381,
+          0,
+          50664
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.30978146305790655,
+        "compression_ratio": 0.8493150684931506,
+        "no_speech_prob": 0.057426419109106064,
+        "words": [
+          {
+            "word": "收",
+            "start": 4.44,
+            "end": 4.84,
+            "probability": 0.9935171604156494
+          },
+          {
+            "word": "到了!",
+            "start": 4.84,
+            "end": 5.04,
+            "probability": 0.8293371200561523
+          }
+        ]
+      }
+    ],
+    "model": "small"
+  },
+  "zh/fa02-01-02.take2": {
+    "sha256": "117e049e06b19a727bb51040ac9a180c5cccd00e5a57db63dead49c72102602f",
+    "expected": "两个太空舱，只靠一条管道连接。",
+    "heard": "兩個太空艙只靠一條管道連接",
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0.0,
+        "end": 3.1,
+        "text": "兩個太空艙只靠一條管道連接",
+        "tokens": [
+          50364,
+          34623,
+          9455,
+          23322,
+          12531,
+          247,
+          14003,
+          5363,
+          254,
+          2257,
+          31106,
+          23131,
+          6025,
+          36252,
+          14468,
+          50536
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.3081812858581543,
+        "compression_ratio": 0.78,
+        "no_speech_prob": 0.0030682210344821215,
+        "words": [
+          {
+            "word": "兩個",
+            "start": 0.0,
+            "end": 0.56,
+            "probability": 0.5057060718536377
+          },
+          {
+            "word": "太",
+            "start": 0.56,
+            "end": 0.78,
+            "probability": 0.9855369925498962
+          },
+          {
+            "word": "空",
+            "start": 0.78,
+            "end": 1.0,
+            "probability": 0.9997499585151672
+          },
+          {
+            "word": "艙",
+            "start": 1.0,
+            "end": 1.32,
+            "probability": 0.8808674216270447
+          },
+          {
+            "word": "只",
+            "start": 1.32,
+            "end": 1.86,
+            "probability": 0.8011897206306458
+          },
+          {
+            "word": "靠",
+            "start": 1.86,
+            "end": 2.04,
+            "probability": 0.9860367774963379
+          },
+          {
+            "word": "一",
+            "start": 2.04,
+            "end": 2.18,
+            "probability": 0.8682827949523926
+          },
+          {
+            "word": "條",
+            "start": 2.18,
+            "end": 2.34,
+            "probability": 0.9986617565155029
+          },
+          {
+            "word": "管",
+            "start": 2.34,
+            "end": 2.5,
+            "probability": 0.851364016532898
+          },
+          {
+            "word": "道",
+            "start": 2.5,
+            "end": 2.66,
+            "probability": 0.9924426078796387
+          },
+          {
+            "word": "連",
+            "start": 2.66,
+            "end": 2.84,
+            "probability": 0.9454609751701355
+          },
+          {
+            "word": "接",
+            "start": 2.84,
+            "end": 3.1,
+            "probability": 0.7582314014434814
+          }
+        ]
+      }
+    ],
+    "model": "small"
+  },
+  "zh/fa02-08-01.take2": {
+    "sha256": "339eb6078e1304337e9161b82a6a749e232531297d46485a32a2604af86b2f84",
+    "expected": "他按下发送键，一颗金色小球传了回去：收到啦！",
+    "heard": "他按下發送鍵,一顆金色小球傳了回去,收到了",
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0.0,
+        "end": 4.74,
+        "text": "他按下發送鍵,一顆金色小球傳了回去,收到了",
+        "tokens": [
+          50364,
+          5000,
+          26613,
+          4438,
+          14637,
+          29309,
+          41668,
+          113,
+          11,
+          2257,
+          43954,
+          19117,
+          17673,
+          7322,
+          28533,
+          40852,
+          2289,
+          49925,
+          11,
+          18681,
+          21381,
+          50614
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.23767796806667163,
+        "compression_ratio": 0.8428571428571429,
+        "no_speech_prob": 0.04989457502961159,
+        "words": [
+          {
+            "word": "他",
+            "start": 0.0,
+            "end": 0.24,
+            "probability": 0.7607830762863159
+          },
+          {
+            "word": "按",
+            "start": 0.24,
+            "end": 0.4,
+            "probability": 0.9920217394828796
+          },
+          {
+            "word": "下",
+            "start": 0.4,
+            "end": 0.58,
+            "probability": 0.9982882142066956
+          },
+          {
+            "word": "發",
+            "start": 0.58,
+            "end": 0.72,
+            "probability": 0.7670543193817139
+          },
+          {
+            "word": "送",
+            "start": 0.72,
+            "end": 0.94,
+            "probability": 0.985658586025238
+          },
+          {
+            "word": "鍵,",
+            "start": 0.94,
+            "end": 1.28,
+            "probability": 0.8588727712631226
+          },
+          {
+            "word": "一",
+            "start": 1.58,
+            "end": 1.9,
+            "probability": 0.962743878364563
+          },
+          {
+            "word": "顆",
+            "start": 1.9,
+            "end": 2.08,
+            "probability": 0.9690974354743958
+          },
+          {
+            "word": "金",
+            "start": 2.08,
+            "end": 2.32,
+            "probability": 0.9837663173675537
+          },
+          {
+            "word": "色",
+            "start": 2.32,
+            "end": 2.52,
+            "probability": 0.9992708563804626
+          },
+          {
+            "word": "小",
+            "start": 2.52,
+            "end": 2.72,
+            "probability": 0.9839858412742615
+          },
+          {
+            "word": "球",
+            "start": 2.72,
+            "end": 2.96,
+            "probability": 0.9946407079696655
+          },
+          {
+            "word": "傳",
+            "start": 2.96,
+            "end": 3.32,
+            "probability": 0.9781848192214966
+          },
+          {
+            "word": "了",
+            "start": 3.32,
+            "end": 3.46,
+            "probability": 0.8060488700866699
+          },
+          {
+            "word": "回去,",
+            "start": 3.46,
+            "end": 3.7,
+            "probability": 0.9921707510948181
+          },
+          {
+            "word": "收",
+            "start": 4.2,
+            "end": 4.54,
+            "probability": 0.9940451383590698
+          },
+          {
+            "word": "到了",
+            "start": 4.54,
+            "end": 4.74,
+            "probability": 0.7736152410507202
+          }
+        ]
+      }
+    ],
+    "model": "small"
+  },
+  "en/fa02-01-01.take2": {
+    "sha256": "7955c5fd1b42b70873ece6ff2f1d5e87be60913df12880b62133230531cb3974",
+    "expected": "This note is too big. How can Mia invite Leo to play?",
+    "heard": "This note is too big. How can Mia invite Leo to play?",
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0.6599999999999995,
+        "end": 1.94,
+        "text": " This note is too big.",
+        "tokens": [
+          50364,
+          639,
+          3637,
+          307,
+          886,
+          955,
+          13,
+          50544
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.35046795794838353,
+        "compression_ratio": 0.9298245614035088,
+        "no_speech_prob": 0.12674595415592194,
+        "words": [
+          {
+            "word": " This",
+            "start": 0.6599999999999995,
+            "end": 1.1,
+            "probability": 0.6157663464546204
+          },
+          {
+            "word": " note",
+            "start": 1.1,
+            "end": 1.34,
+            "probability": 0.9966316819190979
+          },
+          {
+            "word": " is",
+            "start": 1.34,
+            "end": 1.56,
+            "probability": 0.9962466359138489
+          },
+          {
+            "word": " too",
+            "start": 1.56,
+            "end": 1.72,
+            "probability": 0.9876226186752319
+          },
+          {
+            "word": " big.",
+            "start": 1.72,
+            "end": 1.94,
+            "probability": 0.9979350566864014
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "seek": 0,
+        "start": 3.2,
+        "end": 5.16,
+        "text": " How can Mia invite Leo to play?",
+        "tokens": [
+          50544,
+          1012,
+          393,
+          28545,
+          7980,
+          19344,
+          281,
+          862,
+          30,
+          50632
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.35046795794838353,
+        "compression_ratio": 0.9298245614035088,
+        "no_speech_prob": 0.12674595415592194,
+        "words": [
+          {
+            "word": " How",
+            "start": 3.2,
+            "end": 3.64,
+            "probability": 0.962600588798523
+          },
+          {
+            "word": " can",
+            "start": 3.64,
+            "end": 3.84,
+            "probability": 0.9906623959541321
+          },
+          {
+            "word": " Mia",
+            "start": 3.84,
+            "end": 4.04,
+            "probability": 0.9371582865715027
+          },
+          {
+            "word": " invite",
+            "start": 4.04,
+            "end": 4.48,
+            "probability": 0.9826623201370239
+          },
+          {
+            "word": " Leo",
+            "start": 4.48,
+            "end": 4.68,
+            "probability": 0.9651453495025635
+          },
+          {
+            "word": " to",
+            "start": 4.68,
+            "end": 4.9,
+            "probability": 0.997914731502533
+          },
+          {
+            "word": " play?",
+            "start": 4.9,
+            "end": 5.16,
+            "probability": 0.9978834986686707
+          }
+        ]
+      }
+    ],
+    "model": "small"
+  },
+  "en/fa02-02-01": {
+    "sha256": "dff281da681c9c7ad6b90360983f8071fdc6c8684729dded2d5b44046021e0bc",
+    "expected": "Yes! Start with one little ball. It has just two possible values.",
+    "heard": "Yes, start with one little ball. It has just two possible values.",
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0.0,
+        "end": 4.88,
+        "text": " Yes, start with one little ball. It has just two possible values.",
+        "tokens": [
+          50364,
+          1079,
+          11,
+          722,
+          365,
+          472,
+          707,
+          2594,
+          13,
+          467,
+          575,
+          445,
+          732,
+          1944,
+          4190,
+          13,
+          50628
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.2845061620076497,
+        "compression_ratio": 0.9558823529411765,
+        "no_speech_prob": 0.004523296374827623,
+        "words": [
+          {
+            "word": " Yes,",
+            "start": 0.0,
+            "end": 0.42,
+            "probability": 0.9009310007095337
+          },
+          {
+            "word": " start",
+            "start": 0.94,
+            "end": 1.34,
+            "probability": 0.9887186288833618
+          },
+          {
+            "word": " with",
+            "start": 1.34,
+            "end": 1.58,
+            "probability": 0.9987797141075134
+          },
+          {
+            "word": " one",
+            "start": 1.58,
+            "end": 1.88,
+            "probability": 0.9269524216651917
+          },
+          {
+            "word": " little",
+            "start": 1.88,
+            "end": 2.1,
+            "probability": 0.9810479879379272
+          },
+          {
+            "word": " ball.",
+            "start": 2.1,
+            "end": 2.48,
+            "probability": 0.9983548521995544
+          },
+          {
+            "word": " It",
+            "start": 2.98,
+            "end": 3.24,
+            "probability": 0.99196857213974
+          },
+          {
+            "word": " has",
+            "start": 3.24,
+            "end": 3.4,
+            "probability": 0.9979270696640015
+          },
+          {
+            "word": " just",
+            "start": 3.4,
+            "end": 3.64,
+            "probability": 0.9878199100494385
+          },
+          {
+            "word": " two",
+            "start": 3.64,
+            "end": 3.98,
+            "probability": 0.9023572206497192
+          },
+          {
+            "word": " possible",
+            "start": 3.98,
+            "end": 4.42,
+            "probability": 0.9980085492134094
+          },
+          {
+            "word": " values.",
+            "start": 4.42,
+            "end": 4.88,
+            "probability": 0.9983910322189331
+          }
+        ]
+      }
+    ],
+    "model": "small"
+  },
+  "zh/fa02-02-01": {
+    "sha256": "c75271d4526c71c2e853dafa40102865b385332e60fcaea95d6ac3656057a0d8",
+    "expected": "可以！先看一颗珠子。它只有两种可能。",
+    "heard": "可以先看一棵豬子它只有兩種可能",
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0.0,
+        "end": 2.3,
+        "text": "可以先看一棵豬子",
+        "tokens": [
+          50364,
+          6723,
+          10108,
+          4200,
+          2257,
+          16407,
+          113,
+          19517,
+          105,
+          7626,
+          50490
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.488054074739155,
+        "compression_ratio": 0.8035714285714286,
+        "no_speech_prob": 0.008999017998576164,
+        "words": [
+          {
+            "word": "可以",
+            "start": 0.0,
+            "end": 0.54,
+            "probability": 0.9602813720703125
+          },
+          {
+            "word": "先",
+            "start": 0.54,
+            "end": 1.46,
+            "probability": 0.5335240960121155
+          },
+          {
+            "word": "看",
+            "start": 1.46,
+            "end": 1.66,
+            "probability": 0.9962385892868042
+          },
+          {
+            "word": "一",
+            "start": 1.66,
+            "end": 1.82,
+            "probability": 0.9697375297546387
+          },
+          {
+            "word": "棵",
+            "start": 1.82,
+            "end": 1.92,
+            "probability": 0.7121583819389343
+          },
+          {
+            "word": "豬",
+            "start": 1.92,
+            "end": 2.1,
+            "probability": 0.6512135565280914
+          },
+          {
+            "word": "子",
+            "start": 2.1,
+            "end": 2.3,
+            "probability": 0.9141011238098145
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "seek": 0,
+        "start": 2.3,
+        "end": 4.22,
+        "text": "它只有兩種可能",
+        "tokens": [
+          50490,
+          11284,
+          35244,
+          16313,
+          16516,
+          16657,
+          50590
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.488054074739155,
+        "compression_ratio": 0.8035714285714286,
+        "no_speech_prob": 0.008999017998576164,
+        "words": [
+          {
+            "word": "它",
+            "start": 2.3,
+            "end": 3.0,
+            "probability": 0.7285898327827454
+          },
+          {
+            "word": "只有",
+            "start": 3.0,
+            "end": 3.6,
+            "probability": 0.9294312000274658
+          },
+          {
+            "word": "兩",
+            "start": 3.6,
+            "end": 3.78,
+            "probability": 0.9653505086898804
+          },
+          {
+            "word": "種",
+            "start": 3.78,
+            "end": 3.96,
+            "probability": 0.9974560141563416
+          },
+          {
+            "word": "可能",
+            "start": 3.96,
+            "end": 4.22,
+            "probability": 0.994608998298645
+          }
+        ]
+      }
+    ],
+    "model": "small"
+  }
+}
