@@ -1,0 +1,1121 @@
+{
+  "sourceMovie": "out/family-ai-lab-02/orbital-v2/short/delivery/family-ai-lab-02.short.bilingual.mp4",
+  "sha256": "8644b1ac64cf2cb80b021dd94411072aea89e8a5617bf36e3e051d0ea0cd43ff",
+  "model": "Whisper medium",
+  "language": "en",
+  "expected": "This note is too big. How can Mia invite Leo to play? They share a code. Gold is one. Blue is zero. Yes! His screen says PLAY. The invitation got through! A gift is hidden in one of ten boxes. Four yes-or-no answers lead him to box seven. Watermelon! Now it's Leo's turn to send a message. Leo presses Send. A gold signal carries his reply: got it! Our tiny pipe connects two friends. The internet connects the world! Videos, messages, even chats with AI—all use zeros and ones. A funny story? A new game? What will you share today?",
+  "heard": "This note is too big. How can Mia invite Leo to play? They share a code. Gold is 1. Blue is 0. Yes, his screen says play. The invitation got through. A gift is hidden in one of 10 boxes. Four yes or no answers lead him to box 7. Watermelon. Now, it's Leo's turn to send a message. Leo presses send. A gold signal carries his reply, got it. Our tiny pipe connects two friends. The internet connects the world. Videos, messages, even chats with AI all use zeros and ones. A funny story? A new game? What will you share today? you",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 1.0199999999999994,
+      "end": 3.1,
+      "text": " This note is too big.",
+      "tokens": [
+        50364,
+        639,
+        3637,
+        307,
+        886,
+        955,
+        13,
+        50564
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.27680282592773436,
+      "compression_ratio": 1.3333333333333333,
+      "no_speech_prob": 0.17588289082050323,
+      "words": [
+        {
+          "word": " This",
+          "start": 1.0199999999999994,
+          "end": 1.66,
+          "probability": 0.7550774812698364
+        },
+        {
+          "word": " note",
+          "start": 1.66,
+          "end": 1.82,
+          "probability": 0.9941260814666748
+        },
+        {
+          "word": " is",
+          "start": 1.82,
+          "end": 2.04,
+          "probability": 0.9979552030563354
+        },
+        {
+          "word": " too",
+          "start": 2.04,
+          "end": 2.28,
+          "probability": 0.9885071516036987
+        },
+        {
+          "word": " big.",
+          "start": 2.28,
+          "end": 3.1,
+          "probability": 0.9959754347801208
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 3.74,
+      "end": 5.68,
+      "text": " How can Mia invite Leo to play?",
+      "tokens": [
+        50564,
+        1012,
+        393,
+        28545,
+        7980,
+        19344,
+        281,
+        862,
+        30,
+        50688
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.27680282592773436,
+      "compression_ratio": 1.3333333333333333,
+      "no_speech_prob": 0.17588289082050323,
+      "words": [
+        {
+          "word": " How",
+          "start": 3.74,
+          "end": 4.08,
+          "probability": 0.5941465497016907
+        },
+        {
+          "word": " can",
+          "start": 4.08,
+          "end": 4.32,
+          "probability": 0.9973770380020142
+        },
+        {
+          "word": " Mia",
+          "start": 4.32,
+          "end": 4.54,
+          "probability": 0.9210914969444275
+        },
+        {
+          "word": " invite",
+          "start": 4.54,
+          "end": 4.94,
+          "probability": 0.9937303066253662
+        },
+        {
+          "word": " Leo",
+          "start": 4.94,
+          "end": 5.18,
+          "probability": 0.9596421122550964
+        },
+        {
+          "word": " to",
+          "start": 5.18,
+          "end": 5.44,
+          "probability": 0.9985754489898682
+        },
+        {
+          "word": " play?",
+          "start": 5.44,
+          "end": 5.68,
+          "probability": 0.9824432134628296
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 6.46,
+      "end": 7.48,
+      "text": " They share a code.",
+      "tokens": [
+        50688,
+        814,
+        2073,
+        257,
+        3089,
+        13,
+        50764
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.27680282592773436,
+      "compression_ratio": 1.3333333333333333,
+      "no_speech_prob": 0.17588289082050323,
+      "words": [
+        {
+          "word": " They",
+          "start": 6.46,
+          "end": 6.56,
+          "probability": 0.8838776350021362
+        },
+        {
+          "word": " share",
+          "start": 6.56,
+          "end": 6.9,
+          "probability": 0.9908242225646973
+        },
+        {
+          "word": " a",
+          "start": 6.9,
+          "end": 7.16,
+          "probability": 0.9980841875076294
+        },
+        {
+          "word": " code.",
+          "start": 7.16,
+          "end": 7.48,
+          "probability": 0.9989357590675354
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 8.02,
+      "end": 9.26,
+      "text": " Gold is 1.",
+      "tokens": [
+        50764,
+        6731,
+        307,
+        502,
+        13,
+        50850
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.27680282592773436,
+      "compression_ratio": 1.3333333333333333,
+      "no_speech_prob": 0.17588289082050323,
+      "words": [
+        {
+          "word": " Gold",
+          "start": 8.02,
+          "end": 8.36,
+          "probability": 0.8224379420280457
+        },
+        {
+          "word": " is",
+          "start": 8.36,
+          "end": 8.74,
+          "probability": 0.9770458340644836
+        },
+        {
+          "word": " 1.",
+          "start": 8.74,
+          "end": 9.26,
+          "probability": 0.6835952997207642
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 9.76,
+      "end": 10.84,
+      "text": " Blue is 0.",
+      "tokens": [
+        50850,
+        8510,
+        307,
+        1958,
+        13,
+        50928
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.27680282592773436,
+      "compression_ratio": 1.3333333333333333,
+      "no_speech_prob": 0.17588289082050323,
+      "words": [
+        {
+          "word": " Blue",
+          "start": 9.76,
+          "end": 9.98,
+          "probability": 0.9954395890235901
+        },
+        {
+          "word": " is",
+          "start": 9.98,
+          "end": 10.26,
+          "probability": 0.9982965588569641
+        },
+        {
+          "word": " 0.",
+          "start": 10.26,
+          "end": 10.84,
+          "probability": 0.9416365623474121
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 11.9,
+      "end": 13.56,
+      "text": " Yes, his screen says play.",
+      "tokens": [
+        50928,
+        1079,
+        11,
+        702,
+        2568,
+        1619,
+        862,
+        13,
+        51066
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.27680282592773436,
+      "compression_ratio": 1.3333333333333333,
+      "no_speech_prob": 0.17588289082050323,
+      "words": [
+        {
+          "word": " Yes,",
+          "start": 11.9,
+          "end": 12.26,
+          "probability": 0.951644241809845
+        },
+        {
+          "word": " his",
+          "start": 12.42,
+          "end": 12.62,
+          "probability": 0.9920229911804199
+        },
+        {
+          "word": " screen",
+          "start": 12.62,
+          "end": 12.86,
+          "probability": 0.9966021776199341
+        },
+        {
+          "word": " says",
+          "start": 12.86,
+          "end": 13.12,
+          "probability": 0.9969634413719177
+        },
+        {
+          "word": " play.",
+          "start": 13.12,
+          "end": 13.56,
+          "probability": 0.4430340528488159
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 13.96,
+      "end": 15.12,
+      "text": " The invitation got through.",
+      "tokens": [
+        51066,
+        440,
+        17890,
+        658,
+        807,
+        13,
+        51194
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.27680282592773436,
+      "compression_ratio": 1.3333333333333333,
+      "no_speech_prob": 0.17588289082050323,
+      "words": [
+        {
+          "word": " The",
+          "start": 13.96,
+          "end": 14.14,
+          "probability": 0.9971218705177307
+        },
+        {
+          "word": " invitation",
+          "start": 14.14,
+          "end": 14.56,
+          "probability": 0.9966145157814026
+        },
+        {
+          "word": " got",
+          "start": 14.56,
+          "end": 14.86,
+          "probability": 0.9959337115287781
+        },
+        {
+          "word": " through.",
+          "start": 14.86,
+          "end": 15.12,
+          "probability": 0.8422462344169617
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "seek": 0,
+      "start": 16.66,
+      "end": 18.8,
+      "text": " A gift is hidden in one of 10 boxes.",
+      "tokens": [
+        51194,
+        316,
+        5306,
+        307,
+        7633,
+        294,
+        472,
+        295,
+        1266,
+        9002,
+        13,
+        51438
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.27680282592773436,
+      "compression_ratio": 1.3333333333333333,
+      "no_speech_prob": 0.17588289082050323,
+      "words": [
+        {
+          "word": " A",
+          "start": 16.66,
+          "end": 16.8,
+          "probability": 0.9812575578689575
+        },
+        {
+          "word": " gift",
+          "start": 16.8,
+          "end": 16.94,
+          "probability": 0.9985061287879944
+        },
+        {
+          "word": " is",
+          "start": 16.94,
+          "end": 17.14,
+          "probability": 0.9985559582710266
+        },
+        {
+          "word": " hidden",
+          "start": 17.14,
+          "end": 17.46,
+          "probability": 0.9983589053153992
+        },
+        {
+          "word": " in",
+          "start": 17.46,
+          "end": 17.76,
+          "probability": 0.9852896332740784
+        },
+        {
+          "word": " one",
+          "start": 17.76,
+          "end": 17.94,
+          "probability": 0.7582353353500366
+        },
+        {
+          "word": " of",
+          "start": 17.94,
+          "end": 18.14,
+          "probability": 0.9986562728881836
+        },
+        {
+          "word": " 10",
+          "start": 18.14,
+          "end": 18.34,
+          "probability": 0.6140420436859131
+        },
+        {
+          "word": " boxes.",
+          "start": 18.34,
+          "end": 18.8,
+          "probability": 0.9986294507980347
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "seek": 0,
+      "start": 21.24,
+      "end": 24.7,
+      "text": " Four yes or no answers lead him to box 7.",
+      "tokens": [
+        51438,
+        7451,
+        2086,
+        420,
+        572,
+        6338,
+        1477,
+        796,
+        281,
+        2424,
+        1614,
+        13,
+        51628
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.27680282592773436,
+      "compression_ratio": 1.3333333333333333,
+      "no_speech_prob": 0.17588289082050323,
+      "words": [
+        {
+          "word": " Four",
+          "start": 21.24,
+          "end": 21.58,
+          "probability": 0.5894791483879089
+        },
+        {
+          "word": " yes",
+          "start": 21.58,
+          "end": 21.9,
+          "probability": 0.8659289479255676
+        },
+        {
+          "word": " or",
+          "start": 21.9,
+          "end": 22.08,
+          "probability": 0.8981425166130066
+        },
+        {
+          "word": " no",
+          "start": 22.08,
+          "end": 22.4,
+          "probability": 0.998433530330658
+        },
+        {
+          "word": " answers",
+          "start": 22.4,
+          "end": 22.84,
+          "probability": 0.9955121874809265
+        },
+        {
+          "word": " lead",
+          "start": 22.84,
+          "end": 23.14,
+          "probability": 0.9741694331169128
+        },
+        {
+          "word": " him",
+          "start": 23.14,
+          "end": 23.42,
+          "probability": 0.9953904151916504
+        },
+        {
+          "word": " to",
+          "start": 23.42,
+          "end": 23.62,
+          "probability": 0.9980869293212891
+        },
+        {
+          "word": " box",
+          "start": 23.62,
+          "end": 23.96,
+          "probability": 0.8880294561386108
+        },
+        {
+          "word": " 7.",
+          "start": 23.96,
+          "end": 24.7,
+          "probability": 0.7810565233230591
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "seek": 0,
+      "start": 25.42,
+      "end": 25.92,
+      "text": " Watermelon.",
+      "tokens": [
+        51628,
+        8772,
+        22710,
+        13,
+        51706
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.27680282592773436,
+      "compression_ratio": 1.3333333333333333,
+      "no_speech_prob": 0.17588289082050323,
+      "words": [
+        {
+          "word": " Watermelon.",
+          "start": 25.42,
+          "end": 25.92,
+          "probability": 0.9838373363018036
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "seek": 2592,
+      "start": 25.92,
+      "end": 29.26,
+      "text": " Now, it's Leo's turn to send a message.",
+      "tokens": [
+        50364,
+        823,
+        11,
+        309,
+        311,
+        19344,
+        311,
+        1261,
+        281,
+        2845,
+        257,
+        3636,
+        13,
+        50592
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.2785986079726108,
+      "compression_ratio": 1.4314720812182742,
+      "no_speech_prob": 0.042284831404685974,
+      "words": [
+        {
+          "word": " Now,",
+          "start": 25.92,
+          "end": 26.96,
+          "probability": 0.848487377166748
+        },
+        {
+          "word": " it's",
+          "start": 27.14,
+          "end": 27.44,
+          "probability": 0.9748159945011139
+        },
+        {
+          "word": " Leo's",
+          "start": 27.44,
+          "end": 27.76,
+          "probability": 0.9736716747283936
+        },
+        {
+          "word": " turn",
+          "start": 27.76,
+          "end": 28.04,
+          "probability": 0.9982384443283081
+        },
+        {
+          "word": " to",
+          "start": 28.04,
+          "end": 28.22,
+          "probability": 0.9979727864265442
+        },
+        {
+          "word": " send",
+          "start": 28.22,
+          "end": 28.4,
+          "probability": 0.9972042441368103
+        },
+        {
+          "word": " a",
+          "start": 28.4,
+          "end": 28.5,
+          "probability": 0.9975892305374146
+        },
+        {
+          "word": " message.",
+          "start": 28.5,
+          "end": 29.26,
+          "probability": 0.9976447224617004
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "seek": 2592,
+      "start": 30.54,
+      "end": 31.58,
+      "text": " Leo presses send.",
+      "tokens": [
+        50592,
+        19344,
+        40892,
+        2845,
+        13,
+        50672
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.2785986079726108,
+      "compression_ratio": 1.4314720812182742,
+      "no_speech_prob": 0.042284831404685974,
+      "words": [
+        {
+          "word": " Leo",
+          "start": 30.54,
+          "end": 30.8,
+          "probability": 0.9741634130477905
+        },
+        {
+          "word": " presses",
+          "start": 30.8,
+          "end": 31.1,
+          "probability": 0.9924013614654541
+        },
+        {
+          "word": " send.",
+          "start": 31.1,
+          "end": 31.58,
+          "probability": 0.585987389087677
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "seek": 2592,
+      "start": 32.12,
+      "end": 35.14,
+      "text": " A gold signal carries his reply, got it.",
+      "tokens": [
+        50672,
+        316,
+        3821,
+        6358,
+        16402,
+        702,
+        16972,
+        11,
+        658,
+        309,
+        13,
+        50898
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.2785986079726108,
+      "compression_ratio": 1.4314720812182742,
+      "no_speech_prob": 0.042284831404685974,
+      "words": [
+        {
+          "word": " A",
+          "start": 32.12,
+          "end": 32.3,
+          "probability": 0.9927668571472168
+        },
+        {
+          "word": " gold",
+          "start": 32.3,
+          "end": 32.54,
+          "probability": 0.9799463152885437
+        },
+        {
+          "word": " signal",
+          "start": 32.54,
+          "end": 33.0,
+          "probability": 0.998306155204773
+        },
+        {
+          "word": " carries",
+          "start": 33.0,
+          "end": 33.42,
+          "probability": 0.993036687374115
+        },
+        {
+          "word": " his",
+          "start": 33.42,
+          "end": 33.66,
+          "probability": 0.9972508549690247
+        },
+        {
+          "word": " reply,",
+          "start": 33.66,
+          "end": 34.16,
+          "probability": 0.9985467791557312
+        },
+        {
+          "word": " got",
+          "start": 34.42,
+          "end": 34.64,
+          "probability": 0.071875661611557
+        },
+        {
+          "word": " it.",
+          "start": 34.64,
+          "end": 35.14,
+          "probability": 0.9962319731712341
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "seek": 2592,
+      "start": 36.48,
+      "end": 39.06,
+      "text": " Our tiny pipe connects two friends.",
+      "tokens": [
+        50898,
+        2621,
+        5870,
+        11240,
+        16967,
+        732,
+        1855,
+        13,
+        51102
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.2785986079726108,
+      "compression_ratio": 1.4314720812182742,
+      "no_speech_prob": 0.042284831404685974,
+      "words": [
+        {
+          "word": " Our",
+          "start": 36.48,
+          "end": 36.86,
+          "probability": 0.9831563830375671
+        },
+        {
+          "word": " tiny",
+          "start": 36.86,
+          "end": 37.24,
+          "probability": 0.9786818623542786
+        },
+        {
+          "word": " pipe",
+          "start": 37.24,
+          "end": 37.76,
+          "probability": 0.9856216311454773
+        },
+        {
+          "word": " connects",
+          "start": 37.76,
+          "end": 38.28,
+          "probability": 0.9959165453910828
+        },
+        {
+          "word": " two",
+          "start": 38.28,
+          "end": 38.62,
+          "probability": 0.9546083807945251
+        },
+        {
+          "word": " friends.",
+          "start": 38.62,
+          "end": 39.06,
+          "probability": 0.9981451034545898
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "seek": 2592,
+      "start": 40.66,
+      "end": 42.74,
+      "text": " The internet connects the world.",
+      "tokens": [
+        51102,
+        440,
+        4705,
+        16967,
+        264,
+        1002,
+        13,
+        51226
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.2785986079726108,
+      "compression_ratio": 1.4314720812182742,
+      "no_speech_prob": 0.042284831404685974,
+      "words": [
+        {
+          "word": " The",
+          "start": 40.66,
+          "end": 40.9,
+          "probability": 0.9954956769943237
+        },
+        {
+          "word": " internet",
+          "start": 40.9,
+          "end": 41.36,
+          "probability": 0.7108156085014343
+        },
+        {
+          "word": " connects",
+          "start": 41.36,
+          "end": 41.94,
+          "probability": 0.9978126287460327
+        },
+        {
+          "word": " the",
+          "start": 41.94,
+          "end": 42.26,
+          "probability": 0.9934521913528442
+        },
+        {
+          "word": " world.",
+          "start": 42.26,
+          "end": 42.74,
+          "probability": 0.9983600974082947
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "seek": 2592,
+      "start": 43.3,
+      "end": 47.72,
+      "text": " Videos, messages, even chats with AI all use zeros and ones.",
+      "tokens": [
+        51226,
+        25903,
+        11,
+        7897,
+        11,
+        754,
+        38057,
+        365,
+        7318,
+        439,
+        764,
+        35193,
+        293,
+        2306,
+        13,
+        51514
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.2785986079726108,
+      "compression_ratio": 1.4314720812182742,
+      "no_speech_prob": 0.042284831404685974,
+      "words": [
+        {
+          "word": " Videos,",
+          "start": 43.3,
+          "end": 43.72,
+          "probability": 0.9939456582069397
+        },
+        {
+          "word": " messages,",
+          "start": 44.1,
+          "end": 44.42,
+          "probability": 0.9935193657875061
+        },
+        {
+          "word": " even",
+          "start": 44.82,
+          "end": 45.04,
+          "probability": 0.9894002079963684
+        },
+        {
+          "word": " chats",
+          "start": 45.04,
+          "end": 45.4,
+          "probability": 0.9972545504570007
+        },
+        {
+          "word": " with",
+          "start": 45.4,
+          "end": 45.74,
+          "probability": 0.9752492904663086
+        },
+        {
+          "word": " AI",
+          "start": 45.74,
+          "end": 46.14,
+          "probability": 0.9043461084365845
+        },
+        {
+          "word": " all",
+          "start": 46.14,
+          "end": 46.66,
+          "probability": 0.6650453805923462
+        },
+        {
+          "word": " use",
+          "start": 46.66,
+          "end": 46.9,
+          "probability": 0.9850465059280396
+        },
+        {
+          "word": " zeros",
+          "start": 46.9,
+          "end": 47.18,
+          "probability": 0.8806303143501282
+        },
+        {
+          "word": " and",
+          "start": 47.18,
+          "end": 47.4,
+          "probability": 0.9647834897041321
+        },
+        {
+          "word": " ones.",
+          "start": 47.4,
+          "end": 47.72,
+          "probability": 0.9814513325691223
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "seek": 2592,
+      "start": 48.92,
+      "end": 49.98,
+      "text": " A funny story?",
+      "tokens": [
+        51514,
+        316,
+        4074,
+        1657,
+        30,
+        51564
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.2785986079726108,
+      "compression_ratio": 1.4314720812182742,
+      "no_speech_prob": 0.042284831404685974,
+      "words": [
+        {
+          "word": " A",
+          "start": 48.92,
+          "end": 49.2,
+          "probability": 0.9887579083442688
+        },
+        {
+          "word": " funny",
+          "start": 49.2,
+          "end": 49.44,
+          "probability": 0.9983024597167969
+        },
+        {
+          "word": " story?",
+          "start": 49.44,
+          "end": 49.98,
+          "probability": 0.999248206615448
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "seek": 2592,
+      "start": 50.22,
+      "end": 50.98,
+      "text": " A new game?",
+      "tokens": [
+        51564,
+        316,
+        777,
+        1216,
+        30,
+        51646
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.2785986079726108,
+      "compression_ratio": 1.4314720812182742,
+      "no_speech_prob": 0.042284831404685974,
+      "words": [
+        {
+          "word": " A",
+          "start": 50.22,
+          "end": 50.48,
+          "probability": 0.9840660691261292
+        },
+        {
+          "word": " new",
+          "start": 50.48,
+          "end": 50.64,
+          "probability": 0.9954379200935364
+        },
+        {
+          "word": " game?",
+          "start": 50.64,
+          "end": 50.98,
+          "probability": 0.8721734881401062
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "seek": 2592,
+      "start": 51.46,
+      "end": 52.56,
+      "text": " What will you share today?",
+      "tokens": [
+        51646,
+        708,
+        486,
+        291,
+        2073,
+        965,
+        30,
+        51692
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.2785986079726108,
+      "compression_ratio": 1.4314720812182742,
+      "no_speech_prob": 0.042284831404685974,
+      "words": [
+        {
+          "word": " What",
+          "start": 51.46,
+          "end": 51.66,
+          "probability": 0.9939004182815552
+        },
+        {
+          "word": " will",
+          "start": 51.66,
+          "end": 51.82,
+          "probability": 0.9899077415466309
+        },
+        {
+          "word": " you",
+          "start": 51.82,
+          "end": 52.04,
+          "probability": 0.9986612796783447
+        },
+        {
+          "word": " share",
+          "start": 52.04,
+          "end": 52.18,
+          "probability": 0.9989635944366455
+        },
+        {
+          "word": " today?",
+          "start": 52.18,
+          "end": 52.56,
+          "probability": 0.9971708655357361
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "seek": 5592,
+      "start": 55.92,
+      "end": 56.34,
+      "text": " you",
+      "tokens": [
+        50364,
+        291,
+        50467
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.8804606795310974,
+      "compression_ratio": 0.2727272727272727,
+      "no_speech_prob": 0.9252938032150269,
+      "words": [
+        {
+          "word": " you",
+          "start": 55.92,
+          "end": 56.34,
+          "probability": 0.12460527569055557
+        }
+      ]
+    }
+  ],
+  "untrimmedTrackNormalizedMatch": false,
+  "narratedWindowHeard": "This note is too big. How can Mia invite Leo to play? They share a code. Gold is 1. Blue is 0. Yes, his screen says play. The invitation got through. A gift is hidden in one of 10 boxes. Four yes or no answers lead him to box 7. Watermelon. Now, it's Leo's turn to send a message. Leo presses send. A gold signal carries his reply, got it. Our tiny pipe connects two friends. The internet connects the world. Videos, messages, even chats with AI all use zeros and ones. A funny story? A new game? What will you share today?",
+  "narrationEndSeconds": 52.6,
+  "musicOnlyTailSeconds": [
+    52.6,
+    56.9
+  ],
+  "outsideNarrationAsrSegments": [
+    {
+      "start": 55.92,
+      "end": 56.34,
+      "text": " you"
+    }
+  ],
+  "narratedWindowNormalizedMatch": true,
+  "note": "All 11 narrated cues match after punctuation and numeral-format normalization. Raw full-track ASR retains a spurious you at 55.92 seconds, more than 3 seconds after the final source voice ends at 52.60. The remaining tail consists of the procedural score, ducking and sound-effect mix; Muse source audio is muted."
+}

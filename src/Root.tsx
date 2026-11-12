@@ -1,4 +1,7 @@
 import {FamilyAiLab01, calculateFamilyMetadata} from './videos/family-ai-lab-01/FamilyAiLab01';
+import {FamilyAiLab02, calculateFamily02Metadata} from './videos/family-ai-lab-02/FamilyAiLab02';
+import {FamilyAiLab02Orbital, calculateOrbitalMetadata} from './videos/family-ai-lab-02/FamilyAiLab02Orbital';
+import {FamilyAiLab02Short, calculateShortMetadata} from './videos/family-ai-lab-02/FamilyAiLab02Short';
 import {Composition} from 'remotion';
 import {VG_WHY_DURATION, VG_WHY_FPS, VgWhyCover, VgWhyVideo} from './videos/vg-why/VgWhyVideo';
 import {RD_FPS, filmDuration, LanguageBridgeCover, LanguageBridgeVideo, type LanguageBridgeProps} from './videos/ReciprocalDoorsVideo';
@@ -350,6 +353,9 @@ export const Root: FC = () => {
       <Composition id="MiddleIncomeTrapCoverEn" component={MiddleIncomeTrapCoverEn} durationInFrames={1} fps={30} width={1280} height={720} />
       <Composition id="AiSycophancy" component={AiSycophancyVideo} durationInFrames={18000} fps={30} width={1920} height={1080} defaultProps={{tl:null, lang:'zh' as const}} calculateMetadata={calculateAsMetadata} />
       <Composition id="FamilyAiLab01" component={FamilyAiLab01} fps={30} width={1920} height={1080} durationInFrames={13000} defaultProps={{tl:null,data:null}} calculateMetadata={calculateFamilyMetadata} />
+      <Composition id="FamilyAiLab02" component={FamilyAiLab02} fps={30} width={1920} height={1080} durationInFrames={9000} defaultProps={{tl:null,facts:null}} calculateMetadata={calculateFamily02Metadata} />
+      <Composition id="FamilyAiLab02Orbital" component={FamilyAiLab02Orbital} fps={30} width={1920} height={1080} durationInFrames={1260} defaultProps={{tl:null,facts:null,view:'study' as const}} calculateMetadata={calculateOrbitalMetadata} />
+      <Composition id="FamilyAiLab02Short" component={FamilyAiLab02Short} fps={30} width={1080} height={1920} durationInFrames={1350} defaultProps={{tl:null,facts:null}} calculateMetadata={calculateShortMetadata} />
       <Composition id="FamilyAiLab01En" component={FamilyAiLab01} fps={30} width={1920} height={1080} durationInFrames={13000} defaultProps={{tl:null,data:null}} calculateMetadata={calculateFamilyMetadata} />
       <Composition id="FamilyAiLab01Zh" component={FamilyAiLab01} fps={30} width={1920} height={1080} durationInFrames={13000} defaultProps={{tl:null,data:null}} calculateMetadata={calculateFamilyMetadata} />
       <Composition id="FunInformatics04Zh" component={FunInformatics04Video} durationInFrames={18000} fps={30} width={1920} height={1080} defaultProps={{tl:null, lang:'zh' as const}} calculateMetadata={calculateFi04Metadata} />

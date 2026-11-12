@@ -1,0 +1,322 @@
+{
+  "en/p01": {
+    "checked": true,
+    "take": "",
+    "asrModel": "previous-approved",
+    "sha256": "44d6cc1e12d0284f3fb909cf6bfaaebd1322d7a79dc8fbf1c05e7fd04f594d57",
+    "heard": "Let's take Claude Fable 5.1 and GPT-6 Astra back to 1957 for an AI speed race.",
+    "note": "Transcript reviewed against the intended spoken line; numeric spellings and homophones normalized."
+  },
+  "en/p02": {
+    "checked": true,
+    "take": "",
+    "asrModel": "small",
+    "sha256": "e2b6d20f8be803af9a1a3f7ee56d4f1e94ea454af02c29add7f97825392be664",
+    "heard": "Four programs get the same seven. X finishes almost instantly.",
+    "note": "Transcript reviewed against the intended spoken line; numeric spellings and homophones normalized."
+  },
+  "en/p03": {
+    "checked": true,
+    "take": "",
+    "asrModel": "medium",
+    "sha256": "bf02bef3ddadfba2cdc295b42884cd55665fdf02c50001b8c833f814961d4e07",
+    "heard": "Just 0.37 microseconds per picture. All 10 test pictures correct.",
+    "note": "Transcript reviewed against the intended spoken line; numeric spellings and homophones normalized."
+  },
+  "en/p04": {
+    "checked": true,
+    "take": "",
+    "asrModel": "previous-approved",
+    "sha256": "65c7c57fe28dc8bfcb0aa7110c49aab3ac43e0144b0beea400bf544ed1679b65",
+    "heard": "3 million times faster than Claude Fable 5.1 and 10 million times faster than GPT 6 Astra.",
+    "note": "Transcript reviewed against the intended spoken line; numeric spellings and homophones normalized."
+  },
+  "en/p05": {
+    "checked": true,
+    "take": "",
+    "asrModel": "medium",
+    "sha256": "bbe2a6aff5350f1a900e0cf429a09885a31a5842639257d44d613fb0ae9c4d4d",
+    "heard": "Meet the Perceptron, a 1957 idea, using just 400 points.",
+    "note": "Transcript reviewed against the intended spoken line; numeric spellings and homophones normalized."
+  },
+  "en/p06": {
+    "checked": true,
+    "take": "",
+    "asrModel": "small",
+    "sha256": "18f85a12bd570a34cc937957be07b9a68283887335da024f93e5fa3fe19b2b85",
+    "heard": "Add the black squares points. Enough points means yes.",
+    "note": "Transcript reviewed against the intended spoken line; numeric spellings and homophones normalized."
+  },
+  "en/p07": {
+    "checked": true,
+    "take": "",
+    "asrModel": "small",
+    "sha256": "8fa2dc5d7d6c6602fbde7fe4137da853cbfc1ad3579b349b2a664cdea1986783",
+    "heard": "It learned from 419 examples, adjusting those points along the way.",
+    "note": "Transcript reviewed against the intended spoken line; numeric spellings and homophones normalized."
+  },
+  "en/p08": {
+    "checked": true,
+    "take": "",
+    "asrModel": "small",
+    "sha256": "350e5530f0e837d373727baeb729bf2cf8c1e481f702adcf99f8892b7b4d9edd",
+    "heard": "Winning this specialized speed test doesn't make it smarter overall.",
+    "note": "Transcript reviewed against the intended spoken line; numeric spellings and homophones normalized."
+  },
+  "en/p09": {
+    "checked": true,
+    "take": "",
+    "asrModel": "small",
+    "sha256": "a92802f1c299427064088b8c2630b8173a3744a355b1009b11c794c1f42d8562",
+    "heard": "Grid paper, a few pencils, and you can try training one with your child.",
+    "note": "Transcript reviewed against the intended spoken line; numeric spellings and homophones normalized."
+  },
+  "en/p10": {
+    "checked": true,
+    "take": "3",
+    "asrModel": "medium",
+    "sha256": "1add021e9431385a941d3b24aaee655cd91cdc1aec5d5d0a2da69f21fff3eb41",
+    "heard": "That weighted sum can be written as matrix multiplication, one of today's basic AI operations.",
+    "note": "Revised learning invitation / bridge; medium transcript checked, Chinese name homophones normalized."
+  },
+  "en/p11": {
+    "checked": true,
+    "take": "5",
+    "asrModel": "medium",
+    "sha256": "1dd7f8f3c4239f7909774624de62ed25d8aa884743869604269eb42d21a50fc2",
+    "heard": "At Lucas Academy, we learn step by step. What do you want to learn about AI today?",
+    "note": "V3 new hook / case / final learning question, checked against intended spoken copy; digit forms and Chinese homophones normalized."
+  },
+  "en/o01": {
+    "checked": true,
+    "take": "5",
+    "asrModel": "medium",
+    "sha256": "e6e15ecdb169cb354f22cfa472b6f167fe4641d0ce6a22de79fd1ab1ffbddb3a",
+    "heard": "The 2026 Nobel Prize in Medicine in one minute. Optogenetics.",
+    "note": "V3 new hook / case / final learning question, checked against intended spoken copy; digit forms and Chinese homophones normalized."
+  },
+  "en/o02": {
+    "checked": true,
+    "take": "",
+    "asrModel": "medium",
+    "sha256": "20bd4fdac7aecde525cce490e857d12472bb1c48c02af615f12020d22c241df3",
+    "heard": "The clue starts with tiny algae. Shine a light and they swim toward it.",
+    "note": "Transcript reviewed against intended speech, retaining single patient, partial recovery and glasses; homophones normalized."
+  },
+  "en/o03": {
+    "checked": true,
+    "take": "",
+    "asrModel": "small",
+    "sha256": "ef66842cda14974eb4e9265683389ca4cfb7fde749916eae6830c7968f7ca715",
+    "heard": "Scientists found the door that light could open. Put it in other cells and light could trigger a signal.",
+    "note": "Transcript reviewed against intended speech, retaining single patient, partial recovery and glasses; homophones normalized."
+  },
+  "en/o05": {
+    "checked": true,
+    "take": "5",
+    "asrModel": "medium",
+    "sha256": "a2dd9b5afcbb73795dad854b5d8f55c85b89291c1118f87e581fdd085be94bd4",
+    "heard": "In a blind patient, a different switch made retinal cells respond to amber light.",
+    "note": "V3 new hook / case / final learning question, checked against intended spoken copy; digit forms and Chinese homophones normalized."
+  },
+  "en/o06": {
+    "checked": true,
+    "take": "",
+    "asrModel": "small",
+    "sha256": "82b71a82efe59a23d50b85db490bc9f3ac5dad9cd8b51a8a3c07a551bf99771d",
+    "heard": "Special glasses turn changes in brightness into pulses of light. That is encoding.",
+    "note": "Transcript reviewed against intended speech, retaining single patient, partial recovery and glasses; homophones normalized."
+  },
+  "en/o07": {
+    "checked": true,
+    "take": "",
+    "asrModel": "small",
+    "sha256": "59243d8aaf0de0491f79af8d47d7f228d8d0eb3fab542732f05e5fc3b4449b3a",
+    "heard": "The brain learns to read those signals as objects. That is decoding.",
+    "note": "Transcript reviewed against intended speech, retaining single patient, partial recovery and glasses; homophones normalized."
+  },
+  "en/o08": {
+    "checked": true,
+    "take": "",
+    "asrModel": "small",
+    "sha256": "589edd039d1422084296e2e71748c0a3ac840319fbfc240e56b4f8ac314d2d35",
+    "heard": "After months of training, he could locate some objects and reach out to touch them.",
+    "note": "Transcript reviewed against intended speech, retaining single patient, partial recovery and glasses; homophones normalized."
+  },
+  "en/o09": {
+    "checked": true,
+    "take": "",
+    "asrModel": "small",
+    "sha256": "d68690ba41742c3ad9eb40c3b4462e86be96ec910d46c50716387b4e48953c11",
+    "heard": "This was partial recovery in one patient. He still needed the glasses and normal vision had not returned.",
+    "note": "Transcript reviewed against intended speech, retaining single patient, partial recovery and glasses; homophones normalized."
+  },
+  "en/o11": {
+    "checked": true,
+    "take": "3",
+    "asrModel": "medium",
+    "sha256": "106fc3b204f91d86fa80882b2b68ab5e9d6b2a252f36e2d5c6d73e11ae919c31",
+    "heard": "At Lucas Academy, we explore step by step. How do brains think and how does AI learn?",
+    "note": "Revised learning invitation / bridge; medium transcript checked, Chinese name homophones normalized."
+  },
+  "zh/p01": {
+    "checked": true,
+    "take": "",
+    "asrModel": "previous-approved",
+    "sha256": "06e46be727e7611d872ed65792d3889081e82db98a75405060ad64da9990cc6b",
+    "heard": "我们带上Claude Fable 5.1和GPT-6﹑Astra,穿越到1957年,来场模型速度大比拼。",
+    "note": "Transcript reviewed against the intended spoken line; numeric spellings and homophones normalized."
+  },
+  "zh/p02": {
+    "checked": true,
+    "take": "",
+    "asrModel": "small",
+    "sha256": "be1a0ecb958072863c252f03dfbf40d4089aa9302d82f25c89132976acd94f3b",
+    "heard": "同一张期,四位选手一起认。艾克斯一开始就打完了。",
+    "note": "Transcript reviewed against the intended spoken line; numeric spellings and homophones normalized."
+  },
+  "zh/p03": {
+    "checked": true,
+    "take": "",
+    "asrModel": "medium",
+    "sha256": "562efd2402e219614f54979f34bca51e82dcc421f3f63f034e2094b8a206a2b7",
+    "heard": "每张只要0.37为秒,10张测试图全都答对。",
+    "note": "Medium ASR confirms the wei syllable before miao; 为秒 is an ASR homophone for 微秒. English independently confirms microseconds."
+  },
+  "zh/p04": {
+    "checked": true,
+    "take": "",
+    "asrModel": "previous-approved",
+    "sha256": "adf5cba3ca00b738ef2588cd9ca763385daa9f60aaa5829bf82f91c8fbab42d1",
+    "heard": "艾克斯，Claude Fable 5.1﹐快300万倍。比GPT-6﹐Astra﹐快1000万倍。",
+    "note": "Transcript reviewed against the intended spoken line; numeric spellings and homophones normalized."
+  },
+  "zh/p05": {
+    "checked": true,
+    "take": "2",
+    "asrModel": "medium",
+    "sha256": "9e46b15741b86d21fbddcf2e604347929530f8fdeaa3c7daa0d8ad885118c56f",
+    "heard": "这就是感知机。1957年的思路只有400个分数。",
+    "note": "Transcript reviewed against the intended spoken line; numeric spellings and homophones normalized."
+  },
+  "zh/p06": {
+    "checked": true,
+    "take": "",
+    "asrModel": "small",
+    "sha256": "348b32fd6f5cf6371640672375811020d5cee7154fd14d91b2ffa83613305dbf",
+    "heard": "把黑格子的分数加起来,够了就回答。是。",
+    "note": "Transcript reviewed against the intended spoken line; numeric spellings and homophones normalized."
+  },
+  "zh/p07": {
+    "checked": true,
+    "take": "",
+    "asrModel": "small",
+    "sha256": "ca2e21adb25da92d0cd7024cc9db4d66213e54f231155b8282aac06df160be02",
+    "heard": "419张例子。让他把这些分数一点点调好。",
+    "note": "Transcript reviewed against the intended spoken line; numeric spellings and homophones normalized."
+  },
+  "zh/p08": {
+    "checked": true,
+    "take": "",
+    "asrModel": "small",
+    "sha256": "a8463b2a7d0c8c2d6e44d6093b09be36291f2709ac40928693cfce6c2e3e3fc7",
+    "heard": "专项任务跑得快,不代表整体能力更强。",
+    "note": "Transcript reviewed against the intended spoken line; numeric spellings and homophones normalized."
+  },
+  "zh/p09": {
+    "checked": true,
+    "take": "",
+    "asrModel": "small",
+    "sha256": "69f953ea9fa5245260f743c97bdc0cf59359a83253fd756236614d8176bbf4b3",
+    "heard": "格子纸 几只笔 你和孩子也能训练一个。",
+    "note": "Transcript reviewed against the intended spoken line; numeric spellings and homophones normalized."
+  },
+  "zh/p10": {
+    "checked": true,
+    "take": "4",
+    "asrModel": "medium + mathematical vocabulary recheck",
+    "sha256": "b545fe55740af4567a8f768e93fd2b342ae9918d811545fbba224e1de2b01c03",
+    "heard": "刚才的加权求和可以写成矩阵向乘,这是今天人工智能的基础运算。",
+    "note": "Mathematics-vocabulary recheck confirms 矩阵; 加全/加权 and 向乘/相乘 are ASR spellings of the spoken mathematical phrase. Retake splits the explanation into two short sentences. Independent English take says matrix multiplication."
+  },
+  "zh/p11": {
+    "checked": true,
+    "take": "5",
+    "asrModel": "medium",
+    "sha256": "43e773c9427450eb0d97c40f6bae522e7f91a14c83e7f10f31d2eb54170a6770",
+    "heard": "在卢卡斯学院,我们一起一点一点学。今天,关于人工智能,你想学点什么?",
+    "note": "V3 new hook / case / final learning question, checked against intended spoken copy; digit forms and Chinese homophones normalized."
+  },
+  "zh/o01": {
+    "checked": true,
+    "take": "5",
+    "asrModel": "medium",
+    "sha256": "135ca8dae6d8d61e0747d9ed868c24fc99816773f9f5dce92645409ebf06dcbf",
+    "heard": "一分钟了解2026年诺贝尔奖。光遗传学。",
+    "note": "V3 new hook / case / final learning question, checked against intended spoken copy; digit forms and Chinese homophones normalized."
+  },
+  "zh/o02": {
+    "checked": true,
+    "take": "5",
+    "asrModel": "small",
+    "sha256": "f16f37de1757491638e69fd2f123ac5845f497159a50099a15595692dafabeee",
+    "heard": "线索藏在绿枣里。光遗照,他们就朝着光游。",
+    "note": "V3 new hook / case / final learning question, checked against intended spoken copy; digit forms and Chinese homophones normalized."
+  },
+  "zh/o03": {
+    "checked": true,
+    "take": "",
+    "asrModel": "small",
+    "sha256": "5008d9844163edd2077b7fb5d01d067f13c3866b1a1175a4f29448a07c09f9d0",
+    "heard": "科学家找到了会别光打开的门。装进别的细胞,光就能让它发出信号。",
+    "note": "Transcript reviewed against intended speech, retaining single patient, partial recovery and glasses; homophones normalized."
+  },
+  "zh/o05": {
+    "checked": true,
+    "take": "6",
+    "asrModel": "medium",
+    "sha256": "429e88b13d1587a58db83ef624340605c31458e90b2b054a0e8ef83bf62c9705",
+    "heard": "给失明病人的视网膜细胞,装上另一种开关,用琥珀色光打开。",
+    "note": "Retake removes the unclear initial counter; full medium transcript matches intended speech. Kept within the existing picture interval."
+  },
+  "zh/o06": {
+    "checked": true,
+    "take": "",
+    "asrModel": "small",
+    "sha256": "a097ad3a18a8918a47f04b255d045e6713da6af26f6ff10b54fe3aa9e4689953",
+    "heard": "特制眼镜把明安变化 变成一闪一闪的光点。这叫编码。",
+    "note": "Transcript reviewed against intended speech, retaining single patient, partial recovery and glasses; homophones normalized."
+  },
+  "zh/o07": {
+    "checked": true,
+    "take": "",
+    "asrModel": "small",
+    "sha256": "b43f977861282d3a9e10c2565216faa6bcfbb42b5a3a1d2abda0c672c20bbcac",
+    "heard": "大脑在学着把光信号堵成东西的样子。这叫解码。",
+    "note": "Transcript reviewed against intended speech, retaining single patient, partial recovery and glasses; homophones normalized."
+  },
+  "zh/o08": {
+    "checked": true,
+    "take": "",
+    "asrModel": "small",
+    "sha256": "a1ad785053e15145d5961c3fcfd15f287ff8df55d08638ddcf550c06083e927f",
+    "heard": "练了几个月,他能找到一些物体,还能伸手起摸。",
+    "note": "Transcript reviewed against intended speech, retaining single patient, partial recovery and glasses; homophones normalized."
+  },
+  "zh/o09": {
+    "checked": true,
+    "take": "",
+    "asrModel": "small",
+    "sha256": "c668a00e1480d46e136e1918e73b1e883b5c921e7f7f38c58cba339f5ccb5155",
+    "heard": "这是一位病人的部分恢复，他仍需要眼镜，也没恢复正常势力。",
+    "note": "Transcript reviewed against intended speech, retaining single patient, partial recovery and glasses; homophones normalized."
+  },
+  "zh/o11": {
+    "checked": true,
+    "take": "3",
+    "asrModel": "medium",
+    "sha256": "080a232f9e5fab1dcfa096bafdfbfa4603c9fb4feb4ac5f79f384ba0f5ba41ee",
+    "heard": "在卢卡斯学院,我们一起一点点探索,大脑如何思考,人工智能又如何学习。",
+    "note": "Revised learning invitation / bridge; medium transcript checked, Chinese name homophones normalized."
+  }
+}

@@ -1,0 +1,317 @@
+{
+  "film": "optogenetics",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "defaultLanguage": "en",
+  "durationInFrames": 1800,
+  "narrated": true,
+  "lines": [
+    {
+      "id": "o01",
+      "visual": "nobel-hook",
+      "from": 0,
+      "duration": 203,
+      "text": {
+        "en": "The 2026 Nobel Prize in Medicine, in one minute: optogenetics.",
+        "zh": "一分钟了解二零二六年诺贝尔奖：光遗传学。"
+      }
+    },
+    {
+      "id": "o02",
+      "visual": "algae",
+      "from": 203,
+      "duration": 187,
+      "text": {
+        "en": "The clue starts with tiny algae. Shine a light, and they swim toward it.",
+        "zh": "线索藏在绿藻里。光一照，它们就朝着光游。"
+      }
+    },
+    {
+      "id": "o03",
+      "visual": "gate",
+      "from": 390,
+      "duration": 230,
+      "text": {
+        "en": "Scientists found a door that light could open. Put it in other cells, and light could trigger a signal.",
+        "zh": "科学家找到了会被光打开的门。装进别的细胞，光就能让它发出信号。"
+      }
+    },
+    {
+      "id": "o05",
+      "visual": "amber",
+      "from": 620,
+      "duration": 207,
+      "text": {
+        "en": "In a blind patient, a different switch made retinal cells respond to amber light.",
+        "zh": "给失明病人的视网膜细胞，装上另一种开关，用琥珀色光打开。"
+      }
+    },
+    {
+      "id": "o06",
+      "visual": "encode",
+      "from": 827,
+      "duration": 192,
+      "text": {
+        "en": "Special glasses turn changes in brightness into pulses of light. That is encoding.",
+        "zh": "特制眼镜把明暗变化，变成一闪一闪的光点。这叫编码。"
+      }
+    },
+    {
+      "id": "o07",
+      "visual": "decode",
+      "from": 1019,
+      "duration": 160,
+      "text": {
+        "en": "The brain learns to read those signals as objects. That is decoding.",
+        "zh": "大脑再学着把光信号读成东西的样子。这叫解码。"
+      }
+    },
+    {
+      "id": "o08",
+      "visual": "touch",
+      "from": 1179,
+      "duration": 160,
+      "text": {
+        "en": "After months of training, he could locate some objects and reach out to touch them.",
+        "zh": "练了几个月，他能找到一些物体，还能伸手去摸。"
+      }
+    },
+    {
+      "id": "o09",
+      "visual": "limits",
+      "from": 1339,
+      "duration": 220,
+      "text": {
+        "en": "This was partial recovery in one patient. He still needed the glasses, and normal vision had not returned.",
+        "zh": "这是一位病人的部分恢复。他仍需要眼镜，也没恢复正常视力。"
+      }
+    },
+    {
+      "id": "o11",
+      "visual": "question",
+      "from": 1559,
+      "duration": 241,
+      "text": {
+        "en": "At Lucas Academy, we explore step by step: how do brains think, and how does AI learn?",
+        "zh": "在 Lucas Academy，我们一起一点点探索：大脑如何思考，AI 又如何学习？"
+      }
+    }
+  ],
+  "shots": [
+    {
+      "first": "o01",
+      "last": "o01",
+      "asset": "opto-touch",
+      "in": 0,
+      "out": 4.5,
+      "layout": "wide",
+      "focus": 0.4,
+      "from": 0,
+      "duration": 203,
+      "rate": 0.6650246305418719
+    },
+    {
+      "first": "o02",
+      "last": "o02",
+      "asset": "opto-algae",
+      "in": 0,
+      "out": 10,
+      "layout": "square",
+      "focus": 0.44,
+      "from": 203,
+      "duration": 187,
+      "rate": 1.35
+    },
+    {
+      "first": "o03",
+      "last": "o03",
+      "asset": "opto-algae",
+      "in": 0,
+      "out": 10,
+      "layout": "portrait",
+      "focus": 0.5,
+      "from": 390,
+      "duration": 230,
+      "rate": 1.3043478260869565
+    },
+    {
+      "first": "o05",
+      "last": "o06",
+      "asset": "opto-goggles",
+      "in": 0,
+      "out": 10,
+      "layout": "wide",
+      "focus": 0.5,
+      "from": 620,
+      "duration": 399,
+      "rate": 0.7518796992481203
+    },
+    {
+      "first": "o07",
+      "last": "o07",
+      "asset": "opto-dots",
+      "in": 0,
+      "out": 4.5,
+      "layout": "portrait",
+      "focus": 0.55,
+      "from": 1019,
+      "duration": 160,
+      "rate": 0.84375
+    },
+    {
+      "first": "o08",
+      "last": "o08",
+      "asset": "opto-touch",
+      "in": 4.5,
+      "out": 10,
+      "layout": "wide",
+      "focus": 0.4,
+      "from": 1179,
+      "duration": 160,
+      "rate": 1.03125
+    },
+    {
+      "first": "o09",
+      "last": "o09",
+      "asset": "opto-goggles",
+      "in": 5,
+      "out": 10,
+      "layout": "portrait",
+      "focus": 0.5,
+      "from": 1339,
+      "duration": 220,
+      "rate": 0.6818181818181819
+    },
+    {
+      "first": "o11",
+      "last": "o11",
+      "asset": "opto-dots",
+      "in": 4.5,
+      "out": 10,
+      "layout": "portrait",
+      "focus": 0.5,
+      "from": 1559,
+      "duration": 241,
+      "rate": 0.6846473029045643
+    }
+  ],
+  "voices": {
+    "en": {
+      "o01": {
+        "path": "narration/en/o01.wav",
+        "sha256": "e6e15ecdb169cb354f22cfa472b6f167fe4641d0ce6a22de79fd1ab1ffbddb3a",
+        "seconds": 6.36,
+        "settingsSha256": "fa7ba4b5a3cb795be791bae90e03f6b6bbb7c3105fb72ab0114c0529edb3c268"
+      },
+      "o02": {
+        "path": "narration/en/o02.wav",
+        "sha256": "20bd4fdac7aecde525cce490e857d12472bb1c48c02af615f12020d22c241df3",
+        "seconds": 5.84,
+        "settingsSha256": "b039c523877b93e793eb15afcab415877dab025132b8c2646fd45cb4d3257102"
+      },
+      "o03": {
+        "path": "narration/en/o03.wav",
+        "sha256": "ef66842cda14974eb4e9265683389ca4cfb7fde749916eae6830c7968f7ca715",
+        "seconds": 6.24,
+        "settingsSha256": "acbdacbb0d821a83817725b945acece6d7d5b25134160f660355011029f0ea8d"
+      },
+      "o05": {
+        "path": "narration/en/o05.wav",
+        "sha256": "a2dd9b5afcbb73795dad854b5d8f55c85b89291c1118f87e581fdd085be94bd4",
+        "seconds": 5.4,
+        "settingsSha256": "6444ca833eee78c10e84451c48afd7b6474051363e79e0fbe8cb92362e4d4a97"
+      },
+      "o06": {
+        "path": "narration/en/o06.wav",
+        "sha256": "82b71a82efe59a23d50b85db490bc9f3ac5dad9cd8b51a8a3c07a551bf99771d",
+        "seconds": 6.02,
+        "settingsSha256": "e6d7e90e704a5e1ac8058dcf3ad2146f8b6e0d007f83456db05191492b29c8b7"
+      },
+      "o07": {
+        "path": "narration/en/o07.wav",
+        "sha256": "59243d8aaf0de0491f79af8d47d7f228d8d0eb3fab542732f05e5fc3b4449b3a",
+        "seconds": 4.6,
+        "settingsSha256": "fafca4d3cfa56960bc9fa1d8468ec5b351b9d2b7b73f74ac4217509e5c2ee163"
+      },
+      "o08": {
+        "path": "narration/en/o08.wav",
+        "sha256": "589edd039d1422084296e2e71748c0a3ac840319fbfc240e56b4f8ac314d2d35",
+        "seconds": 4.54,
+        "settingsSha256": "77e0de8e290fd4b8b63b3a54d6a2f0bf75242501a454b6f0de7647d889849ccc"
+      },
+      "o09": {
+        "path": "narration/en/o09.wav",
+        "sha256": "d68690ba41742c3ad9eb40c3b4462e86be96ec910d46c50716387b4e48953c11",
+        "seconds": 6.94,
+        "settingsSha256": "2c4d662093c9e03ee73787a0254cec1069dbb980f47ff513f4cf588c5832a62c"
+      },
+      "o11": {
+        "path": "narration/en/o11.wav",
+        "sha256": "106fc3b204f91d86fa80882b2b68ab5e9d6b2a252f36e2d5c6d73e11ae919c31",
+        "seconds": 7.04,
+        "settingsSha256": "018b8ce9f834d57f9700bea2c6f6ad76be8936e84a98be1f8ee3d511e4c40dc0"
+      }
+    },
+    "zh": {
+      "o01": {
+        "path": "narration/zh/o01.wav",
+        "sha256": "135ca8dae6d8d61e0747d9ed868c24fc99816773f9f5dce92645409ebf06dcbf",
+        "seconds": 5.22,
+        "settingsSha256": "e9cac951f1b99fbc1663031bdd2baaa94c96c6daf7caf95d8f54b67d987d6b69"
+      },
+      "o02": {
+        "path": "narration/zh/o02.wav",
+        "sha256": "f16f37de1757491638e69fd2f123ac5845f497159a50099a15595692dafabeee",
+        "seconds": 5.26,
+        "settingsSha256": "25f5d8d08bc4bb4ba725a663871c94b8c4798c27b97b0dd2b1b855152b2a81be"
+      },
+      "o03": {
+        "path": "narration/zh/o03.wav",
+        "sha256": "5008d9844163edd2077b7fb5d01d067f13c3866b1a1175a4f29448a07c09f9d0",
+        "seconds": 7.26,
+        "settingsSha256": "a6a883ed57fbbd41db6999fc9289ee6765c0169efdfa0a2c6ad450ca047567ad"
+      },
+      "o05": {
+        "path": "narration/zh/o05.wav",
+        "sha256": "429e88b13d1587a58db83ef624340605c31458e90b2b054a0e8ef83bf62c9705",
+        "seconds": 5.92,
+        "settingsSha256": "e545018436bef6ebed2b110d76364c56565104fd76b66f9a9ccffc6438234390"
+      },
+      "o06": {
+        "path": "narration/zh/o06.wav",
+        "sha256": "a097ad3a18a8918a47f04b255d045e6713da6af26f6ff10b54fe3aa9e4689953",
+        "seconds": 5.4,
+        "settingsSha256": "63dba4ee3c6bb5904fa71fd3f037c185777d69b6d7d8ac8754c1b075d7053be6"
+      },
+      "o07": {
+        "path": "narration/zh/o07.wav",
+        "sha256": "b43f977861282d3a9e10c2565216faa6bcfbb42b5a3a1d2abda0c672c20bbcac",
+        "seconds": 4.94,
+        "settingsSha256": "fa68206d04e5b1b98cafbc7e7723b16190a5fbf7d0be6f98ad945a77bd666086"
+      },
+      "o08": {
+        "path": "narration/zh/o08.wav",
+        "sha256": "a1ad785053e15145d5961c3fcfd15f287ff8df55d08638ddcf550c06083e927f",
+        "seconds": 4.94,
+        "settingsSha256": "40a03b3d2139a3c81034a0061b31459a4ac87893a644675e589e3bdc64667ec4"
+      },
+      "o09": {
+        "path": "narration/zh/o09.wav",
+        "sha256": "c668a00e1480d46e136e1918e73b1e883b5c921e7f7f38c58cba339f5ccb5155",
+        "seconds": 5.44,
+        "settingsSha256": "66f095d66821b8e0a99a44a410604b1e2684ded9cbbf8bf6df7e5249a64286b6"
+      },
+      "o11": {
+        "path": "narration/zh/o11.wav",
+        "sha256": "080a232f9e5fab1dcfa096bafdfbfa4603c9fb4feb4ac5f79f384ba0f5ba41ee",
+        "seconds": 7.7,
+        "settingsSha256": "b1276cb2de6ce84919e336f606894440c2f4800682a61af01a79b8756907c9d6"
+      }
+    }
+  },
+  "title": {
+    "zh": "1分钟了解2026诺贝尔奖：光遗传学",
+    "en": "The 2026 Nobel Prize in Medicine in one minute: Optogenetics"
+  }
+}

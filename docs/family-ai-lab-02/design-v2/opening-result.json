@@ -1,0 +1,25 @@
+{
+  "status": "failed — no video output",
+  "observedOn": "2026-11-05",
+  "app": "Muse",
+  "chatUrl": "muse.ai/thread/ad1825a1-e224-4721-852b-ff8e6e3b607a",
+  "source": "Final assistant response visibly inspected in the native Muse UI",
+  "reportedShots": [
+    "0–1.5s macro conduit and amber signal",
+    "1.5–10s orbital pods: paper stops at port, then signal travels to boy"
+  ],
+  "reportedError": "Both shots failed: video service returned 502, unavailable after 3 attempts. First attempt also encountered a service restart.",
+  "reportedOutput": "No source clips and no final MP4; no playable attachment.",
+  "referenceDelivery": {
+    "01-orbital.png": "attached and available",
+    "03-photon.png": "local path supplied only; unavailable",
+    "macPaths": "Muse confirmed local Mac paths are not reachable"
+  },
+  "localVerification": {
+    "target": "public/family-ai-lab-02/design-v2/01-orbital-opening.mp4",
+    "exists": false,
+    "mp4FilesInTargetFolder": []
+  },
+  "nextAttempt": "After service recovery, upload both reference PNGs as attachments; request playable downloadable video attachments rather than writing to Mac paths. Keep original clips and assemble a ten-second preview locally.",
+  "unchangedDelivery": "The complete movie remains the v1 storybook content/audio reference; it has not been rebuilt in this style."
+}

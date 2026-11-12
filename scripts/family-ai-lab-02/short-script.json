@@ -1,0 +1,18 @@
+{
+  "workingTitle": {"en":"Can 0 and 1 Talk?","zh":"0和1，能聊天吗？"},
+  "aspect":"portrait",
+  "fps":30,
+  "lines":[
+    {"id":"fa02-01-01","scene":1,"visual":"paper","en":"This note is too big. How can Mia invite Leo to play?","zh":"纸条过不去。米娅怎么邀请对面的里奥来玩？","minSeconds":6.2,"leadInSeconds":0.3},
+    {"id":"fa02s-02","scene":2,"visual":"code","en":"They share a code. Gold is one. Blue is zero.","zh":"约好一张表。金色是一，蓝色是零。","minSeconds":4.6},
+    {"id":"fa02s-03","scene":3,"visual":"arrival","en":"Yes! His screen says PLAY. The invitation got through!","zh":"可以！邀请送到了。一起玩吧！","minSeconds":4.6,"voice":{"en":{"spoken":"Yes! His screen says play. The invitation got through!"}}},
+    {"id":"fa02s-04","scene":4,"visual":"cargo","en":"A gift is hidden in one of ten boxes.","zh":"礼物藏在十个箱子里。里奥要找出来。","minSeconds":4.6},
+    {"id":"fa02s-05","scene":5,"visual":"questions","en":"Four yes-or-no answers lead him to box seven.","zh":"四个回答，七号箱找到了！","minSeconds":4.4},
+    {"id":"fa02s-06","scene":6,"visual":"snack","en":"Watermelon! Now it's Leo's turn to send a message.","zh":"是西瓜！这回，轮到里奥回信。","minSeconds":5.0},
+    {"id":"fa02-08-01","scene":7,"visual":"reply","en":"Leo presses Send. A gold signal carries his reply: got it!","zh":"他按下发送键，一颗金色小球传了回去：收到啦！","minSeconds":5.8},
+    {"id":"fa02s-08","scene":8,"visual":"friends","en":"Our tiny pipe connects two friends.","zh":"两个朋友，就用小管子传话。","minSeconds":2.8},
+    {"id":"fa02s-09","scene":9,"visual":"world","en":"The internet connects the world!","zh":"互联网连起全世界！","minSeconds":2.8},
+    {"id":"fa02s-10","scene":10,"visual":"online","en":"Videos, messages, even chats with AI—all use zeros and ones.","zh":"视频、消息、AI聊天，全都用零和一。","minSeconds":5.4,"voice":{"en":{"spoken":"Videos, messages, even chats with AI, all use zeros and ones.","instruction":"Please speak warmly and clearly, with natural connected speech. Say AI smoothly as the familiar two-letter name, without a long gap. Keep the story light and curious."},"zh":{"spoken":"视频、消息、人工智能聊天，全都用零和一。"}}},
+    {"id":"fa02s-11","scene":11,"visual":"invite","en":"A funny story? A new game? What will you share today?","zh":"一个好玩的故事？一个新游戏？今天你想分享什么？","minSeconds":5.4,"voice":{"en":{"speed":1.0,"instruction":"Ask each question slowly, playfully, and clearly, like chatting with a child. Pause for half a second after story and after game. Keep the last question warm and inviting."},"zh":{"instruction":"像和孩子聊天一样，轻快、俏皮地问这三个小问题。短句清楚亲切，问题之间自然稍停。"}}}
+  ]
+}

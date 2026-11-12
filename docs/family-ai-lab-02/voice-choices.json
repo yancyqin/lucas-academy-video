@@ -1,0 +1,434 @@
+{
+  "en/fa02-01-01": {
+    "take": "",
+    "checked": true,
+    "sha256": "0a5cc84c76ecc2cb88881cb669da2a457b014a2ab3ed90a347c09926582f334e",
+    "note": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech."
+  },
+  "en/fa02-01-02": {
+    "take": "",
+    "checked": true,
+    "sha256": "39d5d3cc67fd9beeeae0100d5ecdf191c5a8003b956b5adc1d1fb622413e77b6",
+    "note": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech."
+  },
+  "en/fa02-01-03": {
+    "take": "3",
+    "checked": true,
+    "sha256": "9ecc8ee49814101625e5fb94bdbd41ceb06deb888b3dd4f00c93ee0b90e13eff",
+    "note": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech."
+  },
+  "en/fa02-01-04": {
+    "take": "",
+    "checked": true,
+    "sha256": "21c150e495f89ef7188bc35fb6568389c25ee482c32a0431b2f9106cb69d8042",
+    "note": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech."
+  },
+  "en/fa02-02-01": {
+    "take": "3",
+    "checked": true,
+    "sha256": "654896211422796a8d8047d6ffb7f1278393a5766286c56a735fedfd73937954",
+    "note": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech."
+  },
+  "en/fa02-02-02": {
+    "take": "",
+    "checked": true,
+    "sha256": "7b8698c4d755f96f12ca6c6c34c290e971f5b785cd96f136cbf1b875b234e59b",
+    "note": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech."
+  },
+  "en/fa02-02-03": {
+    "take": "",
+    "checked": true,
+    "sha256": "59c334d92d7ea7e7584bf10005229b408175a67a6d373774e8d490a33f4818b6",
+    "note": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech."
+  },
+  "en/fa02-02-04": {
+    "take": "",
+    "checked": true,
+    "sha256": "434073e6d19ef2eb801a160ce48d77aeeb9b1a6e2fe239559bbb6bdaabd52c44",
+    "note": "Medium correctly hears byte; the small-model Vite spelling is not used as the approval criterion. The 256 value is correct."
+  },
+  "en/fa02-03-01": {
+    "take": "",
+    "checked": true,
+    "sha256": "b4d5e6be42c8b8ad059e1595a9f9f3e41c55897f6fec8470d3a8927018af0a93",
+    "note": "Medium confirms code table. Both recordings refer to the previously agreed table."
+  },
+  "en/fa02-03-02": {
+    "take": "",
+    "checked": true,
+    "sha256": "e010deb6f468a53dfb9091ee23959b17850a6ccf02965ecca30c90b42de57777",
+    "note": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech."
+  },
+  "en/fa02-03-03": {
+    "take": "2",
+    "checked": true,
+    "sha256": "36b7d2baef7d93e81a9f147d3703fc92aa9a17730994f44f2d3cd0edcf36f01d",
+    "note": "Replacement explicitly says the letter A; both ASR passes confirm 64, 1, 65 and A."
+  },
+  "en/fa02-03-04": {
+    "take": "3",
+    "checked": true,
+    "sha256": "2cc6189929080ae3b3ed1521028908bbc0ccdae315a088c8274b960e8b556520",
+    "note": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech."
+  },
+  "en/fa02-03-05": {
+    "take": "",
+    "checked": true,
+    "sha256": "a3e78068e0a79a612fb036212e979b522c66a2086bb50a14982947ffe4196076",
+    "note": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech."
+  },
+  "en/fa02-04-01": {
+    "take": "3",
+    "checked": true,
+    "sha256": "9e076a7e486c7e59baa3cde18e515b4250523e1cdcb647989c6d79e7a37d9421",
+    "note": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech."
+  },
+  "en/fa02-04-02": {
+    "take": "3",
+    "checked": true,
+    "sha256": "ea3d6bc3b15466b31399242fc8e7eb8e7d55f09562bac535e3e5cf85f62faabd",
+    "note": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech."
+  },
+  "en/fa02-04-03": {
+    "take": "2",
+    "checked": true,
+    "sha256": "9ea1780b5cc0a4bdc545d4da92aae51dc2a86f8422ae7c4f888afcf46068e068",
+    "note": "Selected lowercase synthesis spelling reads play as a word; small and medium match the full approved line."
+  },
+  "en/fa02-05-01": {
+    "take": "",
+    "checked": true,
+    "sha256": "65d1794e8bed0140fa57021ac68d14732b353443dc945b77d999393fc3c3b79f",
+    "note": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech."
+  },
+  "en/fa02-05-02": {
+    "take": "3",
+    "checked": true,
+    "sha256": "ee310090f574b8fdcdc96cf74d6892fe3283888b64afed31c94d7a795d139a5d",
+    "note": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech."
+  },
+  "en/fa02-05-03": {
+    "take": "",
+    "checked": true,
+    "sha256": "d9be54079e78deed4bbea5fe46aa5d0a119f6f248c62ad90e64e24ee7d616172",
+    "note": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech."
+  },
+  "en/fa02-05-04": {
+    "take": "",
+    "checked": true,
+    "sha256": "8ef37a3ef1c2959c046253d92860eaa020f128b847a4d05da4338c67b861a439",
+    "note": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech."
+  },
+  "en/fa02-05-05": {
+    "take": "",
+    "checked": true,
+    "sha256": "b425615bf5077d1ae2200799daadb268fb5253dcb163ad4de4f219c0b1761d68",
+    "note": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech."
+  },
+  "en/fa02-05-06": {
+    "take": "",
+    "checked": true,
+    "sha256": "0a48a40782baf13c7df85aaa8181359a6259d5aa6790aa3a01c0516ce9ac3378",
+    "note": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech."
+  },
+  "en/fa02-05-07": {
+    "take": "",
+    "checked": true,
+    "sha256": "c995b55a7111b82ac2bf867d0261a589636ca5031fd9ebf241efbee4509a415d",
+    "note": "Medium resolves the small-model Britter spelling to greater; threshold seven and NO are correct."
+  },
+  "en/fa02-06-01": {
+    "take": "",
+    "checked": true,
+    "sha256": "f56076baf40f1ef64eeeee084f82c7123ce3a19deaacc92b9c4f78670e458f55",
+    "note": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech."
+  },
+  "en/fa02-06-02": {
+    "take": "",
+    "checked": true,
+    "sha256": "9d31a313ce58ae6e845adc4b2647ceef96c2ebca867e1e09304fa5ea8efb6c36",
+    "note": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech."
+  },
+  "en/fa02-06-03": {
+    "take": "",
+    "checked": true,
+    "sha256": "cca29f31f5bd7a24c16f7c57ce2a307b7db6a818e1dd90106b4a3effbe7dbf5b",
+    "note": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech."
+  },
+  "en/fa02-07-01": {
+    "take": "",
+    "checked": true,
+    "sha256": "eaf3aa99b0ebaee95efd2361090a5ade8785be9903c25f36dcd5f3ec7a9616c1",
+    "note": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech."
+  },
+  "en/fa02-07-02": {
+    "take": "",
+    "checked": true,
+    "sha256": "9da86772aa4892a6e24b144b6d92f9ae63d302e5e24ea68028056a7b08dc9ecf",
+    "note": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech."
+  },
+  "en/fa02-07-03": {
+    "take": "",
+    "checked": true,
+    "sha256": "8dde7243b1881f9b6681a24c00a796e38d3edf859c15cf39801d1e893d915e46",
+    "note": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech."
+  },
+  "en/fa02-07-04": {
+    "take": "",
+    "checked": true,
+    "sha256": "5715f6850f4e7679aabc2bdc4e705673fc0f68005503354ace7ec75d6177c1d5",
+    "note": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech."
+  },
+  "en/fa02-08-01": {
+    "take": "3",
+    "checked": true,
+    "sha256": "47614dae4508b9d55a1fdb04e596eae47ae721d37deb87ed1efe045311fd689d",
+    "note": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech."
+  },
+  "en/fa02-08-02": {
+    "take": "3",
+    "checked": true,
+    "sha256": "3ae58fd90fda4303601233cedbf7e77e91d370133e46451c246fbc6723a8800e",
+    "note": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech."
+  },
+  "en/fa02-08-03": {
+    "take": "",
+    "checked": true,
+    "sha256": "13459d777f5158be28819a48061ee1d199994e3bb618de9c2a24a55d29cef05a",
+    "note": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech."
+  },
+  "en/fa02-08-04": {
+    "take": "",
+    "checked": true,
+    "sha256": "167fb729c4016c9c3ed45b4e6c87fd89d827fc93f9c8c18359ea685ccb3a67b5",
+    "note": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech."
+  },
+  "en/fa02-08-05": {
+    "take": "",
+    "checked": true,
+    "sha256": "8d0169297de5d6d0b5e11c55f8af21c1303f67bf9d8f32ed1c1c9bdcba04987d",
+    "note": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech."
+  },
+  "en/fa02-08-06": {
+    "take": "",
+    "checked": true,
+    "sha256": "c13029a237e7a849e2d0a5361d33d78cf144579bc16a783ee215e2d940c57512",
+    "note": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech."
+  },
+  "zh/fa02-01-01": {
+    "take": "2",
+    "checked": true,
+    "sha256": "be9f597c288cf6d762362a681b1382509256adf314b91d3e063aa7207864a5d0",
+    "note": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech."
+  },
+  "zh/fa02-01-02": {
+    "take": "",
+    "checked": true,
+    "sha256": "166919b0d6e9151dea99227b1707db633fc867ccab0025b601ae5415b820042f",
+    "note": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech."
+  },
+  "zh/fa02-01-03": {
+    "take": "",
+    "checked": true,
+    "sha256": "2fd00d9ad01dbc792568bbc31b3974d94e7ad277fae3f9703fb824012167ca1a",
+    "note": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech."
+  },
+  "zh/fa02-01-04": {
+    "take": "",
+    "checked": true,
+    "sha256": "081c4670459f4a5db9d735fbd73f8555918cba871ee83fac9aba16a7915964a5",
+    "note": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech."
+  },
+  "zh/fa02-02-01": {
+    "take": "",
+    "checked": true,
+    "sha256": "7fba6e83e0320ed054609ad6a0dcf87b6e823e4be936ba69888ba2933b473a31",
+    "note": "Medium confirms 一颗珠子 and both possibilities; the small-model 猪子 is an exact-syllable transcription substitution."
+  },
+  "zh/fa02-02-02": {
+    "take": "",
+    "checked": true,
+    "sha256": "ea655ec2b380b06d98d270a24aa5f1c289bb76613315f7c0253c234c291f3178",
+    "note": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech."
+  },
+  "zh/fa02-02-03": {
+    "take": "",
+    "checked": true,
+    "sha256": "f5153752104208f6943544ad0cb8f5e481732ddbbad0e8621612f9022aa6564e",
+    "note": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech."
+  },
+  "zh/fa02-02-04": {
+    "take": "",
+    "checked": true,
+    "sha256": "a71a3d75678e96ff759db72d0cadb1f4094bf317d40094e98fc832e224952200",
+    "note": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech."
+  },
+  "zh/fa02-03-01": {
+    "take": "2",
+    "checked": true,
+    "sha256": "c1e820aae9a9cf3a67d135a4507a82d89ae6367bb536a20a3f185740726d01bb",
+    "note": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech."
+  },
+  "zh/fa02-03-02": {
+    "take": "",
+    "checked": true,
+    "sha256": "618ccdc6522a170ad80b65a7fe1a57493e90da603994cad28ff41921efa4824b",
+    "note": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech."
+  },
+  "zh/fa02-03-03": {
+    "take": "",
+    "checked": true,
+    "sha256": "6a84f95f35d8969293b419a2648abf4b2434cd7e065f916c0fc99601f383baa3",
+    "note": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech."
+  },
+  "zh/fa02-03-04": {
+    "take": "",
+    "checked": true,
+    "sha256": "f5ef39aa64158cb50a758057ae68145d5ac6b43fddbb1e8d3830b990260eb72f",
+    "note": "Medium confirms the leading 零 and the full eight-value group; small-model 林 is retained as ASR evidence."
+  },
+  "zh/fa02-03-05": {
+    "take": "2",
+    "checked": true,
+    "sha256": "81e2b84f172452ed9a571367bb3ec5b9ff987380a1ac6677d711239f334d0226",
+    "note": "Replacement removes the preceding generated laugh. 阿斯基 is the Mandarin name; ASR renders its syllables ASG. The eight-bit padded display and code-table requirement are intact."
+  },
+  "zh/fa02-04-01": {
+    "take": "",
+    "checked": true,
+    "sha256": "715d7f6ed2dd82db2b8b4fa4d776b120fd5a9f5a4eba054db9bde1412478a23c",
+    "note": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech."
+  },
+  "zh/fa02-04-02": {
+    "take": "",
+    "checked": true,
+    "sha256": "7b92928ed0495fec770412ddb3913755d5ee386ea05e36a6392a97604b86257a",
+    "note": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech."
+  },
+  "zh/fa02-04-03": {
+    "take": "",
+    "checked": true,
+    "sha256": "042bd9db021f04124be890aa31267982df975cd2f7576baf99565c7af5e01b05",
+    "note": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech."
+  },
+  "zh/fa02-05-01": {
+    "take": "",
+    "checked": true,
+    "sha256": "81e56d12103b8fbad40f4a1b6c94e9d318f635b0470f8842de1ad47af2892cbb",
+    "note": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech."
+  },
+  "zh/fa02-05-02": {
+    "take": "",
+    "checked": true,
+    "sha256": "7fe436ddf346f0621acdfe90ca15af7ca2783bcafa3b959e6f468a89495a7f73",
+    "note": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech."
+  },
+  "zh/fa02-05-03": {
+    "take": "",
+    "checked": true,
+    "sha256": "3b0d5116d479829a988e4035ecf9441e2cc243e734d4144c4fef83f9b6610606",
+    "note": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech."
+  },
+  "zh/fa02-05-04": {
+    "take": "",
+    "checked": true,
+    "sha256": "161a7c3d4de5debf8845fda8cee120624d2f97266d7d82ade8d5f7661ea8c6e6",
+    "note": "Small renders 五 as 武; medium independently hears 5. The threshold, affirmative answer and five eliminated boxes match the script."
+  },
+  "zh/fa02-05-05": {
+    "take": "",
+    "checked": true,
+    "sha256": "d848fc6b9e86ddc29556b580758f0257479651e19f1f251ca5a9da70d1275b7e",
+    "note": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech."
+  },
+  "zh/fa02-05-06": {
+    "take": "",
+    "checked": true,
+    "sha256": "43b9caa61b12c6fa42763b3ea450e1cbb01eb1399470e1e33bc8e828bd2dc35b",
+    "note": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech."
+  },
+  "zh/fa02-05-07": {
+    "take": "",
+    "checked": true,
+    "sha256": "328b409b82c85d8a93580c6975359448716d103ae1174e74a4d6594dc85982ca",
+    "note": "Medium independently confirms 比七大吗 and 七号盒子, resolving the small-model 比其他 spelling."
+  },
+  "zh/fa02-06-01": {
+    "take": "",
+    "checked": true,
+    "sha256": "1dc11449a86ceb164a778de834b2371500dcad84ab1503dcd90d408d81d48206",
+    "note": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech."
+  },
+  "zh/fa02-06-02": {
+    "take": "",
+    "checked": true,
+    "sha256": "aa82a912c057153c8041f805c2ff3e153ba0c51aefd1bce4b43d93de809f0345",
+    "note": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech."
+  },
+  "zh/fa02-06-03": {
+    "take": "",
+    "checked": true,
+    "sha256": "908d1af5ab29ecf9e9c85bfcaeb4bfc1f9b1484d688cc55773527c6af2951702",
+    "note": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech."
+  },
+  "zh/fa02-07-01": {
+    "take": "",
+    "checked": true,
+    "sha256": "e1ad346ecfa29d299d0ec979b80963048217da539b41c16b17c0e18e1d706ae9",
+    "note": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech."
+  },
+  "zh/fa02-07-02": {
+    "take": "",
+    "checked": true,
+    "sha256": "b0e349a771a086af588a0e8773d4906bed25018df38e6e6bf38a5950813a9963",
+    "note": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech."
+  },
+  "zh/fa02-07-03": {
+    "take": "3",
+    "checked": true,
+    "sha256": "7425bf507ab3c7cfeb4e1af9f62e6f41cc37816e211e3a5c4f3a9778b43fb40f",
+    "note": "Replacement uses the common word 种子. ASR confirms the seed question, affirmative answer, watermelon and two questions; 图/土 is retained as a transcription deviation."
+  },
+  "zh/fa02-07-04": {
+    "take": "2",
+    "checked": true,
+    "sha256": "672f9480e45770132408b8c665520f4518dcf2492e549fda18f8b68ffe04d822",
+    "note": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech. Original retained; selected edit receipt records source SHA256, retained interval and 10 ms fade."
+  },
+  "zh/fa02-08-01": {
+    "take": "2",
+    "checked": true,
+    "sha256": "1334b42d1fb5a0f6492b9462cf4030e5b280d33d16d198817aed7f2ad29a9630",
+    "note": "Replacement removes the 金珠子/金桌子 ambiguity using 金色的小球. ASR retains 发挥 for 发回; the return signal and reaction remain clear in context."
+  },
+  "zh/fa02-08-02": {
+    "take": "3",
+    "checked": true,
+    "sha256": "3c278dae2d166d6210d162551e913222142d6c2d1e5a9362e40530b2fb5a9fdc",
+    "note": "Selected edit retains the complete correctly spoken off=0/on=1 explanation; ambiguous opening clause is omitted from both speech and final script. Original retained; selected edit receipt records source SHA256, retained interval and 10 ms fade."
+  },
+  "zh/fa02-08-03": {
+    "take": "",
+    "checked": true,
+    "sha256": "e8a3ecbe67c79c067f88b0474f71f564f3ad7c0eb637768c67f3490cf8db810e",
+    "note": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech."
+  },
+  "zh/fa02-08-04": {
+    "take": "",
+    "checked": true,
+    "sha256": "795dc307efa35e52b17ba4f9a65b9dc643e2ff3a18265979d49c18559071537c",
+    "note": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech."
+  },
+  "zh/fa02-08-05": {
+    "take": "2",
+    "checked": true,
+    "sha256": "30204ecf01f8d9437854b6f645e9c245d6cec72318dc4c208f5a43cbaa537f75",
+    "note": "Selected edit ends after the complete scope sentence. ASR confirms all words through 够; generated trailing speech is excluded. Original retained; selected edit receipt records source SHA256, retained interval and 10 ms fade."
+  },
+  "zh/fa02-08-06": {
+    "take": "",
+    "checked": true,
+    "sha256": "868dc4c3e9395aa67135ddc1ceca48c0d40a2f86c100dc182fd533826bc4098d",
+    "note": "Transcript inspected against the script, including quantities and terminology. Numeral formats, script variants and name/homophone substitutions are checked semantically; similarity alone does not approve speech."
+  }
+}
