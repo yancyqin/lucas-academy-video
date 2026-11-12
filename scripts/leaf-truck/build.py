@@ -83,14 +83,15 @@ def lines(lang):
 QUESTION_PAUSE = {"lf04-04": 3.0}
 SECTION_GAP = .9
 EDIT = [  # first line id → shot; a shot lasts until the next one starts
-    ("lf01-01", {"kind": "clip", "src": "clips/G1.mp4", "start": 0, "rate": .85, "badge": "recon"}),
+    # Muse clips wobble for their first ~8 frames (Yancy 11-12: 「前半秒晃一下」), so none starts before 0.5 s
+    ("lf01-01", {"kind": "clip", "src": "clips/G1.mp4", "start": .5, "rate": .8, "badge": "recon"}),
     ("lf01-03", {"kind": "clip", "src": "clips/truck.mp4", "start": 1.2, "badge": "recon"}),
-    ("lf01-04", {"kind": "clip", "src": "clips/G8.mp4", "start": 0, "rate": .8, "badge": "recon"}),
-    ("lf01-05", {"kind": "clip", "src": "clips/G2.mp4", "start": 0, "rate": .75, "badge": "recon"}),
+    ("lf01-04", {"kind": "clip", "src": "clips/G8.mp4", "start": .5, "rate": .8, "badge": "recon"}),
+    ("lf01-05", {"kind": "clip", "src": "clips/G2.mp4", "start": .5, "rate": .75, "badge": "recon"}),
     ("title", {"kind": "title"}),
     ("lf02-01", {"kind": "counter"}),
-    ("lf02-02", {"kind": "clip", "src": "clips/G3.mp4", "start": 0, "jolt": 2.0, "badge": "recon"}),
-    ("lf02-03", {"kind": "clip", "src": "clips/G4.mp4", "start": 0, "rate": .5, "badge": "recon",
+    ("lf02-02", {"kind": "clip", "src": "clips/G3.mp4", "start": .5, "jolt": 2.0, "badge": "recon"}),
+    ("lf02-03", {"kind": "clip", "src": "clips/G4.mp4", "start": .5, "rate": .5, "badge": "recon",
                  "labels": [{"en": "14.4 cm", "zh": "只有一掌高 · a hand's height", "x": 1440, "y": 430, "at": 3.2, "arrow": True}]}),
     ("lf02-04", {"kind": "split"}),
     ("lf03-01", {"kind": "clip", "src": "clips/G5.mp4", "start": 5.0, "badge": "recon"}),
@@ -103,7 +104,7 @@ EDIT = [  # first line id → shot; a shot lasts until the next one starts
     ("lf04-04", {"kind": "ab", "reveal": False}),
     ("lf04-05", {"kind": "ab", "reveal": True}),
     ("lf04-06", {"kind": "lidar"}),
-    ("lf05-01", {"kind": "clip", "src": "clips/G6.mp4", "start": 0, "badge": "recon"}),
+    ("lf05-01", {"kind": "clip", "src": "clips/G6.mp4", "start": .5, "badge": "recon"}),
     ("lf05-02", {"kind": "ripple"}),
     ("lf06-01", {"kind": "dial"}),
     ("lf06-03", {"kind": "goal"}),
@@ -112,7 +113,7 @@ EDIT = [  # first line id → shot; a shot lasts until the next one starts
     ("lf07-03", {"kind": "clip", "src": "clips/plane.mp4", "start": 1.4}),
     ("lf07-04", {"kind": "clip", "src": "clips/keys.mp4", "start": 0}),
     ("lf07-05", {"kind": "together"}),
-    ("lf07-06", {"kind": "clip", "src": "clips/G7.mp4", "start": 0, "badge": "recon"}),
+    ("lf07-06", {"kind": "clip", "src": "clips/G7.mp4", "start": .5, "badge": "recon"}),
     ("end", {"kind": "end"}),
 ]
 TAGS = {"lf03-04": ("Divergent → Critical", "发散 → 批判"), "lf04-04": ("Critical thinking", "批判性思维"),
