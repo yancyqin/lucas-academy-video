@@ -38,6 +38,26 @@ a sentence. Both run locally on this Mac.
   identify its snack. Animated characters and code-derived beads/trees/boxes,
   English default narration, independent Chinese audio and external SRTs.
 
+## Scripts and narration
+
+The owner's rule (2026-10-24) replaces every earlier default for how a film's words are written and voiced:
+「以前的文案逻辑都要推翻，太客观、太讲事实，不是不好，但是不亲切，AI 味道太重。」 The full standard is
+[SCRIPT-AND-VOICE.md](./SCRIPT-AND-VOICE.md). In short:
+
+- **Yancy tells it, in the first person.** The script is Yancy's: written by Yancy, or spoken by Yancy and
+  transcribed with the wording kept. When Claude drafts, it writes in Yancy's first person from things Yancy
+  has actually said, and Yancy's edits win. The voice is Yancy's clone, `yancy/zh`.
+- **Warm and personal, not a report.** Start from a moment, a person, or something that happened, not from
+  figures. Use few facts, and keep the sources in the plan rather than in the narration. There is no fixed
+  ending.
+- **Claude analyses the script before voicing it.** Claude writes a voice-direction sheet,
+  `docs/<film>/voice-direction.md`, in the format of the Language Bridge one: per line, what the line does,
+  its emphasis, punctuation, spoken respellings, pause and risks. Then one whole section (about a minute) is
+  voiced for Yancy to approve before the rest.
+- **Faster.** Instructions no longer ask for a slow delivery. The base speed is picked by ear at the next
+  film, from 1.2 / 1.3 / 1.4 (the Language Bridge Chinese film plays at 1.3×). Films delivered before this
+  rule keep their recorded narration.
+
 ## YouTube covers
 
 The owner's rule (2026-10-06): a cover carries **one question and nothing else**. That is the
@@ -114,6 +134,10 @@ so changing the defaults is one edit, and write the whole-person layout: 【标�
 
 ## Narration voices
 
+**Replaced for new films on 2026-10-24** by [SCRIPT-AND-VOICE.md](./SCRIPT-AND-VOICE.md): Yancy (`yancy/zh`),
+in the first person, at a faster speed. The table below is kept for re-making the films that used it. The rule on
+numbers at the end of this section still holds.
+
 The owner's standard (2026-10-07): three voices, each with one delivery, kept in
 [`scripts/voice_defaults.py`](./scripts/voice_defaults.py). A film's narration script writes them into
 every line (lucas-narrate's per-line `instruct`, `mode` and `speed`), so a finished film stays
@@ -160,6 +184,10 @@ about 8 dB higher than it did under the old envelope, and 3 dB lower under the v
 the walkie-talkie listening tests.
 
 ## Film endings
+
+**Retired on 2026-10-24** ([SCRIPT-AND-VOICE.md](./SCRIPT-AND-VOICE.md)): a film no longer has a fixed ending.
+It may still end on a question when Yancy wants one, asked in Yancy's own words, and it no longer closes on the
+「这也是我们在 Lucas Academy 一起学习、一起思考的问题」 formula. The old rule follows, for the films made under it.
 
 The owner's rule (2026-10-07): every film **ends with an open-ended, inviting question**. It is the
 last line spoken, after any easter egg and just before the end card, and it is also shown on screen.

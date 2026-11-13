@@ -7,10 +7,10 @@
 
 - **中文、英文各一部片**（owner，2026-10-20）：同一份镜头表，各按自己的配音定节奏（`timeline.zh.json` / `timeline.en.json`），卡片只用这部片的语言。每部片带两份字幕（自己的话和译文），都按自己的配音定时。不烧字幕。
 - **产品画面也分语言**：中文片录中文界面和中文内容，英文片录英文界面和英文内容（WEB 经文、英文句子、Weekly 的 `?lang=en`）。本来就是英文的画面（牛顿演示、Python 作业、博物馆走廊、过山车）只录一次，两部片共用。
-- 旁白：芳芳（`fangfang/zh`）和 Louise（`louise/en`），用 `scripts/voice_defaults.py` 的默认读法。
+- **旁白：Yancy 用第一人称讲，声音是 `yancy/zh`**（2026-10-24 起）。稿子怎么来、配音前的演绎稿、语速，都照 [SCRIPT-AND-VOICE.md](./SCRIPT-AND-VOICE.md)。英文片谁来说还没定。第 1 期用的是芳芳（`fangfang/zh`）和 Louise（`louise/en`）。
 - **系列名的斜 ribbon 只在封面上**，片子里没有（owner，2026-10-20）：中文封面「好奇新世界」，英文封面「Curious Worlds」。封面的字要大：问题 176 px（中）/ 150 px（英），斜带宽 132 px、带上的字 68 / 58 px（owner 嫌第一版太小）。
 - 配乐每期一首（`shots.py` 的 `MUSIC`），在旁白下压低，空隙里升起，由时间线控制，不用 sidechain。
-- 片尾最后一句是开放式问题；封面只有一个问题（README）。
+- 封面只有一个问题（README）。片尾不用固定格式（2026-10-24 起）。
 - 5–10 分钟（第 1 期 15 分钟）。每期预算：旁白 ≤ 25 句，不新做卡片，录屏用一条变速曲线。
 
 ## 文件
@@ -18,6 +18,7 @@
 | 什么 | 在哪 | 进 git |
 |---|---|---|
 | 配音稿（中文一行 + `>` 英文一行） | `docs/weekly/<期>/zh-edit.md` | 是 |
+| 演绎稿（每句的重音、标点、实际念的字、停顿、语气） | `docs/weekly/<期>/voice-direction.md` | 是 |
 | 镜头表（录屏时间用标记）、要拷的素材、配乐、读法 | `scripts/weekly/<期>/shots.py` | 是 |
 | 产品录屏怎么录 | `scripts/weekly/<期>/captures.cjs` | 是 |
 | Weekly 页面截图 | `scripts/weekly/<期>/stills.cjs` | 是 |
@@ -30,7 +31,8 @@
 ## 每周步骤
 
 ```bash
-# 1. 周四：按 weekly-NNN.{zh,en}.json 写 docs/weekly/NNN/zh-edit.md，写 shots.py / captures.cjs / stills.cjs，先给 owner 看稿子
+# 1. 周四：Yancy 写这期的稿子，或者口述一段，由 Claude 整理进 docs/weekly/NNN/zh-edit.md（保留原话）；
+#    Claude 照 weekly-NNN.{zh,en}.json 写 shots.py / captures.cjs / stills.cjs
 node scripts/weekly/capture.cjs scripts/weekly/NNN/captures.cjs          # 产品录屏，中文（真实时间，30 fps）
 WEEKLY_LANG=en node scripts/weekly/capture.cjs scripts/weekly/NNN/captures.cjs <名字…>   # 英文片要重录的几段
 node scripts/weekly/stills.cjs scripts/weekly/NNN/stills.cjs             # Weekly 页面截图，中文
@@ -39,7 +41,8 @@ python3 scripts/weekly/assets.py NNN                                      # 镜�
 python3 scripts/weekly/build_timeline.py NNN                              # 两条草稿时间线（估算时长，画面标 DRAFT）
 npx remotion studio                                                       # 看 WeeklyNNN / WeeklyNNNEn
 
-# 2. 稿子定了：配音（一次只跑一个 CosyVoice 进程）
+# 2. 稿子定了：Claude 先写演绎稿 docs/weekly/NNN/voice-direction.md，试配一整段（约一分钟）给 Yancy 听；
+#    Yancy 认可后再配全片（一次只跑一个 CosyVoice 进程）
 python3 scripts/weekly/narration.py NNN
 NARRATE_THREADS=8 ../lucas-academy-media/.conda/bin/python scripts/weekly/narrate.py NNN zh
 NARRATE_THREADS=8 ../lucas-academy-media/.conda/bin/python scripts/weekly/narrate.py NNN en
@@ -57,6 +60,8 @@ python3 scripts/weekly/youtube.py NNN
 ```
 
 重配一句：改稿子后 `narration.py`，再 `narrate.py NNN zh --only <id> --force`，然后 `takes.py`、`check.py`、`build_timeline.py`。
+
+`scripts/weekly/narration.py` 现在只读 `zh-edit.md` 和 `voice_defaults.py` 的芳芳、Louise 默认，还不读演绎稿，也没有 `yancy/zh`。下一期开工时要先接上，做法照 `scripts/reciprocal-doors-voice.py`（`md` / `apply-md`）。
 
 ## 录屏的坑
 

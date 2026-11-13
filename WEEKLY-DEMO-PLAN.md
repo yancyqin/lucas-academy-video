@@ -9,9 +9,9 @@
 
 - 不烧字幕：干净画面 + `zh-Hans.srt` / `en.srt`；交付时第一句话就说视频和 SRT 在哪。
 - 封面只有一个问题（大字中文、小字英文），交付前给 owner 约 10 个问题标题选。
-- 片头卡写 Lucas Academy 和署名；片尾最后一句是一个开放式邀请问题，配音、上屏。
+- 片头卡写 Lucas Academy 和署名；片尾最后一句是一个开放式邀请问题，配音、上屏。（2026-10-24 起不再固定，见 [SCRIPT-AND-VOICE.md](./SCRIPT-AND-VOICE.md)。）
 - 标签全小写，取自 `scripts/youtube_tags.py`；简介由脚本生成。
-- 配音默认 `fangfang/zh`（zero-shot，1.15）和 `louise/en`（zero-shot-instruct，1.0）；每条 Whisper 检查（中文 ≥ 0.94）。
+- 配音默认 `fangfang/zh`（zero-shot，1.15）和 `louise/en`（zero-shot-instruct，1.0）；每条 Whisper 检查（中文 ≥ 0.94）。（2026-10-24 起改成 Yancy 第一人称、`yancy/zh`、更快，见 [SCRIPT-AND-VOICE.md](./SCRIPT-AND-VOICE.md)；Whisper 检查不变。）
 - 产品画面要真的：真实录屏、真实截图、真实作品图。Weekly 里本来就标「概念图」的图可以用，画面上照样标「概念图」。
 - 连续的录屏用一条平滑变速曲线压缩（`src/lib/timeRamps.ts`），不剪成碎片。
 - 只提交能重做的源头（稿子、代码、文档）；录屏、配音、渲染放 `lucas-academy-video-data/weekly/`，收尾时清理。
@@ -65,8 +65,8 @@ Weekly 的中英文案在周五之前就写进网站了，所以稿子可以提�
 
 | 时间 | 做什么 |
 |---|---|
-| 周四 | 我按 `weekly-NNN.*.json` 和这周的提交起草稿子 + 镜头表，给 owner 看 |
-| 周五 | owner 改稿 → 配音；周五展示后只补录屏，不改词 |
+| 周四 | Yancy 写稿（或口述，我整理成稿、保留原话）；我按 `weekly-NNN.*.json` 和这周的提交写镜头表 |
+| 周五 | 我写演绎稿、试配一整段 → Yancy 听过 → 配全片；周五展示后只补录屏，不改词 |
 | 周六–周日 | 录屏、渲染、封面问题选项 |
 | 周一 | owner 上传 |
 
@@ -81,7 +81,7 @@ Weekly 的中英文案在周五之前就写进网站了，所以稿子可以提�
 
 1. **语言：中文、英文各一部片**（2026-10-20 看过初版后改定；初版是一部中文片 + 英文配音轨）。各按自己的配音定节奏，卡片只用自己的语言，
    产品画面也用自己的语言录（英文片重录英文界面和英文内容，本来是英文的画面共用）。每部片带中英两份字幕，按自己的配音定时。
-2. **旁白：芳芳**（`fangfang/zh`）；英文 Louise（`louise/en`）。
+2. **旁白：芳芳**（`fangfang/zh`）；英文 Louise（`louise/en`）。→ 2026-10-24 改成 **Yancy 第一人称**（`yancy/zh`），见 [SCRIPT-AND-VOICE.md](./SCRIPT-AND-VOICE.md)；英文片谁来说待定。
 3. **结构：第 1 期按主题分章，15 分钟**（上表）。
 
 4. **片名：好奇新世界**（Curious Worlds）。第 1 期是「001–003 回顾」，之后期号跟 Weekly 一致（004 起）。
