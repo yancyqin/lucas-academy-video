@@ -1,0 +1,62 @@
+{
+  "destination": "/Users/yqin/Desktop/家庭AI实验室-感知机-上传",
+  "filmVisualRevision": 3,
+  "filmSha256": "68b4d79329ab9fccd5739ad735a7aaa6788241aaa2bc65c3a7bc189a64c5298e",
+  "seconds": 445.5,
+  "defaultLanguage": "en",
+  "audio": {
+    "en": {
+      "seconds": 445.5,
+      "encodedAudioMatchesMovie": true
+    },
+    "zh": {
+      "seconds": 445.5,
+      "encodedAudioMatchesMovie": true
+    }
+  },
+  "embeddedSubtitles": 0,
+  "coverBackgroundSeconds": 2,
+  "coverRecord": "docs/family-ai-lab-01/cover-frame-02.json",
+  "files": {
+    "NOTES.txt": {
+      "bytes": 793,
+      "sha256": "0a817cc7857246bf132a51c7eea86706d35e8c61c5fd799583da264cbc516cf2"
+    },
+    "cover.en.jpg": {
+      "bytes": 291387,
+      "sha256": "58d5c2418397f31559526fbde63439dfdde2f9b76732f64211e6eed6f92ad42d"
+    },
+    "cover.zh.jpg": {
+      "bytes": 300348,
+      "sha256": "601aca042443dfaf217ec3714d151a52597530bd6e52264ca3b9b2fa0b9f6991"
+    },
+    "family-ai-lab-perceptron.en.m4a": {
+      "bytes": 8335532,
+      "sha256": "ba5a0950fced62d9ee436e7f3764d9b51a31a9f7b92b282deb7f61d89ad5b746"
+    },
+    "family-ai-lab-perceptron.en.srt": {
+      "bytes": 8495,
+      "sha256": "2c539627f78c4f811be47c49a271ca91f7e3fbc004bf7fb6141e6cb34839717f"
+    },
+    "family-ai-lab-perceptron.mp4": {
+      "bytes": 72079503,
+      "sha256": "68b4d79329ab9fccd5739ad735a7aaa6788241aaa2bc65c3a7bc189a64c5298e"
+    },
+    "family-ai-lab-perceptron.zh-Hans.srt": {
+      "bytes": 6703,
+      "sha256": "ba1017b09421db26d47d3c39552c1f95a9d019ff2d0b1724f6b56deb01c514c4"
+    },
+    "family-ai-lab-perceptron.zh.m4a": {
+      "bytes": 6192801,
+      "sha256": "0245e50b7899f7d5a809f3e14c0caafae0f175b883bbf33f54566acc9971e371"
+    },
+    "youtube-description.en.txt": {
+      "bytes": 2381,
+      "sha256": "8c84de6e0871182ba2799d59d69a99d4d6fcc01a8d88c16dcefbed77367012aa"
+    },
+    "youtube-description.zh.txt": {
+      "bytes": 2226,
+      "sha256": "4c78019cd4e3f022eccf0474deddfc1d57c0473f0dbe327ffc037bb89331bf2f"
+    }
+  }
+}

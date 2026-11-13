@@ -1,4 +1,7 @@
 import {FamilyAiLab01, calculateFamilyMetadata} from './videos/family-ai-lab-01/FamilyAiLab01';
+import {FamilyAiLab02, calculateFamily02Metadata} from './videos/family-ai-lab-02/FamilyAiLab02';
+import {FamilyAiLab02Orbital, calculateOrbitalMetadata} from './videos/family-ai-lab-02/FamilyAiLab02Orbital';
+import {FamilyAiLab02Short, calculateShortMetadata} from './videos/family-ai-lab-02/FamilyAiLab02Short';
 import {Composition} from 'remotion';
 import {VG_WHY_DURATION, VG_WHY_FPS, VgWhyCover, VgWhyVideo} from './videos/vg-why/VgWhyVideo';
 import {RD_FPS, filmDuration, LanguageBridgeCover, LanguageBridgeVideo, type LanguageBridgeProps} from './videos/ReciprocalDoorsVideo';
@@ -15,6 +18,8 @@ import {MiddleIncomeTrapCover, MiddleIncomeTrapCoverEn} from './videos/middle-in
 import {AiSycophancyVideo, calculateAsMetadata} from './videos/ai-sycophancy/AiSycophancyVideo';
 import {ButterflyChallengeVideo, calculateBcMetadata} from './videos/butterfly-challenge/ButterflyChallengeVideo';
 import {FunInformatics04Video, calculateFi04Metadata} from './videos/fun-informatics-04/FunInformatics04Video';
+import {AiAnimalMindVideo, calculateAiAnimalMetadata} from './videos/ai-animal-mind/AiAnimalMindVideo';
+import {AiAnimalShort, calculateAiAnimalShortMetadata} from './videos/ai-animal-mind/AiAnimalShort';
 import {Screen as AsScreen, calculateScreenMetadata} from './videos/ai-sycophancy/Screen';
 import {WeeklyCover, WeeklyEpisode, calculateWeeklyMetadata} from './videos/weekly/WeeklyEpisode';
 import {Cube2x2Cover, Cube2x2Video, calculateCubeMetadata} from './videos/cube-2x2/Cube2x2Video';
@@ -350,10 +355,15 @@ export const Root: FC = () => {
       <Composition id="AiSycophancy" component={AiSycophancyVideo} durationInFrames={18000} fps={30} width={1920} height={1080} defaultProps={{tl:null, lang:'zh' as const}} calculateMetadata={calculateAsMetadata} />
       <Composition id="ButterflyChallenge" component={ButterflyChallengeVideo} durationInFrames={9000} fps={30} width={1920} height={1080} defaultProps={{tl:null}} calculateMetadata={calculateBcMetadata} />
       <Composition id="FamilyAiLab01" component={FamilyAiLab01} fps={30} width={1920} height={1080} durationInFrames={13000} defaultProps={{tl:null,data:null}} calculateMetadata={calculateFamilyMetadata} />
+      <Composition id="FamilyAiLab02" component={FamilyAiLab02} fps={30} width={1920} height={1080} durationInFrames={9000} defaultProps={{tl:null,facts:null}} calculateMetadata={calculateFamily02Metadata} />
+      <Composition id="FamilyAiLab02Orbital" component={FamilyAiLab02Orbital} fps={30} width={1920} height={1080} durationInFrames={1260} defaultProps={{tl:null,facts:null,view:'study' as const}} calculateMetadata={calculateOrbitalMetadata} />
+      <Composition id="FamilyAiLab02Short" component={FamilyAiLab02Short} fps={30} width={1080} height={1920} durationInFrames={1350} defaultProps={{tl:null,facts:null}} calculateMetadata={calculateShortMetadata} />
       <Composition id="FamilyAiLab01En" component={FamilyAiLab01} fps={30} width={1920} height={1080} durationInFrames={13000} defaultProps={{tl:null,data:null}} calculateMetadata={calculateFamilyMetadata} />
       <Composition id="FamilyAiLab01Zh" component={FamilyAiLab01} fps={30} width={1920} height={1080} durationInFrames={13000} defaultProps={{tl:null,data:null}} calculateMetadata={calculateFamilyMetadata} />
       <Composition id="FunInformatics04Zh" component={FunInformatics04Video} durationInFrames={18000} fps={30} width={1920} height={1080} defaultProps={{tl:null, lang:'zh' as const}} calculateMetadata={calculateFi04Metadata} />
       <Composition id="FunInformatics04En" component={FunInformatics04Video} durationInFrames={18000} fps={30} width={1920} height={1080} defaultProps={{tl:null, lang:'en' as const}} calculateMetadata={calculateFi04Metadata} />
+      <Composition id="AiAnimalMind" component={AiAnimalMindVideo} durationInFrames={18000} fps={30} width={1920} height={1080} defaultProps={{tl:null}} calculateMetadata={calculateAiAnimalMetadata} />
+      <Composition id="AiAnimalShort" component={AiAnimalShort} durationInFrames={1800} fps={30} width={1080} height={1920} defaultProps={{short:"ocean", tl:null}} calculateMetadata={calculateAiAnimalShortMetadata} />
       <Composition id="AsScreen" component={AsScreen} durationInFrames={300} fps={30} width={720} height={1560} defaultProps={{kind:'G1', width:720, height:1560, seconds:10, cues:[2,4], lines:['您的这个想法真是太深刻、太有远见了！','不得不说，您的观察力非常敏锐。']}} calculateMetadata={calculateScreenMetadata} />
       <Composition id="NewsEducation01Cover" component={NewsEducation01Cover} durationInFrames={1} fps={30} width={1280} height={720} />
       <Composition id="NewsEducation01CoverEn" component={NewsEducation01CoverEn} durationInFrames={1} fps={30} width={1280} height={720} />

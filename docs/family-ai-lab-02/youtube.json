@@ -1,0 +1,42 @@
+{
+  "long/en": {
+    "title": "Can 0 and 1 Talk?",
+    "description": "Mia's paper note will not fit through the pipe. She and Leo try a shared code: gold for one, blue for zero.\n\nSend PLAY, follow yes-or-no clues to a hidden gift, and find the watermelon snack. Then try a message of your own with the browser lab or a printed code table.\n\nA story for families about binary messages, bits, bytes and asking useful questions.\n\nTry the browser lab and printable worksheets: https://ai.lucasacademy.org/courses/zero-and-one/\n\nChapters\n00:00 A note that will not fit\n00:24 Two tiny signals\n00:49 A shared code\n01:24 PLAY arrives\n01:52 Find the hidden gift\n02:38 Why four questions?\n03:02 The watermelon clue\n03:37 Your turn\n\nASCII reference: https://www.rfc-editor.org/rfc/rfc20\n\nBy Lucas Academy Team\nNarration: Louise, synthetic voice in English and Chinese.\nFictional space scenes: Muse. Environment artwork: ImageGen. Teaching graphics, original music and sound effects: Lucas Academy.\nBrowser recording and worksheets: Lucas Academy. Fruit illustrations: Microsoft Fluent Emoji (MIT).\n\n#education #parenting #art #arthistory #stem #bilingual #bilingualchildren #lucas_academy #binary #bitsandbytes #ascii #computerscience #codingforkids #familyailab",
+    "tags": "#binary #bitsandbytes #ascii #computerscience #codingforkids #familyailab #education #parenting #art #arthistory #stem #bilingual #bilingualchildren #lucas_academy",
+    "hashtagLine": "#education #parenting #art #arthistory #stem #bilingual #bilingualchildren #lucas_academy #binary #bitsandbytes #ascii #computerscience #codingforkids #familyailab",
+    "uploadSettings": "主视频 / Main video: 01-长片/0和1能聊天吗-双语长片.mp4\n原始语言 / Original language: English\n独立中文配音 / Chinese audio: 01-长片/中文音轨.m4a\n独立英文配音 / English audio: 01-长片/英文音轨.m4a\n字幕 / Captions: 01-长片/0和1能聊天吗-双语长片.en.srt; 01-长片/0和1能聊天吗-双语长片.zh-Hans.srt\n封面 / Thumbnail: 03-封面/英文封面.png\n画幅 / Aspect: 16:9\n中英文标题与简介用于同一影片的语言版本 / Localized metadata for one shared video\n类别 / Category: Education",
+    "file": "docs/family-ai-lab-02/youtube/long.en.txt",
+    "sha256": "3d9455dd13058538e574a8b9b71f418a676e131ff73438046deb3ab09508d004",
+    "sourceMovieSha256": "9de7cfdfd74706a0dabeee359fd487328b2c8b4366b540a4bdef5c3a1c7b9bbb"
+  },
+  "long/zh": {
+    "title": "0和1，能聊天吗？",
+    "description": "米娅的纸条塞不进管子。她和里奥先约好：金色表示一，蓝色表示零。\n\n把 PLAY 传过去，再用是否问题找出藏礼物的箱子，看看里面是什么点心。看完也能和孩子试试：打开网页实验室，或者打印编码表，互相出一道消息题。\n\n跟着两个朋友的小冒险，认识比特、字节、编码和提问的方法。\n\n网页实验室和可打印学习单：https://ai.lucasacademy.org/courses/zero-and-one/\n\n章节\n00:00 纸条塞不进去\n00:24 两种小信号\n00:49 先约好编码\n01:24 邀请送到了\n01:52 寻找七号箱\n02:38 为什么四问够用\n03:02 西瓜线索\n03:37 换你来发消息\n\nASCII 参考：https://www.rfc-editor.org/rfc/rfc20\n\n作者：Lucas Academy Team\n配音：Louise，中英文合成旁白。\n太空舱虚构剧情片段：Muse；场景底图：ImageGen；图解、原创配乐和音效：Lucas Academy。\n网页录屏与学习单：Lucas Academy；水果图片：Microsoft Fluent Emoji（MIT）。\n\n#education #parenting #art #arthistory #stem #bilingual #bilingualchildren #lucas_academy #二进制 #信息编码 #ascii #计算机科学 #少儿编程 #亲子学习 #家庭ai实验室",
+    "tags": "#二进制 #信息编码 #ascii #计算机科学 #少儿编程 #亲子学习 #家庭ai实验室 #education #parenting #art #arthistory #stem #bilingual #bilingualchildren #lucas_academy",
+    "hashtagLine": "#education #parenting #art #arthistory #stem #bilingual #bilingualchildren #lucas_academy #二进制 #信息编码 #ascii #计算机科学 #少儿编程 #亲子学习 #家庭ai实验室",
+    "uploadSettings": "主视频 / Main video: 01-长片/0和1能聊天吗-双语长片.mp4\n原始语言 / Original language: English\n独立中文配音 / Chinese audio: 01-长片/中文音轨.m4a\n独立英文配音 / English audio: 01-长片/英文音轨.m4a\n字幕 / Captions: 01-长片/0和1能聊天吗-双语长片.en.srt; 01-长片/0和1能聊天吗-双语长片.zh-Hans.srt\n封面 / Thumbnail: 03-封面/中文封面.png\n画幅 / Aspect: 16:9\n中英文标题与简介用于同一影片的语言版本 / Localized metadata for one shared video\n类别 / Category: Education",
+    "file": "docs/family-ai-lab-02/youtube/long.zh.txt",
+    "sha256": "5d1edf5a288f01153c2849ac17a5769355492b6b1370ba5f732e823d4e39705f",
+    "sourceMovieSha256": "9de7cfdfd74706a0dabeee359fd487328b2c8b4366b540a4bdef5c3a1c7b9bbb"
+  },
+  "short/en": {
+    "title": "Can 0 and 1 Talk?",
+    "description": "The note gets stuck. Tiny signals get the invitation through!\n\nJoin Mia and Leo for an adventure in space: send a message, find a hidden gift and send a reply. Their tiny pipe leads us to the internet, where videos, messages and even chats with AI use zeros and ones.\n\nA funny story? A new game? What will you share today?\n\nTry the browser lab and printable worksheets: https://ai.lucasacademy.org/courses/zero-and-one/\n\nBy Lucas Academy Team\nNarration: Louise, synthetic voice in English and Chinese.\nFictional space scenes: Muse. Environment artwork: ImageGen. Teaching graphics, original music and sound effects: Lucas Academy.\n\n#education #parenting #art #arthistory #stem #bilingual #bilingualchildren #lucas_academy #shorts #binary #internet #aiforkids #artificialintelligence #codingforkids #familyailab",
+    "tags": "#shorts #binary #internet #aiforkids #artificialintelligence #codingforkids #familyailab #education #parenting #art #arthistory #stem #bilingual #bilingualchildren #lucas_academy",
+    "hashtagLine": "#education #parenting #art #arthistory #stem #bilingual #bilingualchildren #lucas_academy #shorts #binary #internet #aiforkids #artificialintelligence #codingforkids #familyailab",
+    "uploadSettings": "主视频 / Main video: 02-竖屏短片/0和1能聊天吗-竖屏短片.mp4\n原始语言 / Original language: English\n独立中文配音 / Chinese audio: 02-竖屏短片/中文音轨.m4a\n独立英文配音 / English audio: 02-竖屏短片/英文音轨.m4a\n字幕 / Captions: 02-竖屏短片/0和1能聊天吗-竖屏短片.en.srt; 02-竖屏短片/0和1能聊天吗-竖屏短片.zh-Hans.srt\n封面 / Thumbnail: 03-封面/Shorts-英文封面.png\n画幅 / Aspect: 9:16\n中英文标题与简介用于同一影片的语言版本 / Localized metadata for one shared video\n类别 / Category: Education",
+    "file": "docs/family-ai-lab-02/youtube/short.en.txt",
+    "sha256": "be8bba3ee62298aa36b119d50a5ea1b51db8b799b7d7984516c178ff46a7aaec",
+    "sourceMovieSha256": "8644b1ac64cf2cb80b021dd94411072aea89e8a5617bf36e3e051d0ea0cd43ff"
+  },
+  "short/zh": {
+    "title": "0和1，能聊天吗？",
+    "description": "纸条卡住了，邀请却送到了！\n\n跟着米娅和里奥，传消息、找礼物，再回一声「收到啦」。从两个朋友的小管子，看到连起全世界的互联网：视频、消息，连和 AI 聊天，都用零和一。\n\n一个好玩的故事？一个新游戏？今天你想分享什么？\n\n网页实验室和可打印学习单：https://ai.lucasacademy.org/courses/zero-and-one/\n\n作者：Lucas Academy Team\n配音：Louise，中英文合成旁白。\n太空舱虚构剧情片段：Muse；场景底图：ImageGen；图解、原创配乐和音效：Lucas Academy。\n\n#education #parenting #art #arthistory #stem #bilingual #bilingualchildren #lucas_academy #shorts #二进制 #互联网 #人工智能 #少儿编程 #亲子学习 #家庭ai实验室",
+    "tags": "#shorts #二进制 #互联网 #人工智能 #少儿编程 #亲子学习 #家庭ai实验室 #education #parenting #art #arthistory #stem #bilingual #bilingualchildren #lucas_academy",
+    "hashtagLine": "#education #parenting #art #arthistory #stem #bilingual #bilingualchildren #lucas_academy #shorts #二进制 #互联网 #人工智能 #少儿编程 #亲子学习 #家庭ai实验室",
+    "uploadSettings": "主视频 / Main video: 02-竖屏短片/0和1能聊天吗-竖屏短片.mp4\n原始语言 / Original language: English\n独立中文配音 / Chinese audio: 02-竖屏短片/中文音轨.m4a\n独立英文配音 / English audio: 02-竖屏短片/英文音轨.m4a\n字幕 / Captions: 02-竖屏短片/0和1能聊天吗-竖屏短片.en.srt; 02-竖屏短片/0和1能聊天吗-竖屏短片.zh-Hans.srt\n封面 / Thumbnail: 03-封面/Shorts-中文封面.png\n画幅 / Aspect: 9:16\n中英文标题与简介用于同一影片的语言版本 / Localized metadata for one shared video\n类别 / Category: Education",
+    "file": "docs/family-ai-lab-02/youtube/short.zh.txt",
+    "sha256": "cbdf6c08af2e7ac463e15fb80c183f34e9c9201bbdf538eba2174193880c7386",
+    "sourceMovieSha256": "8644b1ac64cf2cb80b021dd94411072aea89e8a5617bf36e3e051d0ea0cd43ff"
+  }
+}

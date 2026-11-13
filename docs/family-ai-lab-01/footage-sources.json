@@ -275,6 +275,13 @@
       "credit": "Built-in ImageGen; illustrative 1957 teaching set; provenance retained off-picture at owner request",
       "prompt": "docs/family-ai-lab-01/atmosphere-v3-prompts.json",
       "dimensions": "1672x941"
+    },
+    {
+      "path": "public/family-ai-lab-01/art/cover-frame-00-02.png",
+      "sha256": "3716d077936d3b90d1c6849bf2abadd4d5db0c9b484870f23abe6cd89fcb7e99",
+      "credit": "Owner-selected unlettered Muse G4 frame at00:02; exact source composition retained for upload covers",
+      "source": "public/family-ai-lab-01/muse/G4-time-travel-v2.mp4",
+      "seconds": 2
     }
   ],
   "commonsMediaUsed": false,

@@ -1,0 +1,33 @@
+{
+ "note": "Two vertical shorts from 「动物想什么？AI 知道吗？」 (Yancy 2026-11-11: 「出2个短视频吧，多用动物。一个用海洋动物，开场用G10；一个用其他动物」). build_short.py reads this. A beat is a narration line of the film (its en / zh take), or a wordless stretch of 'dur' s; 'sounds' plays the film's real recordings placed after that edit.json line ('after'); 'tail' adds seconds after the line (and its sounds); 'tail_shots' are cut evenly across the tail. A shot's 'at' is a fraction of the line (0-1), or '+x' = x s after the line ends; a beat without shots keeps the previous picture. The title stays on screen; captions follow the voice.",
+ "shorts": {
+  "ocean": {
+   "music": ["theme", "v1"],
+   "beats": [
+    {"dur": 3.2, "sounds": "am01-04", "sound_at": 0.2, "shots": [{"at": 0, "clip": "muse-G10"}]},
+    {"line": "am01-04", "shots": [{"at": 0, "clip": "muse-G10", "in": 3.2}, {"at": 0.55, "clip": "px12659675", "in": 2.0}]},
+    {"line": "am01-05", "shots": [{"at": 0, "clip": "px4592360"}, {"at": 0.6, "clip": "px34588016"}]},
+    {"line": "am02-01", "sounds": "am02-01", "shots": [{"at": 0, "clip": "px26245637"}, {"at": "+0.3", "clip": "px15546563", "in": 4.0}]},
+    {"line": "am04-03", "sounds": "am04-03", "shots": [{"at": 0, "clip": "px18680289"}, {"at": 0.5, "clip": "px4332085"}, {"at": "+0.2", "clip": "px14146687", "in": 20.0}]},
+    {"line": "am04-04", "shots": [{"at": 0, "clip": "px11279748"}, {"at": 0.45, "clip": "px5607741"}]},
+    {"dur": 5.0, "tail_shots": ["px34139293", "px36431449", "px2863432", "px5548246", "px18932577"]}
+   ]
+  },
+  "animals": {
+   "music": ["v1", "v5"],
+   "beats": [
+    {"dur": 0.5, "shots": [{"at": 0, "clip": "px38553315"}]},
+    {"line": "am00-01"},
+    {"line": "am08-02", "tail": 4.2, "shots": [{"at": 0, "clip": "px11741208"}],
+     "tail_shots": ["px37656637", "px35168498", "px9421538", "px29758648", "px27875223"]},
+    {"line": "am09-05", "tail": 4.4, "shots": [{"at": 0, "clip": "px16680426"}],
+     "tail_shots": ["px19081244", "px29983633", "px36776294", "px17015211", "px30038996"]},
+    {"line": "am07-02", "sounds": "am07-02", "shots": [{"at": 0, "clip": "px13693034"}, {"at": "+0.2", "clip": "px40136312"}]},
+    {"line": "am07-03", "shots": [{"at": 0, "clip": "px27596738"}, {"at": 0.55, "clip": "px3765312", "in": 6.0}]},
+    {"line": "am11-04", "shots": [{"at": 0, "clip": "muse-G08"}]},
+    {"line": "am11-05"},
+    {"line": "am13-03", "tail": 1.8, "shots": [{"at": 0, "clip": "px38553315", "in": 7.0}]}
+   ]
+  }
+ }
+}

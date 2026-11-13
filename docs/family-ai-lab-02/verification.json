@@ -1,0 +1,76 @@
+{
+  "durationSeconds": 263.1,
+  "frameCount": 7893,
+  "video": "1920x1080, 30 fps",
+  "audioTracks": [
+    {
+      "language": "English",
+      "default": true
+    },
+    {
+      "language": "Chinese",
+      "default": false
+    }
+  ],
+  "subtitleTracks": 0,
+  "externalSRTs": {
+    "en": 36,
+    "zh-Hans": 36
+  },
+  "noSubtitleBand": true,
+  "selectedNarrationTakes": 72,
+  "sourceHashesVerified": 13,
+  "blackSegments": [],
+  "audioLoudness": {
+    "en": {
+      "integratedLUFS": "-16.03",
+      "truePeakDBTP": "-0.97"
+    },
+    "zh": {
+      "integratedLUFS": "-16.03",
+      "truePeakDBTP": "-0.98"
+    }
+  },
+  "qr": {
+    "target": "https://ai.lucasacademy.org/courses/zero-and-one/",
+    "finalMovieFrames": [
+      {
+        "scene": "lab",
+        "seconds": 232.72533333333334,
+        "alsoDecodedAt720p": true
+      },
+      {
+        "scene": "invite",
+        "seconds": 258.312,
+        "alsoDecodedAt720p": true
+      }
+    ]
+  },
+  "filmSha256": "422369b144b91e2123e22ad1080b077c48f445d1713127e87e78661e10369179",
+  "typecheck": "npx tsc --noEmit passed",
+  "visualQA": "All 36 voiced cue samples plus final-movie lab and end frames inspected. Short English labels, no burned captions or reserved caption strip. Full conditional fruit tree includes the yellow branch.",
+  "narrationQA": {
+    "selectedTakes": 72,
+    "selectedReplacements": 18,
+    "selectedEditedTakes": 3,
+    "allSelectedSmallTranscriptsInspected": true,
+    "selectionHashesMatchWAVsAndScriptSettings": true
+  },
+  "render": {
+    "chunks": 4,
+    "workers": 2,
+    "rangeFrames": 2400,
+    "successfulLog": "tmp/fa02-final-render.log"
+  },
+  "backupRestore": {
+    "publicInputFiles": 95,
+    "byteCompared": true,
+    "sha256ManifestFiles": 308
+  },
+  "openingPreview": {
+    "path": "out/family-ai-lab-02/delivery/opening-preview.mp4",
+    "durationSeconds": 30.016,
+    "audioTracks": 2,
+    "subtitleTracks": 0
+  }
+}

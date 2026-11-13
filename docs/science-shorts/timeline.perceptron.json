@@ -1,0 +1,361 @@
+{
+  "film": "perceptron",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "defaultLanguage": "en",
+  "durationInFrames": 2248,
+  "narrated": true,
+  "lines": [
+    {
+      "id": "p01",
+      "visual": "portal",
+      "from": 0,
+      "duration": 270,
+      "text": {
+        "en": "Let’s take Claude Fable 5.1 and GPT-6-Astra back to 1957 for an AI speed race!",
+        "zh": "我们带上 Claude Fable 5.1 和 GPT-6-Astra，穿越到一九五七年，来场模型速度大比拼！"
+      }
+    },
+    {
+      "id": "p02",
+      "visual": "race",
+      "from": 270,
+      "duration": 174,
+      "text": {
+        "en": "Four programs get the same seven. X finishes almost instantly.",
+        "zh": "同一张七，四位选手一起认。X 一开始就答完了。"
+      }
+    },
+    {
+      "id": "p03",
+      "visual": "speed",
+      "from": 444,
+      "duration": 194,
+      "text": {
+        "en": "Just 0.37 microseconds per picture. All ten test pictures correct.",
+        "zh": "每张只要0.37微秒。十张测试图，全都答对。"
+      }
+    },
+    {
+      "id": "p04",
+      "visual": "ratios",
+      "from": 638,
+      "duration": 259,
+      "text": {
+        "en": "3 million times faster than Claude Fable 5.1, and 10 million times faster than GPT-6-Astra!",
+        "zh": "比 Claude Fable 5.1 快300万倍，比 GPT-6-Astra 快1000万倍！"
+      }
+    },
+    {
+      "id": "p05",
+      "visual": "reveal",
+      "from": 897,
+      "duration": 198,
+      "text": {
+        "en": "Meet the perceptron: a 1957 idea, using just 400 points.",
+        "zh": "这就是感知机。一九五七年的思路，只有四百个分数。"
+      }
+    },
+    {
+      "id": "p06",
+      "visual": "add",
+      "from": 1095,
+      "duration": 159,
+      "text": {
+        "en": "Add the black squares’ points. Enough points means yes.",
+        "zh": "把黑格子的分数加起来，够了就回答“是”。"
+      }
+    },
+    {
+      "id": "p07",
+      "visual": "train",
+      "from": 1254,
+      "duration": 180,
+      "text": {
+        "en": "It learned from 419 examples, adjusting those points along the way.",
+        "zh": "四百一十九张例子，让它把这些分数一点点调好。"
+      }
+    },
+    {
+      "id": "p08",
+      "visual": "scope",
+      "from": 1434,
+      "duration": 135,
+      "text": {
+        "en": "Winning this specialized speed test doesn’t make it smarter overall.",
+        "zh": "专项任务跑得快，不代表整体能力更强。"
+      }
+    },
+    {
+      "id": "p09",
+      "visual": "family",
+      "from": 1569,
+      "duration": 144,
+      "text": {
+        "en": "Grid paper, a few pencils, and you can try training one with your child.",
+        "zh": "格子纸，几支笔，你和孩子也能训练一个。"
+      }
+    },
+    {
+      "id": "p10",
+      "visual": "matrix",
+      "from": 1713,
+      "duration": 233,
+      "text": {
+        "en": "That weighted sum can be written as matrix multiplication, one of today’s basic AI operations.",
+        "zh": "刚才的加权求和，可以写成矩阵相乘。这也是今天 AI 的基础运算。"
+      }
+    },
+    {
+      "id": "p11",
+      "visual": "invite",
+      "from": 1946,
+      "duration": 302,
+      "text": {
+        "en": "At Lucas Academy, we learn step by step. What do you want to learn about AI today?",
+        "zh": "在 Lucas Academy，我们一起一点一点学。今天，关于 AI，你想学点什么？"
+      }
+    }
+  ],
+  "shots": [
+    {
+      "first": "p01",
+      "last": "p01",
+      "asset": "perceptron-portal",
+      "in": 0,
+      "out": 10,
+      "layout": "portrait",
+      "focus": 0.57,
+      "from": 0,
+      "duration": 270,
+      "rate": 1.1111111111111112
+    },
+    {
+      "first": "p02",
+      "last": "p03",
+      "asset": "perceptron-lab",
+      "in": 0,
+      "out": 10,
+      "layout": "portrait",
+      "focus": 0.52,
+      "from": 270,
+      "duration": 368,
+      "rate": 0.8152173913043478
+    },
+    {
+      "first": "p04",
+      "last": "p05",
+      "asset": "perceptron-1957",
+      "in": 0,
+      "out": 10,
+      "layout": "portrait",
+      "focus": 0.57,
+      "from": 638,
+      "duration": 457,
+      "rate": 0.6564551422319476
+    },
+    {
+      "first": "p06",
+      "last": "p07",
+      "asset": "perceptron-lab",
+      "in": 0,
+      "out": 10,
+      "layout": "portrait",
+      "focus": 0.65,
+      "from": 1095,
+      "duration": 339,
+      "rate": 0.8849557522123893
+    },
+    {
+      "first": "p08",
+      "last": "p08",
+      "asset": "perceptron-portal",
+      "in": 7,
+      "out": 10,
+      "layout": "portrait",
+      "focus": 0.52,
+      "from": 1434,
+      "duration": 135,
+      "rate": 0.6666666666666666
+    },
+    {
+      "first": "p09",
+      "last": "p09",
+      "asset": "perceptron-family",
+      "in": 0,
+      "out": 6,
+      "layout": "portrait",
+      "focus": 0.66,
+      "from": 1569,
+      "duration": 144,
+      "rate": 1.25
+    },
+    {
+      "first": "p10",
+      "last": "p10",
+      "asset": "perceptron-lab",
+      "in": 0,
+      "out": 10,
+      "layout": "portrait",
+      "focus": 0.65,
+      "from": 1713,
+      "duration": 233,
+      "rate": 1.2875536480686696
+    },
+    {
+      "first": "p11",
+      "last": "p11",
+      "asset": "perceptron-family",
+      "in": 6,
+      "out": 10,
+      "layout": "portrait",
+      "focus": 0.66,
+      "from": 1946,
+      "duration": 302,
+      "rate": 0.3973509933774835
+    }
+  ],
+  "voices": {
+    "en": {
+      "p01": {
+        "path": "narration/en/p01.wav",
+        "sha256": "44d6cc1e12d0284f3fb909cf6bfaaebd1322d7a79dc8fbf1c05e7fd04f594d57",
+        "seconds": 8.6,
+        "settingsSha256": "a1f2cf1cdd13bbbc48c1991e05d9d1d5c28d2e6d6a481a99fa1e744844c3ea45"
+      },
+      "p02": {
+        "path": "narration/en/p02.wav",
+        "sha256": "e2b6d20f8be803af9a1a3f7ee56d4f1e94ea454af02c29add7f97825392be664",
+        "seconds": 4.64,
+        "settingsSha256": "6907b63c730c556dac9aad2e9e03c4d8b4190f1ff930609ef8cfeee34b36def6"
+      },
+      "p03": {
+        "path": "narration/en/p03.wav",
+        "sha256": "bf02bef3ddadfba2cdc295b42884cd55665fdf02c50001b8c833f814961d4e07",
+        "seconds": 6.06,
+        "settingsSha256": "b8cfe918c3cfef344cc492bb2e66be806a7c9cc376bd86348178a3dcd291215c"
+      },
+      "p04": {
+        "path": "narration/en/p04.wav",
+        "sha256": "65c7c57fe28dc8bfcb0aa7110c49aab3ac43e0144b0beea400bf544ed1679b65",
+        "seconds": 8.24,
+        "settingsSha256": "f55f14e6f33f7a44b769a29fe4f3b8c6046dcbb87e9acbc3f83b52cb13c9d69b"
+      },
+      "p05": {
+        "path": "narration/en/p05.wav",
+        "sha256": "bbe2a6aff5350f1a900e0cf429a09885a31a5842639257d44d613fb0ae9c4d4d",
+        "seconds": 6.2,
+        "settingsSha256": "a5d2d9387374a05e84bd8bb0e255343651741c3a4cf7b360db8c0373341c1f54"
+      },
+      "p06": {
+        "path": "narration/en/p06.wav",
+        "sha256": "18f85a12bd570a34cc937957be07b9a68283887335da024f93e5fa3fe19b2b85",
+        "seconds": 4.9,
+        "settingsSha256": "d46608cd8400f70e8c9c95deb5521d95bc888033167e3221bb78371c3cc0059d"
+      },
+      "p07": {
+        "path": "narration/en/p07.wav",
+        "sha256": "8fa2dc5d7d6c6602fbde7fe4137da853cbfc1ad3579b349b2a664cdea1986783",
+        "seconds": 5.62,
+        "settingsSha256": "95d4adf54d09a15240d386009aa5d8ef9e1df356a2f35f2c231a7361c6475180"
+      },
+      "p08": {
+        "path": "narration/en/p08.wav",
+        "sha256": "350e5530f0e837d373727baeb729bf2cf8c1e481f702adcf99f8892b7b4d9edd",
+        "seconds": 4.1,
+        "settingsSha256": "4b04817620f8bad87e6dc9ed239e6b7f7415d187a7ed01067a57d167eceb9b3b"
+      },
+      "p09": {
+        "path": "narration/en/p09.wav",
+        "sha256": "a92802f1c299427064088b8c2630b8173a3744a355b1009b11c794c1f42d8562",
+        "seconds": 4.42,
+        "settingsSha256": "eb47c2046fbeb57c72ca61a431b7d2593844873d2dd23f86ee503714399440c4"
+      },
+      "p10": {
+        "path": "narration/en/p10.wav",
+        "sha256": "1add021e9431385a941d3b24aaee655cd91cdc1aec5d5d0a2da69f21fff3eb41",
+        "seconds": 7.38,
+        "settingsSha256": "1d398bd9e78851a2d5149329b8e2d0c6a060bb0db71580cae84d422792d07b96"
+      },
+      "p11": {
+        "path": "narration/en/p11.wav",
+        "sha256": "1dd7f8f3c4239f7909774624de62ed25d8aa884743869604269eb42d21a50fc2",
+        "seconds": 6.14,
+        "settingsSha256": "af73e100b592c68a48c349eab950fade4b38ac2d5f9fe5e0e62a3b02458e23b5"
+      }
+    },
+    "zh": {
+      "p01": {
+        "path": "narration/zh/p01.wav",
+        "sha256": "06e46be727e7611d872ed65792d3889081e82db98a75405060ad64da9990cc6b",
+        "seconds": 8.28,
+        "settingsSha256": "326da35dfe8af49ad3d7bd06372aadb083f46639d6a33bd374db63e7cbaecf35"
+      },
+      "p02": {
+        "path": "narration/zh/p02.wav",
+        "sha256": "be1a0ecb958072863c252f03dfbf40d4089aa9302d82f25c89132976acd94f3b",
+        "seconds": 5.4,
+        "settingsSha256": "ea65ca9ad4791ad9af936287756adc477b15b94de084d79a14f4f13022cd514a"
+      },
+      "p03": {
+        "path": "narration/zh/p03.wav",
+        "sha256": "562efd2402e219614f54979f34bca51e82dcc421f3f63f034e2094b8a206a2b7",
+        "seconds": 5.04,
+        "settingsSha256": "3bdf2423eeeac24ceba8ef91c76879c34dcd800dbe61396f92c3d28c553a242a"
+      },
+      "p04": {
+        "path": "narration/zh/p04.wav",
+        "sha256": "adf5cba3ca00b738ef2588cd9ca763385daa9f60aaa5829bf82f91c8fbab42d1",
+        "seconds": 6.58,
+        "settingsSha256": "07c3c64fee27d6f8ff900f76b6dbdbec4a9ccd196e9a96de7ba4513d5ab7750d"
+      },
+      "p05": {
+        "path": "narration/zh/p05.wav",
+        "sha256": "9e46b15741b86d21fbddcf2e604347929530f8fdeaa3c7daa0d8ad885118c56f",
+        "seconds": 5.22,
+        "settingsSha256": "489e11d0c3f32f311c04152cd3cce286989fc52427313b07a82ccbece629a4ab"
+      },
+      "p06": {
+        "path": "narration/zh/p06.wav",
+        "sha256": "348b32fd6f5cf6371640672375811020d5cee7154fd14d91b2ffa83613305dbf",
+        "seconds": 4.32,
+        "settingsSha256": "1a90e154296b3badccde610ae3788e96a56d8d180b716e82d6f937337ccb965f"
+      },
+      "p07": {
+        "path": "narration/zh/p07.wav",
+        "sha256": "ca2e21adb25da92d0cd7024cc9db4d66213e54f231155b8282aac06df160be02",
+        "seconds": 4.86,
+        "settingsSha256": "1ad998de166ac3c55d4bfbd62e4463ea867eb20c81f388faf4cc9a3868c524e9"
+      },
+      "p08": {
+        "path": "narration/zh/p08.wav",
+        "sha256": "a8463b2a7d0c8c2d6e44d6093b09be36291f2709ac40928693cfce6c2e3e3fc7",
+        "seconds": 3.44,
+        "settingsSha256": "854f9a7bffc292c7412c4ccd00b86e09d714296a6f69f43d73649708e3093fa3"
+      },
+      "p09": {
+        "path": "narration/zh/p09.wav",
+        "sha256": "69f953ea9fa5245260f743c97bdc0cf59359a83253fd756236614d8176bbf4b3",
+        "seconds": 4.32,
+        "settingsSha256": "74994bfff85cf5aeb920a047bad703a22e6a39a5e718cc43c3438fbdab10b29d"
+      },
+      "p10": {
+        "path": "narration/zh/p10.wav",
+        "sha256": "b545fe55740af4567a8f768e93fd2b342ae9918d811545fbba224e1de2b01c03",
+        "seconds": 6.46,
+        "settingsSha256": "4761ffdbc15777188ab2237917cf60a8b1c4da83320931e698c1273390188fb7"
+      },
+      "p11": {
+        "path": "narration/zh/p11.wav",
+        "sha256": "43e773c9427450eb0d97c40f6bae522e7f91a14c83e7f10f31d2eb54170a6770",
+        "seconds": 7.66,
+        "settingsSha256": "fa325544ca91f0c63e3af1dda8e51195d044b394d261c0deb86bbb428010ba0b"
+      }
+    }
+  },
+  "title": {
+    "zh": "一九五七年的模型，怎么跑赢大模型？",
+    "en": "How did a 1957 model win this race?"
+  }
+}

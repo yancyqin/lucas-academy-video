@@ -1,0 +1,338 @@
+[
+ {
+  "id": "dolphin-spotted-madeira-social",
+  "sound": 1,
+  "what": "Atlantic spotted dolphin whistle chorus with some click trains; wild group of about 30 socialising off Madeira",
+  "species": "Atlantic spotted dolphin (Stenella frontalis)",
+  "recordist_or_source": "Atlantic spotted dolphin recording: Redaelli L., Caruso F., dos Santos M.E., Alves F., Dinis A. (2026), Dataset of odontocete acoustic signals from the Madeira archipelago, Zenodo, doi:10.5281/zenodo.17952229, CC BY 4.0. Licence: https://creativecommons.org/licenses/by/4.0/ — excerpted, level adjusted.",
+  "licence": "CC BY 4.0",
+  "page_url": "https://doi.org/10.5281/zenodo.17952229",
+  "file_url": "https://zenodo.org/records/17952229/files/Dataset.zip",
+  "local_path": "/Users/yqin/repo/playground/lucas-academy-video-data/ai-animal-mind/sounds/raw/dolphin-atlantic-spotted-madeira/20220818_1_Sf.wav",
+  "duration_s": 298.8,
+  "sample_rate": 288000,
+  "best_windows": [
+   [
+    156.6,
+    160.1
+   ],
+   [
+    153.6,
+    156.6
+   ],
+   [
+    36.0,
+    39.0
+   ]
+  ],
+  "notes": "Zip member: Dataset/Sf/20220818_1_Sf.wav inside Dataset.zip. Best dolphin candidate. Same species as the Wild Dolphin Project / DolphinGemma work, but a different population (Madeira, 18 Aug 2022), not WDP's Bahamas recordings. WDP's own sample clips (whistle, click, burst pulse on wilddolphinproject.org) carry no open licence; the page footer says 'Copyright © 2011 - 2024. The Wild Dolphin Project. All Rights Reserved.', so they can't be used. SoundTrap 300 HF, 288 kHz, 16-bit mono. Windows (checked by eye on spectrograms): 156.6–160.1 = dense overlapping whistles 7–15 kHz, the strongest stretch, with a few clicks at the end; 153.6–156.6 = whistles; 36.0–39.0 = whistles plus burst-pulse and click trains. Very low level: about -52 to -57 LUFS after a 1 kHz high-pass, so it needs about +35–40 dB of gain. The background is quiet, so this works. Ultrasonic click energy hits 0 dBFS at the full 288 kHz rate (measured: about 1,900 peak hits in this file). Resample to 48 kHz (low-pass) BEFORE normalising, or the inaudible ultrasonic peaks will limit the gain. Pulled from the 2.3 GB zip with a single HTTP range request; CRC verified."
+ },
+ {
+  "id": "dolphin-spotted-madeira-feeding",
+  "sound": 1,
+  "what": "Atlantic spotted dolphin echolocation click trains/buzzes and a few whistles; feeding group of about 50 off Madeira",
+  "species": "Atlantic spotted dolphin (Stenella frontalis)",
+  "recordist_or_source": "Atlantic spotted dolphin recording: Redaelli L., Caruso F., dos Santos M.E., Alves F., Dinis A. (2026), Dataset of odontocete acoustic signals from the Madeira archipelago, Zenodo, doi:10.5281/zenodo.17952229, CC BY 4.0. Licence: https://creativecommons.org/licenses/by/4.0/ — excerpted, level adjusted.",
+  "licence": "CC BY 4.0",
+  "page_url": "https://doi.org/10.5281/zenodo.17952229",
+  "file_url": "https://zenodo.org/records/17952229/files/Dataset.zip",
+  "local_path": "/Users/yqin/repo/playground/lucas-academy-video-data/ai-animal-mind/sounds/raw/dolphin-atlantic-spotted-madeira/20230720_1_Sf.wav",
+  "duration_s": 134.4,
+  "sample_rate": 288000,
+  "best_windows": [
+   [
+    16.0,
+    19.0
+   ],
+   [
+    67.6,
+    71.4
+   ]
+  ],
+  "notes": "Zip member: Dataset/Sf/20230720_1_Sf.wav inside Dataset.zip. Use this one for CLICKS. Recorded 20 Jul 2023 during feeding. 16.0–19.0 = dense echolocation click train / buzz (audible as rapid clicking or buzzing), about -46 LUFS after a 1 kHz high-pass. 67.6–71.4 = a click train (67.6–68.3), then two upswept whistles at about 70.2–71.2 s (7–13 kHz), faint (about -55 LUFS). Whistles are much fainter than in the socialising file. The same ultrasonic-peak caveat applies: resample to 48 kHz first. CRC verified."
+ },
+ {
+  "id": "sperm-whale-dswp-1381",
+  "sound": 2,
+  "what": "Several sperm whale codas back to back (about 18 clicks over 3 s), Dominica",
+  "species": "Sperm whale (Physeter macrocephalus)",
+  "recordist_or_source": "Sperm whale codas: Dominica Sperm Whale Project, DSWP dataset released with Paradise O. et al. (2025) 'WhAM: Towards a translative model of sperm whale vocalization' (Project CETI), huggingface.co/datasets/orrp/DSWP, CC BY 4.0. Licence: https://creativecommons.org/licenses/by/4.0/ — excerpted, level adjusted.",
+  "licence": "CC BY 4.0",
+  "page_url": "https://huggingface.co/datasets/orrp/DSWP",
+  "file_url": "https://huggingface.co/datasets/orrp/DSWP/resolve/main/1381.wav",
+  "local_path": "/Users/yqin/repo/playground/lucas-academy-video-data/ai-animal-mind/sounds/raw/sperm-whale-dswp/1381.wav",
+  "duration_s": 2.969,
+  "sample_rate": 120000,
+  "best_windows": [
+   [
+    0.05,
+    2.95
+   ]
+  ],
+  "notes": "Best 'string of clicks'. Same field project and population (Dominica, EC1 clan, 2005–2018) as Sharma et al. 2024, but not necessarily the exact codas they analysed. The Sharma et al. GitHub data folder holds only coda annotations (DominicaCodas.csv, sperm-whale-dialogues.csv), no audio. 120 kHz 16-bit stereo. The file has a constant DC offset of about -0.06 (-24 dBFS): high-pass (e.g. 200 Hz) BEFORE cutting or fading, or each cut will thump. Quieter than the others: -36.8 LUFS after a 200 Hz high-pass, peak about -10 dBFS. Overlaps with DSWP file 1361 (same source recording), so don't use both."
+ },
+ {
+  "id": "sperm-whale-dswp-1389",
+  "sound": 2,
+  "what": "One long sperm whale coda (about 10 clicks), Dominica",
+  "species": "Sperm whale (Physeter macrocephalus)",
+  "recordist_or_source": "Sperm whale codas: Dominica Sperm Whale Project, DSWP dataset released with Paradise O. et al. (2025) 'WhAM: Towards a translative model of sperm whale vocalization' (Project CETI), huggingface.co/datasets/orrp/DSWP, CC BY 4.0. Licence: https://creativecommons.org/licenses/by/4.0/ — excerpted, level adjusted.",
+  "licence": "CC BY 4.0",
+  "page_url": "https://huggingface.co/datasets/orrp/DSWP",
+  "file_url": "https://huggingface.co/datasets/orrp/DSWP/resolve/main/1389.wav",
+  "local_path": "/Users/yqin/repo/playground/lucas-academy-video-data/ai-animal-mind/sounds/raw/sperm-whale-dswp/1389.wav",
+  "duration_s": 1.952,
+  "sample_rate": 120000,
+  "best_windows": [
+   [
+    0.52,
+    1.95
+   ]
+  ],
+  "notes": "File is shorter than 2 s; the window is the whole usable file. The first 0.5 s is constant DC padding (no signal) and ends in a step at 0.498 s that sounds like a click, so start at about 0.52 s. Clicks run 0.64–1.77 s; very clean, -27.6 LUFS (200 Hz high-pass), peak -1.7 dBFS. To fill 3–4 s, play it right after 1352 or 1381. Same DC-offset caveat as 1381."
+ },
+ {
+  "id": "sperm-whale-dswp-1352",
+  "sound": 2,
+  "what": "One short, very clean sperm whale coda (7 clicks in about 0.35 s), Dominica",
+  "species": "Sperm whale (Physeter macrocephalus)",
+  "recordist_or_source": "Sperm whale codas: Dominica Sperm Whale Project, DSWP dataset released with Paradise O. et al. (2025) 'WhAM: Towards a translative model of sperm whale vocalization' (Project CETI), huggingface.co/datasets/orrp/DSWP, CC BY 4.0. Licence: https://creativecommons.org/licenses/by/4.0/ — excerpted, level adjusted.",
+  "licence": "CC BY 4.0",
+  "page_url": "https://huggingface.co/datasets/orrp/DSWP",
+  "file_url": "https://huggingface.co/datasets/orrp/DSWP/resolve/main/1352.wav",
+  "local_path": "/Users/yqin/repo/playground/lucas-academy-video-data/ai-animal-mind/sounds/raw/sperm-whale-dswp/1352.wav",
+  "duration_s": 1.291,
+  "sample_rate": 120000,
+  "best_windows": [
+   [
+    0.52,
+    1.29
+   ]
+  ],
+  "notes": "File is shorter than 2 s; the window is the whole usable file. Coda clicks at 0.63–0.98 s, then silence. The first 0.5 s is DC padding with a step at 0.498 s, so start at 0.52 s and high-pass to remove the DC. -25.4 LUFS, peak -2 dBFS. Good as a clean single 'word' before or after 1381."
+ },
+ {
+  "id": "elephant-king2010-bee-rumbles",
+  "sound": 3,
+  "what": "Wild African elephant rumbles (alarm rumbles given in response to bee sounds), Samburu, Kenya",
+  "species": "African savanna elephant (Loxodonta africana)",
+  "recordist_or_source": "African elephant rumbles: King L.E., Soltis J., Douglas-Hamilton I., Savage A., Vollrath F. (2010) 'Bee threat elicits alarm call in African elephants', PLoS ONE 5(4): e10346, doi:10.1371/journal.pone.0010346, CC BY 2.5. Licence: https://creativecommons.org/licenses/by/2.5/ — excerpted, level adjusted.",
+  "licence": "CC BY 2.5 (PLoS ONE 2010 article under the Creative Commons Attribution License, version not stated in the article XML; PLOS used 2.5 then and Wikimedia Commons tags these files CC BY 2.5)",
+  "page_url": "https://doi.org/10.1371/journal.pone.0010346",
+  "file_url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0010346.s001",
+  "local_path": "/Users/yqin/repo/playground/lucas-academy-video-data/ai-animal-mind/sounds/raw/elephant-king2010/pone.0010346.s001.wav",
+  "duration_s": 4.5,
+  "sample_rate": 44100,
+  "best_windows": [
+   [
+    0.4,
+    3.4
+   ],
+   [
+    1.3,
+    4.3
+   ]
+  ],
+  "notes": "Audio S1 of King et al. 2010: natural, unmodified 'bee rumbles' (do NOT use Audio S2, whose formants were digitally shifted). Best elephant candidate. Acoustically the cleanest and most audible: continuous harmonic rumble from about 0.35 to 4.3 s, fundamental about 20 Hz with harmonics up to about 160 Hz, -18.7 LUFS. The context is an alarm call, not a name or contact call, so if the narration is about names, the control rumbles (s003) are the more faithful pick. 40–300 Hz band RMS -17.1 dB (vs -21.4 for s003); 12 samples touch 0 dBFS. Same population and reserves as Pardo et al. 2024 (see s003 notes on why Pardo's own audio can't be used). Most energy is below 150 Hz (the 150 Hz+ band is 12.5 dB below full band): barely audible on phone speakers, so check on headphones. A gentle 100–300 Hz presence lift is fine; don't pitch-shift."
+ },
+ {
+  "id": "elephant-king2010-control-rumbles",
+  "sound": 3,
+  "what": "Wild African elephant rumbles recorded before any stimulus (ordinary rumbles of a resting family), Samburu, Kenya",
+  "species": "African savanna elephant (Loxodonta africana)",
+  "recordist_or_source": "African elephant rumbles: King L.E., Soltis J., Douglas-Hamilton I., Savage A., Vollrath F. (2010) 'Bee threat elicits alarm call in African elephants', PLoS ONE 5(4): e10346, doi:10.1371/journal.pone.0010346, CC BY 2.5. Licence: https://creativecommons.org/licenses/by/2.5/ — excerpted, level adjusted.",
+  "licence": "CC BY 2.5 (PLoS ONE 2010 article under the Creative Commons Attribution License, version not stated in the article XML; PLOS used 2.5 then and Wikimedia Commons tags these files CC BY 2.5)",
+  "page_url": "https://doi.org/10.1371/journal.pone.0010346",
+  "file_url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0010346.s003",
+  "local_path": "/Users/yqin/repo/playground/lucas-academy-video-data/ai-animal-mind/sounds/raw/elephant-king2010/pone.0010346.s003.wav",
+  "duration_s": 6.408,
+  "sample_rate": 44100,
+  "best_windows": [
+   [
+    1.3,
+    4.3
+   ],
+   [
+    2.4,
+    5.4
+   ]
+  ],
+  "notes": "Pardo et al. 2024's own audio is NOT public: their Dryad record (doi:10.5061/dryad.hmgqnk9nj, CC0) says the sound files are not included. This is the closest open substitute: the same population and reserves (Samburu / Buffalo Springs, Save the Elephants). Audio S3 of King et al. 2010, 'control rumbles' recorded pre-stimulus from the same family, matched for duration and amplitude. Rumble from about 1.14 to 5.5 s, silence before and after. 44.1 kHz mono WAV (the original file; the Commons copy is a lossy OGG). Almost all the energy is below 150 Hz (the 150 Hz+ band is about 17 dB below the full-band level), so it is barely audible on phone or laptop speakers. Check on headphones or a sub, and consider a gentle presence boost of the 100–300 Hz harmonics rather than pitch-shifting (pitch-shifting would no longer be the real sound). -22.1 LUFS. About 48 samples hit 0 dBFS (flat factor 33), so there's some clipping; the 40–300 Hz band is weaker than s001 (-21.4 vs -17.1 dB RMS). Context-faithful second choice: ordinary rumbles rather than an alarm call."
+ },
+ {
+  "id": "humpback-twain-hydrophone",
+  "sound": 4,
+  "what": "Humpback whale Twain's 'whup' contact calls during the playback exchange of 19 Aug 2021 in Frederick Sound, Alaska, with the researchers' playback exemplars in between",
+  "species": "Humpback whale (Megaptera novaeangliae), adult female 'Twain'",
+  "recordist_or_source": "Humpback whale 'Twain' whup calls: McCowan B., Hubbard J., Walker L., Sharpe F., Frediani J., Doyle L. (2023), Data from 'Interactive bioacoustic playback as a tool for detecting and exploring nonhuman intelligence', Zenodo, doi:10.5281/zenodo.8247515, CC BY 4.0. Licence: https://creativecommons.org/licenses/by/4.0/ — audio excerpted from the hydrophone-synced video, level adjusted.",
+  "licence": "CC BY 4.0",
+  "page_url": "https://doi.org/10.5281/zenodo.8247515",
+  "file_url": "https://zenodo.org/records/8247515/files/Twain_Align_Video_Hydro_A.MP4",
+  "local_path": "/Users/yqin/repo/playground/lucas-academy-video-data/ai-animal-mind/sounds/raw/humpback-twain/Twain_HydroA_0450-0700.m4a",
+  "duration_s": 130.009,
+  "sample_rate": 48000,
+  "best_windows": [
+   [
+    45.6,
+    48.6
+   ],
+   [
+    64.9,
+    67.9
+   ],
+   [
+    7.9,
+    10.9
+   ]
+  ],
+  "notes": "The actual exchange from McCowan et al. 2023. Local file = audio track of Twain_Align_Video_Hydro_A.MP4 (CC BY 4.0, 487 MB, not downloaded in full), stream-copied (no re-encode, AAC 48 kHz stereo) from source 290–420 s (4:50–7:00). Add 290 s to get source timecode. Calls were identified from the record's TimelineOfInteraction.pdf ('Hydrophone A' column) and their spectra. TWAIN'S whups are short (about 1.6 s), strong below 300 Hz, upswept, and the loudest events: T1 local 8.4 s (source 4:58), T2 25.6 s (5:15), T3 46.1 s (5:36), T4 65.4 s (5:55), T5 92.5 s (6:22), T7 123.5 s (6:53). The researchers' PLAYBACK exemplars come through the underwater speaker as mid-heavy (600–1900 Hz) and about 2.2 s long: E4 19.1 s (5:09), E5 33.7 s (5:24), E6 56.3 s (5:47), E7 74.4 s (6:05), E8 about 103 s, E9 about 111 s. Windows: 45.6–48.6 = Twain T3; 64.9–67.9 = Twain T4; 7.9–10.9 = Twain T1. For playback then answer, E4 then T2 = local 18.8–27.6 (8.8 s; needs a cut in the 5 s gap), or E5 33.4–36.4 followed by T3. Twain's whups peak at about 0 dBFS (-8 LUFS), so turn them down. This video audio is the only open source of Twain's own calls. The paper's Dryad record (doi:10.5061/dryad.ht76hdrn0, CC0) has 7 small WAVs: Day1PrePeriodWhup1–6.wav = whups recorded on 18 Aug 2021, the day before, from humpbacks nearby, not necessarily Twain (one became the playback exemplar); Day2DuringPeriodWhupExemplarPlayback.wav = the exemplar as played back. They sit behind a bot-check page that blocks automated download; the owner can fetch them by hand in a browser from https://datadryad.org/dataset/doi:10.5061/dryad.ht76hdrn0 if a clean exemplar whup is wanted. The local folder also holds the record's TimelineOfInteraction.pdf and whup spectrogram PDF (zenodo-docs/)."
+ },
+ {
+  "id": "pig-positive-enriched-NMBU-Pair7-LFs010",
+  "sound": 5,
+  "what": "Positive-context pig grunt (low, short): grower-finisher pig in an enriched pen",
+  "species": "Domestic pig (Sus scrofa domesticus)",
+  "recordist_or_source": "Pig calls: Briefer E.F., Sypherd C.C.R., Leliveld L.M.C., Padilla de la Torre M., Read E.R., Guérin C., Deiss V., Monestier C., Rasmussen J.H., Špinka M., Düpjan S., Boissy A., Janczak A.M., Hillmann E., Tallet C., The Soundwel Database: a labeled pig vocalization repository, Zenodo record 8252482, CC BY 4.0 (Briefer et al. 2022, Scientific Reports, doi:10.1038/s41598-022-07174-8). Licence: https://creativecommons.org/licenses/by/4.0/ — calls excerpted/sequenced, level adjusted.",
+  "licence": "CC BY 4.0",
+  "page_url": "https://zenodo.org/records/8252482",
+  "file_url": "https://zenodo.org/records/8252482/files/Soundwel%20Dataset%20-%20Audio%20and%20Spectrograms.zip",
+  "local_path": "/Users/yqin/repo/playground/lucas-academy-video-data/ai-animal-mind/sounds/raw/pig-soundwel/positive/NMBUNMBUEnrichedPair7enrichedTrial1LFs010.wav",
+  "duration_s": 0.76,
+  "sample_rate": 44100,
+  "best_windows": [
+   [
+    0.0,
+    0.76
+   ]
+  ],
+  "notes": "Zip member: Soundwel Dataset - Audio and Spectrograms/NMBUNMBUEnrichedPair7enrichedTrial1LFs010.wav inside the 326 MB zip (extracted alone via HTTP range requests). Labelled valence = Pos, context 'Enriched', call type LFs (low-frequency single grunt), NMBU team (Norway). Clean low grunt. -34 LUFS. File is shorter than 2 s; window = whole file. Every Soundwel file is one call cut tightly, so 2–4 s of 'content' sound means sequencing several grunts. positive/series/ holds 7 more grunts from this same pig and trial (NMBU…Pair7…Trial1 LFs001–009) and 4 from FBN VT8 (LFs1–4). Spacing them about 0.3–0.6 s apart gives a 3 s sequence, but that is a CONSTRUCTED sequence; the original gaps aren't in the database. Soundwel calls from the slaughterhouse aren't in the public repository."
+ },
+ {
+  "id": "pig-positive-conditioning-FBN-VT8-LFs5",
+  "sound": 5,
+  "what": "Positive-context pig grunt: weaner during positive conditioning (anticipating a reward)",
+  "species": "Domestic pig (Sus scrofa domesticus)",
+  "recordist_or_source": "Pig calls: Briefer E.F., Sypherd C.C.R., Leliveld L.M.C., Padilla de la Torre M., Read E.R., Guérin C., Deiss V., Monestier C., Rasmussen J.H., Špinka M., Düpjan S., Boissy A., Janczak A.M., Hillmann E., Tallet C., The Soundwel Database: a labeled pig vocalization repository, Zenodo record 8252482, CC BY 4.0 (Briefer et al. 2022, Scientific Reports, doi:10.1038/s41598-022-07174-8). Licence: https://creativecommons.org/licenses/by/4.0/ — calls excerpted/sequenced, level adjusted.",
+  "licence": "CC BY 4.0",
+  "page_url": "https://zenodo.org/records/8252482",
+  "file_url": "https://zenodo.org/records/8252482/files/Soundwel%20Dataset%20-%20Audio%20and%20Spectrograms.zip",
+  "local_path": "/Users/yqin/repo/playground/lucas-academy-video-data/ai-animal-mind/sounds/raw/pig-soundwel/positive/FBNFBNPositiveConditioning15052014VT8LFs5.wav",
+  "duration_s": 0.61,
+  "sample_rate": 44100,
+  "best_windows": [
+   [
+    0.0,
+    0.61
+   ]
+  ],
+  "notes": "Zip member: Soundwel Dataset - Audio and Spectrograms/FBNFBNPositiveConditioning15052014VT8LFs5.wav inside the 326 MB zip (extracted alone via HTTP range requests). Valence Pos, context PositiveConditioning, LFs, FBN team (Germany). Very clean low grunt, -32 LUFS. File shorter than 2 s; window = whole file. Siblings LFs1–4 from the same pig and session are in positive/series/."
+ },
+ {
+  "id": "pig-positive-enriched-NMBU-Pair12-LFs007",
+  "sound": 5,
+  "what": "Positive-context pig grunt (louder, slightly noisier): grower-finisher pig in an enriched pen",
+  "species": "Domestic pig (Sus scrofa domesticus)",
+  "recordist_or_source": "Pig calls: Briefer E.F., Sypherd C.C.R., Leliveld L.M.C., Padilla de la Torre M., Read E.R., Guérin C., Deiss V., Monestier C., Rasmussen J.H., Špinka M., Düpjan S., Boissy A., Janczak A.M., Hillmann E., Tallet C., The Soundwel Database: a labeled pig vocalization repository, Zenodo record 8252482, CC BY 4.0 (Briefer et al. 2022, Scientific Reports, doi:10.1038/s41598-022-07174-8). Licence: https://creativecommons.org/licenses/by/4.0/ — calls excerpted/sequenced, level adjusted.",
+  "licence": "CC BY 4.0",
+  "page_url": "https://zenodo.org/records/8252482",
+  "file_url": "https://zenodo.org/records/8252482/files/Soundwel%20Dataset%20-%20Audio%20and%20Spectrograms.zip",
+  "local_path": "/Users/yqin/repo/playground/lucas-academy-video-data/ai-animal-mind/sounds/raw/pig-soundwel/positive/NMBUNMBUEnrichedPair12enrichedTrial2LFs007.wav",
+  "duration_s": 0.712,
+  "sample_rate": 44100,
+  "best_windows": [
+   [
+    0.0,
+    0.712
+   ]
+  ],
+  "notes": "Zip member: Soundwel Dataset - Audio and Spectrograms/NMBUNMBUEnrichedPair12enrichedTrial2LFs007.wav inside the 326 MB zip (extracted alone via HTTP range requests). Valence Pos, context Enriched. The loudest positive grunt (-17.9 LUFS) but with more broadband pen noise. File shorter than 2 s; window = whole file."
+ },
+ {
+  "id": "pig-negative-restrain-FBN-VT10-HFs6",
+  "sound": 5,
+  "what": "Negative-context pig scream/squeal (long, high, harmonic): weaner being restrained",
+  "species": "Domestic pig (Sus scrofa domesticus)",
+  "recordist_or_source": "Pig calls: Briefer E.F., Sypherd C.C.R., Leliveld L.M.C., Padilla de la Torre M., Read E.R., Guérin C., Deiss V., Monestier C., Rasmussen J.H., Špinka M., Düpjan S., Boissy A., Janczak A.M., Hillmann E., Tallet C., The Soundwel Database: a labeled pig vocalization repository, Zenodo record 8252482, CC BY 4.0 (Briefer et al. 2022, Scientific Reports, doi:10.1038/s41598-022-07174-8). Licence: https://creativecommons.org/licenses/by/4.0/ — calls excerpted/sequenced, level adjusted.",
+  "licence": "CC BY 4.0",
+  "page_url": "https://zenodo.org/records/8252482",
+  "file_url": "https://zenodo.org/records/8252482/files/Soundwel%20Dataset%20-%20Audio%20and%20Spectrograms.zip",
+  "local_path": "/Users/yqin/repo/playground/lucas-academy-video-data/ai-animal-mind/sounds/raw/pig-soundwel/negative/FBNFBNRestrain05022015VT10HFs6.wav",
+  "duration_s": 3.595,
+  "sample_rate": 44100,
+  "best_windows": [
+   [
+    0.25,
+    3.25
+   ]
+  ],
+  "notes": "Zip member: Soundwel Dataset - Audio and Spectrograms/FBNFBNRestrain05022015VT10HFs6.wav inside the 326 MB zip (extracted alone via HTTP range requests). Best negative candidate. Valence Neg, context Restrain (held by a person), call type HFs (high-frequency squeal), FBN team. One continuous 3.6 s harmonic squeal, the longest in the set, so it fills a 3 s window without editing; -25.8 LUFS. Contrasts well with the short low positive grunts, which is the paper's main finding (negative calls are longer and higher)."
+ },
+ {
+  "id": "pig-negative-restrain-FBN-VT5-HFs1",
+  "sound": 5,
+  "what": "Negative-context pig squeal: weaner being restrained",
+  "species": "Domestic pig (Sus scrofa domesticus)",
+  "recordist_or_source": "Pig calls: Briefer E.F., Sypherd C.C.R., Leliveld L.M.C., Padilla de la Torre M., Read E.R., Guérin C., Deiss V., Monestier C., Rasmussen J.H., Špinka M., Düpjan S., Boissy A., Janczak A.M., Hillmann E., Tallet C., The Soundwel Database: a labeled pig vocalization repository, Zenodo record 8252482, CC BY 4.0 (Briefer et al. 2022, Scientific Reports, doi:10.1038/s41598-022-07174-8). Licence: https://creativecommons.org/licenses/by/4.0/ — calls excerpted/sequenced, level adjusted.",
+  "licence": "CC BY 4.0",
+  "page_url": "https://zenodo.org/records/8252482",
+  "file_url": "https://zenodo.org/records/8252482/files/Soundwel%20Dataset%20-%20Audio%20and%20Spectrograms.zip",
+  "local_path": "/Users/yqin/repo/playground/lucas-academy-video-data/ai-animal-mind/sounds/raw/pig-soundwel/negative/FBNFBNRestrain05022015VT5HFs1.wav",
+  "duration_s": 2.474,
+  "sample_rate": 44100,
+  "best_windows": [
+   [
+    0.0,
+    2.474
+   ]
+  ],
+  "notes": "Zip member: Soundwel Dataset - Audio and Spectrograms/FBNFBNRestrain05022015VT5HFs1.wav inside the 326 MB zip (extracted alone via HTTP range requests). Valence Neg, context Restrain, HFs. Clean harmonic squeal 2.5 s, -24.6 LUFS; window = whole file."
+ },
+ {
+  "id": "pig-negative-castration-IASPC-cascut004",
+  "sound": 5,
+  "what": "Negative-context piglet scream (very intense): piglet during castration",
+  "species": "Domestic pig (Sus scrofa domesticus)",
+  "recordist_or_source": "Pig calls: Briefer E.F., Sypherd C.C.R., Leliveld L.M.C., Padilla de la Torre M., Read E.R., Guérin C., Deiss V., Monestier C., Rasmussen J.H., Špinka M., Düpjan S., Boissy A., Janczak A.M., Hillmann E., Tallet C., The Soundwel Database: a labeled pig vocalization repository, Zenodo record 8252482, CC BY 4.0 (Briefer et al. 2022, Scientific Reports, doi:10.1038/s41598-022-07174-8). Licence: https://creativecommons.org/licenses/by/4.0/ — calls excerpted/sequenced, level adjusted.",
+  "licence": "CC BY 4.0",
+  "page_url": "https://zenodo.org/records/8252482",
+  "file_url": "https://zenodo.org/records/8252482/files/Soundwel%20Dataset%20-%20Audio%20and%20Spectrograms.zip",
+  "local_path": "/Users/yqin/repo/playground/lucas-academy-video-data/ai-animal-mind/sounds/raw/pig-soundwel/negative/IASPIASPCasCutcuts48p06cascut004.wav",
+  "duration_s": 1.817,
+  "sample_rate": 44100,
+  "best_windows": [
+   [
+    0.0,
+    1.817
+   ]
+  ],
+  "notes": "Zip member: Soundwel Dataset - Audio and Spectrograms/IASPIASPCasCutcuts48p06cascut004.wav inside the 326 MB zip (extracted alone via HTTP range requests). Valence Neg, context CASTRATION (the cut), call type HFm, IASP team (Czech Republic). The most intense, loudest scream (-11.9 LUFS), but the context is castration; the owner should decide whether that's acceptable to name or imply. File shorter than 2 s; window = whole file."
+ },
+ {
+  "id": "monkey-vervet-mcvicker-naivasha",
+  "sound": 6,
+  "what": "Wild vervet monkey calls (bursts of barks/chutters) with birds in the background, Lake Naivasha, Kenya",
+  "species": "Vervet monkey (Chlorocebus pygerythrus)",
+  "recordist_or_source": "Vervet monkey calls: recorded by Roland McVicker, Lake Naivasha, Kenya, 1982, British Library (W1CDR0001419 BD20), CC BY 4.0, via Wikimedia Commons. Licence: https://creativecommons.org/licenses/by/4.0/ — excerpted, level adjusted.",
+  "licence": "CC BY 4.0",
+  "page_url": "https://commons.wikimedia.org/wiki/File:Vervet_Monkey_(Chlorocebus_pygerythrus)_(W_CERCOPITHECUS_AETHIOPS_R2_C2).ogg",
+  "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Vervet_Monkey_%28Chlorocebus_pygerythrus%29_%28W_CERCOPITHECUS_AETHIOPS_R2_C2%29.ogg",
+  "local_path": "/Users/yqin/repo/playground/lucas-academy-video-data/ai-animal-mind/sounds/raw/monkey-vervet-mcvicker/Vervet_Monkey_Chlorocebus_pygerythrus_W_CERCOPITHECUS_AETHIOPS_R2_C2.ogg",
+  "duration_s": 37.3,
+  "sample_rate": 44100,
+  "best_windows": [
+   [
+    15.9,
+    18.4
+   ],
+   [
+    24.9,
+    27.4
+   ],
+   [
+    35.6,
+    37.3
+   ]
+  ],
+  "notes": "Optional sound. Licence checked on the Commons file page: CC BY 4.0, OTRS/VRT permission ticket 2016091410010407; copyright holder and recordist Roland McVicker, 28 July 1982; British Library shelfmark W1CDR0001419 BD20. Vervet call bursts at about 0.4, 5.9, 8.0–8.9, 16.25–17.35, 25.35–26.05 and 36.35–36.85 s. AVOID 4–8 s: the stepped tonal blocks at 2–3.2 kHz there are a background bird (the description names red-chested cuckoo, ring-necked dove and fork-tailed drongo). Windows: 15.9–18.4 and 24.9–27.4 = vervet bursts over light bird ambience; 35.6–37.3 = last burst (file ends at 37.3). These are not the classic Seyfarth/Cheney predator-specific alarm-call recordings, which aren't openly licensed. Lossy OGG Vorbis 44.1 kHz mono; the source is a 1982 analogue field recording. Alternative (not downloaded): 'Chlorocebus pygerythrus cloetei, roep, 1 min 5 s, Spitskop, a.mp3' by JMK on Commons is CC BY-SA 4.0 (share-alike, flag)."
+ }
+]

@@ -1,0 +1,49 @@
+{
+  "sourceMovie": "out/family-ai-lab-02/orbital-v2/short/delivery/family-ai-lab-02.short.bilingual.mp4",
+  "sourceMovieSha256": "8644b1ac64cf2cb80b021dd94411072aea89e8a5617bf36e3e051d0ea0cd43ff",
+  "sourceFrame": 0,
+  "sourceFrameSha256": "66efbc857f7def574add4389d6827d506fb7c1c4ba79d8b1960c5a175b5cde77",
+  "sourceSize": [
+    1080,
+    1920
+  ],
+  "outputSize": [
+    1080,
+    1920
+  ],
+  "titles": {
+    "en": "Can 0 and 1 Talk?",
+    "zh": "0和1，能聊天吗？"
+  },
+  "composition": "Full portrait frame zero with text in its upper open space; no crop, repositioning, ribbon, byline or source label. Hands, paper and pipe remain unchanged.",
+  "covers": {
+    "en": {
+      "file": "out/family-ai-lab-02/orbital-v2/short/cover/family-ai-lab-02.short.en.png",
+      "sha256": "55d98ebd844c14882d7e963a5cbef83d0629960de748b21abeed48ebe27d9769",
+      "bytes": 987151,
+      "titlePixelBounds": [
+        66,
+        163,
+        846,
+        545
+      ],
+      "font": "/System/Library/Fonts/Supplemental/Arial Black.ttf",
+      "fontIndex": 0,
+      "unchangedOutsideTitle": true
+    },
+    "zh": {
+      "file": "out/family-ai-lab-02/orbital-v2/short/cover/family-ai-lab-02.short.zh.png",
+      "sha256": "bbf57e87e19bf54c055b830ceb6d357c31c9f50db452a59476d413088c00613e",
+      "bytes": 1008844,
+      "titlePixelBounds": [
+        68,
+        155,
+        811,
+        557
+      ],
+      "font": "/System/Library/Fonts/Hiragino Sans GB.ttc",
+      "fontIndex": 2,
+      "unchangedOutsideTitle": true
+    }
+  }
+}
