@@ -7,6 +7,8 @@
  * there with YouTube's bar just below. At the title, ↓ arrows over every chapter say "jump to any part". At sc00-09
  * (「可以跳过下一段」) a big arc jumps from the start of 「证据」 to the start of 「学什么有用」 (Yancy, 2026-10-26: 这句的
  * 时候要加个箭头，有需要可以跳; the small marks of the first cut went unseen).
+ * `enFirst` (印象派的秘密 v6, the English cut, 2026-11-02) puts the English name large with the Chinese small under it,
+ * in the names and in the hint; a Chinese name the same as the English one is not repeated.
  */
 import type { FC } from "react";
 
@@ -22,8 +24,8 @@ const INSET = 18;
 const GAP = 4;
 const PILL = { background: "rgba(8,10,13,.62)", borderRadius: 12, padding: "6px 22px", display: "inline-block" } as const;
 
-export const ChapterBar: FC<{ chapters: Chapter[]; duration: number; t: number; hint?: number; skip?: Skip | null }> = ({
-  chapters, duration, t, hint = 0, skip = null,
+export const ChapterBar: FC<{ chapters: Chapter[]; duration: number; t: number; hint?: number; skip?: Skip | null; enFirst?: boolean }> = ({
+  chapters, duration, t, hint = 0, skip = null, enFirst = false,
 }) => {
   const width = 1920 - INSET * 2;
   const x = (time: number) => INSET + (time / duration) * width;
@@ -43,8 +45,17 @@ export const ChapterBar: FC<{ chapters: Chapter[]; duration: number; t: number; 
         <div style={{ position: "absolute", left: 0, right: 0, bottom: 176, textAlign: "center", opacity: hint,
           fontFamily: SERIF, color: GOLD, textShadow: "0 2px 10px rgba(0,0,0,.9)" }}>
           <span style={PILL}>
-            <div style={{ fontSize: 34, letterSpacing: 3 }}>点下面的进度条，跳到任意部分</div>
-            <div style={{ fontSize: 22, fontWeight: 300, letterSpacing: 0.5 }}>Use the bar below to jump to any part</div>
+            {enFirst ? (
+              <>
+                <div style={{ fontSize: 34, letterSpacing: 0.5 }}>Use the bar below to jump to any part</div>
+                <div style={{ fontSize: 22, fontWeight: 300, letterSpacing: 2 }}>点下面的进度条，跳到任意部分</div>
+              </>
+            ) : (
+              <>
+                <div style={{ fontSize: 34, letterSpacing: 3 }}>点下面的进度条，跳到任意部分</div>
+                <div style={{ fontSize: 22, fontWeight: 300, letterSpacing: 0.5 }}>Use the bar below to jump to any part</div>
+              </>
+            )}
           </span>
         </div>
       )}
@@ -54,6 +65,8 @@ export const ChapterBar: FC<{ chapters: Chapter[]; duration: number; t: number; 
         const played = Math.max(0, Math.min(1, (t - ch.start) / (ch.end - ch.start)));
         const zh = fit(w, [...ch.name].length + 0.3, 22, 13);  // the whole name fits
         const en = fit(w, (ch.enShort ?? "").length * 0.52 + 0.3, 15, 9);
+        const enBig = fit(w, (ch.enShort || ch.name).length * 0.52 + 0.3, 21, 10);
+        const zhSmall = fit(w, [...ch.name].length + 0.3, 14, 9);
         return (
           <div key={ch.id}>
             {hint > 0 && (
@@ -63,8 +76,17 @@ export const ChapterBar: FC<{ chapters: Chapter[]; duration: number; t: number; 
             <div style={{ position: "absolute", left, width: w, bottom: 26, textAlign: "center", overflow: "hidden",
               whiteSpace: "nowrap", fontFamily: SERIF, color: on ? PAPER : MUTED, opacity: on ? 1 : 0.85,
               textShadow: "0 1px 6px rgba(0,0,0,.9)", lineHeight: 1.15 }}>
-              <div style={{ fontSize: zh, fontWeight: on ? 400 : 300 }}>{ch.name}</div>
-              {ch.enShort ? <div style={{ fontSize: en, fontWeight: 300, letterSpacing: 0.3 }}>{ch.enShort}</div> : null}
+              {enFirst ? (
+                <>
+                  <div style={{ fontSize: enBig, fontWeight: on ? 400 : 300, letterSpacing: 0.3 }}>{ch.enShort || ch.name}</div>
+                  {ch.enShort && ch.name !== ch.enShort ? <div style={{ fontSize: zhSmall, fontWeight: 300 }}>{ch.name}</div> : null}
+                </>
+              ) : (
+                <>
+                  <div style={{ fontSize: zh, fontWeight: on ? 400 : 300 }}>{ch.name}</div>
+                  {ch.enShort ? <div style={{ fontSize: en, fontWeight: 300, letterSpacing: 0.3 }}>{ch.enShort}</div> : null}
+                </>
+              )}
             </div>
             <div style={{ position: "absolute", left, width: w, bottom: 12, height: 8, borderRadius: 4,
               background: "rgba(255,255,255,.22)", overflow: "hidden" }}>
