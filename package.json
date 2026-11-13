@@ -102,7 +102,12 @@
     "fal02:short:mix": ".venv-align/bin/python scripts/family-ai-lab-02/short_mix.py",
     "fal02:short:stills": "node scripts/family-ai-lab-02/short_render.cjs --stills",
     "fal02:short:final": "node scripts/family-ai-lab-02/short_render.cjs",
-    "fal02:short:check": "python3 scripts/family-ai-lab-02/short_verify.py"
+    "fal02:short:check": "python3 scripts/family-ai-lab-02/short_verify.py",
+    "imp:prep": "python3 scripts/impressionism-secret/prep_assets.py",
+    "imp:timeline": "python3 scripts/impressionism-secret/build_timeline.py",
+    "imp:frames": "node scripts/impressionism-secret/frames.cjs",
+    "imp:render": "python3 scripts/impressionism-secret/render.py && python3 scripts/impressionism-secret/deliver.py",
+    "imp:deliver": "python3 scripts/impressionism-secret/deliver.py"
   },
   "dependencies": {
     "@remotion/cli": "^4.0.484",

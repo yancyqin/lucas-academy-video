@@ -4,6 +4,8 @@ import {FamilyAiLab02Orbital, calculateOrbitalMetadata} from './videos/family-ai
 import {FamilyAiLab02Short, calculateShortMetadata} from './videos/family-ai-lab-02/FamilyAiLab02Short';
 import {Composition} from 'remotion';
 import {VG_WHY_DURATION, VG_WHY_FPS, VgWhyCover, VgWhyVideo} from './videos/vg-why/VgWhyVideo';
+import {IMP_DURATION, IMP_FPS, ImpressionismCover, ImpressionismVideo} from './videos/impressionism-secret/ImpressionismVideo';
+import {SHORT_FPS, WordShort, WordShortCover, shortDuration} from './videos/impressionism-secret/WordShorts';
 import {RD_FPS, filmDuration, LanguageBridgeCover, LanguageBridgeVideo, type LanguageBridgeProps} from './videos/ReciprocalDoorsVideo';
 import {WP_FPS, WholePersonCover, WholePersonVideo, calculateWholePersonMetadata} from './videos/whole-person-01/WholePersonVideo';
 import {FI_FPS, FunInformaticsCover, FunInformaticsVideo, calculateFunInformaticsMetadata} from './videos/fun-informatics-01/FunInformaticsVideo';
@@ -251,6 +253,33 @@ export const Root: FC = () => {
       ))}
       <Composition id="VgWhyCover" component={VgWhyCover} durationInFrames={1} fps={VG_WHY_FPS} width={1920} height={1080} />
       <Composition id="VgWhyCoverEn" component={VgWhyCover} defaultProps={{lang: 'en' as const}} durationInFrames={1} fps={VG_WHY_FPS} width={1920} height={1080} />
+      {/* 你知道印象派的秘密吗？ / Do You Know the Secret of Impressionism? — one picture, Chinese track
+          plus an English dub muxed by scripts/impressionism-secret/deliver.py. */}
+      {([
+        ['ImpressionismZh', {audio: 'zh'}],
+        ['ImpressionismEn', {audio: 'en'}],
+        ['ImpressionismPicture', {audio: 'none'}],
+      ] as const).map(([id, props]) => (
+        <Composition
+          key={id}
+          id={id}
+          component={ImpressionismVideo}
+          defaultProps={props}
+          durationInFrames={IMP_DURATION}
+          fps={IMP_FPS}
+          width={1920}
+          height={1080}
+        />
+      ))}
+      <Composition id="ImpressionismCover" component={ImpressionismCover} durationInFrames={1} fps={IMP_FPS} width={1920} height={1080} />
+      <Composition id="ImpressionismCoverEn" component={ImpressionismCover} defaultProps={{lang: 'en' as const}} durationInFrames={1} fps={IMP_FPS} width={1920} height={1080} />
+      {/* Word-game Shorts from the same film (owner 2026-11-02): Degas's orchestra, Renoir's Moulin de la Galette. */}
+      <Composition id="ImpressionismShortDegas" component={WordShort} defaultProps={{which: 'degas' as const}}
+        durationInFrames={shortDuration('degas')} fps={SHORT_FPS} width={1080} height={1920} />
+      <Composition id="ImpressionismShortRenoir" component={WordShort} defaultProps={{which: 'renoir' as const}}
+        durationInFrames={shortDuration('renoir')} fps={SHORT_FPS} width={1080} height={1920} />
+      <Composition id="ImpressionismShortCover" component={WordShortCover} defaultProps={{which: 'degas' as const, lang: 'en' as const}}
+        durationInFrames={1} fps={SHORT_FPS} width={1080} height={1920} />
       {/* 语言的桥 · Language Bridge (lucas-academy-media#4): a Chinese film and an English film. */}
       {([
         ['LanguageBridgeZh', {lang: 'zh', audio: true, subtitles: true}],
