@@ -53,19 +53,19 @@ export const calculateBcMetadata: CalculateMetadataFunction<BcProps> = async ({ 
 };
 
 // ---- look ----
-const BG = "#0d1012";
-const INK = "#f4efe6";
-const SOFT = "#c9c3b8";
-const MUTED = "#8a918f";
-const REAL = "#3ecf7a";
-const WRONG = "#ef5b4f";
-const GOLD = "#e9c46a";
-const SANS = "'Helvetica Neue', 'PingFang SC', sans-serif";
-const SHADOW = "0 3px 18px rgba(0,0,0,.7), 0 1px 3px rgba(0,0,0,.8)";
+export const BG = "#0d1012";
+export const INK = "#f4efe6";
+export const SOFT = "#c9c3b8";
+export const MUTED = "#8a918f";
+export const REAL = "#3ecf7a";
+export const WRONG = "#ef5b4f";
+export const GOLD = "#e9c46a";
+export const SANS = "'Helvetica Neue', 'PingFang SC', sans-serif";
+export const SHADOW = "0 3px 18px rgba(0,0,0,.7), 0 1px 3px rgba(0,0,0,.8)";
 const clamp = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
 const ease = Easing.bezier(0.3, 0.7, 0.2, 1);
-const fadeIn = (t: number, at: number, d = 0.4) => interpolate(t, [at, at + d], [0, 1], { ...clamp, easing: ease });
-const fadeOut = (t: number, at: number, d = 0.5) => interpolate(t, [at - d, at], [1, 0], clamp);
+export const fadeIn = (t: number, at: number, d = 0.4) => interpolate(t, [at, at + d], [0, 1], { ...clamp, easing: ease });
+export const fadeOut = (t: number, at: number, d = 0.5) => interpolate(t, [at - d, at], [1, 0], clamp);
 
 const useT = () => {
   const f = useCurrentFrame();
@@ -78,7 +78,7 @@ const Svg: FC<{ size: number; color: string; children: ReactNode; style?: CSSPro
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth={2.2} strokeLinecap="round"
     strokeLinejoin="round" style={{ display: "block", flex: "none", ...style }}>{children}</svg>
 );
-const Bot: FC<{ size: number; color: string }> = (p) => (
+export const Bot: FC<{ size: number; color: string }> = (p) => (
   <Svg {...p}><rect x="4" y="8" width="16" height="11" rx="3" /><path d="M12 8V4.5" /><circle cx="12" cy="3.6" r="1.1" />
     <circle cx="9" cy="13.2" r="1.2" fill={p.color} /><circle cx="15" cy="13.2" r="1.2" fill={p.color} /><path d="M2 12.5v3M22 12.5v3" /></Svg>
 );
@@ -133,7 +133,7 @@ const Title: FC<{ t: number; end: number }> = ({ t, end }) => {
 };
 
 // each model's own tally out of ten (Yancy 2026-11-12: 「比分这么显示 Astra 1/10 Fable 2/10」); a tally that just went up pulses
-const Tally: FC<{ who: string; n: number; flash: number }> = ({ who, n, flash }) => (
+export const Tally: FC<{ who: string; n: number; flash: number }> = ({ who, n, flash }) => (
   <span style={{ display: "flex", alignItems: "center", gap: 12 }}>
     <Bot size={38} color={SOFT} />
     <span style={{ color: SOFT, fontWeight: 600 }}>{who}</span>
@@ -152,7 +152,7 @@ const Scoreboard: FC<{ a: number; f: number; opacity: number; flashA?: number; f
 
 // a model's pick, under the picture it chose; whether it was right shows from that picture's ✓ or ✗ (Yancy 2026-11-12:
 // 「就用绿勾和红叉来表示真假，尽量不用文字」, so ✓/✗ only ever means real/AI)
-const Chip: FC<{ who: string; style?: CSSProperties }> = ({ who, style }) => (
+export const Chip: FC<{ who: string; style?: CSSProperties }> = ({ who, style }) => (
   <div style={{ display: "flex", alignItems: "center", gap: 12, padding: "8px 24px 8px 16px", borderRadius: 32, fontSize: 36, fontWeight: 700,
     whiteSpace: "nowrap", background: "rgba(255,255,255,.08)", border: "2px solid rgba(255,255,255,.55)", color: INK, ...style }}>
     <Bot size={38} color={INK} />
@@ -161,7 +161,7 @@ const Chip: FC<{ who: string; style?: CSSProperties }> = ({ who, style }) => (
 );
 
 // real = green ✓, AI = red ✗, no words
-const Mark: FC<{ real: boolean; size: number; pop: number }> = ({ real, size, pop }) => (
+export const Mark: FC<{ real: boolean; size: number; pop: number }> = ({ real, size, pop }) => (
   <div style={{ width: size, height: size, borderRadius: size / 2, background: real ? REAL : WRONG, display: "flex",
     alignItems: "center", justifyContent: "center", boxShadow: "0 6px 24px rgba(0,0,0,.55)", opacity: Math.min(1, pop * 1.5),
     transform: `scale(${interpolate(pop, [0, 0.7, 1], [0.4, 1.12, 1])})` }}>

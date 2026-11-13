@@ -64,5 +64,41 @@ def main() -> None:
     print(DEST, "mp4 md5", after)
 
 
-if __name__ == "__main__":
+if __name__ == "__main__" and "--shorts" not in sys.argv:
     main()
+
+
+SHORT_NAMES = {"blue-mormon": "蓝摩门凤蝶", "leopard": "豹纹蛱蝶"}
+SHORTS_DEST = Path.home() / "Desktop" / f"{NAME}-竖屏短视频-上传"
+
+
+def shorts() -> None:
+    """The two vertical shorts (build_short.py, render_short.py, youtube.py --shorts) in their own Desktop folder: per
+    short the English video, the Chinese track as an M4A, captions in both languages, upload text in both. Renders and
+    captions are moved, upload text copied."""
+    src = ROOT / "out/butterfly-challenge/shorts"
+    move, copy = {}, {}
+    for key, zh in SHORT_NAMES.items():
+        move[f"{NAME}-{zh}-英文.mp4"] = src / key / f"{key}.mp4"
+        move[f"{NAME}-{zh}-中文音轨.m4a"] = src / key / f"{key}.zh.m4a"
+        move[f"{NAME}-{zh}.en.srt"] = src / key / f"{key}.en.srt"
+        move[f"{NAME}-{zh}.zh-Hans.srt"] = src / key / f"{key}.zh-Hans.srt"
+        for lang in ("en", "zh"):
+            copy[f"youtube-{zh}.{lang}.txt"] = src / key / f"youtube-{key}.{lang}.txt"
+    missing = [str(p) for p in {**move, **copy}.values() if not p.is_file()]
+    if missing:
+        raise SystemExit("missing:\n  " + "\n  ".join(missing))
+    SHORTS_DEST.mkdir(parents=True, exist_ok=True)
+    for name, p in move.items():
+        before = md5(p)
+        shutil.move(str(p), SHORTS_DEST / name)
+        assert md5(SHORTS_DEST / name) == before, name
+    for name, p in copy.items():
+        shutil.copy2(p, SHORTS_DEST / name)
+    for p in sorted(SHORTS_DEST.iterdir()):
+        print(f"{p.stat().st_size / 1e6:9.1f} MB  {p.name}")
+    print(SHORTS_DEST)
+
+
+if __name__ == "__main__" and "--shorts" in sys.argv:
+    shorts()
