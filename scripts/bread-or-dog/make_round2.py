@@ -193,12 +193,12 @@ def main():
                   os.path.basename(src)[:-4] + ")", "source": f"codex/{os.path.basename(src)}", "asks": ["neutral"]}
 
     # the Muse first frame (Yancy 2026-11-16: cut the cake dog from the head in a Muse video): a 16:9 redraw of k1, tested again
-    m01 = f"{DATA}/muse/codex/M01_first_16x9.png"
+    m01 = f"{DATA}/muse/frames/M01_first.png"
     if os.path.exists(m01):
         im = Image.open(m01).convert("RGB")
         im.save(f"{TEST}/cake_m01.jpg", quality=90)
         ans["cake_m01"] = {"tier": "cake", "truth": "bread", "what": "Codex 16:9 redraw of k1 (the Muse first frame)",
-                           "source": "muse/codex/M01_first_16x9.png", "asks": ["neutral"]}
+                           "source": "muse/frames/M01_first.png", "asks": ["neutral"]}
 
     # adv: written by adversarial.py as PNG (noise must not go through JPEG)
     adv = f"{R2}/adversarial.json"
