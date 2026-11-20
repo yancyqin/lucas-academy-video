@@ -4,7 +4,8 @@
 
 What a folder must hold (README "Automatic checks", "YouTube tags", memory: upload folder only uploads):
 - only upload files: the mp4(s), youtube-description*.txt, the cover(s), the SRTs, an extra-language m4a;
-- every mp4 passed the automatic checks (`qa.py gate`: same sha256, nothing failed, every 拿不准 decided);
+- every mp4 passed the automatic checks (`qa.py gate`: same sha256, nothing failed, every 拿不准 decided), and so
+  did every extra-language m4a, checked against a film in the folder (`qa.py check FILM.mp4 --audio X.m4a`);
 - a narrated film's two caption files, zh-Hans and en;
 - covers 1280×720, under 2 MB (YouTube's limit);
 - each description file laid out 【标题】【简介】【标签】【上传设置】, where
@@ -157,7 +158,8 @@ def check_block(sec: dict, name: str, duration: float | None, short: bool) -> li
 
 
 def check_folder(folder: Path, require_gate, narrated: bool | None = None) -> tuple[dict, list]:
-    """require_gate(path) raises SystemExit with the reason when an mp4 has not passed."""
+    """require_gate(mp4) raises SystemExit with the reason when an mp4 has not passed; require_gate(mp4, audio=m4a)
+    does the same for an extra-language track checked against that film (qa.require)."""
     folder = Path(folder).expanduser().resolve()
     found = []
     if not folder.is_dir():
@@ -181,6 +183,18 @@ def check_folder(folder: Path, require_gate, narrated: bool | None = None) -> tu
         except SystemExit as e:
             found.append(item("upload", FAIL, "upload.gate", f"{p.name} 没通过自动检测", str(e).splitlines()[0],
                               key=f"upload.gate.{p.name}"))
+    for a in (p for p in files if p.suffix.lower() == ".m4a"):   # an extra-language track: checked with its film
+        reasons = []
+        for v in mp4s:
+            try:
+                require_gate(v, audio=a)
+                break
+            except SystemExit as e:
+                reasons.append(str(e).strip().splitlines()[0])
+        else:
+            if mp4s:
+                found.append(item("upload", FAIL, "upload.gate", f"{a.name} 没通过自动检测", reasons[0],
+                                  key=f"upload.gate.{a.name}"))
     short = bool(mp4s) and vertical
     descs = [p for p in files if p.name.startswith("youtube-description") and p.suffix == ".txt"]
     if not descs:

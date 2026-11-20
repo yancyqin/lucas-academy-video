@@ -53,6 +53,27 @@ def video_format(path: Path, spec: dict) -> tuple[dict, list]:
     return info, found
 
 
+def audio_file(path: Path, video_duration: float | None) -> tuple[dict, list]:
+    """An extra-language track delivered beside the film (`check --audio`): the same audio rules as the film's own
+    track, and as long as the picture."""
+    p = ffprobe(path)
+    a = next((s for s in p["streams"] if s["codec_type"] == "audio"), None)
+    name = Path(path).name
+    if a is None:
+        return {"file": name}, [item("format", FAIL, "format.alt_no_audio", f"{name} 里没有音轨", key="format.alt_no_audio")]
+    info = {"file": name, "acodec": a["codec_name"], "channels": a.get("channels"), "sample_rate": a.get("sample_rate"),
+            "duration": float(p["format"]["duration"])}
+    found = []
+    if a["codec_name"] != "aac" or int(a.get("sample_rate", 0)) != 48000 or a.get("channels") != 2:
+        found.append(item("format", FAIL, "format.alt_audio",
+                          f"{name}：音频 {a['codec_name']} {a.get('sample_rate')} Hz {a.get('channels')} 声道，应为 aac 48000 Hz 立体声",
+                          key="format.alt_audio"))
+    if video_duration and abs(info["duration"] - video_duration) > 0.25:
+        found.append(item("format", FAIL, "format.alt_length",
+                          f"{name} 长 {info['duration']:.2f} 秒，片子长 {video_duration:.2f} 秒", key="format.alt_length"))
+    return info, found
+
+
 def width(s: str) -> float:
     return sum(1 if re.match(r"[^\x00-\x7f]", ch) else 0.5 for ch in s)
 

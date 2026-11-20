@@ -21,7 +21,7 @@ from pathlib import Path
 import numpy as np
 
 from common import FAIL, PASS, UNSURE, db, item, rms_db, short_hash, worst
-from textnorm import joiner, same_sound, units, with_pinyin
+from textnorm import joiner, number_ands, same_sound, units, with_pinyin
 
 T = {
     "pad": 0.25,               # s of context cut around a line (never into the neighbour's speech)
@@ -96,6 +96,9 @@ def heard_units(words: list[dict], lang: str) -> tuple[list[dict], list[int]]:
         for u in got:
             u.pop("py", None)
         with_pinyin(got)
+    else:   # Whisper's words arrive one at a time, so the "and" inside a number is dropped here, across words
+        drop = number_ands(got)
+        got, owner = [u for k, u in enumerate(got) if k not in drop], [o for k, o in enumerate(owner) if k not in drop]
     return got, owner
 
 
@@ -252,6 +255,36 @@ def odd_pauses(want, got, ops, owner, words, lo, lang, sound, free: bool = False
         if g >= T["pause_no_mark"]:
             unsure.append((f"「{pair}」中间停了 {g:.2f} 秒", "稿子这里没有标点", p0, p1))
     return unsure, fail
+
+
+TAKE = {"n": 2048, "hop": 640, "bands": 32, "lo": 80.0, "hi": 4000.0, "floor": 50.0}
+
+
+def take_print(x: np.ndarray) -> str:
+    """A coarse picture of how one recording sounds, for decisions.same_take: 32 bands from 80 Hz to 4 kHz every
+    40 ms (128 ms windows), each as one byte, starting at the first sound and ending at the last. The same take
+    moved on the timeline or put through AAC again gives almost the same print; another take of the same words —
+    other rhythm, other melody — does not. Level does not matter (bytes are relative to the loudest band)."""
+    import base64
+    x = np.asarray(x, np.float32)
+    n, hop, bands = TAKE["n"], TAKE["hop"], TAKE["bands"]
+    if len(x) > 400:   # start at the speech itself, so a few ms more or less silence in front changes nothing
+        w = 80
+        level = np.sqrt(np.convolve(x.astype(np.float64) ** 2, np.ones(w) / w, "same"))
+        loud = np.where(level > level.max() * 10 ** (-30 / 20))[0]
+        if len(loud):
+            x = x[loud[0]: loud[-1] + 1]
+    if len(x) < n + hop:
+        x = np.pad(x, (0, n + hop - len(x)))
+    frames = np.lib.stride_tricks.sliding_window_view(x, n)[::hop] * np.hanning(n).astype(np.float32)
+    power = np.abs(np.fft.rfft(frames, axis=1)) ** 2
+    freq = np.fft.rfftfreq(n, 1 / SR)
+    edges = np.geomspace(TAKE["lo"], TAKE["hi"], bands + 1)
+    level = np.stack([power[:, (freq >= a) & (freq < b)].sum(axis=1) for a, b in zip(edges[:-1], edges[1:])], axis=1)
+    d = 10 * np.log10(level + 1e-12)
+    d = np.clip(d - d.max(), -TAKE["floor"], 0.0)
+    q = np.round((d + TAKE["floor"]) / TAKE["floor"] * 255).astype(np.uint8)
+    return f"t1:{bands}:" + base64.b64encode(q.tobytes()).decode("ascii")
 
 
 def clicks(voice: np.ndarray, regions: list[tuple[float, float]], rate: int) -> list[float]:
@@ -462,8 +495,9 @@ def check(spec: dict, played: np.ndarray, voice: np.ndarray | None, listener: Li
                     r["problems"].append({"verdict": UNSURE, "code": "narration.level",
                                           "title": f"这句比别的句子{'响' if r['level_db'] > med else '轻'} {abs(r['level_db'] - med):.1f} dB",
                                           "detail": "", "t0": r["start"], "t1": r["end"]})
-    findings = []
+    findings, nth = [], {}
     for r in results:
+        nth[r["lang"], r["text"]] = nth.get((r["lang"], r["text"]), 0) + 1   # which of the lines with these words
         if not r["problems"] and r.get("second_agrees"):
             # Not asked, but shown (collapsed) on the page: small may agree with the script out of its language prior.
             findings.append(item("narration", PASS, "narration.second_pass",
@@ -474,11 +508,18 @@ def check(spec: dict, played: np.ndarray, voice: np.ndarray | None, listener: Li
             continue
         if not r["problems"]:
             continue
-        audio_key = short_hash(r["id"], r["text"], r["heard"], round(r["end"] - r["start"], 2))
+        # What a decision is tied to. The key names the line (its words, and which of the lines with those words)
+        # and the kinds of doubt; the take print names the recording, so decisions.holds() can tell the same take in
+        # a new render (approval stays) from another take Whisper writes the same way (asked again). What Whisper
+        # heard and where the line sits are NOT in the key: both change between renders of one recording.
+        codes = sorted({p["code"] for p in r["problems"]})
+        sound = voice if voice is not None else played
         v = worst(p["verdict"] for p in r["problems"])
         findings.append(item("narration", v, "narration.line", f"{r['id']}：" + "；".join(p["title"] for p in r["problems"]),
                              "；".join(p["detail"] for p in r["problems"] if p["detail"]),
-                             t0=r["start"], t1=r["end"], key=short_hash("line", audio_key),
+                             t0=r["start"], t1=r["end"],
+                             key=short_hash("line", r["lang"], r["text"], nth[r["lang"], r["text"]], *codes),
+                             take=take_print(sound[int(r["lo"] * SR): int(r["hi"] * SR)]),
                              line=r["id"], lang=r["lang"], text=r["text"], heard=r["heard"], diff=r["diff"],
                              lo=r["lo"], hi=r["hi"], problems=r["problems"]))
     return results, findings

@@ -132,7 +132,9 @@ def with_pinyin(us: list[dict]) -> list[dict]:
 
 def same_sound(a: dict, b: dict, lang: str) -> bool:
     """Two different spellings Whisper may choose for one sound: Chinese homophones with the same tone (进位/近卫,
-    他/她, 晓/小), English plural/third-person -s (Whisper's grammar, not the voice)."""
+    他/她, 晓/小 — the same toned syllable IS the same sound, numerals included: 十/时), English plural/third-person
+    -s (Whisper's grammar, not the voice), and English words that sound alike (quays/keys). The sound-alike rule
+    never applies to a number word: "close" there is another number."""
     if lang == "zh":
         return a["py"] == b["py"]
     x, y = a["u"], b["u"]
@@ -142,6 +144,8 @@ def same_sound(a: dict, b: dict, lang: str) -> bool:
         return True
     if y in HEARD_AS.get(x, ()):
         return True
+    if a.get("num") or b.get("num"):           # eight/eighty, sixty/sixth, million/billion: a number is never
+        return False                           # "close enough" — a different word there is a different number
     if min(len(x), len(y)) >= 4 and abs(len(x) - len(y)) <= 1:   # quays/keys, christina/cristina, hoeing/howing
         import jellyfish
         mx, my = jellyfish.metaphone(x), jellyfish.metaphone(y)
@@ -180,7 +184,13 @@ def _en_units(text: str) -> list[dict]:
                         "name": w in caps})
         elif tok in PAUSE_MARKS and out:
             out[-1]["p"] = True
-    return out
+    return [u for k, u in enumerate(out) if k not in number_ands(out)]
+
+
+def number_ands(us: list[dict]) -> set[int]:
+    """The "and" inside a number: "one hundred and thirty-six" and "one hundred thirty-six" both read 136."""
+    return {k for k in range(1, len(us) - 1) if us[k]["u"] == "and" and not us[k - 1]["p"]
+            and us[k - 1]["u"] in ("hundred", "thousand") and us[k + 1].get("num")}
 
 
 def joiner(lang: str) -> str:

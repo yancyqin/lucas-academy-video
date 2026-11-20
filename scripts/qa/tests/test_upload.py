@@ -104,7 +104,74 @@ def folder_case() -> bool:
     ok = rc.returncode == 0 and not found
     print(f"{'PASS' if ok else 'MISS'}  a complete package passes   check exit {rc.returncode}"
           + ("" if ok else f" | {rc.stdout[-600:]} | {[f['title'] for f in found]}"))
-    return ok
+    return ok & audio_cases(work, film, spec)
+
+
+def audio_cases(work: Path, film: Path, spec: Path) -> bool:
+    """An extra-language track (`check --audio`) is its own check: the gate knows that audio file by its bytes, a
+    check of the m4a never passes the mp4's own track, and an m4a in the upload folder is gated like the film."""
+    import subprocess
+    import qa
+    from common import OUT
+
+    def tone(path: Path, hz: int, level: str = "loudnorm=I=-18:TP=-2", layout: str = "stereo") -> Path:
+        subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "lavfi", "-i", f"sine=frequency={hz}:sample_rate=48000:duration=40",
+                        "-af", f"volume=-12dB,aformat=channel_layouts={layout},{level}", "-c:a", "aac", "-ar", "48000",
+                        str(path)], check=True)
+        return path
+
+    def check(video: Path, out: Path, audio: Path | None = None) -> int:
+        cmd = [sys.executable, str(HERE.parent / "qa.py"), "check", str(video), "--spec", str(spec), "--out", str(out)]
+        return subprocess.run(cmd + (["--audio", str(audio)] if audio else []), capture_output=True, text=True).returncode
+
+    def passes(video: Path, audio: Path | None = None) -> bool:
+        try:
+            qa.require(video, audio=audio)
+            return True
+        except SystemExit:
+            return False
+
+    alt = tone(work / "film.en.m4a", 440)
+    rc_alt = check(film, OUT / "_upload_case_audio", alt)
+    # the same film again as other bytes, checked ONLY with the extra track
+    other = work / "film2.mp4"
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(film), "-c", "copy", "-metadata", "comment=second copy",
+                    str(other)], check=True)
+    rc_only = check(other, OUT / "_upload_case_audio_only", alt)
+    mono = tone(work / "film.mono.m4a", 440, layout="mono")
+    rc_mono = check(film, OUT / "_upload_case_audio_mono", mono)
+    with tempfile.TemporaryDirectory() as td:
+        td = Path(td)
+        silent = td / "film.en.m4a"            # the same name, other bytes
+        subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "lavfi", "-i", "anullsrc=r=48000:cl=stereo", "-t", "40",
+                        "-c:a", "aac", str(silent)], check=True)
+        pkg = td / "测试片-上传"
+        pkg.mkdir()
+        (pkg / "测试片.mp4").write_bytes(film.read_bytes())
+        (pkg / "youtube-description.txt").write_text(upload_text(
+            title="测试片", chapters=[(0, "开头"), (10, "中间"), (20, "后来"), (30, "结尾")], duration=40.0,
+            body=["一段测试。"], own_tags=["测试"], settings=["类别：教育"]), encoding="utf-8")
+        subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "lavfi", "-i", "color=c=navy:s=1280x720", "-frames:v", "1",
+                        str(pkg / "youtube-cover.jpg")], check=True)
+        (pkg / "测试片.en.m4a").write_bytes(alt.read_bytes())
+        good = [f["code"] for f in upload.check_folder(pkg, qa.require)[1]]
+        (pkg / "测试片.en.m4a").write_bytes(silent.read_bytes())
+        swapped = [f["key"] for f in upload.check_folder(pkg, qa.require)[1]]
+        cases = [
+            ("the checked extra track passes its gate", rc_alt == 0 and passes(film, alt), True),
+            ("…and the film's own track still passes its own", passes(film), True),
+            ("silence swapped in for the checked track", passes(film, silent), False),
+            ("a film checked only with --audio: its own track", passes(other), False),
+            ("…while that extra track did pass", rc_only == 0 and passes(other, alt), True),
+            ("a mono extra track fails the check", rc_mono == 2, True),
+            ("upload folder with the checked m4a", good == [], True),
+            ("upload folder with another m4a under that name", swapped == ["upload.gate.测试片.en.m4a"], True),
+        ]
+    ok_all = True
+    for name, got, want in cases:
+        ok_all &= got == want
+        print(f"{'PASS' if got == want else 'MISS'}  {name}")
+    return ok_all
 
 
 if __name__ == "__main__":

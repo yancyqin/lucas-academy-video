@@ -130,6 +130,20 @@ def cases(a: Image.Image, b: Image.Image):
 
     yield "black", black, {"shots": [{"id": "s1", "start": 0, "end": 8, "kind": "footage"}]}
 
+    # A film that is black from the first frame to the last: its edges are not an "opening fade".
+    yield "black_film", lambda: [Image.new("RGB", (W, H)) for _ in range(4 * FPS)], {}
+
+    def black_span(a: float, b: float):
+        bl = clean()
+        for k in range(int(a * FPS), int(b * FPS)):
+            bl[k] = Image.new("RGB", (W, H))
+        return bl
+
+    # Black exactly where the spec plans it: nothing to report.
+    yield "black_planned", lambda: black_span(3.0, 4.0), {"planned_black": [[3.0, 4.0]]}
+    # The plan says one second of black, the picture stays black for two and a half.
+    yield "black_past_plan", lambda: black_span(3.0, 5.5), {"planned_black": [[3.0, 4.0]]}
+
     yield "hard_cut", lambda: [frame(a, push(i / FPS, 4.0)) for i in range(4 * FPS)] + \
         [frame(b, push(i / FPS, 4.0)) for i in range(4 * FPS)], {}
 

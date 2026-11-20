@@ -2,17 +2,18 @@
 
     python3 scripts/qa/qa.py serve out/qa/<film> [--port 8766]
 
-Local only (127.0.0.1). Each decision is keyed to a finding's key, which is tied to the line's text and what was
-heard, so an unchanged line keeps its decision after a re-render and a re-voiced line is asked again.
+Local only (127.0.0.1). Each decision is saved under the finding's key together with the line's take print
+(decisions.py), so an unchanged recording keeps its decision after a re-render and a re-voiced line is asked again.
 """
 from __future__ import annotations
 
-import datetime as dt
 import json
 import threading
 from functools import partial
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
+
+import decisions as store
 
 LOCK = threading.Lock()
 
@@ -53,19 +54,16 @@ class Handler(SimpleHTTPRequestHandler):
         key, decision = data.get("key"), data.get("decision")
         if not key or decision not in ("pass", "redo", None):
             return self.reply({"error": "bad request"}, 400)
-        path = self.folder / "decisions.json"
         with LOCK:
-            all_ = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
-            if decision is None:
-                all_.pop(key, None)
-            else:
-                all_[key] = {"decision": decision, "note": (data.get("note") or "").strip(),
-                             "title": data.get("title", ""), "at": dt.datetime.now().isoformat(timespec="seconds")}
-            tmp = path.with_suffix(".tmp")
-            tmp.write_text(json.dumps(all_, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
-            tmp.replace(path)
+            try:
+                all_ = store.record(self.folder, key, decision, data.get("note") or "", data.get("title", ""),
+                                    seen=data.get("report") or "")
+            except KeyError:   # the film was checked again since this page was opened
+                return self.reply({"error": "stale"}, 409)
         print(f"{decision or '撤销'}: {data.get('title', key)}" + (f" — {data['note']}" if data.get("note") else ""), flush=True)
-        return self.reply({"ok": True, "decisions": all_})
+        # the page needs the choices, not the take prints
+        return self.reply({"ok": True, "decisions": {k: {f: v for f, v in d.items() if f != "take"}
+                                                     for k, d in all_.items()}})
 
 
 def run(folder: Path, port: int = 8766) -> None:

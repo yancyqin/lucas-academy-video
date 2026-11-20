@@ -261,22 +261,32 @@ def check(video: Path, spec: dict, out: Path | None = None) -> tuple[dict, list]
 
     trans = _spans_to_mask(spec.get("transitions"), n, fps, pad=2)
     planned = _spans_to_mask(spec.get("planned_black"), n, fps, pad=1) | trans
-    edge = np.zeros(n, bool)
-    edge[: int(T["edge_start"] * fps)] = True
-    edge[max(0, n - int(T["edge_end"] * fps)):] = True
+    edge = np.zeros(n, bool)   # a fade at the very start/end — never more than a slice of a short film
+    edge[: min(int(T["edge_start"] * fps), n // 10)] = True
+    edge[n - min(int(T["edge_end"] * fps), n // 7):] = True
 
-    # Black frames.
+    # Black frames. Only the frames inside a planned black, a transition or the film's edges are excused: a black
+    # run that reaches past them is judged on the part that sticks out (a film that is black from start to finish
+    # must not pass because its first frames are an "opening fade").
     black = (luma <= T["black_luma"]) & (lstd <= T["black_std"])
+    unplanned = black & ~(planned | edge)
     black_runs = []
     i = 0
     while i < n:
-        if black[i]:
+        if unplanned[i]:
             j = i
-            while j < n and black[j]:
+            while j < n and unplanned[j]:
                 j += 1
-            if j - i >= T["black_frames"] and not (planned[i:j] | edge[i:j]).any():
+            if j - i >= T["black_frames"]:
+                a, b = i, j   # the whole black stretch this run belongs to, for the message
+                while a > 0 and black[a - 1]:
+                    a -= 1
+                while b < n and black[b]:
+                    b += 1
                 black_runs.append((i, j))
-                add(FAIL, "picture.black", "黑帧", f"{j - i} 帧全黑（{(j - i) / fps:.2f} 秒）", i, j)
+                add(FAIL, "picture.black", "黑帧", f"{j - i} 帧全黑（{(j - i) / fps:.2f} 秒）" + (
+                    f"；这一段一共黑了 {(b - a) / fps:.2f} 秒，只有其中一部分是计划内的（planned_black / 转场 / 片头片尾）"
+                    if (a, b) != (i, j) else ""), i, j)
             i = j
         else:
             i += 1

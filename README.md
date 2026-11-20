@@ -224,8 +224,10 @@ PY=.venv-align/bin/python    # Whisper + numpy + pypinyin + jieba
 $PY scripts/qa/qa.py spec zhongying public/zhong-ying/<film>/timeline.json -o out/qa/<film>/qa-spec.json
 $PY scripts/qa/qa.py lint out/qa/<film>/qa-spec.json      # before voicing
 $PY scripts/qa/qa.py check FILM.mp4 --spec out/qa/<film>/qa-spec.json
+$PY scripts/qa/qa.py check FILM.mp4 --spec … --audio FILM.zh.m4a   # an extra-language track: its own check
 $PY scripts/qa/qa.py serve out/qa/<film>                   # the listening page for Yancy
 $PY scripts/qa/qa.py gate FILM.mp4                         # 0 only if this exact file passed
+$PY scripts/qa/qa.py gate FILM.mp4 --audio FILM.zh.m4a     # 0 only if this exact m4a passed, with this film
 $PY scripts/qa/qa.py upload ~/Desktop/<片名>-上传            # the final package: chapters first, tags, covers
 ```
 
@@ -237,7 +239,9 @@ $PY scripts/qa/qa.py upload ~/Desktop/<片名>-上传            # the final pac
   splices and the mix. Whisper medium listens to it, and the result is compared with the SPOKEN text.
   - Chinese is compared character by character. Where two characters differ, their toned pinyin decides, so a
     homophone Whisper picks (近卫/进位) passes and a wrong syllable or tone (拉/落) does not.
-  - Digits are read out, never stripped, so a wrong number is caught.
+  - Digits are read out, never stripped, so a wrong number is caught. English words that only sound alike
+    (quays/keys) pass, but never a number word: eight heard as eighty, sixty as sixth or million as billion is
+    a wrong number and fails.
   - English contractions are expanded, so "can't" heard as "can" leaves a missing "not".
   - A second model (Whisper small) double-checks numbers, negations and the words in
     [`pitfalls.json`](./scripts/qa/pitfalls.json). Add every newly found slip to that file.
@@ -258,7 +262,9 @@ $PY scripts/qa/qa.py upload ~/Desktop/<片名>-上传            # the final pac
     - wrong loudness (narrated films −16 ± 0.5 LUFS, true peak ≤ −1 dBTP);
     - music that does not rise in the gaps;
     - a wrong format, or caption errors;
-    - in the picture: a glitch frame, a jump, black frames, or real footage standing still.
+    - in the picture: a glitch frame, a jump, black frames, or real footage standing still. Black is excused
+      only on the frames inside the spec's `planned_black`, a transition, or the film's first 0.5 s and last 1 s;
+      a black stretch that runs past them fails on the part that sticks out.
   - **拿不准** (goes to Yancy's listening page):
     - one differing unit (often a name, or Whisper's own guess);
     - a pause that splits a word (座头|鲸);
@@ -272,27 +278,50 @@ $PY scripts/qa/qa.py upload ~/Desktop/<片名>-上传            # the final pac
   - the line as the film plays it, and again with a few seconds around it;
   - 通过 / 重配 buttons and a note.
 
-  Choices are saved to `out/qa/<film>/decisions.json`. A decision is tied to the line's text and what was heard,
-  so an unchanged line is never asked twice after a re-render.
+  Choices are saved to `out/qa/<film>/decisions.json`. A decision is about one recording of one line:
+  - It is saved with the line's take print, a coarse picture of how that recording sounds
+    ([`decisions.py`](./scripts/qa/decisions.py)).
+  - The same take in a new render keeps its decision, even when the line moved or Whisper wrote it another way,
+    so an unchanged line is never asked twice.
+  - Another take of the same words is asked again, even when Whisper writes it the same and it is the same
+    length. So is a line whose text or kind of doubt changed.
+  - A byte hash cannot do this: one take reused in the four 中英阅读 cuts has different samples in each film.
+    Measured 2026-11-20: the same take scores ≥ 0.93 (86 lines, also with the line's times moved or music under
+    it), another recording of a line ≤ 0.68 (24 real retakes, 5 of exactly the same words). The limit is 0.90.
+  - The print is coarse. A copy of one recording with its pitch or tempo changed by a few percent still counts
+    as the same take.
+  - Opened as a file (no server), the page keeps choices in the browser. Its 复制 button gives JSON for
+    `qa.py decide out/qa/<film> --from pasted.json`.
 - **The gate.** `qa.py gate FILM.mp4` passes only when:
-  - the report's sha256 matches the file;
+  - the report's sha256 matches the file, and the report is a check of the film's own audio track;
   - every check that applies ran: a spec was given, the picture check ran, the narration check ran on a narrated
     film, and the spec says `music: true` or `false`;
   - nothing failed;
   - every 拿不准 is marked 通过. A package script calls `qa.require(path)` before it moves anything to the Desktop.
   A preview is not sent without a passing gate either.
+- **An extra-language track** (the zh m4a beside an English film) is a second check with its own report:
+  `qa.py check FILM.mp4 --audio FILM.zh.m4a`, with a spec that holds that language's lines.
+  - The report records the sha256 of both files, and the m4a itself must be aac, 48 kHz, stereo and as long as
+    the picture.
+  - `qa.py gate FILM.mp4 --audio FILM.zh.m4a` (or `qa.require(path, audio=m4a)`) passes only for those exact
+    two files.
+  - Neither check passes the other's gate: a run with `--audio` never listened to the film's own track.
 - **The upload folder.** `qa.py upload ~/Desktop/<片名>-上传` checks the final package (README "YouTube tags":
-  chapters first, tags, covers, SRTs, only upload files, every mp4 gated).
+  chapters first, tags, covers, SRTs, only upload files, every mp4 gated, and every m4a gated against a film in
+  the folder).
 
 The thresholds are starting values, calibrated on 2026-11-20 against two sources. The first is the four 中英阅读
 review cuts: each produced 2–5 拿不准 lines and no false failures. The second is known-bad cases built into the
 tests. Change a threshold in its module's `T` dict, then re-run the tests:
 
 ```bash
+.venv-align/bin/python scripts/qa/tests/test_rules.py       # no Whisper, never skips: number words, the
+                                                            # take print, which approvals still hold
 .venv-align/bin/python scripts/qa/tests/test_narration.py   # 12 cases, e.g. a phrase said twice, a garbled
                                                             # tail, a wrong number, can't→can, a flat music bed
 .venv-align/bin/python scripts/qa/tests/test_picture.py     # injected jumps, wobble, drift, freeze, black, cuts
-python3 scripts/qa/tests/test_upload.py                     # chapters first, tags, hashtags, brackets
+.venv-align/bin/python scripts/qa/tests/test_upload.py      # chapters first, tags, hashtags, brackets; a whole
+                                                            # package and an extra-language m4a through the gate
 ```
 
 Every slip Yancy still catches by ear or eye becomes a new test case, and a new entry in `pitfalls.json` when it is

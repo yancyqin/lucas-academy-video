@@ -25,6 +25,9 @@ EXPECT = {
     "drift_region": ([("picture.static_moved", "fail")], True),
     "freeze": ([("picture.freeze", "fail")], False),
     "black": ([("picture.black", "fail")], False),
+    "black_film": ([("picture.black", "fail")], True),
+    "black_planned": ([], False),
+    "black_past_plan": ([("picture.black", "fail")], False),
     "hard_cut": ([], False),
     # the same defects in real MiniMax footage (made only when the source film is on this machine)
     "real_clean": ([], False),
@@ -34,7 +37,7 @@ EXPECT = {
     "real_freeze": ([("picture.freeze", "fail")], False),
 }
 OPTIONAL = {k for k in EXPECT if k.startswith("real_")}
-WHEN = {"start_wobble": 3.0, "glitch": 4.0, "freeze": 3.0, "black": 4.0,
+WHEN = {"start_wobble": 3.0, "glitch": 4.0, "freeze": 3.0, "black": 4.0, "black_past_plan": 4.0,
         "real_wobble": 0.0, "real_glitch": 6.0, "real_freeze": 4.0}
 
 

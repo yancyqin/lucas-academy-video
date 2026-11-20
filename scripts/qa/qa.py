@@ -6,12 +6,17 @@
     $PY scripts/qa/qa.py lint qa-spec.json        # before voicing: spellings the voices get wrong
     $PY scripts/qa/qa.py check FILM.mp4 --spec qa-spec.json [--audio en.m4a] [--out DIR]
     $PY scripts/qa/qa.py serve DIR                # the listening page; 通过 / 重配 are saved to DIR/decisions.json
-    $PY scripts/qa/qa.py gate FILM.mp4            # exit 0 only when this exact file passed and every 拿不准 is decided
+    $PY scripts/qa/qa.py decide DIR --from pasted.json   # the same, from the page's 复制 button (page opened as a file)
+    $PY scripts/qa/qa.py gate FILM.mp4 [--audio en.m4a]  # exit 0 only when these exact files passed, every 拿不准 decided
     $PY scripts/qa/qa.py upload ~/Desktop/<片名>-上传   # the upload folder: chapters first, tags, covers, SRTs, gates
 
-`check` writes DIR/report.json (keyed to the file's sha256) and DIR/review.html. Exit status: 0 everything passed or
-was approved, 1 拿不准 items wait for Yancy, 2 something failed. A film's package script calls `require(path)`
-before it moves anything to the Desktop; nothing is sent for review without a passing gate either.
+`check` writes DIR/report.json (keyed to the sha256 of the film and, with --audio, of that audio file) and
+DIR/review.html. Exit status: 0 everything passed or was approved, 1 拿不准 items wait for Yancy, 2 something failed.
+A film's package script calls `require(path)` — and `require(path, audio=m4a)` for an extra-language track — before
+it moves anything to the Desktop; nothing is sent for review without a passing gate either.
+
+The film's own track and an extra track are two checks with two reports: `check FILM.mp4` vouches for the mp4 as it
+plays, `check FILM.mp4 --audio X.m4a` for that m4a (against the same picture). Neither passes the other's gate.
 """
 from __future__ import annotations
 
@@ -24,26 +29,25 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from common import FAIL, LABEL, OUT, PASS, RANK, UNSURE, decode_audio, sha256  # noqa: E402
+import decisions as store  # noqa: E402
 import spec as specmod  # noqa: E402
 
 
-def out_dir_for(video: Path, spec: dict | None, given: str | None) -> Path:
+def out_dir_for(video: Path, spec: dict | None, given: str | None, audio: Path | None = None) -> Path:
     if given:
         return Path(given).resolve()
     name = (spec or {}).get("film") or video.stem
-    return OUT / name
-
-
-def load_decisions(d: Path) -> dict:
-    p = d / "decisions.json"
-    return json.loads(p.read_text(encoding="utf-8")) if p.exists() else {}
+    # an extra track gets its own folder: its report must not overwrite the report on the film's own track
+    return OUT / (name if audio is None else f"{name}+{audio.stem}")
 
 
 def status(report: dict, decisions: dict) -> dict:
+    """A decision counts only while it still holds (decisions.holds: a line's approval is for one recording)."""
     fails = [i for i in report["items"] if i["verdict"] == FAIL]
     unsure = [i for i in report["items"] if i["verdict"] == UNSURE]
-    waiting = [i for i in unsure if decisions.get(i["key"], {}).get("decision") not in ("pass", "redo")]
-    redo = [i for i in unsure if decisions.get(i["key"], {}).get("decision") == "redo"]
+    said = {i["key"]: store.decision_for(i, decisions) for i in unsure}
+    waiting = [i for i in unsure if said[i["key"]] is None]
+    redo = [i for i in unsure if said[i["key"]] == "redo"]
     incomplete = report.get("incomplete", [])
     ok = not fails and not waiting and not redo and not incomplete
     return {"ok": ok, "incomplete": len(incomplete), "fail": len(fails), "unsure": len(unsure), "waiting": len(waiting), "redo": len(redo),
@@ -52,18 +56,23 @@ def status(report: dict, decisions: dict) -> dict:
 
 def cmd_check(args) -> int:
     video = Path(args.video).resolve()
+    audio = Path(args.audio).resolve() if args.audio else None
     spec = specmod.load(Path(args.spec)) if args.spec else specmod.normalise({"film": video.stem})
-    out = out_dir_for(video, spec, args.out)
+    out = out_dir_for(video, spec, args.out, audio)
     out.mkdir(parents=True, exist_ok=True)
-    print(f"检查 {video.name} → {out}", flush=True)
-    digest = sha256(video)
+    print(f"检查 {video.name}" + (f" + {audio.name}" if audio else "") + f" → {out}", flush=True)
+    digest, audio_digest = sha256(video), sha256(audio) if audio else None
     items, skipped, sections = [], [], {}
-    played = decode_audio(Path(args.audio).resolve() if args.audio else video)
+    played = decode_audio(audio or video)
 
     import fmt
     info, found = fmt.video_format(video, spec)
     sections["format"] = info
     items += found
+    if audio:
+        info, found = fmt.audio_file(audio, sections["format"].get("duration"))
+        sections["audio_file"] = info
+        items += found
     info, found = fmt.captions(spec, sections["format"].get("duration"))
     sections["captions"] = info
     items += found
@@ -71,7 +80,7 @@ def cmd_check(args) -> int:
         skipped.append("字幕（spec 里没有 captions）")
 
     import mix
-    info, found = mix.loudness(Path(args.audio).resolve() if args.audio else video, spec)
+    info, found = mix.loudness(audio or video, spec)
     sections["loudness"] = info
     items += found
     info, found = mix.ducking(played, spec)
@@ -124,25 +133,29 @@ def cmd_check(args) -> int:
     seen = set()
     items = [i for i in items if not (i["key"] in seen or seen.add(i["key"]))]
     items.sort(key=lambda i: (-RANK[i["verdict"]], i.get("t0", -1)))
-    report = {"video": str(video), "audio": str(Path(args.audio).resolve()) if args.audio else None,
-              "sha256": digest, "spec": str(Path(args.spec).resolve()) if args.spec else None,
+    report = {"video": str(video), "audio": str(audio) if audio else None,
+              "sha256": digest, "audio_sha256": audio_digest, "spec": str(Path(args.spec).resolve()) if args.spec else None,
               "film": spec.get("film"), "created": dt.datetime.now().isoformat(timespec="seconds"),
               "items": items, "skipped": skipped, "ran": ran, "incomplete": incomplete, "sections": sections}
     (out / "report.json").write_text(json.dumps(report, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    for gone in store.prune(out, report):
+        print(f"  之前的决定作废（这一句换了录音，要重新听）：{gone.get('title') or gone['key']}")
     import page
-    page.build(out, report, video, Path(args.audio).resolve() if args.audio else None)
-    st = status(report, load_decisions(out))
+    page.build(out, report, video, audio)
+    st = status(report, store.load(out))
     print(summary(report, st, out))
     return 0 if st["ok"] else (2 if st["fail"] or st["redo"] else 1)
 
 
 def summary(report: dict, st: dict, out: Path) -> str:
-    lines = [f"\n{Path(report['video']).name}: 不通过 {st['fail']} · 拿不准 {st['unsure']}"
+    name = Path(report["video"]).name + (f" + {Path(report['audio']).name}" if report.get("audio") else "")
+    lines = [f"\n{name}: 不通过 {st['fail']} · 拿不准 {st['unsure']}"
              f"（已通过 {st['approved']}，要重配 {st['redo']}，等你听 {st['waiting']}）"]
-    decisions = load_decisions(out)
+    decisions = store.load(out)
     for i in report["items"]:
         if i["verdict"] != PASS:
-            d = decisions.get(i["key"], {}) if i["verdict"] == UNSURE else {}
+            d = decisions.get(i["key"]) if i["verdict"] == UNSURE else None
+            d = d if store.holds(i, d) else {}
             tag = LABEL[i["verdict"]] + {"pass": "·已通过", "redo": "·要重配"}.get(d.get("decision"), "")
             note = f"（备注：{d['note']}）" if d.get("note") else ""
             lines.append(f"  [{tag}] {i['title']}{note}" + (f" — {i['detail'][:90]}" if i["detail"] else ""))
@@ -158,36 +171,69 @@ def summary(report: dict, st: dict, out: Path) -> str:
     return "\n".join(lines)
 
 
-def find_report(video: Path, out: str | None) -> tuple[Path | None, dict | None, str]:
-    digest = sha256(video)
+def find_report(video: Path, out: str | None, audio: Path | None = None) -> tuple[Path | None, dict | None, str]:
+    """The report of a check of exactly these bytes: this film and, for an extra track, this audio file. Without
+    `audio` only a check of the film's own track counts — a run with --audio never listened to it."""
+    digest, audio_digest = sha256(video), sha256(audio) if audio else None
     dirs = [Path(out)] if out else sorted(OUT.glob("*/"), key=lambda p: -p.stat().st_mtime)
     for d in dirs:
         p = d / "report.json"
         if p.exists():
             r = json.loads(p.read_text(encoding="utf-8"))
-            if r.get("sha256") == digest:
+            if r.get("sha256") == digest and bool(r.get("audio")) == bool(audio) and r.get("audio_sha256") == audio_digest:
                 return d, r, digest
     return None, None, digest
 
 
-def require(video, out: str | None = None) -> None:
-    """For package/preview scripts: stop unless this exact file passed (and Yancy decided every 拿不准)."""
-    d, r, digest = find_report(Path(video).resolve(), out)
+def require(video, out: str | None = None, audio=None) -> None:
+    """For package/preview scripts: stop unless this exact file passed (and Yancy decided every 拿不准). With
+    `audio` (an extra-language m4a): stop unless that exact audio file passed against this exact film."""
+    video, audio = Path(video).resolve(), Path(audio).resolve() if audio else None
+    d, r, digest = find_report(video, out, audio)
     if r is None:
-        raise SystemExit(f"自动检测没跑过这个文件（sha256 {digest[:12]}…）：先运行 qa.py check {video} --spec …")
-    st = status(r, load_decisions(d))
+        what = f"{video.name} + {audio.name}" if audio else video.name
+        hint = f"qa.py check {video}" + (f" --audio {audio}" if audio else "") + " --spec …"
+        others = [x for x in (OUT.glob("*/report.json") if not out else Path(out).glob("report.json"))
+                  if json.loads(x.read_text(encoding="utf-8")).get("sha256") == digest]
+        why = ("这个音频文件没查过，或者查过之后文件变了" if audio else
+               "只查过外挂音轨，片子自带的音轨还没查过" if others else "自动检测没跑过这个文件")
+        raise SystemExit(f"{what}：{why}（视频 sha256 {digest[:12]}…）：先运行 {hint}")
+    st = status(r, store.load(d))
     if not st["ok"]:
         raise SystemExit(summary(r, st, d) + "\n自动检测没通过，不能打包或发送。")
 
 
 def cmd_gate(args) -> int:
     try:
-        require(args.video, args.out)
+        require(args.video, args.out, args.audio)
     except SystemExit as e:
         print(e)
         return 1
-    print(f"{Path(args.video).name}：自动检测通过。")
+    print(f"{Path(args.video).name}" + (f" + {Path(args.audio).name}" if args.audio else "") + "：自动检测通过。")
     return 0
+
+
+def cmd_decide(args) -> int:
+    """Decisions without the listening server: one key, or the JSON the page's 复制 button gives."""
+    folder = Path(args.dir).resolve()
+    report = json.loads((folder / "report.json").read_text(encoding="utf-8"))
+    if args.file:
+        pasted = json.loads(Path(args.file).read_text(encoding="utf-8"))
+        if pasted.get("report") != store.report_id(report):
+            raise SystemExit("这份选择是在另一次检查的试听页上做的（片子后来重新检查过）：请打开现在的 review.html 再听一遍。")
+        todo = [(k, d.get("decision"), d.get("note", "")) for k, d in pasted["decisions"].items()]
+    elif args.key and args.decision:
+        todo = [(args.key, None if args.decision == "clear" else args.decision, args.note or "")]
+    else:
+        raise SystemExit("用法：qa.py decide DIR KEY pass|redo|clear [--note …]，或 qa.py decide DIR --from 复制出来的.json")
+    for key, decision, note in todo:
+        try:
+            store.record(folder, key, decision, note)
+        except KeyError:
+            print(f"  跳过 {key}：现在的报告里没有这一条（片子重新检查过了，请在新的试听页上决定）")
+    st = status(report, store.load(folder))
+    print(summary(report, st, folder))
+    return 0 if st["ok"] else (2 if st["fail"] or st["redo"] else 1)
 
 
 def cmd_spec(args) -> int:
@@ -222,7 +268,7 @@ def cmd_lint(args) -> int:
 def cmd_upload(args) -> int:
     import upload
     from common import LABEL as L
-    info, found = upload.check_folder(Path(args.folder), lambda p: require(p), narrated=args.narrated or None)
+    info, found = upload.check_folder(Path(args.folder), require, narrated=args.narrated or None)
     for i in found:
         print(f"[{L[i['verdict']]}] {i['title']}" + (f"\n    {i['detail']}" if i["detail"] else ""))
     fails = [i for i in found if i["verdict"] == FAIL]
@@ -251,8 +297,16 @@ def main() -> int:
     c.set_defaults(fn=cmd_check)
     g = sub.add_parser("gate")
     g.add_argument("video")
+    g.add_argument("--audio", help="gate this extra-language audio file (checked with `check --audio`) with the film")
     g.add_argument("--out")
     g.set_defaults(fn=cmd_gate)
+    d = sub.add_parser("decide", help="save 通过 / 重配 without the listening server")
+    d.add_argument("dir")
+    d.add_argument("key", nargs="?")
+    d.add_argument("decision", nargs="?", choices=["pass", "redo", "clear"])
+    d.add_argument("--note")
+    d.add_argument("--from", dest="file", help="the JSON copied from the listening page")
+    d.set_defaults(fn=cmd_decide)
     s = sub.add_parser("spec")
     s.add_argument("adapter", choices=["zhongying", "srt"])
     s.add_argument("source", nargs="+", help="timeline.json, or SRT files as path:lang")

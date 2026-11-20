@@ -12,6 +12,7 @@ import subprocess
 from pathlib import Path
 
 from common import FAIL, UNSURE, mmss, short_hash
+from decisions import report_id
 
 
 def _clip_audio(src: Path, a: float, b: float, dst: Path) -> None:
@@ -63,7 +64,7 @@ def build(out: Path, report: dict, video: Path, audio: Path | None = None) -> Pa
                                                   "line", "text", "heard", "diff")},
                       "at": mmss(it["t0"]) if it.get("t0") is not None else "", "media": media})
     data = {"film": report.get("film") or Path(report["video"]).stem, "video": Path(report["video"]).name,
-            "sha": report["sha256"][:12], "created": report["created"], "cards": cards,
+            "sha": report["sha256"][:12], "id": report_id(report), "created": report["created"], "cards": cards,
             "skipped": report.get("skipped", []),
             "checked": {"narration": len(report["sections"].get("narration", []) or []),
                         "loudness": report["sections"].get("loudness"),
@@ -157,7 +158,7 @@ ul.plain{padding-left:18px;color:var(--muted);font-size:14px}
 </main>
 <script>
 const DATA = __DATA__;
-const STORE = "qa-decisions-" + DATA.sha;
+const STORE = "qa-decisions-" + DATA.id;
 let decisions = {}, online = false;
 const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
@@ -218,8 +219,9 @@ async function save(key, decision, note){
   if(online){
     try{
       const r = await fetch("/decision", {method:"POST", headers:{"Content-Type":"application/json"},
-        body: JSON.stringify({key, decision, note, title: c?.title})});
+        body: JSON.stringify({key, decision, note, title: c?.title, report: DATA.id})});
       if(r.ok){ decisions = (await r.json()).decisions; }
+      else if(r.status===409){ delete decisions[key]; render(); alert("这部片子重新检查过了，这个页面是旧的。请刷新页面再决定。"); return; }
     }catch(e){ online = false; $("offline").style.display = "block"; }
   }
   try{ localStorage.setItem(STORE, JSON.stringify(decisions)); }catch(e){}
@@ -236,7 +238,7 @@ document.addEventListener("change", (e) => {
   save(k, decisions[k].decision, i.value);
 });
 $("copy").addEventListener("click", async () => {
-  try{ await navigator.clipboard.writeText(JSON.stringify(decisions, null, 1)); $("copy").textContent = "已复制"; }catch(e){}
+  try{ await navigator.clipboard.writeText(JSON.stringify({report: DATA.id, decisions}, null, 1)); $("copy").textContent = "已复制"; }catch(e){}
 });
 (async () => {
   try{
