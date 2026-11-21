@@ -1,0 +1,22 @@
+{
+ "_doc": "Words the voices have read wrong before (narration-retake-lessons, film notes). 'risky': a second Whisper model double-checks these in every film. 'avoid': the pre-voice lint (qa.py lint) flags them in the SPOKEN text. Add to this list whenever a new slip is found.",
+ "zh": {
+  "risky": ["落", "刹", "量", "幺", "拐", "冗余", "积木", "拼好", "泰迪熊", "进位", "省掉", "解药", "减药", "照", "奖", "拦", "痫"],
+  "avoid": [
+   {"text": "〇", "why": "声音读不出 〇（「二〇二六年」被听成「这课 26 年」），朗读稿写 零"},
+   {"pattern": "[0-9]", "why": "数字写成汉字（读法要明确，比如 二零二六年 / 两千零二十六）"},
+   {"pattern": "急刹(?!车)", "why": "「急刹」会被读成「击杀」，写 急刹车"}
+  ]
+ },
+ "en": {
+  "risky": ["road", "wall", "skill", "brick", "route", "missed", "fooled", "screen", "tenths", "halving"],
+  "avoid": [
+   {"pattern": "\\b(can't|can’t)\\b", "why": "can't 常被听成 can（意思反了），写 cannot"},
+   {"pattern": "\\b(won't|won’t)\\b", "why": "won't 被听成 will，写 will not"},
+   {"pattern": "\\broads?\\b", "why": "Louise 的 road 被听成 rows/route，改用 path"},
+   {"pattern": "\\bwalls?\\b", "why": "Louise 的 wall 含糊，改用 screen"},
+   {"pattern": "\\bten tens\\b", "why": "被听成 tenths，写 ten groups of ten"},
+   {"pattern": "[0-9]", "why": "数字用英文单词写出来，配音的语速和读法才可控"}
+  ]
+ }
+}

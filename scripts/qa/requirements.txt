@@ -1,0 +1,7 @@
+# The QA environment (README "Automatic checks"): lucas-academy-video/.venv-align, Python 3.12.
+#   uv pip install --python .venv-align/bin/python -r scripts/qa/requirements.txt
+openai-whisper      # medium + small models in ~/.cache/whisper
+numpy
+pypinyin==0.55.0    # Chinese compared by toned pinyin
+jieba==0.42.1       # word boundaries for 「读断了」
+jellyfish==1.3.0    # English sound keys (quays/keys)
