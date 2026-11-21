@@ -7,7 +7,8 @@ time. The picture renders silent (BreadOrDog) in parts, so a crash costs one par
 the butterfly film (Yancy, 2026-11-16: 「英文视频配中文音轨」): <NAME>.mp4 with the English mix
 (out/bread-or-dog/<tag>/mix.en.wav) and <NAME>.zh.m4a, the Chinese mix on its own, for YouTube's added audio
 track. A tag with only one mix (the voice test) gets just the MP4 with that mix. --draft renders at half size.
-Parts are kept until the timeline changes.
+Parts are kept until the timeline changes. The mixes are mono; both files are exported as stereo (-ac 2), the
+format every film is checked against (README "Automatic checks": aac, 48 kHz, stereo).
 """
 import hashlib
 import json
@@ -53,7 +54,7 @@ suffix = ".draft" if DRAFT else ""
 main_lang = "en" if (OUT / "mix.en.wav").exists() else "zh"
 film = OUT / f"{NAME}{suffix}.mp4"
 subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(picture), "-i", str(OUT / f"mix.{main_lang}.wav"),
-                "-map", "0:v", "-map", "1:a", "-c:v", "copy", "-c:a", "aac", "-b:a", "256k", "-ar", "48000",
+                "-map", "0:v", "-map", "1:a", "-c:v", "copy", "-c:a", "aac", "-b:a", "256k", "-ar", "48000", "-ac", "2",
                 "-metadata:s:a:0", f"language={'eng' if main_lang == 'en' else 'zho'}", "-movflags", "+faststart", "-shortest",
                 str(film)], check=True)
 print(film)
@@ -62,5 +63,6 @@ if main_lang == "en" and (OUT / "mix.zh.wav").exists():
                          capture_output=True, text=True, check=True).stdout.strip()
     m4a = OUT / f"{NAME}{suffix}.zh.m4a"
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(OUT / "mix.zh.wav"), "-t", dur, "-c:a", "aac", "-b:a", "256k",
-                    "-ar", "48000", "-metadata:s:a:0", "language=zho", "-movflags", "+faststart", str(m4a)], check=True)
+                    "-ar", "48000", "-ac", "2", "-metadata:s:a:0", "language=zho", "-movflags", "+faststart", str(m4a)],
+                   check=True)
     print(m4a)
