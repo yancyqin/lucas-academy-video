@@ -68,23 +68,22 @@ if __name__ == "__main__" and "--shorts" not in sys.argv:
     main()
 
 
-SHORT_NAMES = {"blue-mormon": "蓝摩门凤蝶", "leopard": "豹纹蛱蝶"}
+SHORT_NAMES = {"mormon-leopard": "蓝摩门凤蝶和豹纹蛱蝶", "glasswing-purple": "玻璃翼蝶和红斑紫蛱蝶"}
 SHORTS_DEST = Path.home() / "Desktop" / f"{NAME}-竖屏短视频-上传"
 
 
 def shorts() -> None:
-    """The two vertical shorts (build_short.py, render_short.py, youtube.py --shorts) in their own Desktop folder: per
-    short the English video, the Chinese track as an M4A, captions in both languages, upload text in both. Renders and
-    captions are moved, upload text copied."""
+    """The two vertical shorts (build_short.py, render_short.py, youtube.py --shorts, cover_shorts.py) in their own
+    Desktop folder: per short one MP4 (music only, no captions), the upload text and a 1080x1920 cover in both languages.
+    Videos are moved (a video already moved there is left as it is), text and covers copied."""
     src = ROOT / "out/butterfly-challenge/shorts"
     move, copy = {}, {}
     for key, zh in SHORT_NAMES.items():
-        move[f"{NAME}-{zh}-英文.mp4"] = src / key / f"{key}.mp4"
-        move[f"{NAME}-{zh}-中文音轨.m4a"] = src / key / f"{key}.zh.m4a"
-        move[f"{NAME}-{zh}.en.srt"] = src / key / f"{key}.en.srt"
-        move[f"{NAME}-{zh}.zh-Hans.srt"] = src / key / f"{key}.zh-Hans.srt"
+        move[f"{NAME}-{zh}.mp4"] = src / key / f"{key}.mp4"
         for lang in ("en", "zh"):
             copy[f"youtube-{zh}.{lang}.txt"] = src / key / f"youtube-{key}.{lang}.txt"
+            copy[f"封面-{zh}.{lang}.jpg"] = COVERS / f"shorts/cover-{key}.{lang}.jpg"
+    move = {name: p for name, p in move.items() if p.is_file() or not (SHORTS_DEST / name).is_file()}
     missing = [str(p) for p in {**move, **copy}.values() if not p.is_file()]
     if missing:
         raise SystemExit("missing:\n  " + "\n  ".join(missing))

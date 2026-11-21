@@ -106,30 +106,41 @@ if __name__ == "__main__" and "--shorts" not in sys.argv:
 
 
 # ---- the vertical shorts (build_short.py; docs/butterfly-challenge/shorts.md) ----
+# v2 (11-16): two rounds a short, music only — no voice line, no captions. What each AI picked is pair_data()'s.
 SHORTS = {
-    "blue-mormon": {
-        "en": ("Which Butterfly Is Real? Even the Best AI Was Fooled #shorts",
-               "One is a real photograph, one was drawn by AI. You get five seconds. GPT-6-Astra and Claude Fable 5.2 "
-               "both picked the AI one.",
-               ["· Real photo: iNaturalist, CC0 (https://www.inaturalist.org/observations/34290021)",
-                "· Video: Nithin PA, Pexels"]),
-        "zh": ("哪只蝴蝶是真的？最厉害的AI也被骗了 #shorts",
-               "一只是真实拍到的照片，一只是 AI 画的。给你五秒。GPT-6-Astra 和 Claude Fable 5.2 都选了 AI 那只。",
-               ["· 真实照片：iNaturalist，CC0（https://www.inaturalist.org/observations/34290021）",
-                "· 视频：Nithin PA，Pexels"])},
-    "leopard": {
-        "en": ("Which One Is Real? Both AIs Got It Wrong #shorts",
-               "One is a real photograph, one was drawn by AI. You get five seconds. GPT-6-Astra and Claude Fable 5.2 "
-               "both picked the AI one, and Fable even called the real one's body a smeared blob.",
-               ["· Real photo: Robert Taylor, iNaturalist, CC BY 4.0 (https://www.inaturalist.org/observations/193021588)",
-                "· Video: Adolph Haben, Pexels"]),
-        "zh": ("哪只是真的？两个AI都选错了 #shorts",
-               "一只是真实拍到的照片，一只是 AI 画的。给你五秒。GPT-6-Astra 和 Claude Fable 5.2 都选了 AI 那只，Fable 还嫌真的那只身子糊成一团。",
-               ["· 真实照片：Robert Taylor，iNaturalist，CC BY 4.0（https://www.inaturalist.org/observations/193021588）",
-                "· 视频：Adolph Haben，Pexels"])},
+    "mormon-leopard": {
+        "en": ("Real or AI? Both AIs Got These Two Wrong #shorts",
+               "Two rounds. In each, one photo is real and one was drawn by AI. You get three seconds to pick. "
+               "GPT-6-Astra and Claude Fable 5.2 picked the AI one both times.",
+               ["· Real photos (iNaturalist): CC0 (https://www.inaturalist.org/observations/34290021); Robert Taylor, "
+                "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/, https://www.inaturalist.org/observations/193021588)",
+                "· Videos (Pexels): Nithin PA, Adolph Haben"]),
+        "zh": ("哪只蝴蝶是真的？这两组两个AI都猜错了 #shorts",
+               "两组。每组一张是真实拍到的照片，一张是 AI 画的，给你三秒钟选。GPT-6-Astra 和 Claude Fable 5.2 两次都选了 AI 那张。",
+               ["· 真实照片（iNaturalist）：CC0（https://www.inaturalist.org/observations/34290021）；Robert Taylor，"
+                "CC BY 4.0（https://creativecommons.org/licenses/by/4.0/，https://www.inaturalist.org/observations/193021588）",
+                "· 视频（Pexels）：Nithin PA、Adolph Haben"])},
+    "glasswing-purple": {
+        "en": ("Which Butterfly Is Real? Can You Beat AI? #shorts",
+               "Two rounds. In each, one photo is real and one was drawn by AI. You get three seconds to pick. "
+               "GPT-6-Astra and Claude Fable 5.2 both got the glasswing right; in the second round Fable was fooled.",
+               ["· Real photos (iNaturalist): Jason Eckberg, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/, "
+                "https://www.inaturalist.org/observations/3989817); CC0 (https://www.inaturalist.org/observations/240008545)",
+                f"· Glasswing video: Brandon (Flickr: bpprice), CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/), "
+                f"via Wikimedia Commons, trimmed, {COMMONS}",
+                "· Video (Pexels): Chris F"]),
+        "zh": ("哪只蝴蝶是真的？你能赢AI吗？ #shorts",
+               "两组。每组一张是真实拍到的照片，一张是 AI 画的，给你三秒钟选。玻璃翼蝶 GPT-6-Astra 和 Claude Fable 5.2 都猜对了；第二组，Fable 被骗了。",
+               ["· 真实照片（iNaturalist）：Jason Eckberg，CC BY 4.0（https://creativecommons.org/licenses/by/4.0/，"
+                "https://www.inaturalist.org/observations/3989817）；CC0（https://www.inaturalist.org/observations/240008545）",
+                f"· 玻璃翼蝶视频：Brandon（Flickr: bpprice），CC BY 2.0（https://creativecommons.org/licenses/by/2.0/），"
+                f"维基共享资源，剪短，{COMMONS}",
+                "· 视频（Pexels）：Chris F"])},
 }
 SHORT_FULL = {"en": 'Full video, all ten pairs: "Challenge: Which Butterflies Are Real? Play Against AI"',
               "zh": "完整版，一共十组：《Challenge 猜一猜哪些蝴蝶是真的？和AI比一比》"}
+SHORT_SETTINGS = {"en": "· Altered or synthetic content: Yes (the AI-drawn butterflies)\n· Made for kids: No",
+                  "zh": "· 经过修改或合成的内容：是（AI 画的蝴蝶）\n· 面向儿童：否"}
 
 
 def shorts() -> None:
@@ -137,12 +148,13 @@ def shorts() -> None:
     for name, langs in SHORTS.items():
         for lang, (title, intro, credits) in langs.items():
             t = TEXT[lang]
-            ai = "· AI picture: Codex (OpenAI image generation)" if lang == "en" else "· AI 蝴蝶图：Codex（OpenAI 图像生成）"
-            body = "\n\n".join([intro, SHORT_FULL[lang], "\n".join([credits[0], credits[1], ai]), t["music"], t["voice"],
-                                t["byline"], hashtags(t["tags"] + ["shorts"])])
-            head = ("【标题】", "【简介】", "【标签】")
+            ai = "· AI pictures: Codex (OpenAI image generation)" if lang == "en" else "· AI 蝴蝶图：Codex（OpenAI 图像生成）"
+            body = "\n\n".join([intro, SHORT_FULL[lang], "\n".join([*credits, ai]), t["music"], t["byline"],
+                                hashtags(t["tags"] + ["shorts"])])
+            head = ("【标题】", "【简介】", "【标签】", "【上传设置】")
             (out / name / f"youtube-{name}.{lang}.txt").write_text(
-                f"{head[0]}\n{title}\n\n{head[1]}\n{body}\n\n{head[2]}\n{tags(t['tags'] + ['shorts'])}\n")
+                f"{head[0]}\n{title}\n\n{head[1]}\n{body}\n\n{head[2]}\n{tags(t['tags'] + ['shorts'])}\n\n"
+                f"{head[3]}\n{SHORT_SETTINGS[lang]}\n")
             print(name, lang, len(body), "characters")
 
 
