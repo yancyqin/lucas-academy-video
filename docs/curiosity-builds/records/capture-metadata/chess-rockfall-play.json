@@ -1,0 +1,9 @@
+{
+ "name": "chess-rockfall-play",
+ "url": "http://127.0.0.1:5191/weekly/?edition=003&lang=en",
+ "duration": 10.504,
+ "frames": 454,
+ "marks": {
+  "rockfall": 0
+ }
+}

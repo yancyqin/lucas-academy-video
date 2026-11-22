@@ -37,6 +37,9 @@ a sentence. Both run locally on this Mac.
   two friends encode an invitation, find a hidden gift with yes/no questions and
   identify its snack. Animated characters and code-derived beads/trees/boxes,
   English default narration, independent Chinese audio and external SRTs.
+- [`CURIOSITY-BUILDS.md`](./CURIOSITY-BUILDS.md) -- Curiosity Builds v10 的文字归档：
+  最终脚本、画面代码、字幕、素材来源、封面提示词与制作经验。为清理磁盘而保存，
+  不包含视频、音频或图片；记录了日后重做所需的输入及无法保证原样恢复的部分。
 
 ## Scripts and narration
 

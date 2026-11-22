@@ -1,0 +1,28 @@
+{
+  "languages": [
+    "en",
+    "zh"
+  ],
+  "covers": [
+    {
+      "language": "en",
+      "file": "/Users/yqin/Desktop/Curiosity Builds - Final/YouTube/youtube-cover.en.jpg",
+      "width": 1280,
+      "height": 720,
+      "bytes": 370064,
+      "sha256": "eb801b50c394edf0712d59c0618f10b760813c809af303913e545b7f67038f09"
+    },
+    {
+      "language": "zh",
+      "file": "/Users/yqin/Desktop/Curiosity Builds - Final/YouTube/youtube-cover.zh.jpg",
+      "width": 1280,
+      "height": 720,
+      "bytes": 369831,
+      "sha256": "1c6e4fab21dd527f320a06a280b08bb9df6c2a3c60a72955ca95000c7b02059e"
+    }
+  ],
+  "english_master_unchanged": true,
+  "copy_body_unchanged": true,
+  "one_video": true,
+  "text": "从想法 / 到世界"
+}

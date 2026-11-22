@@ -1,0 +1,26 @@
+{
+  "inception-space-ui": {
+    "head": "1a7c835c31e689e2c10b4cce9b28cfbb864201ba",
+    "note": "Local project checkout; product code unchanged for this film."
+  },
+  "painterly-chameleon": {
+    "head": "7242fb0bdab5564bcff114b2466e72daf55d0bba",
+    "note": "Local project checkout; product code unchanged for this film."
+  },
+  "snake-lab": {
+    "head": "a4fe18db1f82e629dd8a2baea0b030d357888eca",
+    "note": "Local project checkout; product code unchanged for this film."
+  },
+  "lucas-academy-bible": {
+    "head": "44b5b62c21520444b246b825df2e655c454cda1b",
+    "note": "Local project checkout; product code unchanged for this film."
+  },
+  "lucas-academy-video": {
+    "head": "28c9a667eeb8bcbeb474d98a3cd80d16da05d5d1",
+    "note": "Local project checkout; product code unchanged for this film."
+  },
+  "lucasgame-academy": {
+    "head": "175b027fc767817314476393444f010feaecf77d",
+    "note": "Local project checkout; product code unchanged for this film."
+  }
+}

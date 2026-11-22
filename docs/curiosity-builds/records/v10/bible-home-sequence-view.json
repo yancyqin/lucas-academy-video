@@ -1,0 +1,49 @@
+{
+  "url": "https://bible.lucasacademy.org/",
+  "viewport": [
+    1280,
+    720
+  ],
+  "post_capture_zoom": false,
+  "box": {
+    "x": 100,
+    "y": 18,
+    "width": 1080,
+    "height": 699.5729370117188
+  },
+  "visible": true,
+  "controls": [
+    {
+      "text": "Rebuild\nMemorize, then rebuild",
+      "x": 330,
+      "y": 456.0833435058594,
+      "w": 201.33334350585938,
+      "h": 84.36458587646484,
+      "visible": true
+    },
+    {
+      "text": "Go\nGuess Letters\nClaude Shannon’s game",
+      "x": 539.3333740234375,
+      "y": 456.0833435058594,
+      "w": 201.33334350585938,
+      "h": 84.36458587646484,
+      "visible": true
+    },
+    {
+      "text": "so\n?\nNext Word\nHow an AI learns",
+      "x": 748.6666870117188,
+      "y": 456.0833435058594,
+      "w": 201.33334350585938,
+      "h": 84.36458587646484,
+      "visible": true
+    },
+    {
+      "text": "Psalms 119:105",
+      "x": 330,
+      "y": 641.5729370117188,
+      "w": 470.3645935058594,
+      "h": 58,
+      "visible": true
+    }
+  ]
+}

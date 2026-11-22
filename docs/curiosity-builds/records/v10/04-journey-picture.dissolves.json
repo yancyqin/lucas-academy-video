@@ -1,0 +1,25 @@
+{
+  "digest": "68a80009228d161834fdc82bc79453ed139b4efb288b60d72b09a880899ba0b7",
+  "source_parts": [
+    {
+      "file": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/builds/journey.mp4",
+      "start_frame": 0,
+      "frames": 216
+    },
+    {
+      "file": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/edit/journey-original-walk.mp4",
+      "start_frame": 0,
+      "frames": 600
+    }
+  ],
+  "output_frames": 816,
+  "transitions": [
+    {
+      "cut_frame": 216,
+      "frames": 18,
+      "start_frame": 207,
+      "end_frame": 225
+    }
+  ],
+  "overall_fades": false
+}

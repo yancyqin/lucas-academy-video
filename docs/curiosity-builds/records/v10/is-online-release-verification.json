@@ -1,0 +1,27 @@
+{
+  "published": true,
+  "release_commit": "726d48cd602e353204cb19551c9bddeb4c54a914",
+  "live_commit": "a8fbd456cb367a339880cc2ef4ae1571e43947ec",
+  "live_commit_includes_release": true,
+  "deployment_id": "dep-dbvurqb0uqgc73bksu50",
+  "pages": [
+    {
+      "url": "https://is.lucasacademy.org/chess/",
+      "status": 200,
+      "title": "Balanced Chess — play the bot · Inception Space",
+      "h1": "Balanced Chess"
+    },
+    {
+      "url": "https://inception-space-ui-preview.onrender.com/chess/",
+      "status": 200,
+      "title": "Balanced Chess — play the bot · Inception Space",
+      "h1": "Balanced Chess"
+    }
+  ],
+  "checks": {
+    "npm_run_check": true,
+    "tests_passed": 1925,
+    "tests_failed": 0
+  },
+  "owner_approved": true
+}

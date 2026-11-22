@@ -1,0 +1,24 @@
+[
+  {
+    "project": "vangogh",
+    "tool": "built-in image_gen",
+    "asset": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v9/assets/vangogh-gallery-concept.png",
+    "prompt": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v9/assets/vangogh-gallery-concept.prompt.txt",
+    "sha256": "585c9b2cf0dbf9592b7aa0994216d521014de63abaf59267ff8c08b722d1231d",
+    "usage": "Architectural concept sketch illustrating the process, followed by the unchanged actual room footage.",
+    "variant": "left half line art, right half colored",
+    "last_edit_prompt": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v9/assets/vangogh-gallery-half-color.prompt.txt",
+    "reference": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v9/assets/gallery-reference-originals/vangogh-gallery-concept.png"
+  },
+  {
+    "project": "journey",
+    "tool": "built-in image_gen",
+    "asset": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v9/assets/journey-gallery-concept.png",
+    "prompt": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v9/assets/journey-gallery-concept.prompt.txt",
+    "sha256": "3174bf35291126cd230b7e38c22a598e02069506c2d7774c307695378f3d88d6",
+    "usage": "Architectural concept sketch illustrating the process, followed by the unchanged actual room footage.",
+    "variant": "left half line art, right half colored",
+    "last_edit_prompt": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v9/assets/journey-gallery-half-color.prompt.txt",
+    "reference": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v9/assets/gallery-reference-originals/journey-gallery-concept.png"
+  }
+]

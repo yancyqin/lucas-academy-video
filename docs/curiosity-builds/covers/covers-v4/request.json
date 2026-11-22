@@ -1,0 +1,9 @@
+{
+  "request": "白字可以，有一些立体光泽感",
+  "revision": "B-v4",
+  "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-v3/02-ideas-to-worlds-white-v3.png",
+  "source_sha256": "c190a5ad848620ea67d0431b40e888c1061bf78a4ab254d58e4142be9060dd69",
+  "method": "Built-in ImageGen edit",
+  "keep": "Approved neutral-white headline, exact typography and layout, gallery and defocused coaster background.",
+  "change": "Delicate neutral white highlights and shallow embossing only, with fine cool-gray relief edges."
+}

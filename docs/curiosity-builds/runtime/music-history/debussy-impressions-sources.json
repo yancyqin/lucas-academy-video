@@ -1,0 +1,188 @@
+[
+ {
+  "key": "clair",
+  "piece": "Clair de lune (Suite bergamasque, III)",
+  "performer": "Laurens Goedhart, piano (2011)",
+  "license": "CC BY 3.0 — credit required (composition PD)",
+  "credit": "\"Clair de lune\" performed by Laurens Goedhart, CC BY 3.0, via Wikimedia Commons / SoundCloud",
+  "page": "https://commons.wikimedia.org/wiki/File:Clair_de_lune_(Claude_Debussy)_Suite_bergamasque.ogg",
+  "file": "candidates/clair-de-lune-goedhart-ccby3.ogg",
+  "duration_s": 304,
+  "notes": "ogg 500 kbps transcoded from a SoundCloud MP3: nothing above 15 kHz. Clean lead-in."
+ },
+ {
+  "key": "cathedrale",
+  "piece": "La cathédrale engloutie (Préludes I/10)",
+  "performer": "Ivan Ilić, piano (Paris, April 2006)",
+  "license": "CC BY 3.0 — credit required",
+  "credit": "\"La cathédrale engloutie\" performed by Ivan Ilić, CC BY 3.0, via Wikimedia Commons",
+  "page": "https://commons.wikimedia.org/wiki/File:La_Cath%C3%A9drale_engloutie_-_Claude_Debussy_-_performed_by_Ivan_Ilic.ogg",
+  "file": "candidates/cathedrale-engloutie-ilic-ccby3.ogg",
+  "duration_s": 325,
+  "notes": "Professional pianist; OTRS permission ticket on Commons. ogg 160 kbps, nothing above 15 kHz."
+ },
+ {
+  "key": "cathedrale-alt",
+  "piece": "La cathédrale engloutie (Préludes I/10) — alternative",
+  "performer": "Stefano Ligoratti, piano (live)",
+  "license": "CC BY 3.0 — credit required",
+  "page": "https://imslp.org/wiki/Special:ImagefromIndex/220924",
+  "file": "candidates/cathedrale-ligoratti-ccby3.mp3",
+  "duration_s": 351,
+  "notes": "Live. 40 clipped runs in the original, MP3 cut at 14 kHz — Ilić is cleaner. Got the file from the Wayback Machine copy of the IMSLP file (2015-09-28).",
+  "credit": "\"La cathédrale engloutie\" performed by Stefano Ligoratti, CC BY 3.0, via IMSLP"
+ },
+ {
+  "key": "neige",
+  "piece": "Des pas sur la neige (Préludes I/6)",
+  "performer": "Chiara Bertoglio, piano",
+  "license": "CC BY 3.0 — credit required",
+  "page": "https://imslp.org/wiki/Special:ImagefromIndex/297337",
+  "file": "candidates/neige-bertoglio-ccby3.mp3",
+  "duration_s": 241,
+  "notes": "Recorded very quietly (−36 LUFS); after normalizing, hiss in the quietest passages is about −75 dBFS above 8 kHz, inaudible. Wayback copy of the IMSLP file (2022-04-20).",
+  "credit": "\"Des pas sur la neige\" performed by Chiara Bertoglio, CC BY 3.0, via IMSLP"
+ },
+ {
+  "key": "feux",
+  "piece": "Feux d'artifice (Préludes II/12)",
+  "performer": "Stefano Ligoratti, piano (live)",
+  "license": "CC BY 3.0 — credit required",
+  "page": "https://imslp.org/wiki/Special:ImagefromIndex/220928",
+  "file": "candidates/feux-ligoratti-ccby3.mp3",
+  "duration_s": 279,
+  "notes": "Live; no applause in the tail. 26 short clipped runs in the original master, MP3 cut at 14.5 kHz. Wayback copy of the IMSLP file (2023-09-29).",
+  "credit": "\"Feux d'artifice\" performed by Stefano Ligoratti, CC BY 3.0, via IMSLP"
+ },
+ {
+  "key": "isle",
+  "piece": "L'isle joyeuse",
+  "performer": "Jim Millar, piano",
+  "license": "CC BY 3.0 — credit required",
+  "page": "https://imslp.org/wiki/Special:ImagefromIndex/157207",
+  "file": "candidates/isle-millar-ccby3.mp3",
+  "duration_s": 458,
+  "notes": "Noticeable hiss (about −61 dBFS at 4–8 kHz in quiet passages after normalizing), 7 clipped runs, and slow at 7:38 (usual 5½–6½ min). Weakest of the set. Wayback copy of the IMSLP file (2019-06-07).",
+  "credit": "\"L'isle joyeuse\" performed by Jim Millar, CC BY 3.0, via IMSLP"
+ },
+ {
+  "key": "sacree",
+  "piece": "Danse sacrée (Danses pour harpe et orchestre, 1)",
+  "performer": "United States Marine Chamber Orchestra, cond. Jason K. Fettig, harp Karen Grimsey (live, 14 Aug 2010)",
+  "license": "Public domain (US government work)",
+  "page": "https://commons.wikimedia.org/wiki/File:Danse_Sacr%C3%A9e.ogg",
+  "file": "candidates/danse-sacree-usmc-pd.ogg",
+  "duration_s": 290,
+  "notes": "Live concert; starts and ends clean. In the score it runs straight into Danse profane — the two can be joined."
+ },
+ {
+  "key": "profane",
+  "piece": "Danse profane (Danses pour harpe et orchestre, 2)",
+  "performer": "United States Marine Chamber Orchestra, cond. Jason K. Fettig, harp Karen Grimsey (live, 14 Aug 2010)",
+  "license": "Public domain (US government work)",
+  "page": "https://commons.wikimedia.org/wiki/File:Danse_Profane.ogg",
+  "file": "candidates/danse-profane-usmc-pd.ogg",
+  "duration_s": 340,
+  "notes": "Live concert; the published track ends on the final chord, no audible applause in the last 5 s (−41 dB mean) — confirm by ear before cutting."
+ },
+ {
+  "key": "quartet3",
+  "piece": "String Quartet in G minor, Op. 10 — III. Andantino, doucement expressif",
+  "performer": "Euclid Quartet (Indiana University South Bend)",
+  "license": "CC BY (YouTube Creative Commons licence) — credit required",
+  "credit": "Debussy String Quartet, III. Andantino, performed by the Euclid Quartet, CC BY, via YouTube / Wikimedia Commons",
+  "page": "https://commons.wikimedia.org/wiki/File:Debussy_-_String_Quartet_in_G_Minor_-_III._Andantino,_doucement_expressif_(Euclid_Quartet).opus",
+  "file": "candidates/quartet-3-andantino-euclid-ccby.opus",
+  "duration_s": 479
+ },
+ {
+  "key": "quartet1",
+  "piece": "String Quartet in G minor, Op. 10 — I. Animé et très décidé",
+  "performer": "Euclid Quartet",
+  "license": "CC BY (YouTube Creative Commons licence) — credit required",
+  "page": "https://commons.wikimedia.org/wiki/File:Debussy_-_String_Quartet_in_G_Minor_-_I._Anim%C3%A9_et_tr%C3%A8s_d%C3%A9cid%C3%A9_(Euclid_Quartet).opus",
+  "file": "candidates/quartet-1-anime-euclid-ccby.opus",
+  "duration_s": 414,
+  "notes": "Heavily clipped in the source (1384 clipped runs) — avoid."
+ },
+ {
+  "key": "gradus",
+  "piece": "Doctor Gradus ad Parnassum (Children's Corner, 1)",
+  "performer": "eldüendesüarez, piano",
+  "license": "CC BY 4.0 — credit required",
+  "page": "https://commons.wikimedia.org/wiki/File:Debussy_-_Doctor_Gradys_ad_Parnassum_(Children%27s_Corner)_(Piano_Performance_by_eld%C3%BCendes%C3%BCarez).wav",
+  "file": "candidates/doctor-gradus-elduendesuarez-ccby4.wav",
+  "duration_s": 126,
+  "notes": "Home recording, peaks at −0.1 dBFS."
+ },
+ {
+  "key": "danse",
+  "piece": "Danse (Tarantelle styrienne)",
+  "performer": "eldüendesüarez, piano",
+  "license": "CC BY 4.0 — credit required",
+  "page": "https://commons.wikimedia.org/wiki/File:Debussy_-_Danse_(Piano_Performance_by_eld%C3%BCendes%C3%BCarez).wav",
+  "file": "candidates/danse-tarantelle-elduendesuarez-ccby4.wav",
+  "duration_s": 320
+ },
+ {
+  "key": "golliwogg",
+  "piece": "Golliwogg's Cakewalk (Children's Corner, 6)",
+  "performer": "Stefano Ligoratti, piano (live)",
+  "license": "CC BY 4.0 — credit required",
+  "page": "https://imslp.org/wiki/Special:ImagefromIndex/319772",
+  "file": "candidates/golliwogg-ligoratti-ccby4.mp3",
+  "duration_s": 179,
+  "notes": "Live. Wayback copy of the IMSLP file (2021-05-13).",
+  "credit": "\"Golliwogg's Cakewalk\" performed by Stefano Ligoratti, CC BY 4.0, via IMSLP"
+ },
+ {
+  "key": "mer1",
+  "piece": "La mer — I. De l'aube à midi sur la mer (concert band arrangement by Lawrence Odom)",
+  "performer": "United States Air Force Band, Concert Band (2000)",
+  "license": "Public domain (US government work)",
+  "page": "https://commons.wikimedia.org/wiki/File:La_mer_-_I._De_l%27aube_%C3%A0_midi_sur_la_mer_-_Concert_Band_-_United_States_Air_Force_Band.mp3",
+  "file": "candidates/la-mer-1-usaf-band-pd.mp3",
+  "duration_s": 560,
+  "notes": "Wind-band transcription, not the orchestral original. Peaks at +0.1 dBFS."
+ },
+ {
+  "key": "pagodes",
+  "piece": "Pagodes (Estampes, 1)",
+  "performer": "Howard Lam, piano",
+  "license": "Public domain (performer's dedication on Musopen)",
+  "page": "https://musopen.org/music/4488-estampes-l-100/",
+  "file": "candidates/pagodes-howard-lam-pd.mp3",
+  "duration_s": 345,
+  "notes": "Musopen download 2026-10-14. The MP3 was transcoded from a YouTube audio stream and is heavily compressed (loudness range 6 LU, normal piano recordings here are 13–22) with 293 clipped runs. 5:45 is on the slow side (usual 4½–5½ min)."
+ },
+ {
+  "key": "pluie",
+  "piece": "Jardins sous la pluie (Estampes, 3)",
+  "performer": "Howard Lam, piano",
+  "license": "Public domain (performer's dedication on Musopen)",
+  "page": "https://musopen.org/music/4488-estampes-l-100/",
+  "file": "candidates/jardins-pluie-howard-lam-pd.mp3",
+  "duration_s": 205,
+  "notes": "Musopen download 2026-10-14. Transcoded from a YouTube audio stream and squashed almost flat (loudness range 2 LU: loud and quiet passages only about 8 dB apart), 37 clipped runs, cut at 16 kHz. Normalizing cannot restore the dynamics."
+ },
+ {
+  "key": "neige-alt",
+  "piece": "Des pas sur la neige (Préludes I/6) — alternative",
+  "performer": "Ilaria Baldaccini, piano (Florence Conservatory graduate)",
+  "license": "Public domain (Musopen)",
+  "page": "https://musopen.org/music/4509-preludes-book-1/",
+  "file": "candidates/neige-baldaccini-pd.mp3",
+  "duration_s": 242,
+  "notes": "Musopen download 2026-10-14, 128 kbps from an MP4 source. Noisier than Bertoglio: hiss about −57 dBFS above 8 kHz in the quietest passages after normalizing, against −75 for Bertoglio."
+ },
+ {
+  "key": "faune",
+  "piece": "Prélude à l'après-midi d'un faune",
+  "performer": "Columbia University Orchestra, cond. Jeffrey Milarsky (Fall 2002 concert, live)",
+  "license": "Public domain (Musopen)",
+  "page": "https://musopen.org/music/42994-prelude-to-the-afternoon-of-a-faun/",
+  "file": "candidates/faune-columbia-univ-orch-pd.mp3",
+  "duration_s": 554,
+  "notes": "Musopen download 2026-10-14. The orchestral original (not an arrangement), student orchestra live; 128 kbps MP3 cut at 15 kHz, no clipping, no applause in the tail."
+ }
+]

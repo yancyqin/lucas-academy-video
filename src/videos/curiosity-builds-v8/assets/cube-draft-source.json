@@ -1,0 +1,10 @@
+{
+  "tool": "built-in image_gen",
+  "intent": "new unfinished cube design sketch",
+  "asset": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v7/assets/cube-draft.png",
+  "prompt_file": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v7/assets/cube-draft.prompt.txt",
+  "transparent_background": false,
+  "background": "#080e19",
+  "video_presentation": "Uniform scale, no tilt or warp, a soft mask blends only the outer margins.",
+  "sha256": "587ba5af656a43164b8b8cc0abe7d793b377fd5302eb26b8a10de13ab80c9c76"
+}

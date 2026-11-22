@@ -1,0 +1,164 @@
+{
+  "folder": "/Users/yqin/Desktop/Curiosity Builds - Final",
+  "files": [
+    {
+      "file": "Curiosity Builds.mp4",
+      "bytes": 195986936,
+      "sha256": "08a4eb9c5f54e1d3892e538dab74dd8e1f16e470da92d5726e3f6bd7e8551198"
+    },
+    {
+      "file": "Curiosity Builds.zh-CN.srt",
+      "bytes": 2183,
+      "sha256": "90cafc9b596f1b06a824f2c2f229ea1950f13968487694a306b3979311928621"
+    },
+    {
+      "file": "音乐清单.txt",
+      "bytes": 1164,
+      "sha256": "5e5fa64a899b4f25dcb7d14dd5299c275ee4359fb5a0108c835aca13b4488d9f"
+    },
+    {
+      "file": "音乐来源与署名.txt",
+      "bytes": 3399,
+      "sha256": "94fffdd863291a14867634ff58988c58c53879af7dee8178fec3229f4e975230"
+    },
+    {
+      "file": "分段/01-chess.en.no-voice.mp4",
+      "bytes": 20352776,
+      "sha256": "95cac942cfefac752421645af48bdadbdb695954c4ebe7670dedb50ccc9eab57"
+    },
+    {
+      "file": "分段/01-chess.en.no-voice.zh-CN.srt",
+      "bytes": 428,
+      "sha256": "f71ce0250c483b90f10279c13338537f0c97214b1bd257072b49fdba84e874b4"
+    },
+    {
+      "file": "分段/02-bible.en.no-voice.mp4",
+      "bytes": 5559563,
+      "sha256": "7640048d7026b7872f09c1ac551d3ceeee17826b07ba1c0e408b38fe2b7f29fc"
+    },
+    {
+      "file": "分段/02-bible.en.no-voice.zh-CN.srt",
+      "bytes": 317,
+      "sha256": "753688a1085c904d12539576dceed2b19af68b0f8cd246dac239edb8883584e2"
+    },
+    {
+      "file": "分段/03-vangogh.en.no-voice.mp4",
+      "bytes": 51175323,
+      "sha256": "0eca815f1b86c48996ba0f9b5c029d5e4225e65c59efe67c4b363f710e1242ef"
+    },
+    {
+      "file": "分段/03-vangogh.en.no-voice.zh-CN.srt",
+      "bytes": 163,
+      "sha256": "fa880d70e7835070f5146d6130cee84da01f576abfe85e6b96dd48b7bc677229"
+    },
+    {
+      "file": "分段/04-journey.en.no-voice.mp4",
+      "bytes": 23887595,
+      "sha256": "70d04ed48c3ab73d07515134d0857c2268355b8f28211a76e57af980a8ddc3e0"
+    },
+    {
+      "file": "分段/04-journey.en.no-voice.zh-CN.srt",
+      "bytes": 172,
+      "sha256": "c6d5888cbe7a7daae425a38d86476b72dee2a0ae033044277ccd2e98bf31f68a"
+    },
+    {
+      "file": "分段/05-sky.en.no-voice.mp4",
+      "bytes": 33111829,
+      "sha256": "adca6e352bd5ea29cab6570cd8113aa2a5177aedc87d94a4dd6d63f1f92c06ef"
+    },
+    {
+      "file": "分段/05-sky.en.no-voice.zh-CN.srt",
+      "bytes": 178,
+      "sha256": "21685b1bc42d3833abc9ef81997b7bf4dc9c0fde952f01d91da45933bca91705"
+    },
+    {
+      "file": "分段/06-chameleon.en.no-voice.mp4",
+      "bytes": 8055423,
+      "sha256": "09df38d3ba0d1678f05856b65bf69918713a74b1a68cda9a3e5c0e2254a07c4a"
+    },
+    {
+      "file": "分段/06-chameleon.en.no-voice.zh-CN.srt",
+      "bytes": 163,
+      "sha256": "a90ba12ed34b7489bafcdd199524460af662d66a2a697880ad4d9bc455bb674c"
+    },
+    {
+      "file": "分段/07-cube.en.no-voice.mp4",
+      "bytes": 13342381,
+      "sha256": "bfd450b22a4e1aa2dd10ba501dc32d6608943bdcaad3128a0e23520111ab4ec4"
+    },
+    {
+      "file": "分段/07-cube.en.no-voice.zh-CN.srt",
+      "bytes": 159,
+      "sha256": "6c0954c7c98abaf17e567e74aa11439771e0579b058da9984244256e4c976bcb"
+    },
+    {
+      "file": "分段/08-coder.en.no-voice.mp4",
+      "bytes": 3453572,
+      "sha256": "b2b38419f04cd0ab80847c10608c2b7750416522092b8e95bd17d45b8fa42cf8"
+    },
+    {
+      "file": "分段/08-coder.en.no-voice.zh-CN.srt",
+      "bytes": 258,
+      "sha256": "86f8c54e5a41c2f4d5e5e793cd0cde187c0be608d4e5193d2a8f7f78d509c5d9"
+    },
+    {
+      "file": "分段/09-roller.en.no-voice.mp4",
+      "bytes": 52994871,
+      "sha256": "bf86e17e4b50f13e208e4fb933470a4405773f1dd2e0768cea7c1c43cd1e6ec6"
+    },
+    {
+      "file": "分段/09-roller.en.no-voice.zh-CN.srt",
+      "bytes": 163,
+      "sha256": "738d71c3ba2a10ab1eaf32ceed1db9c4691670e30419ced562b130531d1ce71b"
+    },
+    {
+      "file": "分段/ending-preview.en.no-voice.mp4",
+      "bytes": 2990038,
+      "sha256": "c7396b43bfd6097d50c56aad6f11c37d69a4d75013d8a665e951d67676401dad"
+    },
+    {
+      "file": "分段/ending-preview.en.no-voice.zh-CN.srt",
+      "bytes": 182,
+      "sha256": "40ac41c66c8e56677615350ab82724b4ce1e5cb8bceb686abedb5ff5afef3954"
+    },
+    {
+      "file": "素材/魔方草稿.png",
+      "bytes": 1293165,
+      "sha256": "587ba5af656a43164b8b8cc0abe7d793b377fd5302eb26b8a10de13ab80c9c76"
+    },
+    {
+      "file": "素材/魔方草稿提示词.txt",
+      "bytes": 1144,
+      "sha256": "f58082c3907f1043ba580f35814e264347aca17157e4de08fe1cd6afd24cf3a7"
+    },
+    {
+      "file": "素材/魔方草稿来源.json",
+      "bytes": 571,
+      "sha256": "fd16f2d32f07f384c29bcf8aa761d81ecdea72b173e1916a02e228f00b10ea40"
+    },
+    {
+      "file": "素材/梵高画廊概念.png",
+      "bytes": 2208872,
+      "sha256": "585c9b2cf0dbf9592b7aa0994216d521014de63abaf59267ff8c08b722d1231d"
+    },
+    {
+      "file": "素材/梵高画廊概念提示词.txt",
+      "bytes": 2863,
+      "sha256": "8761851d3b699c2b3ec993cac2cf2b245fc450101ec9511fba89ba23e7edeba4"
+    },
+    {
+      "file": "素材/Journey画廊概念.png",
+      "bytes": 2059037,
+      "sha256": "3174bf35291126cd230b7e38c22a598e02069506c2d7774c307695378f3d88d6"
+    },
+    {
+      "file": "素材/Journey画廊概念提示词.txt",
+      "bytes": 2934,
+      "sha256": "5a09ce42396c11f3b41782c3b0441c5a9e65b0e65426682e5a41176331802639"
+    }
+  ],
+  "subtitles": 27,
+  "video_seconds": 283.8,
+  "revision": 10,
+  "previous_desktop": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/previous-desktop"
+}

@@ -1,0 +1,11 @@
+{
+  "source": "/Users/yqin/repo/playground/lucas-academy-video-data/whole-person-01/public/footage/journey-of-art.mp4",
+  "capture": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v3/captures/journey-original-walk.mp4",
+  "sha256": "5d6ed61f517aaf0433fafb97ffcf37b3366726624c5fa61a7e70164eb78787a5",
+  "source_in_seconds": 23.5,
+  "used_seconds": 20,
+  "playback_speed": 1,
+  "camera": "Unchanged native first-person camera from the prior Lucas Academy film; colorful gallery, abstract landscape frames, and exhibition-wall sweep.",
+  "reference": "/Users/yqin/repo/playground/lucas-academy-video-data/session-archives/have-fun-stay-curious-20261025-204749/project/public/channel-intro-v12/journey-lead.mp4",
+  "replaces": "The prior edit\u2019s black-and-white Supreme close-up and portrait camera cuts."
+}

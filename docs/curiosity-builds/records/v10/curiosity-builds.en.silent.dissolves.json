@@ -1,0 +1,113 @@
+{
+  "digest": "0f48ca55d34e5dee80a83dbbda67ab798b25e2fcc8dabf7fef09fe9bf12330d9",
+  "source_parts": [
+    {
+      "file": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/edit/01-chess-picture.mp4",
+      "start_frame": 0,
+      "frames": 1146
+    },
+    {
+      "file": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/edit/02-bible-picture.mp4",
+      "start_frame": 0,
+      "frames": 936
+    },
+    {
+      "file": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/edit/03-vangogh-picture.mp4",
+      "start_frame": 0,
+      "frames": 816
+    },
+    {
+      "file": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/edit/04-journey-picture.mp4",
+      "start_frame": 0,
+      "frames": 816
+    },
+    {
+      "file": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/edit/05-sky-picture.mp4",
+      "start_frame": 0,
+      "frames": 966
+    },
+    {
+      "file": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/edit/06-chameleon-picture.mp4",
+      "start_frame": 0,
+      "frames": 576
+    },
+    {
+      "file": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/edit/07-cube-picture.mp4",
+      "start_frame": 0,
+      "frames": 816
+    },
+    {
+      "file": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/edit/08-coder-picture.mp4",
+      "start_frame": 0,
+      "frames": 816
+    },
+    {
+      "file": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/edit/09-roller-picture.mp4",
+      "start_frame": 0,
+      "frames": 1086
+    },
+    {
+      "file": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/builds/ending.mp4",
+      "start_frame": 0,
+      "frames": 540
+    }
+  ],
+  "output_frames": 8514,
+  "transitions": [
+    {
+      "cut_frame": 1146,
+      "frames": 24,
+      "start_frame": 1134,
+      "end_frame": 1158
+    },
+    {
+      "cut_frame": 2082,
+      "frames": 24,
+      "start_frame": 2070,
+      "end_frame": 2094
+    },
+    {
+      "cut_frame": 2898,
+      "frames": 24,
+      "start_frame": 2886,
+      "end_frame": 2910
+    },
+    {
+      "cut_frame": 3714,
+      "frames": 24,
+      "start_frame": 3702,
+      "end_frame": 3726
+    },
+    {
+      "cut_frame": 4680,
+      "frames": 24,
+      "start_frame": 4668,
+      "end_frame": 4692
+    },
+    {
+      "cut_frame": 5256,
+      "frames": 24,
+      "start_frame": 5244,
+      "end_frame": 5268
+    },
+    {
+      "cut_frame": 6072,
+      "frames": 24,
+      "start_frame": 6060,
+      "end_frame": 6084
+    },
+    {
+      "cut_frame": 6888,
+      "frames": 24,
+      "start_frame": 6876,
+      "end_frame": 6900
+    },
+    {
+      "cut_frame": 7974,
+      "frames": 24,
+      "start_frame": 7962,
+      "end_frame": 7986
+    }
+  ],
+  "overall_fades": true
+}

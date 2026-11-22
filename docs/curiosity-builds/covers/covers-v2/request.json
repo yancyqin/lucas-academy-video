@@ -1,0 +1,17 @@
+{
+  "revision": "B-v2",
+  "request": "B 但是背景不用这米黄，虚化的过山车房间截图当背景。字用强对比的字",
+  "edit_target": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-v1/02-ideas-to-worlds.png",
+  "edit_target_sha256": "4909130f9d947291ddf9d2964ce034466e01f2b49c8ebbddec1e3fcdb0808778",
+  "background_source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-v1/references/ice-blue-coaster-overview.jpg",
+  "background_source_sha256": "71f2a6dd3471c7d86005d7842abfda8cbfcc554a7920e6ef5b479031e1649dac",
+  "background_video": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/edit/roller-overview.mp4",
+  "background_video_frame_seconds": 1.0,
+  "headline": "FROM IDEAS / TO WORLDS",
+  "headline_colors": [
+    "white",
+    "#FFD45A"
+  ],
+  "method": "Built-in ImageGen edit",
+  "preserve": "Cover B composition, half-line / half-color gallery, headline wording and size."
+}

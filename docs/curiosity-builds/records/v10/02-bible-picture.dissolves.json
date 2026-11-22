@@ -1,0 +1,58 @@
+{
+  "digest": "202ea31e5c400fcbe017556bdc9951622f0bfbdbe04d1357eb023beffd02cfdb",
+  "source_parts": [
+    {
+      "file": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/builds/bible.mp4",
+      "start_frame": 0,
+      "frames": 216
+    },
+    {
+      "file": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/edit/bible-home-sequence.mp4",
+      "start_frame": 0,
+      "frames": 90
+    },
+    {
+      "file": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/edit/bible-sequence-fast.mp4",
+      "start_frame": 0,
+      "frames": 240
+    },
+    {
+      "file": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/edit/bible-home-next-word.mp4",
+      "start_frame": 0,
+      "frames": 75
+    },
+    {
+      "file": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/edit/bible-next-word-fast.mp4",
+      "start_frame": 0,
+      "frames": 315
+    }
+  ],
+  "output_frames": 936,
+  "transitions": [
+    {
+      "cut_frame": 216,
+      "frames": 18,
+      "start_frame": 207,
+      "end_frame": 225
+    },
+    {
+      "cut_frame": 306,
+      "frames": 12,
+      "start_frame": 300,
+      "end_frame": 312
+    },
+    {
+      "cut_frame": 546,
+      "frames": 12,
+      "start_frame": 540,
+      "end_frame": 552
+    },
+    {
+      "cut_frame": 621,
+      "frames": 12,
+      "start_frame": 615,
+      "end_frame": 627
+    }
+  ],
+  "overall_fades": false
+}

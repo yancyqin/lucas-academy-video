@@ -1,0 +1,38 @@
+{
+  "repo": "/Users/yqin/repo/playground/inception-space-ui-balanced-chess-release",
+  "base_commit": "c1e6a8284a51a79fc0e54c21085a605ca0a746aa",
+  "release_commit": "726d48cd602e353204cb19551c9bddeb4c54a914",
+  "branch": "codex/balanced-chess-name",
+  "command": "npm run check",
+  "exit_code": 0,
+  "test_pass": 1925,
+  "test_fail": 0,
+  "build_passed": true,
+  "demo_check_passed": true,
+  "prompt_record": "docs/prompt-records/2026-11-19-balanced-chess-name.md",
+  "published": true,
+  "scope": "Only four name/copy files plus the required prompt record; other in-progress work excluded.",
+  "live_commit": "a8fbd456cb367a339880cc2ef4ae1571e43947ec",
+  "live_commit_includes_release": true,
+  "deployment_id": "dep-dbvurqb0uqgc73bksu50",
+  "pages": [
+    {
+      "url": "https://is.lucasacademy.org/chess/",
+      "status": 200,
+      "title": "Balanced Chess \u2014 play the bot \u00b7 Inception Space",
+      "h1": "Balanced Chess"
+    },
+    {
+      "url": "https://inception-space-ui-preview.onrender.com/chess/",
+      "status": 200,
+      "title": "Balanced Chess \u2014 play the bot \u00b7 Inception Space",
+      "h1": "Balanced Chess"
+    }
+  ],
+  "checks": {
+    "npm_run_check": true,
+    "tests_passed": 1925,
+    "tests_failed": 0
+  },
+  "owner_approved": true
+}

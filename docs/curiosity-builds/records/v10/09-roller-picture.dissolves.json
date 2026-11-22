@@ -1,0 +1,80 @@
+{
+  "digest": "edd404529eb541e76e9ec4c1e6f9cc0964fe1008b5461361eb4fc699026c7561",
+  "source_parts": [
+    {
+      "file": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/builds/roller.mp4",
+      "start_frame": 0,
+      "frames": 216
+    },
+    {
+      "file": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/edit/roller-entry.mp4",
+      "start_frame": 0,
+      "frames": 78
+    },
+    {
+      "file": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/edit/roller-line.mp4",
+      "start_frame": 0,
+      "frames": 60
+    },
+    {
+      "file": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/edit/roller-parabola.mp4",
+      "start_frame": 0,
+      "frames": 90
+    },
+    {
+      "file": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/edit/roller-overview.mp4",
+      "start_frame": 0,
+      "frames": 60
+    },
+    {
+      "file": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/edit/roller-funnel.mp4",
+      "start_frame": 0,
+      "frames": 222
+    },
+    {
+      "file": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/edit/roller-mobius.mp4",
+      "start_frame": 0,
+      "frames": 360
+    }
+  ],
+  "output_frames": 1086,
+  "transitions": [
+    {
+      "cut_frame": 216,
+      "frames": 18,
+      "start_frame": 207,
+      "end_frame": 225
+    },
+    {
+      "cut_frame": 294,
+      "frames": 12,
+      "start_frame": 288,
+      "end_frame": 300
+    },
+    {
+      "cut_frame": 354,
+      "frames": 12,
+      "start_frame": 348,
+      "end_frame": 360
+    },
+    {
+      "cut_frame": 444,
+      "frames": 12,
+      "start_frame": 438,
+      "end_frame": 450
+    },
+    {
+      "cut_frame": 504,
+      "frames": 12,
+      "start_frame": 498,
+      "end_frame": 510
+    },
+    {
+      "cut_frame": 726,
+      "frames": 12,
+      "start_frame": 720,
+      "end_frame": 732
+    }
+  ],
+  "overall_fades": false
+}

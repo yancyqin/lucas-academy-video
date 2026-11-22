@@ -1,0 +1,78 @@
+{
+  "revision": 8,
+  "base": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v7",
+  "frame_count": 8484,
+  "music_unchanged": true,
+  "cube_title": "What Can Curiosity Build?",
+  "chess_name": "Balanced Chess",
+  "main_title_end_frame": 90,
+  "process_prompt_start_frame": 96,
+  "process_steps_start_frame": 160,
+  "gallery_concepts": [
+    {
+      "project": "vangogh",
+      "tool": "built-in image_gen",
+      "asset": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v8/assets/vangogh-gallery-concept.png",
+      "prompt": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v8/assets/vangogh-gallery-concept.prompt.txt",
+      "sha256": "585c9b2cf0dbf9592b7aa0994216d521014de63abaf59267ff8c08b722d1231d",
+      "usage": "Architectural concept sketch illustrating the process, followed by the unchanged actual room footage.",
+      "variant": "left half line art, right half colored",
+      "last_edit_prompt": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v8/assets/vangogh-gallery-half-color.prompt.txt",
+      "reference": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v8/assets/gallery-reference-originals/vangogh-gallery-concept.png"
+    },
+    {
+      "project": "journey",
+      "tool": "built-in image_gen",
+      "asset": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v8/assets/journey-gallery-concept.png",
+      "prompt": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v8/assets/journey-gallery-concept.prompt.txt",
+      "sha256": "3174bf35291126cd230b7e38c22a598e02069506c2d7774c307695378f3d88d6",
+      "usage": "Architectural concept sketch illustrating the process, followed by the unchanged actual room footage.",
+      "variant": "left half line art, right half colored",
+      "last_edit_prompt": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v8/assets/journey-gallery-half-color.prompt.txt",
+      "reference": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v8/assets/gallery-reference-originals/journey-gallery-concept.png"
+    }
+  ],
+  "house_3d_only": {
+    "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v7/captures/sweet-home-v3-preview.mp4",
+    "output": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v8/captures/sweet-home-v3-model-only.mp4",
+    "crop": {
+      "x": 260,
+      "y": 560,
+      "width": 1480,
+      "height": 520
+    },
+    "only_3d_model": true,
+    "no_2d_plan_or_application_controls": true,
+    "same_owner_selected_camera": true,
+    "frames": 105
+  },
+  "is_local_check": "npm run check passed; 1898 tests passed",
+  "online_release": {
+    "published": true,
+    "release_commit": "726d48cd602e353204cb19551c9bddeb4c54a914",
+    "live_commit": "a8fbd456cb367a339880cc2ef4ae1571e43947ec",
+    "live_commit_includes_release": true,
+    "deployment_id": "dep-dbvurqb0uqgc73bksu50",
+    "pages": [
+      {
+        "url": "https://is.lucasacademy.org/chess/",
+        "status": 200,
+        "title": "Balanced Chess — play the bot · Inception Space",
+        "h1": "Balanced Chess"
+      },
+      {
+        "url": "https://inception-space-ui-preview.onrender.com/chess/",
+        "status": 200,
+        "title": "Balanced Chess — play the bot · Inception Space",
+        "h1": "Balanced Chess"
+      }
+    ],
+    "checks": {
+      "npm_run_check": true,
+      "tests_passed": 1925,
+      "tests_failed": 0
+    },
+    "owner_approved": true
+  },
+  "latest_owner_video_steering": "草稿图不错，可以一半上色一半线稿"
+}

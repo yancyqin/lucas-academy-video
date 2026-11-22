@@ -1,0 +1,67 @@
+[
+  {
+    "name": "cube-play",
+    "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v7/captures/cube-play.mp4",
+    "output": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v7/edit/cube-play.mp4",
+    "frames": 300,
+    "filter": "fps=30,setsar=1",
+    "full_web_viewport": true,
+    "source_crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1920,
+      "height": 1080
+    },
+    "native_ice_blue": false,
+    "speed": 1
+  },
+  {
+    "name": "cube-solve",
+    "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v7/captures/cube-solve.mp4",
+    "output": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v7/edit/cube-solve.mp4",
+    "frames": 300,
+    "filter": "fps=30,setsar=1",
+    "full_web_viewport": true,
+    "source_crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1920,
+      "height": 1080
+    },
+    "native_ice_blue": false,
+    "speed": 1
+  },
+  {
+    "name": "roller-entry",
+    "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v7/captures/roller-entry.mp4",
+    "output": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v7/edit/roller-entry.mp4",
+    "frames": 78,
+    "filter": "crop=iw:ih-120:0:0,scale=1920:1080:force_original_aspect_ratio=decrease,pad=1920:1080:(ow-iw)/2:(oh-ih)/2:color=0x080e19,fps=30,setsar=1",
+    "full_web_viewport": false,
+    "source_crop": null,
+    "native_ice_blue": true,
+    "speed": 1
+  },
+  {
+    "name": "roller-overview",
+    "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v7/captures/roller-overview.mp4",
+    "output": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v7/edit/roller-overview.mp4",
+    "frames": 60,
+    "filter": "crop=iw:ih-200:0:0,scale=1920:1080:force_original_aspect_ratio=decrease,pad=1920:1080:(ow-iw)/2:(oh-ih)/2:color=0x080e19,fps=30,setsar=1",
+    "full_web_viewport": false,
+    "source_crop": null,
+    "native_ice_blue": true,
+    "speed": 1
+  },
+  {
+    "name": "roller-funnel",
+    "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v7/captures/roller-funnel.mp4",
+    "output": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v7/edit/roller-funnel.mp4",
+    "frames": 222,
+    "filter": "setpts=(PTS-STARTPTS)/0.9,crop=iw:ih-200:0:0,scale=1920:1080:force_original_aspect_ratio=decrease,pad=1920:1080:(ow-iw)/2:(oh-ih)/2:color=0x080e19,fps=30,setsar=1",
+    "full_web_viewport": false,
+    "source_crop": null,
+    "native_ice_blue": true,
+    "speed": 0.9
+  }
+]

@@ -1,0 +1,54 @@
+{
+  "four_sections_verified": true,
+  "shared_default_tags": true,
+  "languages": [
+    "en",
+    "zh"
+  ],
+  "one_video": true,
+  "chapter_count": 10,
+  "picture": {
+    "file": "YouTube/youtube-cover.en.jpg",
+    "width": 1280,
+    "height": 720,
+    "bytes": 370064
+  },
+  "movie_sha256": "08a4eb9c5f54e1d3892e538dab74dd8e1f16e470da92d5726e3f6bd7e8551198",
+  "headline_colors": [
+    {
+      "revision": "v5",
+      "pixels": 74601,
+      "mean_red_minus_blue": 24.91,
+      "median_channel_range": 25.0
+    },
+    {
+      "revision": "v6",
+      "pixels": 81780,
+      "mean_red_minus_blue": -2.145,
+      "median_channel_range": 1.0
+    }
+  ],
+  "legacy_shortcut_files_updated": true,
+  "pictures": [
+    {
+      "language": "en",
+      "file": "/Users/yqin/Desktop/Curiosity Builds - Final/YouTube/youtube-cover.en.jpg",
+      "width": 1280,
+      "height": 720,
+      "bytes": 370064,
+      "sha256": "eb801b50c394edf0712d59c0618f10b760813c809af303913e545b7f67038f09"
+    },
+    {
+      "language": "zh",
+      "file": "/Users/yqin/Desktop/Curiosity Builds - Final/YouTube/youtube-cover.zh.jpg",
+      "width": 1280,
+      "height": 720,
+      "bytes": 369831,
+      "sha256": "1c6e4fab21dd527f320a06a280b08bb9df6c2a3c60a72955ca95000c7b02059e"
+    }
+  ],
+  "localized_cover_languages": [
+    "en",
+    "zh"
+  ]
+}

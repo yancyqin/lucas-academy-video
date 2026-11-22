@@ -1,0 +1,9 @@
+{
+  "all_nine_titles_end_before_process_text": true,
+  "title_end_frame": 90,
+  "process_prompt_start_frame": 96,
+  "process_steps_start_frame": 160,
+  "chinese_cue_count": 36,
+  "cube_title": "What Can Curiosity Build?",
+  "balanced_chess_in_both_languages": true
+}

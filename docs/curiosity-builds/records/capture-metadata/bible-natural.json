@@ -1,0 +1,9 @@
+{
+ "name": "bible-natural",
+ "url": "http://127.0.0.1:5193/?passage=PSA.119.105&translation=WEB&difficulty=practice",
+ "duration": 21.502,
+ "frames": 949,
+ "marks": {
+  "verse-completed": 10.623
+ }
+}

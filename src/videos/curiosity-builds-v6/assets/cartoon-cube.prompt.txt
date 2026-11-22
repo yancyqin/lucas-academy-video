@@ -1,0 +1,9 @@
+Use case: stylized-concept
+Asset type: transparent hero illustration for a short educational project film, replacing a crude mathematical cube drawing.
+Primary request: One beautiful cartoon-style Rubik's twisty puzzle cube, an unmistakable classic 3 by 3 cube, seen in a clean three-quarter isometric view with three visible faces. It symbolizes the idea of building cubes of any size; the actual film will separately show the real 11 by 11 cube.
+Style/medium: polished playful 3D cartoon illustration, rounded individual plastic cubies, soft bevels, carefully drawn straight consistent perspective, clean premium animation-film rendering. One upper layer turned slightly, still mechanically plausible and aligned around the center axis. Vibrant yellow/gold, turquoise/cyan, coral/red with a few off-white tiles, rich dark charcoal gaps.
+Composition/framing: single centered floating cube, large square composition, generous transparent margin on every side. Three coherent faces with exactly 3 by 3 tiles per face, readable silhouette. Soft studio lighting and subtle ambient occlusion inside gaps.
+Constraints: genuinely transparent background, no floor, no pedestal, no words, no numbers, no labels, no logo, no watermark, no people, no separate flying pieces, no cut-off edges. Strong finished cubic volume; avoid flat or broken geometry.
+
+Generated with the built-in image_gen tool, transparent background enabled.
+Used as a concept illustration; the following real footage shows 7×7 and 11×11 cubes.

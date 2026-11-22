@@ -1,0 +1,111 @@
+{
+  "name": "sky-orbit-cosmic-cliffs",
+  "url": "http://127.0.0.1:5192/?debug=&manual=1&hud=0&fullscreen=0",
+  "fps": 30,
+  "seconds": 18,
+  "mode": "Actual project renderer, first-person, native manual frame clock; scripted camera input",
+  "start": {
+    "room": "room-b",
+    "x": 300,
+    "z": -19.4,
+    "transitChamber": true,
+    "transit": null,
+    "worldSeconds": 21.001,
+    "approachStart": null,
+    "loaded": null,
+    "bodyY": 278.358,
+    "yaw": 0,
+    "pitch": 0,
+    "floorY": 278,
+    "feetAboveFloor": 0.012,
+    "lowestBoneAboveFloor": null,
+    "headAboveFloor": 0.317,
+    "cameraAboveFloor": 0.358,
+    "floor": {
+      "mode": "painting",
+      "painted": true,
+      "glass": false,
+      "alive": 2,
+      "aliveVisible": 2,
+      "aliveAlpha": [
+        0.376,
+        0.366
+      ],
+      "aliveScale": [
+        0.096,
+        0.291
+      ]
+    },
+    "doors": [
+      {
+        "id": "room-b-return",
+        "phase": "closed",
+        "progress": 0
+      }
+    ],
+    "connector": null,
+    "story": null,
+    "lab": null,
+    "storyRoom": null,
+    "chess": {
+      "open": false,
+      "pieceView": null,
+      "table": null,
+      "me": "local",
+      "rockFalling": false
+    },
+    "frameFailure": null
+  },
+  "end": {
+    "room": "room-b",
+    "x": 300,
+    "z": -19.4,
+    "transitChamber": true,
+    "transit": null,
+    "worldSeconds": 39.001,
+    "approachStart": null,
+    "loaded": null,
+    "bodyY": 278.358,
+    "yaw": 0,
+    "pitch": 0,
+    "floorY": 278,
+    "feetAboveFloor": 0.011,
+    "lowestBoneAboveFloor": null,
+    "headAboveFloor": 0.316,
+    "cameraAboveFloor": 3.01,
+    "floor": {
+      "mode": "painting",
+      "painted": true,
+      "glass": false,
+      "alive": 2,
+      "aliveVisible": 2,
+      "aliveAlpha": [
+        0.256,
+        0.58
+      ],
+      "aliveScale": [
+        0.096,
+        0.3
+      ]
+    },
+    "doors": [
+      {
+        "id": "room-b-return",
+        "phase": "closed",
+        "progress": 0
+      }
+    ],
+    "connector": null,
+    "story": null,
+    "lab": null,
+    "storyRoom": null,
+    "chess": {
+      "open": false,
+      "pieceView": null,
+      "table": null,
+      "me": "local",
+      "rockFalling": false
+    },
+    "frameFailure": null
+  }
+}

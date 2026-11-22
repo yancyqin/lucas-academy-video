@@ -1,0 +1,4 @@
+Owner correction, 2026-11-19:
+两段布局之前应该是单独标题 完了缩放进入第一个布局啊
+
+Action: restore the standalone title before both introduction layouts in all nine chapters. The same title continuously scales from 1.38 to 1 and moves into the first left-title/right-picture layout; only afterwards is the title replaced by the process prompt. Keep the accepted v9 picture footage, exact 8514-frame clock, music, fades, labels and Chinese subtitle times.

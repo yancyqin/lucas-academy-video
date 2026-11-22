@@ -1,0 +1,12 @@
+{
+  "request": "字的光泽用这个方案，有光影变化的感觉",
+  "revision": "B-v5",
+  "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-v4/02-ideas-to-worlds-white-relief-v4.png",
+  "source_sha256": "5488398e64a45db3c6e78dcfda656fd433ea4dab29a5228922e42405bb9a6d85",
+  "letter_lighting_reference": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-v5/reference-letter-lighting.png",
+  "reference_sha256": "77f587ffc77f26bc4b061e42aec58656eea144e96b7bb80c5fdc51d154de85cc",
+  "method": "Built-in ImageGen edit",
+  "reference_scope": "Letter-face illumination and soft light/shade only. Reference text, room, font and composition are not copied.",
+  "change": "Broad restrained directional light variation across the approved white headline surfaces.",
+  "keep": "B serif headline, wording, placement, gallery and blurred coaster backdrop."
+}

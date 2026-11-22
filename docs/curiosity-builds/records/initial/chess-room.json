@@ -1,0 +1,139 @@
+{
+  "name": "chess-room",
+  "url": "http://127.0.0.1:5188/?debug=&manual=1&hud=0&fullscreen=0",
+  "fps": 30,
+  "seconds": 8,
+  "mode": "Actual project renderer, first-person, native manual frame clock; scripted camera input",
+  "start": {
+    "room": "chess-room-1",
+    "x": 300,
+    "z": -117.366,
+    "transitChamber": true,
+    "transit": null,
+    "worldSeconds": 18.034,
+    "approachStart": null,
+    "loaded": null,
+    "bodyY": 645.858,
+    "yaw": 0,
+    "pitch": 0,
+    "floorY": 645.5,
+    "feetAboveFloor": 0.013,
+    "lowestBoneAboveFloor": null,
+    "headAboveFloor": 0.318,
+    "cameraAboveFloor": 0.358,
+    "floor": {
+      "mode": "painting",
+      "painted": false,
+      "glass": false,
+      "alive": 0,
+      "aliveVisible": 0,
+      "aliveAlpha": [],
+      "aliveScale": []
+    },
+    "doors": [
+      {
+        "id": "chess-room-1-return",
+        "phase": "closed",
+        "progress": 0
+      }
+    ],
+    "connector": null,
+    "story": null,
+    "lab": null,
+    "storyRoom": null,
+    "chess": {
+      "open": false,
+      "pieceView": null,
+      "table": {
+        "v": 1,
+        "serial": 0,
+        "phase": "open",
+        "tc": null,
+        "rules": "standard",
+        "line": 5,
+        "seats": [
+          null,
+          null
+        ],
+        "actions": [],
+        "clock": null,
+        "result": null,
+        "drawOffer": null,
+        "ask": null,
+        "rematch": [
+          false,
+          false
+        ]
+      },
+      "me": "local",
+      "rockFalling": false
+    },
+    "frameFailure": null
+  },
+  "end": {
+    "room": "chess-room-1",
+    "x": 299.969,
+    "z": -118.592,
+    "transitChamber": true,
+    "transit": null,
+    "worldSeconds": 26.034,
+    "approachStart": null,
+    "loaded": null,
+    "bodyY": 645.858,
+    "yaw": 0.02,
+    "pitch": 0.03,
+    "floorY": 645.5,
+    "feetAboveFloor": 0.013,
+    "lowestBoneAboveFloor": null,
+    "headAboveFloor": 0.318,
+    "cameraAboveFloor": 0.362,
+    "floor": {
+      "mode": "painting",
+      "painted": false,
+      "glass": false,
+      "alive": 0,
+      "aliveVisible": 0,
+      "aliveAlpha": [],
+      "aliveScale": []
+    },
+    "doors": [
+      {
+        "id": "chess-room-1-return",
+        "phase": "closed",
+        "progress": 0
+      }
+    ],
+    "connector": null,
+    "story": null,
+    "lab": null,
+    "storyRoom": null,
+    "chess": {
+      "open": false,
+      "pieceView": null,
+      "table": {
+        "v": 1,
+        "serial": 0,
+        "phase": "open",
+        "tc": null,
+        "rules": "standard",
+        "line": 5,
+        "seats": [
+          null,
+          null
+        ],
+        "actions": [],
+        "clock": null,
+        "result": null,
+        "drawOffer": null,
+        "ask": null,
+        "rematch": [
+          false,
+          false
+        ]
+      },
+      "me": "local",
+      "rockFalling": false
+    },
+    "frameFailure": null
+  }
+}

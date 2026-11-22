@@ -1,0 +1,49 @@
+{
+  "url": "https://bible.lucasacademy.org/",
+  "viewport": [
+    1280,
+    720
+  ],
+  "post_capture_zoom": false,
+  "box": {
+    "x": 190,
+    "y": 8,
+    "width": 900,
+    "height": 702
+  },
+  "visible": true,
+  "controls": [
+    {
+      "text": "if",
+      "x": 270,
+      "y": 417.09375,
+      "w": 364,
+      "h": 64,
+      "visible": true
+    },
+    {
+      "text": "a",
+      "x": 646,
+      "y": 417.09375,
+      "w": 364,
+      "h": 64,
+      "visible": true
+    },
+    {
+      "text": "to",
+      "x": 270,
+      "y": 493.09375,
+      "w": 364,
+      "h": 64,
+      "visible": true
+    },
+    {
+      "text": "an",
+      "x": 646,
+      "y": 493.09375,
+      "w": 364,
+      "h": 64,
+      "visible": true
+    }
+  ]
+}

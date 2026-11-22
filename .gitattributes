@@ -1,0 +1,2 @@
+# Preserve the blank context lines in the archived unified diff verbatim.
+docs/curiosity-builds/records/v10/balanced-chess-only.patch whitespace=-blank-at-eol

@@ -1,0 +1,3636 @@
+{
+  "name": "sky-continuous-cosmic-cliffs",
+  "seconds": 25,
+  "fps": 30,
+  "frames": 750,
+  "variant": "cosmic-cliffs",
+  "one_continuous_take": true,
+  "editorial_cuts": 0,
+  "native_transition_included": true,
+  "entry_frame": 59,
+  "ascending_seconds": 16,
+  "hover_seconds": 7.033333333333335,
+  "final_height_above_floor": 14.5,
+  "full_viewport": true,
+  "application_source_changed": false,
+  "panorama": "/Users/yqin/repo/playground/sky-panorama-lab/out/background10.jpg",
+  "center": {
+    "x": 300,
+    "y": 290,
+    "z": -24
+  },
+  "errors": [],
+  "samples": [
+    {
+      "frame": 0,
+      "seconds": 0,
+      "phase": "native-transition",
+      "probe": {
+        "room": "corridor",
+        "x": 0,
+        "z": 3,
+        "transitChamber": true,
+        "transit": "approach",
+        "worldSeconds": 1.236,
+        "approachStart": 1.2363333333333215,
+        "loaded": true,
+        "bodyY": -340,
+        "yaw": 0,
+        "pitch": 0,
+        "floorY": 0,
+        "feetAboveFloor": -340.34,
+        "lowestBoneAboveFloor": null,
+        "headAboveFloor": -340.035,
+        "cameraAboveFloor": -340,
+        "floor": null,
+        "doors": [],
+        "connector": null,
+        "story": null,
+        "lab": null,
+        "storyRoom": null,
+        "chess": {
+          "open": false,
+          "pieceView": null,
+          "table": null,
+          "me": "local",
+          "rockFalling": false
+        },
+        "frameFailure": null
+      },
+      "pose": null
+    },
+    {
+      "frame": 15,
+      "seconds": 0.5,
+      "phase": "native-transition",
+      "probe": {
+        "room": "corridor",
+        "x": 0,
+        "z": 2.81,
+        "transitChamber": true,
+        "transit": "approach",
+        "worldSeconds": 1.503,
+        "approachStart": 1.2363333333333215,
+        "loaded": true,
+        "bodyY": -340,
+        "yaw": 0,
+        "pitch": 0,
+        "floorY": 0,
+        "feetAboveFloor": -340.339,
+        "lowestBoneAboveFloor": null,
+        "headAboveFloor": -340.038,
+        "cameraAboveFloor": -340,
+        "floor": null,
+        "doors": [],
+        "connector": null,
+        "story": null,
+        "lab": null,
+        "storyRoom": null,
+        "chess": {
+          "open": false,
+          "pieceView": null,
+          "table": null,
+          "me": "local",
+          "rockFalling": false
+        },
+        "frameFailure": null
+      },
+      "pose": null
+    },
+    {
+      "frame": 30,
+      "seconds": 1,
+      "phase": "native-transition",
+      "probe": {
+        "room": "corridor",
+        "x": 0,
+        "z": 1.75,
+        "transitChamber": true,
+        "transit": "approach",
+        "worldSeconds": 1.736,
+        "approachStart": 1.2363333333333215,
+        "loaded": true,
+        "bodyY": -340,
+        "yaw": 0,
+        "pitch": 0,
+        "floorY": 0,
+        "feetAboveFloor": -340.344,
+        "lowestBoneAboveFloor": null,
+        "headAboveFloor": -340.038,
+        "cameraAboveFloor": -340,
+        "floor": null,
+        "doors": [],
+        "connector": null,
+        "story": null,
+        "lab": null,
+        "storyRoom": null,
+        "chess": {
+          "open": false,
+          "pieceView": null,
+          "table": null,
+          "me": "local",
+          "rockFalling": false
+        },
+        "frameFailure": null
+      },
+      "pose": null
+    },
+    {
+      "frame": 45,
+      "seconds": 1.5,
+      "phase": "native-transition",
+      "probe": {
+        "room": "corridor",
+        "x": 0,
+        "z": -1.506,
+        "transitChamber": true,
+        "transit": "approach",
+        "worldSeconds": 2.003,
+        "approachStart": 1.2363333333333215,
+        "loaded": true,
+        "bodyY": -340,
+        "yaw": 0,
+        "pitch": 0,
+        "floorY": 0,
+        "feetAboveFloor": -340.342,
+        "lowestBoneAboveFloor": null,
+        "headAboveFloor": -340.039,
+        "cameraAboveFloor": -340,
+        "floor": null,
+        "doors": [],
+        "connector": null,
+        "story": null,
+        "lab": null,
+        "storyRoom": null,
+        "chess": {
+          "open": false,
+          "pieceView": null,
+          "table": null,
+          "me": "local",
+          "rockFalling": false
+        },
+        "frameFailure": null
+      },
+      "pose": null
+    },
+    {
+      "frame": 60,
+      "seconds": 2,
+      "phase": "ascending-orbit",
+      "probe": {
+        "room": "room-b",
+        "x": 300,
+        "z": -19.4,
+        "transitChamber": true,
+        "transit": null,
+        "worldSeconds": 2.27,
+        "approachStart": null,
+        "loaded": null,
+        "bodyY": 278.358,
+        "yaw": 0,
+        "pitch": 0,
+        "floorY": 278,
+        "feetAboveFloor": 0.011,
+        "lowestBoneAboveFloor": null,
+        "headAboveFloor": 0.316,
+        "cameraAboveFloor": 0.358,
+        "floor": {
+          "mode": "painting",
+          "painted": true,
+          "glass": false,
+          "alive": 2,
+          "aliveVisible": 2,
+          "aliveAlpha": [
+            0.58,
+            0.58
+          ],
+          "aliveScale": [
+            0.1,
+            0.3
+          ]
+        },
+        "doors": [
+          {
+            "id": "room-b-return",
+            "phase": "closed",
+            "progress": 0
+          }
+        ],
+        "connector": null,
+        "story": null,
+        "lab": null,
+        "storyRoom": null,
+        "chess": {
+          "open": false,
+          "pieceView": null,
+          "table": null,
+          "me": "local",
+          "rockFalling": false
+        },
+        "frameFailure": null
+      },
+      "pose": {
+        "eye": [
+          300.0007168045362,
+          278.3585172138732,
+          -19.51985878419477
+        ],
+        "target": [
+          300,
+          278.3583834008487,
+          -29.51885638888889
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "frame": 75,
+      "seconds": 2.5,
+      "phase": "ascending-orbit",
+      "probe": {
+        "room": "room-b",
+        "x": 300,
+        "z": -19.4,
+        "transitChamber": true,
+        "transit": null,
+        "worldSeconds": 2.77,
+        "approachStart": null,
+        "loaded": null,
+        "bodyY": 278.358,
+        "yaw": 0,
+        "pitch": 0,
+        "floorY": 278,
+        "feetAboveFloor": 0.012,
+        "lowestBoneAboveFloor": null,
+        "headAboveFloor": 0.317,
+        "cameraAboveFloor": 0.358,
+        "floor": {
+          "mode": "painting",
+          "painted": true,
+          "glass": false,
+          "alive": 2,
+          "aliveVisible": 2,
+          "aliveAlpha": [
+            0.58,
+            0.58
+          ],
+          "aliveScale": [
+            0.1,
+            0.3
+          ]
+        },
+        "doors": [
+          {
+            "id": "room-b-return",
+            "phase": "closed",
+            "progress": 0
+          }
+        ],
+        "connector": null,
+        "story": null,
+        "lab": null,
+        "storyRoom": null,
+        "chess": {
+          "open": false,
+          "pieceView": null,
+          "table": null,
+          "me": "local",
+          "rockFalling": false
+        },
+        "frameFailure": null
+      },
+      "pose": {
+        "eye": [
+          300.1598978356398,
+          278.404424691358,
+          -19.488177665389706
+        ],
+        "target": [
+          300,
+          278.37007654320985,
+          -29.25176888888889
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "frame": 90,
+      "seconds": 3,
+      "phase": "ascending-orbit",
+      "probe": {
+        "room": "room-b",
+        "x": 300,
+        "z": -19.4,
+        "transitChamber": true,
+        "transit": null,
+        "worldSeconds": 3.27,
+        "approachStart": null,
+        "loaded": null,
+        "bodyY": 278.358,
+        "yaw": 0,
+        "pitch": 0,
+        "floorY": 278,
+        "feetAboveFloor": 0.015,
+        "lowestBoneAboveFloor": null,
+        "headAboveFloor": 0.32,
+        "cameraAboveFloor": 0.358,
+        "floor": {
+          "mode": "painting",
+          "painted": true,
+          "glass": false,
+          "alive": 2,
+          "aliveVisible": 2,
+          "aliveAlpha": [
+            0.58,
+            0.58
+          ],
+          "aliveScale": [
+            0.1,
+            0.3
+          ]
+        },
+        "doors": [
+          {
+            "id": "room-b-return",
+            "phase": "closed",
+            "progress": 0
+          }
+        ],
+        "connector": null,
+        "story": null,
+        "lab": null,
+        "storyRoom": null,
+        "chess": {
+          "open": false,
+          "pieceView": null,
+          "table": null,
+          "me": "local",
+          "rockFalling": false
+        },
+        "frameFailure": null
+      },
+      "pose": {
+        "eye": [
+          300.53406353328893,
+          278.5276694084261,
+          -19.42665936716774
+        ],
+        "target": [
+          300,
+          278.3983842689043,
+          -28.605181388888887
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "frame": 105,
+      "seconds": 3.5,
+      "phase": "ascending-orbit",
+      "probe": {
+        "room": "room-b",
+        "x": 300,
+        "z": -19.4,
+        "transitChamber": true,
+        "transit": null,
+        "worldSeconds": 3.77,
+        "approachStart": null,
+        "loaded": null,
+        "bodyY": 278.358,
+        "yaw": 0,
+        "pitch": 0,
+        "floorY": 278,
+        "feetAboveFloor": 0.016,
+        "lowestBoneAboveFloor": null,
+        "headAboveFloor": 0.322,
+        "cameraAboveFloor": 0.358,
+        "floor": {
+          "mode": "painting",
+          "painted": true,
+          "glass": false,
+          "alive": 2,
+          "aliveVisible": 2,
+          "aliveAlpha": [
+            0.58,
+            0.58
+          ],
+          "aliveScale": [
+            0.1,
+            0.3
+          ]
+        },
+        "doors": [
+          {
+            "id": "room-b-return",
+            "phase": "closed",
+            "progress": 0
+          }
+        ],
+        "connector": null,
+        "story": null,
+        "lab": null,
+        "storyRoom": null,
+        "chess": {
+          "open": false,
+          "pieceView": null,
+          "table": null,
+          "me": "local",
+          "rockFalling": false
+        },
+        "frameFailure": null
+      },
+      "pose": {
+        "eye": [
+          301.062455697903,
+          278.7230725320698,
+          -19.379106074011176
+        ],
+        "target": [
+          300,
+          278.43764251543206,
+          -27.708468888888888
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "frame": 120,
+      "seconds": 4,
+      "phase": "ascending-orbit",
+      "probe": {
+        "room": "room-b",
+        "x": 300,
+        "z": -19.4,
+        "transitChamber": true,
+        "transit": null,
+        "worldSeconds": 4.27,
+        "approachStart": null,
+        "loaded": null,
+        "bodyY": 278.358,
+        "yaw": 0,
+        "pitch": 0,
+        "floorY": 278,
+        "feetAboveFloor": 0.015,
+        "lowestBoneAboveFloor": null,
+        "headAboveFloor": 0.321,
+        "cameraAboveFloor": 0.358,
+        "floor": {
+          "mode": "painting",
+          "painted": true,
+          "glass": false,
+          "alive": 2,
+          "aliveVisible": 2,
+          "aliveAlpha": [
+            0.58,
+            0.58
+          ],
+          "aliveScale": [
+            0.1,
+            0.3
+          ]
+        },
+        "doors": [
+          {
+            "id": "room-b-return",
+            "phase": "closed",
+            "progress": 0
+          }
+        ],
+        "connector": null,
+        "story": null,
+        "lab": null,
+        "storyRoom": null,
+        "chess": {
+          "open": false,
+          "pieceView": null,
+          "table": null,
+          "me": "local",
+          "rockFalling": false
+        },
+        "frameFailure": null
+      },
+      "pose": {
+        "eye": [
+          301.7052273611585,
+          278.9854552292812,
+          -19.387283064720233
+        ],
+        "target": [
+          300,
+          278.4821872202932,
+          -26.691006388888887
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "frame": 135,
+      "seconds": 4.5,
+      "phase": "ascending-orbit",
+      "probe": {
+        "room": "room-b",
+        "x": 300,
+        "z": -19.4,
+        "transitChamber": true,
+        "transit": null,
+        "worldSeconds": 4.77,
+        "approachStart": null,
+        "loaded": null,
+        "bodyY": 278.358,
+        "yaw": 0,
+        "pitch": 0,
+        "floorY": 278,
+        "feetAboveFloor": 0.013,
+        "lowestBoneAboveFloor": null,
+        "headAboveFloor": 0.318,
+        "cameraAboveFloor": 0.358,
+        "floor": {
+          "mode": "painting",
+          "painted": true,
+          "glass": false,
+          "alive": 2,
+          "aliveVisible": 2,
+          "aliveAlpha": [
+            0.58,
+            0.58
+          ],
+          "aliveScale": [
+            0.1,
+            0.3
+          ]
+        },
+        "doors": [
+          {
+            "id": "room-b-return",
+            "phase": "closed",
+            "progress": 0
+          }
+        ],
+        "connector": null,
+        "story": null,
+        "lab": null,
+        "storyRoom": null,
+        "chess": {
+          "open": false,
+          "pieceView": null,
+          "table": null,
+          "me": "local",
+          "rockFalling": false
+        },
+        "frameFailure": null
+      },
+      "pose": {
+        "eye": [
+          302.42960098831514,
+          279.3096386670524,
+          -19.486906881671253
+        ],
+        "target": [
+          300,
+          278.52635432098765,
+          -25.68216888888889
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "frame": 150,
+      "seconds": 5,
+      "phase": "ascending-orbit",
+      "probe": {
+        "room": "room-b",
+        "x": 300,
+        "z": -19.4,
+        "transitChamber": true,
+        "transit": null,
+        "worldSeconds": 5.27,
+        "approachStart": null,
+        "loaded": null,
+        "bodyY": 278.358,
+        "yaw": 0,
+        "pitch": 0,
+        "floorY": 278,
+        "feetAboveFloor": 0.011,
+        "lowestBoneAboveFloor": null,
+        "headAboveFloor": 0.316,
+        "cameraAboveFloor": 0.358,
+        "floor": {
+          "mode": "painting",
+          "painted": true,
+          "glass": false,
+          "alive": 2,
+          "aliveVisible": 2,
+          "aliveAlpha": [
+            0.58,
+            0.58
+          ],
+          "aliveScale": [
+            0.1,
+            0.3
+          ]
+        },
+        "doors": [
+          {
+            "id": "room-b-return",
+            "phase": "closed",
+            "progress": 0
+          }
+        ],
+        "connector": null,
+        "story": null,
+        "lab": null,
+        "storyRoom": null,
+        "chess": {
+          "open": false,
+          "pieceView": null,
+          "table": null,
+          "me": "local",
+          "rockFalling": false
+        },
+        "frameFailure": null
+      },
+      "pose": {
+        "eye": [
+          303.20322813730905,
+          279.6904440123758,
+          -19.706695151127928
+        ],
+        "target": [
+          300,
+          278.56447975501544,
+          -24.81133138888889
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "frame": 165,
+      "seconds": 5.5,
+      "phase": "ascending-orbit",
+      "probe": {
+        "room": "room-b",
+        "x": 300,
+        "z": -19.4,
+        "transitChamber": true,
+        "transit": null,
+        "worldSeconds": 5.77,
+        "approachStart": null,
+        "loaded": null,
+        "bodyY": 278.358,
+        "yaw": 0,
+        "pitch": 0,
+        "floorY": 278,
+        "feetAboveFloor": 0.012,
+        "lowestBoneAboveFloor": null,
+        "headAboveFloor": 0.317,
+        "cameraAboveFloor": 0.358,
+        "floor": {
+          "mode": "painting",
+          "painted": true,
+          "glass": false,
+          "alive": 2,
+          "aliveVisible": 2,
+          "aliveAlpha": [
+            0.408,
+            0.58
+          ],
+          "aliveScale": [
+            0.098,
+            0.3
+          ]
+        },
+        "doors": [
+          {
+            "id": "room-b-return",
+            "phase": "closed",
+            "progress": 0
+          }
+        ],
+        "connector": null,
+        "story": null,
+        "lab": null,
+        "storyRoom": null,
+        "chess": {
+          "open": false,
+          "pieceView": null,
+          "table": null,
+          "me": "local",
+          "rockFalling": false
+        },
+        "frameFailure": null
+      },
+      "pose": {
+        "eye": [
+          303.9913583605962,
+          280.1226924322434,
+          -20.067626435791777
+        ],
+        "target": [
+          300,
+          278.59089945987654,
+          -24.20786888888889
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "frame": 180,
+      "seconds": 6,
+      "phase": "ascending-orbit",
+      "probe": {
+        "room": "room-b",
+        "x": 300,
+        "z": -19.4,
+        "transitChamber": true,
+        "transit": null,
+        "worldSeconds": 6.27,
+        "approachStart": null,
+        "loaded": null,
+        "bodyY": 278.358,
+        "yaw": 0,
+        "pitch": 0,
+        "floorY": 278,
+        "feetAboveFloor": 0.015,
+        "lowestBoneAboveFloor": null,
+        "headAboveFloor": 0.32,
+        "cameraAboveFloor": 0.358,
+        "floor": {
+          "mode": "painting",
+          "painted": true,
+          "glass": false,
+          "alive": 2,
+          "aliveVisible": 2,
+          "aliveAlpha": [
+            0.093,
+            0.58
+          ],
+          "aliveScale": [
+            0.093,
+            0.3
+          ]
+        },
+        "doors": [
+          {
+            "id": "room-b-return",
+            "phase": "closed",
+            "progress": 0
+          }
+        ],
+        "connector": null,
+        "story": null,
+        "lab": null,
+        "storyRoom": null,
+        "chess": {
+          "open": false,
+          "pieceView": null,
+          "table": null,
+          "me": "local",
+          "rockFalling": false
+        },
+        "frameFailure": null
+      },
+      "pose": {
+        "eye": [
+          304.7562038558196,
+          280.6012050936475,
+          -20.581964120695773
+        ],
+        "target": [
+          300,
+          278.6,
+          -24
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "frame": 195,
+      "seconds": 6.5,
+      "phase": "ascending-orbit",
+      "probe": {
+        "room": "room-b",
+        "x": 300,
+        "z": -19.4,
+        "transitChamber": true,
+        "transit": null,
+        "worldSeconds": 6.77,
+        "approachStart": null,
+        "loaded": null,
+        "bodyY": 278.358,
+        "yaw": 0,
+        "pitch": 0,
+        "floorY": 278,
+        "feetAboveFloor": 0.016,
+        "lowestBoneAboveFloor": null,
+        "headAboveFloor": 0.322,
+        "cameraAboveFloor": 0.358,
+        "floor": {
+          "mode": "painting",
+          "painted": true,
+          "glass": false,
+          "alive": 2,
+          "aliveVisible": 2,
+          "aliveAlpha": [
+            0.012,
+            0.58
+          ],
+          "aliveScale": [
+            0.09,
+            0.3
+          ]
+        },
+        "doors": [
+          {
+            "id": "room-b-return",
+            "phase": "closed",
+            "progress": 0
+          }
+        ],
+        "connector": null,
+        "story": null,
+        "lab": null,
+        "storyRoom": null,
+        "chess": {
+          "open": false,
+          "pieceView": null,
+          "table": null,
+          "me": "local",
+          "rockFalling": false
+        },
+        "frameFailure": null
+      },
+      "pose": {
+        "eye": [
+          305.4577044155644,
+          281.1208031635802,
+          -21.252218015679162
+        ],
+        "target": [
+          300,
+          278.6,
+          -24
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "frame": 210,
+      "seconds": 7,
+      "phase": "ascending-orbit",
+      "probe": {
+        "room": "room-b",
+        "x": 300,
+        "z": -19.4,
+        "transitChamber": true,
+        "transit": null,
+        "worldSeconds": 7.27,
+        "approachStart": null,
+        "loaded": null,
+        "bodyY": 278.358,
+        "yaw": 0,
+        "pitch": 0,
+        "floorY": 278,
+        "feetAboveFloor": 0.015,
+        "lowestBoneAboveFloor": null,
+        "headAboveFloor": 0.321,
+        "cameraAboveFloor": 0.358,
+        "floor": {
+          "mode": "painting",
+          "painted": true,
+          "glass": false,
+          "alive": 2,
+          "aliveVisible": 2,
+          "aliveAlpha": [
+            0.152,
+            0.58
+          ],
+          "aliveScale": [
+            0.093,
+            0.3
+          ]
+        },
+        "doors": [
+          {
+            "id": "room-b-return",
+            "phase": "closed",
+            "progress": 0
+          }
+        ],
+        "connector": null,
+        "story": null,
+        "lab": null,
+        "storyRoom": null,
+        "chess": {
+          "open": false,
+          "pieceView": null,
+          "table": null,
+          "me": "local",
+          "rockFalling": false
+        },
+        "frameFailure": null
+      },
+      "pose": {
+        "eye": [
+          306.0552357683078,
+          281.6763078090338,
+          -22.070320857160645
+        ],
+        "target": [
+          300,
+          278.6,
+          -24
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "frame": 225,
+      "seconds": 7.5,
+      "phase": "ascending-orbit",
+      "probe": {
+        "room": "room-b",
+        "x": 300,
+        "z": -19.4,
+        "transitChamber": true,
+        "transit": null,
+        "worldSeconds": 7.77,
+        "approachStart": null,
+        "loaded": null,
+        "bodyY": 278.358,
+        "yaw": 0,
+        "pitch": 0,
+        "floorY": 278,
+        "feetAboveFloor": 0.013,
+        "lowestBoneAboveFloor": null,
+        "headAboveFloor": 0.318,
+        "cameraAboveFloor": 0.358,
+        "floor": {
+          "mode": "painting",
+          "painted": true,
+          "glass": false,
+          "alive": 2,
+          "aliveVisible": 2,
+          "aliveAlpha": [
+            0.363,
+            0.58
+          ],
+          "aliveScale": [
+            0.096,
+            0.3
+          ]
+        },
+        "doors": [
+          {
+            "id": "room-b-return",
+            "phase": "closed",
+            "progress": 0
+          }
+        ],
+        "connector": null,
+        "story": null,
+        "lab": null,
+        "storyRoom": null,
+        "chess": {
+          "open": false,
+          "pieceView": null,
+          "table": null,
+          "me": "local",
+          "rockFalling": false
+        },
+        "frameFailure": null
+      },
+      "pose": {
+        "eye": [
+          306.5099371094602,
+          282.26254019700036,
+          -23.017259855737983
+        ],
+        "target": [
+          300,
+          278.6,
+          -24
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "frame": 240,
+      "seconds": 8,
+      "phase": "ascending-orbit",
+      "probe": {
+        "room": "room-b",
+        "x": 300,
+        "z": -19.4,
+        "transitChamber": true,
+        "transit": null,
+        "worldSeconds": 8.27,
+        "approachStart": null,
+        "loaded": null,
+        "bodyY": 278.358,
+        "yaw": 0,
+        "pitch": 0,
+        "floorY": 278,
+        "feetAboveFloor": 0.011,
+        "lowestBoneAboveFloor": null,
+        "headAboveFloor": 0.316,
+        "cameraAboveFloor": 0.358,
+        "floor": {
+          "mode": "painting",
+          "painted": true,
+          "glass": false,
+          "alive": 2,
+          "aliveVisible": 2,
+          "aliveAlpha": [
+            0.538,
+            0.58
+          ],
+          "aliveScale": [
+            0.099,
+            0.3
+          ]
+        },
+        "doors": [
+          {
+            "id": "room-b-return",
+            "phase": "closed",
+            "progress": 0
+          }
+        ],
+        "connector": null,
+        "story": null,
+        "lab": null,
+        "storyRoom": null,
+        "chess": {
+          "open": false,
+          "pieceView": null,
+          "table": null,
+          "me": "local",
+          "rockFalling": false
+        },
+        "frameFailure": null
+      },
+      "pose": {
+        "eye": [
+          306.78738329176,
+          282.87432149447216,
+          -24.0633338628461
+        ],
+        "target": [
+          300,
+          278.6,
+          -24
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "frame": 255,
+      "seconds": 8.5,
+      "phase": "ascending-orbit",
+      "probe": {
+        "room": "room-b",
+        "x": 300,
+        "z": -19.4,
+        "transitChamber": true,
+        "transit": null,
+        "worldSeconds": 8.77,
+        "approachStart": null,
+        "loaded": null,
+        "bodyY": 278.358,
+        "yaw": 0,
+        "pitch": 0,
+        "floorY": 278,
+        "feetAboveFloor": 0.012,
+        "lowestBoneAboveFloor": null,
+        "headAboveFloor": 0.317,
+        "cameraAboveFloor": 0.358,
+        "floor": {
+          "mode": "painting",
+          "painted": true,
+          "glass": false,
+          "alive": 2,
+          "aliveVisible": 2,
+          "aliveAlpha": [
+            0.58,
+            0.58
+          ],
+          "aliveScale": [
+            0.1,
+            0.3
+          ]
+        },
+        "doors": [
+          {
+            "id": "room-b-return",
+            "phase": "closed",
+            "progress": 0
+          }
+        ],
+        "connector": null,
+        "story": null,
+        "lab": null,
+        "storyRoom": null,
+        "chess": {
+          "open": false,
+          "pieceView": null,
+          "table": null,
+          "me": "local",
+          "rockFalling": false
+        },
+        "frameFailure": null
+      },
+      "pose": {
+        "eye": [
+          306.860346523299,
+          283.50647286844134,
+          -25.169133507253516
+        ],
+        "target": [
+          300,
+          278.6,
+          -24
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "frame": 270,
+      "seconds": 9,
+      "phase": "ascending-orbit",
+      "probe": {
+        "room": "room-b",
+        "x": 300,
+        "z": -19.4,
+        "transitChamber": true,
+        "transit": null,
+        "worldSeconds": 9.27,
+        "approachStart": null,
+        "loaded": null,
+        "bodyY": 278.358,
+        "yaw": 0,
+        "pitch": 0,
+        "floorY": 278,
+        "feetAboveFloor": 0.014,
+        "lowestBoneAboveFloor": null,
+        "headAboveFloor": 0.319,
+        "cameraAboveFloor": 0.358,
+        "floor": {
+          "mode": "painting",
+          "painted": true,
+          "glass": false,
+          "alive": 2,
+          "aliveVisible": 2,
+          "aliveAlpha": [
+            0.58,
+            0.58
+          ],
+          "aliveScale": [
+            0.1,
+            0.3
+          ]
+        },
+        "doors": [
+          {
+            "id": "room-b-return",
+            "phase": "closed",
+            "progress": 0
+          }
+        ],
+        "connector": null,
+        "story": null,
+        "lab": null,
+        "storyRoom": null,
+        "chess": {
+          "open": false,
+          "pieceView": null,
+          "table": null,
+          "me": "local",
+          "rockFalling": false
+        },
+        "frameFailure": null
+      },
+      "pose": {
+        "eye": [
+          306.7114046715831,
+          284.1538154859001,
+          -26.28727164695514
+        ],
+        "target": [
+          300,
+          278.6,
+          -24
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "frame": 285,
+      "seconds": 9.5,
+      "phase": "ascending-orbit",
+      "probe": {
+        "room": "room-b",
+        "x": 300,
+        "z": -19.4,
+        "transitChamber": true,
+        "transit": null,
+        "worldSeconds": 9.77,
+        "approachStart": null,
+        "loaded": null,
+        "bodyY": 278.358,
+        "yaw": 0,
+        "pitch": 0,
+        "floorY": 278,
+        "feetAboveFloor": 0.016,
+        "lowestBoneAboveFloor": null,
+        "headAboveFloor": 0.322,
+        "cameraAboveFloor": 0.358,
+        "floor": {
+          "mode": "painting",
+          "painted": true,
+          "glass": false,
+          "alive": 2,
+          "aliveVisible": 2,
+          "aliveAlpha": [
+            0.58,
+            0.472
+          ],
+          "aliveScale": [
+            0.1,
+            0.296
+          ]
+        },
+        "doors": [
+          {
+            "id": "room-b-return",
+            "phase": "closed",
+            "progress": 0
+          }
+        ],
+        "connector": null,
+        "story": null,
+        "lab": null,
+        "storyRoom": null,
+        "chess": {
+          "open": false,
+          "pieceView": null,
+          "table": null,
+          "me": "local",
+          "rockFalling": false
+        },
+        "frameFailure": null
+      },
+      "pose": {
+        "eye": [
+          306.335168856551,
+          284.81117051384064,
+          -27.36482645620565
+        ],
+        "target": [
+          300,
+          278.6,
+          -24
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "frame": 300,
+      "seconds": 10,
+      "phase": "ascending-orbit",
+      "probe": {
+        "room": "room-b",
+        "x": 300,
+        "z": -19.4,
+        "transitChamber": true,
+        "transit": null,
+        "worldSeconds": 10.27,
+        "approachStart": null,
+        "loaded": null,
+        "bodyY": 278.358,
+        "yaw": 0,
+        "pitch": 0,
+        "floorY": 278,
+        "feetAboveFloor": 0.015,
+        "lowestBoneAboveFloor": null,
+        "headAboveFloor": 0.321,
+        "cameraAboveFloor": 0.358,
+        "floor": {
+          "mode": "painting",
+          "painted": true,
+          "glass": false,
+          "alive": 2,
+          "aliveVisible": 2,
+          "aliveAlpha": [
+            0.58,
+            0.229
+          ],
+          "aliveScale": [
+            0.1,
+            0.285
+          ]
+        },
+        "doors": [
+          {
+            "id": "room-b-return",
+            "phase": "closed",
+            "progress": 0
+          }
+        ],
+        "connector": null,
+        "story": null,
+        "lab": null,
+        "storyRoom": null,
+        "chess": {
+          "open": false,
+          "pieceView": null,
+          "table": null,
+          "me": "local",
+          "rockFalling": false
+        },
+        "frameFailure": null
+      },
+      "pose": {
+        "eye": [
+          305.74003974123497,
+          285.4733591192551,
+          -28.346486370511606
+        ],
+        "target": [
+          300,
+          278.6,
+          -24
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "frame": 315,
+      "seconds": 10.5,
+      "phase": "ascending-orbit",
+      "probe": {
+        "room": "room-b",
+        "x": 300,
+        "z": -19.4,
+        "transitChamber": true,
+        "transit": null,
+        "worldSeconds": 10.77,
+        "approachStart": null,
+        "loaded": null,
+        "bodyY": 278.358,
+        "yaw": 0,
+        "pitch": 0,
+        "floorY": 278,
+        "feetAboveFloor": 0.013,
+        "lowestBoneAboveFloor": null,
+        "headAboveFloor": 0.318,
+        "cameraAboveFloor": 0.358,
+        "floor": {
+          "mode": "painting",
+          "painted": true,
+          "glass": false,
+          "alive": 2,
+          "aliveVisible": 2,
+          "aliveAlpha": [
+            0.58,
+            0.029
+          ],
+          "aliveScale": [
+            0.1,
+            0.277
+          ]
+        },
+        "doors": [
+          {
+            "id": "room-b-return",
+            "phase": "closed",
+            "progress": 0
+          }
+        ],
+        "connector": null,
+        "story": null,
+        "lab": null,
+        "storyRoom": null,
+        "chess": {
+          "open": false,
+          "pieceView": null,
+          "table": null,
+          "me": "local",
+          "rockFalling": false
+        },
+        "frameFailure": null
+      },
+      "pose": {
+        "eye": [
+          304.9747001650789,
+          286.1352024691358,
+          -29.205032014076753
+        ],
+        "target": [
+          300,
+          278.6,
+          -24
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "frame": 330,
+      "seconds": 11,
+      "phase": "ascending-orbit",
+      "probe": {
+        "room": "room-b",
+        "x": 300,
+        "z": -19.4,
+        "transitChamber": true,
+        "transit": null,
+        "worldSeconds": 11.27,
+        "approachStart": null,
+        "loaded": null,
+        "bodyY": 278.358,
+        "yaw": 0,
+        "pitch": 0,
+        "floorY": 278,
+        "feetAboveFloor": 0.011,
+        "lowestBoneAboveFloor": null,
+        "headAboveFloor": 0.316,
+        "cameraAboveFloor": 0.358,
+        "floor": {
+          "mode": "painting",
+          "painted": true,
+          "glass": false,
+          "alive": 2,
+          "aliveVisible": 2,
+          "aliveAlpha": [
+            0.58,
+            0.065
+          ],
+          "aliveScale": [
+            0.1,
+            0.273
+          ]
+        },
+        "doors": [
+          {
+            "id": "room-b-return",
+            "phase": "closed",
+            "progress": 0
+          }
+        ],
+        "connector": null,
+        "story": null,
+        "lab": null,
+        "storyRoom": null,
+        "chess": {
+          "open": false,
+          "pieceView": null,
+          "table": null,
+          "me": "local",
+          "rockFalling": false
+        },
+        "frameFailure": null
+      },
+      "pose": {
+        "eye": [
+          304.0822293538561,
+          286.79152173047476,
+          -29.930885558035616
+        ],
+        "target": [
+          300,
+          278.6,
+          -24
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "frame": 345,
+      "seconds": 11.5,
+      "phase": "ascending-orbit",
+      "probe": {
+        "room": "room-b",
+        "x": 300,
+        "z": -19.4,
+        "transitChamber": true,
+        "transit": null,
+        "worldSeconds": 11.77,
+        "approachStart": null,
+        "loaded": null,
+        "bodyY": 278.358,
+        "yaw": 0,
+        "pitch": 0,
+        "floorY": 278,
+        "feetAboveFloor": 0.012,
+        "lowestBoneAboveFloor": null,
+        "headAboveFloor": 0.317,
+        "cameraAboveFloor": 0.358,
+        "floor": {
+          "mode": "painting",
+          "painted": true,
+          "glass": false,
+          "alive": 2,
+          "aliveVisible": 2,
+          "aliveAlpha": [
+            0.58,
+            0.369
+          ],
+          "aliveScale": [
+            0.1,
+            0.289
+          ]
+        },
+        "doors": [
+          {
+            "id": "room-b-return",
+            "phase": "closed",
+            "progress": 0
+          }
+        ],
+        "connector": null,
+        "story": null,
+        "lab": null,
+        "storyRoom": null,
+        "chess": {
+          "open": false,
+          "pieceView": null,
+          "table": null,
+          "me": "local",
+          "rockFalling": false
+        },
+        "frameFailure": null
+      },
+      "pose": {
+        "eye": [
+          303.08541710346407,
+          287.43713807026427,
+          -30.50539785852113
+        ],
+        "target": [
+          300,
+          278.6,
+          -24
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "frame": 360,
+      "seconds": 12,
+      "phase": "ascending-orbit",
+      "probe": {
+        "room": "room-b",
+        "x": 300,
+        "z": -19.4,
+        "transitChamber": true,
+        "transit": null,
+        "worldSeconds": 12.27,
+        "approachStart": null,
+        "loaded": null,
+        "bodyY": 278.358,
+        "yaw": 0,
+        "pitch": 0,
+        "floorY": 278,
+        "feetAboveFloor": 0.014,
+        "lowestBoneAboveFloor": null,
+        "headAboveFloor": 0.319,
+        "cameraAboveFloor": 0.358,
+        "floor": {
+          "mode": "painting",
+          "painted": true,
+          "glass": false,
+          "alive": 2,
+          "aliveVisible": 2,
+          "aliveAlpha": [
+            0.466,
+            0.579
+          ],
+          "aliveScale": [
+            0.098,
+            0.3
+          ]
+        },
+        "doors": [
+          {
+            "id": "room-b-return",
+            "phase": "closed",
+            "progress": 0
+          }
+        ],
+        "connector": null,
+        "story": null,
+        "lab": null,
+        "storyRoom": null,
+        "chess": {
+          "open": false,
+          "pieceView": null,
+          "table": null,
+          "me": "local",
+          "rockFalling": false
+        },
+        "frameFailure": null
+      },
+      "pose": {
+        "eye": [
+          302.00973272786007,
+          288.06687265549647,
+          -30.913824872136118
+        ],
+        "target": [
+          300,
+          278.6,
+          -24
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "frame": 375,
+      "seconds": 12.5,
+      "phase": "ascending-orbit",
+      "probe": {
+        "room": "room-b",
+        "x": 300,
+        "z": -19.4,
+        "transitChamber": true,
+        "transit": null,
+        "worldSeconds": 12.77,
+        "approachStart": null,
+        "loaded": null,
+        "bodyY": 278.358,
+        "yaw": 0,
+        "pitch": 0,
+        "floorY": 278,
+        "feetAboveFloor": 0.016,
+        "lowestBoneAboveFloor": null,
+        "headAboveFloor": 0.321,
+        "cameraAboveFloor": 0.358,
+        "floor": {
+          "mode": "painting",
+          "painted": true,
+          "glass": false,
+          "alive": 2,
+          "aliveVisible": 2,
+          "aliveAlpha": [
+            0.149,
+            0.58
+          ],
+          "aliveScale": [
+            0.094,
+            0.3
+          ]
+        },
+        "doors": [
+          {
+            "id": "room-b-return",
+            "phase": "closed",
+            "progress": 0
+          }
+        ],
+        "connector": null,
+        "story": null,
+        "lab": null,
+        "storyRoom": null,
+        "chess": {
+          "open": false,
+          "pieceView": null,
+          "table": null,
+          "me": "local",
+          "rockFalling": false
+        },
+        "frameFailure": null
+      },
+      "pose": {
+        "eye": [
+          300.88266524057354,
+          288.67554665316356,
+          -31.145691154330926
+        ],
+        "target": [
+          300,
+          278.6,
+          -24
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "frame": 390,
+      "seconds": 13,
+      "phase": "ascending-orbit",
+      "probe": {
+        "room": "room-b",
+        "x": 300,
+        "z": -19.4,
+        "transitChamber": true,
+        "transit": null,
+        "worldSeconds": 13.27,
+        "approachStart": null,
+        "loaded": null,
+        "bodyY": 278.358,
+        "yaw": 0,
+        "pitch": 0,
+        "floorY": 278,
+        "feetAboveFloor": 0.016,
+        "lowestBoneAboveFloor": null,
+        "headAboveFloor": 0.321,
+        "cameraAboveFloor": 0.358,
+        "floor": {
+          "mode": "painting",
+          "painted": true,
+          "glass": false,
+          "alive": 2,
+          "aliveVisible": 2,
+          "aliveAlpha": [
+            0.002,
+            0.58
+          ],
+          "aliveScale": [
+            0.09,
+            0.3
+          ]
+        },
+        "doors": [
+          {
+            "id": "room-b-return",
+            "phase": "closed",
+            "progress": 0
+          }
+        ],
+        "connector": null,
+        "story": null,
+        "lab": null,
+        "storyRoom": null,
+        "chess": {
+          "open": false,
+          "pieceView": null,
+          "table": null,
+          "me": "local",
+          "rockFalling": false
+        },
+        "frameFailure": null
+      },
+      "pose": {
+        "eye": [
+          299.73301670031174,
+          289.25798123025777,
+          -31.195048291546595
+        ],
+        "target": [
+          300,
+          278.6,
+          -24
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "frame": 405,
+      "seconds": 13.5,
+      "phase": "ascending-orbit",
+      "probe": {
+        "room": "room-b",
+        "x": 300,
+        "z": -19.4,
+        "transitChamber": true,
+        "transit": null,
+        "worldSeconds": 13.77,
+        "approachStart": null,
+        "loaded": null,
+        "bodyY": 278.358,
+        "yaw": 0,
+        "pitch": 0,
+        "floorY": 278,
+        "feetAboveFloor": 0.014,
+        "lowestBoneAboveFloor": null,
+        "headAboveFloor": 0.318,
+        "cameraAboveFloor": 0.358,
+        "floor": {
+          "mode": "painting",
+          "painted": true,
+          "glass": false,
+          "alive": 2,
+          "aliveVisible": 2,
+          "aliveAlpha": [
+            0.114,
+            0.58
+          ],
+          "aliveScale": [
+            0.092,
+            0.3
+          ]
+        },
+        "doors": [
+          {
+            "id": "room-b-return",
+            "phase": "closed",
+            "progress": 0
+          }
+        ],
+        "connector": null,
+        "story": null,
+        "lab": null,
+        "storyRoom": null,
+        "chess": {
+          "open": false,
+          "pieceView": null,
+          "table": null,
+          "me": "local",
+          "rockFalling": false
+        },
+        "frameFailure": null
+      },
+      "pose": {
+        "eye": [
+          298.59016459604595,
+          289.80899755377123,
+          -31.06062066207764
+        ],
+        "target": [
+          300,
+          278.6,
+          -24
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "frame": 420,
+      "seconds": 14,
+      "phase": "ascending-orbit",
+      "probe": {
+        "room": "room-b",
+        "x": 300,
+        "z": -19.4,
+        "transitChamber": true,
+        "transit": null,
+        "worldSeconds": 14.27,
+        "approachStart": null,
+        "loaded": null,
+        "bodyY": 278.358,
+        "yaw": 0,
+        "pitch": 0,
+        "floorY": 278,
+        "feetAboveFloor": 0.011,
+        "lowestBoneAboveFloor": null,
+        "headAboveFloor": 0.316,
+        "cameraAboveFloor": 0.358,
+        "floor": {
+          "mode": "painting",
+          "painted": true,
+          "glass": false,
+          "alive": 2,
+          "aliveVisible": 2,
+          "aliveAlpha": [
+            0.32,
+            0.58
+          ],
+          "aliveScale": [
+            0.096,
+            0.3
+          ]
+        },
+        "doors": [
+          {
+            "id": "room-b-return",
+            "phase": "closed",
+            "progress": 0
+          }
+        ],
+        "connector": null,
+        "story": null,
+        "lab": null,
+        "storyRoom": null,
+        "chess": {
+          "open": false,
+          "pieceView": null,
+          "table": null,
+          "me": "local",
+          "rockFalling": false
+        },
+        "frameFailure": null
+      },
+      "pose": {
+        "eye": [
+          297.4833108504937,
+          290.3234167906961,
+          -30.745833953245302
+        ],
+        "target": [
+          300,
+          278.6,
+          -24
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "frame": 435,
+      "seconds": 14.5,
+      "phase": "ascending-orbit",
+      "probe": {
+        "room": "room-b",
+        "x": 300,
+        "z": -19.4,
+        "transitChamber": true,
+        "transit": null,
+        "worldSeconds": 14.77,
+        "approachStart": null,
+        "loaded": null,
+        "bodyY": 278.358,
+        "yaw": 0,
+        "pitch": 0,
+        "floorY": 278,
+        "feetAboveFloor": 0.012,
+        "lowestBoneAboveFloor": null,
+        "headAboveFloor": 0.317,
+        "cameraAboveFloor": 0.358,
+        "floor": {
+          "mode": "painting",
+          "painted": true,
+          "glass": false,
+          "alive": 2,
+          "aliveVisible": 2,
+          "aliveAlpha": [
+            0.511,
+            0.58
+          ],
+          "aliveScale": [
+            0.099,
+            0.3
+          ]
+        },
+        "doors": [
+          {
+            "id": "room-b-return",
+            "phase": "closed",
+            "progress": 0
+          }
+        ],
+        "connector": null,
+        "story": null,
+        "lab": null,
+        "storyRoom": null,
+        "chess": {
+          "open": false,
+          "pieceView": null,
+          "table": null,
+          "me": "local",
+          "rockFalling": false
+        },
+        "frameFailure": null
+      },
+      "pose": {
+        "eye": [
+          296.44073591988877,
+          290.7960601080247,
+          -30.258725046527427
+        ],
+        "target": [
+          300,
+          278.6,
+          -24
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "frame": 450,
+      "seconds": 15,
+      "phase": "ascending-orbit",
+      "probe": {
+        "room": "room-b",
+        "x": 300,
+        "z": -19.4,
+        "transitChamber": true,
+        "transit": null,
+        "worldSeconds": 15.27,
+        "approachStart": null,
+        "loaded": null,
+        "bodyY": 278.358,
+        "yaw": 0,
+        "pitch": 0,
+        "floorY": 278,
+        "feetAboveFloor": 0.014,
+        "lowestBoneAboveFloor": null,
+        "headAboveFloor": 0.319,
+        "cameraAboveFloor": 0.358,
+        "floor": {
+          "mode": "painting",
+          "painted": true,
+          "glass": false,
+          "alive": 2,
+          "aliveVisible": 2,
+          "aliveAlpha": [
+            0.58,
+            0.58
+          ],
+          "aliveScale": [
+            0.1,
+            0.3
+          ]
+        },
+        "doors": [
+          {
+            "id": "room-b-return",
+            "phase": "closed",
+            "progress": 0
+          }
+        ],
+        "connector": null,
+        "story": null,
+        "lab": null,
+        "storyRoom": null,
+        "chess": {
+          "open": false,
+          "pieceView": null,
+          "table": null,
+          "me": "local",
+          "rockFalling": false
+        },
+        "frameFailure": null
+      },
+      "pose": {
+        "eye": [
+          295.48907666809646,
+          291.2217486727491,
+          -29.611735087625608
+        ],
+        "target": [
+          300,
+          278.6,
+          -24
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "frame": 465,
+      "seconds": 15.5,
+      "phase": "ascending-orbit",
+      "probe": {
+        "room": "room-b",
+        "x": 300,
+        "z": -19.4,
+        "transitChamber": true,
+        "transit": null,
+        "worldSeconds": 15.77,
+        "approachStart": null,
+        "loaded": null,
+        "bodyY": 278.358,
+        "yaw": 0,
+        "pitch": 0,
+        "floorY": 278,
+        "feetAboveFloor": 0.016,
+        "lowestBoneAboveFloor": null,
+        "headAboveFloor": 0.321,
+        "cameraAboveFloor": 0.358,
+        "floor": {
+          "mode": "painting",
+          "painted": true,
+          "glass": false,
+          "alive": 2,
+          "aliveVisible": 2,
+          "aliveAlpha": [
+            0.58,
+            0.58
+          ],
+          "aliveScale": [
+            0.1,
+            0.3
+          ]
+        },
+        "doors": [
+          {
+            "id": "room-b-return",
+            "phase": "closed",
+            "progress": 0
+          }
+        ],
+        "connector": null,
+        "story": null,
+        "lab": null,
+        "storyRoom": null,
+        "chess": {
+          "open": false,
+          "pieceView": null,
+          "table": null,
+          "me": "local",
+          "rockFalling": false
+        },
+        "frameFailure": null
+      },
+      "pose": {
+        "eye": [
+          294.6526462752703,
+          291.5953036518615,
+          -28.82139068554078
+        ],
+        "target": [
+          300,
+          278.6,
+          -24
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "frame": 480,
+      "seconds": 16,
+      "phase": "ascending-orbit",
+      "probe": {
+        "room": "room-b",
+        "x": 300,
+        "z": -19.4,
+        "transitChamber": true,
+        "transit": null,
+        "worldSeconds": 16.27,
+        "approachStart": null,
+        "loaded": null,
+        "bodyY": 278.358,
+        "yaw": 0,
+        "pitch": 0,
+        "floorY": 278,
+        "feetAboveFloor": 0.016,
+        "lowestBoneAboveFloor": null,
+        "headAboveFloor": 0.321,
+        "cameraAboveFloor": 0.358,
+        "floor": {
+          "mode": "painting",
+          "painted": true,
+          "glass": false,
+          "alive": 2,
+          "aliveVisible": 2,
+          "aliveAlpha": [
+            0.58,
+            0.58
+          ],
+          "aliveScale": [
+            0.1,
+            0.3
+          ]
+        },
+        "doors": [
+          {
+            "id": "room-b-return",
+            "phase": "closed",
+            "progress": 0
+          }
+        ],
+        "connector": null,
+        "story": null,
+        "lab": null,
+        "storyRoom": null,
+        "chess": {
+          "open": false,
+          "pieceView": null,
+          "table": null,
+          "me": "local",
+          "rockFalling": false
+        },
+        "frameFailure": null
+      },
+      "pose": {
+        "eye": [
+          293.95281347176973,
+          291.9115462123541,
+          -27.90788115131334
+        ],
+        "target": [
+          300,
+          278.6,
+          -24
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "frame": 495,
+      "seconds": 16.5,
+      "phase": "ascending-orbit",
+      "probe": {
+        "room": "room-b",
+        "x": 300,
+        "z": -19.4,
+        "transitChamber": true,
+        "transit": null,
+        "worldSeconds": 16.77,
+        "approachStart": null,
+        "loaded": null,
+        "bodyY": 278.358,
+        "yaw": 0,
+        "pitch": 0,
+        "floorY": 278,
+        "feetAboveFloor": 0.014,
+        "lowestBoneAboveFloor": null,
+        "headAboveFloor": 0.319,
+        "cameraAboveFloor": 0.358,
+        "floor": {
+          "mode": "painting",
+          "painted": true,
+          "glass": false,
+          "alive": 2,
+          "aliveVisible": 2,
+          "aliveAlpha": [
+            0.58,
+            0.58
+          ],
+          "aliveScale": [
+            0.1,
+            0.3
+          ]
+        },
+        "doors": [
+          {
+            "id": "room-b-return",
+            "phase": "closed",
+            "progress": 0
+          }
+        ],
+        "connector": null,
+        "story": null,
+        "lab": null,
+        "storyRoom": null,
+        "chess": {
+          "open": false,
+          "pieceView": null,
+          "table": null,
+          "me": "local",
+          "rockFalling": false
+        },
+        "frameFailure": null
+      },
+      "pose": {
+        "eye": [
+          293.40745692695407,
+          292.16529752121914,
+          -26.894542421529582
+        ],
+        "target": [
+          300,
+          278.6,
+          -24
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "frame": 510,
+      "seconds": 17,
+      "phase": "ascending-orbit",
+      "probe": {
+        "room": "room-b",
+        "x": 300,
+        "z": -19.4,
+        "transitChamber": true,
+        "transit": null,
+        "worldSeconds": 17.27,
+        "approachStart": null,
+        "loaded": null,
+        "bodyY": 278.358,
+        "yaw": 0,
+        "pitch": 0,
+        "floorY": 278,
+        "feetAboveFloor": 0.012,
+        "lowestBoneAboveFloor": null,
+        "headAboveFloor": 0.317,
+        "cameraAboveFloor": 0.358,
+        "floor": {
+          "mode": "painting",
+          "painted": true,
+          "glass": false,
+          "alive": 2,
+          "aliveVisible": 2,
+          "aliveAlpha": [
+            0.58,
+            0.58
+          ],
+          "aliveScale": [
+            0.1,
+            0.3
+          ]
+        },
+        "doors": [
+          {
+            "id": "room-b-return",
+            "phase": "closed",
+            "progress": 0
+          }
+        ],
+        "connector": null,
+        "story": null,
+        "lab": null,
+        "storyRoom": null,
+        "chess": {
+          "open": false,
+          "pieceView": null,
+          "table": null,
+          "me": "local",
+          "rockFalling": false
+        },
+        "frameFailure": null
+      },
+      "pose": {
+        "eye": [
+          293.0305087287262,
+          292.35137874544876,
+          -25.807260750317532
+        ],
+        "target": [
+          300,
+          278.6,
+          -24
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "frame": 525,
+      "seconds": 17.5,
+      "phase": "ascending-orbit",
+      "probe": {
+        "room": "room-b",
+        "x": 300,
+        "z": -19.4,
+        "transitChamber": true,
+        "transit": null,
+        "worldSeconds": 17.77,
+        "approachStart": null,
+        "loaded": null,
+        "bodyY": 278.358,
+        "yaw": 0,
+        "pitch": 0,
+        "floorY": 278,
+        "feetAboveFloor": 0.012,
+        "lowestBoneAboveFloor": null,
+        "headAboveFloor": 0.317,
+        "cameraAboveFloor": 0.358,
+        "floor": {
+          "mode": "painting",
+          "painted": true,
+          "glass": false,
+          "alive": 2,
+          "aliveVisible": 2,
+          "aliveAlpha": [
+            0.58,
+            0.58
+          ],
+          "aliveScale": [
+            0.1,
+            0.3
+          ]
+        },
+        "doors": [
+          {
+            "id": "room-b-return",
+            "phase": "closed",
+            "progress": 0
+          }
+        ],
+        "connector": null,
+        "story": null,
+        "lab": null,
+        "storyRoom": null,
+        "chess": {
+          "open": false,
+          "pieceView": null,
+          "table": null,
+          "me": "local",
+          "rockFalling": false
+        },
+        "frameFailure": null
+      },
+      "pose": {
+        "eye": [
+          292.83159862466306,
+          292.4646110520351,
+          -24.673811340114785
+        ],
+        "target": [
+          300,
+          278.6,
+          -24
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "frame": 540,
+      "seconds": 18,
+      "phase": "hover-downward-orbit",
+      "probe": {
+        "room": "room-b",
+        "x": 300,
+        "z": -19.4,
+        "transitChamber": true,
+        "transit": null,
+        "worldSeconds": 18.27,
+        "approachStart": null,
+        "loaded": null,
+        "bodyY": 278.358,
+        "yaw": 0,
+        "pitch": 0,
+        "floorY": 278,
+        "feetAboveFloor": 0.014,
+        "lowestBoneAboveFloor": null,
+        "headAboveFloor": 0.319,
+        "cameraAboveFloor": 0.358,
+        "floor": {
+          "mode": "painting",
+          "painted": true,
+          "glass": false,
+          "alive": 2,
+          "aliveVisible": 2,
+          "aliveAlpha": [
+            0.58,
+            0.58
+          ],
+          "aliveScale": [
+            0.1,
+            0.3
+          ]
+        },
+        "doors": [
+          {
+            "id": "room-b-return",
+            "phase": "closed",
+            "progress": 0
+          }
+        ],
+        "connector": null,
+        "story": null,
+        "lab": null,
+        "storyRoom": null,
+        "chess": {
+          "open": false,
+          "pieceView": null,
+          "table": null,
+          "me": "local",
+          "rockFalling": false
+        },
+        "frameFailure": null
+      },
+      "pose": {
+        "eye": [
+          292.8158081246151,
+          292.5,
+          -23.523148767796535
+        ],
+        "target": [
+          300,
+          278.6,
+          -24
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "frame": 555,
+      "seconds": 18.5,
+      "phase": "hover-downward-orbit",
+      "probe": {
+        "room": "room-b",
+        "x": 300,
+        "z": -19.4,
+        "transitChamber": true,
+        "transit": null,
+        "worldSeconds": 18.77,
+        "approachStart": null,
+        "loaded": null,
+        "bodyY": 278.358,
+        "yaw": 0,
+        "pitch": 0,
+        "floorY": 278,
+        "feetAboveFloor": 0.016,
+        "lowestBoneAboveFloor": null,
+        "headAboveFloor": 0.321,
+        "cameraAboveFloor": 0.358,
+        "floor": {
+          "mode": "painting",
+          "painted": true,
+          "glass": false,
+          "alive": 2,
+          "aliveVisible": 2,
+          "aliveAlpha": [
+            0.515,
+            0.58
+          ],
+          "aliveScale": [
+            0.099,
+            0.3
+          ]
+        },
+        "doors": [
+          {
+            "id": "room-b-return",
+            "phase": "closed",
+            "progress": 0
+          }
+        ],
+        "connector": null,
+        "story": null,
+        "lab": null,
+        "storyRoom": null,
+        "chess": {
+          "open": false,
+          "pieceView": null,
+          "table": null,
+          "me": "local",
+          "rockFalling": false
+        },
+        "frameFailure": null
+      },
+      "pose": {
+        "eye": [
+          292.9835407576463,
+          292.5,
+          -22.38466730968818
+        ],
+        "target": [
+          300,
+          278.6,
+          -24
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "frame": 570,
+      "seconds": 19,
+      "phase": "hover-downward-orbit",
+      "probe": {
+        "room": "room-b",
+        "x": 300,
+        "z": -19.4,
+        "transitChamber": true,
+        "transit": null,
+        "worldSeconds": 19.27,
+        "approachStart": null,
+        "loaded": null,
+        "bodyY": 278.358,
+        "yaw": 0,
+        "pitch": 0,
+        "floorY": 278,
+        "feetAboveFloor": 0.016,
+        "lowestBoneAboveFloor": null,
+        "headAboveFloor": 0.321,
+        "cameraAboveFloor": 0.358,
+        "floor": {
+          "mode": "painting",
+          "painted": true,
+          "glass": false,
+          "alive": 2,
+          "aliveVisible": 2,
+          "aliveAlpha": [
+            0.211,
+            0.58
+          ],
+          "aliveScale": [
+            0.095,
+            0.3
+          ]
+        },
+        "doors": [
+          {
+            "id": "room-b-return",
+            "phase": "closed",
+            "progress": 0
+          }
+        ],
+        "connector": null,
+        "story": null,
+        "lab": null,
+        "storyRoom": null,
+        "chess": {
+          "open": false,
+          "pieceView": null,
+          "table": null,
+          "me": "local",
+          "rockFalling": false
+        },
+        "frameFailure": null
+      },
+      "pose": {
+        "eye": [
+          293.33051180705917,
+          292.5,
+          -21.287450047607873
+        ],
+        "target": [
+          300,
+          278.6,
+          -24
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "frame": 585,
+      "seconds": 19.5,
+      "phase": "hover-downward-orbit",
+      "probe": {
+        "room": "room-b",
+        "x": 300,
+        "z": -19.4,
+        "transitChamber": true,
+        "transit": null,
+        "worldSeconds": 19.77,
+        "approachStart": null,
+        "loaded": null,
+        "bodyY": 278.358,
+        "yaw": 0,
+        "pitch": 0,
+        "floorY": 278,
+        "feetAboveFloor": 0.014,
+        "lowestBoneAboveFloor": null,
+        "headAboveFloor": 0.319,
+        "cameraAboveFloor": 0.358,
+        "floor": {
+          "mode": "painting",
+          "painted": true,
+          "glass": false,
+          "alive": 2,
+          "aliveVisible": 2,
+          "aliveAlpha": [
+            0.001,
+            0.58
+          ],
+          "aliveScale": [
+            0.092,
+            0.3
+          ]
+        },
+        "doors": [
+          {
+            "id": "room-b-return",
+            "phase": "closed",
+            "progress": 0
+          }
+        ],
+        "connector": null,
+        "story": null,
+        "lab": null,
+        "storyRoom": null,
+        "chess": {
+          "open": false,
+          "pieceView": null,
+          "table": null,
+          "me": "local",
+          "rockFalling": false
+        },
+        "frameFailure": null
+      },
+      "pose": {
+        "eye": [
+          293.8478577929515,
+          292.5,
+          -20.259525930546687
+        ],
+        "target": [
+          300,
+          278.6,
+          -24
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "frame": 600,
+      "seconds": 20,
+      "phase": "hover-downward-orbit",
+      "probe": {
+        "room": "room-b",
+        "x": 300,
+        "z": -19.4,
+        "transitChamber": true,
+        "transit": null,
+        "worldSeconds": 20.27,
+        "approachStart": null,
+        "loaded": null,
+        "bodyY": 278.358,
+        "yaw": 0,
+        "pitch": 0,
+        "floorY": 278,
+        "feetAboveFloor": 0.012,
+        "lowestBoneAboveFloor": null,
+        "headAboveFloor": 0.317,
+        "cameraAboveFloor": 0.358,
+        "floor": {
+          "mode": "painting",
+          "painted": true,
+          "glass": false,
+          "alive": 2,
+          "aliveVisible": 2,
+          "aliveAlpha": [
+            0.081,
+            0.58
+          ],
+          "aliveScale": [
+            0.091,
+            0.3
+          ]
+        },
+        "doors": [
+          {
+            "id": "room-b-return",
+            "phase": "closed",
+            "progress": 0
+          }
+        ],
+        "connector": null,
+        "story": null,
+        "lab": null,
+        "storyRoom": null,
+        "chess": {
+          "open": false,
+          "pieceView": null,
+          "table": null,
+          "me": "local",
+          "rockFalling": false
+        },
+        "frameFailure": null
+      },
+      "pose": {
+        "eye": [
+          294.5223629107918,
+          292.5,
+          -19.327153766821485
+        ],
+        "target": [
+          300,
+          278.6,
+          -24
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "frame": 615,
+      "seconds": 20.5,
+      "phase": "hover-downward-orbit",
+      "probe": {
+        "room": "room-b",
+        "x": 300,
+        "z": -19.4,
+        "transitChamber": true,
+        "transit": null,
+        "worldSeconds": 20.77,
+        "approachStart": null,
+        "loaded": null,
+        "bodyY": 278.358,
+        "yaw": 0,
+        "pitch": 0,
+        "floorY": 278,
+        "feetAboveFloor": 0.012,
+        "lowestBoneAboveFloor": null,
+        "headAboveFloor": 0.317,
+        "cameraAboveFloor": 0.358,
+        "floor": {
+          "mode": "painting",
+          "painted": true,
+          "glass": false,
+          "alive": 2,
+          "aliveVisible": 2,
+          "aliveAlpha": [
+            0.277,
+            0.472
+          ],
+          "aliveScale": [
+            0.095,
+            0.296
+          ]
+        },
+        "doors": [
+          {
+            "id": "room-b-return",
+            "phase": "closed",
+            "progress": 0
+          }
+        ],
+        "connector": null,
+        "story": null,
+        "lab": null,
+        "storyRoom": null,
+        "chess": {
+          "open": false,
+          "pieceView": null,
+          "table": null,
+          "me": "local",
+          "rockFalling": false
+        },
+        "frameFailure": null
+      },
+      "pose": {
+        "eye": [
+          295.33679664522776,
+          292.5,
+          -18.514151435553387
+        ],
+        "target": [
+          300,
+          278.6,
+          -24
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "frame": 630,
+      "seconds": 21,
+      "phase": "hover-downward-orbit",
+      "probe": {
+        "room": "room-b",
+        "x": 300,
+        "z": -19.4,
+        "transitChamber": true,
+        "transit": null,
+        "worldSeconds": 21.27,
+        "approachStart": null,
+        "loaded": null,
+        "bodyY": 278.358,
+        "yaw": 0,
+        "pitch": 0,
+        "floorY": 278,
+        "feetAboveFloor": 0.014,
+        "lowestBoneAboveFloor": null,
+        "headAboveFloor": 0.319,
+        "cameraAboveFloor": 0.358,
+        "floor": {
+          "mode": "painting",
+          "painted": true,
+          "glass": false,
+          "alive": 2,
+          "aliveVisible": 2,
+          "aliveAlpha": [
+            0.479,
+            0.229
+          ],
+          "aliveScale": [
+            0.098,
+            0.285
+          ]
+        },
+        "doors": [
+          {
+            "id": "room-b-return",
+            "phase": "closed",
+            "progress": 0
+          }
+        ],
+        "connector": null,
+        "story": null,
+        "lab": null,
+        "storyRoom": null,
+        "chess": {
+          "open": false,
+          "pieceView": null,
+          "table": null,
+          "me": "local",
+          "rockFalling": false
+        },
+        "frameFailure": null
+      },
+      "pose": {
+        "eye": [
+          296.27035393714027,
+          292.5,
+          -17.841287452251475
+        ],
+        "target": [
+          300,
+          278.6,
+          -24
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "frame": 645,
+      "seconds": 21.5,
+      "phase": "hover-downward-orbit",
+      "probe": {
+        "room": "room-b",
+        "x": 300,
+        "z": -19.4,
+        "transitChamber": true,
+        "transit": null,
+        "worldSeconds": 21.77,
+        "approachStart": null,
+        "loaded": null,
+        "bodyY": 278.358,
+        "yaw": 0,
+        "pitch": 0,
+        "floorY": 278,
+        "feetAboveFloor": 0.016,
+        "lowestBoneAboveFloor": null,
+        "headAboveFloor": 0.321,
+        "cameraAboveFloor": 0.358,
+        "floor": {
+          "mode": "painting",
+          "painted": true,
+          "glass": false,
+          "alive": 2,
+          "aliveVisible": 2,
+          "aliveAlpha": [
+            0.58,
+            0.029
+          ],
+          "aliveScale": [
+            0.1,
+            0.277
+          ]
+        },
+        "doors": [
+          {
+            "id": "room-b-return",
+            "phase": "closed",
+            "progress": 0
+          }
+        ],
+        "connector": null,
+        "story": null,
+        "lab": null,
+        "storyRoom": null,
+        "chess": {
+          "open": false,
+          "pieceView": null,
+          "table": null,
+          "me": "local",
+          "rockFalling": false
+        },
+        "frameFailure": null
+      },
+      "pose": {
+        "eye": [
+          297.29918666133176,
+          292.5,
+          -17.325750430971908
+        ],
+        "target": [
+          300,
+          278.6,
+          -24
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "frame": 660,
+      "seconds": 22,
+      "phase": "hover-downward-orbit",
+      "probe": {
+        "room": "room-b",
+        "x": 300,
+        "z": -19.4,
+        "transitChamber": true,
+        "transit": null,
+        "worldSeconds": 22.27,
+        "approachStart": null,
+        "loaded": null,
+        "bodyY": 278.358,
+        "yaw": 0,
+        "pitch": 0,
+        "floorY": 278,
+        "feetAboveFloor": 0.016,
+        "lowestBoneAboveFloor": null,
+        "headAboveFloor": 0.321,
+        "cameraAboveFloor": 0.358,
+        "floor": {
+          "mode": "painting",
+          "painted": true,
+          "glass": false,
+          "alive": 2,
+          "aliveVisible": 2,
+          "aliveAlpha": [
+            0.58,
+            0.065
+          ],
+          "aliveScale": [
+            0.1,
+            0.273
+          ]
+        },
+        "doors": [
+          {
+            "id": "room-b-return",
+            "phase": "closed",
+            "progress": 0
+          }
+        ],
+        "connector": null,
+        "story": null,
+        "lab": null,
+        "storyRoom": null,
+        "chess": {
+          "open": false,
+          "pieceView": null,
+          "table": null,
+          "me": "local",
+          "rockFalling": false
+        },
+        "frameFailure": null
+      },
+      "pose": {
+        "eye": [
+          298.39701283907976,
+          292.5,
+          -16.980709995881007
+        ],
+        "target": [
+          300,
+          278.6,
+          -24
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "frame": 675,
+      "seconds": 22.5,
+      "phase": "hover-downward-orbit",
+      "probe": {
+        "room": "room-b",
+        "x": 300,
+        "z": -19.4,
+        "transitChamber": true,
+        "transit": null,
+        "worldSeconds": 22.77,
+        "approachStart": null,
+        "loaded": null,
+        "bodyY": 278.358,
+        "yaw": 0,
+        "pitch": 0,
+        "floorY": 278,
+        "feetAboveFloor": 0.014,
+        "lowestBoneAboveFloor": null,
+        "headAboveFloor": 0.319,
+        "cameraAboveFloor": 0.358,
+        "floor": {
+          "mode": "painting",
+          "painted": true,
+          "glass": false,
+          "alive": 2,
+          "aliveVisible": 2,
+          "aliveAlpha": [
+            0.58,
+            0.369
+          ],
+          "aliveScale": [
+            0.1,
+            0.289
+          ]
+        },
+        "doors": [
+          {
+            "id": "room-b-return",
+            "phase": "closed",
+            "progress": 0
+          }
+        ],
+        "connector": null,
+        "story": null,
+        "lab": null,
+        "storyRoom": null,
+        "chess": {
+          "open": false,
+          "pieceView": null,
+          "table": null,
+          "me": "local",
+          "rockFalling": false
+        },
+        "frameFailure": null
+      },
+      "pose": {
+        "eye": [
+          299.53578802361994,
+          292.5,
+          -16.814980359039698
+        ],
+        "target": [
+          300,
+          278.6,
+          -24
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "frame": 690,
+      "seconds": 23,
+      "phase": "hover-downward-orbit",
+      "probe": {
+        "room": "room-b",
+        "x": 300,
+        "z": -19.4,
+        "transitChamber": true,
+        "transit": null,
+        "worldSeconds": 23.27,
+        "approachStart": null,
+        "loaded": null,
+        "bodyY": 278.358,
+        "yaw": 0,
+        "pitch": 0,
+        "floorY": 278,
+        "feetAboveFloor": 0.012,
+        "lowestBoneAboveFloor": null,
+        "headAboveFloor": 0.317,
+        "cameraAboveFloor": 0.358,
+        "floor": {
+          "mode": "painting",
+          "painted": true,
+          "glass": false,
+          "alive": 2,
+          "aliveVisible": 2,
+          "aliveAlpha": [
+            0.58,
+            0.579
+          ],
+          "aliveScale": [
+            0.1,
+            0.3
+          ]
+        },
+        "doors": [
+          {
+            "id": "room-b-return",
+            "phase": "closed",
+            "progress": 0
+          }
+        ],
+        "connector": null,
+        "story": null,
+        "lab": null,
+        "storyRoom": null,
+        "chess": {
+          "open": false,
+          "pieceView": null,
+          "table": null,
+          "me": "local",
+          "rockFalling": false
+        },
+        "frameFailure": null
+      },
+      "pose": {
+        "eye": [
+          300.68642170812825,
+          292.5,
+          -16.832795158598415
+        ],
+        "target": [
+          300,
+          278.6,
+          -24
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "frame": 705,
+      "seconds": 23.5,
+      "phase": "hover-downward-orbit",
+      "probe": {
+        "room": "room-b",
+        "x": 300,
+        "z": -19.4,
+        "transitChamber": true,
+        "transit": null,
+        "worldSeconds": 23.77,
+        "approachStart": null,
+        "loaded": null,
+        "bodyY": 278.358,
+        "yaw": 0,
+        "pitch": 0,
+        "floorY": 278,
+        "feetAboveFloor": 0.011,
+        "lowestBoneAboveFloor": null,
+        "headAboveFloor": 0.316,
+        "cameraAboveFloor": 0.358,
+        "floor": {
+          "mode": "painting",
+          "painted": true,
+          "glass": false,
+          "alive": 2,
+          "aliveVisible": 2,
+          "aliveAlpha": [
+            0.58,
+            0.58
+          ],
+          "aliveScale": [
+            0.1,
+            0.3
+          ]
+        },
+        "doors": [
+          {
+            "id": "room-b-return",
+            "phase": "closed",
+            "progress": 0
+          }
+        ],
+        "connector": null,
+        "story": null,
+        "lab": null,
+        "storyRoom": null,
+        "chess": {
+          "open": false,
+          "pieceView": null,
+          "table": null,
+          "me": "local",
+          "rockFalling": false
+        },
+        "frameFailure": null
+      },
+      "pose": {
+        "eye": [
+          301.8195204554891,
+          292.5,
+          -17.03369930938545
+        ],
+        "target": [
+          300,
+          278.6,
+          -24
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "frame": 720,
+      "seconds": 24,
+      "phase": "hover-downward-orbit",
+      "probe": {
+        "room": "room-b",
+        "x": 300,
+        "z": -19.4,
+        "transitChamber": true,
+        "transit": null,
+        "worldSeconds": 24.27,
+        "approachStart": null,
+        "loaded": null,
+        "bodyY": 278.358,
+        "yaw": 0,
+        "pitch": 0,
+        "floorY": 278,
+        "feetAboveFloor": 0.014,
+        "lowestBoneAboveFloor": null,
+        "headAboveFloor": 0.318,
+        "cameraAboveFloor": 0.358,
+        "floor": {
+          "mode": "painting",
+          "painted": true,
+          "glass": false,
+          "alive": 2,
+          "aliveVisible": 2,
+          "aliveAlpha": [
+            0.58,
+            0.58
+          ],
+          "aliveScale": [
+            0.1,
+            0.3
+          ]
+        },
+        "doors": [
+          {
+            "id": "room-b-return",
+            "phase": "closed",
+            "progress": 0
+          }
+        ],
+        "connector": null,
+        "story": null,
+        "lab": null,
+        "storyRoom": null,
+        "chess": {
+          "open": false,
+          "pieceView": null,
+          "table": null,
+          "me": "local",
+          "rockFalling": false
+        },
+        "frameFailure": null
+      },
+      "pose": {
+        "eye": [
+          302.906138766415,
+          292.5,
+          -17.412560628716182
+        ],
+        "target": [
+          300,
+          278.6,
+          -24
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "frame": 735,
+      "seconds": 24.5,
+      "phase": "hover-downward-orbit",
+      "probe": {
+        "room": "room-b",
+        "x": 300,
+        "z": -19.4,
+        "transitChamber": true,
+        "transit": null,
+        "worldSeconds": 24.77,
+        "approachStart": null,
+        "loaded": null,
+        "bodyY": 278.358,
+        "yaw": 0,
+        "pitch": 0,
+        "floorY": 278,
+        "feetAboveFloor": 0.015,
+        "lowestBoneAboveFloor": null,
+        "headAboveFloor": 0.321,
+        "cameraAboveFloor": 0.358,
+        "floor": {
+          "mode": "painting",
+          "painted": true,
+          "glass": false,
+          "alive": 2,
+          "aliveVisible": 2,
+          "aliveAlpha": [
+            0.58,
+            0.58
+          ],
+          "aliveScale": [
+            0.1,
+            0.3
+          ]
+        },
+        "doors": [
+          {
+            "id": "room-b-return",
+            "phase": "closed",
+            "progress": 0
+          }
+        ],
+        "connector": null,
+        "story": null,
+        "lab": null,
+        "storyRoom": null,
+        "chess": {
+          "open": false,
+          "pieceView": null,
+          "table": null,
+          "me": "local",
+          "rockFalling": false
+        },
+        "frameFailure": null
+      },
+      "pose": {
+        "eye": [
+          303.9185185047405,
+          292.5,
+          -17.959700940515752
+        ],
+        "target": [
+          300,
+          278.6,
+          -24
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ]
+      }
+    }
+  ],
+  "final": {
+    "probe": {
+      "room": "room-b",
+      "x": 300,
+      "z": -19.4,
+      "transitChamber": true,
+      "transit": null,
+      "worldSeconds": 25.236,
+      "approachStart": null,
+      "loaded": null,
+      "bodyY": 278.358,
+      "yaw": 0,
+      "pitch": 0,
+      "floorY": 278,
+      "feetAboveFloor": 0.016,
+      "lowestBoneAboveFloor": null,
+      "headAboveFloor": 0.322,
+      "cameraAboveFloor": 14.5,
+      "floor": {
+        "mode": "painting",
+        "painted": true,
+        "glass": false,
+        "alive": 2,
+        "aliveVisible": 2,
+        "aliveAlpha": [
+          0.562,
+          0.58
+        ],
+        "aliveScale": [
+          0.1,
+          0.3
+        ]
+      },
+      "doors": [
+        {
+          "id": "room-b-return",
+          "phase": "closed",
+          "progress": 0
+        }
+      ],
+      "connector": null,
+      "story": null,
+      "lab": null,
+      "storyRoom": null,
+      "chess": {
+        "open": false,
+        "pieceView": null,
+        "table": null,
+        "me": "local",
+        "rockFalling": false
+      },
+      "frameFailure": null
+    },
+    "skyVariant": "cosmic-cliffs"
+  }
+}

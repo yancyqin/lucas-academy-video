@@ -1,0 +1,44 @@
+{
+  "source": "Actual local Bible Sequence renderer",
+  "viewport": [
+    1280,
+    720
+  ],
+  "scale": 1.5,
+  "post_capture_zoom": false,
+  "source_code_changed": false,
+  "completed_letters": 41,
+  "expected_letters": 41,
+  "frames": [
+    {
+      "label": "read",
+      "box": {
+        "x": 100,
+        "y": 8,
+        "width": 1080,
+        "height": 702
+      },
+      "visible": true
+    },
+    {
+      "label": "recall",
+      "box": {
+        "x": 100,
+        "y": 18,
+        "width": 1080,
+        "height": 678
+      },
+      "visible": true
+    },
+    {
+      "label": "complete",
+      "box": {
+        "x": 100,
+        "y": 8,
+        "width": 1080,
+        "height": 702
+      },
+      "visible": true
+    }
+  ]
+}

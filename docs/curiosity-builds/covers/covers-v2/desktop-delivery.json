@@ -1,0 +1,16 @@
+{
+  "method": "Built-in ImageGen edit",
+  "workspace_file": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-v2/02-ideas-to-worlds-coaster-v2.png",
+  "desktop_file": "/Users/yqin/Desktop/Curiosity Builds - Final/封面与文案/02-从草图到世界.png",
+  "desktop_prompt": "/Users/yqin/Desktop/Curiosity Builds - Final/封面与文案/B封面修改提示词.txt",
+  "width": 1672,
+  "height": 941,
+  "bytes": 2282125,
+  "sha256": "262e79f73a54c424fec50e981d83ac6e6c7b356777ce62d9cb3c8c595bfc86cd",
+  "selected_cover": "B",
+  "headline": "FROM IDEAS / TO WORLDS",
+  "background": "Defocused actual ice-blue roller-coaster room screenshot supplied as compositing input.",
+  "text": "White first line; gold second line.",
+  "previous_version_retained": true,
+  "video_changed": false
+}

@@ -1,0 +1,398 @@
+{
+  "title": "What Can Curiosity Build?",
+  "language": "en",
+  "narration": false,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "fps": 30,
+  "projects": [
+    {
+      "id": "chess",
+      "name": "Balanced Chess",
+      "question": "What Can Curiosity Build?",
+      "prompt": "Build Balanced Chess with comeback points and falling rocks.",
+      "steps": [
+        "Board",
+        "World",
+        "Rules"
+      ],
+      "url": "is.lucasacademy.org/chess",
+      "clips": [
+        {
+          "file": "chess-lobby",
+          "seconds": 4,
+          "caption": "Choose a world. Take a seat."
+        },
+        {
+          "file": "chess-play",
+          "seconds": 10,
+          "caption": "Your move."
+        },
+        {
+          "file": "chess-comeback-play",
+          "seconds": 9,
+          "caption": "COMEBACK · Fall behind. Earn points. Bring a piece back.",
+          "rule": "COMEBACK",
+          "detail": [
+            "More than 5 points behind?",
+            "Earn points to revive fallen pieces.",
+            "Each piece gets one comeback."
+          ]
+        },
+        {
+          "file": "chess-rockfall-play",
+          "seconds": 8,
+          "caption": "ROCKFALL · Rocks can strike the leading side.",
+          "rule": "ROCKFALL",
+          "detail": [
+            "Rocks may hit the leading side.",
+            "Kings and queens stay safe.",
+            "No rocks while the score is tied."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bible",
+      "name": "Bible Sequence",
+      "question": "Can We Build a Game with the Bible?",
+      "prompt": "Read a verse. Hide the words. Rebuild it in order.",
+      "steps": [
+        "Read",
+        "Remember",
+        "Rebuild"
+      ],
+      "url": "bible.lucasacademy.org",
+      "clips": [
+        {
+          "file": "bible-home-sequence",
+          "seconds": 3,
+          "speed": 2,
+          "caption": "Sequence",
+          "subtitle_zh": "选择玩法：经文复原（Sequence）"
+        },
+        {
+          "file": "bible-sequence-fast",
+          "seconds": 8,
+          "speed": 2,
+          "caption": "Sequence"
+        },
+        {
+          "file": "bible-home-next-word",
+          "seconds": 2.5,
+          "speed": 2,
+          "caption": "Next Word",
+          "subtitle_zh": "选择玩法：预测下一个词（Next Word）"
+        },
+        {
+          "file": "bible-next-word-fast",
+          "seconds": 10.5,
+          "speed": 2,
+          "caption": "Next Word"
+        }
+      ]
+    },
+    {
+      "id": "vangogh",
+      "name": "Van Gogh House",
+      "question": "Can We Decorate a Painted Room Together?",
+      "prompt": "Turn our paintings into a world we can walk inside.",
+      "steps": [
+        "Paintings",
+        "Living surfaces",
+        "A room to explore"
+      ],
+      "url": "is.lucasacademy.org/tour?start=van-gogh",
+      "clips": [
+        {
+          "file": "vangogh-room",
+          "seconds": 20,
+          "caption": "Children’s paintings become the world around you."
+        }
+      ]
+    },
+    {
+      "id": "journey",
+      "name": "Journey of Art",
+      "question": "Can We Design Your Art Gallery Together?",
+      "prompt": "Bring our art projects together in a gallery we can explore.",
+      "steps": [
+        "Studies",
+        "Series",
+        "A shared gallery"
+      ],
+      "url": "is.lucasacademy.org/tour?start=journey-of-art",
+      "clips": [
+        {
+          "file": "journey-original-walk",
+          "seconds": 20,
+          "caption": "Walk through a gallery of our own making.",
+          "start": 23.5
+        }
+      ]
+    },
+    {
+      "id": "sky",
+      "name": "The Sky",
+      "question": "Can We Discover the Universe in a Living Sky?",
+      "prompt": "Build a floating room with living water and endless stars.",
+      "steps": [
+        "Water",
+        "Starlight",
+        "An open world"
+      ],
+      "url": "is.lucasacademy.org",
+      "clips": [
+        {
+          "file": "sky-continuous-cosmic-cliffs",
+          "seconds": 25,
+          "caption": "Enter a living sky. Rise, turn, and look back."
+        }
+      ]
+    },
+    {
+      "id": "chameleon",
+      "name": "Painterly Chameleon",
+      "question": "Can We Create a Hide-and-Seek Game?",
+      "prompt": "Paint a disguise. Hide in the artwork. Challenge a friend.",
+      "steps": [
+        "Paint",
+        "Camouflage",
+        "Hide and seek"
+      ],
+      "url": "pc.lucasacademy.org",
+      "clips": [
+        {
+          "file": "chameleon-paint",
+          "seconds": 6.5,
+          "caption": "Paint a disguise that belongs in the picture.",
+          "start": 4
+        },
+        {
+          "file": "chameleon-seek",
+          "seconds": 5.5,
+          "caption": "Then look closely. What is hiding here?",
+          "start": 2
+        }
+      ]
+    },
+    {
+      "id": "cube",
+      "name": "The Cube",
+      "question": "Can We Build an 11×11 Cube?",
+      "prompt": "Build cubes of any size. Let me learn each move.",
+      "steps": [
+        "Pieces",
+        "Layers",
+        "A working puzzle"
+      ],
+      "url": "is.lucasacademy.org/cube",
+      "clips": [
+        {
+          "file": "cube-play",
+          "seconds": 10,
+          "caption": "Turn a layer. Test a pattern."
+        },
+        {
+          "file": "cube-solve",
+          "seconds": 10,
+          "caption": "From 2 × 2 to 11 × 11. Follow a solution."
+        }
+      ]
+    },
+    {
+      "id": "coder",
+      "name": "Coder Arena",
+      "question": "Can We Compete in Coder Arena?",
+      "prompt": "Write a bot. Change its strategy. Let it play.",
+      "steps": [
+        "A rule",
+        "A bot",
+        "An arena"
+      ],
+      "url": "snake-lab-coder.lucasacademy.org",
+      "clips": [
+        {
+          "file": "coder-arena",
+          "start": 8,
+          "seconds": 10,
+          "caption": "CODER ARENA · Test your bot against a rival."
+        },
+        {
+          "file": "monthly-ranking",
+          "start": 5,
+          "seconds": 10,
+          "caption": "MONTHLY RANKING · An eight-bot battle running on the server."
+        }
+      ]
+    },
+    {
+      "id": "roller",
+      "name": "Formula Roller Coasters",
+      "question": "Can We Build a Ride from Formulas?",
+      "prompt": "Turn a formula into a roller coaster with a spiraling funnel.",
+      "steps": [
+        "Sketch",
+        "Equation",
+        "Rideable ribbon"
+      ],
+      "url": "is.lucasacademy.org/tour?start=manifold",
+      "clips": [
+        {
+          "file": "roller-entry",
+          "seconds": 2.6,
+          "caption": "Walk in. Look around."
+        },
+        {
+          "file": "roller-line",
+          "seconds": 2,
+          "caption": "A line."
+        },
+        {
+          "file": "roller-parabola",
+          "seconds": 3,
+          "caption": "A parabola."
+        },
+        {
+          "file": "roller-overview",
+          "seconds": 2,
+          "caption": "A spiraling funnel."
+        },
+        {
+          "file": "roller-funnel",
+          "seconds": 7.4,
+          "caption": "Follow the curve."
+        },
+        {
+          "file": "roller-mobius",
+          "seconds": 12,
+          "caption": "A Möbius strip. One surface. Keep going."
+        }
+      ]
+    }
+  ],
+  "ending_seconds": 18,
+  "ending_questions": [
+    "What are you curious about?",
+    "What will you build?",
+    "Where will you make a difference?"
+  ],
+  "revision": 10,
+  "order_rationale": "Chess: Chopin Raindrop → Bible: Debussy Clair de lune → art rooms: Chopin Nocturne → Sky: Bach Air on the G String → games and finale: Mozart.",
+  "music_groups": [
+    {
+      "key": "raindrop",
+      "projects": [
+        "chess"
+      ],
+      "source_start": 0,
+      "target_lufs": -25,
+      "label": "Chess — Chopin Raindrop"
+    },
+    {
+      "key": "debussy",
+      "projects": [
+        "bible"
+      ],
+      "source_start": 10,
+      "target_lufs": -24.5,
+      "label": "Bible — Debussy Clair de lune"
+    },
+    {
+      "key": "chopin",
+      "projects": [
+        "vangogh",
+        "journey"
+      ],
+      "source_start": 24,
+      "target_lufs": -24,
+      "label": "Warmth and discovery"
+    },
+    {
+      "key": "air",
+      "projects": [
+        "sky"
+      ],
+      "source_start": 0,
+      "target_lufs": -23.5,
+      "label": "A spacious string Air for the living sky"
+    },
+    {
+      "key": "mozart",
+      "projects": [
+        "chameleon",
+        "cube",
+        "coder"
+      ],
+      "include_next_intro_seconds": 7.2,
+      "source_start": 89.2,
+      "target_lufs": -20,
+      "label": "From playful motion to competition"
+    },
+    {
+      "key": "mozart",
+      "projects": [
+        "roller"
+      ],
+      "skip_first_seconds": 7.2,
+      "through_ending": true,
+      "end_at_source_end": true,
+      "target_lufs": -18,
+      "label": "The actual ride and the orchestral finale"
+    }
+  ],
+  "no_small_editorial_text": true,
+  "production_changes": {
+    "journey_build": "Only the lower Sweet Home 3D model preview; no 2D plan or application controls.",
+    "sky": "One continuous 25-second Cosmic Cliffs take: native transition-room flight, entry, ascending orbit, then fixed-height downward orbit.",
+    "background": "Owner-supplied Jesus, Joy of Man’s Desiring opening picture only, blurred and faded.",
+    "editorial_typography": "No small text, brand headers, URLs, running captions, or footers. Large project questions, concise prompts, and essential rule labels only.",
+    "bible": "Live homepage selection, then Sequence/Rebuild and Next Word, captured at a complete natural viewport and played at approximately 2× speed. Body 24 seconds; chapter 31.2 seconds.",
+    "cube": "Can We Build an 11×11 Cube? Full actual web viewport and unfinished concept sketch retained.",
+    "roller": "Actual native ice-blue spaceGlass funnel and white/ice black hole in entry, overhead spiral and ride shots.",
+    "titles": "Each chapter begins with one standalone main title, continuously shrinks and moves into title-and-illustration, then replaces only the left text with the process prompt. Demo follows. No additional centered build layout.",
+    "chess": "The film begins directly with Balanced Chess: What Can Curiosity Build? No separate opening title or duplicate title switch.",
+    "gallery_concepts": "New architectural gallery concept sketches, half line art and half colored, replace both procedural placeholders."
+  },
+  "transitions": {
+    "project_picture_frames": 24,
+    "build_to_footage_frames": 18,
+    "shot_picture_frames": 12,
+    "film_picture_fade_in_frames": 30,
+    "film_picture_fade_out_frames": 36,
+    "standalone_picture_fade_in_frames": 18,
+    "standalone_picture_fade_out_frames": 24,
+    "music_crossfade_seconds": 2.0,
+    "music_fade_in_seconds": 1.2,
+    "music_fade_out_seconds": 2.4,
+    "standalone_audio_fade_in_seconds": 0.8,
+    "standalone_audio_fade_out_seconds": 1.0,
+    "timing": "Centered dissolves with short cloned edge handles preserve every original frame and the exact subtitle clock."
+  },
+  "intro_motion": {
+    "layout_count": 2,
+    "diagram_present_from_frame": 42,
+    "fixed_right_hand_picture": true,
+    "title_fade_start_frame": 75,
+    "title_end_frame": 90,
+    "prompt_reveal_start_frame": 96,
+    "prompt_reveal_end_frame": 110,
+    "prompt_fade_start_frame": 202,
+    "prompt_end_frame": 216,
+    "journey_preview_start_frame": 96,
+    "journey_preview_end_frame": 216,
+    "process_step_chain": false,
+    "duration_frames": 216,
+    "standalone_title_until_frame": 30,
+    "title_zoom_start_frame": 30,
+    "title_zoom_end_frame": 54,
+    "diagram_full_frame": 60,
+    "single_title_node": true,
+    "initial_title_scale": 1.38,
+    "final_title_scale": 1,
+    "title_transition": "standalone title → continuous scale/move → title and illustration → prompt and process → demo"
+  },
+  "opening_seconds": 0
+}

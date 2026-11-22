@@ -1,0 +1,15 @@
+Edit ONLY the lighting and surface appearance of the existing white headline in IMAGE 1.
+
+INPUT ROLES:
+IMAGE 1 = EDIT TARGET, the approved cover B: two-line white serif title above a half-sketch / half-painted isometric gallery, on a blurred blue roller-coaster-room background.
+IMAGE 2 = LETTER-LIGHTING REFERENCE ONLY, supplied by the owner. Look specifically at the lettering in that reference: the broad soft shifts from brighter illuminated areas to gently shaded areas across the letter faces. Borrow that sense of changing illumination and light falling across the type. Do NOT borrow the room, architecture, lion, font, words, colors of the environment, or layout from image 2.
+
+The owner wants the title to have visible light-and-shade variation across its surfaces, as if soft gallery spotlights illuminate solid white lettering. The previous edit mostly added fine bevels while the faces remained uniformly white. NOW make the broad face lighting the main effect: a gentle oblique wash of light and soft shaded regions travel across the letter faces and along each line, so some parts catch pearly-white highlights and other parts sit in a restrained pale neutral-gray or very subtly warm off-white shade. Make this light variation clearly perceptible yet elegant, like the owner's reference. Keep the letters recognizably WHITE overall and very readable.
+
+Preserve the approved original serif font, letter shapes, size, spacing, exact position and two-line arrangement:
+"FROM IDEAS"
+"TO WORLDS"
+
+Both lines use the SAME white material and lighting treatment. No yellow or gold line, no differently colored emphasized words. The existing very shallow dimensional relief can remain, but avoid hard outlined bevels, chunky extrusion, mirror chrome, sparkling flares, neon glow, plastic-shiny gradients, long shadows or a metallic silver headline. The effect should read as directional LIGHT AND SHADE on white letter surfaces, not decorative effects.
+
+Preserve EVERY OTHER aspect of image 1: the whole gallery illustration and its half-line / half-color state, painting details, blur and colors of the real coaster-room backdrop, crop and wide landscape composition. Do not recompose or replace the scene. No extra text or any words from image 2. This is a carefully scoped typography lighting refinement.

@@ -1,0 +1,50 @@
+{
+  "url": "https://bible.lucasacademy.org/",
+  "viewport": [
+    1280,
+    720
+  ],
+  "post_capture_zoom": false,
+  "box": {
+    "x": 190,
+    "y": 8,
+    "width": 900,
+    "height": 702
+  },
+  "visible": true,
+  "controls": [
+    {
+      "text": "obedient",
+      "x": 270,
+      "y": 441.16668701171875,
+      "w": 364,
+      "h": 64,
+      "visible": true
+    },
+    {
+      "text": "newborn",
+      "x": 646,
+      "y": 441.16668701171875,
+      "w": 364,
+      "h": 64,
+      "visible": true
+    },
+    {
+      "text": "perhaps",
+      "x": 270,
+      "y": 517.1666870117188,
+      "w": 364,
+      "h": 64,
+      "visible": true
+    },
+    {
+      "text": "path",
+      "x": 646,
+      "y": 515.1666870117188,
+      "w": 364,
+      "h": 64,
+      "visible": true
+    }
+  ],
+  "correct_predictions": 10
+}

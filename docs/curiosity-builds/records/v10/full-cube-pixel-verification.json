@@ -1,0 +1,22 @@
+{
+  "cube": [
+    {
+      "source": "cube-play",
+      "source_second": 4,
+      "delivered_second": 11.2,
+      "full_web_frame_mean_gray_error": 0.16340278089046478,
+      "right_control_panel_mean_gray_error": 0.12980902194976807,
+      "full_viewport_preserved": true
+    },
+    {
+      "source": "cube-solve",
+      "source_second": 4,
+      "delivered_second": 21.2,
+      "full_web_frame_mean_gray_error": 0.15164931118488312,
+      "right_control_panel_mean_gray_error": 0.15171875059604645,
+      "full_viewport_preserved": true
+    }
+  ],
+  "ice_funnel_final_frame_mean_luma": 39.77604293823242,
+  "no_accidental_black_frame_at_funnel_end": true
+}

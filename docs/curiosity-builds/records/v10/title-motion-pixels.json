@@ -1,0 +1,37 @@
+{
+  "source": "actual rendered chess.mp4",
+  "mask": "Neutral near-white glyph pixels; cyan/gold illustration excluded.",
+  "samples": [
+    {
+      "frame": 24,
+      "seconds": 0.8,
+      "white_text_bbox": [
+        339,
+        341,
+        1534,
+        601
+      ]
+    },
+    {
+      "frame": 42,
+      "seconds": 1.4,
+      "white_text_bbox": [
+        220,
+        328,
+        1250,
+        553
+      ]
+    },
+    {
+      "frame": 66,
+      "seconds": 2.2,
+      "white_text_bbox": [
+        100,
+        315,
+        965,
+        503
+      ]
+    }
+  ],
+  "title_scales_down_and_moves_left": true
+}

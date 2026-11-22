@@ -1,0 +1,12 @@
+{
+  "request": "也给我个中文封面",
+  "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-v6/02-ideas-to-worlds-neutral-white-v6.png",
+  "source_sha256": "b5eae978d7a300b20cdba94ebc986fb43ca01c3047f6050109ff9461485e48a3",
+  "headline_lines": [
+    "从想法",
+    "到世界"
+  ],
+  "language": "Simplified Chinese only",
+  "method": "Built-in ImageGen text-localization edit",
+  "preserve": "B composition, half-sketch gallery, blurred coaster room, neutral-white light/shade on the headline."
+}

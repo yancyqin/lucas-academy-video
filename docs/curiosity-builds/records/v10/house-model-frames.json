@@ -1,0 +1,12 @@
+{
+  "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v9/captures/sweet-home-v3-model-only.mp4",
+  "native_source_frames": 105,
+  "output_intro_frames": [
+    96,
+    216
+  ],
+  "output_process_frames": 120,
+  "source_playback_rate": 0.875,
+  "image_sequence_count": 105,
+  "same_fixed_right_hand_picture": true
+}

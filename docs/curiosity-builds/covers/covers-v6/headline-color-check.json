@@ -1,0 +1,14 @@
+[
+  {
+    "revision": "v5",
+    "pixels": 74601,
+    "mean_red_minus_blue": 24.91,
+    "median_channel_range": 25.0
+  },
+  {
+    "revision": "v6",
+    "pixels": 81780,
+    "mean_red_minus_blue": -2.145,
+    "median_channel_range": 1.0
+  }
+]

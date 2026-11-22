@@ -1,0 +1,35 @@
+﻿Curiosity Builds｜封面、标题与简介
+
+推荐标题
+What Can Curiosity Build? | 9 Projects to Explore
+
+推荐简介（英文，可直接复制）
+A chess game with comeback rules. A ride built from formulas. A gallery made from our art.
+
+This short film follows nine Lucas Academy projects from a simple idea, through the building process, into something we can play, explore, or create with—from art and living skies to puzzles, coding competitions, and Bible games.
+
+What are you curious about?
+What will you build?
+Where will you make a difference?
+
+精简版简介
+Explore nine Lucas Academy projects where curiosity becomes art, games, and worlds to explore. What will you build?
+
+三个封面方向及对应标题
+1. 通往新世界
+封面文字：What Can Curiosity Build?
+视频标题：What Can Curiosity Build? | 9 Projects to Explore
+深色电影感，门后是流水与宇宙；与片头提问和古典配乐的气质相连。
+
+2. 从草图到世界
+封面文字：FROM IDEAS TO WORLDS
+视频标题：From Ideas to Worlds | What Can Curiosity Build?
+虚化的冰蓝过山车房间作背景；画廊保留半线稿、半上色，白色标题参考提供的示例，带柔和的字面明暗与反光。
+
+3. 建造、玩耍、探索
+封面文字：BUILD. PLAY. DISCOVER.
+视频标题：Build. Play. Discover. | 9 Projects from Lucas Academy
+大字、棋子和冰蓝轨道；更强调游戏、挑战与动手探索。
+
+封面：16:9；仅使用醒目的英文大字。
+原图使用内置 ImageGen 生成；完整提示词另存于 prompts.json。

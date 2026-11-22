@@ -1,0 +1,16 @@
+Edit the first image, the selected cover B. Preserve its composition, gallery footprint and exact headline. This is a targeted background and typography-color revision, not a new design.
+
+INPUT ROLES:
+Image 1 = EDIT TARGET: the "FROM IDEAS / TO WORLDS" cover with its half-drawn, half-colored isometric gallery.
+Image 2 = ACTUAL BACKGROUND SOURCE: a real screenshot from this video's ice-blue formula-built roller-coaster room, with blue spiral tracks, gold rail edges and a dark star-filled room. Use THIS screenshot as the backdrop, softly defocused. Keep its recognizable track curves and spatial character; do not invent a different coaster environment.
+
+CHANGES:
+1. Replace ALL warm beige paper background outside the gallery with a full-bleed, dark-blue, visibly BLURRED version of Image 2. Remove paper grain and every beige paper patch. Fill the complete canvas without screenshot letterbox bars. The coaster should be recognizable through its broad ice-blue/gold curves, but gently out of focus so it stays behind the foreground.
+2. Keep the foreground art gallery crisp, in the same position, scale, perspective and half-sketch / half-painted state. Preserve the blue floors, gold-and-blue painted room, framed artworks, and cutaway architecture. The unfinished LEFT gallery lines should become luminous pale ice-white drafting lines, readable on the dark backdrop. Do not replace the gallery with a coaster or add new foreground objects. Existing pale architectural walls can remain light; the removed beige material is the PAPER BACKGROUND.
+3. Keep the same bold elegant serif headline, same two lines and same large size, in the same upper-left position. Change the first line to clean brilliant WHITE and the second line to saturated warm GOLD/YELLOW (#FFD45A), both with strong contrast against the navy background. Apply a restrained dark edge/shadow and subtly darken the background behind the headline if needed. No beige banner, no text box, no little subtitle. Keep all letters sharp and easily readable at thumbnail size.
+
+Exact text, unchanged:
+"FROM IDEAS"
+"TO WORLDS"
+
+Maintain the original wide 16:9 framing, generous safe margins, and the original gallery illustration's refined hand-drawn quality. The entire backdrop is now the blurred actual coaster-room screenshot. No beige or ivory paper ground, no paper texture, no new copy, logo, watermark, footer, UI, people, arrows or labels.
