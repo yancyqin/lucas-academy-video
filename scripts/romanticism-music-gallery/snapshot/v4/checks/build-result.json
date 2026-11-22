@@ -1,0 +1,56 @@
+{
+  "master": "@DATA_ROOT@/v4/exports/山、海、人间-纯英文纯音乐版.mp4",
+  "duration": 1740.4166666666667,
+  "artwork_count": 34,
+  "narration": false,
+  "source_video_audio": false,
+  "music_program_sha256": "01564de626fb10ba4bbeb4532e02e30fdf115ce75b8826aaa2a2d088829fda24",
+  "music_program_source": "@DATA_ROOT@/audio/complete-program.wav",
+  "music_files": [
+    {
+      "file": "@DATA_ROOT@/music/prelude-28-15.m4a",
+      "sha256": "e9ecf9c8683119c1f090ba83c21ab7abc076d6a74e59702c5f75c4cf1481ac0f",
+      "duration": 316.367
+    },
+    {
+      "file": "@DATA_ROOT@/music/nocturne-9-2.m4a",
+      "sha256": "3d1c1473dbed61eec8d45384117ebff602110b7e5edbbcf6330351c0ce88e1cf",
+      "duration": 271.469
+    },
+    {
+      "file": "@DATA_ROOT@/music/nocturne-c-sharp.m4a",
+      "sha256": "e5794e60f5d8db18411e1cc6456ca70628423a2aae296e1d61664bd18b03b2e8",
+      "duration": 225.008
+    },
+    {
+      "file": "@DATA_ROOT@/music/beethoven-pathetique-ii.mp3",
+      "sha256": "51972c9bd6049193b0d1cea4f2e7cbcc5071db8fbb3e3cff5f7a45a49526a254",
+      "duration": 380.544376
+    },
+    {
+      "file": "@DATA_ROOT@/music/beethoven-egmont.flac",
+      "sha256": "d7dbae975631508bf579a518cc90922edce0448a59f4ede181e2e377f4cd38de",
+      "duration": 540.896688
+    }
+  ],
+  "approved_audio_source": "@DATA_ROOT@/v3/exports/山海与人间-中英标签纯音乐版.mp4",
+  "audio_policy": "Copied the approved AAC stream without re-encoding; all five complete recordings unchanged.",
+  "shared_native_room": true,
+  "route": {
+    "mps": 3.693659688819258,
+    "degreesPerSecond": 13.808449604072656
+  },
+  "same_stationary_pose_before_and_after_plate": true,
+  "flat_fade_seconds": 1.35,
+  "reference_opening": "assets/gallery-entry.mp4",
+  "opening_native_capture": "footage/walk/walk-000.mp4",
+  "label_style": "label-style.json",
+  "film_label_languages": [
+    "en"
+  ],
+  "separate_subtitles": [
+    "en",
+    "zh-Hans"
+  ],
+  "source_room_modified": false
+}

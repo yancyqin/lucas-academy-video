@@ -1,0 +1,56 @@
+{
+  "status": "passed",
+  "files": [
+    {
+      "file": "山、海、人间.en.srt",
+      "language": "en",
+      "cues": 43,
+      "offset_seconds": 0,
+      "duration_seconds": 1740.4166666666667,
+      "sha256": "4ac9b4281dd46330bc049d32f7088003c2953caac2a1e2521ab1b87c72a4b80e"
+    },
+    {
+      "file": "自然篇-肖邦.en.srt",
+      "language": "en",
+      "cues": 24,
+      "offset_seconds": 0,
+      "duration_seconds": 815.9166666666666,
+      "sha256": "938edd26a94fef0d3cef56dc11de97b0fe9fdc488cc3aa5d8913892b1b0a01b0"
+    },
+    {
+      "file": "人间篇-贝多芬.en.srt",
+      "language": "en",
+      "cues": 19,
+      "offset_seconds": 817.4166666666666,
+      "duration_seconds": 923.0000000000001,
+      "sha256": "1ff6e74a939e688bb706c75d72ce947203e7ff102201e2a12eab208709210c38"
+    },
+    {
+      "file": "山、海、人间.zh.srt",
+      "language": "zh-Hans",
+      "cues": 43,
+      "offset_seconds": 0,
+      "duration_seconds": 1740.4166666666667,
+      "sha256": "aaeb9e0f2556eb0497ef3b49ba99fb45523b636d60b77cb4565de7b67241f190"
+    },
+    {
+      "file": "自然篇-肖邦.zh.srt",
+      "language": "zh-Hans",
+      "cues": 24,
+      "offset_seconds": 0,
+      "duration_seconds": 815.9166666666666,
+      "sha256": "1a08e2b6c954cf010b0e25008d92658bb106992e8b8139d4cdce7938f15d3ab3"
+    },
+    {
+      "file": "人间篇-贝多芬.zh.srt",
+      "language": "zh-Hans",
+      "cues": 19,
+      "offset_seconds": 817.4166666666666,
+      "duration_seconds": 923.0000000000001,
+      "sha256": "a769c67775dd9a932e6a4ef5f17f0c17ce7ae0caa2aa754cdcce487ca9dc8d0f"
+    }
+  ],
+  "no_overlapping_cues": true,
+  "same_timing_in_both_languages": true,
+  "content": "On-screen headings, music, artwork titles and artists; no invented narration."
+}

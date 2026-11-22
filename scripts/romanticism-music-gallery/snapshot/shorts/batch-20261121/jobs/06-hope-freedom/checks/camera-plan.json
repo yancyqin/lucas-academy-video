@@ -1,0 +1,289 @@
+{
+  "anchors": [
+    {
+      "t": 0,
+      "eye": [
+        20,
+        4.05,
+        25
+      ],
+      "target": [
+        27.375,
+        6,
+        17
+      ],
+      "fov": 56
+    },
+    {
+      "t": 1,
+      "eye": [
+        20,
+        4.05,
+        25
+      ],
+      "target": [
+        27.375,
+        6,
+        17
+      ],
+      "fov": 56
+    },
+    {
+      "t": 9,
+      "eye": [
+        16.405341024977044,
+        4.05,
+        15.4
+      ],
+      "target": [
+        27.375,
+        4.05,
+        15.4
+      ],
+      "fov": 52
+    },
+    {
+      "t": 14.2,
+      "eye": [
+        16.405341024977044,
+        4.05,
+        15.4
+      ],
+      "target": [
+        27.375,
+        4.05,
+        15.4
+      ],
+      "fov": 52
+    },
+    {
+      "t": 20,
+      "eye": [
+        16.405341024977044,
+        4.05,
+        15.4
+      ],
+      "target": [
+        27.375,
+        4.3083984375,
+        16.372
+      ],
+      "fov": 15.5
+    },
+    {
+      "t": 21,
+      "eye": [
+        16.405341024977044,
+        4.05,
+        15.4
+      ],
+      "target": [
+        27.375,
+        4.3083984375,
+        16.372
+      ],
+      "fov": 15.5
+    },
+    {
+      "t": 23,
+      "eye": [
+        16.405341024977044,
+        4.05,
+        15.4
+      ],
+      "target": [
+        27.375,
+        4.05,
+        15.4
+      ],
+      "fov": 52
+    },
+    {
+      "t": 27,
+      "eye": [
+        17.2,
+        8.5,
+        6.16
+      ],
+      "target": [
+        21.2,
+        14.5,
+        -2.84
+      ],
+      "fov": 52
+    },
+    {
+      "t": 34,
+      "eye": [
+        17.88623284810292,
+        9.7,
+        -15.4
+      ],
+      "target": [
+        27.375,
+        9.7,
+        -15.4
+      ],
+      "fov": 52
+    },
+    {
+      "t": 39.3,
+      "eye": [
+        17.88623284810292,
+        9.7,
+        -15.4
+      ],
+      "target": [
+        27.375,
+        9.7,
+        -15.4
+      ],
+      "fov": 52
+    },
+    {
+      "t": 46.5,
+      "eye": [
+        17.88623284810292,
+        9.7,
+        -15.4
+      ],
+      "target": [
+        27.375,
+        9.7,
+        -15.214954822954823
+      ],
+      "fov": 21
+    },
+    {
+      "t": 49,
+      "eye": [
+        17.88623284810292,
+        9.7,
+        -15.4
+      ],
+      "target": [
+        27.375,
+        9.7,
+        -15.214954822954823
+      ],
+      "fov": 21
+    },
+    {
+      "t": 55,
+      "eye": [
+        15.000000000000002,
+        9.7,
+        -15.4
+      ],
+      "target": [
+        27.375,
+        9.7,
+        -15.4
+      ],
+      "fov": 56
+    },
+    {
+      "t": 58,
+      "eye": [
+        15.000000000000002,
+        9.7,
+        -15.4
+      ],
+      "target": [
+        27.375,
+        9.7,
+        -15.4
+      ],
+      "fov": 56
+    }
+  ],
+  "maxMps": 4.629267891536945,
+  "maxDegrees": 26.633686440788136,
+  "works": [
+    {
+      "id": "raft-medusa",
+      "title_zh": "梅杜萨之筏",
+      "title_en": "The Raft of the Medusa",
+      "artist_zh": "泰奥多尔·籍里柯",
+      "artist_en": "Theodore Gericault",
+      "year": "1819",
+      "year_sort": 1819,
+      "source": "https://collections.louvre.fr/en/ark:/53355/cl010059199",
+      "license": "Public domain",
+      "label_en": "The Raft of the Medusa",
+      "wall": "social",
+      "category": "romantic",
+      "image": "romanticism-salon-v1/raft-medusa.jpg",
+      "aspect": 1.4628571428571429,
+      "width": 5.4,
+      "height": 3.6914062500000004,
+      "bytes": 249615,
+      "sha256": "3c942ad3e87cf7531aae93e38679357fc9ef977574c645c6336c5ab4fdd53b19",
+      "original_sha256": "b7324eee946e2df19076b65d37c954c8d0c720240c3082db41d8d990d310ae6c",
+      "branches": [
+        "narrated",
+        "music"
+      ],
+      "position": [
+        27.6,
+        4.05,
+        15.4
+      ],
+      "rotationY": -1.5707963267948966,
+      "eye": [
+        19.8,
+        4.05,
+        15.4
+      ],
+      "wallId": "social"
+    },
+    {
+      "id": "liberty",
+      "title_zh": "自由引导人民",
+      "title_en": "Liberty Leading the People",
+      "artist_zh": "欧仁·德拉克洛瓦",
+      "artist_en": "Eugene Delacroix",
+      "year": "1830",
+      "year_sort": 1830,
+      "source": "https://collections.louvre.fr/en/ark:/53355/cl010065872",
+      "license": "Public domain",
+      "label_en": "Liberty Leading the People",
+      "wall": "social",
+      "category": "romantic",
+      "image": "romanticism-salon-v1/liberty.jpg",
+      "aspect": 1.2503052503052503,
+      "width": 4.626129426129427,
+      "height": 3.7,
+      "bytes": 227741,
+      "sha256": "56fad1c4b82cb1f12da34a0e91ea5dc2b5ce2993732392002f4fecb92982b30a",
+      "original_sha256": "8399e6124d14eefb587ca2e57df79696898947900be8599ffc181ba60a49b529",
+      "branches": [
+        "narrated",
+        "music"
+      ],
+      "position": [
+        27.6,
+        9.7,
+        -15.4
+      ],
+      "rotationY": -1.5707963267948966,
+      "eye": [
+        19.8,
+        9.7,
+        -15.4
+      ],
+      "wallId": "social"
+    }
+  ],
+  "source_snapshot": {
+    "content/inception/artworks/romanticism-salon-v1.json": "f98221584e2bcc5e71ccfd5ccaac9ac8f22e6d9c43550807bf0e029a5cb70389",
+    "content/inception/artworks/romanticism-sculptures-v1.json": "326a94212e6691970c64cf973f9e768a65238262d5b90b12b5e6fc756eda1f67",
+    "content/inception/artworks/romanticism-selected-scans.json": "732b67f4880e393b9c09d4815a040b6b7d594a7e66530a1af253920a6d9e91dd",
+    "src/inception/world/rooms/romanticismLayout.js": "d6c1611bc10c680a818ec802c8fd007e7953d61b28cd130ef55272cb7a619cfd",
+    "src/inception/world/rooms/romanticismExhibits.ts": "2c6f076d89f0f4e4859ba2c259ddbd839566a8ee49ecc04c1ff3a8154de1f1b2",
+    "src/inception/world/render/threeRomanticismSalon.ts": "c714e33bf196e1eb499b2418fa6bead85e27f667052b69701fd7cd941b86d7ed",
+    "src/inception/world/render/romanticismSurfaces.ts": "de15c8d37a8190d7dae905d0dced7e5537f784f891903ff9abdd2a9341fec0c9",
+    "src/inception/world/model/museum.js": "79dfbe9c8e53f7396b2e6c21b52722cb097e37bab8824581e964c846005cdab5",
+    "src/inception/world/render/threeMuseum.ts": "a8bfbcc023923dd7609a0425ffa23bc9947abbe288f5e4f47e202a00615940b8"
+  }
+}

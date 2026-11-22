@@ -40,6 +40,9 @@ a sentence. Both run locally on this Mac.
 - [`CURIOSITY-BUILDS.md`](./CURIOSITY-BUILDS.md) -- Curiosity Builds v10 的文字归档：
   最终脚本、画面代码、字幕、素材来源、封面提示词与制作经验。为清理磁盘而保存，
   不包含视频、音频或图片；记录了日后重做所需的输入及无法保证原样恢复的部分。
+- [`ROMANTICISM-MUSIC-GALLERY.md`](./ROMANTICISM-MUSIC-GALLERY.md) -- 山、海、人间:
+  the approved instrumental gallery film, six portrait shorts, private-upload
+  skill, source credits and the dependency-aware cleanup inventory.
 
 ## Scripts and narration
 

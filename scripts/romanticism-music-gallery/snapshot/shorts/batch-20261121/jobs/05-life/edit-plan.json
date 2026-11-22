@@ -1,0 +1,211 @@
+{
+  "id": "05-life",
+  "number": 5,
+  "title": "青年与暮年",
+  "title_en": "Youth and Old Age",
+  "category": "human",
+  "works": [
+    "life-youth",
+    "life-old"
+  ],
+  "music": {
+    "title": "《埃格蒙特》序曲 Op. 84",
+    "composer": "贝多芬",
+    "performer": "Czech National Symphony Orchestra",
+    "source": "https://commons.wikimedia.org/wiki/File:Beethoven_EgmontOvertureOp.84_LudwigVanBeethoven-EgmontOvertureOp.84.ogg",
+    "license": "CC0 1.0",
+    "credit_note": "Musopen 录音；使用 Internet Archive 同一项目的 FLAC 母版。",
+    "local_file": "music/beethoven-egmont.flac",
+    "sha256": "d7dbae975631508bf579a518cc90922edce0448a59f4ede181e2e377f4cd38de",
+    "duration": 540.896688,
+    "start": 1199.5,
+    "end": 1740.4166666666665,
+    "constant_gain_db": -9.0,
+    "file": "@DATA_ROOT@/music/beethoven-egmont.flac",
+    "gain_db": -9,
+    "excerpt_start": 40,
+    "excerpt_seconds": 58
+  },
+  "excerpt": 40,
+  "names": [
+    "The Voyage of Life: Youth",
+    "The Voyage of Life: Old Age"
+  ],
+  "chinese": [
+    "生命之旅：青年",
+    "生命之旅：老年"
+  ],
+  "detail": [
+    {
+      "u": 0.7,
+      "v": 0.65,
+      "fov": 15.5
+    },
+    {
+      "u": 0.65,
+      "v": 0.7,
+      "fov": 12.5
+    }
+  ],
+  "start": {
+    "eye": [
+      -19.5,
+      4.05,
+      -26
+    ],
+    "target": [
+      -16,
+      12,
+      -42.375
+    ],
+    "fov": 62
+  },
+  "first_at": 12,
+  "first_label": 12.8,
+  "first_detail": 17.5,
+  "first_close": 23.5,
+  "pull_at": 24.5,
+  "walk_at": 27,
+  "second_at": 33,
+  "second_label": 33.5,
+  "second_detail": 38.7,
+  "second_close": 46,
+  "closing": {
+    "distance": 20.5,
+    "fov": 60,
+    "pair": true
+  },
+  "relation_zh": "科尔《生命之旅》中的青年与老年，两段河流旅程把向往与生命的有限性相连。",
+  "relation_en": "Youth and Old Age from Cole’s Voyage of Life: two river journeys connect expectation with the limits of a human life.",
+  "stem": "05-青年与暮年",
+  "root": "@DATA_ROOT@/shorts/batch-20261121/jobs/05-life",
+  "width": 1080,
+  "height": 1920,
+  "fps": 24,
+  "duration": 58,
+  "frames": 1392,
+  "artworks": [
+    {
+      "id": "life-youth",
+      "title_zh": "生命之旅：青年",
+      "title_en": "The Voyage of Life: Youth",
+      "artist_zh": "托马斯·科尔",
+      "artist_en": "Thomas Cole",
+      "year": "1842",
+      "year_sort": 1842,
+      "source": "https://www.nga.gov/artworks/52451-voyage-life-youth",
+      "license": "Public domain",
+      "label_en": "The Voyage of Life: Youth",
+      "wall": "time",
+      "category": "romantic",
+      "image": "romanticism-salon-v1/life-youth.jpg",
+      "aspect": 1.4607703281027105,
+      "width": 1024,
+      "height": 701,
+      "bytes": 207466,
+      "sha256": "25f5ab1c76bb67d488f8336682152885e3de65174619961a0624135af1891469",
+      "original_sha256": "b394571903fd1a15944515d8caf945e40dad378342a6b450ee2fcaa882237c6d",
+      "branches": [
+        "music"
+      ],
+      "file": "@DATA_ROOT@/art/life-youth.jpg",
+      "nudity": false
+    },
+    {
+      "id": "life-old",
+      "title_zh": "生命之旅：老年",
+      "title_en": "The Voyage of Life: Old Age",
+      "artist_zh": "托马斯·科尔",
+      "artist_en": "Thomas Cole",
+      "year": "1842",
+      "year_sort": 1842,
+      "source": "https://www.nga.gov/artworks/52453-voyage-life-old-age",
+      "license": "Public domain",
+      "label_en": "The Voyage of Life: Old Age",
+      "wall": "time",
+      "category": "romantic",
+      "image": "romanticism-salon-v1/life-old.jpg",
+      "aspect": 1.486211901306241,
+      "width": 1024,
+      "height": 689,
+      "bytes": 85986,
+      "sha256": "e7b5568805cb6505f87492465a566894ef50e61b184bee488ac9ea7d62a6d629",
+      "original_sha256": "192177d1f2c946f0888bdf7e0e01a6a660ffaadcd4ca175864191e18d3b451a5",
+      "branches": [
+        "music"
+      ],
+      "file": "@DATA_ROOT@/art/life-old.jpg",
+      "nudity": false
+    }
+  ],
+  "labels": [
+    {
+      "id": "theme",
+      "start": 0.65,
+      "end": 4.3,
+      "en": [
+        "Youth and Old Age"
+      ],
+      "zh": "青年与暮年",
+      "y": 356,
+      "size": 49,
+      "center": true,
+      "font_px": 49
+    },
+    {
+      "id": "music",
+      "start": 4.7,
+      "end": 8.4,
+      "en": [
+        "Beethoven · Egmont Overture"
+      ],
+      "zh": "贝多芬 ·《埃格蒙特》序曲",
+      "y": 230,
+      "size": 36,
+      "font_px": 36
+    },
+    {
+      "id": "life-youth",
+      "start": 12.8,
+      "end": 17.35,
+      "en": [
+        "The Voyage of Life: Youth",
+        "Thomas Cole"
+      ],
+      "zh": "生命之旅：青年\n托马斯·科尔",
+      "y": 150,
+      "size": 38,
+      "font_px": 38
+    },
+    {
+      "id": "life-old",
+      "start": 33.5,
+      "end": 38.550000000000004,
+      "en": [
+        "The Voyage of Life: Old Age",
+        "Thomas Cole"
+      ],
+      "zh": "生命之旅：老年\n托马斯·科尔",
+      "y": 150,
+      "size": 38,
+      "font_px": 38
+    }
+  ],
+  "source_repository": "@UI_ROOT@",
+  "source_snapshot": {
+    "content/inception/artworks/romanticism-salon-v1.json": "f98221584e2bcc5e71ccfd5ccaac9ac8f22e6d9c43550807bf0e029a5cb70389",
+    "content/inception/artworks/romanticism-sculptures-v1.json": "326a94212e6691970c64cf973f9e768a65238262d5b90b12b5e6fc756eda1f67",
+    "content/inception/artworks/romanticism-selected-scans.json": "732b67f4880e393b9c09d4815a040b6b7d594a7e66530a1af253920a6d9e91dd",
+    "src/inception/world/rooms/romanticismLayout.js": "d6c1611bc10c680a818ec802c8fd007e7953d61b28cd130ef55272cb7a619cfd",
+    "src/inception/world/rooms/romanticismExhibits.ts": "2c6f076d89f0f4e4859ba2c259ddbd839566a8ee49ecc04c1ff3a8154de1f1b2",
+    "src/inception/world/render/threeRomanticismSalon.ts": "c714e33bf196e1eb499b2418fa6bead85e27f667052b69701fd7cd941b86d7ed",
+    "src/inception/world/render/romanticismSurfaces.ts": "de15c8d37a8190d7dae905d0dced7e5537f784f891903ff9abdd2a9341fec0c9",
+    "src/inception/world/model/museum.js": "79dfbe9c8e53f7396b2e6c21b52722cb097e37bab8824581e964c846005cdab5",
+    "src/inception/world/render/threeMuseum.ts": "a8bfbcc023923dd7609a0425ffa23bc9947abbe288f5e4f47e202a00615940b8"
+  },
+  "picture_language": "en",
+  "subtitles": [
+    "zh-Hans"
+  ],
+  "narration": false
+}

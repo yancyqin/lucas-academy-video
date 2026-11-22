@@ -1,0 +1,213 @@
+{
+  "id": "06-hope-freedom",
+  "number": 6,
+  "title": "希望与自由",
+  "title_en": "Hope and Freedom",
+  "category": "human",
+  "works": [
+    "raft-medusa",
+    "liberty"
+  ],
+  "music": {
+    "title": "《埃格蒙特》序曲 Op. 84",
+    "composer": "贝多芬",
+    "performer": "Czech National Symphony Orchestra",
+    "source": "https://commons.wikimedia.org/wiki/File:Beethoven_EgmontOvertureOp.84_LudwigVanBeethoven-EgmontOvertureOp.84.ogg",
+    "license": "CC0 1.0",
+    "credit_note": "Musopen 录音；使用 Internet Archive 同一项目的 FLAC 母版。",
+    "local_file": "music/beethoven-egmont.flac",
+    "sha256": "d7dbae975631508bf579a518cc90922edce0448a59f4ede181e2e377f4cd38de",
+    "duration": 540.896688,
+    "start": 1199.5,
+    "end": 1740.4166666666665,
+    "constant_gain_db": -9.0,
+    "file": "@DATA_ROOT@/music/beethoven-egmont.flac",
+    "gain_db": -9,
+    "excerpt_start": 482,
+    "excerpt_seconds": 58
+  },
+  "excerpt": 482,
+  "original_paintings_only": true,
+  "names": [
+    "The Raft of the Medusa",
+    "Liberty Leading the People"
+  ],
+  "chinese": [
+    "梅杜萨之筏",
+    "自由引导人民"
+  ],
+  "detail": [
+    {
+      "u": 0.68,
+      "v": 0.43,
+      "fov": 15.5
+    },
+    {
+      "u": 0.54,
+      "v": 0.5,
+      "fov": 21
+    }
+  ],
+  "start": {
+    "eye": [
+      20,
+      4.05,
+      25
+    ],
+    "target": [
+      27.375,
+      6,
+      17
+    ],
+    "fov": 56
+  },
+  "first_at": 9,
+  "first_label": 9.6,
+  "first_detail": 14.2,
+  "first_close": 20,
+  "pull_at": 21,
+  "walk_at": 23,
+  "second_at": 34,
+  "second_label": 34.5,
+  "second_detail": 39.3,
+  "second_close": 46.5,
+  "closing": {
+    "distance": 12.6,
+    "fov": 56
+  },
+  "relation_zh": "籍里柯的木筏与德拉克洛瓦的街垒，从向远处挥动布巾的求救者，走向举旗前行的人群。两幅原画连接希望、共同处境与自由。",
+  "relation_en": "From Géricault’s raft to Delacroix’s barricade: a raised cloth seeks rescue; a raised flag gathers a crowd. Two original paintings connect hope, collective struggle and freedom.",
+  "stem": "06-希望与自由",
+  "root": "@DATA_ROOT@/shorts/batch-20261121/jobs/06-hope-freedom",
+  "width": 1080,
+  "height": 1920,
+  "fps": 24,
+  "duration": 58,
+  "frames": 1392,
+  "artworks": [
+    {
+      "id": "raft-medusa",
+      "title_zh": "梅杜萨之筏",
+      "title_en": "The Raft of the Medusa",
+      "artist_zh": "泰奥多尔·籍里柯",
+      "artist_en": "Theodore Gericault",
+      "year": "1819",
+      "year_sort": 1819,
+      "source": "https://collections.louvre.fr/en/ark:/53355/cl010059199",
+      "license": "Public domain",
+      "label_en": "The Raft of the Medusa",
+      "wall": "social",
+      "category": "romantic",
+      "image": "romanticism-salon-v1/raft-medusa.jpg",
+      "aspect": 1.4628571428571429,
+      "width": 1024,
+      "height": 700,
+      "bytes": 249615,
+      "sha256": "3c942ad3e87cf7531aae93e38679357fc9ef977574c645c6336c5ab4fdd53b19",
+      "original_sha256": "b7324eee946e2df19076b65d37c954c8d0c720240c3082db41d8d990d310ae6c",
+      "branches": [
+        "narrated",
+        "music"
+      ],
+      "file": "@DATA_ROOT@/art/raft-medusa.jpg",
+      "nudity": true
+    },
+    {
+      "id": "liberty",
+      "title_zh": "自由引导人民",
+      "title_en": "Liberty Leading the People",
+      "artist_zh": "欧仁·德拉克洛瓦",
+      "artist_en": "Eugene Delacroix",
+      "year": "1830",
+      "year_sort": 1830,
+      "source": "https://collections.louvre.fr/en/ark:/53355/cl010065872",
+      "license": "Public domain",
+      "label_en": "Liberty Leading the People",
+      "wall": "social",
+      "category": "romantic",
+      "image": "romanticism-salon-v1/liberty.jpg",
+      "aspect": 1.2503052503052503,
+      "width": 1024,
+      "height": 819,
+      "bytes": 227741,
+      "sha256": "56fad1c4b82cb1f12da34a0e91ea5dc2b5ce2993732392002f4fecb92982b30a",
+      "original_sha256": "8399e6124d14eefb587ca2e57df79696898947900be8599ffc181ba60a49b529",
+      "branches": [
+        "narrated",
+        "music"
+      ],
+      "file": "@DATA_ROOT@/art/liberty.jpg",
+      "nudity": true
+    }
+  ],
+  "labels": [
+    {
+      "id": "theme",
+      "start": 0.65,
+      "end": 4.3,
+      "en": [
+        "Hope and Freedom"
+      ],
+      "zh": "希望与自由",
+      "y": 356,
+      "size": 49,
+      "center": true,
+      "font_px": 49
+    },
+    {
+      "id": "music",
+      "start": 4.7,
+      "end": 8.4,
+      "en": [
+        "Beethoven · Egmont Overture"
+      ],
+      "zh": "贝多芬 ·《埃格蒙特》序曲",
+      "y": 230,
+      "size": 36,
+      "font_px": 36
+    },
+    {
+      "id": "raft-medusa",
+      "start": 9.6,
+      "end": 14.049999999999999,
+      "en": [
+        "The Raft of the Medusa",
+        "Theodore Gericault"
+      ],
+      "zh": "梅杜萨之筏\n泰奥多尔·籍里柯",
+      "y": 150,
+      "size": 38,
+      "font_px": 38
+    },
+    {
+      "id": "liberty",
+      "start": 34.5,
+      "end": 39.15,
+      "en": [
+        "Liberty Leading the People",
+        "Eugene Delacroix"
+      ],
+      "zh": "自由引导人民\n欧仁·德拉克洛瓦",
+      "y": 150,
+      "size": 38,
+      "font_px": 38
+    }
+  ],
+  "source_repository": "@UI_ROOT@",
+  "source_snapshot": {
+    "content/inception/artworks/romanticism-salon-v1.json": "f98221584e2bcc5e71ccfd5ccaac9ac8f22e6d9c43550807bf0e029a5cb70389",
+    "content/inception/artworks/romanticism-sculptures-v1.json": "326a94212e6691970c64cf973f9e768a65238262d5b90b12b5e6fc756eda1f67",
+    "content/inception/artworks/romanticism-selected-scans.json": "732b67f4880e393b9c09d4815a040b6b7d594a7e66530a1af253920a6d9e91dd",
+    "src/inception/world/rooms/romanticismLayout.js": "d6c1611bc10c680a818ec802c8fd007e7953d61b28cd130ef55272cb7a619cfd",
+    "src/inception/world/rooms/romanticismExhibits.ts": "2c6f076d89f0f4e4859ba2c259ddbd839566a8ee49ecc04c1ff3a8154de1f1b2",
+    "src/inception/world/render/threeRomanticismSalon.ts": "c714e33bf196e1eb499b2418fa6bead85e27f667052b69701fd7cd941b86d7ed",
+    "src/inception/world/render/romanticismSurfaces.ts": "de15c8d37a8190d7dae905d0dced7e5537f784f891903ff9abdd2a9341fec0c9",
+    "src/inception/world/model/museum.js": "79dfbe9c8e53f7396b2e6c21b52722cb097e37bab8824581e964c846005cdab5",
+    "src/inception/world/render/threeMuseum.ts": "a8bfbcc023923dd7609a0425ffa23bc9947abbe288f5e4f47e202a00615940b8"
+  },
+  "picture_language": "en",
+  "subtitles": [
+    "zh-Hans"
+  ],
+  "narration": false
+}

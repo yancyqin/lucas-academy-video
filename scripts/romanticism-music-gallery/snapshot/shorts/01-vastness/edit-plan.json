@@ -1,0 +1,155 @@
+{
+  "title": "面对辽阔",
+  "title_en": "Facing the Vastness",
+  "width": 1080,
+  "height": 1920,
+  "fps": 24,
+  "duration": 58,
+  "frames": 1392,
+  "artworks": [
+    {
+      "id": "wanderer",
+      "title_zh": "雾海上的旅人",
+      "title_en": "Wanderer above the Sea of Fog",
+      "artist_zh": "卡斯帕·大卫·弗里德里希",
+      "artist_en": "Caspar David Friedrich",
+      "year": "1817",
+      "year_sort": 1817,
+      "source": "https://www.hamburger-kunsthalle.de/en/news/wanderer-above-sea-fog-caspar-david-friedrich",
+      "license": "Public domain",
+      "label_en": "Wanderer above the Sea of Fog",
+      "wall": "nature",
+      "category": "romantic",
+      "image": "romanticism-salon-v1/wanderer.jpg",
+      "aspect": 0.779296875,
+      "width": 798,
+      "height": 1024,
+      "bytes": 172952,
+      "sha256": "0a63ed79a16b31a2176913ecaa9ec8c8cea6edf814d0185ea14f9543b7821c02",
+      "original_sha256": "ca0a3834272ff134a2b50c32268073bbc09b370bee5ba67dd9be7b4cb15d63db",
+      "branches": [
+        "narrated",
+        "music"
+      ],
+      "file": "@DATA_ROOT@/art/wanderer.jpg"
+    },
+    {
+      "id": "chalk-cliffs",
+      "title_zh": "吕根岛白垩岩",
+      "title_en": "Chalk Cliffs on Rugen",
+      "artist_zh": "卡斯帕·大卫·弗里德里希",
+      "artist_en": "Caspar David Friedrich",
+      "year": "1818",
+      "year_sort": 1818,
+      "source": "https://cdfriedrich.de/en/chronicle/kreidefelsen-auf-ruegen/",
+      "license": "Public domain",
+      "label_en": "Chalk Cliffs on Rugen",
+      "wall": "nature",
+      "category": "romantic",
+      "image": "romanticism-salon-v1/chalk-cliffs.jpg",
+      "aspect": 0.7939453125,
+      "width": 813,
+      "height": 1024,
+      "bytes": 357094,
+      "sha256": "8437e23a975bcfb5ff4c76d8136edd88b4d8b52d57d79d48a1d8c0edc89025b6",
+      "original_sha256": "4acd56c46670a3eac850a97120d9ccad4d7678ae38ecce8de17a1ceba033ff4a",
+      "branches": [
+        "narrated",
+        "music"
+      ],
+      "file": "@DATA_ROOT@/art/chalk-cliffs.jpg"
+    }
+  ],
+  "labels": [
+    {
+      "id": "theme",
+      "start": 0.65,
+      "end": 4.3,
+      "en": [
+        "Facing the Vastness"
+      ],
+      "zh": "面对辽阔",
+      "y": 356,
+      "size": 49,
+      "center": true,
+      "font_px": 49
+    },
+    {
+      "id": "music",
+      "start": 4.7,
+      "end": 8.8,
+      "en": [
+        "Chopin · Raindrop Prelude"
+      ],
+      "zh": "肖邦 ·《雨滴》前奏曲",
+      "y": 230,
+      "size": 36,
+      "center": false,
+      "font_px": 36
+    },
+    {
+      "id": "wanderer",
+      "start": 12.8,
+      "end": 17.5,
+      "en": [
+        "Wanderer above the Sea of Fog",
+        "Caspar David Friedrich"
+      ],
+      "zh": "雾海上的旅人\n卡斯帕·大卫·弗里德里希",
+      "y": 150,
+      "size": 38,
+      "center": false,
+      "font_px": 38
+    },
+    {
+      "id": "chalk-cliffs",
+      "start": 33.5,
+      "end": 38.7,
+      "en": [
+        "Chalk Cliffs on Rügen",
+        "Caspar David Friedrich"
+      ],
+      "zh": "吕根岛白垩岩\n卡斯帕·大卫·弗里德里希",
+      "y": 150,
+      "size": 38,
+      "center": false,
+      "font_px": 38
+    }
+  ],
+  "shared_room": "romanticism-salon",
+  "source_repository": "@UI_ROOT@",
+  "source_snapshot": {
+    "content/inception/artworks/romanticism-salon-v1.json": "f98221584e2bcc5e71ccfd5ccaac9ac8f22e6d9c43550807bf0e029a5cb70389",
+    "content/inception/artworks/romanticism-sculptures-v1.json": "326a94212e6691970c64cf973f9e768a65238262d5b90b12b5e6fc756eda1f67",
+    "content/inception/artworks/romanticism-selected-scans.json": "732b67f4880e393b9c09d4815a040b6b7d594a7e66530a1af253920a6d9e91dd",
+    "src/inception/world/rooms/romanticismLayout.js": "d6c1611bc10c680a818ec802c8fd007e7953d61b28cd130ef55272cb7a619cfd",
+    "src/inception/world/render/threeRomanticismSalon.ts": "c714e33bf196e1eb499b2418fa6bead85e27f667052b69701fd7cd941b86d7ed",
+    "src/inception/world/render/romanticismSurfaces.ts": "de15c8d37a8190d7dae905d0dced7e5537f784f891903ff9abdd2a9341fec0c9"
+  },
+  "picture_language": "en",
+  "separate_subtitles": [
+    "zh-Hans"
+  ],
+  "narration": false,
+  "music": {
+    "title": "降 D 大调前奏曲 Op. 28 No. 15「雨滴」",
+    "composer": "肖邦",
+    "performer": "Jeannette Fang",
+    "source": "https://archive.org/download/musopen-chopin-complete-works-flac/Preludes%2C%20Op.%2028%20-%20No.%2015%20%27Raindrop%27.mp3",
+    "license": "CC0 1.0",
+    "credit_note": "演奏者按录音档案的 ARTIST 标签列出。",
+    "local_file": "music/prelude-28-15.m4a",
+    "sha256": "e9ecf9c8683119c1f090ba83c21ab7abc076d6a74e59702c5f75c4cf1481ac0f",
+    "duration": 316.367,
+    "start": 0,
+    "end": 316.375,
+    "constant_gain_db": -6.57,
+    "file": "@DATA_ROOT@/music/prelude-28-15.m4a",
+    "excerpt_start": 0,
+    "excerpt_seconds": 58,
+    "gain_db": -6.57,
+    "fade_in_seconds": 0.2,
+    "fade_out_seconds": 2
+  },
+  "camera_policy": "A continuous native portrait camera walk from the current shared salon to two adjacent paintings; whole painting, optical zoom to a detail, pull back, walk to the second work."
+}

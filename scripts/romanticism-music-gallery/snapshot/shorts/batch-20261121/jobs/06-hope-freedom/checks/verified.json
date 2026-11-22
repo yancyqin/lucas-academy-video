@@ -1,0 +1,73 @@
+{
+  "status": "passed",
+  "checked_utc": "2026-11-22T06:05:51.476246+00:00",
+  "video": {
+    "file": "06-希望与自由.mp4",
+    "bytes": 40819895,
+    "sha256": "d9415e2baaeff953febf1bfc44406d7c2677d70534a2a594c34c8978ab3de2dd",
+    "duration": 58,
+    "width": 1080,
+    "height": 1920,
+    "fps": 24,
+    "frames": 1392,
+    "audio": "aac"
+  },
+  "full_decode": "passed",
+  "current_is_source_hashes_verified": true,
+  "english_picture_labels": true,
+  "separate_chinese_subtitle_cues": 4,
+  "music_source_hash_verified": true,
+  "no_narration": true,
+  "featured_works": [
+    "raft-medusa",
+    "liberty"
+  ],
+  "visual_review": "Passed: nine final export frames inspected. Complete Medusa and Liberty compositions are visible at their stops; details connect the rescue signal to the raised tricolour. Gallery travel rises above plinths and briefly shows the vault. Original paintings only, without generative animation. English captions remain clear.",
+  "browser_review": {
+    "file": "06-希望与自由.mp4",
+    "status": "passed",
+    "playback": {
+      "duration": 58,
+      "width": 1080,
+      "height": 1920,
+      "currentTime": 0.200041,
+      "error": null
+    },
+    "subtitles": [
+      {
+        "time": 2.475,
+        "text": "希望与自由"
+      },
+      {
+        "time": 6.550000000000001,
+        "text": "贝多芬 ·《埃格蒙特》序曲"
+      },
+      {
+        "time": 11.825,
+        "text": "梅杜萨之筏\n泰奥多尔·籍里柯"
+      },
+      {
+        "time": 36.825,
+        "text": "自由引导人民\n欧仁·德拉克洛瓦"
+      }
+    ],
+    "seeks": [
+      {
+        "time": 23.5,
+        "error": null
+      },
+      {
+        "time": 28.5,
+        "error": null
+      },
+      {
+        "time": 46,
+        "error": null
+      },
+      {
+        "time": 56,
+        "error": null
+      }
+    ]
+  }
+}

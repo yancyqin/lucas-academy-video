@@ -1,0 +1,213 @@
+{
+  "id": "02-silence",
+  "number": 2,
+  "title": "寂静与时间",
+  "title_en": "Silence and Time",
+  "category": "nature",
+  "works": [
+    "monk-sea",
+    "abbey-oakwood"
+  ],
+  "music": {
+    "title": "降 E 大调夜曲 Op. 9 No. 2",
+    "composer": "肖邦",
+    "performer": "Musopen · 旧片同版录音",
+    "source": "https://commons.wikimedia.org/wiki/File:Chopin_-_Nocturne_No._2_in_E-flat_major,_Op._9_No._2_(Frank_Levy).flac",
+    "license": "CC0 1.0",
+    "credit_note": "Commons 署名 Frank Lévy；原始档案的部分标签另有 Aya Higuchi 署名，演奏者归属待进一步核对。",
+    "local_file": "music/nocturne-9-2.m4a",
+    "sha256": "3d1c1473dbed61eec8d45384117ebff602110b7e5edbbcf6330351c0ce88e1cf",
+    "duration": 271.469,
+    "start": 317.875,
+    "end": 589.375,
+    "constant_gain_db": -3.87,
+    "file": "@DATA_ROOT@/music/nocturne-9-2.m4a",
+    "gain_db": -3.87,
+    "excerpt_start": 0,
+    "excerpt_seconds": 58
+  },
+  "excerpt": 0,
+  "names": [
+    "Monk by the Sea",
+    "Abbey in the Oakwood"
+  ],
+  "chinese": [
+    "海边的修道士",
+    "橡树林中的修道院"
+  ],
+  "detail": [
+    {
+      "u": 0.355,
+      "v": 0.6,
+      "fov": 15
+    },
+    {
+      "u": 0.5,
+      "v": 0.57,
+      "fov": 16.5
+    }
+  ],
+  "start": {
+    "eye": [
+      -20.5,
+      4.05,
+      -9
+    ],
+    "target": [
+      -27.375,
+      8,
+      -23
+    ],
+    "fov": 62
+  },
+  "first_at": 12,
+  "first_label": 12.8,
+  "first_detail": 17.5,
+  "first_close": 23.5,
+  "pull_at": 24.5,
+  "walk_at": 27,
+  "second_at": 35,
+  "second_label": 35.5,
+  "second_detail": 40.5,
+  "second_close": 47.5,
+  "closing": {
+    "distance": 13.8,
+    "fov": 58,
+    "y_offset": 0.2
+  },
+  "relation_zh": "同一位画家笔下的海岸与废墟：人物、荒树和建筑共同带出寂静与时间。",
+  "relation_en": "Friedrich pairs the quiet of an open sea with bare trees and a ruined abbey: two landscapes through which to consider silence and time.",
+  "stem": "02-寂静与时间",
+  "root": "@DATA_ROOT@/shorts/batch-20261121/jobs/02-silence",
+  "width": 1080,
+  "height": 1920,
+  "fps": 24,
+  "duration": 58,
+  "frames": 1392,
+  "artworks": [
+    {
+      "id": "monk-sea",
+      "title_zh": "海边的修道士",
+      "title_en": "Monk by the Sea",
+      "artist_zh": "卡斯帕·大卫·弗里德里希",
+      "artist_en": "Caspar David Friedrich",
+      "year": "1810",
+      "year_sort": 1810,
+      "source": "https://cdfriedrich.de/en/chronicle/moench-am-meer/",
+      "license": "Public domain",
+      "label_en": "Monk by the Sea",
+      "wall": "nature",
+      "category": "romantic",
+      "image": "romanticism-salon-v1/monk-sea.jpg",
+      "aspect": 1.5705521472392638,
+      "width": 1024,
+      "height": 652,
+      "bytes": 137204,
+      "sha256": "e0fcf829426e3a9f33602a135b6f8c4fd2878f890420a0ad7471ff8fc9170dab",
+      "original_sha256": "0f152af46a42348c50e7ee86dd8b203b9ee4b325b9c261fdf8340ea3a917a730",
+      "branches": [
+        "narrated",
+        "music"
+      ],
+      "file": "@DATA_ROOT@/art/monk-sea.jpg",
+      "nudity": false
+    },
+    {
+      "id": "abbey-oakwood",
+      "title_zh": "橡树林中的修道院",
+      "title_en": "The Abbey in the Oakwood",
+      "artist_zh": "卡斯帕·大卫·弗里德里希",
+      "artist_en": "Caspar David Friedrich",
+      "year": "1810",
+      "year_sort": 1810,
+      "source": "https://cdfriedrich.de/en/chronicle/abtei-im-eichwald/",
+      "license": "Public domain",
+      "label_en": "The Abbey in the Oakwood",
+      "wall": "time",
+      "category": "romantic",
+      "image": "romanticism-salon-v1/abbey-oakwood.jpg",
+      "aspect": 1.5609756097560976,
+      "width": 1024,
+      "height": 656,
+      "bytes": 137012,
+      "sha256": "1c072935af2104e9ede26186d3841a99b3fdbc490dd70f4dd1f8bea9958d21b9",
+      "original_sha256": "1fa605ab819fc5602b653064230e3f85efc87697254cdbd77a05f23b539d05dc",
+      "branches": [
+        "narrated",
+        "music"
+      ],
+      "file": "@DATA_ROOT@/art/abbey-oakwood.jpg",
+      "nudity": false
+    }
+  ],
+  "labels": [
+    {
+      "id": "theme",
+      "start": 0.65,
+      "end": 4.3,
+      "en": [
+        "Silence and Time"
+      ],
+      "zh": "寂静与时间",
+      "y": 356,
+      "size": 49,
+      "center": true,
+      "font_px": 49
+    },
+    {
+      "id": "music",
+      "start": 4.7,
+      "end": 8.4,
+      "en": [
+        "Chopin · Nocturne Op. 9 No. 2"
+      ],
+      "zh": "肖邦 · 夜曲 Op. 9 No. 2",
+      "y": 230,
+      "size": 36,
+      "font_px": 36
+    },
+    {
+      "id": "monk-sea",
+      "start": 12.8,
+      "end": 17.35,
+      "en": [
+        "Monk by the Sea",
+        "Caspar David Friedrich"
+      ],
+      "zh": "海边的修道士\n卡斯帕·大卫·弗里德里希",
+      "y": 150,
+      "size": 38,
+      "font_px": 38
+    },
+    {
+      "id": "abbey-oakwood",
+      "start": 35.5,
+      "end": 40.35,
+      "en": [
+        "Abbey in the Oakwood",
+        "Caspar David Friedrich"
+      ],
+      "zh": "橡树林中的修道院\n卡斯帕·大卫·弗里德里希",
+      "y": 150,
+      "size": 38,
+      "font_px": 38
+    }
+  ],
+  "source_repository": "@UI_ROOT@",
+  "source_snapshot": {
+    "content/inception/artworks/romanticism-salon-v1.json": "f98221584e2bcc5e71ccfd5ccaac9ac8f22e6d9c43550807bf0e029a5cb70389",
+    "content/inception/artworks/romanticism-sculptures-v1.json": "326a94212e6691970c64cf973f9e768a65238262d5b90b12b5e6fc756eda1f67",
+    "content/inception/artworks/romanticism-selected-scans.json": "732b67f4880e393b9c09d4815a040b6b7d594a7e66530a1af253920a6d9e91dd",
+    "src/inception/world/rooms/romanticismLayout.js": "d6c1611bc10c680a818ec802c8fd007e7953d61b28cd130ef55272cb7a619cfd",
+    "src/inception/world/rooms/romanticismExhibits.ts": "2c6f076d89f0f4e4859ba2c259ddbd839566a8ee49ecc04c1ff3a8154de1f1b2",
+    "src/inception/world/render/threeRomanticismSalon.ts": "c714e33bf196e1eb499b2418fa6bead85e27f667052b69701fd7cd941b86d7ed",
+    "src/inception/world/render/romanticismSurfaces.ts": "de15c8d37a8190d7dae905d0dced7e5537f784f891903ff9abdd2a9341fec0c9",
+    "src/inception/world/model/museum.js": "79dfbe9c8e53f7396b2e6c21b52722cb097e37bab8824581e964c846005cdab5",
+    "src/inception/world/render/threeMuseum.ts": "a8bfbcc023923dd7609a0425ffa23bc9947abbe288f5e4f47e202a00615940b8"
+  },
+  "picture_language": "en",
+  "subtitles": [
+    "zh-Hans"
+  ],
+  "narration": false
+}

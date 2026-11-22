@@ -1,0 +1,260 @@
+[
+  {
+    "start": 0.5,
+    "end": 5.5,
+    "en": "From Gallery to Space",
+    "zh": "从画廊到星空"
+  },
+  {
+    "start": 6.5,
+    "end": 11.5,
+    "en": "Mountains, Seas, and Mortals",
+    "zh": "山、海、人间"
+  },
+  {
+    "start": 12.5,
+    "end": 13.5,
+    "en": "Hear and see",
+    "zh": "聆听与观看"
+  },
+  {
+    "start": 13.5,
+    "end": 20.5,
+    "en": "Hear and see\nhow the Romantics saw the world",
+    "zh": "聆听与观看\n浪漫主义者眼中的世界"
+  },
+  {
+    "start": 23,
+    "end": 32,
+    "en": "Chopin · Raindrop Prelude",
+    "zh": "肖邦 ·《雨滴》前奏曲"
+  },
+  {
+    "start": 40.5,
+    "end": 47,
+    "en": "The Oxbow · Cole",
+    "zh": "河湾 · 科尔"
+  },
+  {
+    "start": 84.5,
+    "end": 91,
+    "en": "The Sea of Ice · Friedrich",
+    "zh": "冰海 · 弗里德里希"
+  },
+  {
+    "start": 128.5,
+    "end": 135,
+    "en": "The Hay Wain · Constable",
+    "zh": "干草车 · 康斯特布尔"
+  },
+  {
+    "start": 172.5,
+    "end": 179,
+    "en": "Chalk Cliffs on Rügen · Friedrich",
+    "zh": "吕根岛白垩岩 · 弗里德里希"
+  },
+  {
+    "start": 216.5,
+    "end": 223,
+    "en": "Snow Storm: Hannibal · Turner",
+    "zh": "暴风雪：汉尼拔 · 透纳"
+  },
+  {
+    "start": 260.5,
+    "end": 267,
+    "en": "Monk by the Sea · Friedrich",
+    "zh": "海边的修道士 · 弗里德里希"
+  },
+  {
+    "start": 296.5,
+    "end": 303,
+    "en": "Vesuvius in Eruption · Wright",
+    "zh": "维苏威火山喷发 · 赖特"
+  },
+  {
+    "start": 317.875,
+    "end": 326.875,
+    "en": "Chopin · Nocturne Op. 9 No. 2",
+    "zh": "肖邦 · 夜曲 Op. 9 No. 2"
+  },
+  {
+    "start": 333.375,
+    "end": 339.875,
+    "en": "Abbey in the Oakwood · Friedrich",
+    "zh": "橡树林中的修道院 · 弗里德里希"
+  },
+  {
+    "start": 380.375,
+    "end": 386.875,
+    "en": "Two Men Contemplating the Moon · Friedrich",
+    "zh": "两人望月 · 弗里德里希"
+  },
+  {
+    "start": 433.375,
+    "end": 439.875,
+    "en": "Twilight in the Wilderness · Church",
+    "zh": "荒野暮色 · 丘奇"
+  },
+  {
+    "start": 488.375,
+    "end": 494.875,
+    "en": "The Fighting Temeraire · Turner",
+    "zh": "战舰“特梅雷尔”号 · 透纳"
+  },
+  {
+    "start": 545.375,
+    "end": 551.875,
+    "en": "Rain, Steam and Speed · Turner",
+    "zh": "雨、蒸汽与速度 · 透纳"
+  },
+  {
+    "start": 590.875,
+    "end": 599.875,
+    "en": "Chopin · Nocturne in C-sharp minor",
+    "zh": "肖邦 · 升 C 小调夜曲"
+  },
+  {
+    "start": 613.375,
+    "end": 619.875,
+    "en": "Snow Storm: Steam-Boat · Turner",
+    "zh": "暴风雪：汽船 · 透纳"
+  },
+  {
+    "start": 657.375,
+    "end": 663.875,
+    "en": "The Ninth Wave · Aivazovsky",
+    "zh": "第九浪 · 艾瓦佐夫斯基"
+  },
+  {
+    "start": 700.375,
+    "end": 706.875,
+    "en": "The Heart of the Andes · Church",
+    "zh": "安第斯之心 · 丘奇"
+  },
+  {
+    "start": 743.375,
+    "end": 749.875,
+    "en": "Wanderer above the Sea of Fog · Friedrich",
+    "zh": "雾海上的旅人 · 弗里德里希"
+  },
+  {
+    "start": 787.375,
+    "end": 793.875,
+    "en": "Among the Sierra Nevada · Bierstadt",
+    "zh": "内华达山脉之中 · 比尔施塔特"
+  },
+  {
+    "start": 817.4166666666666,
+    "end": 826.4166666666666,
+    "en": "Beethoven · Pathétique, II",
+    "zh": "贝多芬 ·《悲怆》第二乐章"
+  },
+  {
+    "start": 846.9166666666666,
+    "end": 853.4166666666666,
+    "en": "Portrait of Chopin · Delacroix",
+    "zh": "肖邦像 · 德拉克洛瓦"
+  },
+  {
+    "start": 895.9166666666666,
+    "end": 902.4166666666666,
+    "en": "Ophelia · Millais",
+    "zh": "奥菲莉娅 · 米莱"
+  },
+  {
+    "start": 944.9166666666666,
+    "end": 951.4166666666666,
+    "en": "The Lady of Shalott · Waterhouse",
+    "zh": "夏洛特夫人 · 沃特豪斯"
+  },
+  {
+    "start": 1012.9166666666666,
+    "end": 1019.4166666666666,
+    "en": "The Voyage of Life: Childhood · Cole",
+    "zh": "生命之旅：童年 · 科尔"
+  },
+  {
+    "start": 1061.9166666666667,
+    "end": 1068.4166666666667,
+    "en": "The Voyage of Life: Youth · Cole",
+    "zh": "生命之旅：青年 · 科尔"
+  },
+  {
+    "start": 1112.9166666666667,
+    "end": 1119.4166666666667,
+    "en": "The Voyage of Life: Manhood · Cole",
+    "zh": "生命之旅：壮年 · 科尔"
+  },
+  {
+    "start": 1164.9166666666667,
+    "end": 1171.4166666666667,
+    "en": "The Voyage of Life: Old Age · Cole",
+    "zh": "生命之旅：老年 · 科尔"
+  },
+  {
+    "start": 1199.5,
+    "end": 1208.5,
+    "en": "Beethoven · Egmont Overture",
+    "zh": "贝多芬 ·《埃格蒙特》序曲"
+  },
+  {
+    "start": 1236,
+    "end": 1242.5,
+    "en": "Miranda — The Tempest · Waterhouse",
+    "zh": "米兰达——暴风雨 · 沃特豪斯"
+  },
+  {
+    "start": 1282,
+    "end": 1288.5,
+    "en": "Massacre at Chios · Delacroix",
+    "zh": "希阿岛的屠杀 · 德拉克洛瓦"
+  },
+  {
+    "start": 1324,
+    "end": 1330.5,
+    "en": "Entry of the Crusaders into Constantinople · Delacroix",
+    "zh": "十字军进入君士坦丁堡 · 德拉克洛瓦"
+  },
+  {
+    "start": 1370,
+    "end": 1376.5,
+    "en": "The Raft of the Medusa · Géricault",
+    "zh": "梅杜萨之筏 · 籍里柯"
+  },
+  {
+    "start": 1421,
+    "end": 1427.5,
+    "en": "The Burning of Parliament · Turner",
+    "zh": "议会大厦的焚毁 · 透纳"
+  },
+  {
+    "start": 1465,
+    "end": 1471.5,
+    "en": "The Wounded Cuirassier · Géricault",
+    "zh": "负伤的胸甲骑兵 · 籍里柯"
+  },
+  {
+    "start": 1511,
+    "end": 1517.5,
+    "en": "The Third of May 1808 · Goya",
+    "zh": "1808 年 5 月 3 日 · 戈雅"
+  },
+  {
+    "start": 1561,
+    "end": 1567.5,
+    "en": "The Charging Chasseur · Géricault",
+    "zh": "冲锋的猎骑兵 · 籍里柯"
+  },
+  {
+    "start": 1606,
+    "end": 1612.5,
+    "en": "Greece at Missolonghi · Delacroix",
+    "zh": "希腊在迈索隆吉翁 · 德拉克洛瓦"
+  },
+  {
+    "start": 1656,
+    "end": 1662.5,
+    "en": "Liberty Leading the People · Delacroix",
+    "zh": "自由引导人民 · 德拉克洛瓦"
+  }
+]

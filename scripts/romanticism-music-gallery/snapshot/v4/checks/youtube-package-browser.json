@@ -1,0 +1,122 @@
+{
+  "status": "passed",
+  "mode": "file://; no server required",
+  "links": [
+    "02-YouTube中文.txt",
+    "03-YouTube英文.txt",
+    "06-英文字幕.srt",
+    "07-简体中文字幕.srt",
+    "05-素材署名.txt",
+    "使用说明.txt",
+    "04-封面-无字.jpg"
+  ],
+  "videos": [
+    {
+      "file": "01-山、海、人间-纯英文纯音乐.mp4",
+      "duration": 1740.417,
+      "width": 1920,
+      "height": 1080,
+      "currentTime": 0.161128,
+      "readyState": 4,
+      "error": null
+    },
+    {
+      "file": "备用分篇/自然篇-肖邦-纯英文.mp4",
+      "duration": 815.916667,
+      "width": 1920,
+      "height": 1080,
+      "currentTime": 0.16835,
+      "readyState": 4,
+      "error": null
+    },
+    {
+      "file": "备用分篇/人间篇-贝多芬-纯英文.mp4",
+      "duration": 923,
+      "width": 1920,
+      "height": 1080,
+      "currentTime": 0.165974,
+      "readyState": 4,
+      "error": null
+    },
+    {
+      "file": "预览/24秒开场.mp4",
+      "duration": 24,
+      "width": 1920,
+      "height": 1080,
+      "currentTime": 0.165789,
+      "readyState": 4,
+      "error": null
+    }
+  ],
+  "seekChecks": [
+    {
+      "requested": 43,
+      "actual": 43,
+      "error": null
+    },
+    {
+      "requested": 318,
+      "actual": 318,
+      "error": null
+    },
+    {
+      "requested": 591,
+      "actual": 591,
+      "error": null
+    },
+    {
+      "requested": 818,
+      "actual": 818,
+      "error": null
+    },
+    {
+      "requested": 1200,
+      "actual": 1200,
+      "error": null
+    }
+  ],
+  "subtitleChecks": [
+    {
+      "language": "en",
+      "time": 1.5,
+      "text": "From Gallery to Space"
+    },
+    {
+      "language": "zh",
+      "time": 7.5,
+      "text": "山、海、人间"
+    },
+    {
+      "language": "en",
+      "time": 14.5,
+      "text": "Hear and see\nhow the Romantics saw the world"
+    },
+    {
+      "language": "zh",
+      "time": 14.5,
+      "text": "聆听与观看\n浪漫主义者眼中的世界"
+    },
+    {
+      "part": 1,
+      "language": "zh",
+      "time": 1.5,
+      "text": "从画廊到星空"
+    },
+    {
+      "part": 2,
+      "language": "zh",
+      "time": 1.5,
+      "text": "贝多芬 ·《悲怆》第二乐章"
+    }
+  ],
+  "covers": [
+    {
+      "src": "04-封面-无字.jpg",
+      "complete": true,
+      "width": 1280,
+      "height": 720
+    }
+  ],
+  "pageErrors": [],
+  "mobileOverflow": false
+}

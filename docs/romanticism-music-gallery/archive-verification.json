@@ -1,0 +1,13 @@
+{
+  "archive_checks": "passed",
+  "python_syntax_files": 22,
+  "json_files": 39,
+  "node_syntax_files": 8,
+  "restore_dry_run": "passed; created no files",
+  "restore_apply": "passed",
+  "restore_rebase": "passed",
+  "restore_idempotence": "passed",
+  "unsupported_layout_refusal": "passed",
+  "conflict_refusal_before_writes": "passed",
+  "cleanup_folder_protection": "passed"
+}

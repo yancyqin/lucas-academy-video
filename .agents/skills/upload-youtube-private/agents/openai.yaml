@@ -1,0 +1,4 @@
+interface:
+  display_name: "YouTube 私人视频上传"
+  short_description: "Upload private videos and subtitles in YouTube Studio"
+  default_prompt: "Use $upload-youtube-private to upload these videos and Chinese SRTs as private drafts; I will publish them myself."

@@ -1,0 +1,162 @@
+{
+  "files": [
+    {
+      "file": "山、海、人间-纯英文纯音乐版.mp4",
+      "bytes": 793423492,
+      "duration": 1740.417,
+      "width": 1920,
+      "height": 1080,
+      "fps": 24,
+      "chapters": 5,
+      "picture_language": "en",
+      "audio": "aac"
+    },
+    {
+      "file": "自然篇-肖邦-纯英文版.mp4",
+      "bytes": 401111371,
+      "duration": 815.916667,
+      "width": 1920,
+      "height": 1080,
+      "fps": 24,
+      "chapters": 0,
+      "picture_language": "en",
+      "audio": "aac"
+    },
+    {
+      "file": "人间篇-贝多芬-纯英文版.mp4",
+      "bytes": 391700489,
+      "duration": 923.0,
+      "width": 1920,
+      "height": 1080,
+      "fps": 24,
+      "chapters": 0,
+      "picture_language": "en",
+      "audio": "aac"
+    }
+  ],
+  "full_master_decode": "passed",
+  "audio_streams_unchanged": [
+    {
+      "file": "山、海、人间-纯英文纯音乐版.mp4",
+      "identical_to_approved_audio": true,
+      "aac_payload_sha256": "eb03b4b67ca5a4f6b4c46584a8f5689e84afa8674afcb39cc6bfc05cf38a6906"
+    },
+    {
+      "file": "自然篇-肖邦-纯英文版.mp4",
+      "identical_to_approved_audio": true,
+      "aac_payload_sha256": "80564e76e78d9ce9b002fe509f374eaa7c49fb40f9e10949e50ee114dd9bf0e4"
+    },
+    {
+      "file": "人间篇-贝多芬-纯英文版.mp4",
+      "identical_to_approved_audio": true,
+      "aac_payload_sha256": "017f5c2cf81aa6a4743109c086b9414c6c0b106d07e96046cef9e736b26725ea"
+    }
+  ],
+  "audio_policy": "All five complete recordings retained. Master and both parts have byte-identical AAC audio to the approved v3 exports.",
+  "source_recordings_hash_verified": 5,
+  "english_picture_labels": {
+    "overlays": 43,
+    "native_signs": 70,
+    "chinese_labels": 0
+  },
+  "separate_subtitles": {
+    "status": "passed",
+    "files": [
+      {
+        "file": "山、海、人间.en.srt",
+        "language": "en",
+        "cues": 43,
+        "offset_seconds": 0,
+        "duration_seconds": 1740.4166666666667,
+        "sha256": "4ac9b4281dd46330bc049d32f7088003c2953caac2a1e2521ab1b87c72a4b80e"
+      },
+      {
+        "file": "自然篇-肖邦.en.srt",
+        "language": "en",
+        "cues": 24,
+        "offset_seconds": 0,
+        "duration_seconds": 815.9166666666666,
+        "sha256": "938edd26a94fef0d3cef56dc11de97b0fe9fdc488cc3aa5d8913892b1b0a01b0"
+      },
+      {
+        "file": "人间篇-贝多芬.en.srt",
+        "language": "en",
+        "cues": 19,
+        "offset_seconds": 817.4166666666666,
+        "duration_seconds": 923.0000000000001,
+        "sha256": "1ff6e74a939e688bb706c75d72ce947203e7ff102201e2a12eab208709210c38"
+      },
+      {
+        "file": "山、海、人间.zh.srt",
+        "language": "zh-Hans",
+        "cues": 43,
+        "offset_seconds": 0,
+        "duration_seconds": 1740.4166666666667,
+        "sha256": "aaeb9e0f2556eb0497ef3b49ba99fb45523b636d60b77cb4565de7b67241f190"
+      },
+      {
+        "file": "自然篇-肖邦.zh.srt",
+        "language": "zh-Hans",
+        "cues": 24,
+        "offset_seconds": 0,
+        "duration_seconds": 815.9166666666666,
+        "sha256": "1a08e2b6c954cf010b0e25008d92658bb106992e8b8139d4cdce7938f15d3ab3"
+      },
+      {
+        "file": "人间篇-贝多芬.zh.srt",
+        "language": "zh-Hans",
+        "cues": 19,
+        "offset_seconds": 817.4166666666666,
+        "duration_seconds": 923.0000000000001,
+        "sha256": "a769c67775dd9a932e6a4ef5f17f0c17ce7ae0caa2aa754cdcce487ca9dc8d0f"
+      }
+    ],
+    "no_overlapping_cues": true,
+    "same_timing_in_both_languages": true,
+    "content": "On-screen headings, music, artwork titles and artists; no invented narration."
+  },
+  "representative_final_artwork_frames": 34,
+  "opening_label_times": [
+    {
+      "id": "entrance",
+      "start": 0.5,
+      "end": 5.5,
+      "english": "From Gallery to Space",
+      "chinese": "从画廊到星空"
+    },
+    {
+      "id": "album",
+      "start": 6.5,
+      "end": 11.5,
+      "english": "Mountains, Seas, and Mortals",
+      "chinese": "山、海、人间"
+    },
+    {
+      "id": "hear",
+      "start": 12.5,
+      "end": 20.5,
+      "english": "Hear and see",
+      "chinese": "聆听与观看"
+    },
+    {
+      "id": "world",
+      "start": 13.5,
+      "end": 20.5,
+      "english": "how the Romantics saw the world",
+      "chinese": "浪漫主义者眼中的世界"
+    }
+  ],
+  "cover": {
+    "source": "assets/owner-cover-frame.png",
+    "source_sha256": "2d58da51bb43f91ded739dc76280d5ed3ec55d9419ee000d4415c984d3a127c1",
+    "canvas": [
+      1280,
+      720
+    ],
+    "crop": false,
+    "text": false,
+    "painting_id": "sierra",
+    "work": "Among the Sierra Nevada Mountains, California — Albert Bierstadt",
+    "owner_request": "Use this selected frame as the cover, without text."
+  }
+}

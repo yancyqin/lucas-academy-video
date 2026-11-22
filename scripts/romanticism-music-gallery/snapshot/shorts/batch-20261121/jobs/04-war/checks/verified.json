@@ -1,0 +1,73 @@
+{
+  "status": "passed",
+  "checked_utc": "2026-11-22T05:41:47.319850+00:00",
+  "video": {
+    "file": "04-战争的两张面孔.mp4",
+    "bytes": 47516385,
+    "sha256": "04f24339dd4da69e04e34532c7704d2902e4e1bc7de7d714102c95626fab69c2",
+    "duration": 58,
+    "width": 1080,
+    "height": 1920,
+    "fps": 24,
+    "frames": 1392,
+    "audio": "aac"
+  },
+  "full_decode": "passed",
+  "current_is_source_hashes_verified": true,
+  "english_picture_labels": true,
+  "separate_chinese_subtitle_cues": 4,
+  "music_source_hash_verified": true,
+  "no_narration": true,
+  "featured_works": [
+    "wounded",
+    "charging"
+  ],
+  "visual_review": "Passed: nine final export frames inspected after the revised continuous walk and vault transition. Both clothed cavalry paintings remain whole at their stops; selected figure details and English labels are clear. No featured nudity.",
+  "browser_review": {
+    "file": "04-战争的两张面孔.mp4",
+    "status": "passed",
+    "playback": {
+      "duration": 58,
+      "width": 1080,
+      "height": 1920,
+      "currentTime": 0.201481,
+      "error": null
+    },
+    "subtitles": [
+      {
+        "time": 2.475,
+        "text": "战争的两张面孔"
+      },
+      {
+        "time": 6.550000000000001,
+        "text": "贝多芬 ·《埃格蒙特》序曲"
+      },
+      {
+        "time": 11.825,
+        "text": "负伤的胸甲骑兵\n泰奥多尔·籍里柯"
+      },
+      {
+        "time": 36.825,
+        "text": "冲锋的猎骑兵\n泰奥多尔·籍里柯"
+      }
+    ],
+    "seeks": [
+      {
+        "time": 23.5,
+        "error": null
+      },
+      {
+        "time": 28.5,
+        "error": null
+      },
+      {
+        "time": 46,
+        "error": null
+      },
+      {
+        "time": 56,
+        "error": null
+      }
+    ]
+  }
+}

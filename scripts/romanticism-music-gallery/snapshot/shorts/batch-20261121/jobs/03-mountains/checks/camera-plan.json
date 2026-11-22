@@ -1,0 +1,274 @@
+{
+  "anchors": [
+    {
+      "t": 0,
+      "eye": [
+        -22,
+        4.05,
+        12
+      ],
+      "target": [
+        -27.375,
+        11,
+        -1
+      ],
+      "fov": 62
+    },
+    {
+      "t": 1,
+      "eye": [
+        -22,
+        4.05,
+        12
+      ],
+      "target": [
+        -27.375,
+        11,
+        -1
+      ],
+      "fov": 62
+    },
+    {
+      "t": 12,
+      "eye": [
+        -16.405341024977044,
+        9.7,
+        -9.625
+      ],
+      "target": [
+        -27.375,
+        9.7,
+        -9.625
+      ],
+      "fov": 52
+    },
+    {
+      "t": 17.5,
+      "eye": [
+        -16.405341024977044,
+        9.7,
+        -9.625
+      ],
+      "target": [
+        -27.375,
+        9.7,
+        -9.625
+      ],
+      "fov": 52
+    },
+    {
+      "t": 23.5,
+      "eye": [
+        -16.405341024977044,
+        9.7,
+        -9.625
+      ],
+      "target": [
+        -27.375,
+        9.019568359374999,
+        -10.219
+      ],
+      "fov": 8
+    },
+    {
+      "t": 24.5,
+      "eye": [
+        -16.405341024977044,
+        9.7,
+        -9.625
+      ],
+      "target": [
+        -27.375,
+        9.019568359374999,
+        -10.219
+      ],
+      "fov": 8
+    },
+    {
+      "t": 27,
+      "eye": [
+        -16.405341024977044,
+        9.7,
+        -9.625
+      ],
+      "target": [
+        -27.375,
+        9.7,
+        -9.625
+      ],
+      "fov": 52
+    },
+    {
+      "t": 34,
+      "eye": [
+        -16.405341024977044,
+        9.7,
+        9.625
+      ],
+      "target": [
+        -27.375,
+        9.7,
+        9.625
+      ],
+      "fov": 52
+    },
+    {
+      "t": 39.3,
+      "eye": [
+        -16.405341024977044,
+        9.7,
+        9.625
+      ],
+      "target": [
+        -27.375,
+        9.7,
+        9.625
+      ],
+      "fov": 52
+    },
+    {
+      "t": 46.5,
+      "eye": [
+        -16.405341024977044,
+        9.7,
+        9.625
+      ],
+      "target": [
+        -27.375,
+        9.14955859375,
+        9.841
+      ],
+      "fov": 10
+    },
+    {
+      "t": 49,
+      "eye": [
+        -16.405341024977044,
+        9.7,
+        9.625
+      ],
+      "target": [
+        -27.375,
+        9.14955859375,
+        9.841
+      ],
+      "fov": 10
+    },
+    {
+      "t": 55,
+      "eye": [
+        -15.000000000000002,
+        9.7,
+        9.625
+      ],
+      "target": [
+        -27.375,
+        9.7,
+        9.625
+      ],
+      "fov": 56
+    },
+    {
+      "t": 58,
+      "eye": [
+        -15.000000000000002,
+        9.7,
+        9.625
+      ],
+      "target": [
+        -27.375,
+        9.7,
+        9.625
+      ],
+      "fov": 56
+    }
+  ],
+  "maxMps": 4.124805130385582,
+  "maxDegrees": 11.24302953986481,
+  "works": [
+    {
+      "id": "heart-andes",
+      "title_zh": "安第斯之心",
+      "title_en": "The Heart of the Andes",
+      "artist_zh": "弗雷德里克·埃德温·丘奇",
+      "artist_en": "Frederic Edwin Church",
+      "year": "1859",
+      "year_sort": 1859,
+      "source": "https://www.metmuseum.org/art/collection/search/10481",
+      "license": "Public domain",
+      "label_en": "The Heart of the Andes",
+      "wall": "nature",
+      "category": "romantic",
+      "image": "romanticism-salon-v1/heart-andes.jpg",
+      "aspect": 1.8253119429590017,
+      "width": 5.4,
+      "height": 2.9583984375000005,
+      "bytes": 211941,
+      "sha256": "495160f1f1fe9ecd45cd4f422b73d4cd11c02b61c1d16b4c3622b1a2ba7a41a5",
+      "original_sha256": "3d9529b5e2f6ac348a82715186ebbffd1adc7d2d5f3bd8adfa9aa83c0796d258",
+      "branches": [
+        "narrated",
+        "music"
+      ],
+      "position": [
+        -27.6,
+        9.7,
+        -9.625
+      ],
+      "rotationY": 1.5707963267948966,
+      "eye": [
+        -19.8,
+        9.7,
+        -9.625
+      ],
+      "wallId": "nature"
+    },
+    {
+      "id": "sierra",
+      "title_zh": "加利福尼亚内华达山脉之中",
+      "title_en": "Among the Sierra Nevada, California",
+      "artist_zh": "阿尔伯特·比尔施塔特",
+      "artist_en": "Albert Bierstadt",
+      "year": "1868",
+      "year_sort": 1868,
+      "source": "https://www.si.edu/object/saam_1977.107.1",
+      "license": "Public domain",
+      "label_en": "Among the Sierra Nevada, California",
+      "wall": "nature",
+      "category": "romantic",
+      "image": "romanticism-salon-v1/sierra.jpg",
+      "aspect": 1.6677524429967427,
+      "width": 5.4,
+      "height": 3.237890625,
+      "bytes": 131934,
+      "sha256": "fe078a3b739e257168df4a05a0d16cf9cf51e31bb86037aaa2381f202528e737",
+      "original_sha256": "2fe9342646d2de0a4495c259b2face9fe5a02c5a8522f9c5eac73ddab61b9901",
+      "branches": [
+        "music"
+      ],
+      "position": [
+        -27.6,
+        9.7,
+        9.625
+      ],
+      "rotationY": 1.5707963267948966,
+      "eye": [
+        -19.8,
+        9.7,
+        9.625
+      ],
+      "wallId": "nature"
+    }
+  ],
+  "source_snapshot": {
+    "content/inception/artworks/romanticism-salon-v1.json": "f98221584e2bcc5e71ccfd5ccaac9ac8f22e6d9c43550807bf0e029a5cb70389",
+    "content/inception/artworks/romanticism-sculptures-v1.json": "326a94212e6691970c64cf973f9e768a65238262d5b90b12b5e6fc756eda1f67",
+    "content/inception/artworks/romanticism-selected-scans.json": "732b67f4880e393b9c09d4815a040b6b7d594a7e66530a1af253920a6d9e91dd",
+    "src/inception/world/rooms/romanticismLayout.js": "d6c1611bc10c680a818ec802c8fd007e7953d61b28cd130ef55272cb7a619cfd",
+    "src/inception/world/rooms/romanticismExhibits.ts": "2c6f076d89f0f4e4859ba2c259ddbd839566a8ee49ecc04c1ff3a8154de1f1b2",
+    "src/inception/world/render/threeRomanticismSalon.ts": "c714e33bf196e1eb499b2418fa6bead85e27f667052b69701fd7cd941b86d7ed",
+    "src/inception/world/render/romanticismSurfaces.ts": "de15c8d37a8190d7dae905d0dced7e5537f784f891903ff9abdd2a9341fec0c9",
+    "src/inception/world/model/museum.js": "79dfbe9c8e53f7396b2e6c21b52722cb097e37bab8824581e964c846005cdab5",
+    "src/inception/world/render/threeMuseum.ts": "a8bfbcc023923dd7609a0425ffa23bc9947abbe288f5e4f47e202a00615940b8"
+  }
+}

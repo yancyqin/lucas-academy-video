@@ -1,0 +1,33 @@
+{
+  "room_id": "romanticism-salon",
+  "room_url": "http://127.0.0.1:8095/?world=museum&room=romanticism-salon",
+  "canonical_repository": "@UI_ROOT@",
+  "paintings": "content/inception/artworks/romanticism-salon-v1.json",
+  "sculptures": "content/inception/artworks/romanticism-sculptures-v1.json",
+  "renderer": "src/inception/world/render/threeRomanticismSalon.ts",
+  "layout": "src/inception/world/rooms/romanticismLayout.js",
+  "works": 56,
+  "hiroshige": 7,
+  "pedestals": 9,
+  "film_projects": [
+    "raindrop-romanticism",
+    "romanticism-music-gallery"
+  ],
+  "editing_rule": "Both film branches use this same native IS room and catalogs. Do not make a second gallery implementation.",
+  "captures_folder": "@VIDEO_REPO@-data/romanticism-salon-shared",
+  "centerpiece": "Moose the Dragon",
+  "exhibit_language": "en",
+  "selected_scan_records": "content/inception/artworks/romanticism-selected-scans.json",
+  "sculpture_selection": [
+    "01",
+    "02",
+    "03",
+    "05",
+    "07",
+    "08",
+    "11",
+    "12"
+  ],
+  "installed_selected_sculptures": 8,
+  "pending_selected_sculptures": 0
+}

@@ -1,0 +1,25 @@
+{
+  "fma_track": {
+    "id": 11427,
+    "handle": "Sonata_8_Pathetique_-_II_Adagio_cantabile",
+    "url": "https://freemusicarchive.org/music/Daniel_Veesey/Beethovens_Sonata_No_in_C_Minor_Pathetique/Sonata_8_Pathetique_-_II_Adagio_cantabile/",
+    "title": "Sonata 8, 'Pathetique' - II. Adagio cantabile",
+    "artistName": "Daniel Veesey",
+    "artistUrl": "https://freemusicarchive.org/music/Daniel_Veesey/",
+    "albumTitle": "Beethoven's Sonata No. 8 in C Minor Pathetique",
+    "playbackUrl": "https://freemusicarchive.org/track/Sonata_8_Pathetique_-_II_Adagio_cantabile/stream/",
+    "downloadUrl": "https://freemusicarchive.org/track/Sonata_8_Pathetique_-_II_Adagio_cantabile/download/",
+    "fileName": "Daniel_Veesey_-_02_-_Sonata_8_Pathetique_-_II_Adagio_cantabile.mp3",
+    "fileUrl": "https://files.freemusicarchive.org/storage-freemusicarchive-org/music/MusOpen/Daniel_Veesey/Beethovens_Sonata_No_8_in_C_Minor_Pathetique/Daniel_Veesey_-_02_-_Sonata_8_Pathetique_-_II_Adagio_cantabile.mp3"
+  },
+  "current_license_label": "Public Domain License",
+  "current_license_url": "https://creativecommons.org/licenses/publicdomain/",
+  "local_sha256": "51972c9bd6049193b0d1cea4f2e7cbcc5071db8fbb3e3cff5f7a45a49526a254",
+  "fma_download_sha256": "51972c9bd6049193b0d1cea4f2e7cbcc5071db8fbb3e3cff5f7a45a49526a254",
+  "byte_identical": true,
+  "fma_bytes": 15226241,
+  "embedded_license_tag": "CC BY-NC-SA 3.0 US (historical metadata; conflicts with the current track page)",
+  "claimant": "UMG on behalf of Decca Music Group Ltd.",
+  "claimed_performer": "Alfred Brendel",
+  "claimed_interval": "13:36–19:57"
+}

@@ -1,0 +1,1307 @@
+{
+  "version": 3,
+  "order": [
+    "English",
+    "Chinese"
+  ],
+  "same_font_size_per_pair": true,
+  "lines_per_label": 2,
+  "artwork_format": "Title · Artist / 作品名 · 画家",
+  "no_biography": true,
+  "no_date_in_film_labels": true,
+  "overlays": [
+    {
+      "id": "rain-00",
+      "english": "The Oxbow · Cole",
+      "chinese": "河湾 · 科尔",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2
+    },
+    {
+      "id": "rain-01",
+      "english": "The Sea of Ice · Friedrich",
+      "chinese": "冰海 · 弗里德里希",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2
+    },
+    {
+      "id": "rain-02",
+      "english": "The Hay Wain · Constable",
+      "chinese": "干草车 · 康斯特布尔",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2
+    },
+    {
+      "id": "rain-03",
+      "english": "Chalk Cliffs on Rügen · Friedrich",
+      "chinese": "吕根岛白垩岩 · 弗里德里希",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2
+    },
+    {
+      "id": "rain-04",
+      "english": "Snow Storm: Hannibal · Turner",
+      "chinese": "暴风雪：汉尼拔 · 透纳",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2
+    },
+    {
+      "id": "rain-05",
+      "english": "Monk by the Sea · Friedrich",
+      "chinese": "海边的修道士 · 弗里德里希",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2
+    },
+    {
+      "id": "rain-06",
+      "english": "Vesuvius in Eruption · Wright",
+      "chinese": "维苏威火山喷发 · 赖特",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2
+    },
+    {
+      "id": "nocturne-00",
+      "english": "Abbey in the Oakwood · Friedrich",
+      "chinese": "橡树林中的修道院 · 弗里德里希",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2
+    },
+    {
+      "id": "nocturne-01",
+      "english": "Two Men Contemplating the Moon · Friedrich",
+      "chinese": "两人望月 · 弗里德里希",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2
+    },
+    {
+      "id": "nocturne-02",
+      "english": "Twilight in the Wilderness · Church",
+      "chinese": "荒野暮色 · 丘奇",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2
+    },
+    {
+      "id": "nocturne-03",
+      "english": "The Fighting Temeraire · Turner",
+      "chinese": "战舰“特梅雷尔”号 · 透纳",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2
+    },
+    {
+      "id": "nocturne-04",
+      "english": "Rain, Steam and Speed · Turner",
+      "chinese": "雨、蒸汽与速度 · 透纳",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2
+    },
+    {
+      "id": "distance-00",
+      "english": "Snow Storm: Steam-Boat · Turner",
+      "chinese": "暴风雪：汽船 · 透纳",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2
+    },
+    {
+      "id": "distance-01",
+      "english": "The Ninth Wave · Aivazovsky",
+      "chinese": "第九浪 · 艾瓦佐夫斯基",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2
+    },
+    {
+      "id": "distance-02",
+      "english": "The Heart of the Andes · Church",
+      "chinese": "安第斯之心 · 丘奇",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2
+    },
+    {
+      "id": "distance-03",
+      "english": "Wanderer above the Sea of Fog · Friedrich",
+      "chinese": "雾海上的旅人 · 弗里德里希",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2
+    },
+    {
+      "id": "distance-04",
+      "english": "Among the Sierra Nevada · Bierstadt",
+      "chinese": "内华达山脉之中 · 比尔施塔特",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2
+    },
+    {
+      "id": "life-00",
+      "english": "Portrait of Chopin · Delacroix",
+      "chinese": "肖邦像 · 德拉克洛瓦",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2
+    },
+    {
+      "id": "life-01",
+      "english": "Ophelia · Millais",
+      "chinese": "奥菲莉娅 · 米莱",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2
+    },
+    {
+      "id": "life-02",
+      "english": "The Lady of Shalott · Waterhouse",
+      "chinese": "夏洛特夫人 · 沃特豪斯",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2
+    },
+    {
+      "id": "life-03",
+      "english": "The Voyage of Life: Childhood · Cole",
+      "chinese": "生命之旅：童年 · 科尔",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2
+    },
+    {
+      "id": "life-04",
+      "english": "The Voyage of Life: Youth · Cole",
+      "chinese": "生命之旅：青年 · 科尔",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2
+    },
+    {
+      "id": "life-05",
+      "english": "The Voyage of Life: Manhood · Cole",
+      "chinese": "生命之旅：壮年 · 科尔",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2
+    },
+    {
+      "id": "life-06",
+      "english": "The Voyage of Life: Old Age · Cole",
+      "chinese": "生命之旅：老年 · 科尔",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2
+    },
+    {
+      "id": "liberty-00",
+      "english": "Miranda — The Tempest · Waterhouse",
+      "chinese": "米兰达——暴风雨 · 沃特豪斯",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2
+    },
+    {
+      "id": "liberty-01",
+      "english": "Massacre at Chios · Delacroix",
+      "chinese": "希阿岛的屠杀 · 德拉克洛瓦",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2
+    },
+    {
+      "id": "liberty-02",
+      "english": "Entry of the Crusaders into Constantinople · Delacroix",
+      "chinese": "十字军进入君士坦丁堡 · 德拉克洛瓦",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2
+    },
+    {
+      "id": "liberty-03",
+      "english": "The Raft of the Medusa · Géricault",
+      "chinese": "梅杜萨之筏 · 籍里柯",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2
+    },
+    {
+      "id": "liberty-04",
+      "english": "The Burning of Parliament · Turner",
+      "chinese": "议会大厦的焚毁 · 透纳",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2
+    },
+    {
+      "id": "liberty-05",
+      "english": "The Wounded Cuirassier · Géricault",
+      "chinese": "负伤的胸甲骑兵 · 籍里柯",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2
+    },
+    {
+      "id": "liberty-06",
+      "english": "The Third of May 1808 · Goya",
+      "chinese": "1808 年 5 月 3 日 · 戈雅",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2
+    },
+    {
+      "id": "liberty-07",
+      "english": "The Charging Chasseur · Géricault",
+      "chinese": "冲锋的猎骑兵 · 籍里柯",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2
+    },
+    {
+      "id": "liberty-08",
+      "english": "Greece at Missolonghi · Delacroix",
+      "chinese": "希腊在迈索隆吉翁 · 德拉克洛瓦",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2
+    },
+    {
+      "id": "liberty-09",
+      "english": "Liberty Leading the People · Delacroix",
+      "chinese": "自由引导人民 · 德拉克洛瓦",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2
+    },
+    {
+      "id": "rain",
+      "english": "Chopin · Raindrop Prelude",
+      "chinese": "肖邦 ·《雨滴》前奏曲",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2
+    },
+    {
+      "id": "nocturne",
+      "english": "Chopin · Nocturne Op. 9 No. 2",
+      "chinese": "肖邦 · 夜曲 Op. 9 No. 2",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2
+    },
+    {
+      "id": "distance",
+      "english": "Chopin · Nocturne in C-sharp minor",
+      "chinese": "肖邦 · 升 C 小调夜曲",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2
+    },
+    {
+      "id": "life",
+      "english": "Beethoven · Pathétique, II",
+      "chinese": "贝多芬 ·《悲怆》第二乐章",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2
+    },
+    {
+      "id": "liberty",
+      "english": "Beethoven · Egmont Overture",
+      "chinese": "贝多芬 ·《埃格蒙特》序曲",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2
+    },
+    {
+      "id": "album",
+      "english": "Mountains, Seas & Human Life",
+      "chinese": "山海与人间",
+      "font_px_english": 50,
+      "font_px_chinese": 50,
+      "english_above_chinese": true,
+      "lines": 2
+    },
+    {
+      "id": "entrance",
+      "english": "From Gallery to Space",
+      "chinese": "从画廊到星空沙龙",
+      "font_px_english": 40,
+      "font_px_chinese": 40,
+      "english_above_chinese": true,
+      "lines": 2
+    }
+  ],
+  "artworks": {
+    "oxbow": {
+      "id": "rain-00",
+      "english": "The Oxbow · Cole",
+      "chinese": "河湾 · 科尔",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2,
+      "title_en": "The Oxbow",
+      "title_zh": "河湾",
+      "artist_en": "Cole",
+      "artist_zh": "科尔"
+    },
+    "sea-ice": {
+      "id": "rain-01",
+      "english": "The Sea of Ice · Friedrich",
+      "chinese": "冰海 · 弗里德里希",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2,
+      "title_en": "The Sea of Ice",
+      "title_zh": "冰海",
+      "artist_en": "Friedrich",
+      "artist_zh": "弗里德里希"
+    },
+    "hay-wain": {
+      "id": "rain-02",
+      "english": "The Hay Wain · Constable",
+      "chinese": "干草车 · 康斯特布尔",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2,
+      "title_en": "The Hay Wain",
+      "title_zh": "干草车",
+      "artist_en": "Constable",
+      "artist_zh": "康斯特布尔"
+    },
+    "chalk-cliffs": {
+      "id": "rain-03",
+      "english": "Chalk Cliffs on Rügen · Friedrich",
+      "chinese": "吕根岛白垩岩 · 弗里德里希",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2,
+      "title_en": "Chalk Cliffs on Rügen",
+      "title_zh": "吕根岛白垩岩",
+      "artist_en": "Friedrich",
+      "artist_zh": "弗里德里希"
+    },
+    "hannibal": {
+      "id": "rain-04",
+      "english": "Snow Storm: Hannibal · Turner",
+      "chinese": "暴风雪：汉尼拔 · 透纳",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2,
+      "title_en": "Snow Storm: Hannibal",
+      "title_zh": "暴风雪：汉尼拔",
+      "artist_en": "Turner",
+      "artist_zh": "透纳"
+    },
+    "monk-sea": {
+      "id": "rain-05",
+      "english": "Monk by the Sea · Friedrich",
+      "chinese": "海边的修道士 · 弗里德里希",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2,
+      "title_en": "Monk by the Sea",
+      "title_zh": "海边的修道士",
+      "artist_en": "Friedrich",
+      "artist_zh": "弗里德里希"
+    },
+    "vesuvius": {
+      "id": "rain-06",
+      "english": "Vesuvius in Eruption · Wright",
+      "chinese": "维苏威火山喷发 · 赖特",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2,
+      "title_en": "Vesuvius in Eruption",
+      "title_zh": "维苏威火山喷发",
+      "artist_en": "Wright",
+      "artist_zh": "赖特"
+    },
+    "abbey-oakwood": {
+      "id": "nocturne-00",
+      "english": "Abbey in the Oakwood · Friedrich",
+      "chinese": "橡树林中的修道院 · 弗里德里希",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2,
+      "title_en": "Abbey in the Oakwood",
+      "title_zh": "橡树林中的修道院",
+      "artist_en": "Friedrich",
+      "artist_zh": "弗里德里希"
+    },
+    "moonwatchers": {
+      "id": "nocturne-01",
+      "english": "Two Men Contemplating the Moon · Friedrich",
+      "chinese": "两人望月 · 弗里德里希",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2,
+      "title_en": "Two Men Contemplating the Moon",
+      "title_zh": "两人望月",
+      "artist_en": "Friedrich",
+      "artist_zh": "弗里德里希"
+    },
+    "twilight": {
+      "id": "nocturne-02",
+      "english": "Twilight in the Wilderness · Church",
+      "chinese": "荒野暮色 · 丘奇",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2,
+      "title_en": "Twilight in the Wilderness",
+      "title_zh": "荒野暮色",
+      "artist_en": "Church",
+      "artist_zh": "丘奇"
+    },
+    "temeraire": {
+      "id": "nocturne-03",
+      "english": "The Fighting Temeraire · Turner",
+      "chinese": "战舰“特梅雷尔”号 · 透纳",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2,
+      "title_en": "The Fighting Temeraire",
+      "title_zh": "战舰“特梅雷尔”号",
+      "artist_en": "Turner",
+      "artist_zh": "透纳"
+    },
+    "rain-steam": {
+      "id": "nocturne-04",
+      "english": "Rain, Steam and Speed · Turner",
+      "chinese": "雨、蒸汽与速度 · 透纳",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2,
+      "title_en": "Rain, Steam and Speed",
+      "title_zh": "雨、蒸汽与速度",
+      "artist_en": "Turner",
+      "artist_zh": "透纳"
+    },
+    "snow-storm": {
+      "id": "distance-00",
+      "english": "Snow Storm: Steam-Boat · Turner",
+      "chinese": "暴风雪：汽船 · 透纳",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2,
+      "title_en": "Snow Storm: Steam-Boat",
+      "title_zh": "暴风雪：汽船",
+      "artist_en": "Turner",
+      "artist_zh": "透纳"
+    },
+    "ninth-wave": {
+      "id": "distance-01",
+      "english": "The Ninth Wave · Aivazovsky",
+      "chinese": "第九浪 · 艾瓦佐夫斯基",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2,
+      "title_en": "The Ninth Wave",
+      "title_zh": "第九浪",
+      "artist_en": "Aivazovsky",
+      "artist_zh": "艾瓦佐夫斯基"
+    },
+    "heart-andes": {
+      "id": "distance-02",
+      "english": "The Heart of the Andes · Church",
+      "chinese": "安第斯之心 · 丘奇",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2,
+      "title_en": "The Heart of the Andes",
+      "title_zh": "安第斯之心",
+      "artist_en": "Church",
+      "artist_zh": "丘奇"
+    },
+    "wanderer": {
+      "id": "distance-03",
+      "english": "Wanderer above the Sea of Fog · Friedrich",
+      "chinese": "雾海上的旅人 · 弗里德里希",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2,
+      "title_en": "Wanderer above the Sea of Fog",
+      "title_zh": "雾海上的旅人",
+      "artist_en": "Friedrich",
+      "artist_zh": "弗里德里希"
+    },
+    "sierra": {
+      "id": "distance-04",
+      "english": "Among the Sierra Nevada · Bierstadt",
+      "chinese": "内华达山脉之中 · 比尔施塔特",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2,
+      "title_en": "Among the Sierra Nevada",
+      "title_zh": "内华达山脉之中",
+      "artist_en": "Bierstadt",
+      "artist_zh": "比尔施塔特"
+    },
+    "chopin-portrait": {
+      "id": "life-00",
+      "english": "Portrait of Chopin · Delacroix",
+      "chinese": "肖邦像 · 德拉克洛瓦",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2,
+      "title_en": "Portrait of Chopin",
+      "title_zh": "肖邦像",
+      "artist_en": "Delacroix",
+      "artist_zh": "德拉克洛瓦"
+    },
+    "ophelia": {
+      "id": "life-01",
+      "english": "Ophelia · Millais",
+      "chinese": "奥菲莉娅 · 米莱",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2,
+      "title_en": "Ophelia",
+      "title_zh": "奥菲莉娅",
+      "artist_en": "Millais",
+      "artist_zh": "米莱"
+    },
+    "shalott": {
+      "id": "life-02",
+      "english": "The Lady of Shalott · Waterhouse",
+      "chinese": "夏洛特夫人 · 沃特豪斯",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2,
+      "title_en": "The Lady of Shalott",
+      "title_zh": "夏洛特夫人",
+      "artist_en": "Waterhouse",
+      "artist_zh": "沃特豪斯"
+    },
+    "life-child": {
+      "id": "life-03",
+      "english": "The Voyage of Life: Childhood · Cole",
+      "chinese": "生命之旅：童年 · 科尔",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2,
+      "title_en": "The Voyage of Life: Childhood",
+      "title_zh": "生命之旅：童年",
+      "artist_en": "Cole",
+      "artist_zh": "科尔"
+    },
+    "life-youth": {
+      "id": "life-04",
+      "english": "The Voyage of Life: Youth · Cole",
+      "chinese": "生命之旅：青年 · 科尔",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2,
+      "title_en": "The Voyage of Life: Youth",
+      "title_zh": "生命之旅：青年",
+      "artist_en": "Cole",
+      "artist_zh": "科尔"
+    },
+    "life-man": {
+      "id": "life-05",
+      "english": "The Voyage of Life: Manhood · Cole",
+      "chinese": "生命之旅：壮年 · 科尔",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2,
+      "title_en": "The Voyage of Life: Manhood",
+      "title_zh": "生命之旅：壮年",
+      "artist_en": "Cole",
+      "artist_zh": "科尔"
+    },
+    "life-old": {
+      "id": "life-06",
+      "english": "The Voyage of Life: Old Age · Cole",
+      "chinese": "生命之旅：老年 · 科尔",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2,
+      "title_en": "The Voyage of Life: Old Age",
+      "title_zh": "生命之旅：老年",
+      "artist_en": "Cole",
+      "artist_zh": "科尔"
+    },
+    "miranda": {
+      "id": "liberty-00",
+      "english": "Miranda — The Tempest · Waterhouse",
+      "chinese": "米兰达——暴风雨 · 沃特豪斯",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2,
+      "title_en": "Miranda — The Tempest",
+      "title_zh": "米兰达——暴风雨",
+      "artist_en": "Waterhouse",
+      "artist_zh": "沃特豪斯"
+    },
+    "chios": {
+      "id": "liberty-01",
+      "english": "Massacre at Chios · Delacroix",
+      "chinese": "希阿岛的屠杀 · 德拉克洛瓦",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2,
+      "title_en": "Massacre at Chios",
+      "title_zh": "希阿岛的屠杀",
+      "artist_en": "Delacroix",
+      "artist_zh": "德拉克洛瓦"
+    },
+    "crusaders": {
+      "id": "liberty-02",
+      "english": "Entry of the Crusaders into Constantinople · Delacroix",
+      "chinese": "十字军进入君士坦丁堡 · 德拉克洛瓦",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2,
+      "title_en": "Entry of the Crusaders into Constantinople",
+      "title_zh": "十字军进入君士坦丁堡",
+      "artist_en": "Delacroix",
+      "artist_zh": "德拉克洛瓦"
+    },
+    "raft-medusa": {
+      "id": "liberty-03",
+      "english": "The Raft of the Medusa · Géricault",
+      "chinese": "梅杜萨之筏 · 籍里柯",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2,
+      "title_en": "The Raft of the Medusa",
+      "title_zh": "梅杜萨之筏",
+      "artist_en": "Géricault",
+      "artist_zh": "籍里柯"
+    },
+    "parliament": {
+      "id": "liberty-04",
+      "english": "The Burning of Parliament · Turner",
+      "chinese": "议会大厦的焚毁 · 透纳",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2,
+      "title_en": "The Burning of Parliament",
+      "title_zh": "议会大厦的焚毁",
+      "artist_en": "Turner",
+      "artist_zh": "透纳"
+    },
+    "wounded": {
+      "id": "liberty-05",
+      "english": "The Wounded Cuirassier · Géricault",
+      "chinese": "负伤的胸甲骑兵 · 籍里柯",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2,
+      "title_en": "The Wounded Cuirassier",
+      "title_zh": "负伤的胸甲骑兵",
+      "artist_en": "Géricault",
+      "artist_zh": "籍里柯"
+    },
+    "third-may": {
+      "id": "liberty-06",
+      "english": "The Third of May 1808 · Goya",
+      "chinese": "1808 年 5 月 3 日 · 戈雅",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2,
+      "title_en": "The Third of May 1808",
+      "title_zh": "1808 年 5 月 3 日",
+      "artist_en": "Goya",
+      "artist_zh": "戈雅"
+    },
+    "charging": {
+      "id": "liberty-07",
+      "english": "The Charging Chasseur · Géricault",
+      "chinese": "冲锋的猎骑兵 · 籍里柯",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2,
+      "title_en": "The Charging Chasseur",
+      "title_zh": "冲锋的猎骑兵",
+      "artist_en": "Géricault",
+      "artist_zh": "籍里柯"
+    },
+    "missolonghi": {
+      "id": "liberty-08",
+      "english": "Greece at Missolonghi · Delacroix",
+      "chinese": "希腊在迈索隆吉翁 · 德拉克洛瓦",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2,
+      "title_en": "Greece at Missolonghi",
+      "title_zh": "希腊在迈索隆吉翁",
+      "artist_en": "Delacroix",
+      "artist_zh": "德拉克洛瓦"
+    },
+    "liberty": {
+      "id": "liberty-09",
+      "english": "Liberty Leading the People · Delacroix",
+      "chinese": "自由引导人民 · 德拉克洛瓦",
+      "font_px_english": 34,
+      "font_px_chinese": 34,
+      "english_above_chinese": true,
+      "lines": 2,
+      "title_en": "Liberty Leading the People",
+      "title_zh": "自由引导人民",
+      "artist_en": "Delacroix",
+      "artist_zh": "德拉克洛瓦"
+    }
+  },
+  "music": {
+    "rain": {
+      "english": "Chopin · Raindrop Prelude",
+      "chinese": "肖邦 ·《雨滴》前奏曲"
+    },
+    "nocturne": {
+      "english": "Chopin · Nocturne Op. 9 No. 2",
+      "chinese": "肖邦 · 夜曲 Op. 9 No. 2"
+    },
+    "distance": {
+      "english": "Chopin · Nocturne in C-sharp minor",
+      "chinese": "肖邦 · 升 C 小调夜曲"
+    },
+    "life": {
+      "english": "Beethoven · Pathétique, II",
+      "chinese": "贝多芬 ·《悲怆》第二乐章"
+    },
+    "liberty": {
+      "english": "Beethoven · Egmont Overture",
+      "chinese": "贝多芬 ·《埃格蒙特》序曲"
+    }
+  },
+  "native": {
+    "Vesuvius in Eruption": {
+      "english": "Vesuvius in Eruption",
+      "chinese": "维苏威火山喷发",
+      "kind": "painting",
+      "id": "vesuvius"
+    },
+    "Monk by the Sea": {
+      "english": "Monk by the Sea",
+      "chinese": "海边的修道士",
+      "kind": "painting",
+      "id": "monk-sea"
+    },
+    "Saltash with the Water Ferry, Cornwall": {
+      "english": "Saltash with the Water Ferry, Cornwall",
+      "chinese": "康沃尔郡萨尔塔什的渡轮",
+      "kind": "painting",
+      "id": "met-437852"
+    },
+    "Snow Storm: Hannibal and his Army Crossing the Alps": {
+      "english": "Snow Storm: Hannibal",
+      "chinese": "暴风雪：汉尼拔",
+      "kind": "painting",
+      "id": "hannibal"
+    },
+    "Wanderer above the Sea of Fog": {
+      "english": "Wanderer above the Sea of Fog",
+      "chinese": "雾海上的旅人",
+      "kind": "painting",
+      "id": "wanderer"
+    },
+    "Chalk Cliffs on Rugen": {
+      "english": "Chalk Cliffs on Rügen",
+      "chinese": "吕根岛白垩岩",
+      "kind": "painting",
+      "id": "chalk-cliffs"
+    },
+    "The Hay Wain": {
+      "english": "The Hay Wain",
+      "chinese": "干草车",
+      "kind": "painting",
+      "id": "hay-wain"
+    },
+    "The Sea of Ice": {
+      "english": "The Sea of Ice",
+      "chinese": "冰海",
+      "kind": "painting",
+      "id": "sea-ice"
+    },
+    "Venice, from the Porch of Madonna della Salute": {
+      "english": "Venice, from the Porch of Madonna della Salute",
+      "chinese": "威尼斯：从安康圣母教堂门廊望去",
+      "kind": "painting",
+      "id": "met-437853"
+    },
+    "A View near Tivoli (Morning)": {
+      "english": "A View near Tivoli (Morning)",
+      "chinese": "蒂沃利附近风景（清晨）",
+      "kind": "painting",
+      "id": "met-10500"
+    },
+    "View on the Catskill—Early Autumn": {
+      "english": "View on the Catskill—Early Autumn",
+      "chinese": "卡茨基尔溪畔——初秋",
+      "kind": "painting",
+      "id": "met-10501"
+    },
+    "The Oxbow": {
+      "english": "The Oxbow",
+      "chinese": "河湾",
+      "kind": "painting",
+      "id": "oxbow"
+    },
+    "Whalers": {
+      "english": "Whalers",
+      "chinese": "捕鲸者",
+      "kind": "painting",
+      "id": "met-437854"
+    },
+    "Snow Storm: Steam-Boat off a Harbour’s Mouth": {
+      "english": "Snow Storm: Steam-Boat",
+      "chinese": "暴风雪：汽船",
+      "kind": "painting",
+      "id": "snow-storm"
+    },
+    "The Mountain Ford": {
+      "english": "The Mountain Ford",
+      "chinese": "山间渡口",
+      "kind": "painting",
+      "id": "met-10496"
+    },
+    "The Ninth Wave": {
+      "english": "The Ninth Wave",
+      "chinese": "第九浪",
+      "kind": "painting",
+      "id": "ninth-wave"
+    },
+    "The Heart of the Andes": {
+      "english": "The Heart of the Andes",
+      "chinese": "安第斯之心",
+      "kind": "painting",
+      "id": "heart-andes"
+    },
+    "The Rocky Mountains, Lander's Peak": {
+      "english": "The Rocky Mountains, Lander's Peak",
+      "chinese": "落基山脉：兰德峰",
+      "kind": "painting",
+      "id": "met-10154"
+    },
+    "Merced River, Yosemite Valley": {
+      "english": "Merced River, Yosemite Valley",
+      "chinese": "优胜美地谷的默塞德河",
+      "kind": "painting",
+      "id": "met-10150"
+    },
+    "Among the Sierra Nevada, California": {
+      "english": "Among the Sierra Nevada",
+      "chinese": "内华达山脉之中",
+      "kind": "painting",
+      "id": "sierra"
+    },
+    "Nevada Falls, Yosemite": {
+      "english": "Nevada Falls, Yosemite",
+      "chinese": "优胜美地的内华达瀑布",
+      "kind": "painting",
+      "id": "met-10152"
+    },
+    "Sea Cove": {
+      "english": "Sea Cove",
+      "chinese": "海湾",
+      "kind": "painting",
+      "id": "met-10155"
+    },
+    "Mountain Scene": {
+      "english": "Mountain Scene",
+      "chinese": "山景",
+      "kind": "painting",
+      "id": "met-10151"
+    },
+    "The Charging Chasseur": {
+      "english": "The Charging Chasseur",
+      "chinese": "冲锋的猎骑兵",
+      "kind": "painting",
+      "id": "charging"
+    },
+    "The Third of May 1808": {
+      "english": "The Third of May 1808",
+      "chinese": "1808 年 5 月 3 日",
+      "kind": "painting",
+      "id": "third-may"
+    },
+    "The Wounded Cuirassier": {
+      "english": "The Wounded Cuirassier",
+      "chinese": "负伤的胸甲骑兵",
+      "kind": "painting",
+      "id": "wounded"
+    },
+    "The Raft of the Medusa": {
+      "english": "The Raft of the Medusa",
+      "chinese": "梅杜萨之筏",
+      "kind": "painting",
+      "id": "raft-medusa"
+    },
+    "The Massacre at Chios": {
+      "english": "Massacre at Chios",
+      "chinese": "希阿岛的屠杀",
+      "kind": "painting",
+      "id": "chios"
+    },
+    "Greece on the Ruins of Missolonghi": {
+      "english": "Greece at Missolonghi",
+      "chinese": "希腊在迈索隆吉翁",
+      "kind": "painting",
+      "id": "missolonghi"
+    },
+    "Liberty Leading the People": {
+      "english": "Liberty Leading the People",
+      "chinese": "自由引导人民",
+      "kind": "painting",
+      "id": "liberty"
+    },
+    "The Burning of the Houses of Lords and Commons": {
+      "english": "The Burning of Parliament",
+      "chinese": "议会大厦的焚毁",
+      "kind": "painting",
+      "id": "parliament"
+    },
+    "Portrait of Chopin": {
+      "english": "Portrait of Chopin",
+      "chinese": "肖邦像",
+      "kind": "painting",
+      "id": "chopin-portrait"
+    },
+    "The Entry of the Crusaders into Constantinople": {
+      "english": "Entry of the Crusaders into Constantinople",
+      "chinese": "十字军进入君士坦丁堡",
+      "kind": "painting",
+      "id": "crusaders"
+    },
+    "The Abbey in the Oakwood": {
+      "english": "Abbey in the Oakwood",
+      "chinese": "橡树林中的修道院",
+      "kind": "painting",
+      "id": "abbey-oakwood"
+    },
+    "Two Men Contemplating the Moon · Dresden version": {
+      "english": "Two Men Contemplating the Moon",
+      "chinese": "两人望月",
+      "kind": "painting",
+      "id": "moonwatchers"
+    },
+    "Two Men Contemplating the Moon": {
+      "english": "Two Men Contemplating the Moon",
+      "chinese": "两人观月",
+      "kind": "painting",
+      "id": "met-438417"
+    },
+    "The Titan's Goblet": {
+      "english": "The Titan's Goblet",
+      "chinese": "泰坦之杯",
+      "kind": "painting",
+      "id": "met-10499"
+    },
+    "The Fighting Temeraire": {
+      "english": "The Fighting Temeraire",
+      "chinese": "战舰“特梅雷尔”号",
+      "kind": "painting",
+      "id": "temeraire"
+    },
+    "The Voyage of Life: Childhood": {
+      "english": "The Voyage of Life: Childhood",
+      "chinese": "生命之旅：童年",
+      "kind": "painting",
+      "id": "life-child"
+    },
+    "The Voyage of Life: Manhood": {
+      "english": "The Voyage of Life: Manhood",
+      "chinese": "生命之旅：壮年",
+      "kind": "painting",
+      "id": "life-man"
+    },
+    "The Voyage of Life: Old Age": {
+      "english": "The Voyage of Life: Old Age",
+      "chinese": "生命之旅：老年",
+      "kind": "painting",
+      "id": "life-old"
+    },
+    "The Voyage of Life: Youth": {
+      "english": "The Voyage of Life: Youth",
+      "chinese": "生命之旅：青年",
+      "kind": "painting",
+      "id": "life-youth"
+    },
+    "Rain, Steam and Speed": {
+      "english": "Rain, Steam and Speed",
+      "chinese": "雨、蒸汽与速度",
+      "kind": "painting",
+      "id": "rain-steam"
+    },
+    "Twilight in the Wilderness": {
+      "english": "Twilight in the Wilderness",
+      "chinese": "荒野暮色",
+      "kind": "painting",
+      "id": "twilight"
+    },
+    "The Parthenon": {
+      "english": "The Parthenon",
+      "chinese": "帕特农神庙",
+      "kind": "painting",
+      "id": "met-10482"
+    },
+    "The Aegean Sea": {
+      "english": "The Aegean Sea",
+      "chinese": "爱琴海",
+      "kind": "painting",
+      "id": "met-10480"
+    },
+    "Evening Snow at Kanbara": {
+      "english": "Evening Snow at Kanbara",
+      "chinese": "蒲原夜雪",
+      "kind": "painting",
+      "id": "met-56915"
+    },
+    "Evening Snow at Kanbara, from the series \"Fifty-three Stations of the Tōkaidō\"": {
+      "english": "Evening Snow at Kanbara",
+      "chinese": "蒲原夜雪",
+      "kind": "painting",
+      "id": "met-56915"
+    },
+    "Sudden Shower at Shono": {
+      "english": "Sudden Shower at Shono",
+      "chinese": "庄野白雨",
+      "kind": "painting",
+      "id": "met-36521"
+    },
+    "Sudden Shower at Shōno, from the series Fifty-three Stations of the Tōkaidō": {
+      "english": "Sudden Shower at Shono",
+      "chinese": "庄野白雨",
+      "kind": "painting",
+      "id": "met-36521"
+    },
+    "Ophelia": {
+      "english": "Ophelia",
+      "chinese": "奥菲莉娅",
+      "kind": "painting",
+      "id": "ophelia"
+    },
+    "In the Kameido Tenjin Shrine Compound": {
+      "english": "In the Kameido Tenjin Shrine Compound",
+      "chinese": "龟户天神境内",
+      "kind": "painting",
+      "id": "met-53659"
+    },
+    "Meguro Drum Bridge and Sunset Hill": {
+      "english": "Meguro Drum Bridge and Sunset Hill",
+      "chinese": "目黑太鼓桥夕日之冈",
+      "kind": "painting",
+      "id": "hiroshige-meguro"
+    },
+    "Sudden Shower over Shin-Ōhashi Bridge and Atake (Ōhashi Atake no yūdachi), from the series One Hundred Famous Views of Edo (Meisho Edo hyakkei)": {
+      "english": "Sudden Shower over Shin-Ohashi Bridge and Atake",
+      "chinese": "大桥安宅骤雨",
+      "kind": "painting",
+      "id": "met-36461"
+    },
+    "Sudden Shower over Shin-Ohashi Bridge and Atake": {
+      "english": "Sudden Shower over Shin-Ohashi Bridge and Atake",
+      "chinese": "大桥安宅骤雨",
+      "kind": "painting",
+      "id": "met-36461"
+    },
+    "Plum Garden at Kamata": {
+      "english": "Plum Garden at Kamata",
+      "chinese": "蒲田梅园",
+      "kind": "painting",
+      "id": "met-53681"
+    },
+    "Plum Garden at Kamata (Kamata no umezono), from the series One Hundred Famous Views of Edo (Meisho Edo hyakkei)": {
+      "english": "Plum Garden at Kamata",
+      "chinese": "蒲田梅园",
+      "kind": "painting",
+      "id": "met-53681"
+    },
+    "The Autumn Moon on Ishiyama": {
+      "english": "The Autumn Moon on Ishiyama",
+      "chinese": "石山秋月",
+      "kind": "painting",
+      "id": "met-55122"
+    },
+    "The Lady of Shalott": {
+      "english": "The Lady of Shalott",
+      "chinese": "夏洛特夫人",
+      "kind": "painting",
+      "id": "shalott"
+    },
+    "Miranda—The Tempest": {
+      "english": "Miranda — The Tempest",
+      "chinese": "米兰达——暴风雨",
+      "kind": "painting",
+      "id": "miranda"
+    },
+    "The Panther Hunter": {
+      "english": "The Panther Hunter",
+      "chinese": "猎豹人",
+      "kind": "sculpture",
+      "id": "romantic-panther-hunter"
+    },
+    "The Danish Soldier after the Victory": {
+      "english": "The Danish Soldier after the Victory",
+      "chinese": "胜利后的丹麦士兵",
+      "kind": "sculpture",
+      "id": "romantic-danish-soldier"
+    },
+    "The Enslaved Woman": {
+      "english": "The Enslaved Woman",
+      "chinese": "被奴役的女子",
+      "kind": "sculpture",
+      "id": "romantic-enslaved-woman"
+    },
+    "A Little Girl with Kittens": {
+      "english": "A Little Girl with Kittens",
+      "chinese": "抱着小猫的女孩",
+      "kind": "sculpture",
+      "id": "romantic-girl-kittens"
+    },
+    "The Shadow": {
+      "english": "The Shadow",
+      "chinese": "影子",
+      "kind": "sculpture",
+      "id": "romantic-shadow"
+    },
+    "Death and the Mother": {
+      "english": "Death and the Mother",
+      "chinese": "死神与母亲",
+      "kind": "sculpture",
+      "id": "romantic-death-mother"
+    },
+    "Lion and Serpent": {
+      "english": "Lion and Serpent",
+      "chinese": "狮子与蛇",
+      "kind": "sculpture"
+    },
+    "The Spirit of Liberty": {
+      "english": "The Spirit of Liberty",
+      "chinese": "自由之灵",
+      "kind": "sculpture"
+    },
+    "Philopoemen": {
+      "english": "Philopoemen",
+      "chinese": "菲洛波门",
+      "kind": "sculpture"
+    },
+    "Seated Lion": {
+      "english": "Seated Lion",
+      "chinese": "坐狮",
+      "kind": "sculpture"
+    },
+    "Recumbent Bacchante": {
+      "english": "Recumbent Bacchante",
+      "chinese": "斜卧的酒神女祭司",
+      "kind": "sculpture"
+    },
+    "Head of Christ": {
+      "english": "Head of Christ",
+      "chinese": "基督头像",
+      "kind": "sculpture"
+    },
+    "THE ROMANTIC SALON": {
+      "english": "The Romantic Salon",
+      "chinese": "浪漫主义沙龙",
+      "kind": "room"
+    },
+    "Nature and the Sublime": {
+      "english": "Nature and the Sublime",
+      "chinese": "自然与崇高",
+      "kind": "room"
+    },
+    "An Age of Upheaval": {
+      "english": "An Age of Upheaval",
+      "chinese": "动荡的时代",
+      "kind": "room"
+    },
+    "Time and Human Life": {
+      "english": "Time and Human Life",
+      "chinese": "时间与人生",
+      "kind": "room"
+    },
+    "Literary Echoes and Mono no Aware": {
+      "english": "Literary Echoes and Mono no Aware",
+      "chinese": "文学回响与物哀",
+      "kind": "room"
+    },
+    "Moose the Dragon": {
+      "english": "Moose the Dragon",
+      "chinese": "巨龙 Moose",
+      "kind": "room"
+    }
+  }
+}

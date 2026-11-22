@@ -1,0 +1,927 @@
+{
+  "report": {
+    "id": "romanticism-salon",
+    "works": 56,
+    "sculptures": 8,
+    "dragonLoaded": true,
+    "pedestals": 9,
+    "pendingSculptures": 0,
+    "failures": [],
+    "sharedCatalog": "romanticism-salon",
+    "labelLanguage": "en",
+    "hallCount": 1,
+    "filmLabelLanguage": "en",
+    "nativeLabelAudit": [
+      {
+        "original": "Nature and the Sublime",
+        "english": "Nature and the Sublime",
+        "font_px": 53,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "An Age of Upheaval",
+        "english": "An Age of Upheaval",
+        "font_px": 53,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "Time and Human Life",
+        "english": "Time and Human Life",
+        "font_px": 53,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "Literary Echoes and Mono no Aware",
+        "english": "Literary Echoes and Mono no Aware",
+        "font_px": 53,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "THE ROMANTIC SALON",
+        "english": "The Romantic Salon",
+        "font_px": 85,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "Vesuvius in Eruption",
+        "english": "Vesuvius in Eruption",
+        "font_px": 153,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "Monk by the Sea",
+        "english": "Monk by the Sea",
+        "font_px": 153,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "Saltash with the Water Ferry, Cornwall",
+        "english": "Saltash with the Water Ferry, Cornwall",
+        "font_px": 105,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "Snow Storm: Hannibal and his Army Crossing the Alps",
+        "english": "Snow Storm: Hannibal",
+        "font_px": 153,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "Wanderer above the Sea of Fog",
+        "english": "Wanderer above the Sea of Fog",
+        "font_px": 122,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "Chalk Cliffs on Rugen",
+        "english": "Chalk Cliffs on Rügen",
+        "font_px": 186,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "The Hay Wain",
+        "english": "The Hay Wain",
+        "font_px": 153,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "The Sea of Ice",
+        "english": "The Sea of Ice",
+        "font_px": 153,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "Venice, from the Porch of Madonna della Salute",
+        "english": "Venice, from the Porch of Madonna della Salute",
+        "font_px": 81,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "A View near Tivoli (Morning)",
+        "english": "A View near Tivoli (Morning)",
+        "font_px": 142,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "View on the Catskill—Early Autumn",
+        "english": "View on the Catskill—Early Autumn",
+        "font_px": 113,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "The Oxbow",
+        "english": "The Oxbow",
+        "font_px": 153,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "Whalers",
+        "english": "Whalers",
+        "font_px": 153,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "Snow Storm: Steam-Boat off a Harbour’s Mouth",
+        "english": "Snow Storm: Steam-Boat",
+        "font_px": 153,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "The Mountain Ford",
+        "english": "The Mountain Ford",
+        "font_px": 153,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "The Ninth Wave",
+        "english": "The Ninth Wave",
+        "font_px": 153,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "The Heart of the Andes",
+        "english": "The Heart of the Andes",
+        "font_px": 153,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "The Rocky Mountains, Lander's Peak",
+        "english": "The Rocky Mountains, Lander's Peak",
+        "font_px": 109,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "Merced River, Yosemite Valley",
+        "english": "Merced River, Yosemite Valley",
+        "font_px": 130,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "Among the Sierra Nevada, California",
+        "english": "Among the Sierra Nevada",
+        "font_px": 150,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "Nevada Falls, Yosemite",
+        "english": "Nevada Falls, Yosemite",
+        "font_px": 170,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "Sea Cove",
+        "english": "Sea Cove",
+        "font_px": 153,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "Mountain Scene",
+        "english": "Mountain Scene",
+        "font_px": 153,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "The Charging Chasseur",
+        "english": "The Charging Chasseur",
+        "font_px": 169,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "The Third of May 1808",
+        "english": "The Third of May 1808",
+        "font_px": 153,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "The Wounded Cuirassier",
+        "english": "The Wounded Cuirassier",
+        "font_px": 164,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "The Raft of the Medusa",
+        "english": "The Raft of the Medusa",
+        "font_px": 153,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "The Massacre at Chios",
+        "english": "Massacre at Chios",
+        "font_px": 214,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "Greece on the Ruins of Missolonghi",
+        "english": "Greece at Missolonghi",
+        "font_px": 175,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "Liberty Leading the People",
+        "english": "Liberty Leading the People",
+        "font_px": 147,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "The Burning of the Houses of Lords and Commons",
+        "english": "The Burning of Parliament",
+        "font_px": 153,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "Portrait of Chopin",
+        "english": "Portrait of Chopin",
+        "font_px": 224,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "The Entry of the Crusaders into Constantinople",
+        "english": "Entry of the Crusaders into Constantinople",
+        "font_px": 93,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "The Abbey in the Oakwood",
+        "english": "Abbey in the Oakwood",
+        "font_px": 153,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "Two Men Contemplating the Moon · Dresden version",
+        "english": "Two Men Contemplating the Moon",
+        "font_px": 112,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "Two Men Contemplating the Moon",
+        "english": "Two Men Contemplating the Moon",
+        "font_px": 112,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "The Titan's Goblet",
+        "english": "The Titan's Goblet",
+        "font_px": 225,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "The Fighting Temeraire",
+        "english": "The Fighting Temeraire",
+        "font_px": 153,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "The Voyage of Life: Childhood",
+        "english": "The Voyage of Life: Childhood",
+        "font_px": 130,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "The Voyage of Life: Manhood",
+        "english": "The Voyage of Life: Manhood",
+        "font_px": 132,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "The Voyage of Life: Old Age",
+        "english": "The Voyage of Life: Old Age",
+        "font_px": 140,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "The Voyage of Life: Youth",
+        "english": "The Voyage of Life: Youth",
+        "font_px": 153,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "Rain, Steam and Speed",
+        "english": "Rain, Steam and Speed",
+        "font_px": 153,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "Twilight in the Wilderness",
+        "english": "Twilight in the Wilderness",
+        "font_px": 153,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "The Parthenon",
+        "english": "The Parthenon",
+        "font_px": 153,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "The Aegean Sea",
+        "english": "The Aegean Sea",
+        "font_px": 153,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "Evening Snow at Kanbara",
+        "english": "Evening Snow at Kanbara",
+        "font_px": 152,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "Sudden Shower at Shono",
+        "english": "Sudden Shower at Shono",
+        "font_px": 153,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "Ophelia",
+        "english": "Ophelia",
+        "font_px": 153,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "In the Kameido Tenjin Shrine Compound",
+        "english": "In the Kameido Tenjin Shrine Compound",
+        "font_px": 98,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "Meguro Drum Bridge and Sunset Hill",
+        "english": "Meguro Drum Bridge and Sunset Hill",
+        "font_px": 111,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "Sudden Shower over Shin-Ohashi Bridge and Atake",
+        "english": "Sudden Shower over Shin-Ohashi Bridge and Atake",
+        "font_px": 77,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "Plum Garden at Kamata",
+        "english": "Plum Garden at Kamata",
+        "font_px": 160,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "The Autumn Moon on Ishiyama",
+        "english": "The Autumn Moon on Ishiyama",
+        "font_px": 127,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "The Lady of Shalott",
+        "english": "The Lady of Shalott",
+        "font_px": 153,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "Miranda—The Tempest",
+        "english": "Miranda — The Tempest",
+        "font_px": 153,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "Lion and Serpent",
+        "english": "Lion and Serpent",
+        "font_px": 214,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "The Spirit of Liberty",
+        "english": "The Spirit of Liberty",
+        "font_px": 214,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "Philopoemen",
+        "english": "Philopoemen",
+        "font_px": 214,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "Seated Lion",
+        "english": "Seated Lion",
+        "font_px": 214,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "Recumbent Bacchante",
+        "english": "Recumbent Bacchante",
+        "font_px": 166,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "Head of Christ",
+        "english": "Head of Christ",
+        "font_px": 214,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "The Enslaved Woman",
+        "english": "The Enslaved Woman",
+        "font_px": 183,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "A Little Girl with Kittens",
+        "english": "A Little Girl with Kittens",
+        "font_px": 179,
+        "language": "en",
+        "lines": 1
+      },
+      {
+        "original": "Moose the Dragon",
+        "english": "Moose the Dragon",
+        "font_px": 210,
+        "language": "en",
+        "lines": 1
+      }
+    ],
+    "actualSceneLabels": {
+      "english": 70,
+      "bilingual": 0,
+      "unmapped": 0
+    }
+  },
+  "speeds": {
+    "mps": 3.693659688819258,
+    "degreesPerSecond": 13.808449604072656
+  },
+  "samples": [
+    {
+      "id": "oxbow",
+      "kind": "room",
+      "time": 37.5,
+      "file": "@DATA_ROOT@/v4/checks/oxbow-room.jpg"
+    },
+    {
+      "id": "oxbow",
+      "kind": "painting",
+      "time": 42,
+      "file": "@DATA_ROOT@/v4/checks/oxbow-painting.jpg"
+    },
+    {
+      "id": "sea-ice",
+      "kind": "room",
+      "time": 81.5,
+      "file": "@DATA_ROOT@/v4/checks/sea-ice-room.jpg"
+    },
+    {
+      "id": "sea-ice",
+      "kind": "painting",
+      "time": 86,
+      "file": "@DATA_ROOT@/v4/checks/sea-ice-painting.jpg"
+    },
+    {
+      "id": "hay-wain",
+      "kind": "room",
+      "time": 125.5,
+      "file": "@DATA_ROOT@/v4/checks/hay-wain-room.jpg"
+    },
+    {
+      "id": "hay-wain",
+      "kind": "painting",
+      "time": 130,
+      "file": "@DATA_ROOT@/v4/checks/hay-wain-painting.jpg"
+    },
+    {
+      "id": "chalk-cliffs",
+      "kind": "room",
+      "time": 169.5,
+      "file": "@DATA_ROOT@/v4/checks/chalk-cliffs-room.jpg"
+    },
+    {
+      "id": "chalk-cliffs",
+      "kind": "painting",
+      "time": 174,
+      "file": "@DATA_ROOT@/v4/checks/chalk-cliffs-painting.jpg"
+    },
+    {
+      "id": "hannibal",
+      "kind": "room",
+      "time": 213.5,
+      "file": "@DATA_ROOT@/v4/checks/hannibal-room.jpg"
+    },
+    {
+      "id": "hannibal",
+      "kind": "painting",
+      "time": 218,
+      "file": "@DATA_ROOT@/v4/checks/hannibal-painting.jpg"
+    },
+    {
+      "id": "monk-sea",
+      "kind": "room",
+      "time": 257.5,
+      "file": "@DATA_ROOT@/v4/checks/monk-sea-room.jpg"
+    },
+    {
+      "id": "monk-sea",
+      "kind": "painting",
+      "time": 262,
+      "file": "@DATA_ROOT@/v4/checks/monk-sea-painting.jpg"
+    },
+    {
+      "id": "vesuvius",
+      "kind": "room",
+      "time": 293.5,
+      "file": "@DATA_ROOT@/v4/checks/vesuvius-room.jpg"
+    },
+    {
+      "id": "vesuvius",
+      "kind": "painting",
+      "time": 298,
+      "file": "@DATA_ROOT@/v4/checks/vesuvius-painting.jpg"
+    },
+    {
+      "id": "abbey-oakwood",
+      "kind": "room",
+      "time": 330.375,
+      "file": "@DATA_ROOT@/v4/checks/abbey-oakwood-room.jpg"
+    },
+    {
+      "id": "abbey-oakwood",
+      "kind": "painting",
+      "time": 334.875,
+      "file": "@DATA_ROOT@/v4/checks/abbey-oakwood-painting.jpg"
+    },
+    {
+      "id": "moonwatchers",
+      "kind": "room",
+      "time": 377.375,
+      "file": "@DATA_ROOT@/v4/checks/moonwatchers-room.jpg"
+    },
+    {
+      "id": "moonwatchers",
+      "kind": "painting",
+      "time": 381.875,
+      "file": "@DATA_ROOT@/v4/checks/moonwatchers-painting.jpg"
+    },
+    {
+      "id": "twilight",
+      "kind": "room",
+      "time": 430.375,
+      "file": "@DATA_ROOT@/v4/checks/twilight-room.jpg"
+    },
+    {
+      "id": "twilight",
+      "kind": "painting",
+      "time": 434.875,
+      "file": "@DATA_ROOT@/v4/checks/twilight-painting.jpg"
+    },
+    {
+      "id": "temeraire",
+      "kind": "room",
+      "time": 485.375,
+      "file": "@DATA_ROOT@/v4/checks/temeraire-room.jpg"
+    },
+    {
+      "id": "temeraire",
+      "kind": "painting",
+      "time": 489.875,
+      "file": "@DATA_ROOT@/v4/checks/temeraire-painting.jpg"
+    },
+    {
+      "id": "rain-steam",
+      "kind": "room",
+      "time": 542.375,
+      "file": "@DATA_ROOT@/v4/checks/rain-steam-room.jpg"
+    },
+    {
+      "id": "rain-steam",
+      "kind": "painting",
+      "time": 546.875,
+      "file": "@DATA_ROOT@/v4/checks/rain-steam-painting.jpg"
+    },
+    {
+      "id": "snow-storm",
+      "kind": "room",
+      "time": 610.375,
+      "file": "@DATA_ROOT@/v4/checks/snow-storm-room.jpg"
+    },
+    {
+      "id": "snow-storm",
+      "kind": "painting",
+      "time": 614.875,
+      "file": "@DATA_ROOT@/v4/checks/snow-storm-painting.jpg"
+    },
+    {
+      "id": "ninth-wave",
+      "kind": "room",
+      "time": 654.375,
+      "file": "@DATA_ROOT@/v4/checks/ninth-wave-room.jpg"
+    },
+    {
+      "id": "ninth-wave",
+      "kind": "painting",
+      "time": 658.875,
+      "file": "@DATA_ROOT@/v4/checks/ninth-wave-painting.jpg"
+    },
+    {
+      "id": "heart-andes",
+      "kind": "room",
+      "time": 697.375,
+      "file": "@DATA_ROOT@/v4/checks/heart-andes-room.jpg"
+    },
+    {
+      "id": "heart-andes",
+      "kind": "painting",
+      "time": 701.875,
+      "file": "@DATA_ROOT@/v4/checks/heart-andes-painting.jpg"
+    },
+    {
+      "id": "wanderer",
+      "kind": "room",
+      "time": 740.375,
+      "file": "@DATA_ROOT@/v4/checks/wanderer-room.jpg"
+    },
+    {
+      "id": "wanderer",
+      "kind": "painting",
+      "time": 744.875,
+      "file": "@DATA_ROOT@/v4/checks/wanderer-painting.jpg"
+    },
+    {
+      "id": "sierra",
+      "kind": "room",
+      "time": 784.375,
+      "file": "@DATA_ROOT@/v4/checks/sierra-room.jpg"
+    },
+    {
+      "id": "sierra",
+      "kind": "painting",
+      "time": 788.875,
+      "file": "@DATA_ROOT@/v4/checks/sierra-painting.jpg"
+    },
+    {
+      "id": "chopin-portrait",
+      "kind": "room",
+      "time": 843.9166666666666,
+      "file": "@DATA_ROOT@/v4/checks/chopin-portrait-room.jpg"
+    },
+    {
+      "id": "chopin-portrait",
+      "kind": "painting",
+      "time": 848.4166666666666,
+      "file": "@DATA_ROOT@/v4/checks/chopin-portrait-painting.jpg"
+    },
+    {
+      "id": "ophelia",
+      "kind": "room",
+      "time": 892.9166666666666,
+      "file": "@DATA_ROOT@/v4/checks/ophelia-room.jpg"
+    },
+    {
+      "id": "ophelia",
+      "kind": "painting",
+      "time": 897.4166666666666,
+      "file": "@DATA_ROOT@/v4/checks/ophelia-painting.jpg"
+    },
+    {
+      "id": "shalott",
+      "kind": "room",
+      "time": 941.9166666666666,
+      "file": "@DATA_ROOT@/v4/checks/shalott-room.jpg"
+    },
+    {
+      "id": "shalott",
+      "kind": "painting",
+      "time": 946.4166666666666,
+      "file": "@DATA_ROOT@/v4/checks/shalott-painting.jpg"
+    },
+    {
+      "id": "life-child",
+      "kind": "room",
+      "time": 1009.9166666666666,
+      "file": "@DATA_ROOT@/v4/checks/life-child-room.jpg"
+    },
+    {
+      "id": "life-child",
+      "kind": "painting",
+      "time": 1014.4166666666666,
+      "file": "@DATA_ROOT@/v4/checks/life-child-painting.jpg"
+    },
+    {
+      "id": "life-youth",
+      "kind": "room",
+      "time": 1058.9166666666667,
+      "file": "@DATA_ROOT@/v4/checks/life-youth-room.jpg"
+    },
+    {
+      "id": "life-youth",
+      "kind": "painting",
+      "time": 1063.4166666666667,
+      "file": "@DATA_ROOT@/v4/checks/life-youth-painting.jpg"
+    },
+    {
+      "id": "life-man",
+      "kind": "room",
+      "time": 1109.9166666666667,
+      "file": "@DATA_ROOT@/v4/checks/life-man-room.jpg"
+    },
+    {
+      "id": "life-man",
+      "kind": "painting",
+      "time": 1114.4166666666667,
+      "file": "@DATA_ROOT@/v4/checks/life-man-painting.jpg"
+    },
+    {
+      "id": "life-old",
+      "kind": "room",
+      "time": 1161.9166666666667,
+      "file": "@DATA_ROOT@/v4/checks/life-old-room.jpg"
+    },
+    {
+      "id": "life-old",
+      "kind": "painting",
+      "time": 1166.4166666666667,
+      "file": "@DATA_ROOT@/v4/checks/life-old-painting.jpg"
+    },
+    {
+      "id": "miranda",
+      "kind": "room",
+      "time": 1233,
+      "file": "@DATA_ROOT@/v4/checks/miranda-room.jpg"
+    },
+    {
+      "id": "miranda",
+      "kind": "painting",
+      "time": 1237.5,
+      "file": "@DATA_ROOT@/v4/checks/miranda-painting.jpg"
+    },
+    {
+      "id": "chios",
+      "kind": "room",
+      "time": 1279,
+      "file": "@DATA_ROOT@/v4/checks/chios-room.jpg"
+    },
+    {
+      "id": "chios",
+      "kind": "painting",
+      "time": 1283.5,
+      "file": "@DATA_ROOT@/v4/checks/chios-painting.jpg"
+    },
+    {
+      "id": "crusaders",
+      "kind": "room",
+      "time": 1321,
+      "file": "@DATA_ROOT@/v4/checks/crusaders-room.jpg"
+    },
+    {
+      "id": "crusaders",
+      "kind": "painting",
+      "time": 1325.5,
+      "file": "@DATA_ROOT@/v4/checks/crusaders-painting.jpg"
+    },
+    {
+      "id": "raft-medusa",
+      "kind": "room",
+      "time": 1367,
+      "file": "@DATA_ROOT@/v4/checks/raft-medusa-room.jpg"
+    },
+    {
+      "id": "raft-medusa",
+      "kind": "painting",
+      "time": 1371.5,
+      "file": "@DATA_ROOT@/v4/checks/raft-medusa-painting.jpg"
+    },
+    {
+      "id": "parliament",
+      "kind": "room",
+      "time": 1418,
+      "file": "@DATA_ROOT@/v4/checks/parliament-room.jpg"
+    },
+    {
+      "id": "parliament",
+      "kind": "painting",
+      "time": 1422.5,
+      "file": "@DATA_ROOT@/v4/checks/parliament-painting.jpg"
+    },
+    {
+      "id": "wounded",
+      "kind": "room",
+      "time": 1462,
+      "file": "@DATA_ROOT@/v4/checks/wounded-room.jpg"
+    },
+    {
+      "id": "wounded",
+      "kind": "painting",
+      "time": 1466.5,
+      "file": "@DATA_ROOT@/v4/checks/wounded-painting.jpg"
+    },
+    {
+      "id": "third-may",
+      "kind": "room",
+      "time": 1508,
+      "file": "@DATA_ROOT@/v4/checks/third-may-room.jpg"
+    },
+    {
+      "id": "third-may",
+      "kind": "painting",
+      "time": 1512.5,
+      "file": "@DATA_ROOT@/v4/checks/third-may-painting.jpg"
+    },
+    {
+      "id": "charging",
+      "kind": "room",
+      "time": 1558,
+      "file": "@DATA_ROOT@/v4/checks/charging-room.jpg"
+    },
+    {
+      "id": "charging",
+      "kind": "painting",
+      "time": 1562.5,
+      "file": "@DATA_ROOT@/v4/checks/charging-painting.jpg"
+    },
+    {
+      "id": "missolonghi",
+      "kind": "room",
+      "time": 1603,
+      "file": "@DATA_ROOT@/v4/checks/missolonghi-room.jpg"
+    },
+    {
+      "id": "missolonghi",
+      "kind": "painting",
+      "time": 1607.5,
+      "file": "@DATA_ROOT@/v4/checks/missolonghi-painting.jpg"
+    },
+    {
+      "id": "liberty",
+      "kind": "room",
+      "time": 1653,
+      "file": "@DATA_ROOT@/v4/checks/liberty-room.jpg"
+    },
+    {
+      "id": "liberty",
+      "kind": "painting",
+      "time": 1657.5,
+      "file": "@DATA_ROOT@/v4/checks/liberty-painting.jpg"
+    }
+  ],
+  "errors": []
+}

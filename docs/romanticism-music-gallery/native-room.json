@@ -1,0 +1,71 @@
+{
+  "canonical_repository": "inception-space-ui",
+  "head": "1a7c835c31e689e2c10b4cce9b28cfbb864201ba",
+  "captured_source_files": [
+    {
+      "file": "content/inception/artworks/romanticism-salon-v1.json",
+      "capture_sha256": "f98221584e2bcc5e71ccfd5ccaac9ac8f22e6d9c43550807bf0e029a5cb70389",
+      "current_sha256": "f98221584e2bcc5e71ccfd5ccaac9ac8f22e6d9c43550807bf0e029a5cb70389",
+      "current_matches_capture": true,
+      "head_matches_capture": false
+    },
+    {
+      "file": "content/inception/artworks/romanticism-sculptures-v1.json",
+      "capture_sha256": "326a94212e6691970c64cf973f9e768a65238262d5b90b12b5e6fc756eda1f67",
+      "current_sha256": "326a94212e6691970c64cf973f9e768a65238262d5b90b12b5e6fc756eda1f67",
+      "current_matches_capture": true,
+      "head_matches_capture": false
+    },
+    {
+      "file": "content/inception/artworks/romanticism-selected-scans.json",
+      "capture_sha256": "732b67f4880e393b9c09d4815a040b6b7d594a7e66530a1af253920a6d9e91dd",
+      "current_sha256": "732b67f4880e393b9c09d4815a040b6b7d594a7e66530a1af253920a6d9e91dd",
+      "current_matches_capture": true,
+      "head_matches_capture": false
+    },
+    {
+      "file": "src/inception/world/rooms/romanticismLayout.js",
+      "capture_sha256": "d6c1611bc10c680a818ec802c8fd007e7953d61b28cd130ef55272cb7a619cfd",
+      "current_sha256": "d6c1611bc10c680a818ec802c8fd007e7953d61b28cd130ef55272cb7a619cfd",
+      "current_matches_capture": true,
+      "head_matches_capture": false
+    },
+    {
+      "file": "src/inception/world/rooms/romanticismExhibits.ts",
+      "capture_sha256": "2c6f076d89f0f4e4859ba2c259ddbd839566a8ee49ecc04c1ff3a8154de1f1b2",
+      "current_sha256": "2c6f076d89f0f4e4859ba2c259ddbd839566a8ee49ecc04c1ff3a8154de1f1b2",
+      "current_matches_capture": true,
+      "head_matches_capture": false
+    },
+    {
+      "file": "src/inception/world/render/threeRomanticismSalon.ts",
+      "capture_sha256": "c714e33bf196e1eb499b2418fa6bead85e27f667052b69701fd7cd941b86d7ed",
+      "current_sha256": "c714e33bf196e1eb499b2418fa6bead85e27f667052b69701fd7cd941b86d7ed",
+      "current_matches_capture": true,
+      "head_matches_capture": false
+    },
+    {
+      "file": "src/inception/world/render/romanticismSurfaces.ts",
+      "capture_sha256": "de15c8d37a8190d7dae905d0dced7e5537f784f891903ff9abdd2a9341fec0c9",
+      "current_sha256": "de15c8d37a8190d7dae905d0dced7e5537f784f891903ff9abdd2a9341fec0c9",
+      "current_matches_capture": true,
+      "head_matches_capture": false
+    },
+    {
+      "file": "src/inception/world/model/museum.js",
+      "capture_sha256": "79dfbe9c8e53f7396b2e6c21b52722cb097e37bab8824581e964c846005cdab5",
+      "current_sha256": "79dfbe9c8e53f7396b2e6c21b52722cb097e37bab8824581e964c846005cdab5",
+      "current_matches_capture": true,
+      "head_matches_capture": false
+    },
+    {
+      "file": "src/inception/world/render/threeMuseum.ts",
+      "capture_sha256": "a8bfbcc023923dd7609a0425ffa23bc9947abbe288f5e4f47e202a00615940b8",
+      "current_sha256": "a8bfbcc023923dd7609a0425ffa23bc9947abbe288f5e4f47e202a00615940b8",
+      "current_matches_capture": true,
+      "head_matches_capture": false
+    }
+  ],
+  "source_committed_at_capture": false,
+  "cleanup_gate": "Keep native gallery capture media until the matching UI source is committed in its own repository. Do not duplicate the UI implementation here."
+}

@@ -1,0 +1,34 @@
+[
+  {
+    "file": "music/beethoven-egmont.ogg",
+    "source": "https://commons.wikimedia.org/wiki/File:Beethoven_EgmontOvertureOp.84_LudwigVanBeethoven-EgmontOvertureOp.84.ogg",
+    "status": "failed",
+    "error": "HTTP Error 429: Too many requests. Please contact the Wikimedia SRE team at noc@wikimedia.org and refer to this message. (daab851)"
+  },
+  {
+    "file": "music/beethoven-pathetique-ii.ogg",
+    "source": "https://commons.wikimedia.org/wiki/File:Beethoven,_Sonata_No._8_in_C_Minor_Pathetique,_Op._13_-_II._Adagio_cantabile.ogg",
+    "status": "failed",
+    "error": "HTTP Error 429: Too many requests. Please contact the Wikimedia SRE team at noc@wikimedia.org and refer to this message. (daab851)"
+  },
+  {
+    "file": "footage/gallery-5824200.mp4",
+    "source": "https://www.pexels.com/video/arts-inside-a-gallery-5824200/",
+    "url": "https://videos.pexels.com/video-files/5824200/5824200-uhd_3840_2160_24fps.mp4",
+    "author": "Charlotte May",
+    "license": "Pexels License",
+    "bytes": 16874925,
+    "sha256": "828b544144c15fb072ea6e3a78c3f7bd58cc833aeedc9019790048566f3f039f",
+    "status": "downloaded"
+  },
+  {
+    "file": "footage/visitors-7986431.mp4",
+    "source": "https://www.pexels.com/video/friends-looking-at-the-exhibition-of-paintings-7986431/",
+    "url": "https://videos.pexels.com/video-files/7986431/7986431-hd_1920_1080_25fps.mp4",
+    "author": "Antoni Shkraba",
+    "license": "Pexels License",
+    "bytes": 6573128,
+    "sha256": "ba61d1219db3c2b45214a87b6ad959372a024204c5eea7f6963073f2fba9e67c",
+    "status": "downloaded"
+  }
+]
