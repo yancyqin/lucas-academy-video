@@ -1,0 +1,273 @@
+{
+  "anchors": [
+    {
+      "t": 0,
+      "eye": [
+        -19.5,
+        4.05,
+        -26
+      ],
+      "target": [
+        -16,
+        12,
+        -42.375
+      ],
+      "fov": 62
+    },
+    {
+      "t": 1,
+      "eye": [
+        -19.5,
+        4.05,
+        -26
+      ],
+      "target": [
+        -16,
+        12,
+        -42.375
+      ],
+      "fov": 62
+    },
+    {
+      "t": 12,
+      "eye": [
+        -13.428571428571429,
+        9.7,
+        -31.405341024977044
+      ],
+      "target": [
+        -13.428571428571429,
+        9.7,
+        -42.375
+      ],
+      "fov": 52
+    },
+    {
+      "t": 17.5,
+      "eye": [
+        -13.428571428571429,
+        9.7,
+        -31.405341024977044
+      ],
+      "target": [
+        -13.428571428571429,
+        9.7,
+        -42.375
+      ],
+      "fov": 52
+    },
+    {
+      "t": 23.5,
+      "eye": [
+        -13.428571428571429,
+        9.7,
+        -31.405341024977044
+      ],
+      "target": [
+        -12.348571428571429,
+        9.145498046875,
+        -42.375
+      ],
+      "fov": 15.5
+    },
+    {
+      "t": 24.5,
+      "eye": [
+        -13.428571428571429,
+        9.7,
+        -31.405341024977044
+      ],
+      "target": [
+        -12.348571428571429,
+        9.145498046875,
+        -42.375
+      ],
+      "fov": 15.5
+    },
+    {
+      "t": 27,
+      "eye": [
+        -13.428571428571429,
+        9.7,
+        -31.405341024977044
+      ],
+      "target": [
+        -13.428571428571429,
+        9.7,
+        -42.375
+      ],
+      "fov": 52
+    },
+    {
+      "t": 33,
+      "eye": [
+        -20.142857142857142,
+        9.7,
+        -31.405341024977044
+      ],
+      "target": [
+        -20.142857142857142,
+        9.7,
+        -42.375
+      ],
+      "fov": 52
+    },
+    {
+      "t": 38.7,
+      "eye": [
+        -20.142857142857142,
+        9.7,
+        -31.405341024977044
+      ],
+      "target": [
+        -20.142857142857142,
+        9.7,
+        -42.375
+      ],
+      "fov": 52
+    },
+    {
+      "t": 46,
+      "eye": [
+        -20.142857142857142,
+        9.7,
+        -31.405341024977044
+      ],
+      "target": [
+        -19.332857142857144,
+        8.9733203125,
+        -42.375
+      ],
+      "fov": 12.5
+    },
+    {
+      "t": 49,
+      "eye": [
+        -20.142857142857142,
+        9.7,
+        -31.405341024977044
+      ],
+      "target": [
+        -19.332857142857144,
+        8.9733203125,
+        -42.375
+      ],
+      "fov": 12.5
+    },
+    {
+      "t": 55,
+      "eye": [
+        -16.785714285714285,
+        9.7,
+        -22.1
+      ],
+      "target": [
+        -16.785714285714285,
+        9.7,
+        -42.375
+      ],
+      "fov": 60
+    },
+    {
+      "t": 58,
+      "eye": [
+        -16.785714285714285,
+        9.7,
+        -22.1
+      ],
+      "target": [
+        -16.785714285714285,
+        9.7,
+        -42.375
+      ],
+      "fov": 60
+    }
+  ],
+  "maxMps": 2.472943530880317,
+  "maxDegrees": 4.185507907579622,
+  "works": [
+    {
+      "id": "life-youth",
+      "title_zh": "生命之旅：青年",
+      "title_en": "The Voyage of Life: Youth",
+      "artist_zh": "托马斯·科尔",
+      "artist_en": "Thomas Cole",
+      "year": "1842",
+      "year_sort": 1842,
+      "source": "https://www.nga.gov/artworks/52451-voyage-life-youth",
+      "license": "Public domain",
+      "label_en": "The Voyage of Life: Youth",
+      "wall": "time",
+      "category": "romantic",
+      "image": "romanticism-salon-v1/life-youth.jpg",
+      "aspect": 1.4607703281027105,
+      "width": 5.4,
+      "height": 3.6966796875,
+      "bytes": 207466,
+      "sha256": "25f5ab1c76bb67d488f8336682152885e3de65174619961a0624135af1891469",
+      "original_sha256": "b394571903fd1a15944515d8caf945e40dad378342a6b450ee2fcaa882237c6d",
+      "branches": [
+        "music"
+      ],
+      "position": [
+        -13.428571428571429,
+        9.7,
+        -42.6
+      ],
+      "rotationY": 0,
+      "eye": [
+        -13.428571428571429,
+        9.7,
+        -34.800000000000004
+      ],
+      "wallId": "time"
+    },
+    {
+      "id": "life-old",
+      "title_zh": "生命之旅：老年",
+      "title_en": "The Voyage of Life: Old Age",
+      "artist_zh": "托马斯·科尔",
+      "artist_en": "Thomas Cole",
+      "year": "1842",
+      "year_sort": 1842,
+      "source": "https://www.nga.gov/artworks/52453-voyage-life-old-age",
+      "license": "Public domain",
+      "label_en": "The Voyage of Life: Old Age",
+      "wall": "time",
+      "category": "romantic",
+      "image": "romanticism-salon-v1/life-old.jpg",
+      "aspect": 1.486211901306241,
+      "width": 5.4,
+      "height": 3.6333984375000004,
+      "bytes": 85986,
+      "sha256": "e7b5568805cb6505f87492465a566894ef50e61b184bee488ac9ea7d62a6d629",
+      "original_sha256": "192177d1f2c946f0888bdf7e0e01a6a660ffaadcd4ca175864191e18d3b451a5",
+      "branches": [
+        "music"
+      ],
+      "position": [
+        -20.142857142857142,
+        9.7,
+        -42.6
+      ],
+      "rotationY": 0,
+      "eye": [
+        -20.142857142857142,
+        9.7,
+        -34.800000000000004
+      ],
+      "wallId": "time"
+    }
+  ],
+  "source_snapshot": {
+    "content/inception/artworks/romanticism-salon-v1.json": "f98221584e2bcc5e71ccfd5ccaac9ac8f22e6d9c43550807bf0e029a5cb70389",
+    "content/inception/artworks/romanticism-sculptures-v1.json": "326a94212e6691970c64cf973f9e768a65238262d5b90b12b5e6fc756eda1f67",
+    "content/inception/artworks/romanticism-selected-scans.json": "732b67f4880e393b9c09d4815a040b6b7d594a7e66530a1af253920a6d9e91dd",
+    "src/inception/world/rooms/romanticismLayout.js": "d6c1611bc10c680a818ec802c8fd007e7953d61b28cd130ef55272cb7a619cfd",
+    "src/inception/world/rooms/romanticismExhibits.ts": "2c6f076d89f0f4e4859ba2c259ddbd839566a8ee49ecc04c1ff3a8154de1f1b2",
+    "src/inception/world/render/threeRomanticismSalon.ts": "c714e33bf196e1eb499b2418fa6bead85e27f667052b69701fd7cd941b86d7ed",
+    "src/inception/world/render/romanticismSurfaces.ts": "de15c8d37a8190d7dae905d0dced7e5537f784f891903ff9abdd2a9341fec0c9",
+    "src/inception/world/model/museum.js": "79dfbe9c8e53f7396b2e6c21b52722cb097e37bab8824581e964c846005cdab5",
+    "src/inception/world/render/threeMuseum.ts": "a8bfbcc023923dd7609a0425ffa23bc9947abbe288f5e4f47e202a00615940b8"
+  }
+}

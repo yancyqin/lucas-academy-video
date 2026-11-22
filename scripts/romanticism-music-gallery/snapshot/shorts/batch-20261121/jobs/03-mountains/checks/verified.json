@@ -1,0 +1,73 @@
+{
+  "status": "passed",
+  "checked_utc": "2026-11-22T06:03:28.957224+00:00",
+  "video": {
+    "file": "03-山峦与光.mp4",
+    "bytes": 50774269,
+    "sha256": "51933ec22d63891842c24ab2e6fc586af4511708f701523460121f1956b03538",
+    "duration": 58,
+    "width": 1080,
+    "height": 1920,
+    "fps": 24,
+    "frames": 1392,
+    "audio": "aac"
+  },
+  "full_decode": "passed",
+  "current_is_source_hashes_verified": true,
+  "english_picture_labels": true,
+  "separate_chinese_subtitle_cues": 4,
+  "music_source_hash_verified": true,
+  "no_narration": true,
+  "featured_works": [
+    "heart-andes",
+    "sierra"
+  ],
+  "visual_review": "Passed: final export frames inspected. Both paintings remain whole at their stops. Revised close-ups center the Andes waterfall and the Sierra cascade, avoiding frame edges and keeping the waterfall-to-water compositions clear. English captions remain unchanged.",
+  "browser_review": {
+    "file": "03-山峦与光.mp4",
+    "status": "passed",
+    "playback": {
+      "duration": 58,
+      "width": 1080,
+      "height": 1920,
+      "currentTime": 0.230358,
+      "error": null
+    },
+    "subtitles": [
+      {
+        "time": 2.475,
+        "text": "山峦与光"
+      },
+      {
+        "time": 6.550000000000001,
+        "text": "肖邦 · 升 C 小调夜曲"
+      },
+      {
+        "time": 15.075000000000001,
+        "text": "安第斯之心\n弗雷德里克·埃德温·丘奇"
+      },
+      {
+        "time": 36.825,
+        "text": "内华达山脉之中\n阿尔伯特·比尔施塔特"
+      }
+    ],
+    "seeks": [
+      {
+        "time": 23.5,
+        "error": null
+      },
+      {
+        "time": 28.5,
+        "error": null
+      },
+      {
+        "time": 46,
+        "error": null
+      },
+      {
+        "time": 56,
+        "error": null
+      }
+    ]
+  }
+}

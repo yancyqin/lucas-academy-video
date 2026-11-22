@@ -1,0 +1,73 @@
+{
+  "status": "passed",
+  "checked_utc": "2026-11-22T05:33:47.543689+00:00",
+  "video": {
+    "file": "02-寂静与时间.mp4",
+    "bytes": 46118207,
+    "sha256": "3b0ebd58f5ca0e43113a42b9b94e28bfc77ead5981eee9ed147f060791d8daef",
+    "duration": 58,
+    "width": 1080,
+    "height": 1920,
+    "fps": 24,
+    "frames": 1392,
+    "audio": "aac"
+  },
+  "full_decode": "passed",
+  "current_is_source_hashes_verified": true,
+  "english_picture_labels": true,
+  "separate_chinese_subtitle_cues": 4,
+  "music_source_hash_verified": true,
+  "no_narration": true,
+  "featured_works": [
+    "monk-sea",
+    "abbey-oakwood"
+  ],
+  "visual_review": "Passed: nine final export frames inspected. Both Friedrich paintings remain whole at their stops; monk, abbey and mourners are legible in selected details. English labels sit at the top, leaving space for separate Chinese subtitles.",
+  "browser_review": {
+    "file": "02-寂静与时间.mp4",
+    "status": "passed",
+    "playback": {
+      "duration": 58,
+      "width": 1080,
+      "height": 1920,
+      "currentTime": 0.227975,
+      "error": null
+    },
+    "subtitles": [
+      {
+        "time": 2.475,
+        "text": "寂静与时间"
+      },
+      {
+        "time": 6.550000000000001,
+        "text": "肖邦 · 夜曲 Op. 9 No. 2"
+      },
+      {
+        "time": 15.075000000000001,
+        "text": "海边的修道士\n卡斯帕·大卫·弗里德里希"
+      },
+      {
+        "time": 37.925,
+        "text": "橡树林中的修道院\n卡斯帕·大卫·弗里德里希"
+      }
+    ],
+    "seeks": [
+      {
+        "time": 23.5,
+        "error": null
+      },
+      {
+        "time": 28.5,
+        "error": null
+      },
+      {
+        "time": 46,
+        "error": null
+      },
+      {
+        "time": 56,
+        "error": null
+      }
+    ]
+  }
+}

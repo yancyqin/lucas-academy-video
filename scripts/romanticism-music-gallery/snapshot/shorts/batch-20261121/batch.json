@@ -1,0 +1,1076 @@
+{
+  "approved_sample": "@DATA_ROOT@/shorts/01-vastness",
+  "jobs": [
+    {
+      "id": "02-silence",
+      "number": 2,
+      "title": "寂静与时间",
+      "title_en": "Silence and Time",
+      "category": "nature",
+      "works": [
+        "monk-sea",
+        "abbey-oakwood"
+      ],
+      "music": {
+        "title": "降 E 大调夜曲 Op. 9 No. 2",
+        "composer": "肖邦",
+        "performer": "Musopen · 旧片同版录音",
+        "source": "https://commons.wikimedia.org/wiki/File:Chopin_-_Nocturne_No._2_in_E-flat_major,_Op._9_No._2_(Frank_Levy).flac",
+        "license": "CC0 1.0",
+        "credit_note": "Commons 署名 Frank Lévy；原始档案的部分标签另有 Aya Higuchi 署名，演奏者归属待进一步核对。",
+        "local_file": "music/nocturne-9-2.m4a",
+        "sha256": "3d1c1473dbed61eec8d45384117ebff602110b7e5edbbcf6330351c0ce88e1cf",
+        "duration": 271.469,
+        "start": 317.875,
+        "end": 589.375,
+        "constant_gain_db": -3.87,
+        "file": "@DATA_ROOT@/music/nocturne-9-2.m4a",
+        "gain_db": -3.87,
+        "excerpt_start": 0,
+        "excerpt_seconds": 58
+      },
+      "excerpt": 0,
+      "names": [
+        "Monk by the Sea",
+        "Abbey in the Oakwood"
+      ],
+      "chinese": [
+        "海边的修道士",
+        "橡树林中的修道院"
+      ],
+      "detail": [
+        {
+          "u": 0.355,
+          "v": 0.6,
+          "fov": 15
+        },
+        {
+          "u": 0.5,
+          "v": 0.57,
+          "fov": 16.5
+        }
+      ],
+      "start": {
+        "eye": [
+          -20.5,
+          4.05,
+          -9
+        ],
+        "target": [
+          -27.375,
+          8,
+          -23
+        ],
+        "fov": 62
+      },
+      "first_at": 12,
+      "first_label": 12.8,
+      "first_detail": 17.5,
+      "first_close": 23.5,
+      "pull_at": 24.5,
+      "walk_at": 27,
+      "second_at": 35,
+      "second_label": 35.5,
+      "second_detail": 40.5,
+      "second_close": 47.5,
+      "closing": {
+        "distance": 13.8,
+        "fov": 58,
+        "y_offset": 0.2
+      },
+      "relation_zh": "同一位画家笔下的海岸与废墟：人物、荒树和建筑共同带出寂静与时间。",
+      "relation_en": "Friedrich pairs the quiet of an open sea with bare trees and a ruined abbey: two landscapes through which to consider silence and time.",
+      "stem": "02-寂静与时间",
+      "root": "@DATA_ROOT@/shorts/batch-20261121/jobs/02-silence",
+      "width": 1080,
+      "height": 1920,
+      "fps": 24,
+      "duration": 58,
+      "frames": 1392,
+      "artworks": [
+        {
+          "id": "monk-sea",
+          "title_zh": "海边的修道士",
+          "title_en": "Monk by the Sea",
+          "artist_zh": "卡斯帕·大卫·弗里德里希",
+          "artist_en": "Caspar David Friedrich",
+          "year": "1810",
+          "year_sort": 1810,
+          "source": "https://cdfriedrich.de/en/chronicle/moench-am-meer/",
+          "license": "Public domain",
+          "label_en": "Monk by the Sea",
+          "wall": "nature",
+          "category": "romantic",
+          "image": "romanticism-salon-v1/monk-sea.jpg",
+          "aspect": 1.5705521472392638,
+          "width": 1024,
+          "height": 652,
+          "bytes": 137204,
+          "sha256": "e0fcf829426e3a9f33602a135b6f8c4fd2878f890420a0ad7471ff8fc9170dab",
+          "original_sha256": "0f152af46a42348c50e7ee86dd8b203b9ee4b325b9c261fdf8340ea3a917a730",
+          "branches": [
+            "narrated",
+            "music"
+          ],
+          "file": "@DATA_ROOT@/art/monk-sea.jpg",
+          "nudity": false
+        },
+        {
+          "id": "abbey-oakwood",
+          "title_zh": "橡树林中的修道院",
+          "title_en": "The Abbey in the Oakwood",
+          "artist_zh": "卡斯帕·大卫·弗里德里希",
+          "artist_en": "Caspar David Friedrich",
+          "year": "1810",
+          "year_sort": 1810,
+          "source": "https://cdfriedrich.de/en/chronicle/abtei-im-eichwald/",
+          "license": "Public domain",
+          "label_en": "The Abbey in the Oakwood",
+          "wall": "time",
+          "category": "romantic",
+          "image": "romanticism-salon-v1/abbey-oakwood.jpg",
+          "aspect": 1.5609756097560976,
+          "width": 1024,
+          "height": 656,
+          "bytes": 137012,
+          "sha256": "1c072935af2104e9ede26186d3841a99b3fdbc490dd70f4dd1f8bea9958d21b9",
+          "original_sha256": "1fa605ab819fc5602b653064230e3f85efc87697254cdbd77a05f23b539d05dc",
+          "branches": [
+            "narrated",
+            "music"
+          ],
+          "file": "@DATA_ROOT@/art/abbey-oakwood.jpg",
+          "nudity": false
+        }
+      ],
+      "labels": [
+        {
+          "id": "theme",
+          "start": 0.65,
+          "end": 4.3,
+          "en": [
+            "Silence and Time"
+          ],
+          "zh": "寂静与时间",
+          "y": 356,
+          "size": 49,
+          "center": true,
+          "font_px": 49
+        },
+        {
+          "id": "music",
+          "start": 4.7,
+          "end": 8.4,
+          "en": [
+            "Chopin · Nocturne Op. 9 No. 2"
+          ],
+          "zh": "肖邦 · 夜曲 Op. 9 No. 2",
+          "y": 230,
+          "size": 36,
+          "font_px": 36
+        },
+        {
+          "id": "monk-sea",
+          "start": 12.8,
+          "end": 17.35,
+          "en": [
+            "Monk by the Sea",
+            "Caspar David Friedrich"
+          ],
+          "zh": "海边的修道士\n卡斯帕·大卫·弗里德里希",
+          "y": 150,
+          "size": 38,
+          "font_px": 38
+        },
+        {
+          "id": "abbey-oakwood",
+          "start": 35.5,
+          "end": 40.35,
+          "en": [
+            "Abbey in the Oakwood",
+            "Caspar David Friedrich"
+          ],
+          "zh": "橡树林中的修道院\n卡斯帕·大卫·弗里德里希",
+          "y": 150,
+          "size": 38,
+          "font_px": 38
+        }
+      ],
+      "source_repository": "@UI_ROOT@",
+      "source_snapshot": {
+        "content/inception/artworks/romanticism-salon-v1.json": "f98221584e2bcc5e71ccfd5ccaac9ac8f22e6d9c43550807bf0e029a5cb70389",
+        "content/inception/artworks/romanticism-sculptures-v1.json": "326a94212e6691970c64cf973f9e768a65238262d5b90b12b5e6fc756eda1f67",
+        "content/inception/artworks/romanticism-selected-scans.json": "732b67f4880e393b9c09d4815a040b6b7d594a7e66530a1af253920a6d9e91dd",
+        "src/inception/world/rooms/romanticismLayout.js": "d6c1611bc10c680a818ec802c8fd007e7953d61b28cd130ef55272cb7a619cfd",
+        "src/inception/world/rooms/romanticismExhibits.ts": "2c6f076d89f0f4e4859ba2c259ddbd839566a8ee49ecc04c1ff3a8154de1f1b2",
+        "src/inception/world/render/threeRomanticismSalon.ts": "c714e33bf196e1eb499b2418fa6bead85e27f667052b69701fd7cd941b86d7ed",
+        "src/inception/world/render/romanticismSurfaces.ts": "de15c8d37a8190d7dae905d0dced7e5537f784f891903ff9abdd2a9341fec0c9",
+        "src/inception/world/model/museum.js": "79dfbe9c8e53f7396b2e6c21b52722cb097e37bab8824581e964c846005cdab5",
+        "src/inception/world/render/threeMuseum.ts": "a8bfbcc023923dd7609a0425ffa23bc9947abbe288f5e4f47e202a00615940b8"
+      },
+      "picture_language": "en",
+      "subtitles": [
+        "zh-Hans"
+      ],
+      "narration": false
+    },
+    {
+      "id": "03-mountains",
+      "number": 3,
+      "title": "山峦与光",
+      "title_en": "Mountains and Light",
+      "category": "nature",
+      "works": [
+        "heart-andes",
+        "sierra"
+      ],
+      "music": {
+        "title": "升 C 小调夜曲 B. 49",
+        "composer": "肖邦",
+        "performer": "Frank Levy",
+        "source": "https://archive.org/download/musopen-chopin-complete-works-flac/Nocturne%20in%20C%20sharp%20minor%20%27Lento%20con%20gran%20espressione%27%2C%20B.%2049%20%28Op.%20posth.%29.mp3",
+        "license": "CC0 1.0",
+        "credit_note": "演奏者按录音档案的 ARTIST 标签列出。",
+        "local_file": "music/nocturne-c-sharp.m4a",
+        "sha256": "e5794e60f5d8db18411e1cc6456ca70628423a2aae296e1d61664bd18b03b2e8",
+        "duration": 225.008,
+        "start": 590.875,
+        "end": 815.9166666666666,
+        "constant_gain_db": -4.66,
+        "file": "@DATA_ROOT@/music/nocturne-c-sharp.m4a",
+        "gain_db": -4.66,
+        "excerpt_start": 14,
+        "excerpt_seconds": 58
+      },
+      "excerpt": 14,
+      "names": [
+        "The Heart of the Andes",
+        "Among the Sierra Nevada"
+      ],
+      "chinese": [
+        "安第斯之心",
+        "内华达山脉之中"
+      ],
+      "detail": [
+        {
+          "u": 0.61,
+          "v": 0.73,
+          "fov": 8
+        },
+        {
+          "u": 0.46,
+          "v": 0.67,
+          "fov": 10
+        }
+      ],
+      "start": {
+        "eye": [
+          -22,
+          4.05,
+          12
+        ],
+        "target": [
+          -27.375,
+          11,
+          -1
+        ],
+        "fov": 62
+      },
+      "first_at": 12,
+      "first_label": 12.8,
+      "first_detail": 17.5,
+      "first_close": 23.5,
+      "pull_at": 24.5,
+      "walk_at": 27,
+      "second_at": 34,
+      "second_label": 34.5,
+      "second_detail": 39.3,
+      "second_close": 46.5,
+      "closing": {
+        "distance": 12.6,
+        "fov": 56
+      },
+      "relation_zh": "先看丘奇与比尔施塔特的辽阔山景，再走近两幅画中的瀑布：从群山的尺度，看到水落向河流与湖面的细节。",
+      "relation_en": "First take in the expansive mountain landscapes of Church and Bierstadt, then move closer to their waterfalls: water descending into a river and a lake.",
+      "stem": "03-山峦与光",
+      "root": "@DATA_ROOT@/shorts/batch-20261121/jobs/03-mountains",
+      "width": 1080,
+      "height": 1920,
+      "fps": 24,
+      "duration": 58,
+      "frames": 1392,
+      "artworks": [
+        {
+          "id": "heart-andes",
+          "title_zh": "安第斯之心",
+          "title_en": "The Heart of the Andes",
+          "artist_zh": "弗雷德里克·埃德温·丘奇",
+          "artist_en": "Frederic Edwin Church",
+          "year": "1859",
+          "year_sort": 1859,
+          "source": "https://www.metmuseum.org/art/collection/search/10481",
+          "license": "Public domain",
+          "label_en": "The Heart of the Andes",
+          "wall": "nature",
+          "category": "romantic",
+          "image": "romanticism-salon-v1/heart-andes.jpg",
+          "aspect": 1.8253119429590017,
+          "width": 1024,
+          "height": 561,
+          "bytes": 211941,
+          "sha256": "495160f1f1fe9ecd45cd4f422b73d4cd11c02b61c1d16b4c3622b1a2ba7a41a5",
+          "original_sha256": "3d9529b5e2f6ac348a82715186ebbffd1adc7d2d5f3bd8adfa9aa83c0796d258",
+          "branches": [
+            "narrated",
+            "music"
+          ],
+          "file": "@DATA_ROOT@/art/heart-andes.jpg",
+          "nudity": false
+        },
+        {
+          "id": "sierra",
+          "title_zh": "加利福尼亚内华达山脉之中",
+          "title_en": "Among the Sierra Nevada, California",
+          "artist_zh": "阿尔伯特·比尔施塔特",
+          "artist_en": "Albert Bierstadt",
+          "year": "1868",
+          "year_sort": 1868,
+          "source": "https://www.si.edu/object/saam_1977.107.1",
+          "license": "Public domain",
+          "label_en": "Among the Sierra Nevada, California",
+          "wall": "nature",
+          "category": "romantic",
+          "image": "romanticism-salon-v1/sierra.jpg",
+          "aspect": 1.6677524429967427,
+          "width": 1024,
+          "height": 614,
+          "bytes": 131934,
+          "sha256": "fe078a3b739e257168df4a05a0d16cf9cf51e31bb86037aaa2381f202528e737",
+          "original_sha256": "2fe9342646d2de0a4495c259b2face9fe5a02c5a8522f9c5eac73ddab61b9901",
+          "branches": [
+            "music"
+          ],
+          "file": "@DATA_ROOT@/art/sierra.jpg",
+          "nudity": false
+        }
+      ],
+      "labels": [
+        {
+          "id": "theme",
+          "start": 0.65,
+          "end": 4.3,
+          "en": [
+            "Mountains and Light"
+          ],
+          "zh": "山峦与光",
+          "y": 356,
+          "size": 49,
+          "center": true,
+          "font_px": 49
+        },
+        {
+          "id": "music",
+          "start": 4.7,
+          "end": 8.4,
+          "en": [
+            "Chopin · Nocturne in C-sharp minor"
+          ],
+          "zh": "肖邦 · 升 C 小调夜曲",
+          "y": 230,
+          "size": 36,
+          "font_px": 36
+        },
+        {
+          "id": "heart-andes",
+          "start": 12.8,
+          "end": 17.35,
+          "en": [
+            "The Heart of the Andes",
+            "Frederic Edwin Church"
+          ],
+          "zh": "安第斯之心\n弗雷德里克·埃德温·丘奇",
+          "y": 150,
+          "size": 38,
+          "font_px": 38
+        },
+        {
+          "id": "sierra",
+          "start": 34.5,
+          "end": 39.15,
+          "en": [
+            "Among the Sierra Nevada",
+            "Albert Bierstadt"
+          ],
+          "zh": "内华达山脉之中\n阿尔伯特·比尔施塔特",
+          "y": 150,
+          "size": 38,
+          "font_px": 38
+        }
+      ],
+      "source_repository": "@UI_ROOT@",
+      "source_snapshot": {
+        "content/inception/artworks/romanticism-salon-v1.json": "f98221584e2bcc5e71ccfd5ccaac9ac8f22e6d9c43550807bf0e029a5cb70389",
+        "content/inception/artworks/romanticism-sculptures-v1.json": "326a94212e6691970c64cf973f9e768a65238262d5b90b12b5e6fc756eda1f67",
+        "content/inception/artworks/romanticism-selected-scans.json": "732b67f4880e393b9c09d4815a040b6b7d594a7e66530a1af253920a6d9e91dd",
+        "src/inception/world/rooms/romanticismLayout.js": "d6c1611bc10c680a818ec802c8fd007e7953d61b28cd130ef55272cb7a619cfd",
+        "src/inception/world/rooms/romanticismExhibits.ts": "2c6f076d89f0f4e4859ba2c259ddbd839566a8ee49ecc04c1ff3a8154de1f1b2",
+        "src/inception/world/render/threeRomanticismSalon.ts": "c714e33bf196e1eb499b2418fa6bead85e27f667052b69701fd7cd941b86d7ed",
+        "src/inception/world/render/romanticismSurfaces.ts": "de15c8d37a8190d7dae905d0dced7e5537f784f891903ff9abdd2a9341fec0c9",
+        "src/inception/world/model/museum.js": "79dfbe9c8e53f7396b2e6c21b52722cb097e37bab8824581e964c846005cdab5",
+        "src/inception/world/render/threeMuseum.ts": "a8bfbcc023923dd7609a0425ffa23bc9947abbe288f5e4f47e202a00615940b8"
+      },
+      "picture_language": "en",
+      "subtitles": [
+        "zh-Hans"
+      ],
+      "narration": false
+    },
+    {
+      "id": "04-war",
+      "number": 4,
+      "title": "战争的两张面孔",
+      "title_en": "Two Faces of War",
+      "category": "human",
+      "works": [
+        "wounded",
+        "charging"
+      ],
+      "music": {
+        "title": "《埃格蒙特》序曲 Op. 84",
+        "composer": "贝多芬",
+        "performer": "Czech National Symphony Orchestra",
+        "source": "https://commons.wikimedia.org/wiki/File:Beethoven_EgmontOvertureOp.84_LudwigVanBeethoven-EgmontOvertureOp.84.ogg",
+        "license": "CC0 1.0",
+        "credit_note": "Musopen 录音；使用 Internet Archive 同一项目的 FLAC 母版。",
+        "local_file": "music/beethoven-egmont.flac",
+        "sha256": "d7dbae975631508bf579a518cc90922edce0448a59f4ede181e2e377f4cd38de",
+        "duration": 540.896688,
+        "start": 1199.5,
+        "end": 1740.4166666666665,
+        "constant_gain_db": -9.0,
+        "file": "@DATA_ROOT@/music/beethoven-egmont.flac",
+        "gain_db": -9,
+        "excerpt_start": 148,
+        "excerpt_seconds": 58
+      },
+      "excerpt": 148,
+      "names": [
+        "The Wounded Cuirassier",
+        "The Charging Chasseur"
+      ],
+      "chinese": [
+        "负伤的胸甲骑兵",
+        "冲锋的猎骑兵"
+      ],
+      "detail": [
+        {
+          "u": 0.54,
+          "v": 0.5,
+          "fov": 25.5
+        },
+        {
+          "u": 0.51,
+          "v": 0.5,
+          "fov": 27
+        }
+      ],
+      "start": {
+        "eye": [
+          20,
+          4.05,
+          9
+        ],
+        "target": [
+          27.375,
+          6,
+          2
+        ],
+        "fov": 56
+      },
+      "first_at": 9,
+      "first_label": 9.6,
+      "first_detail": 14.2,
+      "first_close": 20,
+      "pull_at": 21,
+      "walk_at": 23,
+      "second_at": 34,
+      "second_label": 34.5,
+      "second_detail": 39.3,
+      "second_close": 46.5,
+      "closing": {
+        "distance": 8.0,
+        "fov": 56,
+        "y_offset": 0.25,
+        "target_y": 3.0
+      },
+      "relation_zh": "籍里柯的两位骑兵，一位负伤退却，一位骑马转身；把疲惫与勇武放在一起观看。",
+      "relation_en": "Two cavalrymen by Géricault: a wounded figure and a mounted officer. The pair brings weariness and martial energy into the same walk.",
+      "stem": "04-战争的两张面孔",
+      "root": "@DATA_ROOT@/shorts/batch-20261121/jobs/04-war",
+      "width": 1080,
+      "height": 1920,
+      "fps": 24,
+      "duration": 58,
+      "frames": 1392,
+      "artworks": [
+        {
+          "id": "wounded",
+          "title_zh": "负伤的胸甲骑兵",
+          "title_en": "The Wounded Cuirassier",
+          "artist_zh": "泰奥多尔·籍里柯",
+          "artist_en": "Théodore Géricault",
+          "year": "1814",
+          "year_sort": 1814,
+          "source": "https://commons.wikimedia.org/wiki/File:Cuirassier_blessé,_quittant_le_feu_-_Théodore_Géricault_-_Musée_du_Louvre_Peintures_INV_4886_;_MN_51.jpg",
+          "license": "Public domain",
+          "label_en": "The Wounded Cuirassier",
+          "wall": "social",
+          "category": "romantic",
+          "image": "romanticism-salon-v1/wounded.jpg",
+          "aspect": 0.82421875,
+          "width": 844,
+          "height": 1024,
+          "bytes": 185490,
+          "sha256": "a706ab8ca618cd0aa0346f068aa9d6ff951f343afddaee7aa449db6809f71546",
+          "original_sha256": "fb621ee42ebd8795a80d3eae8326f7882f33f542d2ee73defabbec059885559a",
+          "branches": [
+            "music"
+          ],
+          "file": "@DATA_ROOT@/art/wounded.jpg",
+          "nudity": false
+        },
+        {
+          "id": "charging",
+          "title_zh": "冲锋的猎骑兵",
+          "title_en": "The Charging Chasseur",
+          "artist_zh": "泰奥多尔·籍里柯",
+          "artist_en": "Théodore Géricault",
+          "year": "1812",
+          "year_sort": 1812,
+          "source": "https://commons.wikimedia.org/wiki/File:GericaultHorseman.jpg",
+          "license": "Public domain",
+          "label_en": "The Charging Chasseur",
+          "wall": "social",
+          "category": "romantic",
+          "image": "romanticism-salon-v1/charging.jpg",
+          "aspect": 0.7666015625,
+          "width": 785,
+          "height": 1024,
+          "bytes": 237301,
+          "sha256": "ad86f0cfe8a58b6a4d98ed82eea1e6f3dba585e9360b5976f2dc67acff4970e8",
+          "original_sha256": "304dfc2741debed6b2e95cffd0a59796e666f8b4cab5653e20ca638b9821be84",
+          "branches": [
+            "music"
+          ],
+          "file": "@DATA_ROOT@/art/charging.jpg",
+          "nudity": false
+        }
+      ],
+      "labels": [
+        {
+          "id": "theme",
+          "start": 0.65,
+          "end": 4.3,
+          "en": [
+            "Two Faces of War"
+          ],
+          "zh": "战争的两张面孔",
+          "y": 356,
+          "size": 49,
+          "center": true,
+          "font_px": 49
+        },
+        {
+          "id": "music",
+          "start": 4.7,
+          "end": 8.4,
+          "en": [
+            "Beethoven · Egmont Overture"
+          ],
+          "zh": "贝多芬 ·《埃格蒙特》序曲",
+          "y": 230,
+          "size": 36,
+          "font_px": 36
+        },
+        {
+          "id": "wounded",
+          "start": 9.6,
+          "end": 14.049999999999999,
+          "en": [
+            "The Wounded Cuirassier",
+            "Théodore Géricault"
+          ],
+          "zh": "负伤的胸甲骑兵\n泰奥多尔·籍里柯",
+          "y": 150,
+          "size": 38,
+          "font_px": 38
+        },
+        {
+          "id": "charging",
+          "start": 34.5,
+          "end": 39.15,
+          "en": [
+            "The Charging Chasseur",
+            "Théodore Géricault"
+          ],
+          "zh": "冲锋的猎骑兵\n泰奥多尔·籍里柯",
+          "y": 150,
+          "size": 38,
+          "font_px": 38
+        }
+      ],
+      "source_repository": "@UI_ROOT@",
+      "source_snapshot": {
+        "content/inception/artworks/romanticism-salon-v1.json": "f98221584e2bcc5e71ccfd5ccaac9ac8f22e6d9c43550807bf0e029a5cb70389",
+        "content/inception/artworks/romanticism-sculptures-v1.json": "326a94212e6691970c64cf973f9e768a65238262d5b90b12b5e6fc756eda1f67",
+        "content/inception/artworks/romanticism-selected-scans.json": "732b67f4880e393b9c09d4815a040b6b7d594a7e66530a1af253920a6d9e91dd",
+        "src/inception/world/rooms/romanticismLayout.js": "d6c1611bc10c680a818ec802c8fd007e7953d61b28cd130ef55272cb7a619cfd",
+        "src/inception/world/rooms/romanticismExhibits.ts": "2c6f076d89f0f4e4859ba2c259ddbd839566a8ee49ecc04c1ff3a8154de1f1b2",
+        "src/inception/world/render/threeRomanticismSalon.ts": "c714e33bf196e1eb499b2418fa6bead85e27f667052b69701fd7cd941b86d7ed",
+        "src/inception/world/render/romanticismSurfaces.ts": "de15c8d37a8190d7dae905d0dced7e5537f784f891903ff9abdd2a9341fec0c9",
+        "src/inception/world/model/museum.js": "79dfbe9c8e53f7396b2e6c21b52722cb097e37bab8824581e964c846005cdab5",
+        "src/inception/world/render/threeMuseum.ts": "a8bfbcc023923dd7609a0425ffa23bc9947abbe288f5e4f47e202a00615940b8"
+      },
+      "picture_language": "en",
+      "subtitles": [
+        "zh-Hans"
+      ],
+      "narration": false
+    },
+    {
+      "id": "05-life",
+      "number": 5,
+      "title": "青年与暮年",
+      "title_en": "Youth and Old Age",
+      "category": "human",
+      "works": [
+        "life-youth",
+        "life-old"
+      ],
+      "music": {
+        "title": "《埃格蒙特》序曲 Op. 84",
+        "composer": "贝多芬",
+        "performer": "Czech National Symphony Orchestra",
+        "source": "https://commons.wikimedia.org/wiki/File:Beethoven_EgmontOvertureOp.84_LudwigVanBeethoven-EgmontOvertureOp.84.ogg",
+        "license": "CC0 1.0",
+        "credit_note": "Musopen 录音；使用 Internet Archive 同一项目的 FLAC 母版。",
+        "local_file": "music/beethoven-egmont.flac",
+        "sha256": "d7dbae975631508bf579a518cc90922edce0448a59f4ede181e2e377f4cd38de",
+        "duration": 540.896688,
+        "start": 1199.5,
+        "end": 1740.4166666666665,
+        "constant_gain_db": -9.0,
+        "file": "@DATA_ROOT@/music/beethoven-egmont.flac",
+        "gain_db": -9,
+        "excerpt_start": 40,
+        "excerpt_seconds": 58
+      },
+      "excerpt": 40,
+      "names": [
+        "The Voyage of Life: Youth",
+        "The Voyage of Life: Old Age"
+      ],
+      "chinese": [
+        "生命之旅：青年",
+        "生命之旅：老年"
+      ],
+      "detail": [
+        {
+          "u": 0.7,
+          "v": 0.65,
+          "fov": 15.5
+        },
+        {
+          "u": 0.65,
+          "v": 0.7,
+          "fov": 12.5
+        }
+      ],
+      "start": {
+        "eye": [
+          -19.5,
+          4.05,
+          -26
+        ],
+        "target": [
+          -16,
+          12,
+          -42.375
+        ],
+        "fov": 62
+      },
+      "first_at": 12,
+      "first_label": 12.8,
+      "first_detail": 17.5,
+      "first_close": 23.5,
+      "pull_at": 24.5,
+      "walk_at": 27,
+      "second_at": 33,
+      "second_label": 33.5,
+      "second_detail": 38.7,
+      "second_close": 46,
+      "closing": {
+        "distance": 20.5,
+        "fov": 60,
+        "pair": true
+      },
+      "relation_zh": "科尔《生命之旅》中的青年与老年，两段河流旅程把向往与生命的有限性相连。",
+      "relation_en": "Youth and Old Age from Cole’s Voyage of Life: two river journeys connect expectation with the limits of a human life.",
+      "stem": "05-青年与暮年",
+      "root": "@DATA_ROOT@/shorts/batch-20261121/jobs/05-life",
+      "width": 1080,
+      "height": 1920,
+      "fps": 24,
+      "duration": 58,
+      "frames": 1392,
+      "artworks": [
+        {
+          "id": "life-youth",
+          "title_zh": "生命之旅：青年",
+          "title_en": "The Voyage of Life: Youth",
+          "artist_zh": "托马斯·科尔",
+          "artist_en": "Thomas Cole",
+          "year": "1842",
+          "year_sort": 1842,
+          "source": "https://www.nga.gov/artworks/52451-voyage-life-youth",
+          "license": "Public domain",
+          "label_en": "The Voyage of Life: Youth",
+          "wall": "time",
+          "category": "romantic",
+          "image": "romanticism-salon-v1/life-youth.jpg",
+          "aspect": 1.4607703281027105,
+          "width": 1024,
+          "height": 701,
+          "bytes": 207466,
+          "sha256": "25f5ab1c76bb67d488f8336682152885e3de65174619961a0624135af1891469",
+          "original_sha256": "b394571903fd1a15944515d8caf945e40dad378342a6b450ee2fcaa882237c6d",
+          "branches": [
+            "music"
+          ],
+          "file": "@DATA_ROOT@/art/life-youth.jpg",
+          "nudity": false
+        },
+        {
+          "id": "life-old",
+          "title_zh": "生命之旅：老年",
+          "title_en": "The Voyage of Life: Old Age",
+          "artist_zh": "托马斯·科尔",
+          "artist_en": "Thomas Cole",
+          "year": "1842",
+          "year_sort": 1842,
+          "source": "https://www.nga.gov/artworks/52453-voyage-life-old-age",
+          "license": "Public domain",
+          "label_en": "The Voyage of Life: Old Age",
+          "wall": "time",
+          "category": "romantic",
+          "image": "romanticism-salon-v1/life-old.jpg",
+          "aspect": 1.486211901306241,
+          "width": 1024,
+          "height": 689,
+          "bytes": 85986,
+          "sha256": "e7b5568805cb6505f87492465a566894ef50e61b184bee488ac9ea7d62a6d629",
+          "original_sha256": "192177d1f2c946f0888bdf7e0e01a6a660ffaadcd4ca175864191e18d3b451a5",
+          "branches": [
+            "music"
+          ],
+          "file": "@DATA_ROOT@/art/life-old.jpg",
+          "nudity": false
+        }
+      ],
+      "labels": [
+        {
+          "id": "theme",
+          "start": 0.65,
+          "end": 4.3,
+          "en": [
+            "Youth and Old Age"
+          ],
+          "zh": "青年与暮年",
+          "y": 356,
+          "size": 49,
+          "center": true,
+          "font_px": 49
+        },
+        {
+          "id": "music",
+          "start": 4.7,
+          "end": 8.4,
+          "en": [
+            "Beethoven · Egmont Overture"
+          ],
+          "zh": "贝多芬 ·《埃格蒙特》序曲",
+          "y": 230,
+          "size": 36,
+          "font_px": 36
+        },
+        {
+          "id": "life-youth",
+          "start": 12.8,
+          "end": 17.35,
+          "en": [
+            "The Voyage of Life: Youth",
+            "Thomas Cole"
+          ],
+          "zh": "生命之旅：青年\n托马斯·科尔",
+          "y": 150,
+          "size": 38,
+          "font_px": 38
+        },
+        {
+          "id": "life-old",
+          "start": 33.5,
+          "end": 38.550000000000004,
+          "en": [
+            "The Voyage of Life: Old Age",
+            "Thomas Cole"
+          ],
+          "zh": "生命之旅：老年\n托马斯·科尔",
+          "y": 150,
+          "size": 38,
+          "font_px": 38
+        }
+      ],
+      "source_repository": "@UI_ROOT@",
+      "source_snapshot": {
+        "content/inception/artworks/romanticism-salon-v1.json": "f98221584e2bcc5e71ccfd5ccaac9ac8f22e6d9c43550807bf0e029a5cb70389",
+        "content/inception/artworks/romanticism-sculptures-v1.json": "326a94212e6691970c64cf973f9e768a65238262d5b90b12b5e6fc756eda1f67",
+        "content/inception/artworks/romanticism-selected-scans.json": "732b67f4880e393b9c09d4815a040b6b7d594a7e66530a1af253920a6d9e91dd",
+        "src/inception/world/rooms/romanticismLayout.js": "d6c1611bc10c680a818ec802c8fd007e7953d61b28cd130ef55272cb7a619cfd",
+        "src/inception/world/rooms/romanticismExhibits.ts": "2c6f076d89f0f4e4859ba2c259ddbd839566a8ee49ecc04c1ff3a8154de1f1b2",
+        "src/inception/world/render/threeRomanticismSalon.ts": "c714e33bf196e1eb499b2418fa6bead85e27f667052b69701fd7cd941b86d7ed",
+        "src/inception/world/render/romanticismSurfaces.ts": "de15c8d37a8190d7dae905d0dced7e5537f784f891903ff9abdd2a9341fec0c9",
+        "src/inception/world/model/museum.js": "79dfbe9c8e53f7396b2e6c21b52722cb097e37bab8824581e964c846005cdab5",
+        "src/inception/world/render/threeMuseum.ts": "a8bfbcc023923dd7609a0425ffa23bc9947abbe288f5e4f47e202a00615940b8"
+      },
+      "picture_language": "en",
+      "subtitles": [
+        "zh-Hans"
+      ],
+      "narration": false
+    },
+    {
+      "id": "06-hope-freedom",
+      "number": 6,
+      "title": "希望与自由",
+      "title_en": "Hope and Freedom",
+      "category": "human",
+      "works": [
+        "raft-medusa",
+        "liberty"
+      ],
+      "music": {
+        "title": "《埃格蒙特》序曲 Op. 84",
+        "composer": "贝多芬",
+        "performer": "Czech National Symphony Orchestra",
+        "source": "https://commons.wikimedia.org/wiki/File:Beethoven_EgmontOvertureOp.84_LudwigVanBeethoven-EgmontOvertureOp.84.ogg",
+        "license": "CC0 1.0",
+        "credit_note": "Musopen 录音；使用 Internet Archive 同一项目的 FLAC 母版。",
+        "local_file": "music/beethoven-egmont.flac",
+        "sha256": "d7dbae975631508bf579a518cc90922edce0448a59f4ede181e2e377f4cd38de",
+        "duration": 540.896688,
+        "start": 1199.5,
+        "end": 1740.4166666666665,
+        "constant_gain_db": -9.0,
+        "file": "@DATA_ROOT@/music/beethoven-egmont.flac",
+        "gain_db": -9,
+        "excerpt_start": 482,
+        "excerpt_seconds": 58
+      },
+      "excerpt": 482,
+      "original_paintings_only": true,
+      "names": [
+        "The Raft of the Medusa",
+        "Liberty Leading the People"
+      ],
+      "chinese": [
+        "梅杜萨之筏",
+        "自由引导人民"
+      ],
+      "detail": [
+        {
+          "u": 0.68,
+          "v": 0.43,
+          "fov": 15.5
+        },
+        {
+          "u": 0.54,
+          "v": 0.5,
+          "fov": 21
+        }
+      ],
+      "start": {
+        "eye": [
+          20,
+          4.05,
+          25
+        ],
+        "target": [
+          27.375,
+          6,
+          17
+        ],
+        "fov": 56
+      },
+      "first_at": 9,
+      "first_label": 9.6,
+      "first_detail": 14.2,
+      "first_close": 20,
+      "pull_at": 21,
+      "walk_at": 23,
+      "second_at": 34,
+      "second_label": 34.5,
+      "second_detail": 39.3,
+      "second_close": 46.5,
+      "closing": {
+        "distance": 12.6,
+        "fov": 56
+      },
+      "relation_zh": "籍里柯的木筏与德拉克洛瓦的街垒，从向远处挥动布巾的求救者，走向举旗前行的人群。两幅原画连接希望、共同处境与自由。",
+      "relation_en": "From Géricault’s raft to Delacroix’s barricade: a raised cloth seeks rescue; a raised flag gathers a crowd. Two original paintings connect hope, collective struggle and freedom.",
+      "stem": "06-希望与自由",
+      "root": "@DATA_ROOT@/shorts/batch-20261121/jobs/06-hope-freedom",
+      "width": 1080,
+      "height": 1920,
+      "fps": 24,
+      "duration": 58,
+      "frames": 1392,
+      "artworks": [
+        {
+          "id": "raft-medusa",
+          "title_zh": "梅杜萨之筏",
+          "title_en": "The Raft of the Medusa",
+          "artist_zh": "泰奥多尔·籍里柯",
+          "artist_en": "Theodore Gericault",
+          "year": "1819",
+          "year_sort": 1819,
+          "source": "https://collections.louvre.fr/en/ark:/53355/cl010059199",
+          "license": "Public domain",
+          "label_en": "The Raft of the Medusa",
+          "wall": "social",
+          "category": "romantic",
+          "image": "romanticism-salon-v1/raft-medusa.jpg",
+          "aspect": 1.4628571428571429,
+          "width": 1024,
+          "height": 700,
+          "bytes": 249615,
+          "sha256": "3c942ad3e87cf7531aae93e38679357fc9ef977574c645c6336c5ab4fdd53b19",
+          "original_sha256": "b7324eee946e2df19076b65d37c954c8d0c720240c3082db41d8d990d310ae6c",
+          "branches": [
+            "narrated",
+            "music"
+          ],
+          "file": "@DATA_ROOT@/art/raft-medusa.jpg",
+          "nudity": true
+        },
+        {
+          "id": "liberty",
+          "title_zh": "自由引导人民",
+          "title_en": "Liberty Leading the People",
+          "artist_zh": "欧仁·德拉克洛瓦",
+          "artist_en": "Eugene Delacroix",
+          "year": "1830",
+          "year_sort": 1830,
+          "source": "https://collections.louvre.fr/en/ark:/53355/cl010065872",
+          "license": "Public domain",
+          "label_en": "Liberty Leading the People",
+          "wall": "social",
+          "category": "romantic",
+          "image": "romanticism-salon-v1/liberty.jpg",
+          "aspect": 1.2503052503052503,
+          "width": 1024,
+          "height": 819,
+          "bytes": 227741,
+          "sha256": "56fad1c4b82cb1f12da34a0e91ea5dc2b5ce2993732392002f4fecb92982b30a",
+          "original_sha256": "8399e6124d14eefb587ca2e57df79696898947900be8599ffc181ba60a49b529",
+          "branches": [
+            "narrated",
+            "music"
+          ],
+          "file": "@DATA_ROOT@/art/liberty.jpg",
+          "nudity": true
+        }
+      ],
+      "labels": [
+        {
+          "id": "theme",
+          "start": 0.65,
+          "end": 4.3,
+          "en": [
+            "Hope and Freedom"
+          ],
+          "zh": "希望与自由",
+          "y": 356,
+          "size": 49,
+          "center": true,
+          "font_px": 49
+        },
+        {
+          "id": "music",
+          "start": 4.7,
+          "end": 8.4,
+          "en": [
+            "Beethoven · Egmont Overture"
+          ],
+          "zh": "贝多芬 ·《埃格蒙特》序曲",
+          "y": 230,
+          "size": 36,
+          "font_px": 36
+        },
+        {
+          "id": "raft-medusa",
+          "start": 9.6,
+          "end": 14.049999999999999,
+          "en": [
+            "The Raft of the Medusa",
+            "Theodore Gericault"
+          ],
+          "zh": "梅杜萨之筏\n泰奥多尔·籍里柯",
+          "y": 150,
+          "size": 38,
+          "font_px": 38
+        },
+        {
+          "id": "liberty",
+          "start": 34.5,
+          "end": 39.15,
+          "en": [
+            "Liberty Leading the People",
+            "Eugene Delacroix"
+          ],
+          "zh": "自由引导人民\n欧仁·德拉克洛瓦",
+          "y": 150,
+          "size": 38,
+          "font_px": 38
+        }
+      ],
+      "source_repository": "@UI_ROOT@",
+      "source_snapshot": {
+        "content/inception/artworks/romanticism-salon-v1.json": "f98221584e2bcc5e71ccfd5ccaac9ac8f22e6d9c43550807bf0e029a5cb70389",
+        "content/inception/artworks/romanticism-sculptures-v1.json": "326a94212e6691970c64cf973f9e768a65238262d5b90b12b5e6fc756eda1f67",
+        "content/inception/artworks/romanticism-selected-scans.json": "732b67f4880e393b9c09d4815a040b6b7d594a7e66530a1af253920a6d9e91dd",
+        "src/inception/world/rooms/romanticismLayout.js": "d6c1611bc10c680a818ec802c8fd007e7953d61b28cd130ef55272cb7a619cfd",
+        "src/inception/world/rooms/romanticismExhibits.ts": "2c6f076d89f0f4e4859ba2c259ddbd839566a8ee49ecc04c1ff3a8154de1f1b2",
+        "src/inception/world/render/threeRomanticismSalon.ts": "c714e33bf196e1eb499b2418fa6bead85e27f667052b69701fd7cd941b86d7ed",
+        "src/inception/world/render/romanticismSurfaces.ts": "de15c8d37a8190d7dae905d0dced7e5537f784f891903ff9abdd2a9341fec0c9",
+        "src/inception/world/model/museum.js": "79dfbe9c8e53f7396b2e6c21b52722cb097e37bab8824581e964c846005cdab5",
+        "src/inception/world/render/threeMuseum.ts": "a8bfbcc023923dd7609a0425ffa23bc9947abbe288f5e4f47e202a00615940b8"
+      },
+      "picture_language": "en",
+      "subtitles": [
+        "zh-Hans"
+      ],
+      "narration": false
+    }
+  ],
+  "source_snapshot": {
+    "content/inception/artworks/romanticism-salon-v1.json": "f98221584e2bcc5e71ccfd5ccaac9ac8f22e6d9c43550807bf0e029a5cb70389",
+    "content/inception/artworks/romanticism-sculptures-v1.json": "326a94212e6691970c64cf973f9e768a65238262d5b90b12b5e6fc756eda1f67",
+    "content/inception/artworks/romanticism-selected-scans.json": "732b67f4880e393b9c09d4815a040b6b7d594a7e66530a1af253920a6d9e91dd",
+    "src/inception/world/rooms/romanticismLayout.js": "d6c1611bc10c680a818ec802c8fd007e7953d61b28cd130ef55272cb7a619cfd",
+    "src/inception/world/rooms/romanticismExhibits.ts": "2c6f076d89f0f4e4859ba2c259ddbd839566a8ee49ecc04c1ff3a8154de1f1b2",
+    "src/inception/world/render/threeRomanticismSalon.ts": "c714e33bf196e1eb499b2418fa6bead85e27f667052b69701fd7cd941b86d7ed",
+    "src/inception/world/render/romanticismSurfaces.ts": "de15c8d37a8190d7dae905d0dced7e5537f784f891903ff9abdd2a9341fec0c9",
+    "src/inception/world/model/museum.js": "79dfbe9c8e53f7396b2e6c21b52722cb097e37bab8824581e964c846005cdab5",
+    "src/inception/world/render/threeMuseum.ts": "a8bfbcc023923dd7609a0425ffa23bc9947abbe288f5e4f47e202a00615940b8"
+  }
+}

@@ -1,0 +1,212 @@
+{
+  "id": "04-war",
+  "number": 4,
+  "title": "战争的两张面孔",
+  "title_en": "Two Faces of War",
+  "category": "human",
+  "works": [
+    "wounded",
+    "charging"
+  ],
+  "music": {
+    "title": "《埃格蒙特》序曲 Op. 84",
+    "composer": "贝多芬",
+    "performer": "Czech National Symphony Orchestra",
+    "source": "https://commons.wikimedia.org/wiki/File:Beethoven_EgmontOvertureOp.84_LudwigVanBeethoven-EgmontOvertureOp.84.ogg",
+    "license": "CC0 1.0",
+    "credit_note": "Musopen 录音；使用 Internet Archive 同一项目的 FLAC 母版。",
+    "local_file": "music/beethoven-egmont.flac",
+    "sha256": "d7dbae975631508bf579a518cc90922edce0448a59f4ede181e2e377f4cd38de",
+    "duration": 540.896688,
+    "start": 1199.5,
+    "end": 1740.4166666666665,
+    "constant_gain_db": -9.0,
+    "file": "@DATA_ROOT@/music/beethoven-egmont.flac",
+    "gain_db": -9,
+    "excerpt_start": 148,
+    "excerpt_seconds": 58
+  },
+  "excerpt": 148,
+  "names": [
+    "The Wounded Cuirassier",
+    "The Charging Chasseur"
+  ],
+  "chinese": [
+    "负伤的胸甲骑兵",
+    "冲锋的猎骑兵"
+  ],
+  "detail": [
+    {
+      "u": 0.54,
+      "v": 0.5,
+      "fov": 25.5
+    },
+    {
+      "u": 0.51,
+      "v": 0.5,
+      "fov": 27
+    }
+  ],
+  "start": {
+    "eye": [
+      20,
+      4.05,
+      9
+    ],
+    "target": [
+      27.375,
+      6,
+      2
+    ],
+    "fov": 56
+  },
+  "first_at": 9,
+  "first_label": 9.6,
+  "first_detail": 14.2,
+  "first_close": 20,
+  "pull_at": 21,
+  "walk_at": 23,
+  "second_at": 34,
+  "second_label": 34.5,
+  "second_detail": 39.3,
+  "second_close": 46.5,
+  "closing": {
+    "distance": 8.0,
+    "fov": 56,
+    "y_offset": 0.25,
+    "target_y": 3.0
+  },
+  "relation_zh": "籍里柯的两位骑兵，一位负伤退却，一位骑马转身；把疲惫与勇武放在一起观看。",
+  "relation_en": "Two cavalrymen by Géricault: a wounded figure and a mounted officer. The pair brings weariness and martial energy into the same walk.",
+  "stem": "04-战争的两张面孔",
+  "root": "@DATA_ROOT@/shorts/batch-20261121/jobs/04-war",
+  "width": 1080,
+  "height": 1920,
+  "fps": 24,
+  "duration": 58,
+  "frames": 1392,
+  "artworks": [
+    {
+      "id": "wounded",
+      "title_zh": "负伤的胸甲骑兵",
+      "title_en": "The Wounded Cuirassier",
+      "artist_zh": "泰奥多尔·籍里柯",
+      "artist_en": "Théodore Géricault",
+      "year": "1814",
+      "year_sort": 1814,
+      "source": "https://commons.wikimedia.org/wiki/File:Cuirassier_blessé,_quittant_le_feu_-_Théodore_Géricault_-_Musée_du_Louvre_Peintures_INV_4886_;_MN_51.jpg",
+      "license": "Public domain",
+      "label_en": "The Wounded Cuirassier",
+      "wall": "social",
+      "category": "romantic",
+      "image": "romanticism-salon-v1/wounded.jpg",
+      "aspect": 0.82421875,
+      "width": 844,
+      "height": 1024,
+      "bytes": 185490,
+      "sha256": "a706ab8ca618cd0aa0346f068aa9d6ff951f343afddaee7aa449db6809f71546",
+      "original_sha256": "fb621ee42ebd8795a80d3eae8326f7882f33f542d2ee73defabbec059885559a",
+      "branches": [
+        "music"
+      ],
+      "file": "@DATA_ROOT@/art/wounded.jpg",
+      "nudity": false
+    },
+    {
+      "id": "charging",
+      "title_zh": "冲锋的猎骑兵",
+      "title_en": "The Charging Chasseur",
+      "artist_zh": "泰奥多尔·籍里柯",
+      "artist_en": "Théodore Géricault",
+      "year": "1812",
+      "year_sort": 1812,
+      "source": "https://commons.wikimedia.org/wiki/File:GericaultHorseman.jpg",
+      "license": "Public domain",
+      "label_en": "The Charging Chasseur",
+      "wall": "social",
+      "category": "romantic",
+      "image": "romanticism-salon-v1/charging.jpg",
+      "aspect": 0.7666015625,
+      "width": 785,
+      "height": 1024,
+      "bytes": 237301,
+      "sha256": "ad86f0cfe8a58b6a4d98ed82eea1e6f3dba585e9360b5976f2dc67acff4970e8",
+      "original_sha256": "304dfc2741debed6b2e95cffd0a59796e666f8b4cab5653e20ca638b9821be84",
+      "branches": [
+        "music"
+      ],
+      "file": "@DATA_ROOT@/art/charging.jpg",
+      "nudity": false
+    }
+  ],
+  "labels": [
+    {
+      "id": "theme",
+      "start": 0.65,
+      "end": 4.3,
+      "en": [
+        "Two Faces of War"
+      ],
+      "zh": "战争的两张面孔",
+      "y": 356,
+      "size": 49,
+      "center": true,
+      "font_px": 49
+    },
+    {
+      "id": "music",
+      "start": 4.7,
+      "end": 8.4,
+      "en": [
+        "Beethoven · Egmont Overture"
+      ],
+      "zh": "贝多芬 ·《埃格蒙特》序曲",
+      "y": 230,
+      "size": 36,
+      "font_px": 36
+    },
+    {
+      "id": "wounded",
+      "start": 9.6,
+      "end": 14.049999999999999,
+      "en": [
+        "The Wounded Cuirassier",
+        "Théodore Géricault"
+      ],
+      "zh": "负伤的胸甲骑兵\n泰奥多尔·籍里柯",
+      "y": 150,
+      "size": 38,
+      "font_px": 38
+    },
+    {
+      "id": "charging",
+      "start": 34.5,
+      "end": 39.15,
+      "en": [
+        "The Charging Chasseur",
+        "Théodore Géricault"
+      ],
+      "zh": "冲锋的猎骑兵\n泰奥多尔·籍里柯",
+      "y": 150,
+      "size": 38,
+      "font_px": 38
+    }
+  ],
+  "source_repository": "@UI_ROOT@",
+  "source_snapshot": {
+    "content/inception/artworks/romanticism-salon-v1.json": "f98221584e2bcc5e71ccfd5ccaac9ac8f22e6d9c43550807bf0e029a5cb70389",
+    "content/inception/artworks/romanticism-sculptures-v1.json": "326a94212e6691970c64cf973f9e768a65238262d5b90b12b5e6fc756eda1f67",
+    "content/inception/artworks/romanticism-selected-scans.json": "732b67f4880e393b9c09d4815a040b6b7d594a7e66530a1af253920a6d9e91dd",
+    "src/inception/world/rooms/romanticismLayout.js": "d6c1611bc10c680a818ec802c8fd007e7953d61b28cd130ef55272cb7a619cfd",
+    "src/inception/world/rooms/romanticismExhibits.ts": "2c6f076d89f0f4e4859ba2c259ddbd839566a8ee49ecc04c1ff3a8154de1f1b2",
+    "src/inception/world/render/threeRomanticismSalon.ts": "c714e33bf196e1eb499b2418fa6bead85e27f667052b69701fd7cd941b86d7ed",
+    "src/inception/world/render/romanticismSurfaces.ts": "de15c8d37a8190d7dae905d0dced7e5537f784f891903ff9abdd2a9341fec0c9",
+    "src/inception/world/model/museum.js": "79dfbe9c8e53f7396b2e6c21b52722cb097e37bab8824581e964c846005cdab5",
+    "src/inception/world/render/threeMuseum.ts": "a8bfbcc023923dd7609a0425ffa23bc9947abbe288f5e4f47e202a00615940b8"
+  },
+  "picture_language": "en",
+  "subtitles": [
+    "zh-Hans"
+  ],
+  "narration": false
+}

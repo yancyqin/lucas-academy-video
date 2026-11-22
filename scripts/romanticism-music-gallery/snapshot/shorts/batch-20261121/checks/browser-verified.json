@@ -1,0 +1,290 @@
+{
+  "status": "passed",
+  "films": [
+    {
+      "file": "01-面对辽阔.mp4",
+      "status": "passed",
+      "playback": {
+        "duration": 58,
+        "width": 1080,
+        "height": 1920,
+        "currentTime": 0.227999,
+        "error": null
+      },
+      "subtitles": [
+        {
+          "time": 2.475,
+          "text": "面对辽阔"
+        },
+        {
+          "time": 6.75,
+          "text": "肖邦 ·《雨滴》前奏曲"
+        },
+        {
+          "time": 15.15,
+          "text": "雾海上的旅人\n卡斯帕·大卫·弗里德里希"
+        },
+        {
+          "time": 36.1,
+          "text": "吕根岛白垩岩\n卡斯帕·大卫·弗里德里希"
+        }
+      ],
+      "seeks": [
+        {
+          "time": 23.5,
+          "error": null
+        },
+        {
+          "time": 28.5,
+          "error": null
+        },
+        {
+          "time": 46,
+          "error": null
+        },
+        {
+          "time": 56,
+          "error": null
+        }
+      ]
+    },
+    {
+      "file": "02-寂静与时间.mp4",
+      "status": "passed",
+      "playback": {
+        "duration": 58,
+        "width": 1080,
+        "height": 1920,
+        "currentTime": 0.227975,
+        "error": null
+      },
+      "subtitles": [
+        {
+          "time": 2.475,
+          "text": "寂静与时间"
+        },
+        {
+          "time": 6.550000000000001,
+          "text": "肖邦 · 夜曲 Op. 9 No. 2"
+        },
+        {
+          "time": 15.075000000000001,
+          "text": "海边的修道士\n卡斯帕·大卫·弗里德里希"
+        },
+        {
+          "time": 37.925,
+          "text": "橡树林中的修道院\n卡斯帕·大卫·弗里德里希"
+        }
+      ],
+      "seeks": [
+        {
+          "time": 23.5,
+          "error": null
+        },
+        {
+          "time": 28.5,
+          "error": null
+        },
+        {
+          "time": 46,
+          "error": null
+        },
+        {
+          "time": 56,
+          "error": null
+        }
+      ]
+    },
+    {
+      "file": "03-山峦与光.mp4",
+      "status": "passed",
+      "playback": {
+        "duration": 58,
+        "width": 1080,
+        "height": 1920,
+        "currentTime": 0.230358,
+        "error": null
+      },
+      "subtitles": [
+        {
+          "time": 2.475,
+          "text": "山峦与光"
+        },
+        {
+          "time": 6.550000000000001,
+          "text": "肖邦 · 升 C 小调夜曲"
+        },
+        {
+          "time": 15.075000000000001,
+          "text": "安第斯之心\n弗雷德里克·埃德温·丘奇"
+        },
+        {
+          "time": 36.825,
+          "text": "内华达山脉之中\n阿尔伯特·比尔施塔特"
+        }
+      ],
+      "seeks": [
+        {
+          "time": 23.5,
+          "error": null
+        },
+        {
+          "time": 28.5,
+          "error": null
+        },
+        {
+          "time": 46,
+          "error": null
+        },
+        {
+          "time": 56,
+          "error": null
+        }
+      ]
+    },
+    {
+      "file": "04-战争的两张面孔.mp4",
+      "status": "passed",
+      "playback": {
+        "duration": 58,
+        "width": 1080,
+        "height": 1920,
+        "currentTime": 0.201481,
+        "error": null
+      },
+      "subtitles": [
+        {
+          "time": 2.475,
+          "text": "战争的两张面孔"
+        },
+        {
+          "time": 6.550000000000001,
+          "text": "贝多芬 ·《埃格蒙特》序曲"
+        },
+        {
+          "time": 11.825,
+          "text": "负伤的胸甲骑兵\n泰奥多尔·籍里柯"
+        },
+        {
+          "time": 36.825,
+          "text": "冲锋的猎骑兵\n泰奥多尔·籍里柯"
+        }
+      ],
+      "seeks": [
+        {
+          "time": 23.5,
+          "error": null
+        },
+        {
+          "time": 28.5,
+          "error": null
+        },
+        {
+          "time": 46,
+          "error": null
+        },
+        {
+          "time": 56,
+          "error": null
+        }
+      ]
+    },
+    {
+      "file": "05-青年与暮年.mp4",
+      "status": "passed",
+      "playback": {
+        "duration": 58,
+        "width": 1080,
+        "height": 1920,
+        "currentTime": 0.201508,
+        "error": null
+      },
+      "subtitles": [
+        {
+          "time": 2.475,
+          "text": "青年与暮年"
+        },
+        {
+          "time": 6.550000000000001,
+          "text": "贝多芬 ·《埃格蒙特》序曲"
+        },
+        {
+          "time": 15.075000000000001,
+          "text": "生命之旅：青年\n托马斯·科尔"
+        },
+        {
+          "time": 36.025000000000006,
+          "text": "生命之旅：老年\n托马斯·科尔"
+        }
+      ],
+      "seeks": [
+        {
+          "time": 23.5,
+          "error": null
+        },
+        {
+          "time": 28.5,
+          "error": null
+        },
+        {
+          "time": 46,
+          "error": null
+        },
+        {
+          "time": 56,
+          "error": null
+        }
+      ]
+    },
+    {
+      "file": "06-希望与自由.mp4",
+      "status": "passed",
+      "playback": {
+        "duration": 58,
+        "width": 1080,
+        "height": 1920,
+        "currentTime": 0.200041,
+        "error": null
+      },
+      "subtitles": [
+        {
+          "time": 2.475,
+          "text": "希望与自由"
+        },
+        {
+          "time": 6.550000000000001,
+          "text": "贝多芬 ·《埃格蒙特》序曲"
+        },
+        {
+          "time": 11.825,
+          "text": "梅杜萨之筏\n泰奥多尔·籍里柯"
+        },
+        {
+          "time": 36.825,
+          "text": "自由引导人民\n欧仁·德拉克洛瓦"
+        }
+      ],
+      "seeks": [
+        {
+          "time": 23.5,
+          "error": null
+        },
+        {
+          "time": 28.5,
+          "error": null
+        },
+        {
+          "time": 46,
+          "error": null
+        },
+        {
+          "time": 56,
+          "error": null
+        }
+      ]
+    }
+  ],
+  "checked_captions": 24,
+  "pageErrors": [],
+  "mobileOverflow": false
+}

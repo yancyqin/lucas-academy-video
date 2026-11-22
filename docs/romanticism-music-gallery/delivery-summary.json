@@ -1,0 +1,90 @@
+{
+  "as_of_utc": "2026-11-22T06:20:28.491733+00:00",
+  "uploads_verified_private": 6,
+  "uploaded_chinese_subtitle_tracks": 6,
+  "video_ids": "Retained only in the local Desktop upload receipts; omitted from this public repository.",
+  "shorts": [
+    {
+      "number": 1,
+      "title": "Facing the Vastness",
+      "visibility": "private",
+      "notices": "—",
+      "sha256": "779ef58d9d444841411412ce9ad7dc086e7a53f249d147113eae83696884b210",
+      "subtitleCues": 4,
+      "subtitleLanguage": "zh-Hans",
+      "localizedTitleDescription": true
+    },
+    {
+      "number": 2,
+      "title": "Silence and Time",
+      "visibility": "private",
+      "notices": "—",
+      "sha256": "3b0ebd58f5ca0e43113a42b9b94e28bfc77ead5981eee9ed147f060791d8daef",
+      "subtitleCues": 4,
+      "subtitleLanguage": "zh-Hans",
+      "localizedTitleDescription": true
+    },
+    {
+      "number": 3,
+      "title": "Mountains and Light",
+      "visibility": "private",
+      "notices": "—",
+      "sha256": "51933ec22d63891842c24ab2e6fc586af4511708f701523460121f1956b03538",
+      "subtitleCues": 4,
+      "subtitleLanguage": "zh-Hans",
+      "localizedTitleDescription": true
+    },
+    {
+      "number": 4,
+      "title": "Two Faces of War",
+      "visibility": "private",
+      "notices": "—",
+      "sha256": "04f24339dd4da69e04e34532c7704d2902e4e1bc7de7d714102c95626fab69c2",
+      "subtitleCues": 4,
+      "subtitleLanguage": "zh-Hans",
+      "localizedTitleDescription": true
+    },
+    {
+      "number": 5,
+      "title": "Youth and Old Age",
+      "visibility": "private",
+      "notices": "Checking...",
+      "sha256": "5ea297ef5dfadc014fe87aa492b8d89bd92320465b65524856e73d20a533174c",
+      "subtitleCues": 4,
+      "subtitleLanguage": "zh-Hans",
+      "localizedTitleDescription": true
+    },
+    {
+      "number": 6,
+      "title": "Hope and Freedom",
+      "visibility": "private",
+      "notices": "Checking...",
+      "sha256": "d9415e2baaeff953febf1bfc44406d7c2677d70534a2a594c34c8978ab3de2dd",
+      "subtitleCues": 4,
+      "subtitleLanguage": "zh-Hans",
+      "localizedTitleDescription": true
+    }
+  ],
+  "master": {
+    "title": "Mountains, Seas, and Mortals",
+    "file": "v4/exports/山、海、人间-纯英文纯音乐版.mp4",
+    "sha256": "c1d3fb6449a46ba2a199e15930b124a5fa590dd154d857f8feca70967287b861",
+    "duration": 1740.417,
+    "dimensions": [
+      1920,
+      1080
+    ],
+    "full_recordings": 5,
+    "separate_subtitles": [
+      "en",
+      "zh-Hans"
+    ],
+    "cover_text": false
+  },
+  "verification": {
+    "master_full_decode": "passed",
+    "shorts_full_decode": "passed",
+    "shorts_browser_playback": "passed",
+    "checked_chinese_captions": 24
+  }
+}

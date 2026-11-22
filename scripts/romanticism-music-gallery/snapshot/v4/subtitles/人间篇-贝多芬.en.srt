@@ -1,0 +1,75 @@
+﻿1
+00:00:00,000 --> 00:00:09,000
+Beethoven · Pathétique, II
+
+2
+00:00:29,500 --> 00:00:36,000
+Portrait of Chopin · Delacroix
+
+3
+00:01:18,500 --> 00:01:25,000
+Ophelia · Millais
+
+4
+00:02:07,500 --> 00:02:14,000
+The Lady of Shalott · Waterhouse
+
+5
+00:03:15,500 --> 00:03:22,000
+The Voyage of Life: Childhood · Cole
+
+6
+00:04:04,500 --> 00:04:11,000
+The Voyage of Life: Youth · Cole
+
+7
+00:04:55,500 --> 00:05:02,000
+The Voyage of Life: Manhood · Cole
+
+8
+00:05:47,500 --> 00:05:54,000
+The Voyage of Life: Old Age · Cole
+
+9
+00:06:22,083 --> 00:06:31,083
+Beethoven · Egmont Overture
+
+10
+00:06:58,583 --> 00:07:05,083
+Miranda — The Tempest · Waterhouse
+
+11
+00:07:44,583 --> 00:07:51,083
+Massacre at Chios · Delacroix
+
+12
+00:08:26,583 --> 00:08:33,083
+Entry of the Crusaders into Constantinople · Delacroix
+
+13
+00:09:12,583 --> 00:09:19,083
+The Raft of the Medusa · Géricault
+
+14
+00:10:03,583 --> 00:10:10,083
+The Burning of Parliament · Turner
+
+15
+00:10:47,583 --> 00:10:54,083
+The Wounded Cuirassier · Géricault
+
+16
+00:11:33,583 --> 00:11:40,083
+The Third of May 1808 · Goya
+
+17
+00:12:23,583 --> 00:12:30,083
+The Charging Chasseur · Géricault
+
+18
+00:13:08,583 --> 00:13:15,083
+Greece at Missolonghi · Delacroix
+
+19
+00:13:58,583 --> 00:14:05,083
+Liberty Leading the People · Delacroix

@@ -1,0 +1,96 @@
+﻿1
+00:00:00,500 --> 00:00:05,500
+From Gallery to Space
+
+2
+00:00:06,500 --> 00:00:11,500
+Mountains, Seas, and Mortals
+
+3
+00:00:12,500 --> 00:00:13,500
+Hear and see
+
+4
+00:00:13,500 --> 00:00:20,500
+Hear and see
+how the Romantics saw the world
+
+5
+00:00:23,000 --> 00:00:32,000
+Chopin · Raindrop Prelude
+
+6
+00:00:40,500 --> 00:00:47,000
+The Oxbow · Cole
+
+7
+00:01:24,500 --> 00:01:31,000
+The Sea of Ice · Friedrich
+
+8
+00:02:08,500 --> 00:02:15,000
+The Hay Wain · Constable
+
+9
+00:02:52,500 --> 00:02:59,000
+Chalk Cliffs on Rügen · Friedrich
+
+10
+00:03:36,500 --> 00:03:43,000
+Snow Storm: Hannibal · Turner
+
+11
+00:04:20,500 --> 00:04:27,000
+Monk by the Sea · Friedrich
+
+12
+00:04:56,500 --> 00:05:03,000
+Vesuvius in Eruption · Wright
+
+13
+00:05:17,875 --> 00:05:26,875
+Chopin · Nocturne Op. 9 No. 2
+
+14
+00:05:33,375 --> 00:05:39,875
+Abbey in the Oakwood · Friedrich
+
+15
+00:06:20,375 --> 00:06:26,875
+Two Men Contemplating the Moon · Friedrich
+
+16
+00:07:13,375 --> 00:07:19,875
+Twilight in the Wilderness · Church
+
+17
+00:08:08,375 --> 00:08:14,875
+The Fighting Temeraire · Turner
+
+18
+00:09:05,375 --> 00:09:11,875
+Rain, Steam and Speed · Turner
+
+19
+00:09:50,875 --> 00:09:59,875
+Chopin · Nocturne in C-sharp minor
+
+20
+00:10:13,375 --> 00:10:19,875
+Snow Storm: Steam-Boat · Turner
+
+21
+00:10:57,375 --> 00:11:03,875
+The Ninth Wave · Aivazovsky
+
+22
+00:11:40,375 --> 00:11:46,875
+The Heart of the Andes · Church
+
+23
+00:12:23,375 --> 00:12:29,875
+Wanderer above the Sea of Fog · Friedrich
+
+24
+00:13:07,375 --> 00:13:13,875
+Among the Sierra Nevada · Bierstadt

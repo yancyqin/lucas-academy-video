@@ -1,0 +1,211 @@
+{
+  "id": "03-mountains",
+  "number": 3,
+  "title": "山峦与光",
+  "title_en": "Mountains and Light",
+  "category": "nature",
+  "works": [
+    "heart-andes",
+    "sierra"
+  ],
+  "music": {
+    "title": "升 C 小调夜曲 B. 49",
+    "composer": "肖邦",
+    "performer": "Frank Levy",
+    "source": "https://archive.org/download/musopen-chopin-complete-works-flac/Nocturne%20in%20C%20sharp%20minor%20%27Lento%20con%20gran%20espressione%27%2C%20B.%2049%20%28Op.%20posth.%29.mp3",
+    "license": "CC0 1.0",
+    "credit_note": "演奏者按录音档案的 ARTIST 标签列出。",
+    "local_file": "music/nocturne-c-sharp.m4a",
+    "sha256": "e5794e60f5d8db18411e1cc6456ca70628423a2aae296e1d61664bd18b03b2e8",
+    "duration": 225.008,
+    "start": 590.875,
+    "end": 815.9166666666666,
+    "constant_gain_db": -4.66,
+    "file": "@DATA_ROOT@/music/nocturne-c-sharp.m4a",
+    "gain_db": -4.66,
+    "excerpt_start": 14,
+    "excerpt_seconds": 58
+  },
+  "excerpt": 14,
+  "names": [
+    "The Heart of the Andes",
+    "Among the Sierra Nevada"
+  ],
+  "chinese": [
+    "安第斯之心",
+    "内华达山脉之中"
+  ],
+  "detail": [
+    {
+      "u": 0.61,
+      "v": 0.73,
+      "fov": 8
+    },
+    {
+      "u": 0.46,
+      "v": 0.67,
+      "fov": 10
+    }
+  ],
+  "start": {
+    "eye": [
+      -22,
+      4.05,
+      12
+    ],
+    "target": [
+      -27.375,
+      11,
+      -1
+    ],
+    "fov": 62
+  },
+  "first_at": 12,
+  "first_label": 12.8,
+  "first_detail": 17.5,
+  "first_close": 23.5,
+  "pull_at": 24.5,
+  "walk_at": 27,
+  "second_at": 34,
+  "second_label": 34.5,
+  "second_detail": 39.3,
+  "second_close": 46.5,
+  "closing": {
+    "distance": 12.6,
+    "fov": 56
+  },
+  "relation_zh": "先看丘奇与比尔施塔特的辽阔山景，再走近两幅画中的瀑布：从群山的尺度，看到水落向河流与湖面的细节。",
+  "relation_en": "First take in the expansive mountain landscapes of Church and Bierstadt, then move closer to their waterfalls: water descending into a river and a lake.",
+  "stem": "03-山峦与光",
+  "root": "@DATA_ROOT@/shorts/batch-20261121/jobs/03-mountains",
+  "width": 1080,
+  "height": 1920,
+  "fps": 24,
+  "duration": 58,
+  "frames": 1392,
+  "artworks": [
+    {
+      "id": "heart-andes",
+      "title_zh": "安第斯之心",
+      "title_en": "The Heart of the Andes",
+      "artist_zh": "弗雷德里克·埃德温·丘奇",
+      "artist_en": "Frederic Edwin Church",
+      "year": "1859",
+      "year_sort": 1859,
+      "source": "https://www.metmuseum.org/art/collection/search/10481",
+      "license": "Public domain",
+      "label_en": "The Heart of the Andes",
+      "wall": "nature",
+      "category": "romantic",
+      "image": "romanticism-salon-v1/heart-andes.jpg",
+      "aspect": 1.8253119429590017,
+      "width": 1024,
+      "height": 561,
+      "bytes": 211941,
+      "sha256": "495160f1f1fe9ecd45cd4f422b73d4cd11c02b61c1d16b4c3622b1a2ba7a41a5",
+      "original_sha256": "3d9529b5e2f6ac348a82715186ebbffd1adc7d2d5f3bd8adfa9aa83c0796d258",
+      "branches": [
+        "narrated",
+        "music"
+      ],
+      "file": "@DATA_ROOT@/art/heart-andes.jpg",
+      "nudity": false
+    },
+    {
+      "id": "sierra",
+      "title_zh": "加利福尼亚内华达山脉之中",
+      "title_en": "Among the Sierra Nevada, California",
+      "artist_zh": "阿尔伯特·比尔施塔特",
+      "artist_en": "Albert Bierstadt",
+      "year": "1868",
+      "year_sort": 1868,
+      "source": "https://www.si.edu/object/saam_1977.107.1",
+      "license": "Public domain",
+      "label_en": "Among the Sierra Nevada, California",
+      "wall": "nature",
+      "category": "romantic",
+      "image": "romanticism-salon-v1/sierra.jpg",
+      "aspect": 1.6677524429967427,
+      "width": 1024,
+      "height": 614,
+      "bytes": 131934,
+      "sha256": "fe078a3b739e257168df4a05a0d16cf9cf51e31bb86037aaa2381f202528e737",
+      "original_sha256": "2fe9342646d2de0a4495c259b2face9fe5a02c5a8522f9c5eac73ddab61b9901",
+      "branches": [
+        "music"
+      ],
+      "file": "@DATA_ROOT@/art/sierra.jpg",
+      "nudity": false
+    }
+  ],
+  "labels": [
+    {
+      "id": "theme",
+      "start": 0.65,
+      "end": 4.3,
+      "en": [
+        "Mountains and Light"
+      ],
+      "zh": "山峦与光",
+      "y": 356,
+      "size": 49,
+      "center": true,
+      "font_px": 49
+    },
+    {
+      "id": "music",
+      "start": 4.7,
+      "end": 8.4,
+      "en": [
+        "Chopin · Nocturne in C-sharp minor"
+      ],
+      "zh": "肖邦 · 升 C 小调夜曲",
+      "y": 230,
+      "size": 36,
+      "font_px": 36
+    },
+    {
+      "id": "heart-andes",
+      "start": 12.8,
+      "end": 17.35,
+      "en": [
+        "The Heart of the Andes",
+        "Frederic Edwin Church"
+      ],
+      "zh": "安第斯之心\n弗雷德里克·埃德温·丘奇",
+      "y": 150,
+      "size": 38,
+      "font_px": 38
+    },
+    {
+      "id": "sierra",
+      "start": 34.5,
+      "end": 39.15,
+      "en": [
+        "Among the Sierra Nevada",
+        "Albert Bierstadt"
+      ],
+      "zh": "内华达山脉之中\n阿尔伯特·比尔施塔特",
+      "y": 150,
+      "size": 38,
+      "font_px": 38
+    }
+  ],
+  "source_repository": "@UI_ROOT@",
+  "source_snapshot": {
+    "content/inception/artworks/romanticism-salon-v1.json": "f98221584e2bcc5e71ccfd5ccaac9ac8f22e6d9c43550807bf0e029a5cb70389",
+    "content/inception/artworks/romanticism-sculptures-v1.json": "326a94212e6691970c64cf973f9e768a65238262d5b90b12b5e6fc756eda1f67",
+    "content/inception/artworks/romanticism-selected-scans.json": "732b67f4880e393b9c09d4815a040b6b7d594a7e66530a1af253920a6d9e91dd",
+    "src/inception/world/rooms/romanticismLayout.js": "d6c1611bc10c680a818ec802c8fd007e7953d61b28cd130ef55272cb7a619cfd",
+    "src/inception/world/rooms/romanticismExhibits.ts": "2c6f076d89f0f4e4859ba2c259ddbd839566a8ee49ecc04c1ff3a8154de1f1b2",
+    "src/inception/world/render/threeRomanticismSalon.ts": "c714e33bf196e1eb499b2418fa6bead85e27f667052b69701fd7cd941b86d7ed",
+    "src/inception/world/render/romanticismSurfaces.ts": "de15c8d37a8190d7dae905d0dced7e5537f784f891903ff9abdd2a9341fec0c9",
+    "src/inception/world/model/museum.js": "79dfbe9c8e53f7396b2e6c21b52722cb097e37bab8824581e964c846005cdab5",
+    "src/inception/world/render/threeMuseum.ts": "a8bfbcc023923dd7609a0425ffa23bc9947abbe288f5e4f47e202a00615940b8"
+  },
+  "picture_language": "en",
+  "subtitles": [
+    "zh-Hans"
+  ],
+  "narration": false
+}

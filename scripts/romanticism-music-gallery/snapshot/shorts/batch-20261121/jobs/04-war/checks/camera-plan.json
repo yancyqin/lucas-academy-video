@@ -1,0 +1,287 @@
+{
+  "anchors": [
+    {
+      "t": 0,
+      "eye": [
+        20,
+        4.05,
+        9
+      ],
+      "target": [
+        27.375,
+        6,
+        2
+      ],
+      "fov": 56
+    },
+    {
+      "t": 1,
+      "eye": [
+        20,
+        4.05,
+        9
+      ],
+      "target": [
+        27.375,
+        6,
+        2
+      ],
+      "fov": 56
+    },
+    {
+      "t": 9,
+      "eye": [
+        20.90308829078321,
+        4.05,
+        4.100675744432387e-16
+      ],
+      "target": [
+        27.375,
+        4.05,
+        1.3777276490407724e-17
+      ],
+      "fov": 52
+    },
+    {
+      "t": 14.2,
+      "eye": [
+        20.90308829078321,
+        4.05,
+        4.100675744432387e-16
+      ],
+      "target": [
+        27.375,
+        4.05,
+        1.3777276490407724e-17
+      ],
+      "fov": 52
+    },
+    {
+      "t": 20,
+      "eye": [
+        20.90308829078321,
+        4.05,
+        4.100675744432387e-16
+      ],
+      "target": [
+        27.375,
+        4.05,
+        0.12198437500000013
+      ],
+      "fov": 25.5
+    },
+    {
+      "t": 21,
+      "eye": [
+        20.90308829078321,
+        4.05,
+        4.100675744432387e-16
+      ],
+      "target": [
+        27.375,
+        4.05,
+        0.12198437500000013
+      ],
+      "fov": 25.5
+    },
+    {
+      "t": 23,
+      "eye": [
+        20.90308829078321,
+        4.05,
+        4.100675744432387e-16
+      ],
+      "target": [
+        27.375,
+        4.05,
+        1.3777276490407724e-17
+      ],
+      "fov": 52
+    },
+    {
+      "t": 28.5,
+      "eye": [
+        21.107064156689283,
+        4.05,
+        -15.4
+      ],
+      "target": [
+        17.107064156689283,
+        13.55,
+        -29.4
+      ],
+      "fov": 52
+    },
+    {
+      "t": 34,
+      "eye": [
+        21.31104002259536,
+        4.05,
+        -30.8
+      ],
+      "target": [
+        27.375,
+        4.05,
+        -30.8
+      ],
+      "fov": 52
+    },
+    {
+      "t": 39.3,
+      "eye": [
+        21.31104002259536,
+        4.05,
+        -30.8
+      ],
+      "target": [
+        27.375,
+        4.05,
+        -30.8
+      ],
+      "fov": 52
+    },
+    {
+      "t": 46.5,
+      "eye": [
+        21.31104002259536,
+        4.05,
+        -30.8
+      ],
+      "target": [
+        27.375,
+        4.05,
+        -30.771635742187502
+      ],
+      "fov": 27
+    },
+    {
+      "t": 49,
+      "eye": [
+        21.31104002259536,
+        4.05,
+        -30.8
+      ],
+      "target": [
+        27.375,
+        4.05,
+        -30.771635742187502
+      ],
+      "fov": 27
+    },
+    {
+      "t": 55,
+      "eye": [
+        19.6,
+        4.3,
+        -30.8
+      ],
+      "target": [
+        27.375,
+        3,
+        -30.8
+      ],
+      "fov": 56
+    },
+    {
+      "t": 58,
+      "eye": [
+        19.6,
+        4.3,
+        -30.8
+      ],
+      "target": [
+        27.375,
+        3,
+        -30.8
+      ],
+      "fov": 56
+    }
+  ],
+  "maxMps": 4.200046973281719,
+  "maxDegrees": 29.22141367442785,
+  "works": [
+    {
+      "id": "wounded",
+      "title_zh": "负伤的胸甲骑兵",
+      "title_en": "The Wounded Cuirassier",
+      "artist_zh": "泰奥多尔·籍里柯",
+      "artist_en": "Théodore Géricault",
+      "year": "1814",
+      "year_sort": 1814,
+      "source": "https://commons.wikimedia.org/wiki/File:Cuirassier_blessé,_quittant_le_feu_-_Théodore_Géricault_-_Musée_du_Louvre_Peintures_INV_4886_;_MN_51.jpg",
+      "license": "Public domain",
+      "label_en": "The Wounded Cuirassier",
+      "wall": "social",
+      "category": "romantic",
+      "image": "romanticism-salon-v1/wounded.jpg",
+      "aspect": 0.82421875,
+      "width": 3.049609375,
+      "height": 3.7,
+      "bytes": 185490,
+      "sha256": "a706ab8ca618cd0aa0346f068aa9d6ff951f343afddaee7aa449db6809f71546",
+      "original_sha256": "fb621ee42ebd8795a80d3eae8326f7882f33f542d2ee73defabbec059885559a",
+      "branches": [
+        "music"
+      ],
+      "position": [
+        27.6,
+        4.05,
+        0
+      ],
+      "rotationY": -1.5707963267948966,
+      "eye": [
+        19.8,
+        4.05,
+        0
+      ],
+      "wallId": "social"
+    },
+    {
+      "id": "charging",
+      "title_zh": "冲锋的猎骑兵",
+      "title_en": "The Charging Chasseur",
+      "artist_zh": "泰奥多尔·籍里柯",
+      "artist_en": "Théodore Géricault",
+      "year": "1812",
+      "year_sort": 1812,
+      "source": "https://commons.wikimedia.org/wiki/File:GericaultHorseman.jpg",
+      "license": "Public domain",
+      "label_en": "The Charging Chasseur",
+      "wall": "social",
+      "category": "romantic",
+      "image": "romanticism-salon-v1/charging.jpg",
+      "aspect": 0.7666015625,
+      "width": 2.83642578125,
+      "height": 3.7,
+      "bytes": 237301,
+      "sha256": "ad86f0cfe8a58b6a4d98ed82eea1e6f3dba585e9360b5976f2dc67acff4970e8",
+      "original_sha256": "304dfc2741debed6b2e95cffd0a59796e666f8b4cab5653e20ca638b9821be84",
+      "branches": [
+        "music"
+      ],
+      "position": [
+        27.6,
+        4.05,
+        -30.8
+      ],
+      "rotationY": -1.5707963267948966,
+      "eye": [
+        19.8,
+        4.05,
+        -30.8
+      ],
+      "wallId": "social"
+    }
+  ],
+  "source_snapshot": {
+    "content/inception/artworks/romanticism-salon-v1.json": "f98221584e2bcc5e71ccfd5ccaac9ac8f22e6d9c43550807bf0e029a5cb70389",
+    "content/inception/artworks/romanticism-sculptures-v1.json": "326a94212e6691970c64cf973f9e768a65238262d5b90b12b5e6fc756eda1f67",
+    "content/inception/artworks/romanticism-selected-scans.json": "732b67f4880e393b9c09d4815a040b6b7d594a7e66530a1af253920a6d9e91dd",
+    "src/inception/world/rooms/romanticismLayout.js": "d6c1611bc10c680a818ec802c8fd007e7953d61b28cd130ef55272cb7a619cfd",
+    "src/inception/world/rooms/romanticismExhibits.ts": "2c6f076d89f0f4e4859ba2c259ddbd839566a8ee49ecc04c1ff3a8154de1f1b2",
+    "src/inception/world/render/threeRomanticismSalon.ts": "c714e33bf196e1eb499b2418fa6bead85e27f667052b69701fd7cd941b86d7ed",
+    "src/inception/world/render/romanticismSurfaces.ts": "de15c8d37a8190d7dae905d0dced7e5537f784f891903ff9abdd2a9341fec0c9",
+    "src/inception/world/model/museum.js": "79dfbe9c8e53f7396b2e6c21b52722cb097e37bab8824581e964c846005cdab5",
+    "src/inception/world/render/threeMuseum.ts": "a8bfbcc023923dd7609a0425ffa23bc9947abbe288f5e4f47e202a00615940b8"
+  }
+}

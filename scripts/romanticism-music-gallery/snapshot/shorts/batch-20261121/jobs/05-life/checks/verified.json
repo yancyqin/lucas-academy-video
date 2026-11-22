@@ -1,0 +1,73 @@
+{
+  "status": "passed",
+  "checked_utc": "2026-11-22T05:35:02.353847+00:00",
+  "video": {
+    "file": "05-青年与暮年.mp4",
+    "bytes": 35731977,
+    "sha256": "5ea297ef5dfadc014fe87aa492b8d89bd92320465b65524856e73d20a533174c",
+    "duration": 58,
+    "width": 1080,
+    "height": 1920,
+    "fps": 24,
+    "frames": 1392,
+    "audio": "aac"
+  },
+  "full_decode": "passed",
+  "current_is_source_hashes_verified": true,
+  "english_picture_labels": true,
+  "separate_chinese_subtitle_cues": 4,
+  "music_source_hash_verified": true,
+  "no_narration": true,
+  "featured_works": [
+    "life-youth",
+    "life-old"
+  ],
+  "visual_review": "Passed: nine final export frames inspected. Both Voyage of Life paintings remain whole at their stops; youth, angel, praying old man and boat are complete within the selected close-ups. Closing view includes the pair. English labels sit above the artworks.",
+  "browser_review": {
+    "file": "05-青年与暮年.mp4",
+    "status": "passed",
+    "playback": {
+      "duration": 58,
+      "width": 1080,
+      "height": 1920,
+      "currentTime": 0.201508,
+      "error": null
+    },
+    "subtitles": [
+      {
+        "time": 2.475,
+        "text": "青年与暮年"
+      },
+      {
+        "time": 6.550000000000001,
+        "text": "贝多芬 ·《埃格蒙特》序曲"
+      },
+      {
+        "time": 15.075000000000001,
+        "text": "生命之旅：青年\n托马斯·科尔"
+      },
+      {
+        "time": 36.025000000000006,
+        "text": "生命之旅：老年\n托马斯·科尔"
+      }
+    ],
+    "seeks": [
+      {
+        "time": 23.5,
+        "error": null
+      },
+      {
+        "time": 28.5,
+        "error": null
+      },
+      {
+        "time": 46,
+        "error": null
+      },
+      {
+        "time": 56,
+        "error": null
+      }
+    ]
+  }
+}

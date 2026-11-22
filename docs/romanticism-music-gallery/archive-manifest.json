@@ -1,0 +1,604 @@
+{
+  "schema": "romanticism-production-archive/1",
+  "runtime_layout": "romanticism-music-gallery",
+  "normalizations": {
+    "@DATA_ROOT@": "external romanticism-music-gallery folder",
+    "@UI_ROOT@": "canonical inception-space-ui checkout",
+    "@VIDEO_REPO@": "lucas-academy-video checkout",
+    "@RUNTIME_DEPS@": "bundled Codex runtime dependencies",
+    "@PLAYGROUND@": "parent workspace folder",
+    "@USER_HOME@": "current user home"
+  },
+  "files": [
+    {
+      "runtime_path": "edit-plan.json",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/edit-plan.json",
+      "bytes": 147733,
+      "sha256": "4457e0b5bd629c5e9470441df15ec6ad2ce15e4acb6c1ff4acf3fb799481dd32",
+      "source_sha256": "ad47decde1ad9d406a20d3140d4eae5a53150cbbd7b58bf35363cddd256e659f"
+    },
+    {
+      "runtime_path": "scripts/build_review.py",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/scripts/build_review.py",
+      "bytes": 20381,
+      "sha256": "cc32195179f9d6dd6a971149c977c5c4edf9cfd59c3c80255135f4574751cee4",
+      "source_sha256": "cc32195179f9d6dd6a971149c977c5c4edf9cfd59c3c80255135f4574751cee4"
+    },
+    {
+      "runtime_path": "scripts/curate.py",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/scripts/curate.py",
+      "bytes": 6565,
+      "sha256": "2b8598af0b461918790dc9b64e81658fcec9710aba7387a900ab4bbcbe1900b7",
+      "source_sha256": "2b8598af0b461918790dc9b64e81658fcec9710aba7387a900ab4bbcbe1900b7"
+    },
+    {
+      "runtime_path": "scripts/plan_gallery.py",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/scripts/plan_gallery.py",
+      "bytes": 7959,
+      "sha256": "3199705a21dec75881072121edeb1925518bc0553782b77546eb3df7051af1a9",
+      "source_sha256": "3199705a21dec75881072121edeb1925518bc0553782b77546eb3df7051af1a9"
+    },
+    {
+      "runtime_path": "scripts/produce.py",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/scripts/produce.py",
+      "bytes": 10242,
+      "sha256": "15b688dc151b0a3196ef18649dd2dadc3a1df6d2d75628428c109be4e6a2efa0",
+      "source_sha256": "15b688dc151b0a3196ef18649dd2dadc3a1df6d2d75628428c109be4e6a2efa0"
+    },
+    {
+      "runtime_path": "scripts/verify.py",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/scripts/verify.py",
+      "bytes": 5131,
+      "sha256": "ca389fbd964e991888985861e2e5c2e987dfdaa188038a8ac0d99cf2f432aa36",
+      "source_sha256": "ca389fbd964e991888985861e2e5c2e987dfdaa188038a8ac0d99cf2f432aa36"
+    },
+    {
+      "runtime_path": "shared-salon.json",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/shared-salon.json",
+      "bytes": 1102,
+      "sha256": "c87e9615c6749315189f3da348c2624e9ec22b58292da91069682940c9c50457",
+      "source_sha256": "4e740464031d1a982e3f15e5972daeb43500b86f34a5febfaceeccc7a7bd3eee"
+    },
+    {
+      "runtime_path": "shorts/01-vastness/checks/verified.json",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/shorts/01-vastness/checks/verified.json",
+      "bytes": 1974,
+      "sha256": "d0c7e375a5968b2b46023f8b004231799806d310e78ad9adfb0b8e77350ae4c6",
+      "source_sha256": "d0c7e375a5968b2b46023f8b004231799806d310e78ad9adfb0b8e77350ae4c6"
+    },
+    {
+      "runtime_path": "shorts/01-vastness/edit-plan.json",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/shorts/01-vastness/edit-plan.json",
+      "bytes": 5138,
+      "sha256": "5c61cacb1484105739805d2c9e30faa65ccaccb5aad38f7cadf2c17ac1bbe6e3",
+      "source_sha256": "d2c8cd6e4ee711d894644afe477540da30237f5877dfd717256ddc428451496e"
+    },
+    {
+      "runtime_path": "shorts/01-vastness/scripts/capture.mjs",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/shorts/01-vastness/scripts/capture.mjs",
+      "bytes": 12750,
+      "sha256": "43ff6d4060c7e2ca6ca2eb9eb9597c25e12dd80c60db8eb6548176b355593bf7",
+      "source_sha256": "e562ab33aa1ca8dc63126a10397f2626befc432816fd8c516c09790eb1cbd0d5"
+    },
+    {
+      "runtime_path": "shorts/01-vastness/scripts/deliver.py",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/shorts/01-vastness/scripts/deliver.py",
+      "bytes": 5197,
+      "sha256": "5ee5ab687372349576eb663d31c41b1772aebfb1633848422cf66ea331beda2f",
+      "source_sha256": "a17551a2e77f5fd284ef5981a9cec8ac862f6a2bba2ab81939f07a112f79c732"
+    },
+    {
+      "runtime_path": "shorts/01-vastness/scripts/finish.py",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/shorts/01-vastness/scripts/finish.py",
+      "bytes": 5642,
+      "sha256": "889145276f04bc87e6caa7bf5fc2b8076317054c5fd5bfb312c7ec17cea4e8fe",
+      "source_sha256": "889145276f04bc87e6caa7bf5fc2b8076317054c5fd5bfb312c7ec17cea4e8fe"
+    },
+    {
+      "runtime_path": "shorts/01-vastness/scripts/prepare.py",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/shorts/01-vastness/scripts/prepare.py",
+      "bytes": 4255,
+      "sha256": "6380538d2bf06c00cca4e2cdf235a4ce583f2156476e43a1f08473fdd434da5d",
+      "source_sha256": "6380538d2bf06c00cca4e2cdf235a4ce583f2156476e43a1f08473fdd434da5d"
+    },
+    {
+      "runtime_path": "shorts/01-vastness/scripts/verify_delivery.mjs",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/shorts/01-vastness/scripts/verify_delivery.mjs",
+      "bytes": 4086,
+      "sha256": "e959e1b519aed4e4fd3f3bf84d64605ea05314dbd7883717357527769b0cc720",
+      "source_sha256": "04aa0198598a1192b23908fcbd5ea5fe3ec722210405650d85c02b4e73f046c4"
+    },
+    {
+      "runtime_path": "shorts/01-vastness/sources/layout-snapshot.json",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/shorts/01-vastness/sources/layout-snapshot.json",
+      "bytes": 759,
+      "sha256": "87e268958affa42b5e4b9881e8e279393b8c1182955d79d285b9bb401bb85efe",
+      "source_sha256": "87e268958affa42b5e4b9881e8e279393b8c1182955d79d285b9bb401bb85efe"
+    },
+    {
+      "runtime_path": "shorts/01-vastness/subtitles/面对辽阔-竖屏示范.zh-Hans.srt",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/shorts/01-vastness/subtitles/面对辽阔-竖屏示范.zh-Hans.srt",
+      "bytes": 286,
+      "sha256": "bf61376a38307264184092ad1c941619aaefd0661cdf565799887102c602de77",
+      "source_sha256": "bf61376a38307264184092ad1c941619aaefd0661cdf565799887102c602de77"
+    },
+    {
+      "runtime_path": "shorts/batch-20261121/batch.json",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/shorts/batch-20261121/batch.json",
+      "bytes": 37460,
+      "sha256": "e8df60ddea721d3ae90668fd451a499c74856bfd5fbb7f90d47757f8a91dd499",
+      "source_sha256": "3ec127ae8b2f3523834479a3fcbe76a138add90ca9c1d1f6203bcb1fdef1fa2c"
+    },
+    {
+      "runtime_path": "shorts/batch-20261121/checks/browser-verified.json",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/shorts/batch-20261121/checks/browser-verified.json",
+      "bytes": 6054,
+      "sha256": "be32279d8764789ba4c3d8922ecb71b43c98cc42974c2a414cc4350fcb4f5b7d",
+      "source_sha256": "be32279d8764789ba4c3d8922ecb71b43c98cc42974c2a414cc4350fcb4f5b7d"
+    },
+    {
+      "runtime_path": "shorts/batch-20261121/jobs/02-silence/checks/camera-plan.json",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/shorts/batch-20261121/jobs/02-silence/checks/camera-plan.json",
+      "bytes": 6155,
+      "sha256": "61f7cc1b21d3151a78e2291d8966bf64e4f995331cf0177ffea4d64a79a0ef3c",
+      "source_sha256": "61f7cc1b21d3151a78e2291d8966bf64e4f995331cf0177ffea4d64a79a0ef3c"
+    },
+    {
+      "runtime_path": "shorts/batch-20261121/jobs/02-silence/checks/verified.json",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/shorts/batch-20261121/jobs/02-silence/checks/verified.json",
+      "bytes": 1811,
+      "sha256": "f835da74e617193896c65f0d3d643bf6e8a52bdb174f7dce2ad68f093c735da5",
+      "source_sha256": "f835da74e617193896c65f0d3d643bf6e8a52bdb174f7dce2ad68f093c735da5"
+    },
+    {
+      "runtime_path": "shorts/batch-20261121/jobs/02-silence/edit-plan.json",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/shorts/batch-20261121/jobs/02-silence/edit-plan.json",
+      "bytes": 6401,
+      "sha256": "c72562b591e726736bee8e1bd939c090e9f81252b6074dcc61acee96e4854dc9",
+      "source_sha256": "003b3f9a6921bdedc9ba0dd3f024cf66ce3447248102b754f6e8161ace42ca66"
+    },
+    {
+      "runtime_path": "shorts/batch-20261121/jobs/02-silence/subtitles/02-寂静与时间.zh-Hans.srt",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/shorts/batch-20261121/jobs/02-silence/subtitles/02-寂静与时间.zh-Hans.srt",
+      "bytes": 293,
+      "sha256": "3b17c33bfa36448a36c9c2d2af41269fb6aff57e8a50ef98a02d54a8d17b068b",
+      "source_sha256": "3b17c33bfa36448a36c9c2d2af41269fb6aff57e8a50ef98a02d54a8d17b068b"
+    },
+    {
+      "runtime_path": "shorts/batch-20261121/jobs/03-mountains/checks/camera-plan.json",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/shorts/batch-20261121/jobs/03-mountains/checks/camera-plan.json",
+      "bytes": 5973,
+      "sha256": "1a4e14d723ec93e06d8fce14d68be6ef5b1b31a62501f1191b71d683d3c429d4",
+      "source_sha256": "1a4e14d723ec93e06d8fce14d68be6ef5b1b31a62501f1191b71d683d3c429d4"
+    },
+    {
+      "runtime_path": "shorts/batch-20261121/jobs/03-mountains/checks/verified.json",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/shorts/batch-20261121/jobs/03-mountains/checks/verified.json",
+      "bytes": 1817,
+      "sha256": "50a36af3bbd2d09318bfb1fcaee9095cc0796181f5b60016bf37d7b1ccdf92ec",
+      "source_sha256": "50a36af3bbd2d09318bfb1fcaee9095cc0796181f5b60016bf37d7b1ccdf92ec"
+    },
+    {
+      "runtime_path": "shorts/batch-20261121/jobs/03-mountains/edit-plan.json",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/shorts/batch-20261121/jobs/03-mountains/edit-plan.json",
+      "bytes": 6418,
+      "sha256": "31e8174b237c703b188b702a275b50146d93f988861542058ca9f06640570a03",
+      "source_sha256": "69c6b786369e8a4df58a649fbaae68c229be7fcda04e572bd6d6132c12dd90d6"
+    },
+    {
+      "runtime_path": "shorts/batch-20261121/jobs/03-mountains/subtitles/03-山峦与光.zh-Hans.srt",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/shorts/batch-20261121/jobs/03-mountains/subtitles/03-山峦与光.zh-Hans.srt",
+      "bytes": 279,
+      "sha256": "f1994e47ab11977276f0f1de61b3b4292a300d20ff86b9a29910c5bb5ede3507",
+      "source_sha256": "f1994e47ab11977276f0f1de61b3b4292a300d20ff86b9a29910c5bb5ede3507"
+    },
+    {
+      "runtime_path": "shorts/batch-20261121/jobs/04-war/checks/camera-plan.json",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/shorts/batch-20261121/jobs/04-war/checks/camera-plan.json",
+      "bytes": 6266,
+      "sha256": "e7128c6a1668cd7599fb9bac45a64debaded2d196c7ceb947a05b600c8182011",
+      "source_sha256": "e7128c6a1668cd7599fb9bac45a64debaded2d196c7ceb947a05b600c8182011"
+    },
+    {
+      "runtime_path": "shorts/batch-20261121/jobs/04-war/checks/verified.json",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/shorts/batch-20261121/jobs/04-war/checks/verified.json",
+      "bytes": 1794,
+      "sha256": "b8cc58d9c31220cc286c1c9f8f07a866ea0ea57e3ee545ee9f87dc3f0403a596",
+      "source_sha256": "b8cc58d9c31220cc286c1c9f8f07a866ea0ea57e3ee545ee9f87dc3f0403a596"
+    },
+    {
+      "runtime_path": "shorts/batch-20261121/jobs/04-war/edit-plan.json",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/shorts/batch-20261121/jobs/04-war/edit-plan.json",
+      "bytes": 6415,
+      "sha256": "b284559ed22d696feabc176a0d9ab3874c14979deb00c880cb7f124089626c8b",
+      "source_sha256": "16e5fd8b8d439fd3a8a6cfe0ef397179f4faa1720755bc0fe64e1a6df85fd822"
+    },
+    {
+      "runtime_path": "shorts/batch-20261121/jobs/04-war/subtitles/04-战争的两张面孔.zh-Hans.srt",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/shorts/batch-20261121/jobs/04-war/subtitles/04-战争的两张面孔.zh-Hans.srt",
+      "bytes": 282,
+      "sha256": "0f33c23bf72d82edaae216936baea5b8f35b41f3c0a8235109237c90f7bd90c6",
+      "source_sha256": "0f33c23bf72d82edaae216936baea5b8f35b41f3c0a8235109237c90f7bd90c6"
+    },
+    {
+      "runtime_path": "shorts/batch-20261121/jobs/05-life/checks/camera-plan.json",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/shorts/batch-20261121/jobs/05-life/checks/camera-plan.json",
+      "bytes": 6219,
+      "sha256": "7b39b70d05588a697443c441a938e481b99c5fa06dd8c93995797e14266fed09",
+      "source_sha256": "7b39b70d05588a697443c441a938e481b99c5fa06dd8c93995797e14266fed09"
+    },
+    {
+      "runtime_path": "shorts/batch-20261121/jobs/05-life/checks/verified.json",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/shorts/batch-20261121/jobs/05-life/checks/verified.json",
+      "bytes": 1818,
+      "sha256": "70256cf7a18ab738926e4a9313b50bdad6ae641902b931f3dd2b6baa9e5dc22f",
+      "source_sha256": "70256cf7a18ab738926e4a9313b50bdad6ae641902b931f3dd2b6baa9e5dc22f"
+    },
+    {
+      "runtime_path": "shorts/batch-20261121/jobs/05-life/edit-plan.json",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/shorts/batch-20261121/jobs/05-life/edit-plan.json",
+      "bytes": 6278,
+      "sha256": "bddfde44b1b8efa25883b28e98b20443b06455214341b69c23c382096865a533",
+      "source_sha256": "ab56e0d35f8f8c12c835dfe096a4dc1faad8b255a0d96554ecf2439594768f35"
+    },
+    {
+      "runtime_path": "shorts/batch-20261121/jobs/05-life/subtitles/05-青年与暮年.zh-Hans.srt",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/shorts/batch-20261121/jobs/05-life/subtitles/05-青年与暮年.zh-Hans.srt",
+      "bytes": 267,
+      "sha256": "0999b7885236a175edc0cb489ba3d87d2b816ef1286bd444c59887246a87ce75",
+      "source_sha256": "0999b7885236a175edc0cb489ba3d87d2b816ef1286bd444c59887246a87ce75"
+    },
+    {
+      "runtime_path": "shorts/batch-20261121/jobs/06-hope-freedom/checks/camera-plan.json",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/shorts/batch-20261121/jobs/06-hope-freedom/checks/camera-plan.json",
+      "bytes": 6092,
+      "sha256": "f8da987ade7670378a37288c3c343dfcdf8819ff3b1c5e655edba68104f3aebe",
+      "source_sha256": "f8da987ade7670378a37288c3c343dfcdf8819ff3b1c5e655edba68104f3aebe"
+    },
+    {
+      "runtime_path": "shorts/batch-20261121/jobs/06-hope-freedom/checks/verified.json",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/shorts/batch-20261121/jobs/06-hope-freedom/checks/verified.json",
+      "bytes": 1862,
+      "sha256": "abb81e285d51c96b8af96dab1dcaef82709c58ffcf496fc6a109bb568ba2475d",
+      "source_sha256": "abb81e285d51c96b8af96dab1dcaef82709c58ffcf496fc6a109bb568ba2475d"
+    },
+    {
+      "runtime_path": "shorts/batch-20261121/jobs/06-hope-freedom/edit-plan.json",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/shorts/batch-20261121/jobs/06-hope-freedom/edit-plan.json",
+      "bytes": 6477,
+      "sha256": "00936c2ad8e6bf623f9441366731f74dcd418368f101332c8d9703b5510db889",
+      "source_sha256": "75de4934ba89e1df9ea17ca2ded199cda526743ab6d151ad198f42a9adf62db6"
+    },
+    {
+      "runtime_path": "shorts/batch-20261121/jobs/06-hope-freedom/subtitles/06-希望与自由.zh-Hans.srt",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/shorts/batch-20261121/jobs/06-hope-freedom/subtitles/06-希望与自由.zh-Hans.srt",
+      "bytes": 270,
+      "sha256": "fbd52e239039aa2e0c2548e20a6ed65e4c9cb4f5da74b531028406732a8402d2",
+      "source_sha256": "fbd52e239039aa2e0c2548e20a6ed65e4c9cb4f5da74b531028406732a8402d2"
+    },
+    {
+      "runtime_path": "shorts/batch-20261121/scripts/capture.mjs",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/shorts/batch-20261121/scripts/capture.mjs",
+      "bytes": 14506,
+      "sha256": "33bc3cd7bc291ab9503908253ed91cba47f1fc2e75b21fc5983a22b25d3aeb06",
+      "source_sha256": "200f4ab8d87d69ebd8bfa450c79646ea07194e5034ac89246aaab677119888b0"
+    },
+    {
+      "runtime_path": "shorts/batch-20261121/scripts/finish.py",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/shorts/batch-20261121/scripts/finish.py",
+      "bytes": 5718,
+      "sha256": "705797da5dfb9887b78cad2ec6dc003d611c85fe72cffea49fbbafb881fc7f73",
+      "source_sha256": "705797da5dfb9887b78cad2ec6dc003d611c85fe72cffea49fbbafb881fc7f73"
+    },
+    {
+      "runtime_path": "shorts/batch-20261121/scripts/package.py",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/shorts/batch-20261121/scripts/package.py",
+      "bytes": 17064,
+      "sha256": "3cf8cb4c2957ccff30f1149c8643def1142b6453304ec555f2b1cb6a92f234cf",
+      "source_sha256": "fc228ed9544b460718bcb454a2b7cb61870dfedc792664c2a519d3d354971d0f"
+    },
+    {
+      "runtime_path": "shorts/batch-20261121/scripts/prepare.py",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/shorts/batch-20261121/scripts/prepare.py",
+      "bytes": 10525,
+      "sha256": "e7bac808feee0a99169cb1aec6a2a7e0ca303ec36bf88caf49d766e18fa3a719",
+      "source_sha256": "e7bac808feee0a99169cb1aec6a2a7e0ca303ec36bf88caf49d766e18fa3a719"
+    },
+    {
+      "runtime_path": "shorts/batch-20261121/scripts/run.py",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/shorts/batch-20261121/scripts/run.py",
+      "bytes": 1580,
+      "sha256": "ddbd5ffd64bc923bc9437f649f37ad3dbc7e4ba79ed3f32b4f9e140676203656",
+      "source_sha256": "6013f6e519b83b30f7ac50b92b6d3519d12409b7149b203a59622e0e829d23ed"
+    },
+    {
+      "runtime_path": "shorts/batch-20261121/scripts/verify_package.mjs",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/shorts/batch-20261121/scripts/verify_package.mjs",
+      "bytes": 6690,
+      "sha256": "e8a0fadb280c238bb485619c69ccf9d44bf76ba6f4364dc09805ff0462607e9f",
+      "source_sha256": "d060f4f8b54fbef478a0b1ae9ca0e7e964526dcabb9d15580e892b2c332af36c"
+    },
+    {
+      "runtime_path": "shorts/batch-20261121/sources/layout-snapshot.json",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/shorts/batch-20261121/sources/layout-snapshot.json",
+      "bytes": 1105,
+      "sha256": "9a6012f59d2a337ca9b1a33dd2020c2cb479ae1e775621de7d63c45443d8c0e4",
+      "source_sha256": "9a6012f59d2a337ca9b1a33dd2020c2cb479ae1e775621de7d63c45443d8c0e4"
+    },
+    {
+      "runtime_path": "sources/artworks.json",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/sources/artworks.json",
+      "bytes": 42790,
+      "sha256": "643589b6c67f6217bab1e96abf056f1c9860e7201b32f1620ff17978024d36f2",
+      "source_sha256": "880c73bfc2a42415047c2c14480c08355ef0c85f2230089b27fb783488469585"
+    },
+    {
+      "runtime_path": "sources/media-downloads.json",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/sources/media-downloads.json",
+      "bytes": 1578,
+      "sha256": "e1d37f1ebacb13f7484cce7c2ad4fb1fd6955904d69d5116d15cb589c50dec21",
+      "source_sha256": "e1d37f1ebacb13f7484cce7c2ad4fb1fd6955904d69d5116d15cb589c50dec21"
+    },
+    {
+      "runtime_path": "sources/selected-artworks.json",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/sources/selected-artworks.json",
+      "bytes": 39720,
+      "sha256": "58042076052bfa5ecfbbed43580a73e552e6945c38e780a0384d28ccbda73013",
+      "source_sha256": "5fba0356a716680afd4f720aba32a654ae7fea86564b83114b87f649b249e034"
+    },
+    {
+      "runtime_path": "v3/edit-plan.json",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/v3/edit-plan.json",
+      "bytes": 150087,
+      "sha256": "f4b42eb543087f4e89c64e52ff54c11f5aadcaa75395043674c574563855119f",
+      "source_sha256": "9448915974b67907bcc83286aa9abf01dac4d253f090634fde6ecf47058e089f"
+    },
+    {
+      "runtime_path": "v3/label-style.json",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/v3/label-style.json",
+      "bytes": 39165,
+      "sha256": "eabd9a8f58082cb65156ba0f037e570cc49a3fa84bf39b5e8cecfa0605f945c7",
+      "source_sha256": "eabd9a8f58082cb65156ba0f037e570cc49a3fa84bf39b5e8cecfa0605f945c7"
+    },
+    {
+      "runtime_path": "v3/scripts/build_review.py",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/v3/scripts/build_review.py",
+      "bytes": 11396,
+      "sha256": "9fab31befec9b11c6d6f1480345bc4ddd0764efce2042c4a9b446ae9d1be0129",
+      "source_sha256": "9fab31befec9b11c6d6f1480345bc4ddd0764efce2042c4a9b446ae9d1be0129"
+    },
+    {
+      "runtime_path": "v3/scripts/film.mjs",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/v3/scripts/film.mjs",
+      "bytes": 19846,
+      "sha256": "213d4ec2604b100c6053e394cdda78b03faafcbacfd5fb802da60d87917649de",
+      "source_sha256": "56695f7dc52d54b4c05df05c3027da793b5c02be79981136cb313b6e33ed9054"
+    },
+    {
+      "runtime_path": "v3/scripts/finish.py",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/v3/scripts/finish.py",
+      "bytes": 7877,
+      "sha256": "b5feca5569363060043f6f074c9f51be389c0658e6e21b340298bfb4447f7fae",
+      "source_sha256": "b5feca5569363060043f6f074c9f51be389c0658e6e21b340298bfb4447f7fae"
+    },
+    {
+      "runtime_path": "v3/scripts/package_youtube.py",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/v3/scripts/package_youtube.py",
+      "bytes": 27723,
+      "sha256": "f65a728ab3747d80ff775364cd4b5cf941e826f188c0dfb6c41d227153c6c08b",
+      "source_sha256": "0469277beed0475e1d210158f96db0cc34efc234a5c35567a5bfe3e64b4cd002"
+    },
+    {
+      "runtime_path": "v3/scripts/prepare_labels.py",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/v3/scripts/prepare_labels.py",
+      "bytes": 6992,
+      "sha256": "dfa0ea158098fb2e0ca981fd6d86f6a7c88fdc521db0287acdb5bb972e500824",
+      "source_sha256": "dfa0ea158098fb2e0ca981fd6d86f6a7c88fdc521db0287acdb5bb972e500824"
+    },
+    {
+      "runtime_path": "v3/scripts/verify.py",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/v3/scripts/verify.py",
+      "bytes": 5137,
+      "sha256": "526d4abc0212cbf85b388ddb718e652d4f73c51ea6e72f9c98b91f1ec3e62345",
+      "source_sha256": "526d4abc0212cbf85b388ddb718e652d4f73c51ea6e72f9c98b91f1ec3e62345"
+    },
+    {
+      "runtime_path": "v3/scripts/verify_youtube_package.mjs",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/v3/scripts/verify_youtube_package.mjs",
+      "bytes": 4294,
+      "sha256": "c7039a27d74e383a483f166ac398df735a2c615b061f8f7a48daba9116bc7391",
+      "source_sha256": "aa5a6c4cb95c31202b903990d5a893a3910145572476f33c982b7f4bae8acee9"
+    },
+    {
+      "runtime_path": "v4/checks/build-result.json",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/v4/checks/build-result.json",
+      "bytes": 1973,
+      "sha256": "5595b5bf5b1927a86f8b68a894080835f216ba237ff1806015ce21c49a8bb408",
+      "source_sha256": "133bef192ad00e233a56f05e4165089a9282f92f78931c83c5aa939caca017ab"
+    },
+    {
+      "runtime_path": "v4/checks/route-qa.json",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/v4/checks/route-qa.json",
+      "bytes": 22945,
+      "sha256": "9d8c0be29d72cb9e424b7e6265215e26981cc3627bdf46e31aa4968de43e7cb7",
+      "source_sha256": "f1e891af9ec868e6cd133e38fde30bb92876d76dddc188f83cf6117013bef331"
+    },
+    {
+      "runtime_path": "v4/checks/subtitle-audit.json",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/v4/checks/subtitle-audit.json",
+      "bytes": 1772,
+      "sha256": "a714dcccc949784cd0a03e07ae08da8bdad606c772ba4ea6ce845df6c11df36f",
+      "source_sha256": "a714dcccc949784cd0a03e07ae08da8bdad606c772ba4ea6ce845df6c11df36f"
+    },
+    {
+      "runtime_path": "v4/checks/verified.json",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/v4/checks/verified.json",
+      "bytes": 4798,
+      "sha256": "cd68d108af687ce836ac1326db33e2354f46fb27690aa1939bb657e7dd4bfd49",
+      "source_sha256": "cd68d108af687ce836ac1326db33e2354f46fb27690aa1939bb657e7dd4bfd49"
+    },
+    {
+      "runtime_path": "v4/checks/youtube-package-browser.json",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/v4/checks/youtube-package-browser.json",
+      "bytes": 2422,
+      "sha256": "1166eb54ce47d7c5944707e9b1b3757ebf698a0bd0a02bdc5848f2089fb9d008",
+      "source_sha256": "1166eb54ce47d7c5944707e9b1b3757ebf698a0bd0a02bdc5848f2089fb9d008"
+    },
+    {
+      "runtime_path": "v4/edit-plan.json",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/v4/edit-plan.json",
+      "bytes": 150710,
+      "sha256": "32b66195c9b07290200d97cbdf14652be63379411838f9082908e36389f39c0f",
+      "source_sha256": "4f48acf6d272ade33e3d28c673a4941708b1685beb4ba55146cb3b375bd551bd"
+    },
+    {
+      "runtime_path": "v4/label-style.json",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/v4/label-style.json",
+      "bytes": 35246,
+      "sha256": "1193415f03951a3cf75454196007edc212576bf5a102cd9f97072dc45e01966b",
+      "source_sha256": "1193415f03951a3cf75454196007edc212576bf5a102cd9f97072dc45e01966b"
+    },
+    {
+      "runtime_path": "v4/scripts/film.mjs",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/v4/scripts/film.mjs",
+      "bytes": 20054,
+      "sha256": "6b54b3d8280fa63eedb5f44028c3b8501f0b93a357149dce2d71a6f23d0781eb",
+      "source_sha256": "af3f3124f3b2eae0cf9ed6fef475f9fa5fcd8185862a18242050cd6e376ed7df"
+    },
+    {
+      "runtime_path": "v4/scripts/finish.py",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/v4/scripts/finish.py",
+      "bytes": 9145,
+      "sha256": "45506a55dc7b99c5d1d09df02d180e9ef25206a445a521a5c92ebabb1d5f982f",
+      "source_sha256": "45506a55dc7b99c5d1d09df02d180e9ef25206a445a521a5c92ebabb1d5f982f"
+    },
+    {
+      "runtime_path": "v4/scripts/package_youtube.py",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/v4/scripts/package_youtube.py",
+      "bytes": 29473,
+      "sha256": "343d503a6065545af474eaf3d98d9f7ac6e1187053e557ed2126bfcd817912ba",
+      "source_sha256": "078cf527ce80857dcf45d69ee3573f4e31567aa16c1155cdbabf7f89d4a9bcd5"
+    },
+    {
+      "runtime_path": "v4/scripts/prepare_assets.py",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/v4/scripts/prepare_assets.py",
+      "bytes": 7046,
+      "sha256": "8c84a73fb9a15f7372b6edc90cd96ce502efba529534bb68f0ac120e3cad99e2",
+      "source_sha256": "8c84a73fb9a15f7372b6edc90cd96ce502efba529534bb68f0ac120e3cad99e2"
+    },
+    {
+      "runtime_path": "v4/scripts/publish_desktop_package.py",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/v4/scripts/publish_desktop_package.py",
+      "bytes": 2498,
+      "sha256": "fe12a1b88fc54c7f3222c821e4d5a9ed7af38a878e622521e2fba724800e321c",
+      "source_sha256": "3123ac480df60b2506b1b487b225281a5cd6edd9902eda319028bb1a378dff68"
+    },
+    {
+      "runtime_path": "v4/scripts/verify.py",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/v4/scripts/verify.py",
+      "bytes": 7572,
+      "sha256": "6776990a2aea03b2360e329bade3d83c762900721eeebf85814612322a4ab2c3",
+      "source_sha256": "6776990a2aea03b2360e329bade3d83c762900721eeebf85814612322a4ab2c3"
+    },
+    {
+      "runtime_path": "v4/scripts/verify_youtube_package.mjs",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/v4/scripts/verify_youtube_package.mjs",
+      "bytes": 6553,
+      "sha256": "251801ed0875c3dd5cbdad417238706a17fdb4064ea0db464147a592406b23cb",
+      "source_sha256": "56b6273825427dd60cd624eb9e843e035a66dee682d53d43f51172de215a595a"
+    },
+    {
+      "runtime_path": "v4/sources/beethoven-pathetique-recording-provenance.json",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/v4/sources/beethoven-pathetique-recording-provenance.json",
+      "bytes": 1614,
+      "sha256": "4681a99cf7b8c4a7c5eb1caf4ea0359c5777f6c1ef72b3a065e2e84a292c86b9",
+      "source_sha256": "4681a99cf7b8c4a7c5eb1caf4ea0359c5777f6c1ef72b3a065e2e84a292c86b9"
+    },
+    {
+      "runtime_path": "v4/sources/credits.json",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/v4/sources/credits.json",
+      "bytes": 114903,
+      "sha256": "8ea4319f805fe1da1065a3c1dc428b0ab0d19003d72955a0f483547afde28a34",
+      "source_sha256": "40a4588598eddcb08e62c69fee4595b1534f55fa449a307ba340acec72145157"
+    },
+    {
+      "runtime_path": "v4/subtitles/cues.json",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/v4/subtitles/cues.json",
+      "bytes": 6128,
+      "sha256": "4c35c139eb587600599c10e77fa2c0170600f421d342a47f0aa36cf075c5614e",
+      "source_sha256": "4c35c139eb587600599c10e77fa2c0170600f421d342a47f0aa36cf075c5614e"
+    },
+    {
+      "runtime_path": "v4/subtitles/人间篇-贝多芬.en.srt",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/v4/subtitles/人间篇-贝多芬.en.srt",
+      "bytes": 1302,
+      "sha256": "1ff6e74a939e688bb706c75d72ce947203e7ff102201e2a12eab208709210c38",
+      "source_sha256": "1ff6e74a939e688bb706c75d72ce947203e7ff102201e2a12eab208709210c38"
+    },
+    {
+      "runtime_path": "v4/subtitles/人间篇-贝多芬.zh.srt",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/v4/subtitles/人间篇-贝多芬.zh.srt",
+      "bytes": 1295,
+      "sha256": "a769c67775dd9a932e6a4ef5f17f0c17ce7ae0caa2aa754cdcce487ca9dc8d0f",
+      "source_sha256": "a769c67775dd9a932e6a4ef5f17f0c17ce7ae0caa2aa754cdcce487ca9dc8d0f"
+    },
+    {
+      "runtime_path": "v4/subtitles/山、海、人间.en.srt",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/v4/subtitles/山、海、人间.en.srt",
+      "bytes": 2875,
+      "sha256": "4ac9b4281dd46330bc049d32f7088003c2953caac2a1e2521ab1b87c72a4b80e",
+      "source_sha256": "4ac9b4281dd46330bc049d32f7088003c2953caac2a1e2521ab1b87c72a4b80e"
+    },
+    {
+      "runtime_path": "v4/subtitles/山、海、人间.zh.srt",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/v4/subtitles/山、海、人间.zh.srt",
+      "bytes": 2848,
+      "sha256": "aaeb9e0f2556eb0497ef3b49ba99fb45523b636d60b77cb4565de7b67241f190",
+      "source_sha256": "aaeb9e0f2556eb0497ef3b49ba99fb45523b636d60b77cb4565de7b67241f190"
+    },
+    {
+      "runtime_path": "v4/subtitles/自然篇-肖邦.en.srt",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/v4/subtitles/自然篇-肖邦.en.srt",
+      "bytes": 1566,
+      "sha256": "938edd26a94fef0d3cef56dc11de97b0fe9fdc488cc3aa5d8913892b1b0a01b0",
+      "source_sha256": "938edd26a94fef0d3cef56dc11de97b0fe9fdc488cc3aa5d8913892b1b0a01b0"
+    },
+    {
+      "runtime_path": "v4/subtitles/自然篇-肖邦.zh.srt",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/v4/subtitles/自然篇-肖邦.zh.srt",
+      "bytes": 1546,
+      "sha256": "1a08e2b6c954cf010b0e25008d92658bb106992e8b8139d4cdce7938f15d3ab3",
+      "source_sha256": "1a08e2b6c954cf010b0e25008d92658bb106992e8b8139d4cdce7938f15d3ab3"
+    },
+    {
+      "runtime_path": "sources/credits.json",
+      "snapshot": "scripts/romanticism-music-gallery/snapshot/sources/credits.json",
+      "bytes": 114903,
+      "sha256": "8ea4319f805fe1da1065a3c1dc428b0ab0d19003d72955a0f483547afde28a34",
+      "source_sha256": "40a4588598eddcb08e62c69fee4595b1534f55fa449a307ba340acec72145157",
+      "source_runtime_path": "v4/sources/credits.json",
+      "note": "Use corrected final recording provenance; supersedes the historical root credit file."
+    }
+  ],
+  "skill_files": [
+    {
+      "file": ".agents/skills/upload-youtube-private/SKILL.md",
+      "sha256": "e4e15cb19b6a31ab2e2540b98e100b1d92b991430d8928f52d472533113c8c20"
+    },
+    {
+      "file": ".agents/skills/upload-youtube-private/references/studio-workflow.md",
+      "sha256": "7ada7f50009d1e9a2b5154cf8c123f586f970c7e93e49b6fbf522e6881f98298"
+    },
+    {
+      "file": ".agents/skills/upload-youtube-private/agents/openai.yaml",
+      "sha256": "2e762a7fff0f587dfe6bb0cde9262b52e9aaf212080c30c84c0960a813ec7974"
+    },
+    {
+      "file": ".agents/skills/upload-youtube-private/scripts/prepare_upload.py",
+      "sha256": "2049884210249bb6285a8406d8ea0335c72b75c4d11113f89cb9e1a7e0992c38"
+    }
+  ],
+  "media_in_git": false,
+  "private_upload_ids_in_git": false,
+  "native_room_source_committed": false
+}
