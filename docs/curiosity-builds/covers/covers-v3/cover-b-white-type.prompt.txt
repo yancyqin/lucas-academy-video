@@ -1,0 +1,13 @@
+Make a restrained typography-only revision to the supplied cover B.
+
+The owner rejected the white-and-yellow headline as garish and template-like. CHANGE ONLY THE HEADLINE TREATMENT AND THE DARKNESS IMMEDIATELY BEHIND IT. Preserve the entire half-sketch / half-color gallery illustration, its exact footprint and perspective, the blurred real blue roller-coaster-room backdrop, and the existing layout.
+
+Headline exact wording and line breaks:
+"FROM IDEAS"
+"TO WORLDS"
+
+Set BOTH lines in the SAME clean neutral WHITE (#FAFAFA), same bold editorial serif family and large size as the existing headline. Keep flat matte lettering, precise edges and balanced spacing. Both lines must have equal typographic treatment. Remove ALL yellow or gold from the letters. No highlighted second line. No gradient fill, glow, bevel, metallic treatment, outlines, strokes or drop shadows. The result should feel like careful typography on an architecture magazine cover: simple, confident and quietly designed.
+
+Create the necessary contrast by gently deepening the existing navy background behind the headline, integrated naturally with the blurred backdrop, with NO visible box, panel or banner. Do not make the rest of the image brighter or more saturated.
+
+Keep the foreground gallery's original artwork colors, including its natural warm painting details and interior light; the requested color change is to the LETTERING, not the artwork. Preserve the gallery linework and painting details. Keep the canvas size, crop, 16:9 landscape composition and safe margins unchanged. No new words, labels, footer, logos or objects.

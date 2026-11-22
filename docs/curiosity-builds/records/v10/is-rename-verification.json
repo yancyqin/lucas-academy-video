@@ -1,0 +1,17 @@
+{
+  "name": "Balanced Chess",
+  "repo": "/Users/yqin/repo/playground/inception-space-ui",
+  "paths": [
+    "chess/index.html",
+    "chess/README.md",
+    "src/inception/world/model/museum.js",
+    "tests/fixtures/museum-map-ops.txt"
+  ],
+  "check": "npm run check",
+  "exit_code": 0,
+  "test_pass": 1898,
+  "test_fail": 0,
+  "build_passed": true,
+  "demo_check_passed": true,
+  "published": false
+}

@@ -1,0 +1,9 @@
+{
+  "request": "白黄这个配色太AI 太丑了！",
+  "revision": "B-v3",
+  "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-v2/02-ideas-to-worlds-coaster-v2.png",
+  "source_sha256": "262e79f73a54c424fec50e981d83ac6e6c7b356777ce62d9cb3c8c595bfc86cd",
+  "change": "Both headline lines in the same flat white, without outline, drop shadow, glow or highlighted words. Contrast comes from deepening the navy backdrop behind the type.",
+  "preserve": "Cover B gallery illustration, half-line and half-color treatment, blurred coaster room and exact headline wording.",
+  "method": "Built-in ImageGen edit"
+}

@@ -1,0 +1,14 @@
+{
+  "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v7/captures/sweet-home-v3-preview.mp4",
+  "output": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v8/captures/sweet-home-v3-model-only.mp4",
+  "crop": {
+    "x": 260,
+    "y": 560,
+    "width": 1480,
+    "height": 520
+  },
+  "only_3d_model": true,
+  "no_2d_plan_or_application_controls": true,
+  "same_owner_selected_camera": true,
+  "frames": 105
+}

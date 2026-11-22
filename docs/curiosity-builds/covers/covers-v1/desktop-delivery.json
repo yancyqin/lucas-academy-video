@@ -1,0 +1,31 @@
+{
+  "folder": "/Users/yqin/Desktop/Curiosity Builds - Final/封面与文案",
+  "outputs": [
+    {
+      "file": "01-通往新世界.png",
+      "bytes": 1970142,
+      "sha256": "1708e365dd6e199a9a7e56e0997b9a78c907b406c9fb1739d5bca8173a25f08c",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "file": "02-从草图到世界.png",
+      "bytes": 2876097,
+      "sha256": "4909130f9d947291ddf9d2964ce034466e01f2b49c8ebbddec1e3fcdb0808778",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "file": "03-建造玩耍探索.png",
+      "bytes": 2068347,
+      "sha256": "bc5d649eb99fc5fa4b8bba486f979803fa646aa8ce0ad7176233c7c97163bda0",
+      "width": 1672,
+      "height": 941
+    }
+  ],
+  "method": "Built-in ImageGen",
+  "recommended": "01-doorway",
+  "description_file": "/Users/yqin/Desktop/Curiosity Builds - Final/封面与文案/标题与简介.txt",
+  "prompts_file": "/Users/yqin/Desktop/Curiosity Builds - Final/封面与文案/封面生成提示词.json",
+  "film_changed": false
+}

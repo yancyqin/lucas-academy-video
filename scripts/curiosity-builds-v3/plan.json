@@ -1,0 +1,324 @@
+{
+  "title": "What Can Curiosity Build?",
+  "language": "en",
+  "narration": false,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "fps": 30,
+  "projects": [
+    {
+      "id": "chess",
+      "name": "Chess · The Rules Lab",
+      "question": "What If Chess Had Different Rules?",
+      "prompt": "Build chess worlds with comeback points and falling rocks.",
+      "steps": [
+        "Board",
+        "World",
+        "Rules"
+      ],
+      "url": "is.lucasacademy.org/chess",
+      "clips": [
+        {
+          "file": "chess-lobby",
+          "seconds": 4,
+          "caption": "Choose a world. Take a seat."
+        },
+        {
+          "file": "chess-play",
+          "seconds": 10,
+          "caption": "Your move."
+        },
+        {
+          "file": "chess-comeback-play",
+          "seconds": 9,
+          "caption": "COMEBACK · Fall behind. Earn points. Bring a piece back.",
+          "rule": "COMEBACK",
+          "detail": [
+            "More than 5 points behind?",
+            "Earn points to revive fallen pieces.",
+            "Each piece gets one comeback."
+          ]
+        },
+        {
+          "file": "chess-rockfall-play",
+          "seconds": 8,
+          "caption": "ROCKFALL · Rocks can strike the leading side.",
+          "rule": "ROCKFALL",
+          "detail": [
+            "Rocks may hit the leading side.",
+            "Kings and queens stay safe.",
+            "No rocks while the score is tied."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bible",
+      "name": "Bible Sequence",
+      "question": "Can We Build a Game with the Bible?",
+      "prompt": "Read a verse. Hide the words. Rebuild it in order.",
+      "steps": [
+        "Read",
+        "Remember",
+        "Rebuild"
+      ],
+      "url": "bible.lucasacademy.org",
+      "clips": [
+        {
+          "file": "bible-sequence",
+          "seconds": 24,
+          "caption": "Read. Remember. Restore the verse."
+        }
+      ]
+    },
+    {
+      "id": "vangogh",
+      "name": "Van Gogh House",
+      "question": "Can We Decorate a Painted Room Together?",
+      "prompt": "Turn our paintings into a world we can walk inside.",
+      "steps": [
+        "Paintings",
+        "Living surfaces",
+        "A room to explore"
+      ],
+      "url": "is.lucasacademy.org/tour?start=van-gogh",
+      "clips": [
+        {
+          "file": "vangogh-room",
+          "seconds": 20,
+          "caption": "Children’s paintings become the world around you."
+        }
+      ]
+    },
+    {
+      "id": "journey",
+      "name": "Journey of Art",
+      "question": "Can We Design Your Art Gallery Together?",
+      "prompt": "Bring our art projects together in a gallery we can explore.",
+      "steps": [
+        "Studies",
+        "Series",
+        "A shared gallery"
+      ],
+      "url": "is.lucasacademy.org/tour?start=journey-of-art",
+      "clips": [
+        {
+          "file": "journey-original-walk",
+          "seconds": 20,
+          "caption": "Walk through a gallery of our own making.",
+          "start": 23.5
+        }
+      ]
+    },
+    {
+      "id": "sky",
+      "name": "The Sky",
+      "question": "Can We Discover the Universe in a Living Sky?",
+      "prompt": "Build a floating room with living water and endless stars.",
+      "steps": [
+        "Water",
+        "Starlight",
+        "An open world"
+      ],
+      "url": "is.lucasacademy.org",
+      "clips": [
+        {
+          "file": "sky-transition",
+          "seconds": 3,
+          "caption": "A new world is opening."
+        },
+        {
+          "file": "sky-orbit",
+          "seconds": 18,
+          "caption": "Float through a living sky."
+        }
+      ]
+    },
+    {
+      "id": "chameleon",
+      "name": "Painterly Chameleon",
+      "question": "Can We Create a Hide-and-Seek Game?",
+      "prompt": "Paint a disguise. Hide in the artwork. Challenge a friend.",
+      "steps": [
+        "Paint",
+        "Camouflage",
+        "Hide and seek"
+      ],
+      "url": "pc.lucasacademy.org",
+      "clips": [
+        {
+          "file": "chameleon-paint",
+          "seconds": 6.5,
+          "caption": "Paint a disguise that belongs in the picture.",
+          "start": 4
+        },
+        {
+          "file": "chameleon-seek",
+          "seconds": 5.5,
+          "caption": "Then look closely. What is hiding here?",
+          "start": 2
+        }
+      ]
+    },
+    {
+      "id": "cube",
+      "name": "The Cube",
+      "question": "Can We Build an 11×11 Cube?",
+      "prompt": "Build cubes of any size. Let me learn each move.",
+      "steps": [
+        "Pieces",
+        "Layers",
+        "A working puzzle"
+      ],
+      "url": "is.lucasacademy.org/cube",
+      "clips": [
+        {
+          "file": "cube-play",
+          "seconds": 10,
+          "caption": "Turn a layer. Test a pattern."
+        },
+        {
+          "file": "cube-solve",
+          "seconds": 10,
+          "caption": "From 2 × 2 to 11 × 11. Follow a solution."
+        }
+      ]
+    },
+    {
+      "id": "coder",
+      "name": "Coder Arena",
+      "question": "Can We Compete in Coder Arena?",
+      "prompt": "Write a bot. Change its strategy. Let it play.",
+      "steps": [
+        "A rule",
+        "A bot",
+        "An arena"
+      ],
+      "url": "snake-lab-coder.lucasacademy.org",
+      "clips": [
+        {
+          "file": "coder-arena",
+          "start": 8,
+          "seconds": 10,
+          "caption": "CODER ARENA · Test your bot against a rival."
+        },
+        {
+          "file": "monthly-ranking",
+          "start": 5,
+          "seconds": 10,
+          "caption": "MONTHLY RANKING · An eight-bot battle running on the server."
+        }
+      ]
+    },
+    {
+      "id": "roller",
+      "name": "Formula Roller Coasters",
+      "question": "Can We Build a Ride from Formulas?",
+      "prompt": "Turn a formula into a roller coaster with a spiraling funnel.",
+      "steps": [
+        "Sketch",
+        "Equation",
+        "Rideable ribbon"
+      ],
+      "url": "is.lucasacademy.org/tour?start=manifold",
+      "clips": [
+        {
+          "file": "roller-entry",
+          "seconds": 2.6,
+          "caption": "Walk in. Look around."
+        },
+        {
+          "file": "roller-line",
+          "seconds": 2,
+          "caption": "A line."
+        },
+        {
+          "file": "roller-parabola",
+          "seconds": 3,
+          "caption": "A parabola."
+        },
+        {
+          "file": "roller-overview",
+          "seconds": 2,
+          "caption": "A spiraling funnel."
+        },
+        {
+          "file": "roller-funnel",
+          "seconds": 7.4,
+          "caption": "Follow the curve."
+        },
+        {
+          "file": "roller-mobius",
+          "seconds": 12,
+          "caption": "A Möbius strip. One surface. Keep going."
+        }
+      ]
+    }
+  ],
+  "ending_seconds": 18,
+  "ending_questions": [
+    "What would you like to build?",
+    "Where would you like to compete?",
+    "What are you curious about?",
+    "Where would you like to make a difference?",
+    "Where will you start?"
+  ],
+  "revision": 3,
+  "order_rationale": "A measured Bach opening, lyrical Chopin art rooms, rising Debussy sky, and a continuous Mozart finale from play to competition to the roller coaster.",
+  "music_groups": [
+    {
+      "key": "bach",
+      "projects": [
+        "chess",
+        "bible"
+      ],
+      "source_start": 0,
+      "target_lufs": -25,
+      "label": "Quiet concentration"
+    },
+    {
+      "key": "chopin",
+      "projects": [
+        "vangogh",
+        "journey"
+      ],
+      "source_start": 24,
+      "target_lufs": -24,
+      "label": "Warmth and discovery"
+    },
+    {
+      "key": "debussy",
+      "projects": [
+        "sky"
+      ],
+      "source_start": 142,
+      "target_lufs": -23.5,
+      "label": "Opening into motion"
+    },
+    {
+      "key": "mozart",
+      "projects": [
+        "chameleon",
+        "cube",
+        "coder"
+      ],
+      "include_next_intro_seconds": 7.2,
+      "source_start": 89.2,
+      "target_lufs": -20,
+      "label": "From playful motion to competition"
+    },
+    {
+      "key": "mozart",
+      "projects": [
+        "roller"
+      ],
+      "skip_first_seconds": 7.2,
+      "through_ending": true,
+      "end_at_source_end": true,
+      "target_lufs": -18,
+      "label": "The actual ride and the orchestral finale"
+    }
+  ]
+}

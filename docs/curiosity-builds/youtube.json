@@ -1,0 +1,91 @@
+{
+  "layoutSource": "README.md: YouTube tags",
+  "tagSource": "scripts/youtube_tags.py",
+  "mainLanguage": "en",
+  "oneVideo": true,
+  "seconds": 283.8,
+  "sourceMovie": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/delivery/curiosity-builds.en.no-voice.mp4",
+  "sourceMovieSha256": "08a4eb9c5f54e1d3892e538dab74dd8e1f16e470da92d5726e3f6bd7e8551198",
+  "cover": {
+    "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-v6/02-ideas-to-worlds-neutral-white-v6.png",
+    "export": "/Users/yqin/Desktop/Curiosity Builds - Final/YouTube/youtube-cover.en.jpg",
+    "width": 1280,
+    "height": 720,
+    "bytes": 370064,
+    "sha256": "eb801b50c394edf0712d59c0618f10b760813c809af303913e545b7f67038f09",
+    "headline": "FROM IDEAS / TO WORLDS",
+    "headlineOwnerApproved": "FROM IDEAS / TO WORLDS"
+  },
+  "covers": {
+    "en": {
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-v6/02-ideas-to-worlds-neutral-white-v6.png",
+      "export": "/Users/yqin/Desktop/Curiosity Builds - Final/YouTube/youtube-cover.en.jpg",
+      "width": 1280,
+      "height": 720,
+      "bytes": 370064,
+      "sha256": "eb801b50c394edf0712d59c0618f10b760813c809af303913e545b7f67038f09",
+      "headline": "FROM IDEAS / TO WORLDS"
+    },
+    "zh": {
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-zh-v1/02-ideas-to-worlds-zh-v1.png",
+      "export": "/Users/yqin/Desktop/Curiosity Builds - Final/YouTube/youtube-cover.zh.jpg",
+      "width": 1280,
+      "height": 720,
+      "bytes": 369831,
+      "sha256": "1c6e4fab21dd527f320a06a280b08bb9df6c2a3c60a72955ca95000c7b02059e",
+      "headline": "从想法 / 到世界"
+    }
+  },
+  "metadata": {
+    "en": {
+      "title": "What Can Curiosity Build? | 9 Projects to Explore",
+      "description": "A chess game with comeback rules. A ride built from formulas. A gallery made from our art.\n\nExplore nine Lucas Academy projects, from a simple idea and a glimpse of the building process to something we can play, explore, or create with—from art and living skies to puzzles, coding competitions, and Bible games.\n\nWhat are you curious about?\nWhat will you build?\nWhere will you make a difference?\n\nExplore the projects\nInception Space: https://is.lucasacademy.org\nBible Sequence: https://bible.lucasacademy.org\nPainterly Chameleon: https://pc.lucasacademy.org\nLucas Academy: https://lucasacademy.org\n\nChapters\n0:00 Balanced Chess\n0:38 Bible Sequence / Next Word\n1:09 Van Gogh House\n1:36 Journey of Art\n2:03 The Sky / Cosmic Cliffs\n2:36 Painterly Chameleon / Hide-and-Seek\n2:55 The Cube / 7×7 and 11×11\n3:22 Coder Arena / Monthly Ranking\n3:49 A Ride from Formulas\n4:25 What are you curious about?\n\nAbout the film\nNo narration; English onscreen text, with optional Chinese label subtitles.\nDemos: recordings of the actual projects. Monthly Ranking uses an archived server battle.\nBuild sequences are concept visualizations. Gallery/cube concept sketches and the thumbnail were made with ImageGen.\nSky image: NASA/ESA/CSA/STScI — Cosmic Cliffs.\nBy Lucas Academy Team\n\nMusic and recording credits\n1. Balanced Chess / opening: Chopin — Prelude in D-flat major, Op. 28 No. 15, Raindrop. Jeannette Fang. Musopen CC0 1.0.\nhttps://archive.org/details/musopen-chopin-complete-works-flac\n\n2. Bible Sequence: Debussy — Clair de lune. Laurens Goedhart, piano, 2011. Creative Commons Attribution 3.0.\nhttps://commons.wikimedia.org/wiki/File:Clair_de_lune_(Claude_Debussy)_Suite_bergamasque.ogg\nhttps://creativecommons.org/licenses/by/3.0/\nChanges: excerpt, level adjustment, and fades.\n\n3. Van Gogh / Journey of Art: Chopin — Nocturne in E-flat major, Op. 9 No. 2. Musopen CC0 recording, same recording as the earlier Lucas Academy film.\nhttps://commons.wikimedia.org/wiki/File:Chopin_-_Nocturne_No._2_in_E-flat_major,_Op._9_No._2_(Frank_Levy).flac\n\n4. The Sky: Bach — Air from Orchestral Suite No. 3, BWV 1068, Air on the G String. Air Force Strings, United States Air Force Band, 2000. Public-domain recording.\nhttps://commons.wikimedia.org/wiki/File:Air_-_Air_Force_Strings_-_United_States_Air_Force_Band.mp3\n\n5. Hide-and-Seek / Cube / Coder Arena / roller coaster / ending: Mozart — The Marriage of Figaro, K. 492: Overture. Musopen Symphony, 2012. Public-domain recording.\nhttps://commons.wikimedia.org/wiki/File:Mozart_-_Le_nozze_di_Figaro,_K492_-_Overture_(Musopen_Symphony).flac\n\n#education #parenting #art #arthistory #stem #bilingual #bilingualchildren #lucas_academy #curiosity #creativeprojects #projectbasedlearning #inceptionspace #balancedchess #11x11cube #artgallery #coderarena #biblesequence",
+      "tags": "#curiosity #creativeprojects #projectbasedlearning #inceptionspace #balancedchess #11x11cube #artgallery #coderarena #biblesequence #education #parenting #art #arthistory #stem #bilingual #bilingualchildren #lucas_academy",
+      "hashtagLine": "#education #parenting #art #arthistory #stem #bilingual #bilingualchildren #lucas_academy #curiosity #creativeprojects #projectbasedlearning #inceptionspace #balancedchess #11x11cube #artgallery #coderarena #biblesequence",
+      "chapterCount": 10,
+      "chapterStarts": [
+        0.0,
+        38.2,
+        69.4,
+        96.6,
+        123.8,
+        156.0,
+        175.2,
+        202.4,
+        229.6,
+        265.8
+      ],
+      "uploadSettings": "Main video / 主视频：../Curiosity Builds.mp4\nPicture / 画面：1920×1080，30 fps，4:43.8，16:9\nVideo language / 视频语言：English（英文画面文字，无配音）\nAudio / 音轨：仅古典配乐，无旁白；没有另一条语言配音\nCaptions / 字幕：../Curiosity Builds.zh-CN.srt（简体中文，翻译画面标题与标签）\nThumbnail / 封面：youtube-cover.en.jpg（本文件夹，1280×720；英文 B 方案）\nLocalized covers / 语言封面：youtube-cover.en.jpg（英文）；youtube-cover.zh.jpg（中文）\nEnglish metadata / 英文标题简介：youtube-description.en.txt（主语言）\nChinese metadata / 中文标题简介：youtube-description.zh.txt（同一影片的可选中文本地化）\nAI assets / 生成素材：概念草图与封面由 ImageGen 制作；Demo为项目录像\nCategory / 类别：Education\nAudience and visibility / 观众与公开范围：由你在上传时决定",
+      "descriptionCharacters": 2794,
+      "tagCharacters": 221,
+      "file": "/Users/yqin/Desktop/Curiosity Builds - Final/YouTube/youtube-description.en.txt",
+      "sha256": "e356b1399424f02369857448bb1ae2271515e9ff162c614c7edde42a0421a928",
+      "sourceMovieSha256": "08a4eb9c5f54e1d3892e538dab74dd8e1f16e470da92d5726e3f6bd7e8551198"
+    },
+    "zh": {
+      "title": "好奇心能创造什么？｜9个创作项目",
+      "description": "有逆转规则的国际象棋，用公式建造的过山车，装着我们作品的艺术画廊。\n\n跟着九个 Lucas Academy 创作项目，从一个简单想法、几笔建造示意，走进可以玩、可以探索、可以继续创作的作品：绘画与天空，魔方与编程竞赛，还有经文游戏。\n\n你对什么感到好奇？\n你想创造什么？\n你想在哪里带来改变？\n\n探索项目\nInception Space：https://is.lucasacademy.org\nBible Sequence：https://bible.lucasacademy.org\nPainterly Chameleon：https://pc.lucasacademy.org\nLucas Academy：https://lucasacademy.org\n\n章节\n0:00 Balanced Chess：逆转与落石\n0:38 Bible Sequence：经文复原与下一个词\n1:09 梵高房间\n1:36 Journey of Art 艺术画廊\n2:03 The Sky：宇宙中的流水房间\n2:36 Painterly Chameleon：画作里的捉迷藏\n2:55 魔方：7×7与11×11\n3:22 Coder Arena与月度排行\n3:49 用公式建造过山车\n4:25 你对什么感到好奇？\n\n画面说明\n英文画面文字，无配音；可加载翻译标题与标签的中文字幕。\nDemo为实际项目录像，月度排行使用历史服务器对战录像。\n建造过程为概念示意；画廊、魔方概念草图及封面使用 ImageGen 制作。\n天空图像：NASA/ESA/CSA/STScI — Cosmic Cliffs。\n作者：Lucas Academy Team\n\n配乐与录音来源\n1. Balanced Chess / opening: Chopin — Prelude in D-flat major, Op. 28 No. 15, Raindrop. Jeannette Fang. Musopen CC0 1.0.\nhttps://archive.org/details/musopen-chopin-complete-works-flac\n\n2. Bible Sequence: Debussy — Clair de lune. Laurens Goedhart, piano, 2011. Creative Commons Attribution 3.0.\nhttps://commons.wikimedia.org/wiki/File:Clair_de_lune_(Claude_Debussy)_Suite_bergamasque.ogg\nhttps://creativecommons.org/licenses/by/3.0/\nChanges: excerpt, level adjustment, and fades.\n\n3. Van Gogh / Journey of Art: Chopin — Nocturne in E-flat major, Op. 9 No. 2. Musopen CC0 recording, same recording as the earlier Lucas Academy film.\nhttps://commons.wikimedia.org/wiki/File:Chopin_-_Nocturne_No._2_in_E-flat_major,_Op._9_No._2_(Frank_Levy).flac\n\n4. The Sky: Bach — Air from Orchestral Suite No. 3, BWV 1068, Air on the G String. Air Force Strings, United States Air Force Band, 2000. Public-domain recording.\nhttps://commons.wikimedia.org/wiki/File:Air_-_Air_Force_Strings_-_United_States_Air_Force_Band.mp3\n\n5. Hide-and-Seek / Cube / Coder Arena / roller coaster / ending: Mozart — The Marriage of Figaro, K. 492: Overture. Musopen Symphony, 2012. Public-domain recording.\nhttps://commons.wikimedia.org/wiki/File:Mozart_-_Le_nozze_di_Figaro,_K492_-_Overture_(Musopen_Symphony).flac\n\n#education #parenting #art #arthistory #stem #bilingual #bilingualchildren #lucas_academy #好奇心 #创作项目 #项目式学习 #inceptionspace #balancedchess #11x11cube #artgallery #coderarena #biblesequence",
+      "tags": "#好奇心 #创作项目 #项目式学习 #inceptionspace #balancedchess #11x11cube #artgallery #coderarena #biblesequence #education #parenting #art #arthistory #stem #bilingual #bilingualchildren #lucas_academy",
+      "hashtagLine": "#education #parenting #art #arthistory #stem #bilingual #bilingualchildren #lucas_academy #好奇心 #创作项目 #项目式学习 #inceptionspace #balancedchess #11x11cube #artgallery #coderarena #biblesequence",
+      "chapterCount": 10,
+      "chapterStarts": [
+        0.0,
+        38.2,
+        69.4,
+        96.6,
+        123.8,
+        156.0,
+        175.2,
+        202.4,
+        229.6,
+        265.8
+      ],
+      "uploadSettings": "Main video / 主视频：../Curiosity Builds.mp4\nPicture / 画面：1920×1080，30 fps，4:43.8，16:9\nVideo language / 视频语言：English（英文画面文字，无配音）\nAudio / 音轨：仅古典配乐，无旁白；没有另一条语言配音\nCaptions / 字幕：../Curiosity Builds.zh-CN.srt（简体中文，翻译画面标题与标签）\nThumbnail / 封面：youtube-cover.zh.jpg（本文件夹，1280×720；中文 B 方案）\nLocalized covers / 语言封面：youtube-cover.en.jpg（英文）；youtube-cover.zh.jpg（中文）\nEnglish metadata / 英文标题简介：youtube-description.en.txt（主语言）\nChinese metadata / 中文标题简介：youtube-description.zh.txt（同一影片的可选中文本地化）\nAI assets / 生成素材：概念草图与封面由 ImageGen 制作；Demo为项目录像\nCategory / 类别：Education\nAudience and visibility / 观众与公开范围：由你在上传时决定",
+      "descriptionCharacters": 2191,
+      "tagCharacters": 188,
+      "file": "/Users/yqin/Desktop/Curiosity Builds - Final/YouTube/youtube-description.zh.txt",
+      "sha256": "b03c12bb32cd7bbd1ebf6faab6efdeff5e5372aeb44927c9089f44898bb6106a",
+      "sourceMovieSha256": "08a4eb9c5f54e1d3892e538dab74dd8e1f16e470da92d5726e3f6bd7e8551198"
+    }
+  }
+}

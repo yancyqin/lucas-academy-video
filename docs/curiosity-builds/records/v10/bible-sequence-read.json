@@ -1,0 +1,25 @@
+{
+  "url": "https://bible.lucasacademy.org/",
+  "viewport": [
+    1280,
+    720
+  ],
+  "post_capture_zoom": false,
+  "box": {
+    "x": 100,
+    "y": 8,
+    "width": 1080,
+    "height": 702
+  },
+  "visible": true,
+  "controls": [
+    {
+      "text": "Start recall",
+      "x": 933.7291870117188,
+      "y": 477.19793701171875,
+      "w": 196.27084350585938,
+      "h": 58,
+      "visible": true
+    }
+  ]
+}

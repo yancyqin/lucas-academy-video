@@ -1,0 +1,99 @@
+{
+  "name": "roller-mobius",
+  "url": "http://127.0.0.1:5188/tour?start=manifold&debug=&manual=1&hud=0&fullscreen=0",
+  "fps": 30,
+  "seconds": 6,
+  "mode": "Actual project renderer, first-person, native manual frame clock; scripted camera input",
+  "start": {
+    "room": "the-manifold",
+    "x": 973.795,
+    "z": 894.581,
+    "transitChamber": true,
+    "transit": null,
+    "worldSeconds": 84.601,
+    "approachStart": null,
+    "loaded": null,
+    "bodyY": 588.898,
+    "yaw": 3.024,
+    "pitch": 0,
+    "floorY": 540,
+    "feetAboveFloor": 48.558,
+    "lowestBoneAboveFloor": null,
+    "headAboveFloor": 48.864,
+    "cameraAboveFloor": 48.898,
+    "floor": {
+      "mode": "painting",
+      "painted": false,
+      "glass": false,
+      "alive": 0,
+      "aliveVisible": 0,
+      "aliveAlpha": [],
+      "aliveScale": []
+    },
+    "doors": [
+      {
+        "id": "the-manifold-return",
+        "phase": "closed",
+        "progress": 0
+      }
+    ],
+    "connector": null,
+    "story": null,
+    "lab": null,
+    "storyRoom": null,
+    "chess": {
+      "open": false,
+      "pieceView": null,
+      "table": null,
+      "me": "local",
+      "rockFalling": false
+    },
+    "frameFailure": null
+  },
+  "end": {
+    "room": "the-manifold",
+    "x": 945.247,
+    "z": 871.831,
+    "transitChamber": true,
+    "transit": null,
+    "worldSeconds": 90.601,
+    "approachStart": null,
+    "loaded": null,
+    "bodyY": 587.474,
+    "yaw": -1.248,
+    "pitch": 0,
+    "floorY": 540,
+    "feetAboveFloor": 47.436,
+    "lowestBoneAboveFloor": null,
+    "headAboveFloor": 47.733,
+    "cameraAboveFloor": 47.474,
+    "floor": {
+      "mode": "painting",
+      "painted": false,
+      "glass": false,
+      "alive": 0,
+      "aliveVisible": 0,
+      "aliveAlpha": [],
+      "aliveScale": []
+    },
+    "doors": [
+      {
+        "id": "the-manifold-return",
+        "phase": "closed",
+        "progress": 0
+      }
+    ],
+    "connector": null,
+    "story": null,
+    "lab": null,
+    "storyRoom": null,
+    "chess": {
+      "open": false,
+      "pieceView": null,
+      "table": null,
+      "me": "local",
+      "rockFalling": false
+    },
+    "frameFailure": null
+  }
+}

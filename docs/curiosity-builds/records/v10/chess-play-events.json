@@ -1,0 +1,83 @@
+{
+  "events": [
+    {
+      "t": 0.26666666666666666,
+      "action": "e2e4",
+      "before": 0
+    },
+    {
+      "t": 1.6666666666666667,
+      "action": "g1f3",
+      "before": 2
+    },
+    {
+      "t": 3.066666666666667,
+      "action": "f1c4",
+      "before": 4
+    },
+    {
+      "t": 4.466666666666667,
+      "action": "d2d4",
+      "before": 6
+    },
+    {
+      "t": 5.866666666666666,
+      "action": "b1c3",
+      "before": 8
+    },
+    {
+      "t": 7.266666666666667,
+      "action": "a1b1",
+      "before": 10
+    },
+    {
+      "t": 8.666666666666666,
+      "action": "b1b2",
+      "before": 12
+    }
+  ],
+  "table": {
+    "v": 1,
+    "serial": 16,
+    "phase": "playing",
+    "tc": 0,
+    "rules": "standard",
+    "line": 5,
+    "seats": [
+      {
+        "kind": "player",
+        "id": "local",
+        "away": null
+      },
+      {
+        "kind": "bot",
+        "level": 1,
+        "owner": "local"
+      }
+    ],
+    "actions": [
+      "e2e4",
+      "b8c6",
+      "g1f3",
+      "a7a6",
+      "f1c4",
+      "e7e5",
+      "d2d4",
+      "e5d4",
+      "b1c3",
+      "d4c3",
+      "a1b1",
+      "c3b2",
+      "b1b2",
+      "f8a3"
+    ],
+    "clock": null,
+    "result": null,
+    "drawOffer": null,
+    "ask": null,
+    "rematch": [
+      false,
+      false
+    ]
+  }
+}

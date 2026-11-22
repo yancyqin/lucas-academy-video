@@ -1,0 +1,16 @@
+[
+  {
+    "capture": "sky-transition.mp4",
+    "source": "/Users/yqin/repo/playground/lucas-academy-video-data/whole-person-01/public/footage/transit-chamber.mp4",
+    "description": "Actual Inception Space Space Travel / transit chamber, avatar hidden; original project manual clock.",
+    "sha256": "0a207c7eef8b16fff2766704be5ddc71037caabf559d5624797165482a7e7c10",
+    "source_sha256": "0a207c7eef8b16fff2766704be5ddc71037caabf559d5624797165482a7e7c10"
+  },
+  {
+    "capture": "monthly-ranking.mp4",
+    "source": "/Users/yqin/repo/playground/lucas-academy-video-data/whole-person-01/public/footage/snake-ranking.mp4",
+    "description": "Actual historical eight-bot server battle; no claim about current monthly standings.",
+    "sha256": "4750d959becfed10fcce4a10f1d5ad508de1fcdadecd394d7e31b0f6ca81d8d8",
+    "source_sha256": "4750d959becfed10fcce4a10f1d5ad508de1fcdadecd394d7e31b0f6ca81d8d8"
+  }
+]

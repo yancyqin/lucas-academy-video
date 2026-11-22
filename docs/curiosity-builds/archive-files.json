@@ -1,0 +1,2468 @@
+{
+  "schema": "curiosity-builds-text-archive/1",
+  "archive_date": "2026-11-21",
+  "final_revision": 10,
+  "source_repository_head": "28c9a667eeb8bcbeb474d98a3cd80d16da05d5d1",
+  "pr_base_head": "4648984254febd8dfb8bb004ad61118cf1ab1f64",
+  "source_control_note": "Production source files were untracked in the source checkout. This archive is their first Git preservation; the recorded production HEAD alone does not contain them.",
+  "media_files_archived": 0,
+  "file_count": 352,
+  "payload_bytes_excluding_manifest": 1560435,
+  "original_source_backup_files_compared": 11,
+  "files": [
+    {
+      "file": "CURIOSITY-BUILDS.md",
+      "kind": "archive-documentation-or-inventory",
+      "bytes": 4758,
+      "sha256": "2189c700fd8e755678b8a74f63e734d760fed57b6a9459c2e1e937c0447645ad"
+    },
+    {
+      "file": "docs/curiosity-builds/README.md",
+      "kind": "archive-documentation-or-inventory",
+      "bytes": 4615,
+      "sha256": "8e6bf9774cf147e647cf5d6f89712a188e41bce5d14efe023d011addc06772f6"
+    },
+    {
+      "file": "docs/curiosity-builds/covers/covers-v1/desktop-delivery.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-v1/desktop-delivery.json",
+      "kind": "cover-prompt-and-record",
+      "bytes": 1014,
+      "sha256": "ba4884518d060107a9a28788e7c48f64a2a8e85478332f2db47dba609ab16a40"
+    },
+    {
+      "file": "docs/curiosity-builds/covers/covers-v1/generated-sources.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-v1/generated-sources.json",
+      "kind": "cover-prompt-and-record",
+      "bytes": 1816,
+      "sha256": "191cbbaaa247a42539d4bb49294b49716a0c5cb18e722cab0db5436ec0f12035"
+    },
+    {
+      "file": "docs/curiosity-builds/covers/covers-v1/prompts.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-v1/prompts.json",
+      "kind": "cover-prompt-and-record",
+      "bytes": 7543,
+      "sha256": "288f9a9964b2cd70d8c6612b70b033216b4a234bafa8ac05804f8dde311726af"
+    },
+    {
+      "file": "docs/curiosity-builds/covers/covers-v1/titles-and-description.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-v1/titles-and-description.json",
+      "kind": "cover-prompt-and-record",
+      "bytes": 3320,
+      "sha256": "0d947dfe8461c8b426c05deb447a7d670e110bb13fc6285a696a570d20167c45"
+    },
+    {
+      "file": "docs/curiosity-builds/covers/covers-v1/发布简介-含音乐署名.txt",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-v1/发布简介-含音乐署名.txt",
+      "kind": "cover-prompt-and-record",
+      "bytes": 1831,
+      "sha256": "619b919e2020c195730aad7b4514d194b98768e1d97ed2447edb0ddd41e1646d"
+    },
+    {
+      "file": "docs/curiosity-builds/covers/covers-v1/标题与简介.txt",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-v1/标题与简介.txt",
+      "kind": "cover-prompt-and-record",
+      "bytes": 1503,
+      "sha256": "2bb43b330abbde637c834ab595207a384a3acf7785f327c0cba6018e25b8a33a"
+    },
+    {
+      "file": "docs/curiosity-builds/covers/covers-v2/cover-b-edit.prompt.txt",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-v2/cover-b-edit.prompt.txt",
+      "kind": "cover-prompt-and-record",
+      "bytes": 2414,
+      "sha256": "01722336ccb0c0189f3bd1f3a16b48802167fecdfb94b1ad7a09f96c0bc643a8"
+    },
+    {
+      "file": "docs/curiosity-builds/covers/covers-v2/desktop-delivery.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-v2/desktop-delivery.json",
+      "kind": "cover-prompt-and-record",
+      "bytes": 824,
+      "sha256": "45dfd84e39ba015930c69698bb24b7eaedbbc74f9e66582b16feedb0a416a225"
+    },
+    {
+      "file": "docs/curiosity-builds/covers/covers-v2/generated-source.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-v2/generated-source.json",
+      "kind": "cover-prompt-and-record",
+      "bytes": 505,
+      "sha256": "93a39e74b43f3682c438884e75116eed0572add2e9ee1ee0eff89c5a7ba3800e"
+    },
+    {
+      "file": "docs/curiosity-builds/covers/covers-v2/request.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-v2/request.json",
+      "kind": "cover-prompt-and-record",
+      "bytes": 1019,
+      "sha256": "94484421ac35b2c13accf3fa0a7540915a521439eaef255e0eab1099fab995ea"
+    },
+    {
+      "file": "docs/curiosity-builds/covers/covers-v3/cover-b-white-type.prompt.txt",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-v3/cover-b-white-type.prompt.txt",
+      "kind": "cover-prompt-and-record",
+      "bytes": 1612,
+      "sha256": "56a47f1ebcb7db8c7df85bea4c14982201bd03323ffaa5bd8affc6573f23e358"
+    },
+    {
+      "file": "docs/curiosity-builds/covers/covers-v3/desktop-delivery.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-v3/desktop-delivery.json",
+      "kind": "cover-prompt-and-record",
+      "bytes": 724,
+      "sha256": "70bfd0a23213528f1f43ae6f5d3d38eb652c750597cbb5ff46c1cd3ca63e38c2"
+    },
+    {
+      "file": "docs/curiosity-builds/covers/covers-v3/generated-source.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-v3/generated-source.json",
+      "kind": "cover-prompt-and-record",
+      "bytes": 370,
+      "sha256": "12b83afc75d217f1d1346715efdee1f7635731b23d543a6aa603b7ff819f38ac"
+    },
+    {
+      "file": "docs/curiosity-builds/covers/covers-v3/request.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-v3/request.json",
+      "kind": "cover-prompt-and-record",
+      "bytes": 654,
+      "sha256": "775777984d369de87c56798f90c818e42a261459cad02c58914619556b94d8ff"
+    },
+    {
+      "file": "docs/curiosity-builds/covers/covers-v4/cover-b-white-relief.prompt.txt",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-v4/cover-b-white-relief.prompt.txt",
+      "kind": "cover-prompt-and-record",
+      "bytes": 1633,
+      "sha256": "43cca95dfba1908bc48e66fe041e23e45eaba66f19f81fab990579c5427852eb"
+    },
+    {
+      "file": "docs/curiosity-builds/covers/covers-v4/desktop-delivery.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-v4/desktop-delivery.json",
+      "kind": "cover-prompt-and-record",
+      "bytes": 718,
+      "sha256": "7f12327689a7c0f1e0b4f00255072a09e49deafb64b85b2906c7c9f9a28ee655"
+    },
+    {
+      "file": "docs/curiosity-builds/covers/covers-v4/generated-source.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-v4/generated-source.json",
+      "kind": "cover-prompt-and-record",
+      "bytes": 370,
+      "sha256": "c7bdf944ac07a97c215d418db3946437472b20cc798dd49ed05bf0092482cb07"
+    },
+    {
+      "file": "docs/curiosity-builds/covers/covers-v4/previous-desktop-copy.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-v4/previous-desktop-copy.json",
+      "kind": "cover-prompt-and-record",
+      "bytes": 3320,
+      "sha256": "0d947dfe8461c8b426c05deb447a7d670e110bb13fc6285a696a570d20167c45"
+    },
+    {
+      "file": "docs/curiosity-builds/covers/covers-v4/previous-desktop-copy.txt",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-v4/previous-desktop-copy.txt",
+      "kind": "cover-prompt-and-record",
+      "bytes": 1503,
+      "sha256": "2bb43b330abbde637c834ab595207a384a3acf7785f327c0cba6018e25b8a33a"
+    },
+    {
+      "file": "docs/curiosity-builds/covers/covers-v4/request.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-v4/request.json",
+      "kind": "cover-prompt-and-record",
+      "bytes": 570,
+      "sha256": "001edd1bd35f358be5b77e0a4498a8d4a57fe7aa5936b651f17a9c32e97f6e01"
+    },
+    {
+      "file": "docs/curiosity-builds/covers/covers-v5/cover-b-referenced-lighting.prompt.txt",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-v5/cover-b-referenced-lighting.prompt.txt",
+      "kind": "cover-prompt-and-record",
+      "bytes": 2315,
+      "sha256": "f422280219c0bec00ddd7e5c7c3b81ccd255f7c12426099be9ec293b23e957cc"
+    },
+    {
+      "file": "docs/curiosity-builds/covers/covers-v5/desktop-delivery.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-v5/desktop-delivery.json",
+      "kind": "cover-prompt-and-record",
+      "bytes": 886,
+      "sha256": "dda5d9bdeb5cf6555a62f5a49a3eab9cace318ea914f16efbd8800e821ab0c94"
+    },
+    {
+      "file": "docs/curiosity-builds/covers/covers-v5/generated-source.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-v5/generated-source.json",
+      "kind": "cover-prompt-and-record",
+      "bytes": 521,
+      "sha256": "a4b2f17558f7c884b7ea62399592201c17c1577b68d6bba3369a842a2eb439ce"
+    },
+    {
+      "file": "docs/curiosity-builds/covers/covers-v5/previous-desktop-copy.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-v5/previous-desktop-copy.json",
+      "kind": "cover-prompt-and-record",
+      "bytes": 3426,
+      "sha256": "429aed6729ed2832377ff0407021c45ee4c4946f4fc6a1806f3217c8c6178f50"
+    },
+    {
+      "file": "docs/curiosity-builds/covers/covers-v5/previous-desktop-copy.txt",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-v5/previous-desktop-copy.txt",
+      "kind": "cover-prompt-and-record",
+      "bytes": 1530,
+      "sha256": "ec5672ac6fb42aeb866e5a5f864187411b45c6524d74d41760b944744fb0528a"
+    },
+    {
+      "file": "docs/curiosity-builds/covers/covers-v5/request.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-v5/request.json",
+      "kind": "cover-prompt-and-record",
+      "bytes": 936,
+      "sha256": "e175ed19bad981e5e847db35f47e01dfa8a1207b4cb36408746893919bb4e05b"
+    },
+    {
+      "file": "docs/curiosity-builds/covers/covers-v6/cover-b-neutral-white.prompt.txt",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-v6/cover-b-neutral-white.prompt.txt",
+      "kind": "cover-prompt-and-record",
+      "bytes": 1601,
+      "sha256": "9bf35617e612599d3a0093e4e004c52acb9ca99a48ada98e7d62efbec110640f"
+    },
+    {
+      "file": "docs/curiosity-builds/covers/covers-v6/desktop-delivery.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-v6/desktop-delivery.json",
+      "kind": "cover-prompt-and-record",
+      "bytes": 721,
+      "sha256": "d0b2a45f1e810a93afac2843906f3d398711dcb08f75d113202571a3b3d72f17"
+    },
+    {
+      "file": "docs/curiosity-builds/covers/covers-v6/generated-source.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-v6/generated-source.json",
+      "kind": "cover-prompt-and-record",
+      "bytes": 384,
+      "sha256": "9331d5c7226611688d99f07415fa298b71e94149e7fcf4000e771291b50a51ae"
+    },
+    {
+      "file": "docs/curiosity-builds/covers/covers-v6/headline-color-check.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-v6/headline-color-check.json",
+      "kind": "cover-prompt-and-record",
+      "bytes": 241,
+      "sha256": "a5c7b749df1c792a3842f128fb1a130af11cf3a64e64b6604b0d1d92f9fcd618"
+    },
+    {
+      "file": "docs/curiosity-builds/covers/covers-v6/previous-desktop-copy.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-v6/previous-desktop-copy.json",
+      "kind": "cover-prompt-and-record",
+      "bytes": 3462,
+      "sha256": "23ce85d6aaccb9f9774608662702eadfe5292d93677aef2c61e4d7ff2c5eed62"
+    },
+    {
+      "file": "docs/curiosity-builds/covers/covers-v6/previous-desktop-copy.txt",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-v6/previous-desktop-copy.txt",
+      "kind": "cover-prompt-and-record",
+      "bytes": 1566,
+      "sha256": "f465941fda6ec65d20e453c50621a50f45d10190bfe6e094d309bb6120a282c4"
+    },
+    {
+      "file": "docs/curiosity-builds/covers/covers-v6/previous-publishing-copy.txt",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-v6/previous-publishing-copy.txt",
+      "kind": "cover-prompt-and-record",
+      "bytes": 1831,
+      "sha256": "619b919e2020c195730aad7b4514d194b98768e1d97ed2447edb0ddd41e1646d"
+    },
+    {
+      "file": "docs/curiosity-builds/covers/covers-zh-v1/cover-b-zh.prompt.txt",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-zh-v1/cover-b-zh.prompt.txt",
+      "kind": "cover-prompt-and-record",
+      "bytes": 1754,
+      "sha256": "50803828dfb8f99fb4ce8e335d101035a31ff14d393ffbdee369a402a611784b"
+    },
+    {
+      "file": "docs/curiosity-builds/covers/covers-zh-v1/desktop-delivery.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-zh-v1/desktop-delivery.json",
+      "kind": "cover-prompt-and-record",
+      "bytes": 684,
+      "sha256": "ee09c9e885a2a6eb71d94f83618deba3517b00b9d92220943d637ce760c7a24c"
+    },
+    {
+      "file": "docs/curiosity-builds/covers/covers-zh-v1/generated-source.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-zh-v1/generated-source.json",
+      "kind": "cover-prompt-and-record",
+      "bytes": 386,
+      "sha256": "6a6d1ee29be60717ae6a9c658d711774d356a94775496323db042ffc43ed575e"
+    },
+    {
+      "file": "docs/curiosity-builds/covers/covers-zh-v1/previous-发布简介-含音乐署名.txt",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-zh-v1/previous-发布简介-含音乐署名.txt",
+      "kind": "cover-prompt-and-record",
+      "bytes": 4020,
+      "sha256": "78392d3568cf88e2f0be3759ee9445f13fff3fb3411d239880a77e2727822f60"
+    },
+    {
+      "file": "docs/curiosity-builds/covers/covers-zh-v1/previous-标题与简介.txt",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-zh-v1/previous-标题与简介.txt",
+      "kind": "cover-prompt-and-record",
+      "bytes": 4020,
+      "sha256": "78392d3568cf88e2f0be3759ee9445f13fff3fb3411d239880a77e2727822f60"
+    },
+    {
+      "file": "docs/curiosity-builds/covers/covers-zh-v1/request.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-zh-v1/request.json",
+      "kind": "cover-prompt-and-record",
+      "bytes": 550,
+      "sha256": "e57f248fc95fb86fff70372c1c4247590e868266f238ecc9d1cae487ec0b783c"
+    },
+    {
+      "file": "docs/curiosity-builds/covers/covers-zh-v1/youtube-cover-verification.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-zh-v1/youtube-cover-verification.json",
+      "kind": "cover-prompt-and-record",
+      "bytes": 737,
+      "sha256": "b845d6e0e6833234ba87420cfad26128dce6d419708ae07551db0a8f0f35526d"
+    },
+    {
+      "file": "docs/curiosity-builds/delivery/Curiosity Builds.zh-CN.srt",
+      "source": "/Users/yqin/Desktop/Curiosity Builds - Final/Curiosity Builds.zh-CN.srt",
+      "kind": "desktop-sidecar",
+      "bytes": 2183,
+      "sha256": "90cafc9b596f1b06a824f2c2f229ea1950f13968487694a306b3979311928621"
+    },
+    {
+      "file": "docs/curiosity-builds/delivery/YouTube/youtube-description.en.txt",
+      "source": "/Users/yqin/Desktop/Curiosity Builds - Final/YouTube/youtube-description.en.txt",
+      "kind": "desktop-sidecar",
+      "bytes": 4122,
+      "sha256": "e356b1399424f02369857448bb1ae2271515e9ff162c614c7edde42a0421a928"
+    },
+    {
+      "file": "docs/curiosity-builds/delivery/YouTube/youtube-description.zh.txt",
+      "source": "/Users/yqin/Desktop/Curiosity Builds - Final/YouTube/youtube-description.zh.txt",
+      "kind": "desktop-sidecar",
+      "bytes": 4129,
+      "sha256": "b03c12bb32cd7bbd1ebf6faab6efdeff5e5372aeb44927c9089f44898bb6106a"
+    },
+    {
+      "file": "docs/curiosity-builds/delivery/YouTube/youtube-metadata.json",
+      "source": "/Users/yqin/Desktop/Curiosity Builds - Final/YouTube/youtube-metadata.json",
+      "kind": "desktop-sidecar",
+      "bytes": 11755,
+      "sha256": "ce4fd29683176afb9237d609fad28976c1cf5d4b78de4d17e115c4e8a5f4b906"
+    },
+    {
+      "file": "docs/curiosity-builds/delivery/使用说明.txt",
+      "source": "/Users/yqin/Desktop/Curiosity Builds - Final/使用说明.txt",
+      "kind": "desktop-sidecar",
+      "bytes": 2061,
+      "sha256": "969cad98be3d9e503b17413a066a1c5788afe927a53ae32a545d0c7c770917b2"
+    },
+    {
+      "file": "docs/curiosity-builds/delivery/分段/01-chess.en.no-voice.zh-CN.srt",
+      "source": "/Users/yqin/Desktop/Curiosity Builds - Final/分段/01-chess.en.no-voice.zh-CN.srt",
+      "kind": "desktop-sidecar",
+      "bytes": 428,
+      "sha256": "f71ce0250c483b90f10279c13338537f0c97214b1bd257072b49fdba84e874b4"
+    },
+    {
+      "file": "docs/curiosity-builds/delivery/分段/02-bible.en.no-voice.zh-CN.srt",
+      "source": "/Users/yqin/Desktop/Curiosity Builds - Final/分段/02-bible.en.no-voice.zh-CN.srt",
+      "kind": "desktop-sidecar",
+      "bytes": 317,
+      "sha256": "753688a1085c904d12539576dceed2b19af68b0f8cd246dac239edb8883584e2"
+    },
+    {
+      "file": "docs/curiosity-builds/delivery/分段/03-vangogh.en.no-voice.zh-CN.srt",
+      "source": "/Users/yqin/Desktop/Curiosity Builds - Final/分段/03-vangogh.en.no-voice.zh-CN.srt",
+      "kind": "desktop-sidecar",
+      "bytes": 163,
+      "sha256": "fa880d70e7835070f5146d6130cee84da01f576abfe85e6b96dd48b7bc677229"
+    },
+    {
+      "file": "docs/curiosity-builds/delivery/分段/04-journey.en.no-voice.zh-CN.srt",
+      "source": "/Users/yqin/Desktop/Curiosity Builds - Final/分段/04-journey.en.no-voice.zh-CN.srt",
+      "kind": "desktop-sidecar",
+      "bytes": 172,
+      "sha256": "c6d5888cbe7a7daae425a38d86476b72dee2a0ae033044277ccd2e98bf31f68a"
+    },
+    {
+      "file": "docs/curiosity-builds/delivery/分段/05-sky.en.no-voice.zh-CN.srt",
+      "source": "/Users/yqin/Desktop/Curiosity Builds - Final/分段/05-sky.en.no-voice.zh-CN.srt",
+      "kind": "desktop-sidecar",
+      "bytes": 178,
+      "sha256": "21685b1bc42d3833abc9ef81997b7bf4dc9c0fde952f01d91da45933bca91705"
+    },
+    {
+      "file": "docs/curiosity-builds/delivery/分段/06-chameleon.en.no-voice.zh-CN.srt",
+      "source": "/Users/yqin/Desktop/Curiosity Builds - Final/分段/06-chameleon.en.no-voice.zh-CN.srt",
+      "kind": "desktop-sidecar",
+      "bytes": 163,
+      "sha256": "a90ba12ed34b7489bafcdd199524460af662d66a2a697880ad4d9bc455bb674c"
+    },
+    {
+      "file": "docs/curiosity-builds/delivery/分段/07-cube.en.no-voice.zh-CN.srt",
+      "source": "/Users/yqin/Desktop/Curiosity Builds - Final/分段/07-cube.en.no-voice.zh-CN.srt",
+      "kind": "desktop-sidecar",
+      "bytes": 159,
+      "sha256": "6c0954c7c98abaf17e567e74aa11439771e0579b058da9984244256e4c976bcb"
+    },
+    {
+      "file": "docs/curiosity-builds/delivery/分段/08-coder.en.no-voice.zh-CN.srt",
+      "source": "/Users/yqin/Desktop/Curiosity Builds - Final/分段/08-coder.en.no-voice.zh-CN.srt",
+      "kind": "desktop-sidecar",
+      "bytes": 258,
+      "sha256": "86f8c54e5a41c2f4d5e5e793cd0cde187c0be608d4e5193d2a8f7f78d509c5d9"
+    },
+    {
+      "file": "docs/curiosity-builds/delivery/分段/09-roller.en.no-voice.zh-CN.srt",
+      "source": "/Users/yqin/Desktop/Curiosity Builds - Final/分段/09-roller.en.no-voice.zh-CN.srt",
+      "kind": "desktop-sidecar",
+      "bytes": 163,
+      "sha256": "738d71c3ba2a10ab1eaf32ceed1db9c4691670e30419ced562b130531d1ce71b"
+    },
+    {
+      "file": "docs/curiosity-builds/delivery/分段/ending-preview.en.no-voice.zh-CN.srt",
+      "source": "/Users/yqin/Desktop/Curiosity Builds - Final/分段/ending-preview.en.no-voice.zh-CN.srt",
+      "kind": "desktop-sidecar",
+      "bytes": 182,
+      "sha256": "40ac41c66c8e56677615350ab82724b4ce1e5cb8bceb686abedb5ff5afef3954"
+    },
+    {
+      "file": "docs/curiosity-builds/delivery/封面与文案/B中文封面生成提示词.txt",
+      "source": "/Users/yqin/Desktop/Curiosity Builds - Final/封面与文案/B中文封面生成提示词.txt",
+      "kind": "desktop-sidecar",
+      "bytes": 1754,
+      "sha256": "50803828dfb8f99fb4ce8e335d101035a31ff14d393ffbdee369a402a611784b"
+    },
+    {
+      "file": "docs/curiosity-builds/delivery/封面与文案/B封面修改提示词.txt",
+      "source": "/Users/yqin/Desktop/Curiosity Builds - Final/封面与文案/B封面修改提示词.txt",
+      "kind": "desktop-sidecar",
+      "bytes": 1601,
+      "sha256": "9bf35617e612599d3a0093e4e004c52acb9ca99a48ada98e7d62efbec110640f"
+    },
+    {
+      "file": "docs/curiosity-builds/delivery/封面与文案/发布简介-含音乐署名.txt",
+      "source": "/Users/yqin/Desktop/Curiosity Builds - Final/封面与文案/发布简介-含音乐署名.txt",
+      "kind": "desktop-sidecar",
+      "bytes": 4122,
+      "sha256": "e356b1399424f02369857448bb1ae2271515e9ff162c614c7edde42a0421a928"
+    },
+    {
+      "file": "docs/curiosity-builds/delivery/封面与文案/封面生成提示词.json",
+      "source": "/Users/yqin/Desktop/Curiosity Builds - Final/封面与文案/封面生成提示词.json",
+      "kind": "desktop-sidecar",
+      "bytes": 7543,
+      "sha256": "288f9a9964b2cd70d8c6612b70b033216b4a234bafa8ac05804f8dde311726af"
+    },
+    {
+      "file": "docs/curiosity-builds/delivery/封面与文案/标题与简介.json",
+      "source": "/Users/yqin/Desktop/Curiosity Builds - Final/封面与文案/标题与简介.json",
+      "kind": "desktop-sidecar",
+      "bytes": 6737,
+      "sha256": "4c8e2e5fddef9b0c7e9563dbdc8ced053f76acf40eb5319b9655add0cc48f2b7"
+    },
+    {
+      "file": "docs/curiosity-builds/delivery/封面与文案/标题与简介.txt",
+      "source": "/Users/yqin/Desktop/Curiosity Builds - Final/封面与文案/标题与简介.txt",
+      "kind": "desktop-sidecar",
+      "bytes": 4122,
+      "sha256": "e356b1399424f02369857448bb1ae2271515e9ff162c614c7edde42a0421a928"
+    },
+    {
+      "file": "docs/curiosity-builds/delivery/素材/Journey画廊概念提示词.txt",
+      "source": "/Users/yqin/Desktop/Curiosity Builds - Final/素材/Journey画廊概念提示词.txt",
+      "kind": "desktop-sidecar",
+      "bytes": 2934,
+      "sha256": "5a09ce42396c11f3b41782c3b0441c5a9e65b0e65426682e5a41176331802639"
+    },
+    {
+      "file": "docs/curiosity-builds/delivery/素材/梵高画廊概念提示词.txt",
+      "source": "/Users/yqin/Desktop/Curiosity Builds - Final/素材/梵高画廊概念提示词.txt",
+      "kind": "desktop-sidecar",
+      "bytes": 2863,
+      "sha256": "8761851d3b699c2b3ec993cac2cf2b245fc450101ec9511fba89ba23e7edeba4"
+    },
+    {
+      "file": "docs/curiosity-builds/delivery/素材/魔方草稿提示词.txt",
+      "source": "/Users/yqin/Desktop/Curiosity Builds - Final/素材/魔方草稿提示词.txt",
+      "kind": "desktop-sidecar",
+      "bytes": 1144,
+      "sha256": "f58082c3907f1043ba580f35814e264347aca17157e4de08fe1cd6afd24cf3a7"
+    },
+    {
+      "file": "docs/curiosity-builds/delivery/素材/魔方草稿来源.json",
+      "source": "/Users/yqin/Desktop/Curiosity Builds - Final/素材/魔方草稿来源.json",
+      "kind": "desktop-sidecar",
+      "bytes": 571,
+      "sha256": "fd16f2d32f07f384c29bcf8aa761d81ecdea72b173e1916a02e228f00b10ea40"
+    },
+    {
+      "file": "docs/curiosity-builds/delivery/音乐来源与署名.txt",
+      "source": "/Users/yqin/Desktop/Curiosity Builds - Final/音乐来源与署名.txt",
+      "kind": "desktop-sidecar",
+      "bytes": 3399,
+      "sha256": "94fffdd863291a14867634ff58988c58c53879af7dee8178fec3229f4e975230"
+    },
+    {
+      "file": "docs/curiosity-builds/delivery/音乐清单.txt",
+      "source": "/Users/yqin/Desktop/Curiosity Builds - Final/音乐清单.txt",
+      "kind": "desktop-sidecar",
+      "bytes": 1164,
+      "sha256": "5e5fa64a899b4f25dcb7d14dd5299c275ee4359fb5a0108c835aca13b4488d9f"
+    },
+    {
+      "file": "docs/curiosity-builds/lessons.md",
+      "kind": "archive-documentation-or-inventory",
+      "bytes": 8009,
+      "sha256": "7b03a472ea163c46f6f9bdbf747840aa3b40fbfa065c62e5fc8498e6aa9617b1"
+    },
+    {
+      "file": "docs/curiosity-builds/media-inventory.json",
+      "kind": "archive-documentation-or-inventory",
+      "bytes": 224979,
+      "sha256": "ccb93d660bb0eaf8cb7d630900982f699d55ccc515b177220cbfed20d5855335"
+    },
+    {
+      "file": "docs/curiosity-builds/music-sources.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/music/sources.json",
+      "kind": "recording-provenance",
+      "bytes": 5127,
+      "sha256": "e4a7eb9165d5d8545d7528723ae0f7d16946cbe3301ee94125d2e9e31372f08f"
+    },
+    {
+      "file": "docs/curiosity-builds/rebuild.md",
+      "kind": "archive-documentation-or-inventory",
+      "bytes": 10076,
+      "sha256": "21d9bedd617704f90bfebbc8cbeed31e2337a1be3ecd5df71b9c505f8142a3ac"
+    },
+    {
+      "file": "docs/curiosity-builds/records/capture-metadata/bible-home-next-word.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/captures/bible-home-next-word.json",
+      "kind": "capture-metadata",
+      "bytes": 129,
+      "sha256": "c2127adfa0b09d006c7cb307fad378f1dd829d865cb7106d3d45e0e9e7c37108"
+    },
+    {
+      "file": "docs/curiosity-builds/records/capture-metadata/bible-home-sequence.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/captures/bible-home-sequence.json",
+      "kind": "capture-metadata",
+      "bytes": 128,
+      "sha256": "34835772a6c28312184a9e637746deb47d0ccf57722b15a2a57da4016b23d512"
+    },
+    {
+      "file": "docs/curiosity-builds/records/capture-metadata/bible-natural.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/captures/bible-natural.json",
+      "kind": "capture-metadata",
+      "bytes": 200,
+      "sha256": "d95f3297139a5e24f5133661962d01bbe0f04ea7c3a7ec27ce37341e6ea1dc45"
+    },
+    {
+      "file": "docs/curiosity-builds/records/capture-metadata/bible-next-word-fast.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/captures/bible-next-word-fast.json",
+      "kind": "capture-metadata",
+      "bytes": 160,
+      "sha256": "98ae1c97f28cc8ac2b1d38ae46c2902bca2aaced980068d2ac8bd7abd731eab2"
+    },
+    {
+      "file": "docs/curiosity-builds/records/capture-metadata/bible-sequence-fast.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/captures/bible-sequence-fast.json",
+      "kind": "capture-metadata",
+      "bytes": 162,
+      "sha256": "a3961242a7d91e3afb5fbdd919deec33f4558e90cbe85b0040f70d3ef6ecf8b7"
+    },
+    {
+      "file": "docs/curiosity-builds/records/capture-metadata/chess-comeback-play.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/captures/chess-comeback-play.json",
+      "kind": "capture-metadata",
+      "bytes": 168,
+      "sha256": "57139c80be139e949c3226e23bb6c4d2d11f7bea779e1644fe9e6afe4562f9a9"
+    },
+    {
+      "file": "docs/curiosity-builds/records/capture-metadata/chess-rockfall-play.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/captures/chess-rockfall-play.json",
+      "kind": "capture-metadata",
+      "bytes": 165,
+      "sha256": "99d53a4737e8532ca456af036a2afba18070039f0a126c83fb6526060fb5bf48"
+    },
+    {
+      "file": "docs/curiosity-builds/records/initial/BRIEF.md",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/records/BRIEF.md",
+      "kind": "historical-production-record",
+      "bytes": 1447,
+      "sha256": "b66fb9d1baa652bfca2a70ca0f1c20580a456aec510873a802f47a19eec2f864"
+    },
+    {
+      "file": "docs/curiosity-builds/records/initial/chess-room.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/records/chess-room.json",
+      "kind": "historical-production-record",
+      "bytes": 2892,
+      "sha256": "25cfe5f18dc16bd47e170aa9b26768cac28587ea7cdeda71ee7608b89d29bc38"
+    },
+    {
+      "file": "docs/curiosity-builds/records/initial/journey-gallery.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/records/journey-gallery.json",
+      "kind": "historical-production-record",
+      "bytes": 2175,
+      "sha256": "cbd48b089c6469ed9b1595f0e1eeb0bcd6b7234df2384c5cff514e6a19ec76b3"
+    },
+    {
+      "file": "docs/curiosity-builds/records/initial/journey-portraits.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/records/journey-portraits.json",
+      "kind": "historical-production-record",
+      "bytes": 2174,
+      "sha256": "a4c447d2846536a0464c390dfc4a554ed93ded69fcd2e844639f0b67f22108c1"
+    },
+    {
+      "file": "docs/curiosity-builds/records/initial/roller-line.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/records/roller-line.json",
+      "kind": "historical-production-record",
+      "bytes": 2166,
+      "sha256": "493abc50b66b73cbd4dc6a91cdc0ab2a03e66aecc91c477e31f74884b5715d8a"
+    },
+    {
+      "file": "docs/curiosity-builds/records/initial/roller-mobius.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/records/roller-mobius.json",
+      "kind": "historical-production-record",
+      "bytes": 2165,
+      "sha256": "eab2024ad98cc93f9c972d63ab79090f28cbad1441348fcd08bc8a509fa39ea4"
+    },
+    {
+      "file": "docs/curiosity-builds/records/initial/roller-parabola.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/records/roller-parabola.json",
+      "kind": "historical-production-record",
+      "bytes": 2169,
+      "sha256": "2890c20c0b8fb1cf6f552af328ff7ad74e9916fc6ca6f45f659513761b7718e2"
+    },
+    {
+      "file": "docs/curiosity-builds/records/initial/sky-room.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/records/sky-room.json",
+      "kind": "historical-production-record",
+      "bytes": 2221,
+      "sha256": "83cbb8936e3ce9373581dd9b3d3be84276ab0dc574b085112adc62eea3d7b666"
+    },
+    {
+      "file": "docs/curiosity-builds/records/initial/source-checkouts.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/records/source-checkouts.json",
+      "kind": "historical-production-record",
+      "bytes": 922,
+      "sha256": "925b6b3edf19cda39f173d97db84e5325cba2125c4c9abd8e1c9491fa1d769e6"
+    },
+    {
+      "file": "docs/curiosity-builds/records/initial/vangogh-room.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/records/vangogh-room.json",
+      "kind": "historical-production-record",
+      "bytes": 1987,
+      "sha256": "d4d82d438947641b38e0629b8bd31a4b430bbf1dfaccc04139fcacc4a3813cd6"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/01-chess-picture.concat-filter.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/01-chess-picture.concat-filter.json",
+      "kind": "historical-production-record",
+      "bytes": 177,
+      "sha256": "2efb10616531b15b952079309ac51462fc4f8eed37ce85d5d38688361a67d820"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/01-chess-picture.dissolves.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/01-chess-picture.dissolves.json",
+      "kind": "historical-production-record",
+      "bytes": 1506,
+      "sha256": "834708a7894b125b70af754c0882d7d105fb7e693d7c09c9e8b3e2e3fbe6012c"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/01-chess-picture.filter.txt",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/01-chess-picture.filter.txt",
+      "kind": "historical-production-record",
+      "bytes": 1060,
+      "sha256": "dab631137ed3193dac592e196b9ce3b5cae295ff6eb5327e4c74814ede2b8d1a"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/01-chess.en.no-voice.mux.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/01-chess.en.no-voice.mux.json",
+      "kind": "historical-production-record",
+      "bytes": 134,
+      "sha256": "e719a8bb380c1fbd38f91cfa82f0d4baea46c66819e4e94c4da9aeec3f4f6327"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/02-bible-picture.concat-filter.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/02-bible-picture.concat-filter.json",
+      "kind": "historical-production-record",
+      "bytes": 174,
+      "sha256": "1d1dda5d445c47032300e8e32a408a46996052c60118ea5c23da35e749da12de"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/02-bible-picture.dissolves.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/02-bible-picture.dissolves.json",
+      "kind": "historical-production-record",
+      "bytes": 1522,
+      "sha256": "2181ee00bd8fe33143a4ff77f9eb03e1f1db3e9d04f2736a9c788f44bd79c296"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/02-bible-picture.filter.txt",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/02-bible-picture.filter.txt",
+      "kind": "historical-production-record",
+      "bytes": 1057,
+      "sha256": "91fcf96b106143921cab1cb2c0d874317edc63ff8af43eb1b8edbea3e488d65c"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/02-bible.en.no-voice.mux.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/02-bible.en.no-voice.mux.json",
+      "kind": "historical-production-record",
+      "bytes": 133,
+      "sha256": "30cbc00c10757686070ee4a89d7484afada844b9be1328e4b14e41be59b6a4ef"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/03-vangogh-picture.concat-filter.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/03-vangogh-picture.concat-filter.json",
+      "kind": "historical-production-record",
+      "bytes": 149,
+      "sha256": "0cfd5bafe3f7af607700c70e0a1bf100151f7fa437c50dc08653769aacb8f65c"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/03-vangogh-picture.dissolves.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/03-vangogh-picture.dissolves.json",
+      "kind": "historical-production-record",
+      "bytes": 641,
+      "sha256": "7fc6483eabd602a6de51d0512874d79b014b87242c9e257aca761cdab3f5cf3d"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/03-vangogh-picture.filter.txt",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/03-vangogh-picture.filter.txt",
+      "kind": "historical-production-record",
+      "bytes": 414,
+      "sha256": "7436076473cfbc20345659a4ae161c0ccbe18a392827f1a35f8c6b52f5b0a0a5"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/03-vangogh.en.no-voice.mux.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/03-vangogh.en.no-voice.mux.json",
+      "kind": "historical-production-record",
+      "bytes": 133,
+      "sha256": "f9a422c108674abe900efb92c2a86d7d5128eec78569059fad40e5dbf963102b"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/04-journey-picture.concat-filter.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/04-journey-picture.concat-filter.json",
+      "kind": "historical-production-record",
+      "bytes": 149,
+      "sha256": "43995ebbb8b266ce95ed36e0319f1e984a28b1cfb936e8740276a889e84a9856"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/04-journey-picture.dissolves.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/04-journey-picture.dissolves.json",
+      "kind": "historical-production-record",
+      "bytes": 650,
+      "sha256": "4cf24b725022a8dd4f115b1ee1dfdca280b870844b2e39186564027d83f425e8"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/04-journey-picture.filter.txt",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/04-journey-picture.filter.txt",
+      "kind": "historical-production-record",
+      "bytes": 414,
+      "sha256": "7436076473cfbc20345659a4ae161c0ccbe18a392827f1a35f8c6b52f5b0a0a5"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/04-journey.en.no-voice.mux.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/04-journey.en.no-voice.mux.json",
+      "kind": "historical-production-record",
+      "bytes": 133,
+      "sha256": "fb197d2cf31d79c18c097c1918b038cba456d25b6eb1d7f51a26614c9bc19da6"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/05-sky-picture.concat-filter.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/05-sky-picture.concat-filter.json",
+      "kind": "historical-production-record",
+      "bytes": 157,
+      "sha256": "3c359b7157fde9109945bbf3d4d9008fdadd58698c1806e987a30b9efc8c70cd"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/05-sky-picture.dissolves.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/05-sky-picture.dissolves.json",
+      "kind": "historical-production-record",
+      "bytes": 653,
+      "sha256": "73176d442ac2498a4405f3e036731b407464773d082eba94b9fa07678776e052"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/05-sky-picture.filter.txt",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/05-sky-picture.filter.txt",
+      "kind": "historical-production-record",
+      "bytes": 414,
+      "sha256": "1f4f876c3a1e047cd7f2623ddbad64cbbd572be38a23a7a91dbef6a124b2c6ce"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/05-sky.en.no-voice.mux.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/05-sky.en.no-voice.mux.json",
+      "kind": "historical-production-record",
+      "bytes": 133,
+      "sha256": "50321c8601e6f53fd6b58f0a822d8f361dc9314f071c8cbbeeb7ec43ad80f439"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/06-chameleon-picture.concat-filter.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/06-chameleon-picture.concat-filter.json",
+      "kind": "historical-production-record",
+      "bytes": 158,
+      "sha256": "39a107eb546812bbb62d55bddccda291bdd66061baee4541d706432056fd1106"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/06-chameleon-picture.dissolves.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/06-chameleon-picture.dissolves.json",
+      "kind": "historical-production-record",
+      "bytes": 933,
+      "sha256": "dc4c445d4df7dca13cd597ceb603e3080e93aee2d073278842874379f06fa884"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/06-chameleon-picture.filter.txt",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/06-chameleon-picture.filter.txt",
+      "kind": "historical-production-record",
+      "bytes": 629,
+      "sha256": "26de5b53106e59b5d3ed818447288901ce093fc3ad49954310dc87a0fa61da51"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/06-chameleon.en.no-voice.mux.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/06-chameleon.en.no-voice.mux.json",
+      "kind": "historical-production-record",
+      "bytes": 133,
+      "sha256": "febb729ada04ef1b72061e8913a026760b96df9e558e3046d161b6beefdf474e"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/07-cube-picture.concat-filter.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/07-cube-picture.concat-filter.json",
+      "kind": "historical-production-record",
+      "bytes": 158,
+      "sha256": "ca4350fc4ff0d7bd7b8caca4c9f23dd8f19a4cfad6fa0dc6331052f156611642"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/07-cube-picture.dissolves.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/07-cube-picture.dissolves.json",
+      "kind": "historical-production-record",
+      "bytes": 918,
+      "sha256": "5ad1e0814cc1b3f267eb7951d81468d1fe2af6eefdba282b64e4b968f3a24e03"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/07-cube-picture.filter.txt",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/07-cube-picture.filter.txt",
+      "kind": "historical-production-record",
+      "bytes": 629,
+      "sha256": "7c0a23bb79e547a85918d368ff17080320816581f4a06ef07a4670de919a8aec"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/07-cube.en.no-voice.mux.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/07-cube.en.no-voice.mux.json",
+      "kind": "historical-production-record",
+      "bytes": 133,
+      "sha256": "11db18131208745e6c9416a83f8ff1931b13074044ca0681ad172b2692ff6974"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/08-coder-picture.concat-filter.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/08-coder-picture.concat-filter.json",
+      "kind": "historical-production-record",
+      "bytes": 158,
+      "sha256": "da2a9eac019a467c3b7578ae9881bcbd6656cb6a76eecd98ed6545920aa74b52"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/08-coder-picture.dissolves.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/08-coder-picture.dissolves.json",
+      "kind": "historical-production-record",
+      "bytes": 926,
+      "sha256": "4473f494ee479fd27bc94aee9d0f976c4349b6340c02c02d5657475b0ccaf446"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/08-coder-picture.filter.txt",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/08-coder-picture.filter.txt",
+      "kind": "historical-production-record",
+      "bytes": 629,
+      "sha256": "7c0a23bb79e547a85918d368ff17080320816581f4a06ef07a4670de919a8aec"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/08-coder.en.no-voice.mux.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/08-coder.en.no-voice.mux.json",
+      "kind": "historical-production-record",
+      "bytes": 133,
+      "sha256": "1c23b13c1bd6688a78cf005c3639c9559dc7fffda0ed84aaefe51a99a8155eee"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/09-roller-picture.concat-filter.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/09-roller-picture.concat-filter.json",
+      "kind": "historical-production-record",
+      "bytes": 191,
+      "sha256": "8712c57e01551b7450013fdb37ee1dd4da7686400319fab8ecc0d96309ae5038"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/09-roller-picture.dissolves.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/09-roller-picture.dissolves.json",
+      "kind": "historical-production-record",
+      "bytes": 2069,
+      "sha256": "64ced3f2e836300ad36e4dd0647e101a9cb6794b608aec3b36f8e96c92f26d31"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/09-roller-picture.filter.txt",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/09-roller-picture.filter.txt",
+      "kind": "historical-production-record",
+      "bytes": 1485,
+      "sha256": "51ff4e39229c808bf8eb924cc3b6b1833c81769676705eb315e575f6b5a71e56"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/09-roller.en.no-voice.mux.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/09-roller.en.no-voice.mux.json",
+      "kind": "historical-production-record",
+      "bytes": 134,
+      "sha256": "428a107305e99b7bf18991750fb5182c80ec41a0f015e3dd60db9c40841c3aa1"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/archive-footage.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/archive-footage.json",
+      "kind": "historical-production-record",
+      "bytes": 906,
+      "sha256": "8020a0f35e9e562ad52f6085cae07c644df4f61755ab4aea0a222aea91e03dfd"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/balanced-chess-only.patch",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/balanced-chess-only.patch",
+      "kind": "historical-production-record",
+      "bytes": 2389,
+      "sha256": "19c99e214b1949d0d185b9885fa71b2eb9fca81f569b84134117f21bf0951e11"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/bible-home-next-word-view.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/bible-home-next-word-view.json",
+      "kind": "historical-production-record",
+      "bytes": 1002,
+      "sha256": "0d8051bad5705415d0eecc8249de927a36190c2a224fa8c32ce56dd0d31ceef5"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/bible-home-sequence-view.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/bible-home-sequence-view.json",
+      "kind": "historical-production-record",
+      "bytes": 1021,
+      "sha256": "b8c6f75e686d89ac311ac8ab361d8e08feb1f175059d4670d4c24e39e9512864"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/bible-natural-verification.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/bible-natural-verification.json",
+      "kind": "historical-production-record",
+      "bytes": 732,
+      "sha256": "a38e66210f58a76a4fa5ecd5a92b4883bb8a9244efc931f544e314e798cee758"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/bible-next-word-finish.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/bible-next-word-finish.json",
+      "kind": "historical-production-record",
+      "bytes": 809,
+      "sha256": "84aef1090bd644a0a310533c2f8a99c7c628a35545239c32b2ef1bb5f550ffd7"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/bible-next-word-start.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/bible-next-word-start.json",
+      "kind": "historical-production-record",
+      "bytes": 727,
+      "sha256": "3f7ab54aea4150f38553f3494522bc1c2933528da21a3830ffad186b96f88273"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/bible-sequence-complete.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/bible-sequence-complete.json",
+      "kind": "historical-production-record",
+      "bytes": 446,
+      "sha256": "ef8b91028e91149112496083945c06176a091dfa66a5278d67c862a95bd85cfc"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/bible-sequence-read.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/bible-sequence-read.json",
+      "kind": "historical-production-record",
+      "bytes": 405,
+      "sha256": "85af324fb83fbe00d5aa8310eb579c54c1eb37f7f8f369ee36204cb422b6b597"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/chapters.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/chapters.json",
+      "kind": "historical-production-record",
+      "bytes": 1310,
+      "sha256": "5cb8dda1256523c99f16701f6fd552acce749186d8698b9a91f03e3437831c78"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/chess-play-events.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/chess-play-events.json",
+      "kind": "historical-production-record",
+      "bytes": 1284,
+      "sha256": "1e732c6ffa7c26d91ae587a5dfeda7a9c36eaf66b5fef5a533bfde6c0ec97f71"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/cosmic-cliffs.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/cosmic-cliffs.json",
+      "kind": "historical-production-record",
+      "bytes": 184,
+      "sha256": "38aa50398d2c463262c495a9240c09fc0de13bb31300c034a4a7fb266f6d4aac"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/cube-draft-source.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/cube-draft-source.json",
+      "kind": "historical-production-record",
+      "bytes": 571,
+      "sha256": "fd16f2d32f07f384c29bcf8aa761d81ecdea72b173e1916a02e228f00b10ea40"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/cube-framing.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/cube-framing.json",
+      "kind": "historical-production-record",
+      "bytes": 1430,
+      "sha256": "d6b152e2b0f12aa27cf3b52fdc4526533a410b7fd33bde0d336133c8b25e8245"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/cube-photo-source.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/cube-photo-source.json",
+      "kind": "historical-production-record",
+      "bytes": 712,
+      "sha256": "aae62a21fc008040ddbc919c5d4758842dad86cee95303912717b957e1c82461"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/curiosity-builds.en.no-voice.mux.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/curiosity-builds.en.no-voice.mux.json",
+      "kind": "historical-production-record",
+      "bytes": 135,
+      "sha256": "494fb73a8b6654deb5ea253d73f13078b6c1932bf931fc079cdb9af276849cec"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/curiosity-builds.en.silent.concat-filter.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/curiosity-builds.en.silent.concat-filter.json",
+      "kind": "historical-production-record",
+      "bytes": 232,
+      "sha256": "f9fb508a7ea3ec8ff9c185343f05517b5e61a6377a0c71a5dae75c6d52273383"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/curiosity-builds.en.silent.dissolves.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/curiosity-builds.en.silent.dissolves.json",
+      "kind": "historical-production-record",
+      "bytes": 2991,
+      "sha256": "67ba4233e7eca313747a8c5dcae8ff41c4046a5943dbf74f133c2c2c85df11af"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/curiosity-builds.en.silent.filter.txt",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/curiosity-builds.en.silent.filter.txt",
+      "kind": "historical-production-record",
+      "bytes": 2240,
+      "sha256": "6b86bcce73204c310046d617df482ce1a423c5cb02a5f260d29296d470356692"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/desktop-delivery.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/desktop-delivery.json",
+      "kind": "historical-production-record",
+      "bytes": 5504,
+      "sha256": "4f3692ff15339ce2e6d75edd75f4b8d264f08e710611f7992fb5d6632b37f8c9"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/ending-preview.en.no-voice.mux.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/ending-preview.en.no-voice.mux.json",
+      "kind": "historical-production-record",
+      "bytes": 133,
+      "sha256": "7a1121376bf5118d142c25402a02d6168a001f1182e02e0318c08c71e2ca0d66"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/full-cube-pixel-verification.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/full-cube-pixel-verification.json",
+      "kind": "historical-production-record",
+      "bytes": 658,
+      "sha256": "178d94e7e0584613a437bff6ee41f755c45d0823f499f6eaebb5e7bf17bbf3a7"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/gallery-concepts.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/gallery-concepts.json",
+      "kind": "historical-production-record",
+      "bytes": 1815,
+      "sha256": "d299646a8e9b00a65e3e9e9cf49e55f6ae34bfef8cc31606639f82379c2bd314"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/house-model-crop.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/house-model-crop.json",
+      "kind": "historical-production-record",
+      "bytes": 478,
+      "sha256": "268ca28f9f25307776026f1cb53d0fc15b221ad19cc023eac5dcf822e7bb0c51"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/house-model-frames.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/house-model-frames.json",
+      "kind": "historical-production-record",
+      "bytes": 354,
+      "sha256": "46d8d5e36b31beabd6e3f41109d55b21006f9a3891d4c7b665c260520693208e"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/ice-blue-native.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/ice-blue-native.json",
+      "kind": "historical-production-record",
+      "bytes": 231,
+      "sha256": "ae5ec02cdda6c979e2fd1058edd2683a94865aa4f02494d03bee66adfafc191d"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/is-github-deployment-status.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/is-github-deployment-status.json",
+      "kind": "historical-production-record",
+      "bytes": 96,
+      "sha256": "39d1b58df69585d8000f66036626f635198ea80fefcd128ff50904514dd27ff7"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/is-online-name-check.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/is-online-name-check.json",
+      "kind": "historical-production-record",
+      "bytes": 150,
+      "sha256": "1449cab6d1d4e1dcee8ba2b888e86e1896ef5467c3e76738767d8204511efb7d"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/is-online-release-verification.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/is-online-release-verification.json",
+      "kind": "historical-production-record",
+      "bytes": 759,
+      "sha256": "d184524f5bf3a42d469142605091aba6e51b4a44321b09c4db37d94cb63cf0ca"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/is-release-verification.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/is-release-verification.json",
+      "kind": "historical-production-record",
+      "bytes": 1280,
+      "sha256": "3dffa734e7a477e91861352a7d82c5ae100f401f2e4fc7749a51557fbcf923fc"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/is-rename-verification.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/is-rename-verification.json",
+      "kind": "historical-production-record",
+      "bytes": 399,
+      "sha256": "5df3ae20a99fa67e21cdc19ee0936f1f4cfb1ef7341b6e3f21c6f38a139300c4"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/journey-source.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/journey-source.json",
+      "kind": "historical-production-record",
+      "bytes": 841,
+      "sha256": "f659a882291d1e55de86252690e0de20327cdab4c2a750512f17b81b2d5bb945"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/music-cues.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/music-cues.json",
+      "kind": "historical-production-record",
+      "bytes": 4069,
+      "sha256": "efeacf24449505e80bc4143094a822fe0c5deca9c5b875e964dade34b16f9d33"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/music-preserved.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/music-preserved.json",
+      "kind": "historical-production-record",
+      "bytes": 179,
+      "sha256": "8d8f9486705eca9fa20198dbb7e5f8314d18ab65e83cff14d018e3f0763802af"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/new-footage-processing.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/new-footage-processing.json",
+      "kind": "historical-production-record",
+      "bytes": 2715,
+      "sha256": "8530a7cb65b4dcd18d02b13795d896c742edb4703a506348577755714e9f8d69"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/provenance.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/provenance.json",
+      "kind": "historical-production-record",
+      "bytes": 3734,
+      "sha256": "b4d1a50f98bdf434c8073f6c9da89f6777ca6cd6be8ab619a0099a023cfc464a"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/revision-design.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/revision-design.json",
+      "kind": "historical-production-record",
+      "bytes": 1397,
+      "sha256": "a14f1e6035d03947a7858837e2b9e7106ecf2b4c5cb8356f216265b9d947b9b2"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/revision-request.txt",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/revision-request.txt",
+      "kind": "historical-production-record",
+      "bytes": 480,
+      "sha256": "89b576304242a287aa40509cd7d23b29be9fa75efc19ad0914541bed55d0d1f3"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/roller-entry.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/roller-entry.json",
+      "kind": "historical-production-record",
+      "bytes": 2126,
+      "sha256": "b3bba472faf09e6838f22158672e150013b9bf3b91ae2df0bae8b3c9c979c066"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/roller-funnel.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/roller-funnel.json",
+      "kind": "historical-production-record",
+      "bytes": 2166,
+      "sha256": "96f86fbfc4bfbf252c025f452fbf259c3b287c6ca5a8efd5b7bd3dea8d0feb7f"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/roller-overview.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/roller-overview.json",
+      "kind": "historical-production-record",
+      "bytes": 2131,
+      "sha256": "6ad164adf022af4fd4622ff0d77c25d37a475abda7757a60c5bcbd6b2cd01474"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/sky-continuous.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/sky-continuous.json",
+      "kind": "historical-production-record",
+      "bytes": 78100,
+      "sha256": "b60de1754490284c62d6e4976240fe32440a01dee5b713e12389ac5513caf39f"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/sky-orbit-cosmic-cliffs.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/sky-orbit-cosmic-cliffs.json",
+      "kind": "historical-production-record",
+      "bytes": 2244,
+      "sha256": "c3dc87393fdb6e58d964b556ad142681f0687527e3d28e27edabcd88ede1f1fe"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/source-checkouts.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/source-checkouts.json",
+      "kind": "historical-production-record",
+      "bytes": 974,
+      "sha256": "ea53bf63bc1076e5268bcc3e28e44a2b7c7631e4be953eeac33acc28a153b6f1"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/subtitles.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/subtitles.json",
+      "kind": "historical-production-record",
+      "bytes": 4895,
+      "sha256": "62c4464f5e19a5907e2bd2d7ddfa86df58ce15edd021d2974fbabb7820d9ccc3"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/title-motion-pixels.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/title-motion-pixels.json",
+      "kind": "historical-production-record",
+      "bytes": 608,
+      "sha256": "08c8743bde371cbd3607162f1ad8575aca8861305fc8aba76b78e9f395f23ebf"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/title-process-timing-verification.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/title-process-timing-verification.json",
+      "kind": "historical-production-record",
+      "bytes": 267,
+      "sha256": "c85bdd7156cba01165a54d315577f975d5e96e2815e040387e093271979758c7"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/unchanged-timing.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/unchanged-timing.json",
+      "kind": "historical-production-record",
+      "bytes": 176,
+      "sha256": "497e01a25ecfb9e181343abbf9a94e2fa02564db68f40feed18b68dbe9d142e2"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/v4-sources.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/v4-sources.json",
+      "kind": "historical-production-record",
+      "bytes": 1205,
+      "sha256": "d126e5aa3b2aad47c0aa94b5e0207b1c14e32a7ce0a643bd3ffeffc5edfd9248"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/verification.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/verification.json",
+      "kind": "historical-production-record",
+      "bytes": 4276,
+      "sha256": "d0e05d4f46d6eae25c35c7714c3135eb90dfe145c0dbf0c66103fa086a40a2b8"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/youtube-package-verification.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/youtube-package-verification.json",
+      "kind": "historical-production-record",
+      "bytes": 1320,
+      "sha256": "a9c0e065d8369d61f768e68b207eb768a5c8af0a785b186d2bbd91e373e407f3"
+    },
+    {
+      "file": "docs/curiosity-builds/records/v10/youtube-package.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/records/youtube-package.json",
+      "kind": "historical-production-record",
+      "bytes": 11755,
+      "sha256": "ce4fd29683176afb9237d609fad28976c1cf5d4b78de4d17e115c4e8a5f4b906"
+    },
+    {
+      "file": "docs/curiosity-builds/runtime/environment.json",
+      "kind": "archive-documentation-or-inventory",
+      "bytes": 1418,
+      "sha256": "36b721b3e48a8f0146915749dad67178bf50dea2d0889d0dfd6b3078e66f86b8"
+    },
+    {
+      "file": "docs/curiosity-builds/runtime/music-history/debussy-impressions-sources.json",
+      "kind": "archive-documentation-or-inventory",
+      "bytes": 9808,
+      "sha256": "d5aab13b4c0c32441bf6f3abc12ae250205f5ea80c02f6807965a3f8d2ae2ef2"
+    },
+    {
+      "file": "docs/curiosity-builds/runtime/music-history/journey-sources.json",
+      "kind": "archive-documentation-or-inventory",
+      "bytes": 3767,
+      "sha256": "005ca1bf2ce6131540bd5207b91a2c0495ffbf8df6f49fb65092574af3a9132a"
+    },
+    {
+      "file": "docs/curiosity-builds/runtime/music-history/mozart-sketchbook-sources.json",
+      "kind": "archive-documentation-or-inventory",
+      "bytes": 6014,
+      "sha256": "adc7fd008260d75f4aa88f4f54b3f759a42cd59800539edfa02928e0ee4bf112"
+    },
+    {
+      "file": "docs/curiosity-builds/runtime/music-history/sources-credits.json",
+      "kind": "archive-documentation-or-inventory",
+      "bytes": 49461,
+      "sha256": "899db8af480359b08e0a372dbedb12cb6fe6a6e411efbcc77d13dd28d8ee4519"
+    },
+    {
+      "file": "docs/curiosity-builds/runtime/package-lock.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/package-lock.json",
+      "kind": "production-environment",
+      "bytes": 106090,
+      "sha256": "1ba6d7842c0cb768b235310a637d2bc8f3c5ca7855ad8c53cd48f72f44b1062a"
+    },
+    {
+      "file": "docs/curiosity-builds/runtime/package.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/package.json",
+      "kind": "production-environment",
+      "bytes": 9434,
+      "sha256": "83624622234babfd335a96930076f8846dfd227a861fed47640490df23267b0f"
+    },
+    {
+      "file": "docs/curiosity-builds/runtime/tsconfig.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/tsconfig.json",
+      "kind": "production-environment",
+      "bytes": 321,
+      "sha256": "bad82a527cbacad10707c8061e8c4dbdb1f4c8c890b3ceb88752c996448cc06b"
+    },
+    {
+      "file": "docs/curiosity-builds/youtube-description.en.txt",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/docs/curiosity-builds/youtube-description.en.txt",
+      "kind": "publishing-copy",
+      "bytes": 4122,
+      "sha256": "e356b1399424f02369857448bb1ae2271515e9ff162c614c7edde42a0421a928"
+    },
+    {
+      "file": "docs/curiosity-builds/youtube-description.zh.txt",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/docs/curiosity-builds/youtube-description.zh.txt",
+      "kind": "publishing-copy",
+      "bytes": 4129,
+      "sha256": "b03c12bb32cd7bbd1ebf6faab6efdeff5e5372aeb44927c9089f44898bb6106a"
+    },
+    {
+      "file": "docs/curiosity-builds/youtube.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/docs/curiosity-builds/youtube.json",
+      "kind": "publishing-copy",
+      "bytes": 11755,
+      "sha256": "ce4fd29683176afb9237d609fad28976c1cf5d4b78de4d17e115c4e8a5f4b906"
+    },
+    {
+      "file": "scripts/curiosity-builds/assemble.py",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds/assemble.py",
+      "kind": "production-source",
+      "bytes": 7126,
+      "sha256": "5012761bcced7982b296df63f8e99ba43a12e41decf68b7c309ccc6f4941dbde"
+    },
+    {
+      "file": "scripts/curiosity-builds/browser.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds/browser.cjs",
+      "kind": "production-source",
+      "bytes": 801,
+      "sha256": "8992bc14835b4ac62c617802276f87ddb0323ad992a5871d35cce48ee742ddec"
+    },
+    {
+      "file": "scripts/curiosity-builds/capture-is.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds/capture-is.cjs",
+      "kind": "production-source",
+      "bytes": 5844,
+      "sha256": "0e72e3aa858e73f86e82073666d10e561fbc3ac7c50e0e02fffb6542f5f20bf1"
+    },
+    {
+      "file": "scripts/curiosity-builds/capture-live.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds/capture-live.cjs",
+      "kind": "production-source",
+      "bytes": 10995,
+      "sha256": "70dca201d70e1dfee7feb2162ce97c978e32d35206a2e430a9b76d50e076de3b"
+    },
+    {
+      "file": "scripts/curiosity-builds/inspect.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds/inspect.cjs",
+      "kind": "production-source",
+      "bytes": 1352,
+      "sha256": "5fe532c1b0efec275d407c2507c7dc022d58a1e8896e486b25d1c42d2cd10a36"
+    },
+    {
+      "file": "scripts/curiosity-builds/live.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds/live.cjs",
+      "kind": "production-source",
+      "bytes": 4701,
+      "sha256": "5f82f1a658cdfdd14cd7e383c2229872dc063b7affe3567682d189ae33793f16"
+    },
+    {
+      "file": "scripts/curiosity-builds/plan.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds/plan.json",
+      "kind": "production-source",
+      "bytes": 5863,
+      "sha256": "5c5878b1b74542b32ef8bc17e555cb836f316f38d01109bcbcd09136f6d8c8d0"
+    },
+    {
+      "file": "scripts/curiosity-builds/probe.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds/probe.cjs",
+      "kind": "production-source",
+      "bytes": 831,
+      "sha256": "8b93821341030648b7346180d121b6045540071d81f20c31f28eefcc65eddc72"
+    },
+    {
+      "file": "scripts/curiosity-builds/render.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds/render.cjs",
+      "kind": "production-source",
+      "bytes": 1712,
+      "sha256": "dc4ed79c24d41f3c4ab09bbb8eaad9605154dbad2b9b0f4e1b7b0f41db96b8b6"
+    },
+    {
+      "file": "scripts/curiosity-builds/verify.py",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds/verify.py",
+      "kind": "production-source",
+      "bytes": 3583,
+      "sha256": "e7691fed3e6f13ac49c57206825a9fd9fc361485acf06bccd7f2fe0a92159c2c"
+    },
+    {
+      "file": "scripts/curiosity-builds-v10/capture-sky.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v10/capture-sky.cjs",
+      "kind": "production-source",
+      "bytes": 5811,
+      "sha256": "c3437fccb85a1da6ab84cc8719c3912aa38c9cb9126e1c3e1731178c2e15d0ee"
+    },
+    {
+      "file": "scripts/curiosity-builds-v10/classical_mix.py",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v10/classical_mix.py",
+      "kind": "production-source",
+      "bytes": 8252,
+      "sha256": "97dbe5aa2d09485c2ea1a3f4c0770ebe0167d6a0e11c0b80081cf50001b62078"
+    },
+    {
+      "file": "scripts/curiosity-builds-v10/desktop_delivery.py",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v10/desktop_delivery.py",
+      "kind": "production-source",
+      "bytes": 7796,
+      "sha256": "c79d9062a3c72ee3aa35f59f05b6476c483faa794ab2ee71da1cbde15c24a222"
+    },
+    {
+      "file": "scripts/curiosity-builds-v10/plan.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v10/plan.json",
+      "kind": "production-source",
+      "bytes": 11913,
+      "sha256": "73337854f238880180ddb3aa47168aef6e591b2aa1a42aa903cf037d5f39b528"
+    },
+    {
+      "file": "scripts/curiosity-builds-v10/prepare-house-frames.py",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v10/prepare-house-frames.py",
+      "kind": "production-source",
+      "bytes": 799,
+      "sha256": "a4f7cf488a6bfc100353f9face920556a956124f98a27b6cb88fc843fd6e67a6"
+    },
+    {
+      "file": "scripts/curiosity-builds-v10/render.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v10/render.cjs",
+      "kind": "production-source",
+      "bytes": 1719,
+      "sha256": "43350ba13e478f7579bfde4c2f097a9bba14738f3980d7891797010a9bdebf94"
+    },
+    {
+      "file": "scripts/curiosity-builds-v10/render.py",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v10/render.py",
+      "kind": "production-source",
+      "bytes": 9394,
+      "sha256": "03a87ffb6cf0b220e5f00d7377ca664154e8a94b8ff955c9e9b750949410889b"
+    },
+    {
+      "file": "scripts/curiosity-builds-v10/subtitles.py",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v10/subtitles.py",
+      "kind": "production-source",
+      "bytes": 4932,
+      "sha256": "d7262263cf8ad8a9767788acc3b16437f03814aedba6f2095fafdd9122f8263a"
+    },
+    {
+      "file": "scripts/curiosity-builds-v10/verify.py",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v10/verify.py",
+      "kind": "production-source",
+      "bytes": 16213,
+      "sha256": "b5c2552f0e288ce2d5cf7fb781500dc4c8810e43b126c9d0b10f29f7d220f1e5"
+    },
+    {
+      "file": "scripts/curiosity-builds-v10/youtube.py",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v10/youtube.py",
+      "kind": "production-source",
+      "bytes": 11091,
+      "sha256": "4ecfe4b2aa4c410faa17e0d2b8eaf0dc3934f47ac5e6d800c6ffe8ed44341a11"
+    },
+    {
+      "file": "scripts/curiosity-builds-v2/assemble.py",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v2/assemble.py",
+      "kind": "production-source",
+      "bytes": 7059,
+      "sha256": "7ca9385cbfa3187059519c8e728f9c27a8e92973f5d137bf7a9574815b017a6d"
+    },
+    {
+      "file": "scripts/curiosity-builds-v2/browser.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v2/browser.cjs",
+      "kind": "production-source",
+      "bytes": 801,
+      "sha256": "fdc59683083c5869a60e172fd92c69f71191cff2dd49d74438dd919a03698770"
+    },
+    {
+      "file": "scripts/curiosity-builds-v2/capture-is.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v2/capture-is.cjs",
+      "kind": "production-source",
+      "bytes": 6500,
+      "sha256": "42944c47d148c87134affb439cd345a504a6d0abae12bd6d62fd2abd4a2e96e2"
+    },
+    {
+      "file": "scripts/curiosity-builds-v2/capture-live.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v2/capture-live.cjs",
+      "kind": "production-source",
+      "bytes": 10998,
+      "sha256": "ff16bbca1152de7e302b52b5c6cfce568c308015a6698d42e59db671b1ffab76"
+    },
+    {
+      "file": "scripts/curiosity-builds-v2/capture-revision.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v2/capture-revision.cjs",
+      "kind": "production-source",
+      "bytes": 5361,
+      "sha256": "468a75331122f9363442b04dfe3e204bc331a21c217195e5fd327e66a0fb29f2"
+    },
+    {
+      "file": "scripts/curiosity-builds-v2/classical_mix.py",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v2/classical_mix.py",
+      "kind": "production-source",
+      "bytes": 4345,
+      "sha256": "6f018cc00733c7d1610f486e4043dcccad763a33cede2ee460823098e7401b7f"
+    },
+    {
+      "file": "scripts/curiosity-builds-v2/inspect.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v2/inspect.cjs",
+      "kind": "production-source",
+      "bytes": 1355,
+      "sha256": "544c19a2c64e96cd73e51fc5453d137d5f9e6a74ba0c2d7f3745d763b292dc64"
+    },
+    {
+      "file": "scripts/curiosity-builds-v2/live.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v2/live.cjs",
+      "kind": "production-source",
+      "bytes": 4701,
+      "sha256": "a5595d562206d89b6e6fd3a9a838ceed288520acc8491f7b59dca1b30cb21f9d"
+    },
+    {
+      "file": "scripts/curiosity-builds-v2/music_sources.py",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v2/music_sources.py",
+      "kind": "production-source",
+      "bytes": 2180,
+      "sha256": "e6af24d91bc47d7af42b500573518fb79213530b8a3ff4fa1e7351890b30e49c"
+    },
+    {
+      "file": "scripts/curiosity-builds-v2/plan.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v2/plan.json",
+      "kind": "production-source",
+      "bytes": 7661,
+      "sha256": "4eb51ed5aeb0d061682928d18af1783dcda3574cb8a05e1e93a9dc5a7f6fe482"
+    },
+    {
+      "file": "scripts/curiosity-builds-v2/probe.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v2/probe.cjs",
+      "kind": "production-source",
+      "bytes": 834,
+      "sha256": "744980943e44ab9f305ee743c05f2b1fc35e24dc68478b334aeec56e0e24fcad"
+    },
+    {
+      "file": "scripts/curiosity-builds-v2/render.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v2/render.cjs",
+      "kind": "production-source",
+      "bytes": 1718,
+      "sha256": "89bb81e1cb19e029bd41ccc46fa894e60263f8fdb1ae48457d00bcbdd72ed4e4"
+    },
+    {
+      "file": "scripts/curiosity-builds-v2/verify.py",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v2/verify.py",
+      "kind": "production-source",
+      "bytes": 5823,
+      "sha256": "a8b366275d0cb71b8233748f2f28ef16b96f5e7ef59f32d9fcff6a3a0fdfc6f9"
+    },
+    {
+      "file": "scripts/curiosity-builds-v2/weekly.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v2/weekly.cjs",
+      "kind": "production-source",
+      "bytes": 1762,
+      "sha256": "600f54bc876b8cefea1ca7f4c59b80380128a097265b18b8cff5bea0c8abeb83"
+    },
+    {
+      "file": "scripts/curiosity-builds-v3/assemble.py",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v3/assemble.py",
+      "kind": "production-source",
+      "bytes": 7072,
+      "sha256": "a31a9b6f72104faa9ddd33b838cfb1c51ff15c06f8cab183ee7e718cf83f01cd"
+    },
+    {
+      "file": "scripts/curiosity-builds-v3/browser.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v3/browser.cjs",
+      "kind": "production-source",
+      "bytes": 801,
+      "sha256": "fdc59683083c5869a60e172fd92c69f71191cff2dd49d74438dd919a03698770"
+    },
+    {
+      "file": "scripts/curiosity-builds-v3/capture-is.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v3/capture-is.cjs",
+      "kind": "production-source",
+      "bytes": 6500,
+      "sha256": "3e8d4754126cd660bb977dc9f4add1862fd2f8f48e81e69d09712d0e9ea65b41"
+    },
+    {
+      "file": "scripts/curiosity-builds-v3/capture-live.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v3/capture-live.cjs",
+      "kind": "production-source",
+      "bytes": 10998,
+      "sha256": "e2c95f16681594528c096ee4e6ad12a23b1d231bd15f5a619a2833416c6e2370"
+    },
+    {
+      "file": "scripts/curiosity-builds-v3/capture-revision.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v3/capture-revision.cjs",
+      "kind": "production-source",
+      "bytes": 5361,
+      "sha256": "468a75331122f9363442b04dfe3e204bc331a21c217195e5fd327e66a0fb29f2"
+    },
+    {
+      "file": "scripts/curiosity-builds-v3/classical_mix.py",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v3/classical_mix.py",
+      "kind": "production-source",
+      "bytes": 5730,
+      "sha256": "9b5f19362b2f800bf584af5570ddfd4d8d768a23f89d49b2c316bf4a2558bb1b"
+    },
+    {
+      "file": "scripts/curiosity-builds-v3/inspect.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v3/inspect.cjs",
+      "kind": "production-source",
+      "bytes": 1355,
+      "sha256": "60a2ae7976bb6fbd9c026783bcea4eb70dcb09deb44c5f9b111879edcca1cf5d"
+    },
+    {
+      "file": "scripts/curiosity-builds-v3/live.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v3/live.cjs",
+      "kind": "production-source",
+      "bytes": 4701,
+      "sha256": "a5595d562206d89b6e6fd3a9a838ceed288520acc8491f7b59dca1b30cb21f9d"
+    },
+    {
+      "file": "scripts/curiosity-builds-v3/music_sources.py",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v3/music_sources.py",
+      "kind": "production-source",
+      "bytes": 2180,
+      "sha256": "ba4885ccc5706b1588de7dff561da4127a38464b0c83bc5a0c8491da56cadfc5"
+    },
+    {
+      "file": "scripts/curiosity-builds-v3/plan.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v3/plan.json",
+      "kind": "production-source",
+      "bytes": 8331,
+      "sha256": "e7c14758f90322af8e488b01368adedfe5a7f344f0ba09d14a430c5b490c2b01"
+    },
+    {
+      "file": "scripts/curiosity-builds-v3/probe.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v3/probe.cjs",
+      "kind": "production-source",
+      "bytes": 834,
+      "sha256": "445cde9a4eb3c019f41466eea4dfc44cdcfe2fd4949a1117ac08e9c83f9c4005"
+    },
+    {
+      "file": "scripts/curiosity-builds-v3/render.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v3/render.cjs",
+      "kind": "production-source",
+      "bytes": 1718,
+      "sha256": "1ccb1a3a0902b802b55337531952d02cda305b1f8976eeb24726a483eea9a8cc"
+    },
+    {
+      "file": "scripts/curiosity-builds-v3/verify.py",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v3/verify.py",
+      "kind": "production-source",
+      "bytes": 7042,
+      "sha256": "ca68081218b207caeb0f0f238fdf2bc89951664e42c7e91d42526319c79edad2"
+    },
+    {
+      "file": "scripts/curiosity-builds-v3/weekly.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v3/weekly.cjs",
+      "kind": "production-source",
+      "bytes": 1762,
+      "sha256": "600f54bc876b8cefea1ca7f4c59b80380128a097265b18b8cff5bea0c8abeb83"
+    },
+    {
+      "file": "scripts/curiosity-builds-v4/assemble.py",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v4/assemble.py",
+      "kind": "production-source",
+      "bytes": 8358,
+      "sha256": "798cf1467613b60f403e321270d17eeaf575a2b77bf93a05351941a7162464b8"
+    },
+    {
+      "file": "scripts/curiosity-builds-v4/browser.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v4/browser.cjs",
+      "kind": "production-source",
+      "bytes": 801,
+      "sha256": "fdc59683083c5869a60e172fd92c69f71191cff2dd49d74438dd919a03698770"
+    },
+    {
+      "file": "scripts/curiosity-builds-v4/capture-cosmic.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v4/capture-cosmic.cjs",
+      "kind": "production-source",
+      "bytes": 1794,
+      "sha256": "e04f45d64342d4cadc3db2bbc925b39fec0b027b76db46db46712fb5ab5efcc8"
+    },
+    {
+      "file": "scripts/curiosity-builds-v4/capture-is.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v4/capture-is.cjs",
+      "kind": "production-source",
+      "bytes": 6536,
+      "sha256": "afb7227bfc9a2b920fdad4eb6470a45244ac1f4bfefc85ff9986c4df75c26a03"
+    },
+    {
+      "file": "scripts/curiosity-builds-v4/capture-live.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v4/capture-live.cjs",
+      "kind": "production-source",
+      "bytes": 10998,
+      "sha256": "95a549d8e4519367b7b50b8dfc000c607dc6548b03b581b7337c4ea989674c2b"
+    },
+    {
+      "file": "scripts/curiosity-builds-v4/capture-revision.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v4/capture-revision.cjs",
+      "kind": "production-source",
+      "bytes": 5361,
+      "sha256": "468a75331122f9363442b04dfe3e204bc331a21c217195e5fd327e66a0fb29f2"
+    },
+    {
+      "file": "scripts/curiosity-builds-v4/classical_mix.py",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v4/classical_mix.py",
+      "kind": "production-source",
+      "bytes": 6043,
+      "sha256": "b15dece91de908b04f994424e33b5857a41fc594fea4bd0021f6b5bfe0a258e6"
+    },
+    {
+      "file": "scripts/curiosity-builds-v4/inspect.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v4/inspect.cjs",
+      "kind": "production-source",
+      "bytes": 1355,
+      "sha256": "8d73ac2c75602a564c4641482a05c5250046bf3be6e21d416102cc214308c688"
+    },
+    {
+      "file": "scripts/curiosity-builds-v4/live.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v4/live.cjs",
+      "kind": "production-source",
+      "bytes": 4701,
+      "sha256": "a5595d562206d89b6e6fd3a9a838ceed288520acc8491f7b59dca1b30cb21f9d"
+    },
+    {
+      "file": "scripts/curiosity-builds-v4/music_sources.py",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v4/music_sources.py",
+      "kind": "production-source",
+      "bytes": 2180,
+      "sha256": "9f2a94bddd094f158e1db7cdbeb2b882f2100fc041f67418cbf1bb71b966d319"
+    },
+    {
+      "file": "scripts/curiosity-builds-v4/plan.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v4/plan.json",
+      "kind": "production-source",
+      "bytes": 8781,
+      "sha256": "651021a4a56835b1434bb51ef4f94e22157359f92731d5f9e08adf402262e0b3"
+    },
+    {
+      "file": "scripts/curiosity-builds-v4/probe.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v4/probe.cjs",
+      "kind": "production-source",
+      "bytes": 834,
+      "sha256": "1b572f9ba06acfcb6ad00b5a4f2423355ae976cd87d5d8c6af5a2104a4f670da"
+    },
+    {
+      "file": "scripts/curiosity-builds-v4/render.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v4/render.cjs",
+      "kind": "production-source",
+      "bytes": 1718,
+      "sha256": "77471904d03e60a7383eab2e67f060edb25d17dc82f3eb4af151edbfce371fdb"
+    },
+    {
+      "file": "scripts/curiosity-builds-v4/serve-capture.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v4/serve-capture.cjs",
+      "kind": "production-source",
+      "bytes": 484,
+      "sha256": "46a897c8b8811214584ef703ff9157197690477465f40c4295fe46336ac0ad96"
+    },
+    {
+      "file": "scripts/curiosity-builds-v4/sweet-motion.swift",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v4/sweet-motion.swift",
+      "kind": "production-source",
+      "bytes": 1051,
+      "sha256": "dd17f69023ca4e1aa99df5ee3d1064bc5c7cf8752671ecb4900d521c316c7bb8"
+    },
+    {
+      "file": "scripts/curiosity-builds-v4/verify.py",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v4/verify.py",
+      "kind": "production-source",
+      "bytes": 8181,
+      "sha256": "f145059f26b04200669d825346f623f9de0dd1f1d345ebda522750a9b723c062"
+    },
+    {
+      "file": "scripts/curiosity-builds-v4/weekly.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v4/weekly.cjs",
+      "kind": "production-source",
+      "bytes": 1762,
+      "sha256": "600f54bc876b8cefea1ca7f4c59b80380128a097265b18b8cff5bea0c8abeb83"
+    },
+    {
+      "file": "scripts/curiosity-builds-v5/assemble.py",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v5/assemble.py",
+      "kind": "production-source",
+      "bytes": 8390,
+      "sha256": "37000a37b707d714fff4721be06c4aadb45e593b49c641f80affac3c52aef393"
+    },
+    {
+      "file": "scripts/curiosity-builds-v5/bible-modes.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v5/bible-modes.cjs",
+      "kind": "production-source",
+      "bytes": 4656,
+      "sha256": "e2fa9b542edd070345e501aafa184e194ca3c3a7b72170bb1bd03788eb79ceb0"
+    },
+    {
+      "file": "scripts/curiosity-builds-v5/bible-natural.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v5/bible-natural.cjs",
+      "kind": "production-source",
+      "bytes": 2100,
+      "sha256": "f50033c94aaa9eece3e9e1aa05e7a3168716133b998174d1b5d78cc296c563b0"
+    },
+    {
+      "file": "scripts/curiosity-builds-v5/browser.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v5/browser.cjs",
+      "kind": "production-source",
+      "bytes": 801,
+      "sha256": "fdc59683083c5869a60e172fd92c69f71191cff2dd49d74438dd919a03698770"
+    },
+    {
+      "file": "scripts/curiosity-builds-v5/capture-cosmic.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v5/capture-cosmic.cjs",
+      "kind": "production-source",
+      "bytes": 1794,
+      "sha256": "e04f45d64342d4cadc3db2bbc925b39fec0b027b76db46db46712fb5ab5efcc8"
+    },
+    {
+      "file": "scripts/curiosity-builds-v5/capture-is.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v5/capture-is.cjs",
+      "kind": "production-source",
+      "bytes": 6536,
+      "sha256": "99824085e659e8ba947af09410d0d2205f2bb75560802404de5385d98ca68b3c"
+    },
+    {
+      "file": "scripts/curiosity-builds-v5/capture-live.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v5/capture-live.cjs",
+      "kind": "production-source",
+      "bytes": 10998,
+      "sha256": "07aa906ad392d6946760342b592a0bf509f4ff7e805a6099756cd58acdae2dba"
+    },
+    {
+      "file": "scripts/curiosity-builds-v5/capture-revision.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v5/capture-revision.cjs",
+      "kind": "production-source",
+      "bytes": 5361,
+      "sha256": "468a75331122f9363442b04dfe3e204bc331a21c217195e5fd327e66a0fb29f2"
+    },
+    {
+      "file": "scripts/curiosity-builds-v5/classical_mix.py",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v5/classical_mix.py",
+      "kind": "production-source",
+      "bytes": 6286,
+      "sha256": "6f8643084bb65a7b07ffbb286455e98c661bd1faec598dd2ec96acc8b56d8065"
+    },
+    {
+      "file": "scripts/curiosity-builds-v5/desktop_delivery.py",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v5/desktop_delivery.py",
+      "kind": "production-source",
+      "bytes": 5063,
+      "sha256": "6987f6fa7305eb444d2dc1f00556c20bb995c3012ef24c0d85ac6728b1cb70e5"
+    },
+    {
+      "file": "scripts/curiosity-builds-v5/inspect.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v5/inspect.cjs",
+      "kind": "production-source",
+      "bytes": 1355,
+      "sha256": "aad7331d3df79cf6681265a182476e313d763a78a73468bd9165e9a9c65ecd8e"
+    },
+    {
+      "file": "scripts/curiosity-builds-v5/live.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v5/live.cjs",
+      "kind": "production-source",
+      "bytes": 4701,
+      "sha256": "a5595d562206d89b6e6fd3a9a838ceed288520acc8491f7b59dca1b30cb21f9d"
+    },
+    {
+      "file": "scripts/curiosity-builds-v5/music_sources.py",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v5/music_sources.py",
+      "kind": "production-source",
+      "bytes": 2180,
+      "sha256": "4321b767b3ef452c5d7601ee26479d6f5edd8c7774a5f456c26a65d18673f080"
+    },
+    {
+      "file": "scripts/curiosity-builds-v5/plan.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v5/plan.json",
+      "kind": "production-source",
+      "bytes": 9747,
+      "sha256": "8806559ca7175d073b9652bede84b11f5f53aac8660957fc3766815e4ec2d8aa"
+    },
+    {
+      "file": "scripts/curiosity-builds-v5/probe.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v5/probe.cjs",
+      "kind": "production-source",
+      "bytes": 834,
+      "sha256": "e0e0b4fec3877b0681ff0f9875b3759065773e992dde8177da9d0912f93a592c"
+    },
+    {
+      "file": "scripts/curiosity-builds-v5/render.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v5/render.cjs",
+      "kind": "production-source",
+      "bytes": 1718,
+      "sha256": "66f0ed922042672e22fec1fadca0e550cf931536bd53e09f28597af709cf2582"
+    },
+    {
+      "file": "scripts/curiosity-builds-v5/serve-bible.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v5/serve-bible.cjs",
+      "kind": "production-source",
+      "bytes": 450,
+      "sha256": "ddc52f35d9d1d13bb4ede4f1554d8fa41246ff414a471b7f4fe4de03ad7b09cd"
+    },
+    {
+      "file": "scripts/curiosity-builds-v5/serve-capture.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v5/serve-capture.cjs",
+      "kind": "production-source",
+      "bytes": 484,
+      "sha256": "46a897c8b8811214584ef703ff9157197690477465f40c4295fe46336ac0ad96"
+    },
+    {
+      "file": "scripts/curiosity-builds-v5/subtitles.py",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v5/subtitles.py",
+      "kind": "production-source",
+      "bytes": 5085,
+      "sha256": "da47af9dcdbd2ef7096f94a15aa8a87b67fee5b56de16001462ca12536043714"
+    },
+    {
+      "file": "scripts/curiosity-builds-v5/sweet-motion.swift",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v5/sweet-motion.swift",
+      "kind": "production-source",
+      "bytes": 1051,
+      "sha256": "dd17f69023ca4e1aa99df5ee3d1064bc5c7cf8752671ecb4900d521c316c7bb8"
+    },
+    {
+      "file": "scripts/curiosity-builds-v5/verify.py",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v5/verify.py",
+      "kind": "production-source",
+      "bytes": 9033,
+      "sha256": "1d9fbe477070574138aa773f5516c7ff590ccdf8c7f4800052183d7e2feec9c2"
+    },
+    {
+      "file": "scripts/curiosity-builds-v5/weekly.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v5/weekly.cjs",
+      "kind": "production-source",
+      "bytes": 1762,
+      "sha256": "600f54bc876b8cefea1ca7f4c59b80380128a097265b18b8cff5bea0c8abeb83"
+    },
+    {
+      "file": "scripts/curiosity-builds-v6/classical_mix.py",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v6/classical_mix.py",
+      "kind": "production-source",
+      "bytes": 7610,
+      "sha256": "eda20e725cf54c5090abed2b1ef4e04016a9d64202851db6b49658f91c9af20c"
+    },
+    {
+      "file": "scripts/curiosity-builds-v6/desktop_delivery.py",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v6/desktop_delivery.py",
+      "kind": "production-source",
+      "bytes": 6351,
+      "sha256": "27498c2420da9a4d52d5c9edf0cb2ccb5713c8356eee2bc56fbf7b2dee14ec3a"
+    },
+    {
+      "file": "scripts/curiosity-builds-v6/plan.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v6/plan.json",
+      "kind": "production-source",
+      "bytes": 10585,
+      "sha256": "82a5fbf2fd24c3398fae22380b078374adc8d322d699f50c8dc71d17ad9c7345"
+    },
+    {
+      "file": "scripts/curiosity-builds-v6/render.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v6/render.cjs",
+      "kind": "production-source",
+      "bytes": 1718,
+      "sha256": "750fb6eda29f0db5eea0e433e1c9483f385bd0399e03be4844ab7db4c91fdda1"
+    },
+    {
+      "file": "scripts/curiosity-builds-v6/render.py",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v6/render.py",
+      "kind": "production-source",
+      "bytes": 9101,
+      "sha256": "1ba9001ca47074f50e6c71c94857ea54478a2a7e6a9b0ba59438c9770a91d366"
+    },
+    {
+      "file": "scripts/curiosity-builds-v6/subtitles.py",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v6/subtitles.py",
+      "kind": "production-source",
+      "bytes": 5085,
+      "sha256": "0c94c34c44326f8994c72644909810d0f5eb85daf92cd04a799ad380ece32231"
+    },
+    {
+      "file": "scripts/curiosity-builds-v6/verify.py",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v6/verify.py",
+      "kind": "production-source",
+      "bytes": 11548,
+      "sha256": "b7ce82853999a9a496f80771e5581faac8f2ba6e42f75f2e6f393fdaa2bc2d55"
+    },
+    {
+      "file": "scripts/curiosity-builds-v7/capture-ice.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v7/capture-ice.cjs",
+      "kind": "production-source",
+      "bytes": 2391,
+      "sha256": "5cca3bab6934fd1213017137580fae5eed953172847c2dcf210121b187b2d93f"
+    },
+    {
+      "file": "scripts/curiosity-builds-v7/capture-is.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v7/capture-is.cjs",
+      "kind": "production-source",
+      "bytes": 6536,
+      "sha256": "7fd8f2c1f14588eaaab8c36091fb6c6c1fba31ab5e76ce8fbc11a14a348db5b1"
+    },
+    {
+      "file": "scripts/curiosity-builds-v7/classical_mix.py",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v7/classical_mix.py",
+      "kind": "production-source",
+      "bytes": 7556,
+      "sha256": "bcfba7a0342aacbb430c9889610bbace1e6d903c189c302d288e301f8c9cc0f3"
+    },
+    {
+      "file": "scripts/curiosity-builds-v7/desktop_delivery.py",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v7/desktop_delivery.py",
+      "kind": "production-source",
+      "bytes": 6746,
+      "sha256": "2234fd09bcb2989e65d86cd74281488d6bc55909f4fbe37f30b0526962d3239c"
+    },
+    {
+      "file": "scripts/curiosity-builds-v7/plan.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v7/plan.json",
+      "kind": "production-source",
+      "bytes": 11184,
+      "sha256": "57b2394a4e8464add82a76b9c99cf68d6db2c4c2bc0f531f605d1e6df7874178"
+    },
+    {
+      "file": "scripts/curiosity-builds-v7/render.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v7/render.cjs",
+      "kind": "production-source",
+      "bytes": 1711,
+      "sha256": "25da5ed782205eec84182f84cc094de3e933911b05e813a29ae558bdce087269"
+    },
+    {
+      "file": "scripts/curiosity-builds-v7/render.py",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v7/render.py",
+      "kind": "production-source",
+      "bytes": 8858,
+      "sha256": "f05ea23fced5a8e50e1e7ad7c0ae890d8c4088e5e74d56c8323df90a77c46f45"
+    },
+    {
+      "file": "scripts/curiosity-builds-v7/subtitles.py",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v7/subtitles.py",
+      "kind": "production-source",
+      "bytes": 5163,
+      "sha256": "599d7874e3358822993f1258dc50bc16d753fc532858ab7bd184020c5fc4ed2c"
+    },
+    {
+      "file": "scripts/curiosity-builds-v7/verify.py",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v7/verify.py",
+      "kind": "production-source",
+      "bytes": 12368,
+      "sha256": "44d77d8ecd52c30def8c59d512a45c8ce763b5be287c366c2c1cd25a915d4489"
+    },
+    {
+      "file": "scripts/curiosity-builds-v8/classical_mix.py",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v8/classical_mix.py",
+      "kind": "production-source",
+      "bytes": 7815,
+      "sha256": "9f25b16f5c2c6d92eb54019c4dec1a845a49b11d0b0bca95f81c9b13ed311143"
+    },
+    {
+      "file": "scripts/curiosity-builds-v8/desktop_delivery.py",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v8/desktop_delivery.py",
+      "kind": "production-source",
+      "bytes": 7309,
+      "sha256": "830ca8011f27dccef4ee59d4e5df00d6dc76e2d1abfa8c5e210a148c64cfb2fc"
+    },
+    {
+      "file": "scripts/curiosity-builds-v8/plan.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v8/plan.json",
+      "kind": "production-source",
+      "bytes": 11610,
+      "sha256": "c53080a78c5627d83f805a4291c2c10e1a19a5b216c09d6f3c41af62478fb184"
+    },
+    {
+      "file": "scripts/curiosity-builds-v8/render.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v8/render.cjs",
+      "kind": "production-source",
+      "bytes": 1711,
+      "sha256": "3081cbe44601c13f47d957d32ac015ce8111b39d2c34cfea1c57fc53e86d3a9b"
+    },
+    {
+      "file": "scripts/curiosity-builds-v8/render.py",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v8/render.py",
+      "kind": "production-source",
+      "bytes": 9240,
+      "sha256": "e102fe6896e89c964a48df4430dfcfbc7f063ad4bd467659432ec481c9b9b64b"
+    },
+    {
+      "file": "scripts/curiosity-builds-v8/subtitles.py",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v8/subtitles.py",
+      "kind": "production-source",
+      "bytes": 5129,
+      "sha256": "e42d9c5a3cd6d691c8c4290beda8d68241a3fb4f4ed06d02335cc224d7a5b517"
+    },
+    {
+      "file": "scripts/curiosity-builds-v8/verify.py",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v8/verify.py",
+      "kind": "production-source",
+      "bytes": 13643,
+      "sha256": "ae2a39ac8a21f6e910fced6490d8647561710889426eb172a418439cab94bea2"
+    },
+    {
+      "file": "scripts/curiosity-builds-v9/capture-sky.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v9/capture-sky.cjs",
+      "kind": "production-source",
+      "bytes": 5810,
+      "sha256": "d9089bd74d73593ed33d45f38397eebf3074c37126f7afe9f2b87fe412b1595a"
+    },
+    {
+      "file": "scripts/curiosity-builds-v9/classical_mix.py",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v9/classical_mix.py",
+      "kind": "production-source",
+      "bytes": 8106,
+      "sha256": "b89b9461f2f8ac22359eb0b90ecd043d2479ba06ce65d95c7d898a723b319586"
+    },
+    {
+      "file": "scripts/curiosity-builds-v9/desktop_delivery.py",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v9/desktop_delivery.py",
+      "kind": "production-source",
+      "bytes": 7650,
+      "sha256": "88ab78568b1302c58c516674aedfd1414da985740782da854d4b3c35038257eb"
+    },
+    {
+      "file": "scripts/curiosity-builds-v9/plan.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v9/plan.json",
+      "kind": "production-source",
+      "bytes": 11536,
+      "sha256": "23d070d6eeafb070de3d84fa9ca1698c75889ec67dbc1362fb6132355a085fe2"
+    },
+    {
+      "file": "scripts/curiosity-builds-v9/prepare-house-frames.py",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v9/prepare-house-frames.py",
+      "kind": "production-source",
+      "bytes": 798,
+      "sha256": "978075a739660000f84555f1c2c70eb8685313bb3f0301ac480edecb14a5a70a"
+    },
+    {
+      "file": "scripts/curiosity-builds-v9/render.cjs",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v9/render.cjs",
+      "kind": "production-source",
+      "bytes": 1711,
+      "sha256": "81cc81f329981d9d9981e0c70ebe0bf12e9d76c8abb58be9902610e98f1ad6fe"
+    },
+    {
+      "file": "scripts/curiosity-builds-v9/render.py",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v9/render.py",
+      "kind": "production-source",
+      "bytes": 9393,
+      "sha256": "a1ea325a1b2a11855dda1769733558e433af889aab9def9ae0d97b6851e39e10"
+    },
+    {
+      "file": "scripts/curiosity-builds-v9/subtitles.py",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v9/subtitles.py",
+      "kind": "production-source",
+      "bytes": 4895,
+      "sha256": "a91fc08da48024c1c050f51f609bfe5f4c0897d13877db52cc699f94fb3d2568"
+    },
+    {
+      "file": "scripts/curiosity-builds-v9/verify.py",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/scripts/curiosity-builds-v9/verify.py",
+      "kind": "production-source",
+      "bytes": 15363,
+      "sha256": "a7e28a410ed7b03f0eb4ba63904ece5f134ee88b6507320863e30867eddbd2d3"
+    },
+    {
+      "file": "src/videos/curiosity-builds/Film.tsx",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds/Film.tsx",
+      "kind": "production-source",
+      "bytes": 8014,
+      "sha256": "6f08b9be25db2034f7b8b5c8cf21a351574d783b8201b174ea7b4ac38bae3951"
+    },
+    {
+      "file": "src/videos/curiosity-builds-v10/Film.tsx",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v10/Film.tsx",
+      "kind": "production-source",
+      "bytes": 7485,
+      "sha256": "bbd35003eba98dd735860cfeef2fd2fcad7ea5c012924a907afe8f438380571c"
+    },
+    {
+      "file": "src/videos/curiosity-builds-v10/assets/cube-draft-source.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v10/assets/cube-draft-source.json",
+      "kind": "production-source",
+      "bytes": 571,
+      "sha256": "fd16f2d32f07f384c29bcf8aa761d81ecdea72b173e1916a02e228f00b10ea40"
+    },
+    {
+      "file": "src/videos/curiosity-builds-v10/assets/cube-draft.prompt.txt",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v10/assets/cube-draft.prompt.txt",
+      "kind": "production-source",
+      "bytes": 1144,
+      "sha256": "f58082c3907f1043ba580f35814e264347aca17157e4de08fe1cd6afd24cf3a7"
+    },
+    {
+      "file": "src/videos/curiosity-builds-v10/assets/cube-photo-credits.txt",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v10/assets/cube-photo-credits.txt",
+      "kind": "production-source",
+      "bytes": 344,
+      "sha256": "bd0fae4e526ce1c57ca685fb5136a1472205e4482365fd82161c1bbb46f98ad9"
+    },
+    {
+      "file": "src/videos/curiosity-builds-v10/assets/cube-photo-source.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v10/assets/cube-photo-source.json",
+      "kind": "production-source",
+      "bytes": 712,
+      "sha256": "aae62a21fc008040ddbc919c5d4758842dad86cee95303912717b957e1c82461"
+    },
+    {
+      "file": "src/videos/curiosity-builds-v10/assets/gallery-concepts.source.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v10/assets/gallery-concepts.source.json",
+      "kind": "production-source",
+      "bytes": 1823,
+      "sha256": "4de411cd58ee4c8e9617252c114146c0f85ccb1267447fa7d4fcf7cb6ec763f3"
+    },
+    {
+      "file": "src/videos/curiosity-builds-v10/assets/journey-gallery-concept.prompt.txt",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v10/assets/journey-gallery-concept.prompt.txt",
+      "kind": "production-source",
+      "bytes": 2934,
+      "sha256": "5a09ce42396c11f3b41782c3b0441c5a9e65b0e65426682e5a41176331802639"
+    },
+    {
+      "file": "src/videos/curiosity-builds-v10/assets/journey-gallery-half-color.prompt.txt",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v10/assets/journey-gallery-half-color.prompt.txt",
+      "kind": "production-source",
+      "bytes": 1429,
+      "sha256": "31e2ccb7f421bd5b4c67924e1421dae01930b2e3e0245a11dcc19c789f034460"
+    },
+    {
+      "file": "src/videos/curiosity-builds-v10/assets/vangogh-gallery-concept.prompt.txt",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v10/assets/vangogh-gallery-concept.prompt.txt",
+      "kind": "production-source",
+      "bytes": 2863,
+      "sha256": "8761851d3b699c2b3ec993cac2cf2b245fc450101ec9511fba89ba23e7edeba4"
+    },
+    {
+      "file": "src/videos/curiosity-builds-v10/assets/vangogh-gallery-half-color.prompt.txt",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v10/assets/vangogh-gallery-half-color.prompt.txt",
+      "kind": "production-source",
+      "bytes": 1429,
+      "sha256": "1f1f6f05d3f72b7e73e264aec5706d59ea193c166daf66e4679026b73897288d"
+    },
+    {
+      "file": "src/videos/curiosity-builds-v2/Film.tsx",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v2/Film.tsx",
+      "kind": "production-source",
+      "bytes": 9397,
+      "sha256": "6a72f533f63e818f59a8a1459015dd63505f05b62091fe83aeab6b6a08c2a014"
+    },
+    {
+      "file": "src/videos/curiosity-builds-v3/Film.tsx",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v3/Film.tsx",
+      "kind": "production-source",
+      "bytes": 9397,
+      "sha256": "a705a32096ad0182b6bc23e36b8c85b99d4eca539ee774ed0422193d3101c54e"
+    },
+    {
+      "file": "src/videos/curiosity-builds-v4/Film.tsx",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v4/Film.tsx",
+      "kind": "production-source",
+      "bytes": 7777,
+      "sha256": "d95d5f0f0f4c9e8697d2fe68231322b64c541832ab7a6119c1cdd13618240ecc"
+    },
+    {
+      "file": "src/videos/curiosity-builds-v5/Film.tsx",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v5/Film.tsx",
+      "kind": "production-source",
+      "bytes": 7777,
+      "sha256": "d8cea7e19f90f4017cfeb99bfbcab565808011aae13961a18f33241a1401eba9"
+    },
+    {
+      "file": "src/videos/curiosity-builds-v6/Film.tsx",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v6/Film.tsx",
+      "kind": "production-source",
+      "bytes": 7515,
+      "sha256": "93fec427f1e3c3ff1bd3aa57b39f38bcd2e58a239db86d9fbf9ad34c0d81b9df"
+    },
+    {
+      "file": "src/videos/curiosity-builds-v6/assets/cartoon-cube.prompt.txt",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v6/assets/cartoon-cube.prompt.txt",
+      "kind": "production-source",
+      "bytes": 1509,
+      "sha256": "1f21cd6d37afa3ffde0c37c9f9c3877dce2d65e3f9fa3e99e9ee28445dc54acb"
+    },
+    {
+      "file": "src/videos/curiosity-builds-v6/assets/cube-photo-credits.txt",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v6/assets/cube-photo-credits.txt",
+      "kind": "production-source",
+      "bytes": 344,
+      "sha256": "bd0fae4e526ce1c57ca685fb5136a1472205e4482365fd82161c1bbb46f98ad9"
+    },
+    {
+      "file": "src/videos/curiosity-builds-v6/assets/cube-photo-source.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v6/assets/cube-photo-source.json",
+      "kind": "production-source",
+      "bytes": 712,
+      "sha256": "aae62a21fc008040ddbc919c5d4758842dad86cee95303912717b957e1c82461"
+    },
+    {
+      "file": "src/videos/curiosity-builds-v7/Film.tsx",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v7/Film.tsx",
+      "kind": "production-source",
+      "bytes": 8126,
+      "sha256": "3036fbb847f1a1d645c61e88e4cd9fbe8e762103c9016842a2fe8dbf86dc230b"
+    },
+    {
+      "file": "src/videos/curiosity-builds-v7/assets/cube-draft-source.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v7/assets/cube-draft-source.json",
+      "kind": "production-source",
+      "bytes": 571,
+      "sha256": "fd16f2d32f07f384c29bcf8aa761d81ecdea72b173e1916a02e228f00b10ea40"
+    },
+    {
+      "file": "src/videos/curiosity-builds-v7/assets/cube-draft.prompt.txt",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v7/assets/cube-draft.prompt.txt",
+      "kind": "production-source",
+      "bytes": 1144,
+      "sha256": "f58082c3907f1043ba580f35814e264347aca17157e4de08fe1cd6afd24cf3a7"
+    },
+    {
+      "file": "src/videos/curiosity-builds-v7/assets/cube-photo-credits.txt",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v7/assets/cube-photo-credits.txt",
+      "kind": "production-source",
+      "bytes": 344,
+      "sha256": "bd0fae4e526ce1c57ca685fb5136a1472205e4482365fd82161c1bbb46f98ad9"
+    },
+    {
+      "file": "src/videos/curiosity-builds-v7/assets/cube-photo-source.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v7/assets/cube-photo-source.json",
+      "kind": "production-source",
+      "bytes": 712,
+      "sha256": "aae62a21fc008040ddbc919c5d4758842dad86cee95303912717b957e1c82461"
+    },
+    {
+      "file": "src/videos/curiosity-builds-v8/Film.tsx",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v8/Film.tsx",
+      "kind": "production-source",
+      "bytes": 8089,
+      "sha256": "d70f94e956167b33510a5a4bc5b2262cc4d956d663281b394857e7dc5e7ca888"
+    },
+    {
+      "file": "src/videos/curiosity-builds-v8/assets/cube-draft-source.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v8/assets/cube-draft-source.json",
+      "kind": "production-source",
+      "bytes": 571,
+      "sha256": "fd16f2d32f07f384c29bcf8aa761d81ecdea72b173e1916a02e228f00b10ea40"
+    },
+    {
+      "file": "src/videos/curiosity-builds-v8/assets/cube-draft.prompt.txt",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v8/assets/cube-draft.prompt.txt",
+      "kind": "production-source",
+      "bytes": 1144,
+      "sha256": "f58082c3907f1043ba580f35814e264347aca17157e4de08fe1cd6afd24cf3a7"
+    },
+    {
+      "file": "src/videos/curiosity-builds-v8/assets/cube-photo-credits.txt",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v8/assets/cube-photo-credits.txt",
+      "kind": "production-source",
+      "bytes": 344,
+      "sha256": "bd0fae4e526ce1c57ca685fb5136a1472205e4482365fd82161c1bbb46f98ad9"
+    },
+    {
+      "file": "src/videos/curiosity-builds-v8/assets/cube-photo-source.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v8/assets/cube-photo-source.json",
+      "kind": "production-source",
+      "bytes": 712,
+      "sha256": "aae62a21fc008040ddbc919c5d4758842dad86cee95303912717b957e1c82461"
+    },
+    {
+      "file": "src/videos/curiosity-builds-v8/assets/gallery-concepts.source.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v8/assets/gallery-concepts.source.json",
+      "kind": "production-source",
+      "bytes": 1815,
+      "sha256": "d299646a8e9b00a65e3e9e9cf49e55f6ae34bfef8cc31606639f82379c2bd314"
+    },
+    {
+      "file": "src/videos/curiosity-builds-v8/assets/journey-gallery-concept.prompt.txt",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v8/assets/journey-gallery-concept.prompt.txt",
+      "kind": "production-source",
+      "bytes": 2934,
+      "sha256": "5a09ce42396c11f3b41782c3b0441c5a9e65b0e65426682e5a41176331802639"
+    },
+    {
+      "file": "src/videos/curiosity-builds-v8/assets/journey-gallery-half-color.prompt.txt",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v8/assets/journey-gallery-half-color.prompt.txt",
+      "kind": "production-source",
+      "bytes": 1429,
+      "sha256": "31e2ccb7f421bd5b4c67924e1421dae01930b2e3e0245a11dcc19c789f034460"
+    },
+    {
+      "file": "src/videos/curiosity-builds-v8/assets/vangogh-gallery-concept.prompt.txt",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v8/assets/vangogh-gallery-concept.prompt.txt",
+      "kind": "production-source",
+      "bytes": 2863,
+      "sha256": "8761851d3b699c2b3ec993cac2cf2b245fc450101ec9511fba89ba23e7edeba4"
+    },
+    {
+      "file": "src/videos/curiosity-builds-v8/assets/vangogh-gallery-half-color.prompt.txt",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v8/assets/vangogh-gallery-half-color.prompt.txt",
+      "kind": "production-source",
+      "bytes": 1429,
+      "sha256": "1f1f6f05d3f72b7e73e264aec5706d59ea193c166daf66e4679026b73897288d"
+    },
+    {
+      "file": "src/videos/curiosity-builds-v9/Film.tsx",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v9/Film.tsx",
+      "kind": "production-source",
+      "bytes": 7233,
+      "sha256": "3fa2fdc354523962fce6658a41991fe511e3d0c69e2816a5f758d979c4e8095c"
+    },
+    {
+      "file": "src/videos/curiosity-builds-v9/assets/cube-draft-source.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v9/assets/cube-draft-source.json",
+      "kind": "production-source",
+      "bytes": 571,
+      "sha256": "fd16f2d32f07f384c29bcf8aa761d81ecdea72b173e1916a02e228f00b10ea40"
+    },
+    {
+      "file": "src/videos/curiosity-builds-v9/assets/cube-draft.prompt.txt",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v9/assets/cube-draft.prompt.txt",
+      "kind": "production-source",
+      "bytes": 1144,
+      "sha256": "f58082c3907f1043ba580f35814e264347aca17157e4de08fe1cd6afd24cf3a7"
+    },
+    {
+      "file": "src/videos/curiosity-builds-v9/assets/cube-photo-credits.txt",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v9/assets/cube-photo-credits.txt",
+      "kind": "production-source",
+      "bytes": 344,
+      "sha256": "bd0fae4e526ce1c57ca685fb5136a1472205e4482365fd82161c1bbb46f98ad9"
+    },
+    {
+      "file": "src/videos/curiosity-builds-v9/assets/cube-photo-source.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v9/assets/cube-photo-source.json",
+      "kind": "production-source",
+      "bytes": 712,
+      "sha256": "aae62a21fc008040ddbc919c5d4758842dad86cee95303912717b957e1c82461"
+    },
+    {
+      "file": "src/videos/curiosity-builds-v9/assets/gallery-concepts.source.json",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v9/assets/gallery-concepts.source.json",
+      "kind": "production-source",
+      "bytes": 1815,
+      "sha256": "c02d45ca69106080bf8bfe19dee30ff8c8359c044e8c4933bf01737774bbe23b"
+    },
+    {
+      "file": "src/videos/curiosity-builds-v9/assets/journey-gallery-concept.prompt.txt",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v9/assets/journey-gallery-concept.prompt.txt",
+      "kind": "production-source",
+      "bytes": 2934,
+      "sha256": "5a09ce42396c11f3b41782c3b0441c5a9e65b0e65426682e5a41176331802639"
+    },
+    {
+      "file": "src/videos/curiosity-builds-v9/assets/journey-gallery-half-color.prompt.txt",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v9/assets/journey-gallery-half-color.prompt.txt",
+      "kind": "production-source",
+      "bytes": 1429,
+      "sha256": "31e2ccb7f421bd5b4c67924e1421dae01930b2e3e0245a11dcc19c789f034460"
+    },
+    {
+      "file": "src/videos/curiosity-builds-v9/assets/vangogh-gallery-concept.prompt.txt",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v9/assets/vangogh-gallery-concept.prompt.txt",
+      "kind": "production-source",
+      "bytes": 2863,
+      "sha256": "8761851d3b699c2b3ec993cac2cf2b245fc450101ec9511fba89ba23e7edeba4"
+    },
+    {
+      "file": "src/videos/curiosity-builds-v9/assets/vangogh-gallery-half-color.prompt.txt",
+      "source": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v9/assets/vangogh-gallery-half-color.prompt.txt",
+      "kind": "production-source",
+      "bytes": 1429,
+      "sha256": "1f1f6f05d3f72b7e73e264aec5706d59ea193c166daf66e4679026b73897288d"
+    }
+  ]
+}

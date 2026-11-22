@@ -1,0 +1,54 @@
+--- a/chess/index.html
++++ b/chess/index.html
+@@ -3,10 +3,10 @@
+   <head>
+     <meta charset="utf-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+-    <title>Fair Chess — play the bot · Inception Space</title>
++    <title>Balanced Chess — play the bot · Inception Space</title>
+     <meta
+       name="description"
+-      content="Watch and join the museum's seven chess rooms live, or play the bot with standard rules or a special rule (Comeback or Rockfall) and see your win, draw and loss percentages for each."
++      content="Balanced Chess: watch and join the museum's seven chess rooms live, or play the bot with standard rules or a special rule (Comeback or Rockfall) and see your win, draw and loss percentages for each."
+     />
+     <meta name="theme-color" content="#04070d" />
+     <link rel="canonical" href="https://is.lucasacademy.org/chess/" />
+@@ -38,7 +38,7 @@
+              the whole board fits in the window. -->
+         <header class="masthead">
+           <p class="eyebrow">Idea 01 · Lucas · rules lab</p>
+-          <h1>Fair Chess</h1>
++          <h1>Balanced Chess</h1>
+           <p class="lead">
+             Watch and join the museum's seven chess rooms live, or practise against the bot: standard
+             rules, then a special rule (Comeback or Rockfall). Your record shows which gives you a
+--- a/chess/README.md
++++ b/chess/README.md
+@@ -1,4 +1,4 @@
+-# Fair Chess — the rules lab at `/chess/`
++# Balanced Chess — the rules lab at `/chess/`
+ 
+ A flat chess board for testing the rules of the **3D chess** idea (Curious
+ Worlds Weekly, Idea 01) before any 3D is built. You play a bot, with standard
+--- a/src/inception/world/model/museum.js
++++ b/src/inception/world/model/museum.js
+@@ -637,7 +637,7 @@
+   // them must stay where it is.
+   Object.freeze({
+     id: CHESS_LOBBY_SLOT_ID,
+-    title: "Chess Lobby",
++    title: "Balanced Chess",
+     ring: Object.freeze({ u: ringBayMidpoint(2), side: 1 }),
+     zone: "game",
+     open: true,
+--- a/tests/fixtures/museum-map-ops.txt
++++ b/tests/fixtures/museum-map-ops.txt
+@@ -155,7 +155,7 @@
+ fillText(03, 76, 366)
+ fillStyle = rgba(206, 241, 255, 0.98)
+ font = 600 27px "Avenir Next", "Noto Sans", system-ui, sans-serif
+-fillText(Chess Lobby, 128, 366)
++fillText(Balanced Chess, 128, 366)
+ beginPath()
+ moveTo(76, 398)
+ lineTo(474, 398)

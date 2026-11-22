@@ -1,0 +1,73 @@
+【标题 / Title】
+What Can Curiosity Build? | 9 Projects to Explore
+
+【简介 / Description】
+A chess game with comeback rules. A ride built from formulas. A gallery made from our art.
+
+Explore nine Lucas Academy projects, from a simple idea and a glimpse of the building process to something we can play, explore, or create with—from art and living skies to puzzles, coding competitions, and Bible games.
+
+What are you curious about?
+What will you build?
+Where will you make a difference?
+
+Explore the projects
+Inception Space: https://is.lucasacademy.org
+Bible Sequence: https://bible.lucasacademy.org
+Painterly Chameleon: https://pc.lucasacademy.org
+Lucas Academy: https://lucasacademy.org
+
+Chapters
+0:00 Balanced Chess
+0:38 Bible Sequence / Next Word
+1:09 Van Gogh House
+1:36 Journey of Art
+2:03 The Sky / Cosmic Cliffs
+2:36 Painterly Chameleon / Hide-and-Seek
+2:55 The Cube / 7×7 and 11×11
+3:22 Coder Arena / Monthly Ranking
+3:49 A Ride from Formulas
+4:25 What are you curious about?
+
+About the film
+No narration; English onscreen text, with optional Chinese label subtitles.
+Demos: recordings of the actual projects. Monthly Ranking uses an archived server battle.
+Build sequences are concept visualizations. Gallery/cube concept sketches and the thumbnail were made with ImageGen.
+Sky image: NASA/ESA/CSA/STScI — Cosmic Cliffs.
+By Lucas Academy Team
+
+Music and recording credits
+1. Balanced Chess / opening: Chopin — Prelude in D-flat major, Op. 28 No. 15, Raindrop. Jeannette Fang. Musopen CC0 1.0.
+https://archive.org/details/musopen-chopin-complete-works-flac
+
+2. Bible Sequence: Debussy — Clair de lune. Laurens Goedhart, piano, 2011. Creative Commons Attribution 3.0.
+https://commons.wikimedia.org/wiki/File:Clair_de_lune_(Claude_Debussy)_Suite_bergamasque.ogg
+https://creativecommons.org/licenses/by/3.0/
+Changes: excerpt, level adjustment, and fades.
+
+3. Van Gogh / Journey of Art: Chopin — Nocturne in E-flat major, Op. 9 No. 2. Musopen CC0 recording, same recording as the earlier Lucas Academy film.
+https://commons.wikimedia.org/wiki/File:Chopin_-_Nocturne_No._2_in_E-flat_major,_Op._9_No._2_(Frank_Levy).flac
+
+4. The Sky: Bach — Air from Orchestral Suite No. 3, BWV 1068, Air on the G String. Air Force Strings, United States Air Force Band, 2000. Public-domain recording.
+https://commons.wikimedia.org/wiki/File:Air_-_Air_Force_Strings_-_United_States_Air_Force_Band.mp3
+
+5. Hide-and-Seek / Cube / Coder Arena / roller coaster / ending: Mozart — The Marriage of Figaro, K. 492: Overture. Musopen Symphony, 2012. Public-domain recording.
+https://commons.wikimedia.org/wiki/File:Mozart_-_Le_nozze_di_Figaro,_K492_-_Overture_(Musopen_Symphony).flac
+
+#education #parenting #art #arthistory #stem #bilingual #bilingualchildren #lucas_academy #curiosity #creativeprojects #projectbasedlearning #inceptionspace #balancedchess #11x11cube #artgallery #coderarena #biblesequence
+
+【标签 / Tags】
+#curiosity #creativeprojects #projectbasedlearning #inceptionspace #balancedchess #11x11cube #artgallery #coderarena #biblesequence #education #parenting #art #arthistory #stem #bilingual #bilingualchildren #lucas_academy
+
+【上传设置 / Upload settings】
+Main video / 主视频：../Curiosity Builds.mp4
+Picture / 画面：1920×1080，30 fps，4:43.8，16:9
+Video language / 视频语言：English（英文画面文字，无配音）
+Audio / 音轨：仅古典配乐，无旁白；没有另一条语言配音
+Captions / 字幕：../Curiosity Builds.zh-CN.srt（简体中文，翻译画面标题与标签）
+Thumbnail / 封面：youtube-cover.en.jpg（本文件夹，1280×720；英文 B 方案）
+Localized covers / 语言封面：youtube-cover.en.jpg（英文）；youtube-cover.zh.jpg（中文）
+English metadata / 英文标题简介：youtube-description.en.txt（主语言）
+Chinese metadata / 中文标题简介：youtube-description.zh.txt（同一影片的可选中文本地化）
+AI assets / 生成素材：概念草图与封面由 ImageGen 制作；Demo为项目录像
+Category / 类别：Education
+Audience and visibility / 观众与公开范围：由你在上传时决定

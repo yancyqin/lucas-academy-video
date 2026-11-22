@@ -1,0 +1,58 @@
+{
+  "digest": "220177bc1be458b2a039fd8831c77bd051a35b380271934c45f37dc6d08fcfce",
+  "source_parts": [
+    {
+      "file": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/builds/chess.mp4",
+      "start_frame": 0,
+      "frames": 216
+    },
+    {
+      "file": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/edit/chess-lobby.mp4",
+      "start_frame": 0,
+      "frames": 120
+    },
+    {
+      "file": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/edit/chess-play.mp4",
+      "start_frame": 0,
+      "frames": 300
+    },
+    {
+      "file": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/edit/chess-comeback-play.mp4",
+      "start_frame": 0,
+      "frames": 270
+    },
+    {
+      "file": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/edit/chess-rockfall-play.mp4",
+      "start_frame": 0,
+      "frames": 240
+    }
+  ],
+  "output_frames": 1146,
+  "transitions": [
+    {
+      "cut_frame": 216,
+      "frames": 18,
+      "start_frame": 207,
+      "end_frame": 225
+    },
+    {
+      "cut_frame": 336,
+      "frames": 12,
+      "start_frame": 330,
+      "end_frame": 342
+    },
+    {
+      "cut_frame": 636,
+      "frames": 12,
+      "start_frame": 630,
+      "end_frame": 642
+    },
+    {
+      "cut_frame": 906,
+      "frames": 12,
+      "start_frame": 900,
+      "end_frame": 912
+    }
+  ],
+  "overall_fades": false
+}

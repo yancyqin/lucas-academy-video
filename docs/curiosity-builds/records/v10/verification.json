@@ -1,0 +1,152 @@
+{
+  "full": {
+    "file": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/delivery/curiosity-builds.en.no-voice.mp4",
+    "seconds": 283.8,
+    "bytes": 195986936
+  },
+  "chapters": [
+    {
+      "file": "curiosity-builds.en.no-voice.mp4",
+      "seconds": 283.8,
+      "fps": "30/1",
+      "frames": "8514",
+      "audio": "aac"
+    },
+    {
+      "file": "01-chess.en.no-voice.mp4",
+      "seconds": 38.2,
+      "fps": "30/1",
+      "frames": "1146",
+      "audio": "aac"
+    },
+    {
+      "file": "02-bible.en.no-voice.mp4",
+      "seconds": 31.2,
+      "fps": "30/1",
+      "frames": "936",
+      "audio": "aac"
+    },
+    {
+      "file": "03-vangogh.en.no-voice.mp4",
+      "seconds": 27.2,
+      "fps": "30/1",
+      "frames": "816",
+      "audio": "aac"
+    },
+    {
+      "file": "04-journey.en.no-voice.mp4",
+      "seconds": 27.2,
+      "fps": "30/1",
+      "frames": "816",
+      "audio": "aac"
+    },
+    {
+      "file": "05-sky.en.no-voice.mp4",
+      "seconds": 32.2,
+      "fps": "30/1",
+      "frames": "966",
+      "audio": "aac"
+    },
+    {
+      "file": "06-chameleon.en.no-voice.mp4",
+      "seconds": 19.2,
+      "fps": "30/1",
+      "frames": "576",
+      "audio": "aac"
+    },
+    {
+      "file": "07-cube.en.no-voice.mp4",
+      "seconds": 27.2,
+      "fps": "30/1",
+      "frames": "816",
+      "audio": "aac"
+    },
+    {
+      "file": "08-coder.en.no-voice.mp4",
+      "seconds": 27.2,
+      "fps": "30/1",
+      "frames": "816",
+      "audio": "aac"
+    },
+    {
+      "file": "09-roller.en.no-voice.mp4",
+      "seconds": 36.2,
+      "fps": "30/1",
+      "frames": "1086",
+      "audio": "aac"
+    }
+  ],
+  "language": "English",
+  "narration": false,
+  "audio_source": "Chopin Raindrop \u2192 Debussy Clair de lune \u2192 Chopin Nocturne \u2192 Bach Air \u2192 Mozart. Original tempo and internal dynamics, continuous sections across chapters. No captured application audio. See MUSIC-CREDITS.txt.",
+  "revision_checks": {
+    "order": [
+      "chess",
+      "bible",
+      "vangogh",
+      "journey",
+      "sky",
+      "chameleon",
+      "cube",
+      "coder",
+      "roller"
+    ],
+    "roller_seconds": 36.2,
+    "mobius_seconds": 12,
+    "chameleon_seconds": 19.2,
+    "coder_footage_split_seconds": [
+      10,
+      10
+    ],
+    "real_chess_plies": 14,
+    "journey_source": "Previous Lucas Academy film\u2019s native gallery camera, source 23.5\u201343.5 s.",
+    "closing_questions": [
+      "What are you curious about?",
+      "What will you build?",
+      "Where will you make a difference?"
+    ],
+    "seconds_per_closing_question": 6,
+    "sky_panorama": "Cosmic Cliffs",
+    "journey_build": "Actual Sweet Home 3D v3 preview, owner-selected starting view",
+    "small_editorial_text": false,
+    "picture_dissolves": 32,
+    "music_crossfade_seconds": 2,
+    "film_picture_fade_in_seconds": 1,
+    "film_picture_fade_out_seconds": 1.2,
+    "music_fade_in_seconds": 1.2,
+    "music_fade_out_seconds": 2.4,
+    "cube_top_steps_preserved": true,
+    "cube_concept_asset": "/Users/yqin/repo/playground/lucas-academy-video/src/videos/curiosity-builds-v10/assets/cube-draft.png",
+    "full_cube_web_viewport": true,
+    "title_motion": "standalone title \u2192 same title continuously shrinks/moves into title-and-illustration \u2192 process prompt and process \u2192 demo",
+    "main_and_process_text_overlap": false,
+    "balanced_chess_name": true,
+    "gallery_concepts": "half line art, half colored architectural sketches",
+    "house_design": "lower 3D model only",
+    "native_ice_blue_roller": true,
+    "separate_opening_part_removed": true,
+    "standalone_title_before_each_chapter_layout": true,
+    "continuous_title_zoom": true,
+    "sky_continuous_take": true,
+    "sky_body_seconds": 25,
+    "sky_hover_seconds": 7.033333333333335,
+    "intro_layout_count": 2,
+    "total_duration_change_seconds_since_v9": 0
+  },
+  "decode": {
+    "returncode": 0,
+    "errors": ""
+  },
+  "audio_loudness": {
+    "input_i": "-21.22",
+    "input_tp": "-3.55",
+    "input_lra": "13.70",
+    "input_thresh": "-31.90",
+    "output_i": "-19.63",
+    "output_tp": "-2.00",
+    "output_lra": "7.60",
+    "output_thresh": "-29.86",
+    "normalization_type": "dynamic",
+    "target_offset": "-1.37"
+  }
+}

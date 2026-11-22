@@ -1,0 +1,170 @@
+{
+  "fps": 30,
+  "scope": "Visible project questions, process prompts, rule labels, mode choices, Coder labels, and closing questions. Standalone title continuously scales into two intro layouts; no step chain. No spoken dialogue.",
+  "cue_count": 27,
+  "total_frames": 8514,
+  "cues": [
+    {
+      "start": 0,
+      "end": 90,
+      "en": "What Can Curiosity Build?",
+      "zh": "好奇心能创造什么？"
+    },
+    {
+      "start": 96,
+      "end": 216,
+      "en": "Build Balanced Chess with comeback points and falling rocks.",
+      "zh": "打造 Balanced Chess：逆转复活，加上落石。"
+    },
+    {
+      "start": 636,
+      "end": 906,
+      "en": "COMEBACK\nOver 5 points behind? Earn points. Revive a piece. Each piece returns once.",
+      "zh": "逆转复活：落后超过 5 分时，可赚取积分复活棋子。\n每枚棋子只能复活一次。"
+    },
+    {
+      "start": 906,
+      "end": 1146,
+      "en": "ROCKFALL\nRocks may hit the leader. Kings and queens stay safe. Level score? No rocks.",
+      "zh": "落石规则：石头可能击中领先的一方。\n国王和王后不会被击中；平分时不落石。"
+    },
+    {
+      "start": 1146,
+      "end": 1236,
+      "en": "Can We Build a Game with the Bible?",
+      "zh": "我们能用《圣经》做一个游戏吗？"
+    },
+    {
+      "start": 1242,
+      "end": 1362,
+      "en": "Read a verse. Hide the words. Rebuild it in order.",
+      "zh": "读经文、藏词语，再按顺序复原。"
+    },
+    {
+      "start": 1362,
+      "end": 1452,
+      "en": "Sequence",
+      "zh": "选择玩法：经文复原（Sequence）"
+    },
+    {
+      "start": 1692,
+      "end": 1767,
+      "en": "Next Word",
+      "zh": "选择玩法：预测下一个词（Next Word）"
+    },
+    {
+      "start": 2082,
+      "end": 2172,
+      "en": "Can We Decorate a Painted Room Together?",
+      "zh": "我们能一起装饰一间绘画房间吗？"
+    },
+    {
+      "start": 2178,
+      "end": 2298,
+      "en": "Turn our paintings into a world we can walk inside.",
+      "zh": "让我们的画变成可以走进去的世界。"
+    },
+    {
+      "start": 2898,
+      "end": 2988,
+      "en": "Can We Design Your Art Gallery Together?",
+      "zh": "我们能一起设计你的艺术画廊吗？"
+    },
+    {
+      "start": 2994,
+      "end": 3114,
+      "en": "Bring our art projects together in a gallery we can explore.",
+      "zh": "汇聚我们的作品，建一座可以探索的画廊。"
+    },
+    {
+      "start": 3714,
+      "end": 3804,
+      "en": "Can We Discover the Universe in a Living Sky?",
+      "zh": "我们能在灵动的天空中探索宇宙吗？"
+    },
+    {
+      "start": 3810,
+      "end": 3930,
+      "en": "Build a floating room with living water and endless stars.",
+      "zh": "建一间漂浮的房间，让流水与群星充满生机。"
+    },
+    {
+      "start": 4680,
+      "end": 4770,
+      "en": "Can We Create a Hide-and-Seek Game?",
+      "zh": "我们能做一个捉迷藏游戏吗？"
+    },
+    {
+      "start": 4776,
+      "end": 4896,
+      "en": "Paint a disguise. Hide in the artwork. Challenge a friend.",
+      "zh": "画出伪装、藏进画作，邀请朋友来找你。"
+    },
+    {
+      "start": 5256,
+      "end": 5346,
+      "en": "Can We Build an 11×11 Cube?",
+      "zh": "我们能搭建一个 11×11 魔方吗？"
+    },
+    {
+      "start": 5352,
+      "end": 5472,
+      "en": "Build cubes of any size. Let me learn each move.",
+      "zh": "搭建各种阶数的魔方，学会每一步。"
+    },
+    {
+      "start": 6072,
+      "end": 6162,
+      "en": "Can We Compete in Coder Arena?",
+      "zh": "我们能在编程竞技场一较高下吗？"
+    },
+    {
+      "start": 6168,
+      "end": 6288,
+      "en": "Write a bot. Change its strategy. Let it play.",
+      "zh": "编写机器人、改进策略，让它上场。"
+    },
+    {
+      "start": 6288,
+      "end": 6588,
+      "en": "Coder Arena",
+      "zh": "编程竞技场"
+    },
+    {
+      "start": 6588,
+      "end": 6888,
+      "en": "Monthly Ranking",
+      "zh": "月度排行"
+    },
+    {
+      "start": 6888,
+      "end": 6978,
+      "en": "Can We Build a Ride from Formulas?",
+      "zh": "我们能把公式变成过山车吗？"
+    },
+    {
+      "start": 6984,
+      "end": 7104,
+      "en": "Turn a formula into a roller coaster with a spiraling funnel.",
+      "zh": "把公式变成一条盘旋而下的过山车轨道。"
+    },
+    {
+      "start": 7974,
+      "end": 8154,
+      "en": "What are you curious about?",
+      "zh": "你对什么感到好奇？"
+    },
+    {
+      "start": 8154,
+      "end": 8334,
+      "en": "What will you build?",
+      "zh": "你想创造什么？"
+    },
+    {
+      "start": 8334,
+      "end": 8514,
+      "en": "Where will you make a difference?",
+      "zh": "你想在哪里带来改变？"
+    }
+  ]
+}

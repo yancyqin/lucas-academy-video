@@ -1,0 +1,107 @@
+{
+  "language": "en",
+  "video_seconds": 283.8,
+  "recommended_title": "What Can Curiosity Build? | 9 Projects to Explore",
+  "description": "A chess game with comeback rules. A ride built from formulas. A gallery made from our art.\n\nExplore nine Lucas Academy projects, from a simple idea and a glimpse of the building process to something we can play, explore, or create with—from art and living skies to puzzles, coding competitions, and Bible games.\n\nWhat are you curious about?\nWhat will you build?\nWhere will you make a difference?\n\nExplore the projects\nInception Space: https://is.lucasacademy.org\nBible Sequence: https://bible.lucasacademy.org\nPainterly Chameleon: https://pc.lucasacademy.org\nLucas Academy: https://lucasacademy.org\n\nChapters\n0:00 Balanced Chess\n0:38 Bible Sequence / Next Word\n1:09 Van Gogh House\n1:36 Journey of Art\n2:03 The Sky / Cosmic Cliffs\n2:36 Painterly Chameleon / Hide-and-Seek\n2:55 The Cube / 7×7 and 11×11\n3:22 Coder Arena / Monthly Ranking\n3:49 A Ride from Formulas\n4:25 What are you curious about?\n\nAbout the film\nNo narration; English onscreen text, with optional Chinese label subtitles.\nDemos: recordings of the actual projects. Monthly Ranking uses an archived server battle.\nBuild sequences are concept visualizations. Gallery/cube concept sketches and the thumbnail were made with ImageGen.\nSky image: NASA/ESA/CSA/STScI — Cosmic Cliffs.\nBy Lucas Academy Team\n\nMusic and recording credits\n1. Balanced Chess / opening: Chopin — Prelude in D-flat major, Op. 28 No. 15, Raindrop. Jeannette Fang. Musopen CC0 1.0.\nhttps://archive.org/details/musopen-chopin-complete-works-flac\n\n2. Bible Sequence: Debussy — Clair de lune. Laurens Goedhart, piano, 2011. Creative Commons Attribution 3.0.\nhttps://commons.wikimedia.org/wiki/File:Clair_de_lune_(Claude_Debussy)_Suite_bergamasque.ogg\nhttps://creativecommons.org/licenses/by/3.0/\nChanges: excerpt, level adjustment, and fades.\n\n3. Van Gogh / Journey of Art: Chopin — Nocturne in E-flat major, Op. 9 No. 2. Musopen CC0 recording, same recording as the earlier Lucas Academy film.\nhttps://commons.wikimedia.org/wiki/File:Chopin_-_Nocturne_No._2_in_E-flat_major,_Op._9_No._2_(Frank_Levy).flac\n\n4. The Sky: Bach — Air from Orchestral Suite No. 3, BWV 1068, Air on the G String. Air Force Strings, United States Air Force Band, 2000. Public-domain recording.\nhttps://commons.wikimedia.org/wiki/File:Air_-_Air_Force_Strings_-_United_States_Air_Force_Band.mp3\n\n5. Hide-and-Seek / Cube / Coder Arena / roller coaster / ending: Mozart — The Marriage of Figaro, K. 492: Overture. Musopen Symphony, 2012. Public-domain recording.\nhttps://commons.wikimedia.org/wiki/File:Mozart_-_Le_nozze_di_Figaro,_K492_-_Overture_(Musopen_Symphony).flac\n\n#education #parenting #art #arthistory #stem #bilingual #bilingualchildren #lucas_academy #curiosity #creativeprojects #projectbasedlearning #inceptionspace #balancedchess #11x11cube #artgallery #coderarena #biblesequence",
+  "short_description": "Explore nine Lucas Academy projects where curiosity becomes art, games, and worlds to explore. What will you build?",
+  "variants": [
+    {
+      "id": "01-doorway",
+      "name_zh": "通往新世界",
+      "headline": "What Can Curiosity Build?",
+      "video_title": "What Can Curiosity Build? | 9 Projects to Explore",
+      "design_note_zh": "深色电影感，门后是流水与宇宙；与片头提问和古典配乐的气质相连。"
+    },
+    {
+      "id": "02-ideas-to-worlds",
+      "name_zh": "从草图到世界",
+      "headline": "FROM IDEAS TO WORLDS",
+      "video_title": "From Ideas to Worlds | What Can Curiosity Build?",
+      "design_note_zh": "虚化的冰蓝过山车房间背景；半线稿、半上色画廊；中性白色标题带柔和明暗与反光，不带米色调。"
+    },
+    {
+      "id": "03-build-play-discover",
+      "name_zh": "建造、玩耍、探索",
+      "headline": "BUILD. PLAY. DISCOVER.",
+      "video_title": "Build. Play. Discover. | 9 Projects from Lucas Academy",
+      "design_note_zh": "大字、棋子和冰蓝轨道；更强调游戏、挑战与动手探索。"
+    }
+  ],
+  "chapters": [
+    {
+      "id": "chess",
+      "project": "Balanced Chess",
+      "url": "is.lucasacademy.org/chess",
+      "start": 0.0,
+      "seconds": 38.2
+    },
+    {
+      "id": "bible",
+      "project": "Bible Sequence",
+      "url": "bible.lucasacademy.org",
+      "start": 38.2,
+      "seconds": 31.2
+    },
+    {
+      "id": "vangogh",
+      "project": "Van Gogh House",
+      "url": "is.lucasacademy.org/tour?start=van-gogh",
+      "start": 69.4,
+      "seconds": 27.2
+    },
+    {
+      "id": "journey",
+      "project": "Journey of Art",
+      "url": "is.lucasacademy.org/tour?start=journey-of-art",
+      "start": 96.6,
+      "seconds": 27.2
+    },
+    {
+      "id": "sky",
+      "project": "The Sky",
+      "url": "is.lucasacademy.org",
+      "start": 123.8,
+      "seconds": 32.2
+    },
+    {
+      "id": "chameleon",
+      "project": "Painterly Chameleon",
+      "url": "pc.lucasacademy.org",
+      "start": 156.0,
+      "seconds": 19.2
+    },
+    {
+      "id": "cube",
+      "project": "The Cube",
+      "url": "is.lucasacademy.org/cube",
+      "start": 175.2,
+      "seconds": 27.2
+    },
+    {
+      "id": "coder",
+      "project": "Coder Arena",
+      "url": "snake-lab-coder.lucasacademy.org",
+      "start": 202.4,
+      "seconds": 27.2
+    },
+    {
+      "id": "roller",
+      "project": "Formula Roller Coasters",
+      "url": "is.lucasacademy.org/tour?start=manifold",
+      "start": 229.6,
+      "seconds": 36.2
+    }
+  ],
+  "generation_tool": "Built-in ImageGen",
+  "writing_reference": "Owner-provided question titles and the three accepted closing questions in this chat; no external personal writing retrieved.",
+  "selected_cover": "02-ideas-to-worlds",
+  "selected_cover_revision": "B-v6",
+  "tags": "#curiosity #creativeprojects #projectbasedlearning #inceptionspace #balancedchess #11x11cube #artgallery #coderarena #biblesequence #education #parenting #art #arthistory #stem #bilingual #bilingualchildren #lucas_academy",
+  "hashtagLine": "#education #parenting #art #arthistory #stem #bilingual #bilingualchildren #lucas_academy #curiosity #creativeprojects #projectbasedlearning #inceptionspace #balancedchess #11x11cube #artgallery #coderarena #biblesequence",
+  "official_youtube_file": "/Users/yqin/Desktop/Curiosity Builds - Final/YouTube/youtube-description.en.txt",
+  "youtube_cover_files": {
+    "en": "/Users/yqin/Desktop/Curiosity Builds - Final/YouTube/youtube-cover.en.jpg",
+    "zh": "/Users/yqin/Desktop/Curiosity Builds - Final/YouTube/youtube-cover.zh.jpg"
+  },
+  "chinese_cover_headline": "从想法 / 到世界"
+}

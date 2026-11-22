@@ -1,0 +1,31 @@
+MUSIC & RECORDING CREDITS — CURIOSITY BUILDS, FINAL REVISION 10
+
+In playback order:
+
+1. Balanced Chess / opening: Chopin — Prelude in D-flat major, Op. 28 No. 15, Raindrop. Jeannette Fang. Musopen CC0 1.0.
+https://archive.org/details/musopen-chopin-complete-works-flac
+
+2. Bible Sequence: Debussy — Clair de lune. Laurens Goedhart, piano, 2011. Creative Commons Attribution 3.0.
+https://commons.wikimedia.org/wiki/File:Clair_de_lune_(Claude_Debussy)_Suite_bergamasque.ogg
+https://creativecommons.org/licenses/by/3.0/
+Changes: excerpt, level adjustment, and fades.
+
+3. Van Gogh / Journey of Art: Chopin — Nocturne in E-flat major, Op. 9 No. 2. Musopen CC0 recording, same recording as the earlier Lucas Academy film.
+https://commons.wikimedia.org/wiki/File:Chopin_-_Nocturne_No._2_in_E-flat_major,_Op._9_No._2_(Frank_Levy).flac
+
+4. The Sky: Bach — Air from Orchestral Suite No. 3, BWV 1068, Air on the G String. Air Force Strings, United States Air Force Band, 2000. Public-domain recording.
+https://commons.wikimedia.org/wiki/File:Air_-_Air_Force_Strings_-_United_States_Air_Force_Band.mp3
+
+5. Hide-and-Seek / Cube / Coder Arena / roller coaster / ending: Mozart — The Marriage of Figaro, K. 492: Overture. Musopen Symphony, 2012. Public-domain recording.
+https://commons.wikimedia.org/wiki/File:Mozart_-_Le_nozze_di_Figaro,_K492_-_Overture_(Musopen_Symphony).flac
+
+The earlier C-major Prelude BWV 846 is no longer used. Bach is heard only in The Sky. The Mozart work is edited into two connected sections, including its orchestral finale.
+All performances keep their original tempo and internal dynamics; plain level adjustments, two-second equal-power crossfades, and opening/closing fades are applied. No narration or captured application audio.
+
+Picture: Inception Space, Sweet Home 3D v3, Lucas Academy Weekly chess demos, Coder Arena, Painterly Chameleon, Bible Sequence.
+Journey of Art: actual Sweet Home 3D v3 preview from the owner-selected camera, then the earlier gallery walk at original speed (source 23.5–43.5 s).
+The Sky: Cosmic Cliffs panorama (NASA/ESA/CSA/STScI), selected only for the recording.
+Title and closing backgrounds: opening picture from the owner-supplied Jesus, Joy of Man’s Desiring.mp4 (source 6.5–24.5 s), blurred and faded. Its audio is not used.
+Monthly Ranking: genuine historical eight-bot server-battle recording.
+Bible: complete natural viewport, newly recorded through a successful reconstruction, with no post-capture crop or zoom.
+Cube concept: unfinished design draft made with the built-in ImageGen tool. Actual 7×7 and 11×11 footage uses the entire original web viewport, including the right control panel and top steps. Roller entrance, overhead spiral and black hole use the native spaceGlass/white ice-blue variant. Main titles disappear before process text is revealed. Chess opens the film with What Can Curiosity Build?; Cube uses Can We Build an 11×11 Cube?. Every chapter starts with a standalone title; the same title continuously scales/moves into the title-and-concept layout. After the title disappears, the process prompt replaces it and the process picture remains on the right. No extra centered build layout is used. The Sky is one continuous 25-second transition/entry/ascending-orbit/high-hover take. Van Gogh and Journey use original ImageGen gallery concept sketches; Sweet Home shows only the lower 3D preview.

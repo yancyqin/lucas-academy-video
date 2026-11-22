@@ -1,0 +1,27 @@
+{
+  "url": "https://bible.lucasacademy.org/",
+  "viewport": [
+    1280,
+    720
+  ],
+  "post_capture_zoom": false,
+  "box": {
+    "x": 100,
+    "y": 8,
+    "width": 1080,
+    "height": 702
+  },
+  "visible": true,
+  "controls": [
+    {
+      "text": "Pick another verse",
+      "x": 574.59375,
+      "y": 496.8125,
+      "w": 275.35418701171875,
+      "h": 58,
+      "visible": true
+    }
+  ],
+  "completed_letters": 41,
+  "expected_letters": 41
+}

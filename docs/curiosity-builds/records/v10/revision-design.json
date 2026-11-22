@@ -1,0 +1,56 @@
+{
+  "revision": 10,
+  "intro_motion": {
+    "layout_count": 2,
+    "diagram_present_from_frame": 42,
+    "fixed_right_hand_picture": true,
+    "title_fade_start_frame": 75,
+    "title_end_frame": 90,
+    "prompt_reveal_start_frame": 96,
+    "prompt_reveal_end_frame": 110,
+    "prompt_fade_start_frame": 202,
+    "prompt_end_frame": 216,
+    "journey_preview_start_frame": 96,
+    "journey_preview_end_frame": 216,
+    "process_step_chain": false,
+    "duration_frames": 216,
+    "standalone_title_until_frame": 30,
+    "title_zoom_start_frame": 30,
+    "title_zoom_end_frame": 54,
+    "diagram_full_frame": 60,
+    "single_title_node": true,
+    "initial_title_scale": 1.38,
+    "final_title_scale": 1,
+    "title_transition": "standalone title → continuous scale/move → title and illustration → prompt and process → demo"
+  },
+  "left_title_frames": [
+    0,
+    90
+  ],
+  "left_prompt_frames": [
+    96,
+    216
+  ],
+  "right_picture_bbox": {
+    "standard": [
+      1110,
+      220,
+      720,
+      720
+    ],
+    "gallery": [
+      940,
+      220,
+      900,
+      720
+    ]
+  },
+  "process_step_chain": false,
+  "separate_opening_seconds": 0,
+  "chess_question": "What Can Curiosity Build?",
+  "cube_question": "Can We Build an 11×11 Cube?",
+  "sky_body_seconds": 25,
+  "expected_full_frames": 8514,
+  "expected_full_seconds": 283.8,
+  "music_and_subtitle_timing_changed": false
+}

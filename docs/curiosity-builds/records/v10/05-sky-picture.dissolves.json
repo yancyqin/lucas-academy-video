@@ -1,0 +1,25 @@
+{
+  "digest": "8c8941a7423db2f373eff2e9196fafc86f329ed1a077856c1f092eb07eece37d",
+  "source_parts": [
+    {
+      "file": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/builds/sky.mp4",
+      "start_frame": 0,
+      "frames": 216
+    },
+    {
+      "file": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/edit/sky-continuous-cosmic-cliffs.mp4",
+      "start_frame": 0,
+      "frames": 750
+    }
+  ],
+  "output_frames": 966,
+  "transitions": [
+    {
+      "cut_frame": 216,
+      "frames": 18,
+      "start_frame": 207,
+      "end_frame": 225
+    }
+  ],
+  "overall_fades": false
+}

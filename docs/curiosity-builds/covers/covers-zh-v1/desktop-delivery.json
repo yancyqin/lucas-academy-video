@@ -1,0 +1,16 @@
+{
+  "language": "zh-Hans",
+  "method": "Built-in ImageGen text-localization edit",
+  "workspace_file": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-zh-v1/02-ideas-to-worlds-zh-v1.png",
+  "desktop_file": "/Users/yqin/Desktop/Curiosity Builds - Final/封面与文案/02-从草图到世界-中文.png",
+  "desktop_prompt": "/Users/yqin/Desktop/Curiosity Builds - Final/封面与文案/B中文封面生成提示词.txt",
+  "headline": [
+    "从想法",
+    "到世界"
+  ],
+  "width": 1672,
+  "height": 941,
+  "bytes": 2129224,
+  "sha256": "346146f86b1edc7badda051fabb3beab152e6d4b8c73a5a91994f48fc4efcc52",
+  "english_master_preserved": true
+}

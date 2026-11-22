@@ -1,0 +1,52 @@
+[
+  {
+    "name": "cube-play",
+    "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v7/captures/cube-play.mp4",
+    "output": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v7/edit/cube-play.mp4",
+    "frames": 300,
+    "filter": "fps=30,setsar=1",
+    "full_web_viewport": true,
+    "source_crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1920,
+      "height": 1080
+    },
+    "native_ice_blue": false,
+    "speed": 1,
+    "top_steps_retained": true,
+    "right_control_panel_retained": true,
+    "pixel_scale": 1,
+    "top_solve_card_source_bounds": {
+      "x": 568,
+      "y": 26,
+      "width": 216,
+      "height": 157
+    }
+  },
+  {
+    "name": "cube-solve",
+    "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v7/captures/cube-solve.mp4",
+    "output": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v7/edit/cube-solve.mp4",
+    "frames": 300,
+    "filter": "fps=30,setsar=1",
+    "full_web_viewport": true,
+    "source_crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1920,
+      "height": 1080
+    },
+    "native_ice_blue": false,
+    "speed": 1,
+    "top_steps_retained": true,
+    "right_control_panel_retained": true,
+    "pixel_scale": 1,
+    "top_solve_card_source_bounds": {
+      "x": 568,
+      "y": 26,
+      "width": 216,
+      "height": 157
+    }
+  }
+]

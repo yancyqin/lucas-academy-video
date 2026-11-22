@@ -1,0 +1,93 @@
+{
+  "name": "vangogh-room",
+  "url": "http://127.0.0.1:5188/?debug=&manual=1&hud=0&fullscreen=0",
+  "fps": 30,
+  "seconds": 20,
+  "mode": "Actual project renderer, first-person, native manual frame clock; scripted camera input",
+  "start": {
+    "room": "room-a",
+    "x": -300,
+    "z": -79.68,
+    "transitChamber": true,
+    "transit": null,
+    "worldSeconds": 65.034,
+    "approachStart": null,
+    "loaded": null,
+    "bodyY": 246.358,
+    "yaw": 0,
+    "pitch": 0,
+    "floorY": 246,
+    "feetAboveFloor": 0.015,
+    "lowestBoneAboveFloor": null,
+    "headAboveFloor": 0.321,
+    "cameraAboveFloor": 0.358,
+    "floor": {
+      "mode": "painting",
+      "painted": true,
+      "glass": false,
+      "alive": 0,
+      "aliveVisible": 0,
+      "aliveAlpha": [],
+      "aliveScale": []
+    },
+    "doors": [],
+    "connector": {
+      "distance": 15.68,
+      "opacity": 1
+    },
+    "story": null,
+    "lab": null,
+    "storyRoom": null,
+    "chess": {
+      "open": false,
+      "pieceView": null,
+      "table": null,
+      "me": "local",
+      "rockFalling": false
+    },
+    "frameFailure": null
+  },
+  "end": {
+    "room": "room-a",
+    "x": -300,
+    "z": -79.68,
+    "transitChamber": true,
+    "transit": null,
+    "worldSeconds": 85.034,
+    "approachStart": null,
+    "loaded": null,
+    "bodyY": 246.358,
+    "yaw": 0,
+    "pitch": 0,
+    "floorY": 246,
+    "feetAboveFloor": 0.013,
+    "lowestBoneAboveFloor": null,
+    "headAboveFloor": 0.318,
+    "cameraAboveFloor": 2.5,
+    "floor": {
+      "mode": "painting",
+      "painted": true,
+      "glass": false,
+      "alive": 0,
+      "aliveVisible": 0,
+      "aliveAlpha": [],
+      "aliveScale": []
+    },
+    "doors": [],
+    "connector": {
+      "distance": 15.68,
+      "opacity": 1
+    },
+    "story": null,
+    "lab": null,
+    "storyRoom": null,
+    "chess": {
+      "open": false,
+      "pieceView": null,
+      "table": null,
+      "me": "local",
+      "rockFalling": false
+    },
+    "frameFailure": null
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "created": "2026-11-20",
+  "assets": [
+    {
+      "id": "01-doorway",
+      "name": "通往新世界",
+      "generated_path": "/Users/yqin/.codex/generated_images/01a1f294-6c9c-71c2-ad9e-6b0f8cfaf2e8/exec-34426c15-d00a-406d-8751-011697ad77a6.png",
+      "method": "built-in ImageGen",
+      "prompt_file": "prompts.json",
+      "workspace_path": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-v1/01-doorway.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 1970142,
+      "sha256": "1708e365dd6e199a9a7e56e0997b9a78c907b406c9fb1739d5bca8173a25f08c"
+    },
+    {
+      "id": "02-ideas-to-worlds",
+      "name": "从草图到世界",
+      "generated_path": "/Users/yqin/.codex/generated_images/01a1f294-6c9c-71c2-ad9e-6b0f8cfaf2e8/exec-1d51a53f-ef62-4980-b346-8f44871955e0.png",
+      "method": "built-in ImageGen",
+      "prompt_file": "prompts.json",
+      "workspace_path": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-v1/02-ideas-to-worlds.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 2876097,
+      "sha256": "4909130f9d947291ddf9d2964ce034466e01f2b49c8ebbddec1e3fcdb0808778"
+    },
+    {
+      "id": "03-build-play-discover",
+      "name": "建造、玩耍、探索",
+      "generated_path": "/Users/yqin/.codex/generated_images/01a1f294-6c9c-71c2-ad9e-6b0f8cfaf2e8/exec-8aa4854c-5b4b-4f73-a5f6-80b7d48d6e9e.png",
+      "method": "built-in ImageGen",
+      "prompt_file": "prompts.json",
+      "workspace_path": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-v1/03-build-play-discover.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 2068347,
+      "sha256": "bc5d649eb99fc5fa4b8bba486f979803fa646aa8ce0ad7176233c7c97163bda0"
+    }
+  ]
+}

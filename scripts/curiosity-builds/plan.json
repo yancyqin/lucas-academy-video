@@ -1,0 +1,228 @@
+{
+  "title": "What Can Curiosity Build?",
+  "language": "en",
+  "narration": false,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "fps": 30,
+  "projects": [
+    {
+      "id": "roller",
+      "name": "Formula Roller Coasters",
+      "question": "Can you ride a formula?",
+      "prompt": "Turn a formula into a roller coaster with a spiraling funnel.",
+      "steps": [
+        "Sketch",
+        "Equation",
+        "Rideable ribbon"
+      ],
+      "url": "is.lucasacademy.org/tour?start=manifold",
+      "clips": [
+        {
+          "file": "roller-line",
+          "seconds": 4,
+          "caption": "A line becomes a track."
+        },
+        {
+          "file": "roller-parabola",
+          "seconds": 5,
+          "caption": "A parabola becomes a drop."
+        },
+        {
+          "file": "roller-funnel",
+          "seconds": 14,
+          "caption": "A spiral pulls you inward."
+        },
+        {
+          "file": "roller-mobius",
+          "seconds": 6,
+          "caption": "One strip. A different way around."
+        }
+      ]
+    },
+    {
+      "id": "chess",
+      "name": "Chess · The Rules Lab",
+      "question": "What if chess had different rules?",
+      "prompt": "Build chess worlds with comeback points and falling rocks.",
+      "steps": [
+        "Board",
+        "World",
+        "Rules"
+      ],
+      "url": "is.lucasacademy.org/chess",
+      "clips": [
+        {
+          "file": "chess-room",
+          "seconds": 8,
+          "caption": "Step inside a chess world."
+        },
+        {
+          "file": "chess-web",
+          "seconds": 6,
+          "caption": "Play the same idea on the web."
+        },
+        {
+          "file": "chess-comeback",
+          "seconds": 8,
+          "caption": "Comeback: a large deficit earns points to revive pieces."
+        },
+        {
+          "file": "chess-rockfall",
+          "seconds": 8,
+          "caption": "Rockfall: the leading side risks losing a piece."
+        }
+      ]
+    },
+    {
+      "id": "cube",
+      "name": "The Cube",
+      "question": "How big a cube can you solve?",
+      "prompt": "Build cubes of any size. Let me learn each move.",
+      "steps": [
+        "Pieces",
+        "Layers",
+        "A working puzzle"
+      ],
+      "url": "is.lucasacademy.org/cube",
+      "clips": [
+        {
+          "file": "cube-play",
+          "seconds": 10,
+          "caption": "Turn a layer. Test a pattern."
+        },
+        {
+          "file": "cube-solve",
+          "seconds": 10,
+          "caption": "From 2 × 2 to 11 × 11. Follow a solution."
+        }
+      ]
+    },
+    {
+      "id": "vangogh",
+      "name": "Van Gogh House",
+      "question": "Can you walk into a painting?",
+      "prompt": "Turn our paintings into a world we can walk inside.",
+      "steps": [
+        "Paintings",
+        "Living surfaces",
+        "A room to explore"
+      ],
+      "url": "is.lucasacademy.org/tour?start=van-gogh",
+      "clips": [
+        {
+          "file": "vangogh-room",
+          "seconds": 20,
+          "caption": "Children’s paintings become the world around you."
+        }
+      ]
+    },
+    {
+      "id": "journey",
+      "name": "Journey of Art",
+      "question": "Where can making art take you?",
+      "prompt": "Bring our art projects together in a gallery we can explore.",
+      "steps": [
+        "Studies",
+        "Series",
+        "A shared gallery"
+      ],
+      "url": "is.lucasacademy.org/tour?start=journey-of-art",
+      "clips": [
+        {
+          "file": "journey-gallery",
+          "seconds": 12,
+          "caption": "Follow an idea across a whole body of work."
+        },
+        {
+          "file": "journey-portraits",
+          "seconds": 8,
+          "caption": "Paintings, objects, and the process between them."
+        }
+      ]
+    },
+    {
+      "id": "sky",
+      "name": "The Sky",
+      "question": "Can a room become a sky?",
+      "prompt": "Build a floating room with living water and endless stars.",
+      "steps": [
+        "Water",
+        "Starlight",
+        "An open world"
+      ],
+      "url": "is.lucasacademy.org",
+      "clips": [
+        {
+          "file": "sky-room",
+          "seconds": 18,
+          "caption": "Look up. Float. See the space change."
+        }
+      ]
+    },
+    {
+      "id": "chameleon",
+      "name": "Painterly Chameleon",
+      "question": "Can you hide inside a painting?",
+      "prompt": "Paint a disguise. Hide in the artwork. Challenge a friend.",
+      "steps": [
+        "Paint",
+        "Camouflage",
+        "Hide and seek"
+      ],
+      "url": "pc.lucasacademy.org",
+      "clips": [
+        {
+          "file": "chameleon-paint",
+          "seconds": 12,
+          "caption": "Paint a disguise that belongs in the picture."
+        },
+        {
+          "file": "chameleon-seek",
+          "seconds": 10,
+          "caption": "Then look closely. What is hiding here?"
+        }
+      ]
+    },
+    {
+      "id": "coder",
+      "name": "Coder Arena",
+      "question": "Can your code win the game?",
+      "prompt": "Write a bot. Change its strategy. Let it play.",
+      "steps": [
+        "A rule",
+        "A bot",
+        "An arena"
+      ],
+      "url": "snake-lab-coder.lucasacademy.org",
+      "clips": [
+        {
+          "file": "coder-arena",
+          "seconds": 20,
+          "caption": "Change the strategy. Run it. Watch what happens."
+        }
+      ]
+    },
+    {
+      "id": "bible",
+      "name": "Bible Sequence",
+      "question": "Can you rebuild the verse?",
+      "prompt": "Read a verse. Hide the words. Rebuild it in order.",
+      "steps": [
+        "Read",
+        "Remember",
+        "Rebuild"
+      ],
+      "url": "bible.lucasacademy.org",
+      "clips": [
+        {
+          "file": "bible-sequence",
+          "seconds": 24,
+          "caption": "Read. Remember. Restore the verse."
+        }
+      ]
+    }
+  ]
+}

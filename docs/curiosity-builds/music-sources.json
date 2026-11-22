@@ -1,0 +1,76 @@
+{
+  "mozart": {
+    "work": "W. A. Mozart, Le nozze di Figaro, K. 492 — Overture",
+    "performer": "Musopen Symphony (Musopen 2012 Kickstarter)",
+    "license": "Public domain (recording: {{PD-author|Musopen}})",
+    "page": "https://commons.wikimedia.org/wiki/File:Mozart_-_Le_nozze_di_Figaro,_K492_-_Overture_(Musopen_Symphony).flac",
+    "file": "original/05-Mozart_-_Le_nozze_di_Figaro,_K492_-_Overture_(Musopen_Symphony).flac",
+    "sha256": "484cb77a1a5ba764c17128e385058baefc0cf2076c542bc07cb91b05450d121d",
+    "downloaded": "2026-10-28",
+    "lufs": -16.0,
+    "true_peak_dbfs": -1.0,
+    "wav": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v5/music/mozart.wav",
+    "restored_url": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Mozart_-_Le_nozze_di_Figaro%2C_K492_-_Overture_%28Musopen_Symphony%29.flac",
+    "restored_sha256": "484cb77a1a5ba764c17128e385058baefc0cf2076c542bc07cb91b05450d121d"
+  },
+  "bach": {
+    "file": "prelude-c-ishizaka.flac",
+    "title": "File:Kimiko Ishizaka - Bach- Well-Tempered Clavier, Book 1 - 01 Prelude No. 1 in C major, BWV 846.flac",
+    "page": "https://commons.wikimedia.org/wiki/File:Kimiko_Ishizaka_-_Bach-_Well-Tempered_Clavier,_Book_1_-_01_Prelude_No._1_in_C_major,_BWV_846.flac",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Kimiko_Ishizaka_-_Bach-_Well-Tempered_Clavier%2C_Book_1_-_01_Prelude_No._1_in_C_major%2C_BWV_846.flac?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "artist": "Johann Sebastian Bach",
+    "description": "Kimiko Ishizaka - Bach - Well-Tempered Clavier, Book 1 - 01 Prelude No. 1 in C major, BWV 846",
+    "restored_url": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Kimiko_Ishizaka_-_Bach-_Well-Tempered_Clavier%2C_Book_1_-_01_Prelude_No._1_in_C_major%2C_BWV_846.flac",
+    "restored_sha256": "500152e3c652943aeb7dd92c1cfd2fff33b2379c35925a15308f2f91c2d4a56c",
+    "wav": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v5/music/bach.wav"
+  },
+  "debussy": {
+    "key": "clair",
+    "piece": "Clair de lune (Suite bergamasque, III)",
+    "performer": "Laurens Goedhart, piano (2011)",
+    "license": "CC BY 3.0 — credit required (composition PD)",
+    "credit": "\"Clair de lune\" performed by Laurens Goedhart, CC BY 3.0, via Wikimedia Commons / SoundCloud",
+    "page": "https://commons.wikimedia.org/wiki/File:Clair_de_lune_(Claude_Debussy)_Suite_bergamasque.ogg",
+    "file": "candidates/clair-de-lune-goedhart-ccby3.ogg",
+    "duration_s": 304,
+    "notes": "ogg 500 kbps transcoded from a SoundCloud MP3: nothing above 15 kHz. Clean lead-in.",
+    "restored_url": "https://upload.wikimedia.org/wikipedia/commons/b/be/Clair_de_lune_%28Claude_Debussy%29_Suite_bergamasque.ogg",
+    "restored_sha256": "2f7a1e833f4e2408d9d1b893131863d790ba75cd5fbcf81292dc5ed6f25918fe",
+    "wav": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v5/music/debussy.wav"
+  },
+  "chopin": {
+    "title": "降 E 大调夜曲 Op. 9 No. 2",
+    "composer": "肖邦",
+    "performer": "Musopen · 旧片同版录音",
+    "source": "https://commons.wikimedia.org/wiki/File:Chopin_-_Nocturne_No._2_in_E-flat_major,_Op._9_No._2_(Frank_Levy).flac",
+    "license": "CC0 1.0",
+    "credit_note": "Commons 署名 Frank Lévy；原始档案的部分标签另有 Aya Higuchi 署名，演奏者归属待进一步核对。",
+    "local_file": "music/nocturne-9-2.m4a",
+    "sha256": "3d1c1473dbed61eec8d45384117ebff602110b7e5edbbcf6330351c0ce88e1cf",
+    "duration": 271.469,
+    "start": 317.875,
+    "end": 589.375,
+    "constant_gain_db": -3.87,
+    "wav": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v5/music/chopin.wav"
+  },
+  "air": {
+    "title": "J. S. Bach — Air, Orchestral Suite No. 3, BWV 1068 (Air on the G String)",
+    "performer": "Air Force Strings, United States Air Force Band",
+    "year": 2000,
+    "license": "Public domain — United States Air Force performance and recording",
+    "page": "https://commons.wikimedia.org/wiki/File:Air_-_Air_Force_Strings_-_United_States_Air_Force_Band.mp3",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Air_-_Air_Force_Strings_-_United_States_Air_Force_Band.mp3",
+    "sha256": "139e7a43fc39a5502b58a49b0002f96d37875be3794d2f6938ef59c1f35af1cd",
+    "wav": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v5/music/air.wav"
+  },
+  "raindrop": {
+    "title": "Frédéric Chopin — Prelude in D-flat major, Op. 28 No. 15 (Raindrop)",
+    "performer": "Jeannette Fang",
+    "license": "CC0 1.0 — Musopen Complete Chopin",
+    "source": "https://archive.org/details/musopen-chopin-complete-works-flac",
+    "local_source": "/Users/yqin/repo/playground/lucas-academy-video-data/romanticism-music-gallery/music/prelude-28-15.m4a",
+    "sha256": "e9ecf9c8683119c1f090ba83c21ab7abc076d6a74e59702c5f75c4cf1481ac0f",
+    "wav": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v5/music/raindrop.wav"
+  }
+}

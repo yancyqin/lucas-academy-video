@@ -1,0 +1,36 @@
+{
+  "digest": "085aaae4c1fc35c3e2975d757dc6a85c368ad960414f891db1904db8052e965f",
+  "source_parts": [
+    {
+      "file": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/builds/coder.mp4",
+      "start_frame": 0,
+      "frames": 216
+    },
+    {
+      "file": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/edit/coder-arena.mp4",
+      "start_frame": 0,
+      "frames": 300
+    },
+    {
+      "file": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/edit/monthly-ranking.mp4",
+      "start_frame": 0,
+      "frames": 300
+    }
+  ],
+  "output_frames": 816,
+  "transitions": [
+    {
+      "cut_frame": 216,
+      "frames": 18,
+      "start_frame": 207,
+      "end_frame": 225
+    },
+    {
+      "cut_frame": 516,
+      "frames": 12,
+      "start_frame": 510,
+      "end_frame": 522
+    }
+  ],
+  "overall_fades": false
+}

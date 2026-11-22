@@ -1,0 +1,22 @@
+{
+  "inception-space-ui": {
+    "head": "1a7c835c31e689e2c10b4cce9b28cfbb864201ba",
+    "source": "Existing workspace checkout; original project code was not changed for this film."
+  },
+  "painterly-chameleon": {
+    "head": "7242fb0bdab5564bcff114b2466e72daf55d0bba",
+    "source": "Existing workspace checkout; original project code was not changed for this film."
+  },
+  "snake-lab": {
+    "head": "a4fe18db1f82e629dd8a2baea0b030d357888eca",
+    "source": "Existing workspace checkout; original project code was not changed for this film."
+  },
+  "lucas-academy-bible": {
+    "head": "44b5b62c21520444b246b825df2e655c454cda1b",
+    "source": "Existing workspace checkout; original project code was not changed for this film."
+  },
+  "lucas-academy-video": {
+    "head": "28c9a667eeb8bcbeb474d98a3cd80d16da05d5d1",
+    "source": "Existing workspace checkout; original project code was not changed for this film."
+  }
+}

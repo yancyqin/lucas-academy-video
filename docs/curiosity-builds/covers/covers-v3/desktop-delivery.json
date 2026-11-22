@@ -1,0 +1,14 @@
+{
+  "revision": "B-v3",
+  "method": "Built-in ImageGen edit",
+  "workspace_file": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-v3/02-ideas-to-worlds-white-v3.png",
+  "desktop_file": "/Users/yqin/Desktop/Curiosity Builds - Final/封面与文案/02-从草图到世界.png",
+  "desktop_prompt": "/Users/yqin/Desktop/Curiosity Builds - Final/封面与文案/B封面修改提示词.txt",
+  "width": 1672,
+  "height": 941,
+  "bytes": 2249489,
+  "sha256": "c190a5ad848620ea67d0431b40e888c1061bf78a4ab254d58e4142be9060dd69",
+  "headline": "FROM IDEAS / TO WORLDS",
+  "text": "Both lines flat white; no colored emphasis, outlines, shadows or effects.",
+  "previous_version_retained": true
+}

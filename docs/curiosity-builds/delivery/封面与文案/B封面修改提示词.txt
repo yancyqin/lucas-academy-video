@@ -1,0 +1,11 @@
+Edit ONLY the COLOR of the headline material and its lighting in this cover. Keep the existing broad light-and-shade variation and gentle dimensionality, but remove the unwanted beige cast.
+
+The owner's exact correction is: keep the lettering WHITE, not beige.
+
+The complete headline, including its highlights, lit faces, shadowed faces and relief edges, must use NEUTRAL GRAYSCALE ONLY: brilliant neutral white highlights, white/light-gray midtones, and restrained neutral-gray shaded areas. R, G and B should be balanced in the lettering. Illuminate the lettering with neutral white light. Absolutely no ivory, cream, beige, champagne, yellow, gold, peach, warm off-white or warm-colored reflected light in ANY part of the text. Keep most letter faces bright white, with soft neutral-gray light/shade variation so the previously requested lighting effect remains visible. This is white sculpted lettering with changing illumination, not flat white text and not silver chrome.
+
+Preserve the exact serif typography, sizes, spacing, placement and line breaks:
+"FROM IDEAS"
+"TO WORLDS"
+
+Do not flatten away the light-and-shadow effect, change the font, or introduce thick extrusion, glow or outlines. Preserve every other part of this image, including the blurred ice-blue roller-coaster background, the half-line / half-painted gallery, all architecture, artwork, and original warm artwork colors. Do not desaturate or recolor the rest of the cover. Only neutralize the letter surfaces and their light so they read unmistakably WHITE rather than beige. Keep the current wide canvas and crop unchanged.

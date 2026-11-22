@@ -1,0 +1,65 @@
+[
+  {
+    "id": "chess",
+    "project": "Balanced Chess",
+    "url": "is.lucasacademy.org/chess",
+    "start": 0.0,
+    "seconds": 38.2
+  },
+  {
+    "id": "bible",
+    "project": "Bible Sequence",
+    "url": "bible.lucasacademy.org",
+    "start": 38.2,
+    "seconds": 31.2
+  },
+  {
+    "id": "vangogh",
+    "project": "Van Gogh House",
+    "url": "is.lucasacademy.org/tour?start=van-gogh",
+    "start": 69.4,
+    "seconds": 27.2
+  },
+  {
+    "id": "journey",
+    "project": "Journey of Art",
+    "url": "is.lucasacademy.org/tour?start=journey-of-art",
+    "start": 96.6,
+    "seconds": 27.2
+  },
+  {
+    "id": "sky",
+    "project": "The Sky",
+    "url": "is.lucasacademy.org",
+    "start": 123.8,
+    "seconds": 32.2
+  },
+  {
+    "id": "chameleon",
+    "project": "Painterly Chameleon",
+    "url": "pc.lucasacademy.org",
+    "start": 156.0,
+    "seconds": 19.2
+  },
+  {
+    "id": "cube",
+    "project": "The Cube",
+    "url": "is.lucasacademy.org/cube",
+    "start": 175.2,
+    "seconds": 27.2
+  },
+  {
+    "id": "coder",
+    "project": "Coder Arena",
+    "url": "snake-lab-coder.lucasacademy.org",
+    "start": 202.4,
+    "seconds": 27.2
+  },
+  {
+    "id": "roller",
+    "project": "Formula Roller Coasters",
+    "url": "is.lucasacademy.org/tour?start=manifold",
+    "start": 229.6,
+    "seconds": 36.2
+  }
+]

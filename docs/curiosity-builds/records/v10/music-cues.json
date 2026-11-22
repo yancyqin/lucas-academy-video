@@ -1,0 +1,132 @@
+{
+  "digest": "815ceb87e711e76020634c68d4e31b33f82aec6d7956c7d3f0267dc8ce0de289",
+  "sample_rate": 48000,
+  "normalization": "constant gain per musical section, no dynamics compression",
+  "arrangement": "Chess: Chopin Raindrop \u2192 Bible: Debussy Clair de lune \u2192 art rooms: Chopin Nocturne \u2192 Sky: Bach Air \u2192 games and finale: Mozart.",
+  "master_gain_db": 0.0,
+  "cues": [
+    {
+      "key": "raindrop",
+      "at": 0,
+      "seconds": 38.2,
+      "source_start": 0,
+      "target_lufs": -25,
+      "project": "Chess \u2014 Chopin Raindrop",
+      "project_ids": [
+        "chess"
+      ],
+      "plain_gain_db": -1.12,
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v5/music/raindrop.wav",
+      "input_lufs": "-23.88",
+      "nominal_lufs_after_gain": -25.0,
+      "mix_start": 0,
+      "mix_end": 39.2,
+      "actual_source_start": 0,
+      "fade_in_seconds": 1.2,
+      "fade_out_seconds": 2.0
+    },
+    {
+      "key": "debussy",
+      "at": 38.2,
+      "seconds": 31.2,
+      "source_start": 10,
+      "target_lufs": -24.5,
+      "project": "Bible \u2014 Debussy Clair de lune",
+      "project_ids": [
+        "bible"
+      ],
+      "plain_gain_db": 3.41,
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v5/music/debussy.wav",
+      "input_lufs": "-27.91",
+      "nominal_lufs_after_gain": -24.5,
+      "mix_start": 37.2,
+      "mix_end": 70.4,
+      "actual_source_start": 9.0,
+      "fade_in_seconds": 2.0,
+      "fade_out_seconds": 2.0
+    },
+    {
+      "key": "chopin",
+      "at": 69.4,
+      "seconds": 54.4,
+      "source_start": 24,
+      "target_lufs": -24,
+      "project": "Warmth and discovery",
+      "project_ids": [
+        "vangogh",
+        "journey"
+      ],
+      "plain_gain_db": -1.73,
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v5/music/chopin.wav",
+      "input_lufs": "-22.27",
+      "nominal_lufs_after_gain": -24.0,
+      "mix_start": 68.4,
+      "mix_end": 124.80000000000001,
+      "actual_source_start": 23.0,
+      "fade_in_seconds": 2.0,
+      "fade_out_seconds": 2.0
+    },
+    {
+      "key": "air",
+      "at": 123.8,
+      "seconds": 32.2,
+      "source_start": 0,
+      "target_lufs": -23.5,
+      "project": "A spacious string Air for the living sky",
+      "project_ids": [
+        "sky"
+      ],
+      "plain_gain_db": -9.2,
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v5/music/air.wav",
+      "input_lufs": "-14.30",
+      "nominal_lufs_after_gain": -23.5,
+      "mix_start": 122.8,
+      "mix_end": 157.0,
+      "actual_source_start": 0,
+      "fade_in_seconds": 2.0,
+      "fade_out_seconds": 2.0
+    },
+    {
+      "key": "mozart",
+      "at": 156.0,
+      "seconds": 80.8,
+      "source_start": 89.2,
+      "target_lufs": -20,
+      "project": "From playful motion to competition",
+      "project_ids": [
+        "chameleon",
+        "cube",
+        "coder"
+      ],
+      "plain_gain_db": -2.73,
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v5/music/mozart.wav",
+      "input_lufs": "-17.27",
+      "nominal_lufs_after_gain": -20.0,
+      "mix_start": 155.0,
+      "mix_end": 237.8,
+      "actual_source_start": 88.2,
+      "fade_in_seconds": 2.0,
+      "fade_out_seconds": 2.0
+    },
+    {
+      "key": "mozart",
+      "at": 236.79999999999998,
+      "seconds": 47.0,
+      "source_start": 193.999979,
+      "target_lufs": -18,
+      "project": "The actual ride and the orchestral finale",
+      "project_ids": [
+        "roller"
+      ],
+      "plain_gain_db": -4.41,
+      "source": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v5/music/mozart.wav",
+      "input_lufs": "-13.59",
+      "nominal_lufs_after_gain": -18.0,
+      "mix_start": 235.79999999999998,
+      "mix_end": 283.79999999999995,
+      "actual_source_start": 192.999979,
+      "fade_in_seconds": 2.0,
+      "fade_out_seconds": 2.4
+    }
+  ]
+}

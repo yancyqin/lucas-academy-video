@@ -1,0 +1,13 @@
+Create the Simplified Chinese localization of this approved English cover B. This is a TEXT-LOCALIZATION edit, not a new design.
+
+Replace ONLY the two-line English headline with these exact Simplified Chinese words:
+Line 1: "从想法"
+Line 2: "到世界"
+
+Remove all English headline letters. The final cover must have ONLY these six Chinese characters as its text. Do not add translations, punctuation, a subtitle, logos or any extra labels.
+
+Use a large confident Chinese Song/Ming-style serif face, similar in character to a bold Noto Serif SC / Source Han Serif. It should feel like the existing elegant editorial serif lettering, not handwriting or brush calligraphy. Keep the title in the existing open upper-left area, balanced over two lines with generous margins; make it large and easy to read at thumbnail size. Allow the spacing to adapt to the shorter Chinese words, but do not move the gallery to make room and do not overlap the drawing.
+
+Match the approved English lettering's material precisely: neutral WHITE with gentle neutral-gray directional light-and-shade variation and subtle shallow relief. Both lines have the same white treatment. Keep all letter surfaces neutral grayscale, with no beige, ivory, cream, yellow, gold or warm tint. Retain the subtle changing-illumination feeling without chunky extrusion, chrome, glow or colored outlines.
+
+Preserve the entire picture exactly in composition, perspective and colors: the half-line / half-painted isometric art gallery, its blue-and-gold artwork, the blurred real ice-blue roller-coaster-room screenshot background, and the existing wide 16:9 crop. Do not repaint, recompose, recolor, enlarge or move the gallery or alter the background. Only localize the headline to Chinese.

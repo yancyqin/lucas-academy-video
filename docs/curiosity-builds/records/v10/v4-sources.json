@@ -1,0 +1,29 @@
+{
+  "sweet_home_v3": {
+    "path": "/Users/yqin/Desktop/assect/Eunice/room_design/The Art of Progression - approved-concept-v3.sh3d",
+    "sha256": "bd7de8a2e83a48ebbd17266076c3468b4f18b9ac2acddb35e990aa1c565b2803",
+    "start": "Owner-selected currently open camera; no reset before recording.",
+    "capture": "sweet-home-v3-current-view.mov",
+    "preview": "sweet-home-v3-preview.mp4",
+    "action": "Brief native 3D-preview orbit, no design edits or save command.",
+    "capture_window": 10282
+  },
+  "owner_jesus_video": {
+    "path": "/Users/yqin/Downloads/Jesus, Joy of Man's Desiring.mp4",
+    "sha256": "409951f2d02ba26f0456ef0023141b323008d5a53ee4b3401760388b2d986073",
+    "used_picture_seconds": [
+      6.5,
+      24.5
+    ],
+    "treatment": "Blurred and faded behind titles and the three closing questions.",
+    "audio_used": false,
+    "instructions_from_attachment": false
+  },
+  "cosmic_cliffs": {
+    "path": "/Users/yqin/repo/playground/sky-panorama-lab/out/background10.jpg",
+    "sha256": "0e6000333bc61bea1005c1a82589572bdc0d1927be5fb0b0393512044718df2c",
+    "runtime_variant": "cosmic-cliffs",
+    "capture": "sky-orbit-cosmic-cliffs.mp4",
+    "production_changed": false
+  }
+}

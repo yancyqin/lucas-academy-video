@@ -1,0 +1,99 @@
+{
+  "language": "en",
+  "video_seconds": 283.8,
+  "recommended_title": "What Can Curiosity Build? | 9 Projects to Explore",
+  "description": "A chess game with comeback rules. A ride built from formulas. A gallery made from our art.\n\nThis short film follows nine Lucas Academy projects from a simple idea, through the building process, into something we can play, explore, or create with—from art and living skies to puzzles, coding competitions, and Bible games.\n\nWhat are you curious about?\nWhat will you build?\nWhere will you make a difference?",
+  "short_description": "Explore nine Lucas Academy projects where curiosity becomes art, games, and worlds to explore. What will you build?",
+  "variants": [
+    {
+      "id": "01-doorway",
+      "name_zh": "通往新世界",
+      "headline": "What Can Curiosity Build?",
+      "video_title": "What Can Curiosity Build? | 9 Projects to Explore",
+      "design_note_zh": "深色电影感，门后是流水与宇宙；与片头提问和古典配乐的气质相连。"
+    },
+    {
+      "id": "02-ideas-to-worlds",
+      "name_zh": "从草图到世界",
+      "headline": "FROM IDEAS TO WORLDS",
+      "video_title": "From Ideas to Worlds | What Can Curiosity Build?",
+      "design_note_zh": "虚化的冰蓝过山车房间作背景；画廊保留半线稿、半上色，白色标题参考提供的示例，带柔和的字面明暗与反光。"
+    },
+    {
+      "id": "03-build-play-discover",
+      "name_zh": "建造、玩耍、探索",
+      "headline": "BUILD. PLAY. DISCOVER.",
+      "video_title": "Build. Play. Discover. | 9 Projects from Lucas Academy",
+      "design_note_zh": "大字、棋子和冰蓝轨道；更强调游戏、挑战与动手探索。"
+    }
+  ],
+  "chapters": [
+    {
+      "id": "chess",
+      "project": "Balanced Chess",
+      "url": "is.lucasacademy.org/chess",
+      "start": 0.0,
+      "seconds": 38.2
+    },
+    {
+      "id": "bible",
+      "project": "Bible Sequence",
+      "url": "bible.lucasacademy.org",
+      "start": 38.2,
+      "seconds": 31.2
+    },
+    {
+      "id": "vangogh",
+      "project": "Van Gogh House",
+      "url": "is.lucasacademy.org/tour?start=van-gogh",
+      "start": 69.4,
+      "seconds": 27.2
+    },
+    {
+      "id": "journey",
+      "project": "Journey of Art",
+      "url": "is.lucasacademy.org/tour?start=journey-of-art",
+      "start": 96.6,
+      "seconds": 27.2
+    },
+    {
+      "id": "sky",
+      "project": "The Sky",
+      "url": "is.lucasacademy.org",
+      "start": 123.8,
+      "seconds": 32.2
+    },
+    {
+      "id": "chameleon",
+      "project": "Painterly Chameleon",
+      "url": "pc.lucasacademy.org",
+      "start": 156.0,
+      "seconds": 19.2
+    },
+    {
+      "id": "cube",
+      "project": "The Cube",
+      "url": "is.lucasacademy.org/cube",
+      "start": 175.2,
+      "seconds": 27.2
+    },
+    {
+      "id": "coder",
+      "project": "Coder Arena",
+      "url": "snake-lab-coder.lucasacademy.org",
+      "start": 202.4,
+      "seconds": 27.2
+    },
+    {
+      "id": "roller",
+      "project": "Formula Roller Coasters",
+      "url": "is.lucasacademy.org/tour?start=manifold",
+      "start": 229.6,
+      "seconds": 36.2
+    }
+  ],
+  "generation_tool": "Built-in ImageGen",
+  "writing_reference": "Owner-provided question titles and the three accepted closing questions in this chat; no external personal writing retrieved.",
+  "selected_cover": "02-ideas-to-worlds",
+  "selected_cover_revision": "B-v5"
+}

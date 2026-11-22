@@ -1,0 +1,9 @@
+{
+  "method": "built-in ImageGen edit",
+  "generated_path": "/Users/yqin/.codex/generated_images/01a1f294-6c9c-71c2-ad9e-6b0f8cfaf2e8/exec-5fb47218-3fe6-4d20-9454-f8c8339dad12.png",
+  "inputs": [
+    "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-v4/02-ideas-to-worlds-white-relief-v4.png",
+    "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-v5/reference-letter-lighting.png"
+  ],
+  "prompt_file": "cover-b-referenced-lighting.prompt.txt"
+}

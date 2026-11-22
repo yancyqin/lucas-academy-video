@@ -1,0 +1,9 @@
+{
+  "method": "built-in ImageGen edit",
+  "generated_path": "/Users/yqin/.codex/generated_images/01a1f294-6c9c-71c2-ad9e-6b0f8cfaf2e8/exec-8543156f-fee4-47d1-b63a-9d51e469cdce.png",
+  "references": [
+    "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-v1/02-ideas-to-worlds.png",
+    "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-v1/references/ice-blue-coaster-overview.jpg"
+  ],
+  "prompt_file": "cover-b-edit.prompt.txt"
+}

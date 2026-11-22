@@ -1,0 +1,112 @@
+{
+ "01": {
+  "work": "W. A. Mozart, Symphony No. 40 in G minor, K. 550 — I. Molto allegro",
+  "performer": "Musopen Symphony (Musopen 2012 Kickstarter)",
+  "license": "Public domain (recording: {{PD-author|Musopen}}; composition: PD-old-auto-expired)",
+  "page": "https://commons.wikimedia.org/wiki/File:Mozart_-_Symphony_No._40_in_G_minor,_K550_-_I._Molto_allegro_(Musopen_Symphony).flac",
+  "file": "original/01-Mozart_-_Symphony_No._40_in_G_minor,_K550_-_I._Molto_allegro_(Musopen_Symphony).flac",
+  "sha256": "e291748465d6a8972b79ea60e075bab56dc845eca48d6abcdc3d49f87144f005",
+  "downloaded": "2026-10-28",
+  "lufs": -16.8,
+  "true_peak_dbfs": -1.0,
+  "wav": "01.wav"
+ },
+ "05": {
+  "work": "W. A. Mozart, Le nozze di Figaro, K. 492 — Overture",
+  "performer": "Musopen Symphony (Musopen 2012 Kickstarter)",
+  "license": "Public domain (recording: {{PD-author|Musopen}})",
+  "page": "https://commons.wikimedia.org/wiki/File:Mozart_-_Le_nozze_di_Figaro,_K492_-_Overture_(Musopen_Symphony).flac",
+  "file": "original/05-Mozart_-_Le_nozze_di_Figaro,_K492_-_Overture_(Musopen_Symphony).flac",
+  "sha256": "484cb77a1a5ba764c17128e385058baefc0cf2076c542bc07cb91b05450d121d",
+  "downloaded": "2026-10-28",
+  "lufs": -16.0,
+  "true_peak_dbfs": -1.0,
+  "wav": "05.wav"
+ },
+ "06": {
+  "work": "W. A. Mozart, Die Zauberflöte, K. 620 — Overture",
+  "performer": "Musopen Symphony (Musopen 2012 Kickstarter)",
+  "license": "Public domain (recording: {{PD-author|Musopen}})",
+  "page": "https://commons.wikimedia.org/wiki/File:Mozart_-_Die_Zauberflöte,_K620_-_Overture_(Musopen_Symphony).flac",
+  "file": "original/06-Mozart_-_Die_Zauberflöte,_K620_-_Overture_(Musopen_Symphony).flac",
+  "sha256": "d0482d54438d784ab6c0ff2d2279e10fa821f7b6fec9f7da43bfed5701cb25ac",
+  "downloaded": "2026-10-28",
+  "lufs": -14.1,
+  "true_peak_dbfs": -0.9,
+  "wav": "06.wav"
+ },
+ "07": {
+  "work": "W. A. Mozart, Serenade No. 10 “Gran Partita”, K. 361 — III. Adagio",
+  "performer": "“The President's Own” United States Marine Band, 2021-05-20",
+  "license": "Public domain (US government work: {{PD-USGov-Military-Marines}})",
+  "page": "https://commons.wikimedia.org/wiki/File:Mozart's_Serenade_No._10_\"Grand_Partita\"_-_III._Adagio._Andante_-_United_States_Marine_Band.mp3",
+  "file": "original/07-Mozart's_Serenade_No._10_\"Grand_Partita\"_-_III._Adagio._Andante_-_United_States_Marine_Band.mp3",
+  "sha256": "c1837068bc084b0e59722d7eb5b4958bb9c39c8f8bbd627bd065cc3352575976",
+  "downloaded": "2026-10-28",
+  "lufs": -24.3,
+  "true_peak_dbfs": -6.7,
+  "wav": "07.wav"
+ },
+ "10": {
+  "work": "W. A. Mozart, Serenade No. 10 “Gran Partita”, K. 361 — VII. Finale. Molto allegro",
+  "performer": "“The President's Own” United States Marine Band, 2021-05-20",
+  "license": "Public domain (US government work: {{PD-USGov-Military-Marines}})",
+  "page": "https://commons.wikimedia.org/wiki/File:Mozart's_Serenade_No._10_\"Grand_Partita\"_-_VII._Finale._Molto_Allegro_-_United_States_Marine_Band.mp3",
+  "file": "original/10-Mozart's_Serenade_No._10_\"Grand_Partita\"_-_VII._Finale._Molto_Allegro_-_United_States_Marine_Band.mp3",
+  "sha256": "d9fdc7808208e186432dd1b55119ae7de05c1b0a592e81aa0bdaf65d56942151",
+  "downloaded": "2026-10-28",
+  "lufs": -18.2,
+  "true_peak_dbfs": -1.1,
+  "wav": "10.wav"
+ },
+ "15": {
+  "work": "W. A. Mozart, Clarinet Concerto in A major, K. 622 — II. Adagio",
+  "performer": "Markus Krumpöck (clarinet), Merkur Orchester Wiener Neustadt, Willibald Zwittkovits, 1999",
+  "license": "CC BY 2.5 (self-licensed GFDL / CC BY-SA 3.0 / CC BY 2.5; we use CC BY 2.5)",
+  "page": "https://commons.wikimedia.org/wiki/File:Mozart_Clarinet_Concert_-_2._Adagio.ogg",
+  "file": "original/15-Mozart_Clarinet_Concert_-_2._Adagio.ogg",
+  "sha256": "319f01b02cedc0989098775c248985aae381cb7aa269535deaae387d0a2e4d1d",
+  "downloaded": "2026-10-28",
+  "lufs": -18.5,
+  "true_peak_dbfs": -1.1,
+  "wav": "15.wav"
+ },
+ "16": {
+  "work": "W. A. Mozart, Clarinet Concerto in A major, K. 622 — III. Rondo. Allegro",
+  "performer": "Markus Krumpöck (clarinet), Merkur Orchester Wiener Neustadt, Willibald Zwittkovits, 1999",
+  "license": "CC BY 2.5 (self-licensed GFDL / CC BY-SA 3.0 / CC BY 2.5; we use CC BY 2.5)",
+  "page": "https://commons.wikimedia.org/wiki/File:Mozart_Clarinet_Concert_-_3._Rondo_-_Allegro.ogg",
+  "file": "original/16-Mozart_Clarinet_Concert_-_3._Rondo_-_Allegro.ogg",
+  "sha256": "7a490232d693a851253c91dc3954425f52e8f8a43b92408a6ecb45315ac6fd40",
+  "downloaded": "2026-10-28",
+  "lufs": -20.8,
+  "true_peak_dbfs": -1.6,
+  "wav": "16.wav"
+ },
+ "20": {
+  "work": "W. A. Mozart, Divertimento in F major, K. 138 — I. Allegro",
+  "performer": "Das Orchester Tsumugi, Takashi Inoue, 2010-08-15",
+  "license": "CC BY 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Divertimento_in_F_major,_K._138_(125c)_-_1st_movement.oga",
+  "file": "original/20-Divertimento_in_F_major,_K._138_(125c)_-_1st_movement.oga",
+  "sha256": "63e359aa4cc44a3aaf7a6a32428f28af4bc7d1558bfc436314d799a835886ca3",
+  "downloaded": "2026-10-28",
+  "lufs": -26.6,
+  "true_peak_dbfs": -6.3,
+  "wav": "20.wav"
+ },
+ "27": {
+  "work": "W. A. Mozart, Serenade No. 13 in G major “Eine kleine Nachtmusik”, K. 525 (complete; some repeats omitted), arranged for accordion ensemble",
+  "performer": "Paul De Bra as “Professor P” (multitrack: 4 accordions + bass accordion), 2023",
+  "license": "CC BY 4.0 (IMSLP, uploaded by the performer)",
+  "page": "https://imslp.org/wiki/Eine_kleine_Nachtmusik,_K.525_(Mozart,_Wolfgang_Amadeus)",
+  "imslp_file": "#869387 PMLP5176-Eine-Kleine-Nachtmusik.mp3",
+  "file": "original/27-PMLP5176-Eine-Kleine-Nachtmusik.mp3",
+  "sha256": "d36067a3e327aec764cc27ee2641189e78a75a9a8e926e868debd4c3c47126d7",
+  "downloaded": "2026-10-28 (by the owner, IMSLP)",
+  "lufs": -20.3,
+  "true_peak_dbfs": -0.0,
+  "wav": "27.wav",
+  "checked": "2026-10-29 on the IMSLP page: #869387, 12:41, uploaded by Pauldebra 2023/8/11, Creative Commons Attribution 4.0, 'Some repeats omitted'"
+ }
+}

@@ -1,0 +1,11 @@
+Make a very small typography-material edit to this approved cover B.
+
+The owner APPROVES the all-white headline and now wants just A LITTLE dimensionality and gloss. Preserve the entire design, exact headline shape, serif font, size, two-line arrangement and placement. Preserve the blurred roller-coaster-room background and the foreground half-sketch / half-painted gallery exactly. Only the material/lighting on the headline changes.
+
+Exact text, unchanged:
+"FROM IDEAS"
+"TO WORLDS"
+
+Keep BOTH lines neutral WHITE, identical in color and treatment. Give the lettering a delicate white-enamel / polished-white-paper embossing effect: a shallow fine bevel approximately 1–2 pixels wide at this image size, a barely visible cool-light-gray side face no deeper than 2–3 pixels, and gentle soft white specular highlights along the upper-left edges. A very slight narrow natural shadow close to the lower-right letter edges can make the shallow relief readable. The broad letter faces remain bright neutral white and highly legible. The effect should be restrained and tactile, like lightly embossed white lettering on a well-designed architectural book cover.
+
+Do not turn this into chunky 3D type. No long extrusion, dramatic drop shadows, outer stroke, glow, flare, chrome, silver-metal gradients, yellow, gold, colored lettering, rainbow reflections, glitter or shiny plastic. Do not change the artwork colors, contrast, crop or composition. The only requested refinement is subtle white gloss and shallow relief on the already-approved white headline. Keep all other image details and the same wide landscape canvas unchanged.

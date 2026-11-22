@@ -1,0 +1,14 @@
+{
+  "revision": "B-v6",
+  "method": "Built-in ImageGen edit",
+  "workspace_file": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/covers-v6/02-ideas-to-worlds-neutral-white-v6.png",
+  "desktop_file": "/Users/yqin/Desktop/Curiosity Builds - Final/封面与文案/02-从草图到世界.png",
+  "desktop_prompt": "/Users/yqin/Desktop/Curiosity Builds - Final/封面与文案/B封面修改提示词.txt",
+  "width": 1672,
+  "height": 941,
+  "bytes": 2158935,
+  "sha256": "b5eae978d7a300b20cdba94ebc986fb43ca01c3047f6050109ff9461485e48a3",
+  "headline": "FROM IDEAS / TO WORLDS",
+  "text": "Neutral white and gray light variation; no beige or warm tint.",
+  "previous_version_retained": true
+}
