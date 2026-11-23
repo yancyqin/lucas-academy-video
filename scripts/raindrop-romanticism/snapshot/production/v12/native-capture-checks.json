@@ -1,0 +1,39 @@
+{
+  "state": "passed",
+  "fps": 60,
+  "chunks": 50,
+  "frames": 59128,
+  "camera": {
+    "fps": 60,
+    "frames": 59128,
+    "maxSpeed": 3.7413163551821627,
+    "maxTurn": 25.196694920629128,
+    "collisions": 0,
+    "changedChunks": [
+      20,
+      21,
+      26,
+      27,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36
+    ],
+    "curve": "PCHIP",
+    "trueFrameSamples": true
+  },
+  "readiness": {
+    "id": "romanticism-salon",
+    "works": 56,
+    "sculptures": 8,
+    "dragonLoaded": true,
+    "pedestals": 9,
+    "pendingSculptures": 0,
+    "failures": [],
+    "sharedCatalog": "romanticism-salon",
+    "labelLanguage": "en",
+    "hallCount": 1
+  }
+}

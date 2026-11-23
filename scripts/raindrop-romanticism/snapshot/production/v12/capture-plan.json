@@ -1,0 +1,2777 @@
+{
+  "fps": 60,
+  "width": 1920,
+  "height": 1080,
+  "frames": 59128,
+  "duration": 985.4666666666667,
+  "audio_source": "@DATA_ROOT@/production/v11/delivery",
+  "source_timeline": "@DATA_ROOT@/production/v11/full-plan.json",
+  "anchors": [
+    {
+      "time": 0,
+      "eye": [
+        0,
+        4.45,
+        39
+      ],
+      "target": [
+        0,
+        38,
+        -2
+      ],
+      "fov": 51,
+      "values": [
+        0,
+        4.45,
+        39,
+        0.0,
+        0.6857959163779995,
+        51
+      ]
+    },
+    {
+      "time": 6.4,
+      "eye": [
+        0,
+        4.45,
+        39
+      ],
+      "target": [
+        0,
+        38,
+        -2
+      ],
+      "fov": 51,
+      "values": [
+        0,
+        4.45,
+        39,
+        0.0,
+        0.6857959163779995,
+        51
+      ]
+    },
+    {
+      "time": 8.3,
+      "eye": [
+        0,
+        4.45,
+        38.6
+      ],
+      "target": [
+        0,
+        39,
+        -2
+      ],
+      "fov": 52,
+      "values": [
+        0,
+        4.45,
+        38.6,
+        0.0,
+        0.7050657581807207,
+        52
+      ]
+    },
+    {
+      "time": 13,
+      "eye": [
+        0,
+        4.45,
+        36
+      ],
+      "target": [
+        -15,
+        8.7,
+        -22
+      ],
+      "fov": 58,
+      "values": [
+        0,
+        4.45,
+        36,
+        -0.25307565216460226,
+        0.0708231471215696,
+        58
+      ]
+    },
+    {
+      "time": 16.5,
+      "eye": [
+        0,
+        4.45,
+        32
+      ],
+      "target": [
+        14,
+        8.4,
+        -22
+      ],
+      "fov": 56,
+      "values": [
+        0,
+        4.45,
+        32,
+        0.2536740961386428,
+        0.0706892009156901,
+        56
+      ]
+    },
+    {
+      "time": 20,
+      "eye": [
+        9.8,
+        4.45,
+        31
+      ],
+      "target": [
+        25,
+        6.8,
+        21
+      ],
+      "fov": 58,
+      "values": [
+        9.8,
+        4.45,
+        31,
+        0.988891208655011,
+        0.12844875544812062,
+        58
+      ]
+    },
+    {
+      "time": 24,
+      "eye": [
+        20.2,
+        4.45,
+        28
+      ],
+      "target": [
+        27.6,
+        7.9,
+        15.4
+      ],
+      "fov": 56,
+      "values": [
+        20.2,
+        4.45,
+        28,
+        0.5310301048441826,
+        0.23185610741061077,
+        56
+      ]
+    },
+    {
+      "at": 1032,
+      "eye": [
+        21.5,
+        4.45,
+        15.4
+      ],
+      "target": [
+        27.6,
+        9.7,
+        15.4
+      ],
+      "fov": 53,
+      "time": 29.2916667,
+      "source_time": 43.0,
+      "values": [
+        21.5,
+        4.45,
+        15.4,
+        1.5707963267948966,
+        0.7106478327161415,
+        53
+      ]
+    },
+    {
+      "at": 1476,
+      "eye": [
+        21.5,
+        4.45,
+        15.4
+      ],
+      "target": [
+        27.6,
+        9.7,
+        15.4
+      ],
+      "fov": 53,
+      "time": 42.75035247199848,
+      "source_time": 61.5,
+      "values": [
+        21.5,
+        4.45,
+        15.4,
+        1.5707963267948966,
+        0.7106478327161415,
+        53
+      ]
+    },
+    {
+      "at": 1680,
+      "eye": [
+        22,
+        4.45,
+        10
+      ],
+      "target": [
+        27.6,
+        6.7,
+        14
+      ],
+      "fov": 58,
+      "time": 48.934072961835625,
+      "source_time": 70.0,
+      "values": [
+        22,
+        4.45,
+        10,
+        2.191045812777718,
+        0.3159914186984436,
+        58
+      ]
+    },
+    {
+      "at": 1956,
+      "eye": [
+        22,
+        4.45,
+        10
+      ],
+      "target": [
+        27.6,
+        6.7,
+        14
+      ],
+      "fov": 58,
+      "time": 57.30028303632117,
+      "source_time": 81.5,
+      "values": [
+        22,
+        4.45,
+        10,
+        2.191045812777718,
+        0.3159914186984436,
+        58
+      ]
+    },
+    {
+      "at": 2256,
+      "eye": [
+        21.5,
+        4.45,
+        15.4
+      ],
+      "target": [
+        27.6,
+        9.7,
+        15.4
+      ],
+      "fov": 53,
+      "time": 66.39398963902285,
+      "source_time": 94.0,
+      "values": [
+        21.5,
+        4.45,
+        15.4,
+        1.5707963267948966,
+        0.7106478327161415,
+        53
+      ]
+    },
+    {
+      "at": 2976,
+      "eye": [
+        21.5,
+        4.45,
+        15.4
+      ],
+      "target": [
+        27.6,
+        9.7,
+        15.4
+      ],
+      "fov": 53,
+      "time": 88.25619103773585,
+      "source_time": 124.0,
+      "values": [
+        21.5,
+        4.45,
+        15.4,
+        1.5707963267948966,
+        0.7106478327161415,
+        53
+      ]
+    },
+    {
+      "at": 3288,
+      "eye": [
+        22.8,
+        4.45,
+        6
+      ],
+      "target": [
+        27.6,
+        6.55,
+        2
+      ],
+      "fov": 59,
+      "time": 97.97553066037737,
+      "source_time": 137.0,
+      "values": [
+        22.8,
+        4.45,
+        6,
+        0.8760580505981935,
+        0.32423561789395267,
+        59
+      ]
+    },
+    {
+      "at": 3696,
+      "eye": [
+        22,
+        4.45,
+        -7
+      ],
+      "target": [
+        27.6,
+        6.55,
+        -13
+      ],
+      "fov": 59,
+      "time": 113.94047619036185,
+      "source_time": 154.0,
+      "values": [
+        22,
+        4.45,
+        -7,
+        0.7509290623979404,
+        0.2504950771652728,
+        59
+      ]
+    },
+    {
+      "time": 124.08333333333333,
+      "eye": [
+        22.0,
+        4.45,
+        -7.0
+      ],
+      "target": [
+        28.610229742147684,
+        6.92883615330538,
+        -14.082389009443943
+      ],
+      "fov": 59.0,
+      "values": [
+        22.0,
+        4.45,
+        -7.0,
+        0.7509290623979405,
+        0.25049507716527275,
+        59.0
+      ]
+    },
+    {
+      "time": 234.20833333333334,
+      "eye": [
+        22.0,
+        4.45,
+        -7.0
+      ],
+      "target": [
+        28.610229742147684,
+        6.92883615330538,
+        -14.082389009443943
+      ],
+      "fov": 59.0,
+      "values": [
+        22.0,
+        4.45,
+        -7.0,
+        0.7509290623979405,
+        0.25049507716527275,
+        59.0
+      ]
+    },
+    {
+      "at": 4104,
+      "eye": [
+        22,
+        4.45,
+        -7
+      ],
+      "target": [
+        27.6,
+        6.55,
+        -13
+      ],
+      "fov": 59,
+      "time": 247.92821180555555,
+      "source_time": 171.0,
+      "values": [
+        22,
+        4.45,
+        -7,
+        0.7509290623979404,
+        0.2504950771652728,
+        59
+      ]
+    },
+    {
+      "at": 4440,
+      "eye": [
+        19.4,
+        4.45,
+        -13
+      ],
+      "target": [
+        15,
+        3.6,
+        -18
+      ],
+      "fov": 53,
+      "time": 262.2520674300254,
+      "source_time": 185.0,
+      "values": [
+        19.4,
+        4.45,
+        -13,
+        -0.7216548508647612,
+        -0.1269351266312318,
+        53
+      ]
+    },
+    {
+      "at": 4704,
+      "eye": [
+        19.4,
+        4.45,
+        -13
+      ],
+      "target": [
+        16.7,
+        3.8,
+        -16
+      ],
+      "fov": 53,
+      "time": 274.42845911949684,
+      "source_time": 196.0,
+      "values": [
+        19.4,
+        4.45,
+        -13,
+        -0.7328151017865064,
+        -0.15967602432355235,
+        53
+      ]
+    },
+    {
+      "at": 4968,
+      "eye": [
+        20.5,
+        4.45,
+        -21.8
+      ],
+      "target": [
+        27.6,
+        6.55,
+        -20.8
+      ],
+      "fov": 59,
+      "time": 287.42387820512823,
+      "source_time": 207.0,
+      "values": [
+        20.5,
+        4.45,
+        -21.8,
+        1.7107209973690143,
+        0.28491554025535076,
+        59
+      ]
+    },
+    {
+      "at": 5328,
+      "eye": [
+        21.8,
+        4.45,
+        -26.5
+      ],
+      "target": [
+        27.6,
+        6.55,
+        -22.5
+      ],
+      "fov": 59,
+      "time": 310.8952749140893,
+      "source_time": 222.0,
+      "values": [
+        21.8,
+        4.45,
+        -26.5,
+        2.174545660192333,
+        0.2896758469832552,
+        59
+      ]
+    },
+    {
+      "at": 5640,
+      "eye": [
+        23.18,
+        4.45,
+        -15.4
+      ],
+      "target": [
+        27.6,
+        4.05,
+        -15.4
+      ],
+      "fov": 52,
+      "time": 338.8251718213058,
+      "source_time": 235.0,
+      "values": [
+        23.18,
+        4.45,
+        -15.4,
+        1.5707963267948966,
+        -0.0902518904873576,
+        52
+      ]
+    },
+    {
+      "at": 7032,
+      "eye": [
+        23.18,
+        4.45,
+        -15.4
+      ],
+      "target": [
+        27.6,
+        4.05,
+        -15.4
+      ],
+      "fov": 52,
+      "time": 406.72585394581864,
+      "source_time": 293.0,
+      "values": [
+        23.18,
+        4.45,
+        -15.4,
+        1.5707963267948966,
+        -0.0902518904873576,
+        52
+      ]
+    },
+    {
+      "at": 7248,
+      "eye": [
+        22.4,
+        4.45,
+        -4.2
+      ],
+      "target": [
+        27.6,
+        6.55,
+        1.7999999999999998
+      ],
+      "fov": 59,
+      "time": 411,
+      "source_time": 302.0,
+      "values": [
+        22.4,
+        4.45,
+        -4.2,
+        2.427501954977635,
+        0.2585702369250629,
+        59
+      ]
+    },
+    {
+      "at": 7560,
+      "eye": [
+        23.12,
+        4.45,
+        15.4
+      ],
+      "target": [
+        27.6,
+        4.05,
+        15.4
+      ],
+      "fov": 52,
+      "time": 418,
+      "source_time": 315.0,
+      "values": [
+        23.12,
+        4.45,
+        15.4,
+        1.5707963267948966,
+        -0.08904958263449786,
+        52
+      ]
+    },
+    {
+      "at": 8232,
+      "eye": [
+        23.12,
+        4.45,
+        15.4
+      ],
+      "target": [
+        27.6,
+        4.05,
+        15.4
+      ],
+      "fov": 52,
+      "time": 460.5809233891425,
+      "source_time": 343.0,
+      "values": [
+        23.12,
+        4.45,
+        15.4,
+        1.5707963267948966,
+        -0.08904958263449786,
+        52
+      ]
+    },
+    {
+      "at": 8472,
+      "eye": [
+        22.4,
+        4.45,
+        4.6
+      ],
+      "target": [
+        27.6,
+        6.55,
+        0.5999999999999996
+      ],
+      "fov": 59,
+      "time": 471.3827683615819,
+      "source_time": 353.0,
+      "values": [
+        22.4,
+        4.45,
+        4.6,
+        0.9151007005533607,
+        0.3097919745221289,
+        59
+      ]
+    },
+    {
+      "at": 8760,
+      "eye": [
+        19.6,
+        4.45,
+        -15.4
+      ],
+      "target": [
+        25.5,
+        7.6,
+        -15.4
+      ],
+      "fov": 57,
+      "time": 484.8095886267393,
+      "source_time": 365.0,
+      "values": [
+        19.6,
+        4.45,
+        -15.4,
+        1.5707963267948966,
+        0.4903970799632881,
+        57
+      ]
+    },
+    {
+      "at": 8904,
+      "eye": [
+        21.2,
+        4.45,
+        -15.4
+      ],
+      "target": [
+        27.6,
+        9.7,
+        -15.4
+      ],
+      "fov": 54,
+      "time": 491.56094978826377,
+      "source_time": 371.0,
+      "values": [
+        21.2,
+        4.45,
+        -15.4,
+        1.5707963267948966,
+        0.6870044783412448,
+        54
+      ]
+    },
+    {
+      "at": 9408,
+      "eye": [
+        21.2,
+        4.45,
+        -15.4
+      ],
+      "target": [
+        27.6,
+        9.7,
+        -15.4
+      ],
+      "fov": 54,
+      "time": 514.5870786516854,
+      "source_time": 392.0,
+      "values": [
+        21.2,
+        4.45,
+        -15.4,
+        1.5707963267948966,
+        0.6870044783412448,
+        54
+      ]
+    },
+    {
+      "at": 9648,
+      "eye": [
+        21,
+        4.45,
+        -36
+      ],
+      "target": [
+        6,
+        6.6,
+        -42
+      ],
+      "fov": 58,
+      "time": 525.1391547049442,
+      "source_time": 402.0,
+      "values": [
+        21,
+        4.45,
+        -36,
+        -1.1902899496825317,
+        0.13230424589988315,
+        58
+      ]
+    },
+    {
+      "at": 10051,
+      "eye": [
+        -21.7,
+        4.45,
+        -37.5
+      ],
+      "target": [
+        -27.6,
+        5,
+        -35.29
+      ],
+      "fov": 57,
+      "time": 542.8423423423424,
+      "source_time": 418.7916666666667,
+      "values": [
+        -21.7,
+        4.45,
+        -37.5,
+        -1.9291954570491263,
+        0.08707632971552928,
+        57
+      ]
+    },
+    {
+      "at": 10176,
+      "eye": [
+        -23.1,
+        4.45,
+        -35.29
+      ],
+      "target": [
+        -27.6,
+        4.05,
+        -35.29166666666667
+      ],
+      "fov": 52,
+      "time": 545.5,
+      "source_time": 424.0,
+      "values": [
+        -23.1,
+        4.45,
+        -35.29,
+        -1.57042595644146,
+        -0.08865587581859985,
+        52
+      ]
+    },
+    {
+      "at": 10848,
+      "eye": [
+        -23.1,
+        4.45,
+        -35.29
+      ],
+      "target": [
+        -27.6,
+        4.05,
+        -35.29166666666667
+      ],
+      "fov": 52,
+      "time": 582.2790880503145,
+      "source_time": 452.0,
+      "values": [
+        -23.1,
+        4.45,
+        -35.29,
+        -1.57042595644146,
+        -0.08865587581859985,
+        52
+      ]
+    },
+    {
+      "at": 11064,
+      "eye": [
+        -23.27,
+        4.45,
+        -28.875
+      ],
+      "target": [
+        -27.6,
+        4.05,
+        -28.875
+      ],
+      "fov": 52,
+      "time": 592.7464043993232,
+      "source_time": 461.0,
+      "values": [
+        -23.27,
+        4.45,
+        -28.875,
+        -1.5707963267948966,
+        -0.09211730861315807,
+        52
+      ]
+    },
+    {
+      "at": 11976,
+      "eye": [
+        -23.27,
+        4.45,
+        -28.875
+      ],
+      "target": [
+        -27.6,
+        4.05,
+        -28.875
+      ],
+      "fov": 52,
+      "time": 630,
+      "source_time": 499.0,
+      "values": [
+        -23.27,
+        4.45,
+        -28.875,
+        -1.5707963267948966,
+        -0.09211730861315807,
+        52
+      ]
+    },
+    {
+      "at": 12120,
+      "eye": [
+        -22.2,
+        4.45,
+        -22
+      ],
+      "target": [
+        -27.6,
+        6.6,
+        -18
+      ],
+      "fov": 59,
+      "time": 635,
+      "source_time": 505.0,
+      "values": [
+        -22.2,
+        4.45,
+        -22,
+        -2.2083451249335893,
+        0.30964380741231545,
+        59
+      ]
+    },
+    {
+      "at": 12336,
+      "eye": [
+        -23.2,
+        4.45,
+        -9.625
+      ],
+      "target": [
+        -27.6,
+        4.05,
+        -9.625
+      ],
+      "fov": 52,
+      "time": 641,
+      "source_time": 514.0,
+      "values": [
+        -23.2,
+        4.45,
+        -9.625,
+        -1.5707963267948966,
+        -0.09065988720074515,
+        52
+      ]
+    },
+    {
+      "at": 12528,
+      "eye": [
+        -23.2,
+        4.45,
+        -9.625
+      ],
+      "target": [
+        -27.6,
+        4.05,
+        -9.625
+      ],
+      "fov": 52,
+      "time": 654,
+      "source_time": 522.0,
+      "values": [
+        -23.2,
+        4.45,
+        -9.625,
+        -1.5707963267948966,
+        -0.09065988720074515,
+        52
+      ]
+    },
+    {
+      "at": 13176,
+      "eye": [
+        6.7143,
+        4.45,
+        -38.1
+      ],
+      "target": [
+        6.714285714285714,
+        4.05,
+        -42.6
+      ],
+      "fov": 52,
+      "time": 674,
+      "source_time": 549.0,
+      "values": [
+        6.7143,
+        4.45,
+        -38.1,
+        -3.1746031745605308e-06,
+        -0.08865588186699314,
+        52
+      ]
+    },
+    {
+      "at": 13308,
+      "eye": [
+        6.7143,
+        4.45,
+        -38.1
+      ],
+      "target": [
+        6.714285714285714,
+        4.05,
+        -42.6
+      ],
+      "fov": 52,
+      "time": 690,
+      "source_time": 554.5,
+      "values": [
+        6.7143,
+        4.45,
+        -38.1,
+        -3.1746031745005227e-06,
+        -0.08865588186699314,
+        52
+      ]
+    },
+    {
+      "at": 13560,
+      "eye": [
+        -6.7143,
+        4.45,
+        -34.8
+      ],
+      "target": [
+        -6.7143,
+        9.7,
+        -42.6
+      ],
+      "fov": 55,
+      "time": 700,
+      "source_time": 565.0,
+      "values": [
+        -6.7143,
+        4.45,
+        -34.8,
+        0.0,
+        0.5924273534318782,
+        55
+      ]
+    },
+    {
+      "at": 14088,
+      "eye": [
+        -6.7143,
+        4.45,
+        -34.8
+      ],
+      "target": [
+        -6.714285714285714,
+        9.7,
+        -42.6
+      ],
+      "fov": 55,
+      "time": 739.0883152173913,
+      "source_time": 587.0,
+      "values": [
+        -6.7143,
+        4.45,
+        -34.8,
+        1.8315018314467132e-06,
+        0.5924273534311014,
+        55
+      ]
+    },
+    {
+      "at": 14448,
+      "eye": [
+        -16.2,
+        4.45,
+        -37
+      ],
+      "target": [
+        -27.6,
+        6,
+        -27
+      ],
+      "fov": 59,
+      "time": 756.433734939759,
+      "source_time": 602.0,
+      "values": [
+        -16.2,
+        4.45,
+        -37,
+        -2.290867020568993,
+        0.101859121380312,
+        59
+      ]
+    },
+    {
+      "at": 14760,
+      "eye": [
+        -21.6,
+        4.45,
+        -36.4
+      ],
+      "target": [
+        -21.5,
+        11,
+        -19
+      ],
+      "fov": 61,
+      "time": 770.3170289855071,
+      "source_time": 615.0,
+      "values": [
+        -21.6,
+        4.45,
+        -36.4,
+        -3.147339716752996,
+        0.36002427399743625,
+        61
+      ]
+    },
+    {
+      "at": 15120,
+      "eye": [
+        -23.27,
+        4.45,
+        -28.875
+      ],
+      "target": [
+        -27.6,
+        4.05,
+        -28.875
+      ],
+      "fov": 52,
+      "time": 788.9137764932583,
+      "source_time": 630.0,
+      "values": [
+        -23.27,
+        4.45,
+        -28.875,
+        -1.5707963267948966,
+        -0.09211730861315807,
+        52
+      ]
+    },
+    {
+      "at": 15624,
+      "eye": [
+        -23.27,
+        4.45,
+        -28.875
+      ],
+      "target": [
+        -27.6,
+        4.05,
+        -28.875
+      ],
+      "fov": 52,
+      "time": 811.266298633018,
+      "source_time": 651.0,
+      "values": [
+        -23.27,
+        4.45,
+        -28.875,
+        -1.5707963267948966,
+        -0.09211730861315807,
+        52
+      ]
+    },
+    {
+      "at": 15840,
+      "eye": [
+        -21.8,
+        4.45,
+        -20
+      ],
+      "target": [
+        -27.6,
+        6.6,
+        -16
+      ],
+      "fov": 59,
+      "time": 820.7319613821417,
+      "source_time": 660.0,
+      "values": [
+        -21.8,
+        4.45,
+        -20,
+        -2.174545660192333,
+        0.29618075567706553,
+        59
+      ]
+    },
+    {
+      "at": 16128,
+      "eye": [
+        -21.5,
+        4.45,
+        10
+      ],
+      "target": [
+        -27.6,
+        6.6,
+        15
+      ],
+      "fov": 59,
+      "time": 832.0734247967647,
+      "source_time": 672.0,
+      "values": [
+        -21.5,
+        4.45,
+        10,
+        -2.257417898124682,
+        0.2661233638099793,
+        59
+      ]
+    },
+    {
+      "at": 16440,
+      "eye": [
+        -22,
+        4.45,
+        33.8
+      ],
+      "target": [
+        -22,
+        6.6,
+        42.6
+      ],
+      "fov": 58,
+      "time": 844.3600101626063,
+      "source_time": 685.0,
+      "values": [
+        -22,
+        4.45,
+        33.8,
+        -3.141592653589793,
+        0.2396239619628825,
+        58
+      ]
+    },
+    {
+      "at": 16872,
+      "eye": [
+        -22,
+        4.45,
+        33.8
+      ],
+      "target": [
+        -22,
+        6.6,
+        42.6
+      ],
+      "fov": 58,
+      "time": 864.8704614220878,
+      "source_time": 703.0,
+      "values": [
+        -22,
+        4.45,
+        33.8,
+        -3.1415926535897936,
+        0.2396239619628825,
+        58
+      ]
+    },
+    {
+      "at": 17040,
+      "eye": [
+        -17,
+        4.45,
+        34
+      ],
+      "target": [
+        -17,
+        6.6,
+        42.6
+      ],
+      "fov": 58,
+      "time": 873.8296142208775,
+      "source_time": 710.0,
+      "values": [
+        -17,
+        4.45,
+        34,
+        -3.141592653589794,
+        0.24497866312686406,
+        58
+      ]
+    },
+    {
+      "at": 17256,
+      "eye": [
+        -17,
+        4.45,
+        34
+      ],
+      "target": [
+        -17,
+        6.6,
+        42.6
+      ],
+      "fov": 58,
+      "time": 885.3485249621785,
+      "source_time": 719.0,
+      "values": [
+        -17,
+        4.45,
+        34,
+        -3.1415926535897936,
+        0.24497866312686406,
+        58
+      ]
+    },
+    {
+      "at": 17366,
+      "eye": [
+        -10.3,
+        4.45,
+        34
+      ],
+      "target": [
+        -9,
+        7.7,
+        42.6
+      ],
+      "fov": 57,
+      "time": 890.7439320388349,
+      "source_time": 723.5833333333334,
+      "values": [
+        -10.3,
+        4.45,
+        34,
+        -3.2916196103739015,
+        0.3575970838788369,
+        57
+      ]
+    },
+    {
+      "at": 17537,
+      "eye": [
+        -10.3,
+        4.45,
+        34
+      ],
+      "target": [
+        -9,
+        7.7,
+        42.6
+      ],
+      "fov": 57,
+      "time": 898.745145631068,
+      "source_time": 730.7083333333334,
+      "values": [
+        -10.3,
+        4.45,
+        34,
+        -3.291619610373902,
+        0.3575970838788369,
+        57
+      ]
+    },
+    {
+      "at": 17748,
+      "eye": [
+        9.1,
+        4.45,
+        34.2
+      ],
+      "target": [
+        10,
+        6.5,
+        42.6
+      ],
+      "fov": 60,
+      "time": 908.5582191780821,
+      "source_time": 739.5,
+      "values": [
+        9.1,
+        4.45,
+        34.2,
+        -3.248328326238929,
+        0.238057436091596,
+        60
+      ]
+    },
+    {
+      "at": 17856,
+      "eye": [
+        15,
+        4.45,
+        34.4
+      ],
+      "target": [
+        15,
+        6,
+        42.6
+      ],
+      "fov": 57,
+      "time": 913.4074074074075,
+      "source_time": 744.0,
+      "values": [
+        15,
+        4.45,
+        34.4,
+        -3.1415926535897936,
+        0.18682016093059575,
+        57
+      ]
+    },
+    {
+      "at": 19027,
+      "eye": [
+        15,
+        4.45,
+        34.4
+      ],
+      "target": [
+        15,
+        6,
+        42.6
+      ],
+      "fov": 57,
+      "time": 969.4583333333668,
+      "source_time": 792.7916666666666,
+      "values": [
+        15,
+        4.45,
+        34.4,
+        -3.141592653589794,
+        0.18682016093059575,
+        57
+      ]
+    },
+    {
+      "at": 19171,
+      "eye": [
+        14.5,
+        4.45,
+        33
+      ],
+      "target": [
+        5,
+        5,
+        29
+      ],
+      "fov": 60,
+      "time": 975.4583333333668,
+      "source_time": 798.7916666666666,
+      "values": [
+        14.5,
+        4.45,
+        33,
+        -1.1722738811284763,
+        0.05330728619943874,
+        60
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "id": "opening-lead",
+      "first": 0,
+      "count": 24,
+      "start": 0.0,
+      "end": 1.0,
+      "section": "开头"
+    },
+    {
+      "id": "n001",
+      "first": 24,
+      "count": 92,
+      "start": 1.0,
+      "end": 4.833333333333333,
+      "section": "开头",
+      "text_zh": "我们先听十秒肖邦...",
+      "text_en": "First, let's listen to ten seconds of Chopin.",
+      "voice_seconds": {
+        "en": 3.146333333333333,
+        "zh": 2.0
+      },
+      "voice_start": 1.25,
+      "source": null
+    },
+    {
+      "id": "listen",
+      "first": 116,
+      "count": 240,
+      "start": 4.833333333333333,
+      "end": 14.833333333333334,
+      "section": "肖邦与雨滴"
+    },
+    {
+      "id": "n002",
+      "first": 356,
+      "count": 347,
+      "start": 14.833333333333334,
+      "end": 29.291666666666668,
+      "section": "肖邦与雨滴",
+      "text_zh": "听起来平静而优美，对吗？但是你能想象，在写这个前奏曲的那个冬天，肖邦曾在极度悲伤和焦虑中弹琴吗？",
+      "text_en": "It sounds peaceful and beautiful, right? But can you imagine that, during the winter when he was writing this prelude, Chopin once sat at the piano in profound sorrow and anxiety?",
+      "voice_seconds": {
+        "en": 13.68,
+        "zh": 11.2
+      },
+      "voice_start": 15.083333333333334,
+      "source": null
+    },
+    {
+      "id": "n003",
+      "first": 703,
+      "count": 360,
+      "start": 29.291666666666668,
+      "end": 44.291666666666664,
+      "section": "肖邦与雨滴",
+      "text_zh": "1838 年，肖邦和作家乔治·桑带着她的两个孩子到了马略卡岛的一座旧修道院。",
+      "text_en": "In 1838, Chopin and the writer George Sand, together with her two children, came to an old monastery on the island of Mallorca.",
+      "voice_seconds": {
+        "en": 8.823625,
+        "zh": 7.68
+      },
+      "voice_start": 29.541666666666668,
+      "source": null,
+      "visual": "portrait-reconstruction-merge-split"
+    },
+    {
+      "id": "n004",
+      "first": 1063,
+      "count": 438,
+      "start": 44.291666666666664,
+      "end": 62.541666666666664,
+      "section": "肖邦与雨滴",
+      "text_zh": "有一晚，乔治·桑出门采购被暴雨困住，深夜才赶回修道院。她推开门，发现肖邦正坐在钢琴前演奏，脸色苍白，眼神迷离，完全沉浸在一种近乎梦游的半清醒状态中。",
+      "text_en": "One evening, George Sand went out for supplies and was caught in a violent storm. She did not return to the monastery until late at night. When she opened the door, she found Chopin at the piano, pale, his gaze unfocused, absorbed in a state somewhere between waking and dreaming.",
+      "voice_seconds": {
+        "en": 17.5195,
+        "zh": 17.52
+      },
+      "voice_start": 44.541666666666664,
+      "source": null,
+      "visual": "monastery"
+    },
+    {
+      "id": "n005",
+      "first": 1501,
+      "count": 585,
+      "start": 62.541666666666664,
+      "end": 86.91666666666667,
+      "section": "肖邦与雨滴",
+      "text_zh": "肖邦看到她时惊呼了一声, 说：“啊，我就知道，你们也死了！”，随后告诉她，自己在弹琴时渐渐陷入了沉睡般的幻觉。他梦见自己已经死去，沉在冰冷的湖底，而冰冷、沉重的水滴正一滴一滴、极有规律地落在他的胸口上。",
+      "text_en": "When Chopin saw her, he cried out: Ah, I knew it. You were dead too! Then he told her how, as he played, he had gradually slipped into a dreamlike vision. He had imagined himself dead, lying at the bottom of an icy lake. Cold, heavy drops of water were falling on his chest, one by one, with relentless regularity.",
+      "voice_seconds": {
+        "en": 20.97925,
+        "zh": 23.72
+      },
+      "voice_start": 62.791666666666664,
+      "source": null,
+      "visual": "water-double-pass"
+    },
+    {
+      "id": "n006",
+      "first": 2086,
+      "count": 317,
+      "start": 86.91666666666667,
+      "end": 100.125,
+      "section": "肖邦与雨滴",
+      "text_zh": "这首降D大调前奏曲中，贯穿作品的重复音型，就像永不停歇的脉搏或滴水声。今天，人们也因此把它称作《雨滴》。",
+      "text_en": "Throughout this Prelude in D-flat major, a repeating pattern sounds like an unending heartbeat, or the sound of dripping water. This is why people commonly call it the Raindrop Prelude today.",
+      "voice_seconds": {
+        "en": 11.42425,
+        "zh": 12.52
+      },
+      "voice_start": 87.16666666666667,
+      "source": [
+        131.08333333333334,
+        151.0
+      ]
+    },
+    {
+      "id": "n007",
+      "first": 2403,
+      "count": 186,
+      "start": 100.125,
+      "end": 107.875,
+      "section": "肖邦与雨滴",
+      "text_zh": "然而，肖邦并不认为自己是在模仿大自然的雨滴，他是在诉说自己的心声。",
+      "text_en": "Yet Chopin did not believe he was imitating raindrops in nature. He was giving voice to what he felt within.",
+      "voice_seconds": {
+        "en": 6.733833333333333,
+        "zh": 7.08
+      },
+      "voice_start": 100.375,
+      "source": [
+        151.0,
+        161.79166666666666
+      ]
+    },
+    {
+      "id": "n008",
+      "first": 2589,
+      "count": 101,
+      "start": 107.875,
+      "end": 112.08333333333333,
+      "section": "肖邦与雨滴",
+      "text_zh": "我们听一听他心中最沉重的段落。",
+      "text_en": "Let's listen to the passage that feels heaviest in his heart.",
+      "voice_seconds": {
+        "en": 3.413375,
+        "zh": 3.52
+      },
+      "voice_start": 108.125,
+      "source": [
+        161.7916666667,
+        165.2916666667
+      ]
+    },
+    {
+      "id": "listen-heavy",
+      "first": 2690,
+      "count": 288,
+      "start": 112.08333333333333,
+      "end": 124.08333333333333,
+      "section": "肖邦与雨滴",
+      "source": [
+        165.2916666667,
+        168.7916666667
+      ]
+    },
+    {
+      "id": "n009",
+      "first": 2978,
+      "count": 206,
+      "start": 124.08333333333333,
+      "end": 132.66666666666666,
+      "section": "肖邦与雨滴",
+      "text_zh": "这是怎么样的心情？你是否也感受过相似的悲伤，放不下的紧绷，彷徨和忧郁？",
+      "text_en": "What does this feel like? Have you ever felt a similar sadness, a tension you cannot release, uncertainty and melancholy?",
+      "voice_seconds": {
+        "en": 7.883166666666667,
+        "zh": 7.44
+      },
+      "voice_start": 124.33333333333334,
+      "source": null
+    },
+    {
+      "id": "n010",
+      "first": 3184,
+      "count": 89,
+      "start": 132.66666666666666,
+      "end": 136.375,
+      "section": "肖邦与雨滴",
+      "text_zh": "但这首曲子没有停在沉重里。",
+      "text_en": "But this piece did not remain in that heaviness.",
+      "voice_seconds": {
+        "en": 2.983833333333333,
+        "zh": 2.6
+      },
+      "voice_start": 132.91666666666666,
+      "source": null
+    },
+    {
+      "id": "n011",
+      "first": 3273,
+      "count": 108,
+      "start": 136.375,
+      "end": 140.875,
+      "section": "肖邦与雨滴",
+      "text_zh": "听听雨过天晴的结尾",
+      "text_en": "Listen to the ending, as though the sky were clearing after rain.",
+      "voice_seconds": {
+        "en": 3.7965,
+        "zh": 2.72
+      },
+      "voice_start": 136.625,
+      "source": null
+    },
+    {
+      "id": "listen-clearing",
+      "first": 3381,
+      "count": 1665,
+      "start": 140.875,
+      "end": 210.25,
+      "section": "肖邦与雨滴",
+      "visual": "monk-full-painting"
+    },
+    {
+      "id": "n012",
+      "first": 5046,
+      "count": 253,
+      "start": 210.25,
+      "end": 220.79166666666666,
+      "section": "肖邦与雨滴",
+      "text_zh": "为什么沉重的雨滴，突然转为平静而优雅的浪漫？出其不意，却又自然而然。",
+      "text_en": "Why do these heavy raindrops suddenly give way to something peaceful, graceful, and romantic? It is unexpected, yet it feels entirely natural.",
+      "voice_seconds": {
+        "en": 9.845333333333333,
+        "zh": 7.68
+      },
+      "voice_start": 210.5,
+      "source": null
+    },
+    {
+      "id": "n013",
+      "first": 5299,
+      "count": 322,
+      "start": 220.79166666666666,
+      "end": 234.20833333333334,
+      "section": "肖邦与雨滴",
+      "text_zh": "这些艺术家如何带着牵挂与愁烦，仍然向往自然的崇高与自由？今天让我们藉着肖邦的音乐和几位画家了解一下浪漫主义。",
+      "text_en": "How did these artists carry their worries and sorrows, and still reach toward the sublimity of nature and freedom? Today, let's explore Romanticism through Chopin's music and the work of several painters.",
+      "voice_seconds": {
+        "en": 12.236916666666668,
+        "zh": 12.76
+      },
+      "voice_start": 221.04166666666666,
+      "source": null
+    },
+    {
+      "id": "n014",
+      "first": 5621,
+      "count": 469,
+      "start": 234.20833333333334,
+      "end": 253.75,
+      "section": "革命与动荡的时代",
+      "text_zh": "把时间拨回 1789 年。法国大革命爆发，到 1815 年拿破仑时代结束，二十六年间，法国经历了大革命、政变、战争，巨变推向整个欧洲。",
+      "text_en": "Turn the clock back to 1789, when the French Revolution began. Over the twenty-six years that followed, until the end of the Napoleonic era in 1815, France experienced revolution, coups, and war. The upheaval spread across Europe.",
+      "voice_seconds": {
+        "en": 16.892583333333334,
+        "zh": 18.88
+      },
+      "voice_start": 234.45833333333331,
+      "source": [
+        168.79166666666666,
+        191.16666666666666
+      ]
+    },
+    {
+      "id": "n015",
+      "first": 6090,
+      "count": 277,
+      "start": 253.75,
+      "end": 265.2916666666667,
+      "section": "革命与动荡的时代",
+      "text_zh": "1793 年，国王路易十六被送上断头台。恐怖时期，逮捕、审判和处决深入了日常生活。",
+      "text_en": "In 1793, King Louis the Sixteenth is sent to the guillotine. During the Terror, arrests, trials, and executions become part of daily life.",
+      "voice_seconds": {
+        "en": 10.321333333333333,
+        "zh": 10.88
+      },
+      "voice_start": 254.0,
+      "source": [
+        191.16666666666666,
+        203.04166666666666
+      ]
+    },
+    {
+      "id": "n016",
+      "first": 6367,
+      "count": 298,
+      "start": 265.2916666666667,
+      "end": 277.7083333333333,
+      "section": "革命与动荡的时代",
+      "text_zh": "1794 年 伴随着巴黎革命法庭的极端化演变，恐怖统治的核心人物罗伯斯庇尔，自己也被送上了断头台。",
+      "text_en": "In 1794, as the Revolutionary Tribunal in Paris grows more extreme, Robespierre, a central figure of the Terror, is himself sent to the guillotine.",
+      "voice_seconds": {
+        "en": 10.449,
+        "zh": 11.76
+      },
+      "voice_start": 265.5416666666667,
+      "source": [
+        203.04166666666666,
+        215.75
+      ]
+    },
+    {
+      "id": "n017",
+      "first": 6665,
+      "count": 500,
+      "start": 277.7083333333333,
+      "end": 298.5416666666667,
+      "section": "革命与动荡的时代",
+      "text_zh": "1799 年，拿破仑发动政变。1804 年，他加冕为皇帝。1815 年，滑铁卢战败，他再次退位。被革命推翻的波旁王朝，又回到了法国。",
+      "text_en": "In 1799, Napoleon seizes power in a coup. In 1804, he crowns himself emperor. In 1815, after his defeat at Waterloo, he abdicates again. The Bourbon monarchy, overthrown by the Revolution, returns to France.",
+      "voice_seconds": {
+        "en": 16.927375,
+        "zh": 20.16
+      },
+      "voice_start": 277.95833333333337,
+      "source": [
+        215.75,
+        235.75
+      ]
+    },
+    {
+      "id": "n018",
+      "first": 7165,
+      "count": 1042,
+      "start": 298.5416666666667,
+      "end": 341.9583333333333,
+      "section": "革命与动荡的时代",
+      "text_zh": "想象一下，一个人看见王权倒下、共和国诞生、将军称帝，最后又看见王朝复辟。\n从 1789 年法国大革命爆发，到 1875 年法兰西第三共和国宪法颁布，近一个世纪里，法国仍多次更换政体。整个欧洲也在这数十年间，反复经历革命、战争与政治秩序的重组。自由曾经好像伸手就能碰到，明天却依然难以把握。理解浪漫主义，也要理解这份盼望和不安。我们了解几位特别在意这些动荡与不安的艺术家。",
+      "text_en": "Imagine someone watching royal power fall, a republic emerge, a general become emperor, and finally a dynasty return. From the outbreak of the French Revolution in 1789 to the constitutional laws of the Third Republic in 1875, France changed its political system repeatedly over nearly a century. Across Europe, those same decades brought recurring revolutions, wars, and a reordering of political power. Freedom had once seemed close enough to touch, yet tomorrow remained uncertain. To understand Romanticism, we also need to understand this hope and unease. Let's meet a few artists who paid particular attention to that upheaval and uncertainty.",
+      "voice_seconds": {
+        "en": 42.64354166666667,
+        "zh": 41.83408333333333
+      },
+      "voice_start": 298.7916666666667,
+      "source": [
+        235.75,
+        256.9166666666667
+      ]
+    },
+    {
+      "id": "n019",
+      "first": 8207,
+      "count": 394,
+      "start": 341.9583333333333,
+      "end": 358.375,
+      "section": "戈雅",
+      "text_zh": "弗朗西斯科·戈雅，西班牙宫廷画家，1793 年的一场重病让他失去了听力，往后几十年，他在一个自己听不见的世界里，继续作画。",
+      "text_en": "Francisco Goya was a Spanish court painter. A serious illness in 1793 left him deaf. For decades afterward, he continued to paint in a world he could no longer hear.",
+      "voice_seconds": {
+        "en": 11.946666666666667,
+        "zh": 15.76
+      },
+      "voice_start": 342.20833333333337,
+      "source": [
+        256.9166666666667,
+        273.2916666666667
+      ]
+    },
+    {
+      "id": "n020",
+      "first": 8601,
+      "count": 341,
+      "start": 358.375,
+      "end": 372.5833333333333,
+      "section": "戈雅",
+      "text_zh": "1808 年，马德里反抗法军的占领。起义遭到镇压，有人被处决。六年后，他画了两幅关于这两天的画。",
+      "text_en": "In 1808, Madrid rose against the French occupation. The uprising was crushed. People were executed. Six years later, Goya painted two pictures about those two days.",
+      "voice_seconds": {
+        "en": 12.202125,
+        "zh": 13.52
+      },
+      "voice_start": 358.625,
+      "source": [
+        273.2916666666667,
+        286.5416666666667
+      ]
+    },
+    {
+      "id": "n021",
+      "first": 8942,
+      "count": 523,
+      "start": 372.5833333333333,
+      "end": 394.375,
+      "section": "戈雅",
+      "text_zh": "看《1808 年 5 月 3 日》。白衫的人跪在地上，抬起双手。光照出他的眼睛，也照出身边捂脸的人。对面的枪口朝着他们，士兵的脸几乎看不见。在画上，他把时间停在这些人面对枪口的一刻。",
+      "text_en": "Look at The Third of May, 1808. A man in a white shirt kneels on the ground, his hands raised. The light reveals his eyes, and the people covering their faces beside him. Across from them, rifles are aimed. The soldiers' faces are almost invisible. Goya stops time at the instant these people face the guns.",
+      "voice_seconds": {
+        "en": 20.901,
+        "zh": 21.11725
+      },
+      "voice_start": 372.83333333333337,
+      "source": [
+        286.5416666666667,
+        308.9583333333333
+      ]
+    },
+    {
+      "id": "n022",
+      "first": 9465,
+      "count": 289,
+      "start": 394.375,
+      "end": 406.4166666666667,
+      "section": "戈雅",
+      "text_zh": "他还做了一套版画，后来叫《战争的灾难》。有一张画着平民逃命，下面是他写的几个字：“我亲眼见过。”",
+      "text_en": "Beyond this painting, he also made a series of prints later known as The Disasters of War. One shows civilians fleeing. Beneath it, he wrote a few words: I saw it.",
+      "voice_seconds": {
+        "en": 11.296583333333333,
+        "zh": 10.64
+      },
+      "voice_start": 394.625,
+      "source": [
+        308.9583333333333,
+        320.875
+      ]
+    },
+    {
+      "id": "n023",
+      "first": 9754,
+      "count": 210,
+      "start": 406.4166666666667,
+      "end": 415.1666666666667,
+      "section": "籍里柯",
+      "text_zh": "泰奥多尔·籍里柯，法国画家。他的目光停在一批被遗弃在海上的普通人身上。",
+      "text_en": "Theodore Gericault was a French painter whose attention turned to a group of ordinary people abandoned at sea.",
+      "voice_seconds": {
+        "en": 6.687375,
+        "zh": 8.08
+      },
+      "voice_start": 406.6666666666667,
+      "source": [
+        320.875,
+        333.5416666666667
+      ]
+    },
+    {
+      "id": "n024",
+      "first": 9964,
+      "count": 444,
+      "start": 415.1666666666667,
+      "end": 433.6666666666667,
+      "section": "籍里柯",
+      "text_zh": "1816 年，法国军舰「梅杜萨」号在西非近海搁浅。约一百五十人被留在一只临时木筏上。漂流十三天后，仅仅只有十五人获救。",
+      "text_en": "In 1816, the French naval ship Medusa ran aground off the coast of West Africa. Around one hundred and fifty people were left on a makeshift raft. After thirteen days adrift, just fifteen were rescued.",
+      "voice_seconds": {
+        "en": 13.43275,
+        "zh": 17.84
+      },
+      "voice_start": 415.4166666666667,
+      "source": [
+        333.5416666666667,
+        347.4166666666667
+      ]
+    },
+    {
+      "id": "n025",
+      "first": 10408,
+      "count": 698,
+      "start": 433.6666666666667,
+      "end": 462.75,
+      "section": "籍里柯",
+      "text_zh": "籍里柯找过幸存者，做过木筏模型，也去医院和停尸房研究人的身体。1819 年，这幅长七米多的画在沙龙展出。看右上方，那个人站到最高处，朝远处挥布。他用巨大画幅，留下这些被抛下的人。那个挥布的动作所代表的希望就在画里，也在画面之外。",
+      "text_en": "Gericault met survivors, built a model of the raft, and studied bodies in hospitals and morgues. In 1819, this painting, more than seven meters wide, was exhibited at the Salon. Look toward the upper right. A man stands at the highest point, waving a cloth into the distance. Gericault used an immense canvas to preserve the lives of people who had been cast aside. The hope in that gesture exists within the painting, and beyond it.",
+      "voice_seconds": {
+        "en": 28.316833333333335,
+        "zh": 25.795333333333332
+      },
+      "voice_start": 433.9166666666667,
+      "source": [
+        347.4166666666667,
+        377.0416666666667
+      ]
+    },
+    {
+      "id": "n026",
+      "first": 11106,
+      "count": 256,
+      "start": 462.75,
+      "end": 473.4166666666667,
+      "section": "德拉克洛瓦",
+      "text_zh": "欧仁·德拉克洛瓦是十九世纪法国浪漫主义的重要画家，年轻时在巴黎接受绘画训练，亲眼经历了政权更迭。",
+      "text_en": "Eugene Delacroix was a leading French Romantic painter of the nineteenth century. Trained in Paris as a young man, he lived through changes of political power.",
+      "voice_seconds": {
+        "en": 9.044166666666667,
+        "zh": 10.0
+      },
+      "voice_start": 463.0,
+      "source": [
+        377.0416666666667,
+        387.9166666666667
+      ]
+    },
+    {
+      "id": "n027",
+      "first": 11362,
+      "count": 620,
+      "start": 473.4166666666667,
+      "end": 499.25,
+      "section": "德拉克洛瓦",
+      "text_zh": "1830 年的巴黎。7 月 26 日，国王查理十世限制新闻出版，解散刚选出的众议院，也改变选举规则。巴黎的记者发表抗议，街头接着筑起街垒。7 月 27 日到 29 日的起义被称为“光荣三日”。查理十世退位。",
+      "text_en": "Paris, 1830. On July twenty-sixth, King Charles the Tenth restricts the press, dissolves the newly elected Chamber of Deputies, and changes the electoral rules. Journalists protest. Barricades rise in the streets. The uprising of July twenty-seventh through twenty-ninth becomes known as the Three Glorious Days. Charles the Tenth abdicates.",
+      "voice_seconds": {
+        "en": 24.74091666666667,
+        "zh": 25.15866666666667
+      },
+      "voice_start": 473.6666666666667,
+      "source": [
+        387.9166666666667,
+        410.875
+      ]
+    },
+    {
+      "id": "n028",
+      "first": 11982,
+      "count": 216,
+      "start": 499.25,
+      "end": 508.25,
+      "section": "德拉克洛瓦",
+      "text_zh": "德拉克洛瓦为什么画，这幅画？“即使我没有为了我的祖国战斗，我也可以用我的画作来歌颂它。”",
+      "text_en": "Why did Delacroix paint this picture? Even if I did not fight for my country, I can still celebrate it through my paintings.",
+      "voice_seconds": {
+        "en": 7.082125,
+        "zh": 8.32
+      },
+      "voice_start": 499.5,
+      "source": [
+        410.875,
+        419.0416666666667
+      ]
+    },
+    {
+      "id": "n029",
+      "first": 12198,
+      "count": 376,
+      "start": 508.25,
+      "end": 523.9166666666666,
+      "section": "德拉克洛瓦",
+      "text_zh": "画里有真实的巴黎。烟雾的巴黎圣母院，一位举三色旗的女子走在前面，她代表了一个能迈步、能带人跨过街垒的人，人群跟着她朝我们前进。",
+      "text_en": "The painting contains a real Paris: Notre-Dame in the smoke. At the front, a woman raises the tricolour. She embodies a freedom that can move, and lead people across the barricades. The crowd follows her, advancing toward us.",
+      "voice_seconds": {
+        "en": 14.930416666666666,
+        "zh": 13.68
+      },
+      "voice_start": 508.5,
+      "source": [
+        419.0416666666667,
+        433.875
+      ]
+    },
+    {
+      "id": "n030",
+      "first": 12574,
+      "count": 438,
+      "start": 523.9166666666666,
+      "end": 542.1666666666666,
+      "section": "赖特与火山",
+      "text_zh": "约瑟夫·赖特，十八世纪英国德比的画家，常画科学实验、工匠与学者，身边有不少关心工业和新知识的人。他擅长在黑暗中安排一道光，看人怎样围着它。",
+      "text_en": "Joseph Wright, of Derby in eighteenth-century England, often painted scientific experiments, craftspeople, and scholars. His circle included people interested in industry and new knowledge. He knew how to place a single light in the darkness, and show how people gathered around it.",
+      "voice_seconds": {
+        "en": 17.531625000000002,
+        "zh": 15.76
+      },
+      "voice_start": 524.1666666666666,
+      "source": [
+        433.875,
+        451.2916666666667
+      ]
+    },
+    {
+      "id": "n031",
+      "first": 13012,
+      "count": 600,
+      "start": 542.1666666666666,
+      "end": 567.1666666666666,
+      "section": "赖特与火山",
+      "text_zh": "1774 年，赖特去看维苏威火山，称那是“自然界最惊人的景象”。这幅《维苏威火山喷发》，先看火光，它把山口和烟云烧成亮色。再看海湾，月光很冷，海面仍然很静。岸边那几个人小得几乎要找不到。",
+      "text_en": "In 1774, Wright visited Vesuvius and called it the most astonishing sight in nature. In this painting of an eruption, look first at the fire. It lights the crater and the clouds of smoke. Then look at the bay. The moonlight is cold. The sea remains still. The people on the shore are so small that you can almost miss them.",
+      "voice_seconds": {
+        "en": 22.523125,
+        "zh": 24.313083333333335
+      },
+      "voice_start": 542.4166666666666,
+      "source": [
+        451.2916666666667,
+        475.7916666666667
+      ]
+    },
+    {
+      "id": "n032",
+      "first": 13612,
+      "count": 409,
+      "start": 567.1666666666666,
+      "end": 584.2083333333334,
+      "section": "赖特与火山",
+      "text_zh": "我们站在画前看火光，也发现画里的人小得那样脆弱。危险、吸引和人的微小，同时进入一次观看。这种体验，后来成为理解浪漫主义“崇高”的一个入口。",
+      "text_en": "We stand before the painting, drawn to the fire, and discover how fragile its people are. Danger, attraction, and human smallness enter a single act of looking. This experience later becomes one way into the Romantic idea of the sublime.",
+      "voice_seconds": {
+        "en": 16.207583333333332,
+        "zh": 16.36
+      },
+      "voice_start": 567.4166666666666,
+      "source": [
+        475.7916666666667,
+        491.375
+      ]
+    },
+    {
+      "id": "n033",
+      "first": 14021,
+      "count": 464,
+      "start": 584.2083333333334,
+      "end": 603.5416666666666,
+      "section": "弗里德里希",
+      "text_zh": "卡斯帕·大卫·弗里德里希，出生在波罗的海岸边的格赖夫斯瓦尔德，后来长期在德累斯顿画风景。他七岁失去母亲，十三岁那年，弟弟在一次冰上事故中溺亡。对他来说，失去很早就进入了生活。",
+      "text_en": "Caspar David Friedrich was born in Greifswald, on the Baltic coast, and later spent much of his life painting landscapes in Dresden. He lost his mother at seven. When he was thirteen, his brother drowned in an accident on the ice. Loss entered his life very early.",
+      "voice_seconds": {
+        "en": 16.254083333333334,
+        "zh": 18.68
+      },
+      "voice_start": 584.4583333333333,
+      "source": [
+        491.375,
+        509.0
+      ]
+    },
+    {
+      "id": "n034",
+      "first": 14485,
+      "count": 292,
+      "start": 603.5416666666666,
+      "end": 615.7083333333334,
+      "section": "弗里德里希",
+      "text_zh": "他的要求很直接，画眼前所见，也要画内心所见。一个景色经过谁的眼睛、谁的一生，最后就会带着怎样的分量。",
+      "text_en": "His demand was direct: paint what you see before you, and what you see within. A landscape passes through someone's eyes, and through someone's life. It carries the weight of that encounter.",
+      "voice_seconds": {
+        "en": 11.343,
+        "zh": 11.48
+      },
+      "voice_start": 603.7916666666666,
+      "source": [
+        509.0,
+        521.5416666666666
+      ]
+    },
+    {
+      "id": "n035",
+      "first": 14777,
+      "count": 537,
+      "start": 615.7083333333334,
+      "end": 638.0833333333334,
+      "section": "弗里德里希",
+      "text_zh": "看《海边的修道士》。岸被画得很低，远处是暗海，大片天空把那个人围在下面。弗里德里希描述这幅画时说，即使从清晨想到深夜，人依然难以参透那神秘的彼岸。看得见的辽阔，和人的有限，一起进入了这幅海景。",
+      "text_en": "Look at Monk by the Sea. The shore lies low. Beyond it is a dark sea. A vast sky surrounds the small figure beneath it. Describing the painting, Friedrich suggested that even thinking from morning until night cannot reveal the mystery of the distant beyond. Visible immensity and human limitation enter the same seascape.",
+      "voice_seconds": {
+        "en": 20.294333333333334,
+        "zh": 21.72
+      },
+      "voice_start": 615.9583333333333,
+      "source": [
+        521.5416666666666,
+        543.6666666666666
+      ]
+    },
+    {
+      "id": "n036",
+      "first": 15314,
+      "count": 417,
+      "start": 638.0833333333334,
+      "end": 655.4583333333334,
+      "section": "雾海上的旅人",
+      "text_zh": "再看《雾海上的旅人》。近处的岩石清清楚楚，前面的路只露出一点。那个人已经走到了高处，眼前仍然有很多看不清的地方。站得更高，也会让我们更清楚地发现自己目光的边界。",
+      "text_en": "Now look at Wanderer above the Sea of Fog. The rocks nearby are sharply visible. Only fragments of the way ahead can be seen. This person has reached a high place, yet so much before him remains unclear. Standing higher can also reveal the limits of our sight.",
+      "voice_seconds": {
+        "en": 15.952125,
+        "zh": 16.72
+      },
+      "voice_start": 638.3333333333333,
+      "source": [
+        543.6666666666666,
+        562.25
+      ]
+    },
+    {
+      "id": "n037",
+      "first": 15731,
+      "count": 310,
+      "start": 655.4583333333334,
+      "end": 668.375,
+      "section": "透纳",
+      "text_zh": "约瑟夫·马洛德·威廉·透纳，是英国伦敦一位理发师的儿子，旅行、写生，把海、天气和光作为一生的题材。",
+      "text_en": "Joseph Mallord William Turner was the son of a London barber. He traveled and sketched, making the sea, the weather, and light the subjects of a lifetime.",
+      "voice_seconds": {
+        "en": 9.508625,
+        "zh": 12.24
+      },
+      "voice_start": 655.7083333333333,
+      "source": [
+        562.25,
+        584.5
+      ]
+    },
+    {
+      "id": "n038",
+      "first": 16041,
+      "count": 367,
+      "start": 668.375,
+      "end": 683.6666666666666,
+      "section": "透纳",
+      "text_zh": "1838 年，老战舰「特梅雷尔」号被蒸汽拖船拉去拆解。一年后，透纳把这趟航程画下来。",
+      "text_en": "In 1838, the old warship Temeraire was towed away by a steam tug to be broken up. A year later, Turner painted that last journey.",
+      "voice_seconds": {
+        "en": 9.380875,
+        "zh": 14.64
+      },
+      "voice_start": 668.625,
+      "source": [
+        584.5,
+        597.4583333333334
+      ]
+    },
+    {
+      "id": "n039",
+      "first": 16408,
+      "count": 301,
+      "start": 683.6666666666666,
+      "end": 696.2083333333334,
+      "section": "透纳",
+      "text_zh": "透纳在一封信稿里把这幅画叫作自己的“宝贝”。有人出钱要买，他始终没有卖。旧舰走向拆解，画家把它最后的形象留了下来。",
+      "text_en": "In a draft letter, Turner called this painting his darling. People offered to buy it, but he never sold it. The old ship was heading toward destruction. The painter preserved its final image.",
+      "voice_seconds": {
+        "en": 11.644833333333333,
+        "zh": 11.88
+      },
+      "voice_start": 683.9166666666666,
+      "source": [
+        597.4583333333334,
+        612.625
+      ]
+    },
+    {
+      "id": "n040",
+      "first": 16709,
+      "count": 736,
+      "start": 696.2083333333334,
+      "end": 726.875,
+      "section": "雨 蒸汽与速度",
+      "text_zh": "到 1844 年，他又画了一列蒸汽火车。桥的斜线直朝我们伸来，车头从雨雾里出现。想想刚才那艘旧帆船。变化会带来力量，也会让熟悉的东西离开。一个人跟得上它，还要有时间去感觉它带走了什么。",
+      "text_en": "Then, in 1844, he painted a steam train. The diagonal of the bridge reaches straight toward us. Its engine emerges through rain and mist. Think of the old sailing ship we have just seen. Change brings power, and also carries familiar things away. We may keep pace with it, and still need time to feel what it has taken.",
+      "voice_seconds": {
+        "en": 20.305875,
+        "zh": 30.00808333333333
+      },
+      "voice_start": 696.4583333333333,
+      "source": [
+        612.625,
+        636.875
+      ]
+    },
+    {
+      "id": "n041",
+      "first": 17445,
+      "count": 303,
+      "start": 726.875,
+      "end": 739.5,
+      "section": "感受 自然 时间 人的有限性",
+      "text_zh": "桑听见屋瓦上的雨，肖邦感到胸口的水滴。同一场雨，在各自心里有不同的分量。音乐使另一个人也能接近那份感受。",
+      "text_en": "Sand heard rain on the roof. Chopin felt drops falling on his chest. The same rain carries a different weight in each person's inner world. Music lets someone else approach that feeling.",
+      "voice_seconds": {
+        "en": 11.168833333333334,
+        "zh": 11.96
+      },
+      "voice_start": 727.125,
+      "source": [
+        636.875,
+        649.9583333333334
+      ]
+    },
+    {
+      "id": "n042",
+      "first": 17748,
+      "count": 304,
+      "start": 739.5,
+      "end": 752.1666666666666,
+      "section": "感受 自然 时间 人的有限性",
+      "text_zh": "火山、大海和雾有自己的变化。人会被它们吸引，也会害怕。我们生活在其中，目光和力量都有边界。",
+      "text_en": "Volcanoes, seas, and fog change in their own ways. They draw us in, and can frighten us. We live within them. Our sight and our power have limits.",
+      "voice_seconds": {
+        "en": 9.589875,
+        "zh": 12.0
+      },
+      "voice_start": 739.75,
+      "source": [
+        649.9583333333334,
+        661.25
+      ]
+    },
+    {
+      "id": "n043",
+      "first": 18052,
+      "count": 170,
+      "start": 752.1666666666666,
+      "end": 759.25,
+      "section": "感受 自然 时间 人的有限性",
+      "text_zh": "一艘船离开了，一代人过去了。画可以把那一刻带给后来的人。",
+      "text_en": "A ship departs. A generation passes. A painting can bring that moment to people who come later.",
+      "voice_seconds": {
+        "en": 6.223,
+        "zh": 6.4
+      },
+      "voice_start": 752.4166666666666,
+      "source": [
+        661.25,
+        668.5833333333334
+      ]
+    },
+    {
+      "id": "n044",
+      "first": 18222,
+      "count": 298,
+      "start": 759.25,
+      "end": 771.6666666666666,
+      "section": "感受 自然 时间 人的有限性",
+      "text_zh": "那只手已经举起，远处的船还没有回应。人能做的和结果之间，往往还有一段等待。画家把这段距离留在了画里。",
+      "text_en": "The hand is already raised. The distant ship has not yet answered. Between what we can do and what will happen, there is often a stretch of waiting. The painter leaves that distance in the picture.",
+      "voice_seconds": {
+        "en": 11.726125,
+        "zh": 11.16
+      },
+      "voice_start": 759.5,
+      "source": [
+        668.5833333333334,
+        681.8333333333334
+      ]
+    },
+    {
+      "id": "n045",
+      "first": 18520,
+      "count": 189,
+      "start": 771.6666666666666,
+      "end": 779.5416666666666,
+      "section": "感受 自然 时间 人的有限性",
+      "text_zh": "面对太多变化，我们会想马上知道下一刻，我们会焦虑，担忧。",
+      "text_en": "Faced with so much change, we want to know what comes next, right away. We feel anxious and worried.",
+      "voice_seconds": {
+        "en": 6.78025,
+        "zh": 7.2
+      },
+      "voice_start": 771.9166666666666,
+      "source": [
+        681.8333333333,
+        688.1115591397661
+      ]
+    },
+    {
+      "id": "n046",
+      "first": 18709,
+      "count": 245,
+      "start": 779.5416666666666,
+      "end": 789.75,
+      "section": "感受 自然 时间 人的有限性",
+      "text_zh": "浪漫主义艺术家在黑暗和动荡当中，看到人性的有限，向往无限，向往瞬间中的永恒。",
+      "text_en": "Amid darkness and upheaval, Romantic artists recognized human limits. They reached toward the infinite, toward eternity within a passing moment.",
+      "voice_seconds": {
+        "en": 9.462166666666667,
+        "zh": 9.12
+      },
+      "voice_start": 779.7916666666666,
+      "source": [
+        688.1115591397661,
+        696.25
+      ]
+    },
+    {
+      "id": "listen-return",
+      "first": 18954,
+      "count": 288,
+      "start": 789.75,
+      "end": 801.75,
+      "section": "开头的旋律回来了",
+      "source": [
+        696.25,
+        708.25
+      ]
+    },
+    {
+      "id": "n047",
+      "first": 19242,
+      "count": 362,
+      "start": 801.75,
+      "end": 816.8333333333334,
+      "section": "开头的旋律回来了",
+      "text_zh": "还是同一个重复的音，开头那条旋律回来了。你听到的是因未知而担忧，还是因认识到自己的有限而平静？我们可以慢慢听一听，想一想。",
+      "text_en": "It is still the same repeated note, and the opening melody has returned. Do you hear worry about the unknown, or a quietness that comes from recognising our limits? We can listen slowly, and take time to think.",
+      "voice_seconds": {
+        "en": 12.747833333333332,
+        "zh": 14.4
+      },
+      "voice_start": 802.0,
+      "source": [
+        708.25,
+        721.8333333333334
+      ]
+    },
+    {
+      "id": "piano-ending",
+      "first": 19604,
+      "count": 775,
+      "start": 816.8333333333334,
+      "end": 849.125,
+      "section": "开头的旋律回来了",
+      "source": [
+        721.8333333333,
+        756
+      ]
+    },
+    {
+      "id": "bonus-title",
+      "first": 20379,
+      "count": 72,
+      "start": 849.125,
+      "end": 852.125,
+      "section": "片尾彩蛋 物哀",
+      "source": [
+        756,
+        759
+      ]
+    },
+    {
+      "id": "n048",
+      "first": 20451,
+      "count": 846,
+      "start": 852.125,
+      "end": 887.375,
+      "section": "片尾彩蛋 物哀",
+      "text_zh": "彩蛋：日本的物哀美学，Mono no aware。这种感受已见于平安文学，后来由本居宣长加以理论化。“物”（Mono）指世间万事万物（如花鸟风月、人事无常）；“哀”（Aware，古日语叹词“啊华雷”）是指面对客观万物时，内心所发出的由衷感叹、深切共鸣与赞叹，包含喜悦、惊叹、怜悯与淡淡的感伤。",
+      "text_en": "A closing bonus: the Japanese aesthetic of mono no aware. This sensibility was already present in Heian literature, and was later developed into a theory by Motoori Norinaga. Mono refers to things in the world: flowers, birds, wind, the moon, and the changing circumstances of human life. Aware, an old Japanese exclamation, expresses a heartfelt response to what we encounter, a deep resonance and wonder. It can hold joy, astonishment, compassion, and a gentle sadness.",
+      "voice_seconds": {
+        "en": 32.484833333333334,
+        "zh": 34.6
+      },
+      "voice_start": 852.375,
+      "source": [
+        759.0,
+        791.4583333333334
+      ]
+    },
+    {
+      "id": "n049",
+      "first": 21297,
+      "count": 347,
+      "start": 887.375,
+      "end": 901.8333333333334,
+      "section": "片尾彩蛋 物哀",
+      "text_zh": "最美的事物往往是短暂易逝的,如樱花飘落、残月、初绽的蓓蕾，正因为生命或事物会消逝，其当下的闪光才格外动人。",
+      "text_en": "The most beautiful things are often fleeting: falling cherry blossoms, a waning moon, a bud just beginning to open. Because a life or a thing will pass away, its brief radiance becomes all the more moving.",
+      "voice_seconds": {
+        "en": 13.734625,
+        "zh": 12.88
+      },
+      "voice_start": 887.625,
+      "source": [
+        791.4583333333334,
+        804.7916666666666
+      ]
+    },
+    {
+      "id": "n050",
+      "first": 21644,
+      "count": 89,
+      "start": 901.8333333333334,
+      "end": 905.5416666666666,
+      "section": "片尾彩蛋 物哀",
+      "text_zh": "对短暂之物的留恋。",
+      "text_en": "An attachment to what will not last.",
+      "voice_seconds": {
+        "en": 2.728375,
+        "zh": 1.84
+      },
+      "voice_start": 902.0833333333333,
+      "source": [
+        804.7916666666666,
+        808.5
+      ]
+    },
+    {
+      "id": "n051",
+      "first": 21733,
+      "count": 151,
+      "start": 905.5416666666666,
+      "end": 911.8333333333334,
+      "section": "片尾彩蛋 物哀",
+      "text_zh": "这一点，物哀美学与浪漫主义非常相似。",
+      "text_en": "In this respect, mono no aware and Romanticism are very close.",
+      "voice_seconds": {
+        "en": 4.260875,
+        "zh": 4.08
+      },
+      "voice_start": 905.7916666666666,
+      "source": [
+        808.5,
+        814.7916666666666
+      ]
+    },
+    {
+      "id": "n052",
+      "first": 21884,
+      "count": 170,
+      "start": 911.8333333333334,
+      "end": 918.9166666666666,
+      "section": "片尾彩蛋 物哀",
+      "text_zh": "对眼前发生的一切，人会感到眷恋，因为知道自己留不住它。",
+      "text_en": "We feel affection for what unfolds before us, because we know we cannot hold on to it.",
+      "voice_seconds": {
+        "en": 5.41025,
+        "zh": 5.6
+      },
+      "voice_start": 912.0833333333333,
+      "source": [
+        814.7916666666666,
+        821.875
+      ]
+    },
+    {
+      "id": "n053",
+      "first": 22054,
+      "count": 166,
+      "start": 918.9166666666666,
+      "end": 925.8333333333334,
+      "section": "片尾彩蛋 物哀",
+      "text_zh": "面对抓不住、留不住的东西，你留在心里的是压力，焦虑呢？",
+      "text_en": "When something slips beyond our grasp, what remains in your heart? Pressure and anxiety?",
+      "voice_seconds": {
+        "en": 6.0495,
+        "zh": 6.24
+      },
+      "voice_start": 919.1666666666666,
+      "source": [
+        821.875,
+        827.4763661202368
+      ]
+    },
+    {
+      "id": "n054",
+      "first": 22220,
+      "count": 72,
+      "start": 925.8333333333334,
+      "end": 928.8333333333334,
+      "section": "片尾彩蛋 物哀",
+      "text_zh": "是浪漫，平静呢？",
+      "text_en": "Romantic feeling and peace?",
+      "voice_seconds": {
+        "en": 2.2175833333333332,
+        "zh": 2.32
+      },
+      "voice_start": 926.0833333333333,
+      "source": [
+        827.4763661202368,
+        829.905874316966
+      ]
+    },
+    {
+      "id": "n055",
+      "first": 22292,
+      "count": 67,
+      "start": 928.8333333333334,
+      "end": 931.625,
+      "section": "片尾彩蛋 物哀",
+      "text_zh": "还是赞叹，喜悦呢？",
+      "text_en": "Or wonder and joy?",
+      "voice_seconds": {
+        "en": 1.8344166666666666,
+        "zh": 2.12
+      },
+      "voice_start": 929.0833333333333,
+      "source": [
+        829.905874316966,
+        832.1666666667
+      ]
+    },
+    {
+      "id": "n056",
+      "first": 22359,
+      "count": 167,
+      "start": 931.625,
+      "end": 938.5833333333334,
+      "section": "片尾彩蛋 物哀",
+      "text_zh": "不是三选一，也不是六选二，",
+      "text_en": "It is not a choice of one out of three, or two out of six.",
+      "voice_seconds": {
+        "en": 4.435083333333333,
+        "zh": 2.68
+      },
+      "voice_start": 931.875,
+      "source": [
+        832.1666666667,
+        839.125
+      ]
+    },
+    {
+      "id": "n057",
+      "first": 22526,
+      "count": 154,
+      "start": 938.5833333333334,
+      "end": 945.0,
+      "section": "片尾彩蛋 物哀",
+      "text_zh": "而是你是否愿意看到更广阔的世界和更宝贵的瞬间呢？",
+      "text_en": "It is whether you are willing to see a wider world, and the precious moments within it.",
+      "voice_seconds": {
+        "en": 5.073583333333334,
+        "zh": 5.32
+      },
+      "voice_start": 938.8333333333333,
+      "source": [
+        839.125,
+        845.5416666666666
+      ]
+    },
+    {
+      "id": "n058",
+      "first": 22680,
+      "count": 107,
+      "start": 945.0,
+      "end": 949.4583333333334,
+      "section": "片尾彩蛋 物哀",
+      "text_zh": "也许，这些作品能留给我们这样的盼望。",
+      "text_en": "Perhaps this is the hope these works can leave us with.",
+      "voice_seconds": {
+        "en": 2.6355,
+        "zh": 3.8
+      },
+      "voice_start": 945.25,
+      "source": [
+        845.5416666666666,
+        849.0833333333334
+      ]
+    },
+    {
+      "id": "bonus-hold",
+      "first": 22787,
+      "count": 480,
+      "start": 949.4583333333334,
+      "end": 969.4583333333334,
+      "section": "片尾彩蛋 物哀",
+      "source": [
+        849.0833333333,
+        869.0833333333
+      ]
+    },
+    {
+      "id": "salon-coda",
+      "first": 23267,
+      "count": 144,
+      "start": 969.4583333333334,
+      "end": 975.4583333333334,
+      "section": "沙龙",
+      "source": [
+        869.0833333333,
+        875.0833333333
+      ]
+    },
+    {
+      "id": "credits",
+      "first": 23411,
+      "count": 240,
+      "start": 975.4583333333334,
+      "end": 985.4583333333334,
+      "section": "片尾署名",
+      "source": [
+        875.0833333333,
+        885.0833333333
+      ]
+    }
+  ],
+  "inserts": [
+    {
+      "id": "real-gallery",
+      "kind": "video",
+      "file": "@DATA_ROOT@/production/v5/footage/muse-gallery-entry.mp4",
+      "start": 0,
+      "end": 7.1,
+      "trim": 0.5,
+      "speed": 1,
+      "fadeIn": 0,
+      "fadeOut": 1.2
+    },
+    {
+      "id": "monastery",
+      "kind": "video",
+      "file": "@DATA_ROOT@/production/v2/footage/O02-monastery.mp4",
+      "start": 44.291666666666664,
+      "end": 62.541666666666664,
+      "trim": 0.35,
+      "speed": 0.5095890410958904,
+      "fadeIn": 0.6,
+      "fadeOut": 0.8
+    },
+    {
+      "id": "cold-water",
+      "kind": "video",
+      "file": "@DATA_ROOT@/production/v5/footage/cold-water-loop.mp4",
+      "start": 62.541666666666664,
+      "end": 86.91666666666667,
+      "trim": 0,
+      "speed": 0.7675213675199998,
+      "fadeIn": 0.8,
+      "fadeOut": 0.8
+    },
+    {
+      "id": "paris",
+      "kind": "video",
+      "file": "@DATA_ROOT@/production/v2/footage/O03-paris.mp4",
+      "start": 234.63987847222222,
+      "end": 243.53133680555555,
+      "trim": 0.25,
+      "speed": 0.9620469083155645,
+      "fadeIn": 1.3,
+      "fadeOut": 1.3
+    },
+    {
+      "id": "engawa",
+      "kind": "video",
+      "file": "@DATA_ROOT@/production/footage/muse/M01-engawa-pond.mp4",
+      "start": 850.7333333333333,
+      "end": 863.4625945537065,
+      "trim": 0.15,
+      "speed": 0.724708201072614,
+      "fadeIn": 1.3,
+      "fadeOut": 1.3
+    },
+    {
+      "id": "seirai-in",
+      "kind": "photo",
+      "file": "@DATA_ROOT@/mono-no-aware-photos/01-green-courtyard.jpg",
+      "start": 875.1094931921331,
+      "end": 884.7725794251135,
+      "trim": 0,
+      "speed": 0.7813238770685486,
+      "fadeIn": 1.3,
+      "fadeOut": 1.3
+    },
+    {
+      "id": "real-petals",
+      "kind": "video",
+      "file": "@DATA_ROOT@/production/footage/free/sakura-water-5471897.mp4",
+      "start": 891.3241370010787,
+      "end": 898.4550431499462,
+      "trim": 0.25,
+      "speed": 0.8904899135446562,
+      "fadeIn": 1.3,
+      "fadeOut": 1.3
+    },
+    {
+      "id": "persimmons",
+      "kind": "video",
+      "file": "@DATA_ROOT@/production/footage/muse/M02-autumn-persimmons.mp4",
+      "start": 913.7025462962964,
+      "end": 921.2455947136489,
+      "trim": 0.15,
+      "speed": 0.635949782446669,
+      "fadeIn": 1.3,
+      "fadeOut": 1.3
+    },
+    {
+      "id": "round-window",
+      "kind": "video",
+      "file": "@DATA_ROOT@/production/footage/muse/M03-round-window.mp4",
+      "start": 924.4590675477061,
+      "end": 969.4583333333669,
+      "trim": 0,
+      "speed": 0.22222584803120377,
+      "fadeIn": 1.3,
+      "fadeOut": 1.3
+    }
+  ],
+  "flat": [
+    {
+      "id": "goya-i-saw-it",
+      "start": 395.0184478371501,
+      "end": 405.7180661577608
+    },
+    {
+      "id": "raft-medusa",
+      "start": 441.35139523084723,
+      "end": 459.3060375443937
+    },
+    {
+      "id": "liberty",
+      "start": 499.2683673469388,
+      "end": 513.6365168539326
+    },
+    {
+      "id": "vesuvius",
+      "start": 559.3184338184337,
+      "end": 577.318171608266
+    },
+    {
+      "id": "monk-sea",
+      "start": 611.4829422382671,
+      "end": 634.2960497835498
+    },
+    {
+      "id": "temeraire",
+      "start": 690.1867753623188,
+      "end": 695.1411231884058
+    },
+    {
+      "id": "rain-steam",
+      "start": 714.5454918032788,
+      "end": 737.5513586956522
+    },
+    {
+      "id": "monk-sea",
+      "start": 791.7833333333334,
+      "end": 809.5533648790747
+    },
+    {
+      "id": "monk-sea",
+      "start": 140.875,
+      "end": 210.25
+    }
+  ],
+  "ui_head": "1a7c835c31e689e2c10b4cce9b28cfbb864201ba",
+  "ui_file_sha256": {
+    "src/inception/world/rooms/romanticismLayout.js": "d6c1611bc10c680a818ec802c8fd007e7953d61b28cd130ef55272cb7a619cfd",
+    "src/inception/world/render/threeRomanticismSalon.ts": "c714e33bf196e1eb499b2418fa6bead85e27f667052b69701fd7cd941b86d7ed",
+    "src/inception/world/render/threeMuseum.ts": "a8bfbcc023923dd7609a0425ffa23bc9947abbe288f5e4f47e202a00615940b8",
+    "content/inception/artworks/romanticism-salon-v1.json": "f98221584e2bcc5e71ccfd5ccaac9ac8f22e6d9c43550807bf0e029a5cb70389",
+    "content/inception/artworks/romanticism-sculptures-v1.json": "326a94212e6691970c64cf973f9e768a65238262d5b90b12b5e6fc756eda1f67"
+  },
+  "interpolation": "PCHIP camera position, unwrapped yaw, pitch and FOV sampled directly at final frame times",
+  "speech_speed_changed": false
+}

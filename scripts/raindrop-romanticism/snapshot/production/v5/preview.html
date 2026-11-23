@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>压力？焦虑？肖邦？浪漫？</title>
+<style>
+  :root { color-scheme: dark; background: #10171d; color: #f3e5d1; }
+  body { max-width: 920px; margin: auto; padding: 34px 20px 60px; font: 16px/1.6 system-ui, sans-serif; }
+  h1 { margin: 0 0 8px; font: 600 clamp(30px,6vw,52px)/1.15 Georgia, serif; }
+  h2 { font-size: 19px; margin: 0 0 10px; }
+  p { margin: 0 0 14px; color: #c0c8cc; }
+  section { margin-top: 30px; }
+  a { color: #f4d4a3; }
+  .controls { display: flex; flex-wrap: wrap; gap: 10px; margin: 10px 0 12px; }
+  button { background: #232f39; color: #f3e5d1; border: 1px solid #53616a; padding: 7px 12px; border-radius: 5px; font: inherit; cursor: pointer; }
+  button[aria-pressed="true"] { border-color: #f2cd91; background: #403529; }
+  video { width: 100%; aspect-ratio: 16/9; display: block; background: #090e12; border-radius: 7px; }
+  #download { display: inline-block; margin-top: 8px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>压力？焦虑？肖邦？浪漫？</h1>
+  <p>Yancy &amp; Eunice</p>
+  <section aria-label="视频">
+    <h2 id="version">From Gallery to Space</h2>
+    <div class="controls" aria-label="播放版本">
+      <button type="button" data-mode="entrance" aria-pressed="true">From Gallery to Space</button>
+      <button type="button" data-mode="louise">Louise 1.1×</button>
+      <button type="button" data-mode="fangfang">Fangfang 1.2×</button>
+      <button type="button" data-mode="review">全片画面审阅</button>
+    </div>
+    <video id="film" controls playsinline preload="metadata" poster="checks/entrance-poster.jpg"
+           src="exports/从现实画廊到深空沙龙-新版开场.mp4"></video>
+    <a id="download" href="exports/从现实画廊到深空沙龙-新版开场.mp4" download>下载当前视频</a>
+  </section>
+  <p style="margin-top: 20px">画廊参考图 <a href="https://www.pexels.com/video/arts-inside-a-gallery-5824200/">Charlotte May · Pexels</a></p>
+</main>
+<script>
+  const video = document.querySelector('#film');
+  const heading = document.querySelector('#version');
+  const download = document.querySelector('#download');
+  const buttons = Array.from(document.querySelectorAll('[data-mode]'));
+  const voices = {louise: ['Louise 1.1×', 'Louise-1.1x'], fangfang: ['Fangfang 1.2×', 'Fangfang-1.2x']};
+  const variants = {
+    entrance: {title: 'From Gallery to Space', film: '从现实画廊到深空沙龙-新版开场.mp4'},
+    review: {title: '全片画面审阅 · 临时旁白', film: '压力焦虑肖邦浪漫-画面审阅版.mp4'}
+  };
+  let current = 'entrance';
+  function configureVoices(plan = {}) {
+    for (const [key, [title, stem]] of Object.entries(voices)) {
+      const final = plan.versions?.[key];
+      variants[key] = final ? {...final, title: title + ' · 完整英文版'} : {
+        title: title + ' · 英文开场试配',
+        film: '压力焦虑肖邦浪漫-' + stem + '-英文开场试配.mp4',
+        captions: key + '-opening-english.vtt'
+      };
+      document.querySelector('[data-mode="' + key + '"]').textContent = title + (final ? ' 完整版' : ' 试配');
+    }
+  }
+  configureVoices();
+  async function loadFinal() {
+    try {
+      const reply = await fetch('edit-plan.json', {cache: 'no-store'});
+      if (reply.ok) configureVoices(await reply.json());
+    } catch {}
+  }
+  loadFinal();
+  for (const button of buttons) {
+    button.setAttribute('aria-pressed', String(button.dataset.mode === current));
+    button.addEventListener('click', async () => {
+      current = button.dataset.mode;
+      if (voices[current]) await loadFinal();
+      const choice = variants[current];
+      for (const item of buttons) item.setAttribute('aria-pressed', String(item === button));
+      heading.textContent = choice.title;
+      download.href = 'exports/' + choice.film;
+      video.replaceChildren();
+      if (choice.captions) {
+        const track = document.createElement('track');
+        track.kind = 'subtitles'; track.srclang = 'en'; track.label = 'English';
+        track.src = 'exports/' + choice.captions; track.default = true;
+        video.appendChild(track);
+      }
+      video.src = download.href;
+      video.load();
+    });
+  }
+</script>
+</body>
+</html>

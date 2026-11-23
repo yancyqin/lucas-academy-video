@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "revision": "v11-smooth60",
+  "production_folder": "v12",
+  "watch_url": "https://youtu.be/-mjN--klfjM",
+  "visibility": "Public",
+  "published_by": "owner",
+  "checked_at": "2026-11-23T00:31:17.127Z",
+  "width": 1920,
+  "height": 1080,
+  "fps": 60,
+  "frames": 59128,
+  "duration": 985.4666666666667,
+  "video_sha256": "f41869bfd0d080b93b47d01226fe247f87ddbf2e4081db620adcaa9ee73434fa",
+  "english_voice": "Louise",
+  "chinese_voice": "Fangfang",
+  "chinese_audio_status": "Published",
+  "subtitles": {
+    "en": 208,
+    "zh-Hans": 144
+  },
+  "burned_subtitles": false,
+  "local_package": "production/v12/published-release",
+  "description_preservation": "Exact owner-edited live descriptions, including chapter headings, retained verbatim. New generated descriptions must start directly with a timestamp."
+}

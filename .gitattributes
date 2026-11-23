@@ -1,2 +1,5 @@
 # Preserve the blank context lines in the archived unified diff verbatim.
 docs/curiosity-builds/records/v10/balanced-chess-only.patch whitespace=-blank-at-eol
+
+# Preserve the approved published subtitle bytes, including original spacing.
+docs/raindrop-romanticism/subtitles/*.srt whitespace=-blank-at-eol
