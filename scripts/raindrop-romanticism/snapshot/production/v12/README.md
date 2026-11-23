@@ -45,3 +45,23 @@ Run `install.py` only after checks pass. It atomically refreshes the existing
 Desktop package, saves a prior-version archive here, retains both covers,
 descriptions and Word scripts, and prepares the private YouTube upload manifest.
 It never deletes or changes the visibility of an existing YouTube video.
+
+## Published archive — 2026-11-22
+
+The owner published https://youtu.be/-mjN--klfjM. English/Chinese metadata and
+the Chinese audio track are published. The current owner-edited descriptions
+are preserved verbatim in `published-live.json` and `published-release/资料/`.
+The Desktop package is now `published-release/`; `delivery.json` and
+`production/latest.json` point there. The master in `delivery/` is a relative
+symlink to the package master.
+
+Verified cleanup removed 880 obsolete binary/cache files (23,645,761,152 logical
+bytes), preserving 3,105 hashed inputs. Native 60 fps MP4 captures, approved
+voice/audio/caption inputs, reusable Muse footage and art remain. The shared
+instrumental film's `v5/parts/walk-00.mp4` is explicitly protected. Source text
+is retained locally and archived in the Video repository PR. `cleanup-plan.json`,
+`cleanup-protected.json` and `cleanup-receipt.json` retain the exact local audit.
+
+Do not run the historical Desktop installer against this published archive.
+New/revised upload descriptions start with the complete chapter list; first
+line is `0:00` / `00:00`. Keep the published owner-edited record verbatim.

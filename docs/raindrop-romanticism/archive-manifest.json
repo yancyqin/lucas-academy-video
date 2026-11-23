@@ -71,8 +71,8 @@
     {
       "snapshot": "scripts/raindrop-romanticism/snapshot/production/v12/README.md",
       "runtime_path": "production/v12/README.md",
-      "bytes": 2913,
-      "sha256": "64b8d6f99b37938fc79313ba4c1772a78fcca86ede90ff2820a54817d1628a55"
+      "bytes": 4074,
+      "sha256": "1386a41ea8a85471ad61800e5fa299666c83b03664144966e92af9592ec4339d"
     },
     {
       "snapshot": "scripts/raindrop-romanticism/snapshot/production/v12/audit_cadence.py",
