@@ -44,6 +44,8 @@ a sentence. Both run locally on this Mac.
   the approved instrumental gallery film, six portrait shorts, private-upload
   skill, source credits and the dependency-aware cleanup inventory.
 
+- [`RAINDROP-ROMANTICISM.md`](./RAINDROP-ROMANTICISM.md) -- the published Chopin / Romanticism narrated film: native 60 fps museum capture, bilingual delivery, owner-edited descriptions and verified resource cleanup.
+
 ## Scripts and narration
 
 The owner's rule (2026-10-24) replaces every earlier default for how a film's words are written and voiced:

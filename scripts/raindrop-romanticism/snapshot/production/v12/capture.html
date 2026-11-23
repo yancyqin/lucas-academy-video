@@ -1,0 +1,65 @@
+<!doctype html><meta charset="utf-8"><title>Romantic Salon · offline frame renderer</title>
+<style>body{background:#151922;color:#eadaba;font:16px system-ui;margin:20px}button{padding:12px;margin:8px;font:inherit}iframe{width:960px;height:540px;border:0;transform-origin:top left}pre{white-space:pre-wrap;max-width:1000px}#stage{width:960px;height:540px;overflow:hidden}</style>
+<h1>Romantic Salon · 60 fps frame renderer</h1>
+<p>This local production tool renders the approved final timeline one frame at a time.</p>
+<button id="init">Load museum</button><button id="smoke" disabled>Record 12-second motion check</button><button id="record" disabled>Record complete museum timeline</button>
+<pre id="status">Ready to load. Output: 1920 × 1080 · 60 actual camera samples per second.</pre>
+<div id="stage"><iframe id="museum"></iframe></div>
+<script type="module">
+const $=id=>document.getElementById(id),plan=await(await fetch('/film-capture/plan.json')).json();
+let world,origin,floor,curves,gl,active=false,assetReadiness;
+const status=value=>{$('status').textContent=typeof value==='string'?value:JSON.stringify(value,null,2)};
+const pause=ms=>new Promise(resolve=>setTimeout(resolve,ms));
+function pchip(xs,ys){
+ const n=xs.length,h=xs.slice(1).map((x,i)=>x-xs[i]),d=h.map((v,i)=>(ys[i+1]-ys[i])/v),m=Array(n).fill(0);
+ for(let i=1;i<n-1;i++)if(d[i-1]*d[i]>0){const w1=2*h[i]+h[i-1],w2=h[i]+2*h[i-1];m[i]=(w1+w2)/(w1/d[i-1]+w2/d[i]);}
+ const edge=(a,b,c,e)=>{let v=((2*a+b)*c-a*e)/(a+b);if(v*c<=0)v=0;else if(c*e<0&&Math.abs(v)>3*Math.abs(c))v=3*c;return v;};
+ m[0]=edge(h[0],h[1],d[0],d[1]);m[n-1]=edge(h[n-2],h[n-3],d[n-2],d[n-3]);
+ return x=>{if(x<=xs[0])return ys[0];if(x>=xs[n-1])return ys[n-1];let lo=0,hi=n-1;while(hi-lo>1){let mid=(lo+hi)>>1;if(xs[mid]<=x)lo=mid;else hi=mid;}
+ const u=(x-xs[lo])/h[lo],u2=u*u,u3=u2*u;return(2*u3-3*u2+1)*ys[lo]+(u3-2*u2+u)*h[lo]*m[lo]+(-2*u3+3*u2)*ys[lo+1]+(u3-u2)*h[lo]*m[lo+1];};
+}
+function pose(t){const v=curves.map(c=>c(t)),[x,y,z,yaw,pitch,fov]=v;return{eye:[x,y,z],target:[x+10*Math.sin(yaw)*Math.cos(pitch),y+10*Math.sin(pitch),z-10*Math.cos(yaw)*Math.cos(pitch)],fov};}
+function render(t){const p=pose(t);world.camera.fov=p.fov;world.camera.updateProjectionMatrix();world.setWorldTime(t);world.setCamera({eye:[p.eye[0]+origin.x,p.eye[1]+floor,p.eye[2]+origin.z],target:[p.target[0]+origin.x,p.target[1]+floor,p.target[2]+origin.z]});world.render();gl.finish();}
+async function progress(value){status(value);await fetch('/film-capture/progress',{method:'POST',body:JSON.stringify(value)});}
+$('init').onclick=async()=>{try{
+ status('Loading the current museum room and all artwork / sculpture assets…');
+ const iframe=$('museum');iframe.src='/?world=museum&room=romanticism-salon&debug&manual=1&hud=0&fullscreen=0';
+ for(let n=0;n<1800&&!iframe.contentWindow.__museum;n++)await pause(100);
+ const native=iframe.contentWindow.__museum;if(!native)throw Error('Museum did not initialize');
+ for(let n=0;n<180;n++){const p=native.step(1000/30,30);if(p.frameFailure)throw Error(p.frameFailure);if(p.room==='romanticism-salon'&&p.transit===null)break;await pause(80);}
+ world=native.world;
+ const mod=await import('/src/inception/world/model/museum.js');
+ const slot=mod.MUSEUM_MANIFEST.portalSlots.find(s=>s.id==='romanticism-salon'),index=mod.MUSEUM_MANIFEST.portalSlots.indexOf(slot);
+ origin=mod.roomCenterFor(slot,index);floor=mod.roomFloorY(slot,index);
+ let report;
+ for(let i=0;i<600;i++){report=world.romanticismSalonOf(slot.id)?.report();if(report?.works===56&&report.sculptures===8&&report.dragonLoaded)break;await pause(200);}
+ if(report?.works!==56||report.sculptures!==8||!report.dragonLoaded||report.failures.length)throw Error('Incomplete assets: '+JSON.stringify(report));
+ assetReadiness=report;
+ world.resize(1920,1080,1);gl=world.renderer.getContext();
+ const times=plan.anchors.map(a=>a.time);curves=Array.from({length:6},(_,i)=>pchip(times,plan.anchors.map(a=>a.values[i])));
+ render(300);const config={codec:'avc1.64002a',width:1920,height:1080,bitrate:14000000,framerate:60,avc:{format:'annexb'},hardwareAcceleration:'prefer-hardware'};
+ const support=await VideoEncoder.isConfigSupported(config);if(!support.supported)throw Error('Native 1080p60 AVC encoder unavailable');
+ window.recordConfig=support.config;await progress({state:'ready',report,encoder:support.config});$('record').disabled=false;$('smoke').disabled=false;
+ }catch(e){status('ERROR: '+e.stack);}};
+async function record(smoke){if(active)return;active=true;$('record').disabled=true;$('smoke').disabled=true;
+ const start=performance.now();try{
+ const firstFrame=smoke?300*60:0,total=smoke?720:plan.frames,chunkSize=1200,completed=[];
+ for(let offset=0;offset<total;offset+=chunkSize){
+  const count=Math.min(chunkSize,total-offset),index=Math.floor(offset/chunkSize),name=(smoke?'smoke-':'walk-')+String(index).padStart(3,'0');
+  const exists=await(await fetch('/film-capture/complete?name='+name)).json();if(exists.exists){completed.push(name);continue;}
+  const encoded=[];let encoderError;
+  const enc=new VideoEncoder({output:chunk=>{const bytes=new Uint8Array(chunk.byteLength);chunk.copyTo(bytes);encoded.push(bytes);},error:e=>{encoderError=e;}});enc.configure(window.recordConfig);
+  for(let j=0;j<count;j++){
+   const frame=firstFrame+offset+j,t=frame/60;render(t);
+   const v=new VideoFrame(world.renderer.domElement,{timestamp:Math.round(j*1e6/60),duration:Math.round(1e6/60)});enc.encode(v,{keyFrame:j%120===0});v.close();
+   if(enc.encodeQueueSize>6)await new Promise(resolve=>enc.addEventListener('dequeue',resolve,{once:true}));
+   if(encoderError)throw encoderError;
+   if(j%120===0){await progress({state:'recording',mode:smoke?'motion-check':'full',frame:offset+j,total,filmSeconds:t,chunk:name,elapsedSeconds:(performance.now()-start)/1000});await pause(0);}
+  }
+  await enc.flush();enc.close();if(encoderError)throw encoderError;
+  const r=await fetch('/film-capture/save?name='+name+'&count='+count,{method:'POST',body:new Blob(encoded,{type:'video/h264'})});if(!r.ok)throw Error(await r.text());completed.push(name);
+ }
+ await progress({state:'complete',mode:smoke?'motion-check':'full',frames:total,fps:60,chunks:completed,assetReadiness,cameraWaypoints:plan.anchors.length,uiHead:plan.ui_head,elapsedSeconds:(performance.now()-start)/1000});
+ }catch(e){await progress({state:'error',error:e.stack});}finally{active=false;$('record').disabled=false;$('smoke').disabled=false;}}
+$('record').onclick=()=>record(false);$('smoke').onclick=()=>record(true);
+</script>

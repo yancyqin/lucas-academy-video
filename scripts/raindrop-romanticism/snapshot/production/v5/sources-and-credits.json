@@ -1,0 +1,893 @@
+{
+  "title": "压力？焦虑？肖邦？浪漫？",
+  "created_by": [
+    "Yancy",
+    "Eunice"
+  ],
+  "narration": {
+    "text": "../v2/english-script.txt",
+    "voices": [
+      {
+        "name": "Louise",
+        "language": "en",
+        "speed": 1.1
+      },
+      {
+        "name": "Fangfang",
+        "language": "en",
+        "speed": 1.2
+      },
+      {
+        "name": "Fangfang",
+        "language": "zh",
+        "speed": 1.2,
+        "profile": "fangfang/zh"
+      }
+    ],
+    "upload_package": {
+      "default_video": "Louise English",
+      "separate_audio": "Fangfang Mandarin",
+      "mandarin_file": "02-压力焦虑肖邦浪漫-普通话-Fangfang.wav",
+      "mandarin_script": "voices/fangfang-mandarin.json"
+    }
+  },
+  "music": [
+    {
+      "id": "nocturne-9-2",
+      "title": "降 E 大调夜曲",
+      "opus": "Op. 9 No. 2",
+      "year": "1830–1832",
+      "mood": "静谧",
+      "reuse": true,
+      "intro": "像人声一样的旋律一次次回到耳边，每次添上不同的装饰。原片使用的就是这一版，适合先听它，确定是否延续熟悉的气质。",
+      "listen": "听右手旋律怎样在稳定的伴奏上自由呼吸，以及结尾短暂亮起的华彩。",
+      "pairing": "月光、湖面、孤独的背影；也可作为全片的温柔开场。",
+      "audio": "assets/music/nocturne-9-2.m4a",
+      "duration": 271.47,
+      "source": "https://commons.wikimedia.org/wiki/File:Chopin_-_Nocturne_No._2_in_E-flat_major,_Op._9_No._2_(Frank_Levy).flac",
+      "license": "CC0 1.0",
+      "recording": "Musopen · 原片同版录音",
+      "creditNote": "Commons 署名 Frank Lévy；原始档案的部分标签另有 Aya Higuchi 署名，演奏者归属待进一步核对。",
+      "sha256": "3d1c1473dbed61eec8d45384117ebff602110b7e5edbbcf6330351c0ce88e1cf"
+    },
+    {
+      "id": "nocturne-c-sharp",
+      "title": "升 C 小调夜曲",
+      "opus": "B. 49 / 遗作",
+      "year": "1830",
+      "mood": "忧思",
+      "reuse": false,
+      "intro": "安静的开场之后，旋律像一段迟迟说不完的话。它身后那种压低声音的悲伤，很适合留给画面呼吸。",
+      "listen": "听装饰音如何连接长句，最后又怎样从阴影走向轻柔的亮色。",
+      "pairing": "孤身人物、暮色与文学叙事。",
+      "audio": "assets/music/nocturne-c-sharp.m4a",
+      "duration": 225.01,
+      "source": "https://archive.org/download/musopen-chopin-complete-works-flac/Nocturne%20in%20C%20sharp%20minor%20%27Lento%20con%20gran%20espressione%27%2C%20B.%2049%20%28Op.%20posth.%29.mp3",
+      "license": "CC0 1.0",
+      "recording": "Frank Levy · Musopen",
+      "creditNote": "演奏者按录音档案的 ARTIST 标签列出。",
+      "sha256": "e5794e60f5d8db18411e1cc6456ca70628423a2aae296e1d61664bd18b03b2e8"
+    },
+    {
+      "id": "prelude-28-15",
+      "title": "降 D 大调前奏曲",
+      "opus": "Op. 28 No. 15 ·「雨滴」",
+      "year": "1830年代末 · 1839出版",
+      "mood": "风暴",
+      "reuse": false,
+      "intro": "同一个持续出现的音，把温柔的外段与阴暗的中段连在一起。「雨滴」是后来的常用称呼，可以把它当作听觉线索。",
+      "listen": "听重复音在明暗变化中如何改变重量，以及风暴过后主题怎样归来。",
+      "pairing": "先平静、再风暴、再回到光线的风景段落。",
+      "audio": "assets/music/prelude-28-15.m4a",
+      "duration": 316.37,
+      "source": "https://archive.org/download/musopen-chopin-complete-works-flac/Preludes%2C%20Op.%2028%20-%20No.%2015%20%27Raindrop%27.mp3",
+      "license": "CC0 1.0",
+      "recording": "Jeannette Fang · Musopen",
+      "creditNote": "演奏者按录音档案的 ARTIST 标签列出。",
+      "sha256": "e9ecf9c8683119c1f090ba83c21ab7abc076d6a74e59702c5f75c4cf1481ac0f"
+    }
+  ],
+  "native_salon": "http://127.0.0.1:8095/?world=museum&room=romanticism-salon",
+  "screen_recording": "A single ground-level route along the walls of the native IS Romantic Salon. The close artwork plates fade from and back to the same paused viewpoint.",
+  "room_works": [
+    {
+      "id": "vesuvius",
+      "title_zh": "维苏威火山喷发",
+      "title_en": "Vesuvius in Eruption",
+      "artist_en": "Joseph Wright of Derby",
+      "year": "1778",
+      "source": "https://github.com/tategallery/collection/blob/master/artworks/t/058/t05846-19383.json",
+      "license": "Public domain"
+    },
+    {
+      "id": "monk-sea",
+      "title_zh": "海边的修道士",
+      "title_en": "Monk by the Sea",
+      "artist_en": "Caspar David Friedrich",
+      "year": "1810",
+      "source": "https://cdfriedrich.de/en/chronicle/moench-am-meer/",
+      "license": "Public domain"
+    },
+    {
+      "id": "met-437852",
+      "title_zh": "康沃尔郡萨尔塔什的渡轮",
+      "title_en": "Saltash with the Water Ferry, Cornwall",
+      "artist_en": "Joseph Mallord William Turner",
+      "year": "1811",
+      "source": "https://www.metmuseum.org/art/collection/search/437852",
+      "license": "Public Domain / CC0"
+    },
+    {
+      "id": "hannibal",
+      "title_zh": "暴风雪：汉尼拔及其军队翻越阿尔卑斯山",
+      "title_en": "Snow Storm: Hannibal and his Army Crossing the Alps",
+      "artist_en": "J. M. W. Turner",
+      "year": "1812",
+      "source": "https://github.com/tategallery/collection/blob/master/artworks/n/004/n00490-14750.json",
+      "license": "Public domain"
+    },
+    {
+      "id": "wanderer",
+      "title_zh": "雾海上的旅人",
+      "title_en": "Wanderer above the Sea of Fog",
+      "artist_en": "Caspar David Friedrich",
+      "year": "1817",
+      "source": "https://www.hamburger-kunsthalle.de/en/news/wanderer-above-sea-fog-caspar-david-friedrich",
+      "license": "Public domain"
+    },
+    {
+      "id": "chalk-cliffs",
+      "title_zh": "吕根岛白垩岩",
+      "title_en": "Chalk Cliffs on Rugen",
+      "artist_en": "Caspar David Friedrich",
+      "year": "1818",
+      "source": "https://cdfriedrich.de/en/chronicle/kreidefelsen-auf-ruegen/",
+      "license": "Public domain"
+    },
+    {
+      "id": "hay-wain",
+      "title_zh": "干草车",
+      "title_en": "The Hay Wain",
+      "artist_en": "John Constable",
+      "year": "1821",
+      "source": "https://www.nationalgallery.org.uk/paintings/catalogues/egerton-2000/the-hay-wain",
+      "license": "Public domain"
+    },
+    {
+      "id": "sea-ice",
+      "title_zh": "冰海",
+      "title_en": "The Sea of Ice",
+      "artist_en": "Caspar David Friedrich",
+      "year": "1824",
+      "source": "https://cdfriedrich.de/en/chronicle/das-eismeer/",
+      "license": "Public domain"
+    },
+    {
+      "id": "met-437853",
+      "title_zh": "威尼斯：从安康圣母教堂门廊望去",
+      "title_en": "Venice, from the Porch of Madonna della Salute",
+      "artist_en": "Joseph Mallord William Turner",
+      "year": "ca. 1835",
+      "source": "https://www.metmuseum.org/art/collection/search/437853",
+      "license": "Public Domain / CC0"
+    },
+    {
+      "id": "met-10500",
+      "title_zh": "蒂沃利附近风景（清晨）",
+      "title_en": "A View near Tivoli (Morning)",
+      "artist_en": "Thomas Cole",
+      "year": "1832",
+      "source": "https://www.metmuseum.org/art/collection/search/10500",
+      "license": "Public Domain / CC0"
+    },
+    {
+      "id": "met-10501",
+      "title_zh": "卡茨基尔溪畔——初秋",
+      "title_en": "View on the Catskill—Early Autumn",
+      "artist_en": "Thomas Cole",
+      "year": "1836–37",
+      "source": "https://www.metmuseum.org/art/collection/search/10501",
+      "license": "Public Domain / CC0"
+    },
+    {
+      "id": "oxbow",
+      "title_zh": "河湾",
+      "title_en": "The Oxbow",
+      "artist_en": "Thomas Cole",
+      "year": "1836",
+      "source": "https://www.metmuseum.org/art/collection/search/10497",
+      "license": "Public domain"
+    },
+    {
+      "id": "met-437854",
+      "title_zh": "捕鲸者",
+      "title_en": "Whalers",
+      "artist_en": "Joseph Mallord William Turner",
+      "year": "ca. 1845",
+      "source": "https://www.metmuseum.org/art/collection/search/437854",
+      "license": "Public Domain / CC0"
+    },
+    {
+      "id": "snow-storm",
+      "title_zh": "暴风雪：港外汽船",
+      "title_en": "Snow Storm: Steam-Boat off a Harbour’s Mouth",
+      "artist_en": "J. M. W. Turner",
+      "year": "1842",
+      "source": "https://github.com/tategallery/collection/blob/master/artworks/n/005/n00530-14786.json",
+      "license": "Public domain"
+    },
+    {
+      "id": "met-10496",
+      "title_zh": "山间渡口",
+      "title_en": "The Mountain Ford",
+      "artist_en": "Thomas Cole",
+      "year": "1846",
+      "source": "https://www.metmuseum.org/art/collection/search/10496",
+      "license": "Public Domain / CC0"
+    },
+    {
+      "id": "ninth-wave",
+      "title_zh": "第九浪",
+      "title_en": "The Ninth Wave",
+      "artist_en": "Ivan Aivazovsky",
+      "year": "1850",
+      "source": "https://rusmuseumvrm.ru/data/collections/painting/18_19/zh_2202/?lang=ru",
+      "license": "Public domain"
+    },
+    {
+      "id": "heart-andes",
+      "title_zh": "安第斯之心",
+      "title_en": "The Heart of the Andes",
+      "artist_en": "Frederic Edwin Church",
+      "year": "1859",
+      "source": "https://www.metmuseum.org/art/collection/search/10481",
+      "license": "Public domain"
+    },
+    {
+      "id": "met-10154",
+      "title_zh": "落基山脉：兰德峰",
+      "title_en": "The Rocky Mountains, Lander's Peak",
+      "artist_en": "Albert Bierstadt",
+      "year": "1863",
+      "source": "https://www.metmuseum.org/art/collection/search/10154",
+      "license": "Public Domain / CC0"
+    },
+    {
+      "id": "met-10150",
+      "title_zh": "优胜美地谷的默塞德河",
+      "title_en": "Merced River, Yosemite Valley",
+      "artist_en": "Albert Bierstadt",
+      "year": "1866",
+      "source": "https://www.metmuseum.org/art/collection/search/10150",
+      "license": "Public Domain / CC0"
+    },
+    {
+      "id": "sierra",
+      "title_zh": "加利福尼亚内华达山脉之中",
+      "title_en": "Among the Sierra Nevada, California",
+      "artist_en": "Albert Bierstadt",
+      "year": "1868",
+      "source": "https://www.si.edu/object/saam_1977.107.1",
+      "license": "Public domain"
+    },
+    {
+      "id": "met-10152",
+      "title_zh": "优胜美地的内华达瀑布",
+      "title_en": "Nevada Falls, Yosemite",
+      "artist_en": "Albert Bierstadt",
+      "year": "1872 or 1873",
+      "source": "https://www.metmuseum.org/art/collection/search/10152",
+      "license": "Public Domain / CC0"
+    },
+    {
+      "id": "met-10155",
+      "title_zh": "海湾",
+      "title_en": "Sea Cove",
+      "artist_en": "Albert Bierstadt",
+      "year": "ca. 1880–90",
+      "source": "https://www.metmuseum.org/art/collection/search/10155",
+      "license": "Public Domain / CC0"
+    },
+    {
+      "id": "met-10151",
+      "title_zh": "山景",
+      "title_en": "Mountain Scene",
+      "artist_en": "Albert Bierstadt",
+      "year": "1880–90",
+      "source": "https://www.metmuseum.org/art/collection/search/10151",
+      "license": "Public Domain / CC0"
+    },
+    {
+      "id": "charging",
+      "title_zh": "冲锋的猎骑兵",
+      "title_en": "The Charging Chasseur",
+      "artist_en": "Théodore Géricault",
+      "year": "1812",
+      "source": "https://commons.wikimedia.org/wiki/File:GericaultHorseman.jpg",
+      "license": "Public domain"
+    },
+    {
+      "id": "third-may",
+      "title_zh": "1808 年 5 月 3 日",
+      "title_en": "The Third of May 1808",
+      "artist_en": "Francisco Goya",
+      "year": "1814",
+      "source": "https://fundaciongoyaenaragon.es/obra/el-tres-de-mayo-de-1808/181",
+      "license": "Public domain"
+    },
+    {
+      "id": "wounded",
+      "title_zh": "负伤的胸甲骑兵",
+      "title_en": "The Wounded Cuirassier",
+      "artist_en": "Théodore Géricault",
+      "year": "1814",
+      "source": "https://commons.wikimedia.org/wiki/File:Cuirassier_blessé,_quittant_le_feu_-_Théodore_Géricault_-_Musée_du_Louvre_Peintures_INV_4886_;_MN_51.jpg",
+      "license": "Public domain"
+    },
+    {
+      "id": "raft-medusa",
+      "title_zh": "梅杜萨之筏",
+      "title_en": "The Raft of the Medusa",
+      "artist_en": "Theodore Gericault",
+      "year": "1819",
+      "source": "https://collections.louvre.fr/en/ark:/53355/cl010059199",
+      "license": "Public domain"
+    },
+    {
+      "id": "chios",
+      "title_zh": "希阿岛的屠杀",
+      "title_en": "The Massacre at Chios",
+      "artist_en": "Eugene Delacroix",
+      "year": "1824",
+      "source": "https://collections.louvre.fr/ark:/53355/cl010065870",
+      "license": "Public domain"
+    },
+    {
+      "id": "missolonghi",
+      "title_zh": "希腊在迈索隆吉翁的废墟上",
+      "title_en": "Greece on the Ruins of Missolonghi",
+      "artist_en": "Eugene Delacroix",
+      "year": "1826",
+      "source": "https://musba-bordeaux.opacweb.fr/fr/notice/bx-e-439-la-grece-sur-les-ruines-de-missolonghi-7f285afd-8958-40cc-b0d3-9bb959a179d8",
+      "license": "Public domain"
+    },
+    {
+      "id": "liberty",
+      "title_zh": "自由引导人民",
+      "title_en": "Liberty Leading the People",
+      "artist_en": "Eugene Delacroix",
+      "year": "1830",
+      "source": "https://collections.louvre.fr/en/ark:/53355/cl010065872",
+      "license": "Public domain"
+    },
+    {
+      "id": "parliament",
+      "title_zh": "议会大厦的焚毁",
+      "title_en": "The Burning of the Houses of Lords and Commons",
+      "artist_en": "J. M. W. Turner",
+      "year": "1835",
+      "source": "https://www.clevelandart.org/art/1942.647",
+      "license": "Public domain"
+    },
+    {
+      "id": "chopin-portrait",
+      "title_zh": "肖邦像",
+      "title_en": "Portrait of Chopin",
+      "artist_en": "Eugene Delacroix",
+      "year": "1838",
+      "source": "https://collections.louvre.fr/ark:/53355/cl010059702",
+      "license": "Public domain"
+    },
+    {
+      "id": "crusaders",
+      "title_zh": "十字军进入君士坦丁堡",
+      "title_en": "The Entry of the Crusaders into Constantinople",
+      "artist_en": "Eugène Delacroix",
+      "year": "1840",
+      "source": "https://commons.wikimedia.org/wiki/File:Prise_de_Constantinople_par_les_croisés_(12_avril_1204)_-_Eugène_Delacroix_-_Musée_du_Louvre_Peintures_INV_3821_;_LP_4674_-_après_restauration_2026.jpg",
+      "license": "Public domain"
+    },
+    {
+      "id": "abbey-oakwood",
+      "title_zh": "橡树林中的修道院",
+      "title_en": "The Abbey in the Oakwood",
+      "artist_en": "Caspar David Friedrich",
+      "year": "1810",
+      "source": "https://cdfriedrich.de/en/chronicle/abtei-im-eichwald/",
+      "license": "Public domain"
+    },
+    {
+      "id": "moonwatchers",
+      "title_zh": "两人望月",
+      "title_en": "Two Men Contemplating the Moon · Dresden version",
+      "artist_en": "Caspar David Friedrich",
+      "year": "1819–1820",
+      "source": "https://artsandculture.google.com/asset/two-men-contemplating-the-moon/AQHW6lwY6LzX1Q",
+      "license": "Public domain"
+    },
+    {
+      "id": "met-438417",
+      "title_zh": "两人观月",
+      "title_en": "Two Men Contemplating the Moon",
+      "artist_en": "Caspar David Friedrich",
+      "year": "ca. 1825–30",
+      "source": "https://www.metmuseum.org/art/collection/search/438417",
+      "license": "Public Domain / CC0"
+    },
+    {
+      "id": "met-10499",
+      "title_zh": "泰坦之杯",
+      "title_en": "The Titan's Goblet",
+      "artist_en": "Thomas Cole",
+      "year": "1833",
+      "source": "https://www.metmuseum.org/art/collection/search/10499",
+      "license": "Public Domain / CC0"
+    },
+    {
+      "id": "temeraire",
+      "title_zh": "战舰「特梅雷尔」号",
+      "title_en": "The Fighting Temeraire",
+      "artist_en": "J. M. W. Turner",
+      "year": "1839",
+      "source": "https://www.nationalgallery.org.uk/paintings/joseph-mallord-william-turner-the-fighting-temeraire",
+      "license": "Public domain"
+    },
+    {
+      "id": "life-child",
+      "title_zh": "生命之旅：童年",
+      "title_en": "The Voyage of Life: Childhood",
+      "artist_en": "Thomas Cole",
+      "year": "1842",
+      "source": "https://www.nga.gov/artworks/52450-voyage-life-childhood",
+      "license": "Public domain"
+    },
+    {
+      "id": "life-man",
+      "title_zh": "生命之旅：壮年",
+      "title_en": "The Voyage of Life: Manhood",
+      "artist_en": "Thomas Cole",
+      "year": "1842",
+      "source": "https://www.nga.gov/artworks/52452-voyage-life-manhood",
+      "license": "Public domain"
+    },
+    {
+      "id": "life-old",
+      "title_zh": "生命之旅：老年",
+      "title_en": "The Voyage of Life: Old Age",
+      "artist_en": "Thomas Cole",
+      "year": "1842",
+      "source": "https://www.nga.gov/artworks/52453-voyage-life-old-age",
+      "license": "Public domain"
+    },
+    {
+      "id": "life-youth",
+      "title_zh": "生命之旅：青年",
+      "title_en": "The Voyage of Life: Youth",
+      "artist_en": "Thomas Cole",
+      "year": "1842",
+      "source": "https://www.nga.gov/artworks/52451-voyage-life-youth",
+      "license": "Public domain"
+    },
+    {
+      "id": "rain-steam",
+      "title_zh": "雨、蒸汽与速度",
+      "title_en": "Rain, Steam and Speed",
+      "artist_en": "J. M. W. Turner",
+      "year": "1844",
+      "source": "https://www.nationalgallery.org.uk/paintings/catalogues/egerton-2000/rain-steam-and-speed-the-great-western-railway",
+      "license": "Public domain"
+    },
+    {
+      "id": "twilight",
+      "title_zh": "荒野暮色",
+      "title_en": "Twilight in the Wilderness",
+      "artist_en": "Frederic Edwin Church",
+      "year": "1860",
+      "source": "https://www.clevelandart.org/art/1965.233",
+      "license": "Public domain"
+    },
+    {
+      "id": "met-10482",
+      "title_zh": "帕特农神庙",
+      "title_en": "The Parthenon",
+      "artist_en": "Frederic Edwin Church",
+      "year": "1871",
+      "source": "https://www.metmuseum.org/art/collection/search/10482",
+      "license": "Public Domain / CC0"
+    },
+    {
+      "id": "met-10480",
+      "title_zh": "爱琴海",
+      "title_en": "The Aegean Sea",
+      "artist_en": "Frederic Edwin Church",
+      "year": "ca. 1877",
+      "source": "https://www.metmuseum.org/art/collection/search/10480",
+      "license": "Public Domain / CC0"
+    },
+    {
+      "id": "met-56915",
+      "title_zh": "蒲原夜雪",
+      "title_en": "Evening Snow at Kanbara, from the series \"Fifty-three Stations of the Tōkaidō\"",
+      "artist_en": "Utagawa Hiroshige",
+      "year": "ca. 1833–34",
+      "source": "https://www.metmuseum.org/art/collection/search/56915",
+      "license": "Public Domain / CC0"
+    },
+    {
+      "id": "met-36521",
+      "title_zh": "庄野白雨",
+      "title_en": "Sudden Shower at Shōno, from the series Fifty-three Stations of the Tōkaidō",
+      "artist_en": "Utagawa Hiroshige",
+      "year": "1834–35",
+      "source": "https://www.metmuseum.org/art/collection/search/36521",
+      "license": "Public Domain / CC0"
+    },
+    {
+      "id": "ophelia",
+      "title_zh": "奥菲莉娅",
+      "title_en": "Ophelia",
+      "artist_en": "John Everett Millais",
+      "year": "1851–1852",
+      "source": "https://github.com/tategallery/collection/blob/master/artworks/n/015/n01506-9506.json",
+      "license": "Public domain"
+    },
+    {
+      "id": "met-53659",
+      "title_zh": "龟户天神境内",
+      "title_en": "In the Kameido Tenjin Shrine Compound",
+      "artist_en": "Utagawa Hiroshige",
+      "year": "1856",
+      "source": "https://www.metmuseum.org/art/collection/search/53659",
+      "license": "Public Domain / CC0"
+    },
+    {
+      "id": "hiroshige-meguro",
+      "title_zh": "目黑太鼓桥夕日之冈",
+      "title_en": "Meguro Drum Bridge and Sunset Hill",
+      "artist_en": "Utagawa Hiroshige",
+      "year": "1857",
+      "source": "https://www.clevelandart.org/art/1924.971",
+      "license": "CC0 1.0 / CMA Open Access"
+    },
+    {
+      "id": "met-36461",
+      "title_zh": "大桥安宅骤雨",
+      "title_en": "Sudden Shower over Shin-Ōhashi Bridge and Atake (Ōhashi Atake no yūdachi), from the series One Hundred Famous Views of Edo (Meisho Edo hyakkei)",
+      "artist_en": "Utagawa Hiroshige",
+      "year": "1857",
+      "source": "https://www.metmuseum.org/art/collection/search/36461",
+      "license": "Public Domain / CC0"
+    },
+    {
+      "id": "met-53681",
+      "title_zh": "蒲田梅园",
+      "title_en": "Plum Garden at Kamata (Kamata no umezono), from the series One Hundred Famous Views of Edo (Meisho Edo hyakkei)",
+      "artist_en": "Utagawa Hiroshige",
+      "year": "1857 (Ansei 4), 2nd month",
+      "source": "https://www.metmuseum.org/art/collection/search/53681",
+      "license": "Public Domain / CC0"
+    },
+    {
+      "id": "met-55122",
+      "title_zh": "石山秋月",
+      "title_en": "The Autumn Moon on Ishiyama",
+      "artist_en": "Utagawa Hiroshige",
+      "year": "1857",
+      "source": "https://www.metmuseum.org/art/collection/search/55122",
+      "license": "Public Domain / CC0"
+    },
+    {
+      "id": "shalott",
+      "title_zh": "夏洛特夫人",
+      "title_en": "The Lady of Shalott",
+      "artist_en": "John William Waterhouse",
+      "year": "1888",
+      "source": "https://github.com/tategallery/collection/blob/master/artworks/n/015/n01543-15984.json",
+      "license": "Public domain"
+    },
+    {
+      "id": "miranda",
+      "title_zh": "米兰达——暴风雨",
+      "title_en": "Miranda—The Tempest",
+      "artist_en": "John William Waterhouse",
+      "year": "1916",
+      "source": "https://www.christies.com/en/lot/lot-2911574",
+      "license": "Public domain"
+    }
+  ],
+  "scans": [
+    {
+      "id": "romantic-lion-serpent",
+      "title_en": "Lion and Serpent",
+      "model_title": "Lion au Serpent (1832) – 3D Scan, Louvre Museum",
+      "model_credit": "Alula Tesfay Asfha",
+      "model_source": "https://sketchfab.com/3d-models/lion-au-serpent-1832-3d-scan-louvre-museum-5441a05d725541cabebfc867182b10fe",
+      "source": "https://collections.louvre.fr/en/ark:/53355/cl010091396",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "modifications": "Grounded, scaled in metres and oriented front +Z and Y-up. The mesh retains UVs after decimation, and textures were resized with Lanczos filtering. The GLB is self-contained and static."
+    },
+    {
+      "id": "romantic-spirit-liberty",
+      "title_en": "The Spirit of Liberty",
+      "model_title": "Die Marseillaise",
+      "model_credit": "gussbronze",
+      "model_source": "https://sketchfab.com/3d-models/die-marseillaise-290834fcc39543cbb5842c0b515c9969",
+      "source": "https://parismuseescollections.paris.fr/fr/maison-de-victor-hugo/oeuvres/le-depart-des-volontaires-de-1792-arc-de-triomphe-paris",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "modifications": "Grounded, scaled in metres and oriented front +Z and Y-up. The mesh retains UVs after decimation, and textures were resized with Lanczos filtering. The GLB is self-contained and static."
+    },
+    {
+      "id": "romantic-philopoemen",
+      "title_en": "Philopoemen",
+      "model_title": "Philopoemen - Louvre Museum",
+      "model_credit": "Benjamin Bardou",
+      "model_source": "https://sketchfab.com/3d-models/philopoemen-louvre-museum-f21d998c67774d10855def0003854c08",
+      "source": "https://collections.louvre.fr/en/ark:/53355/cl010091414",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "modifications": "Grounded, scaled in metres and oriented front +Z and Y-up. The mesh retains UVs after decimation, and textures were resized with Lanczos filtering. The GLB is self-contained and static. Joined the six source mesh segments and welded coincident vertices before decimation."
+    },
+    {
+      "id": "romantic-seated-lion",
+      "title_en": "Seated Lion",
+      "model_title": "Seated Lion",
+      "model_credit": "Rigsters",
+      "model_source": "https://sketchfab.com/3d-models/seated-lion-e7e957b26c4b480ab2daf47fe93beede",
+      "source": "https://www.ny-carlsbergfondet.dk/da/siddende-loeve-0",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "modifications": "Grounded, scaled in metres and oriented front +Z and Y-up. The mesh retains UVs after decimation, and textures were resized with Lanczos filtering. The GLB is self-contained and static. Retained the textured bronze from the source comparison and omitted its duplicate monochrome mesh."
+    },
+    {
+      "id": "romantic-recumbent-bacchante",
+      "title_en": "Recumbent Bacchante",
+      "model_title": "Bacchante couchée - Petit Palais, Paris",
+      "model_credit": "Yannoid",
+      "model_source": "https://sketchfab.com/3d-models/bacchante-couchee-petit-palais-paris-9ed6fbed059a4bae952ada5312efb8f9",
+      "source": "https://www.parismuseescollections.paris.fr/fr/petit-palais/oeuvres/bacchante-1",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "modifications": "Grounded, scaled in metres and oriented front +Z and Y-up. The mesh retains UVs after decimation, and textures were resized with Lanczos filtering. The GLB is self-contained and static."
+    },
+    {
+      "id": "romantic-head-of-christ",
+      "title_en": "Head of Christ",
+      "model_title": "Head of Christ by Jean-Baptiste Clésinger",
+      "model_credit": "avi",
+      "model_source": "https://sketchfab.com/3d-models/head-of-christ-by-jean-baptiste-clesinger-0d924f5e5b284beeba21f67b19d86d92",
+      "source": "https://sketchfab.com/3d-models/head-of-christ-by-jean-baptiste-clesinger-0d924f5e5b284beeba21f67b19d86d92",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "modifications": "Grounded, scaled in metres and oriented front +Z and Y-up. The mesh retains UVs after decimation, and textures were resized with Lanczos filtering. The GLB is self-contained and static."
+    },
+    {
+      "id": "romantic-enslaved-woman",
+      "title_en": "The Enslaved Woman",
+      "source": "https://open.smk.dk/artwork/image/KMS5025",
+      "license": "Public domain · SMK Open",
+      "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "modifications": "Reduced to fewer than 24,000 triangles; grounded; metres and Y-up; static GLB. Untextured STL scan with an approximate display material colour."
+    },
+    {
+      "id": "romantic-girl-kittens",
+      "title_en": "A Little Girl with Kittens",
+      "source": "https://open.smk.dk/artwork/image/KMS5471",
+      "license": "Public domain · SMK Open",
+      "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "modifications": "Reduced to fewer than 24,000 triangles; grounded; metres and Y-up; static GLB. Untextured STL scan with an approximate display material colour."
+    }
+  ],
+  "central_sculpture": {
+    "title": "Moose the Dragon",
+    "context": "Original sculpture and scan from Lucas Academy, displayed on the central plinth."
+  },
+  "live_action": [
+    {
+      "author": "Ryutaro Tsukata",
+      "source": "https://www.pexels.com/video/cherry-blossom-petals-on-water-5471897/",
+      "license": "Pexels License",
+      "license_url": "https://www.pexels.com/license/",
+      "sha256": "563b77313437a3d45527c7bd9847399b4c20611120867083068ab389b3af1283"
+    }
+  ],
+  "photograph": {
+    "display_title": "廊下的光 · 京都西来院",
+    "artist": "Haruo.takagi",
+    "source": "https://commons.wikimedia.org/wiki/File:Seiraiin20151008_5.jpg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "supplemental_print": {
+    "title": "Plate 44 from \"The Disasters of War\" (Los Desastres de la Guerra): 'I saw it' (Yo lo vi)",
+    "artist": "Goya (Francisco de Goya y Lucientes)",
+    "date": "1810",
+    "source": "https://www.metmuseum.org/art/collection/search/333964",
+    "license": "CC0"
+  },
+  "muse": {
+    "kind": "Atmospheric visual interpretations generated with Muse",
+    "opening": [
+      {
+        "file": "footage/O01-cold-water.mp4",
+        "sha256": "69024fd32ef8ac2298ebb6cc95f841b441d82f0caaf3da9b8625b6e9df671944",
+        "probe": {
+          "programs": [],
+          "stream_groups": [],
+          "streams": [
+            {
+              "codec_type": "video",
+              "width": 1280,
+              "height": 720,
+              "r_frame_rate": "24/1"
+            }
+          ],
+          "format": {
+            "duration": "10.000000"
+          }
+        },
+        "source": "Owner-authorized Muse generation. Atmospheric illustration, not archival footage.",
+        "selected_source_seconds": [
+          1.7,
+          7.7
+        ]
+      },
+      {
+        "file": "footage/O03-paris.mp4",
+        "sha256": "5d08ef97f8b5d039bb5653baa3fff1bade13399115d7879bc0bb4d50cfcd451c",
+        "probe": {
+          "programs": [],
+          "stream_groups": [],
+          "streams": [
+            {
+              "codec_type": "video",
+              "width": 1280,
+              "height": 720,
+              "r_frame_rate": "24/1"
+            }
+          ],
+          "format": {
+            "duration": "10.000000"
+          }
+        },
+        "source": "Owner-authorized Muse generation. Atmospheric illustration, not archival footage.",
+        "selected_source_seconds": [
+          0.2,
+          6.8
+        ]
+      },
+      {
+        "file": "footage/O02-monastery.mp4",
+        "sha256": "d61e21158b2d5a53175d90f2254b8bb1a2ab3db07fe33b8a20c510ae3385078f",
+        "probe": {
+          "programs": [],
+          "stream_groups": [],
+          "streams": [
+            {
+              "codec_type": "video",
+              "width": 1280,
+              "height": 720,
+              "r_frame_rate": "24/1"
+            }
+          ],
+          "format": {
+            "duration": "10.000000"
+          }
+        },
+        "source": "Owner-authorized Muse generation. Atmospheric illustration, not archival footage.",
+        "selected_source_seconds": [
+          0.2,
+          6.8
+        ]
+      }
+    ],
+    "bonus": [
+      {
+        "file": "@DATA_ROOT@/production/footage/muse/M01-engawa-pond.mp4",
+        "bytes": 15634937,
+        "sha256": "5648d6709e9cb8fdf8933e13b9f5e03daf68ccdf69b01b1377d986b327f4e5fd",
+        "seconds": 10,
+        "width": 1280,
+        "height": 720,
+        "fps": 24,
+        "audio": false
+      },
+      {
+        "file": "@DATA_ROOT@/production/footage/muse/M02-autumn-persimmons.mp4",
+        "bytes": 2696789,
+        "sha256": "308ae40a6c97ee8d1d68e27a80eed4f285dc93b3f0cfbbff5e2f9cd2638a7781",
+        "seconds": 10,
+        "width": 1280,
+        "height": 720,
+        "fps": 24,
+        "audio": false
+      },
+      {
+        "file": "@DATA_ROOT@/production/footage/muse/M03-round-window.mp4",
+        "bytes": 3329351,
+        "sha256": "dc6e993bd167328f13e867f688148b0edde6dc8b74dc7262ab624e893b759622",
+        "seconds": 10,
+        "width": 1280,
+        "height": 720,
+        "fps": 24,
+        "audio": false
+      }
+    ],
+    "M03": {
+      "source_rate": 0.25,
+      "screen_seconds": 40
+    }
+  },
+  "opening_cues": {
+    "source": "@VIDEO_REPO@/sites/chopin-romanticism-selection/dist/assets/music/prelude-28-15.m4a",
+    "intro_source_offset": 0,
+    "reprise_source_offset": 0,
+    "reprise_start": 46.16666666666667,
+    "listen_seconds": 10.0,
+    "reprise_pcm_correlation": 1.0,
+    "frames": 38822000,
+    "sample_rate": 48000,
+    "gain_peak": 0.7618882060050964
+  },
+  "short": {
+    "url": "exports/从现实画廊到深空沙龙-新版开场.mp4",
+    "runtime_seconds": 18,
+    "rooms": [
+      "http://127.0.0.1:8095/?world=museum&room=romanticism-salon"
+    ],
+    "transition": {
+      "cross_dissolve_seconds": [
+        6.4,
+        8.3
+      ],
+      "virtual_camera": "Glass roof, tilt down, scan left and right"
+    },
+    "title": "From Gallery to Space"
+  },
+  "cold_water_edit": {
+    "source": "../v2/footage/O01-cold-water.mp4",
+    "source_speed": 0.65,
+    "passes": 2,
+    "dissolve_seconds": 0.625,
+    "duration": 18.708333333333332,
+    "on_screen_source_label": false
+  },
+  "opening_gallery": {
+    "reference": {
+      "title": "走进画廊",
+      "creator": "Charlotte May",
+      "source": "https://www.pexels.com/video/arts-inside-a-gallery-5824200/",
+      "license": "Pexels License",
+      "license_url": "https://www.pexels.com/license/",
+      "file": "footage/gallery-5824200.mp4",
+      "note": "博物馆环境实拍；未将场馆或墙上作品标为特定浪漫主义馆藏。",
+      "sha256": "828b544144c15fb072ea6e3a78c3f7bd58cc833aeedc9019790048566f3f039f",
+      "still": "footage/gallery-reference-charlotte-may.jpg",
+      "source_time_seconds": 0.45,
+      "still_sha256": "3692e2190337b4f6c1130155090595ad75ef54ff7c074f046f961e1300854549"
+    },
+    "generated_clip": {
+      "application": "Muse",
+      "file": "footage/muse-gallery-entry.mp4",
+      "seconds": 10.0,
+      "dimensions": [
+        1248,
+        704
+      ],
+      "fps": 24,
+      "audio": false,
+      "sha256": "902dd69e17825d096c393b3684624f2cc08e133812d5b7f51b82d5c2ee0245f3"
+    },
+    "edit": {
+      "source_speed": 0.8,
+      "source_start_seconds": 0.4,
+      "framing": "Full source frame",
+      "dissolve_seconds": [
+        6.4,
+        8.3
+      ],
+      "title": "From Gallery to Space"
+    }
+  }
+}

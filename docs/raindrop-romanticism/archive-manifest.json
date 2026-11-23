@@ -1,0 +1,468 @@
+{
+  "schema": 1,
+  "media_included": false,
+  "files": [
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v10/build_chinese_patch.py",
+      "runtime_path": "production/v10/build_chinese_patch.py",
+      "bytes": 5991,
+      "sha256": "d5ba4f5b36317817dfc1d2768a46ad349e85cb836a0c037e4c04fceb0d540ab5"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v10/convert_n002.py",
+      "runtime_path": "production/v10/convert_n002.py",
+      "bytes": 1609,
+      "sha256": "7c8c871c6af3f0f7a297ad082ce8b61db1437949c82d5e3ebf672cb9bb050d97"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v10/edit_script.py",
+      "runtime_path": "production/v10/edit_script.py",
+      "bytes": 1305,
+      "sha256": "d9123693c90ee37e36b75b7db8f8d6fa01e448553228e2741bf5df72dfbf3ee5"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v10/install_revision.py",
+      "runtime_path": "production/v10/install_revision.py",
+      "bytes": 4365,
+      "sha256": "877e4654f4e2e8fed9f49eefda95605b71c7049b8ce5f026f74ad891f24f32b1"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v10/record_n002.py",
+      "runtime_path": "production/v10/record_n002.py",
+      "bytes": 2165,
+      "sha256": "eed817b183b6e62d6a8995c1ee5589bc2eafdc3d90d6a02697f7d59d199885a7"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v11/build_bilingual.py",
+      "runtime_path": "production/v11/build_bilingual.py",
+      "bytes": 6889,
+      "sha256": "d242b1e990dbd99070912946429f7e9b10c08c1a2aa9469ba45ec0c90a91301a"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v11/convert_english.py",
+      "runtime_path": "production/v11/convert_english.py",
+      "bytes": 1519,
+      "sha256": "7600ffc13bc6a620d3662a002822f2975f671beb344c9d8bd3100bd7996711ff"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v11/full-plan.json",
+      "runtime_path": "production/v11/full-plan.json",
+      "bytes": 251482,
+      "sha256": "66b2f85d7b4976aa79dd36514539afd5654634e5b16a5156f5c43c7d03206c44"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v11/install_bilingual.py",
+      "runtime_path": "production/v11/install_bilingual.py",
+      "bytes": 6736,
+      "sha256": "d46a2fece6811e363744b4ea31af4f6e36353764971d0ddda84360635acd29c3"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v11/record_english.py",
+      "runtime_path": "production/v11/record_english.py",
+      "bytes": 2182,
+      "sha256": "5ebe59fd76b8c550b761d21bd96442e3f6d52d2c3a4006de4b4a8b8feb853c68"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v11/validate_bilingual.py",
+      "runtime_path": "production/v11/validate_bilingual.py",
+      "bytes": 3743,
+      "sha256": "d187b5f4a23b2cae453a9a538535afc21d7c8b60a355101a38406278ebb8948d"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v12/README.md",
+      "runtime_path": "production/v12/README.md",
+      "bytes": 4074,
+      "sha256": "1386a41ea8a85471ad61800e5fa299666c83b03664144966e92af9592ec4339d"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v12/audit_cadence.py",
+      "runtime_path": "production/v12/audit_cadence.py",
+      "bytes": 1234,
+      "sha256": "0085f86250efaf720b4bb014d351efea77e79ece5f643651d75a2d75c54fc4cb"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v12/camera-validation.json",
+      "runtime_path": "production/v12/camera-validation.json",
+      "bytes": 273,
+      "sha256": "6ef07a3a41b43c27fa0aa8deb05d5c1aa3274f8d710b72d0a3f6dd8453656708"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v12/capture-plan.json",
+      "runtime_path": "production/v12/capture-plan.json",
+      "bytes": 71646,
+      "sha256": "9cdf912f3322374e89f5b2a9c5c81bf34c823d705078d4d34d72b866d4021359"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v12/capture-server.mjs",
+      "runtime_path": "production/v12/capture-server.mjs",
+      "bytes": 2922,
+      "sha256": "0daf1ad95a3d89434bca945480f152d9c5d9e9bedaf149001d3325d5ee03d629"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v12/capture.html",
+      "runtime_path": "production/v12/capture.html",
+      "bytes": 6533,
+      "sha256": "8683ca0bf537c84521845ef80f1f253a38679027504ea75210036c672952bb38"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v12/checks.json",
+      "runtime_path": "production/v12/checks.json",
+      "bytes": 3416,
+      "sha256": "86d32cf495ea842fbfdb8fc61822e01e7e89b55a6d76327b58f8a1e2ee8a7255"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v12/compose.py",
+      "runtime_path": "production/v12/compose.py",
+      "bytes": 8728,
+      "sha256": "9bed815de3d754f5f8d17cbe8466e4c0d181d17626f6ad62861e3823a96c8077"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v12/install.py",
+      "runtime_path": "production/v12/install.py",
+      "bytes": 5015,
+      "sha256": "5571660a898dba6183d5d4b638acef318c265d3af7f17418063fddd5ffc42149"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v12/native-capture-checks.json",
+      "runtime_path": "production/v12/native-capture-checks.json",
+      "bytes": 671,
+      "sha256": "9c93c77b59d9579643ee874232941462c9b8108f7c7229476c5acb9fbe9f3dd6"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v12/native-seam-checks.json",
+      "runtime_path": "production/v12/native-seam-checks.json",
+      "bytes": 11137,
+      "sha256": "213bc7d7f0c0c6ae444cb1cbb32c9306d5873ccc1201ca27a62399620bf9fd63"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v12/overlay-plan.json",
+      "runtime_path": "production/v12/overlay-plan.json",
+      "bytes": 8169,
+      "sha256": "bb75c86d99cb4cd5cb09fa7d3a5a83c59d407af23297503bef01dfbaeb6bf75f"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v12/prepare.py",
+      "runtime_path": "production/v12/prepare.py",
+      "bytes": 6347,
+      "sha256": "7871e365e8d9332154c8190c0a2fe694d18cee3ba51ed440c81bebf03d28542f"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v12/validate.py",
+      "runtime_path": "production/v12/validate.py",
+      "bytes": 3554,
+      "sha256": "5e4f89846f5208a8559b1b4d42dc0d4da4a8de338c65639b9ac8d8c7233ff0f6"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v5/audition_alternative_providers.py",
+      "runtime_path": "production/v5/audition_alternative_providers.py",
+      "bytes": 6245,
+      "sha256": "97660026862aa519878c0e27fcb39354e5916faedc97427c68f33a5cdaf687ae"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v5/audition_minimax.py",
+      "runtime_path": "production/v5/audition_minimax.py",
+      "bytes": 4288,
+      "sha256": "6fc966244beacd6b0ecd6812336ef240d25bdf2c0729e021a28982045c742e7e"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v5/audition_qwen_local.py",
+      "runtime_path": "production/v5/audition_qwen_local.py",
+      "bytes": 3500,
+      "sha256": "efb826e20388622b1ac2c92498dc4a727a418d889ec3957d1e877abc76af39cf"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v5/check_mandarin.py",
+      "runtime_path": "production/v5/check_mandarin.py",
+      "bytes": 3697,
+      "sha256": "8478383c7298800e1e670b36319a32f1aa715444297a3f3da1c6cc2f636e73de"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v5/convert_alternative_auditions.py",
+      "runtime_path": "production/v5/convert_alternative_auditions.py",
+      "bytes": 3014,
+      "sha256": "d4d8244de16bbaaaa0280410ba691bb46377845d784db24dba70ba5f3e6fd309"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v5/download_local_tts_weights.py",
+      "runtime_path": "production/v5/download_local_tts_weights.py",
+      "bytes": 4623,
+      "sha256": "22645d88aeda6bae4a43b4d94fb00cb7b2cb6bf77a01947cd93362de0e4eae13"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v5/edit-plan.json",
+      "runtime_path": "production/v5/edit-plan.json",
+      "bytes": 64401,
+      "sha256": "7dedc720c4d193b5110fa83991a81393369a37d1304db92b4f9c344ec46ed37a"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v5/fangfang_voice_conversion_trial.py",
+      "runtime_path": "production/v5/fangfang_voice_conversion_trial.py",
+      "bytes": 4974,
+      "sha256": "05bf452efd6553c057bdc5a7cb6ceaa871601f2946a6097e0ed3e5c4f033ca89"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v5/finalize_owner_script.py",
+      "runtime_path": "production/v5/finalize_owner_script.py",
+      "bytes": 8494,
+      "sha256": "8c04b3c4b8c6955ab0a7b0a1d9b6c54d43bbe953543940192b7229884fd91537"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v5/finish_auditions.py",
+      "runtime_path": "production/v5/finish_auditions.py",
+      "bytes": 6314,
+      "sha256": "30a05531ede543fb1072851e1352bf0ec4c7e78d5b16161db53edc26829d5963"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v5/finish_fangfang_auditions.py",
+      "runtime_path": "production/v5/finish_fangfang_auditions.py",
+      "bytes": 7255,
+      "sha256": "cde819ec68da8212f0af347dfde665d0ffbb212bca4e64a90a8ac581b4062918"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v5/finish_mandarin.py",
+      "runtime_path": "production/v5/finish_mandarin.py",
+      "bytes": 2787,
+      "sha256": "888d7aaaa5dc6cf5a0486ba914241b522261b7996acbd55d5c7b36071a78c514"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v5/finish_pending.py",
+      "runtime_path": "production/v5/finish_pending.py",
+      "bytes": 3015,
+      "sha256": "cc99d0d3205635b9e0a99b6453df89339a7756fb419235a24dccc151dd892c59"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v5/finish_provider_comparison.py",
+      "runtime_path": "production/v5/finish_provider_comparison.py",
+      "bytes": 9588,
+      "sha256": "ed8f0cdb1ee939f84cbbc6feff92645416d6600a61748e19ab7da418ac336b27"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v5/generate_mandarin.py",
+      "runtime_path": "production/v5/generate_mandarin.py",
+      "bytes": 3491,
+      "sha256": "669ac9722a1ee2571040e351dce289d42c1efc8651b0037d26bad6fe2a7d3d81"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v5/louise_minimax_audition.py",
+      "runtime_path": "production/v5/louise_minimax_audition.py",
+      "bytes": 2390,
+      "sha256": "0cccb53e02ed67b016e04bca2f85239e99ccef8629c3bd8ee07ba248b5395409"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v5/make_narration_docs.py",
+      "runtime_path": "production/v5/make_narration_docs.py",
+      "bytes": 7313,
+      "sha256": "60cf65d9041a77527680b224473986b01542332356b6860a6a55c4560ddd981f"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v5/mandarin_voice_inputs.py",
+      "runtime_path": "production/v5/mandarin_voice_inputs.py",
+      "bytes": 1702,
+      "sha256": "7309e169f97511c76d038173c984b64af2109f27a0eccc0303d47ad15b398ce4"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v5/minimax_fangfang_trial.py",
+      "runtime_path": "production/v5/minimax_fangfang_trial.py",
+      "bytes": 6320,
+      "sha256": "4736118704890547ee1076ae10c65d084aef6ed8e2ff2de5fc634f5795cac0eb"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v5/picture.py",
+      "runtime_path": "production/v5/picture.py",
+      "bytes": 3823,
+      "sha256": "581cd3ee3f90f2c696e72c91d9f490da3ca0a42ecf9b4146785430749155ff14"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v5/preview.html",
+      "runtime_path": "production/v5/preview.html",
+      "bytes": 4343,
+      "sha256": "293d02104abb7de07eabfc90f1553ff0c46c898796c15030fe897f8be2d0e5f4"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v5/run_voice.py",
+      "runtime_path": "production/v5/run_voice.py",
+      "bytes": 570,
+      "sha256": "aff167985fdd3d9fa3d04f42eb3a62bab9688dcf50b7eb1d0edc86454e952cb6"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v5/sources-and-credits.json",
+      "runtime_path": "production/v5/sources-and-credits.json",
+      "bytes": 33788,
+      "sha256": "7b1994d1fef7864005f167b580be0675cb546f6a58d9c3e37ef68839d50ec4bf"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v5/stage_tts_dependencies.py",
+      "runtime_path": "production/v5/stage_tts_dependencies.py",
+      "bytes": 1960,
+      "sha256": "de7836aef05c10c32c90981a8f8465b133ef4c3a23c193109ba35f3acfef358a"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v5/timeline.py",
+      "runtime_path": "production/v5/timeline.py",
+      "bytes": 15288,
+      "sha256": "3c3a021320ad6e6d7e3ca0b6d59102ddbf83200bfa364cdc6b4317a913601e2c"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v5/tour-plan.json",
+      "runtime_path": "production/v5/tour-plan.json",
+      "bytes": 15297,
+      "sha256": "3a7df99c88e3fbf27dc246719261114fa61ea3015db51d0f6070d09c24298b30"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v5/voice_inputs.py",
+      "runtime_path": "production/v5/voice_inputs.py",
+      "bytes": 1881,
+      "sha256": "d322653d2a90186370d1a0236f2f14182cc1cf0e7e54c016b2bbd80a6d3fcdff"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v5/youtube_metadata.py",
+      "runtime_path": "production/v5/youtube_metadata.py",
+      "bytes": 10433,
+      "sha256": "ac86a455a0bac3ab64aea423407a8e66854caef36a50e25c51620d7b7cc313ca"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v5/youtube_package.py",
+      "runtime_path": "production/v5/youtube_package.py",
+      "bytes": 9854,
+      "sha256": "761aec6bde6c0c5e1f128db7ee8062908eb4833a23c6b64966f6ca08b42a2691"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v6/assemble_narration.py",
+      "runtime_path": "production/v6/assemble_narration.py",
+      "bytes": 10520,
+      "sha256": "1c58f80ad2c0822ea765627d9f4cba5f3fc654e0e7c5c72c20fe4a800b364e23"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v6/audition_chinese_timbres.py",
+      "runtime_path": "production/v6/audition_chinese_timbres.py",
+      "bytes": 4802,
+      "sha256": "ab86e46cac04c725d35178fb1457292551d6ffa2ebed138095b8d5bf45284a69"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v6/check_narration_content.py",
+      "runtime_path": "production/v6/check_narration_content.py",
+      "bytes": 3230,
+      "sha256": "a3b578ec9962ddac0ecacc498b669c2e625b706b55c38586f05949d4ceacb39a"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v6/convert_narration.py",
+      "runtime_path": "production/v6/convert_narration.py",
+      "bytes": 9688,
+      "sha256": "b8107efe3f628d96ccde9808c7346253d26e7f46e016f417961a02aae297a7b3"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v6/finalize_narration.py",
+      "runtime_path": "production/v6/finalize_narration.py",
+      "bytes": 2619,
+      "sha256": "d0f3652d2ecdaaada29f840d2d8cf2b397d1748e022763376e34d69a188d83f0"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v6/generate_minimax_narration.py",
+      "runtime_path": "production/v6/generate_minimax_narration.py",
+      "bytes": 6131,
+      "sha256": "35edde2aa5048112b02098d2fc8cb146ae9cd8a7d7ea1f8f7b5d40b09c3bac21"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v6/make_pilot.py",
+      "runtime_path": "production/v6/make_pilot.py",
+      "bytes": 20645,
+      "sha256": "333ea3c5db2535bc19886ab63d68c9d7e1cd37fd8bd7214aaca68bc622a2ed14"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v6/narration_documents.py",
+      "runtime_path": "production/v6/narration_documents.py",
+      "bytes": 3565,
+      "sha256": "03f544c52922ef5e743a3c9b1a01ce553703c6aac1a806cdf82520674aa6bd4a"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v6/prepare_narration.py",
+      "runtime_path": "production/v6/prepare_narration.py",
+      "bytes": 2760,
+      "sha256": "9862cf2a1a57315c99cb521671763d90cb5086ce1a8c25a853bf7d1f6d2af00f"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v6/repair_voice_fragments.py",
+      "runtime_path": "production/v6/repair_voice_fragments.py",
+      "bytes": 3225,
+      "sha256": "0dd2aadf3bb2dde1d3b1428795fdc280c6c0854db195b55bb09529d166531e38"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v7/convert_year_retakes.py",
+      "runtime_path": "production/v7/convert_year_retakes.py",
+      "bytes": 2654,
+      "sha256": "8ce00cecdbc3689411daee6f6045229cd037bcd93a42f90d17b10ba12a4a2691"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v7/full_film.py",
+      "runtime_path": "production/v7/full_film.py",
+      "bytes": 29395,
+      "sha256": "9c6838a687668bbbf764219392e3106946fe262cc2932998c021370f7e370210"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v7/generate_year_retakes.py",
+      "runtime_path": "production/v7/generate_year_retakes.py",
+      "bytes": 2629,
+      "sha256": "dc6c49ec39620156d2895677d5c6521611236fd07734d7d4c353ec7296074cb6"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v7/validate_full_film.py",
+      "runtime_path": "production/v7/validate_full_film.py",
+      "bytes": 4730,
+      "sha256": "2bc656f96b2515259a4ef43012f6605a1551d5a30498491f9c34b00a2b364a83"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v8/repair_opening.py",
+      "runtime_path": "production/v8/repair_opening.py",
+      "bytes": 3135,
+      "sha256": "03c66c507427be8949cfa66793bf1162b26d3e223d395fa735ad17d326a5be23"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v8/revise_audio.py",
+      "runtime_path": "production/v8/revise_audio.py",
+      "bytes": 10524,
+      "sha256": "de0a29a5003c570e9fd7592dcdb8eb14bb213162add84c4b5c3f98c8e3d84b3e"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v8/validate_audio.py",
+      "runtime_path": "production/v8/validate_audio.py",
+      "bytes": 5965,
+      "sha256": "b2606d871250768e1ef3ef2fc2b3b1997229b447f589878be3e1b4ac5ac9f937"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v9/build_revision.py",
+      "runtime_path": "production/v9/build_revision.py",
+      "bytes": 2753,
+      "sha256": "8fc64f74a2e0003dca3bec6c212a29be5542164233b70c289a5d7931cf0d7c3b"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v9/convert_all.py",
+      "runtime_path": "production/v9/convert_all.py",
+      "bytes": 6542,
+      "sha256": "76cc7d92d598fc7a1fab39fa13cc6f2a18523c519a2eefc00bb8f0d3658aa143"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v9/prepare_upload_package.py",
+      "runtime_path": "production/v9/prepare_upload_package.py",
+      "bytes": 11054,
+      "sha256": "c517728619b5015567f3f7749031233bcbcfd5561773f59571806811c8bcaa7d"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v9/record_chinese.py",
+      "runtime_path": "production/v9/record_chinese.py",
+      "bytes": 2634,
+      "sha256": "251487ddab27a5bd1e016a8d0501b13a1b5f450c7e4c7c582fde5ab573e8f6dc"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v9/review_english.py",
+      "runtime_path": "production/v9/review_english.py",
+      "bytes": 4123,
+      "sha256": "b9a1cdbee8ad675a4e2ab1849e89e889dd17b2d7ff81d0f815bf6dfba5be9140"
+    },
+    {
+      "snapshot": "scripts/raindrop-romanticism/snapshot/production/v9/validate_revision.py",
+      "runtime_path": "production/v9/validate_revision.py",
+      "bytes": 6268,
+      "sha256": "7cc372359b587ee6d3fa2955d4f51937629ce8a5065e6f33d4296e5d4caeb577"
+    }
+  ]
+}

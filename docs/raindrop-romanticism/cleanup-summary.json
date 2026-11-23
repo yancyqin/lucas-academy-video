@@ -1,0 +1,68 @@
+{
+  "state": "complete",
+  "candidate_files": 880,
+  "candidate_logical_bytes": 23645761152,
+  "protected_files": 3105,
+  "categories": {
+    "Encoded assembly intermediate": {
+      "files": 726,
+      "logical_bytes": 9617558744
+    },
+    "Superseded picture export; current master protected separately": {
+      "files": 11,
+      "logical_bytes": 2832156387
+    },
+    "Superseded delivery backup; approved inputs protected separately": {
+      "files": 34,
+      "logical_bytes": 8635597493
+    },
+    "Superseded narrated master or preview": {
+      "files": 2,
+      "logical_bytes": 793145444
+    },
+    "Reproducible Python bytecode": {
+      "files": 21,
+      "logical_bytes": 325778
+    },
+    "Short motion-check preview": {
+      "files": 2,
+      "logical_bytes": 77987077
+    },
+    "Rebuildable 60 fps insert or portrait render": {
+      "files": 9,
+      "logical_bytes": 183975337
+    },
+    "Annex-B duplicate of retained native MP4 capture": {
+      "files": 63,
+      "logical_bytes": 1248955537
+    },
+    "Superseded native camera take": {
+      "files": 12,
+      "logical_bytes": 256059355
+    }
+  },
+  "desktop_package": "Archived into production/v12/published-release",
+  "desktop_word_files_archived": 3,
+  "shared_instrumental_opening_protected": true,
+  "source_code_deleted": false,
+  "deleted_files": 880,
+  "deleted_logical_bytes": 23645761152,
+  "volume_free_before": 22095085568,
+  "volume_free_after": 41925185536,
+  "protected_files_verified": 3105,
+  "completed_at": "2026-11-23T00:45:11.410672+00:00",
+  "observed_volume_free_increase_bytes": 19830099968,
+  "post_cleanup_validation": {
+    "state": "passed",
+    "decoded_frames": 59128,
+    "fps": 60,
+    "master_sha256": "f41869bfd0d080b93b47d01226fe247f87ddbf2e4081db620adcaa9ee73434fa",
+    "approved_audio_and_captions_identical": {
+      "English-mix.wav": true,
+      "02-Chinese-aligned-audio.wav": true,
+      "Chinese-YouTube.m4a": true,
+      "03-English.srt": true,
+      "04-Chinese.srt": true
+    }
+  }
+}

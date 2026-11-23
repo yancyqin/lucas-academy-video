@@ -1,0 +1,341 @@
+[
+  {
+    "file": "@DATA_ROOT@/production/v12/assets/goya-i-saw-it.png",
+    "kind": "photo",
+    "start": 395.0184478371501,
+    "end": 405.7180661577608,
+    "fadeIn": 1.35,
+    "fadeOut": 1.35
+  },
+  {
+    "file": "@DATA_ROOT@/production/v12/assets/raft-medusa.png",
+    "kind": "photo",
+    "start": 441.35139523084723,
+    "end": 459.3060375443937,
+    "fadeIn": 1.35,
+    "fadeOut": 1.35
+  },
+  {
+    "file": "@DATA_ROOT@/production/v12/assets/liberty.png",
+    "kind": "photo",
+    "start": 499.2683673469388,
+    "end": 513.6365168539326,
+    "fadeIn": 1.35,
+    "fadeOut": 1.35
+  },
+  {
+    "file": "@DATA_ROOT@/production/v12/assets/vesuvius.png",
+    "kind": "photo",
+    "start": 559.3184338184337,
+    "end": 577.318171608266,
+    "fadeIn": 1.35,
+    "fadeOut": 1.35
+  },
+  {
+    "file": "@DATA_ROOT@/production/v12/assets/monk-sea.png",
+    "kind": "photo",
+    "start": 611.4829422382671,
+    "end": 634.2960497835498,
+    "fadeIn": 1.35,
+    "fadeOut": 1.35
+  },
+  {
+    "file": "@DATA_ROOT@/production/v12/assets/temeraire.png",
+    "kind": "photo",
+    "start": 690.1867753623188,
+    "end": 695.1411231884058,
+    "fadeIn": 1.35,
+    "fadeOut": 1.35
+  },
+  {
+    "file": "@DATA_ROOT@/production/v12/assets/rain-steam.png",
+    "kind": "photo",
+    "start": 714.5454918032788,
+    "end": 737.5513586956522,
+    "fadeIn": 1.35,
+    "fadeOut": 1.35
+  },
+  {
+    "file": "@DATA_ROOT@/production/v12/assets/monk-sea.png",
+    "kind": "photo",
+    "start": 791.7833333333334,
+    "end": 809.5533648790747,
+    "fadeIn": 1.35,
+    "fadeOut": 1.35
+  },
+  {
+    "file": "@DATA_ROOT@/production/v12/assets/monk-sea.png",
+    "kind": "photo",
+    "start": 140.875,
+    "end": 210.25,
+    "fadeIn": 1.35,
+    "fadeOut": 1.35
+  },
+  {
+    "id": "real-gallery",
+    "kind": "video",
+    "file": "@DATA_ROOT@/production/v12/inserts/real-gallery.mp4",
+    "start": 0,
+    "end": 7.1,
+    "trim": 0.5,
+    "speed": 1,
+    "fadeIn": 0,
+    "fadeOut": 1.2
+  },
+  {
+    "id": "monastery",
+    "kind": "video",
+    "file": "@DATA_ROOT@/production/v12/inserts/monastery.mp4",
+    "start": 44.291666666666664,
+    "end": 62.541666666666664,
+    "trim": 0.35,
+    "speed": 0.5095890410958904,
+    "fadeIn": 0.6,
+    "fadeOut": 0.8
+  },
+  {
+    "id": "cold-water",
+    "kind": "video",
+    "file": "@DATA_ROOT@/production/v12/inserts/cold-water.mp4",
+    "start": 62.541666666666664,
+    "end": 86.91666666666667,
+    "trim": 0,
+    "speed": 0.7675213675199998,
+    "fadeIn": 0.8,
+    "fadeOut": 0.8
+  },
+  {
+    "id": "paris",
+    "kind": "video",
+    "file": "@DATA_ROOT@/production/v12/inserts/paris.mp4",
+    "start": 234.63987847222222,
+    "end": 243.53133680555555,
+    "trim": 0.25,
+    "speed": 0.9620469083155645,
+    "fadeIn": 1.3,
+    "fadeOut": 1.3
+  },
+  {
+    "id": "engawa",
+    "kind": "video",
+    "file": "@DATA_ROOT@/production/v12/inserts/engawa.mp4",
+    "start": 850.7333333333333,
+    "end": 863.4625945537065,
+    "trim": 0.15,
+    "speed": 0.724708201072614,
+    "fadeIn": 1.3,
+    "fadeOut": 1.3
+  },
+  {
+    "id": "seirai-in",
+    "kind": "photo",
+    "file": "@DATA_ROOT@/mono-no-aware-photos/01-green-courtyard.jpg",
+    "start": 875.1094931921331,
+    "end": 884.7725794251135,
+    "trim": 0,
+    "speed": 0.7813238770685486,
+    "fadeIn": 1.3,
+    "fadeOut": 1.3
+  },
+  {
+    "id": "real-petals",
+    "kind": "video",
+    "file": "@DATA_ROOT@/production/v12/inserts/real-petals.mp4",
+    "start": 891.3241370010787,
+    "end": 898.4550431499462,
+    "trim": 0.25,
+    "speed": 0.8904899135446562,
+    "fadeIn": 1.3,
+    "fadeOut": 1.3
+  },
+  {
+    "id": "persimmons",
+    "kind": "video",
+    "file": "@DATA_ROOT@/production/v12/inserts/persimmons.mp4",
+    "start": 913.7025462962964,
+    "end": 921.2455947136489,
+    "trim": 0.15,
+    "speed": 0.635949782446669,
+    "fadeIn": 1.3,
+    "fadeOut": 1.3
+  },
+  {
+    "id": "round-window",
+    "kind": "video",
+    "file": "@DATA_ROOT@/production/v12/inserts/round-window.mp4",
+    "start": 924.4590675477061,
+    "end": 969.4583333333669,
+    "trim": 0,
+    "speed": 0.22222584803120377,
+    "fadeIn": 1.3,
+    "fadeOut": 1.3
+  },
+  {
+    "file": "@DATA_ROOT@/production/v12/inserts/portrait.mp4",
+    "kind": "video",
+    "start": 29.291666666666668,
+    "end": 44.291666666666664,
+    "fadeIn": 0.35,
+    "fadeOut": 0.35
+  },
+  {
+    "file": "@DATA_ROOT@/production/v7/assets/n006-english-label.png",
+    "kind": "photo",
+    "start": 87.16666666666667,
+    "end": 94.91666666666667,
+    "fadeIn": 0.6,
+    "fadeOut": 0.6
+  },
+  {
+    "file": "@DATA_ROOT@/production/v7/assets/n019-english-label.png",
+    "kind": "photo",
+    "start": 342.2083333333333,
+    "end": 349.9583333333333,
+    "fadeIn": 0.6,
+    "fadeOut": 0.6
+  },
+  {
+    "file": "@DATA_ROOT@/production/v7/assets/n021-english-label.png",
+    "kind": "photo",
+    "start": 372.8333333333333,
+    "end": 380.5833333333333,
+    "fadeIn": 0.6,
+    "fadeOut": 0.6
+  },
+  {
+    "file": "@DATA_ROOT@/production/v7/assets/n022-english-label.png",
+    "kind": "photo",
+    "start": 394.625,
+    "end": 402.375,
+    "fadeIn": 0.6,
+    "fadeOut": 0.6
+  },
+  {
+    "file": "@DATA_ROOT@/production/v7/assets/n023-english-label.png",
+    "kind": "photo",
+    "start": 406.6666666666667,
+    "end": 414.4166666666667,
+    "fadeIn": 0.6,
+    "fadeOut": 0.6
+  },
+  {
+    "file": "@DATA_ROOT@/production/v7/assets/n024-english-label.png",
+    "kind": "photo",
+    "start": 415.4166666666667,
+    "end": 423.1666666666667,
+    "fadeIn": 0.6,
+    "fadeOut": 0.6
+  },
+  {
+    "file": "@DATA_ROOT@/production/v7/assets/n026-english-label.png",
+    "kind": "photo",
+    "start": 463.0,
+    "end": 470.75,
+    "fadeIn": 0.6,
+    "fadeOut": 0.6
+  },
+  {
+    "file": "@DATA_ROOT@/production/v7/assets/n029-english-label.png",
+    "kind": "photo",
+    "start": 508.5,
+    "end": 516.25,
+    "fadeIn": 0.6,
+    "fadeOut": 0.6
+  },
+  {
+    "file": "@DATA_ROOT@/production/v7/assets/n030-english-label.png",
+    "kind": "photo",
+    "start": 524.1666666666666,
+    "end": 531.9166666666666,
+    "fadeIn": 0.6,
+    "fadeOut": 0.6
+  },
+  {
+    "file": "@DATA_ROOT@/production/v7/assets/n031-english-label.png",
+    "kind": "photo",
+    "start": 542.4166666666666,
+    "end": 550.1666666666666,
+    "fadeIn": 0.6,
+    "fadeOut": 0.6
+  },
+  {
+    "file": "@DATA_ROOT@/production/v7/assets/n033-english-label.png",
+    "kind": "photo",
+    "start": 584.4583333333334,
+    "end": 592.2083333333334,
+    "fadeIn": 0.6,
+    "fadeOut": 0.6
+  },
+  {
+    "file": "@DATA_ROOT@/production/v7/assets/n035-english-label.png",
+    "kind": "photo",
+    "start": 615.9583333333334,
+    "end": 623.7083333333334,
+    "fadeIn": 0.6,
+    "fadeOut": 0.6
+  },
+  {
+    "file": "@DATA_ROOT@/production/v7/assets/n036-english-label.png",
+    "kind": "photo",
+    "start": 638.3333333333334,
+    "end": 646.0833333333334,
+    "fadeIn": 0.6,
+    "fadeOut": 0.6
+  },
+  {
+    "file": "@DATA_ROOT@/production/v7/assets/n037-english-label.png",
+    "kind": "photo",
+    "start": 655.7083333333334,
+    "end": 663.4583333333334,
+    "fadeIn": 0.6,
+    "fadeOut": 0.6
+  },
+  {
+    "file": "@DATA_ROOT@/production/v7/assets/n038-english-label.png",
+    "kind": "photo",
+    "start": 668.625,
+    "end": 676.375,
+    "fadeIn": 0.6,
+    "fadeOut": 0.6
+  },
+  {
+    "file": "@DATA_ROOT@/production/v7/assets/n040-english-label.png",
+    "kind": "photo",
+    "start": 696.4583333333334,
+    "end": 704.2083333333334,
+    "fadeIn": 0.6,
+    "fadeOut": 0.6
+  },
+  {
+    "file": "@DATA_ROOT@/production/v7/assets/bonus-title-english-label.png",
+    "kind": "photo",
+    "start": 849.375,
+    "end": 851.775,
+    "fadeIn": 0.6,
+    "fadeOut": 0.6
+  },
+  {
+    "file": "@DATA_ROOT@/production/v6/pilot-assets/pilot-title.png",
+    "kind": "photo",
+    "start": 0.35,
+    "end": 5.3,
+    "fadeIn": 0.6,
+    "fadeOut": 0.7
+  },
+  {
+    "file": "@DATA_ROOT@/production/v6/pilot-assets/transition-label.png",
+    "kind": "photo",
+    "start": 7.5,
+    "end": 12.1,
+    "fadeIn": 0.7,
+    "fadeOut": 0.7
+  },
+  {
+    "file": "@DATA_ROOT@/production/v7/assets/credits-english.png",
+    "kind": "photo",
+    "start": 975.4583333333334,
+    "end": 985.4666666666667,
+    "fadeIn": 0.6,
+    "fadeOut": 1
+  }
+]
