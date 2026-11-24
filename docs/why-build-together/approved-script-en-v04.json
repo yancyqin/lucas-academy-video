@@ -1,0 +1,93 @@
+{
+  "title": "What Really Matters When Kids Build Projects?",
+  "language": "en",
+  "approved_script_sha256": "3f22728ea54a55abb01c8c79d663ef55cb3ab5428d3c023c9faf1f8689d8976f",
+  "embedded_movie": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/delivery/curiosity-builds.en.no-voice.mp4",
+  "embedded_subtitles": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/delivery/curiosity-builds.en.no-voice.zh-CN.srt",
+  "rows": [
+    {
+      "id": "n001",
+      "kind": "opening",
+      "text": "Travel back two thousand years with today's food in a time-travel bag. What would feeding five thousand people cost?",
+      "spoken_text": "Travel back two thousand years with today's food in a time-travel bag. What would feeding five thousand people cost?",
+      "voice": "louise/en"
+    },
+    {
+      "id": "n002",
+      "kind": "opening",
+      "text": "Suppose the ingredients for a simple meal for everyone cost two or three thousand dollars. Many families could afford that today. Would feeding five thousand still count as a miracle?",
+      "spoken_text": "Suppose the ingredients for a simple meal for everyone cost two or three thousand dollars. Many families could afford that today. Would feeding five thousand still count as a miracle?",
+      "voice": "louise/en"
+    },
+    {
+      "id": "n003",
+      "kind": "needs",
+      "text": "As material life gets easier, what do kids need most?",
+      "spoken_text": "As material life gets easier, what do kids need most?",
+      "voice": "louise/en"
+    },
+    {
+      "id": "n004",
+      "kind": "needs",
+      "text": "For many Chinese American children around us, food, clothing, and basic living needs are met. Love, belonging, and recognition can matter more in their daily lives.",
+      "spoken_text": "For many Chinese American children around us, food, clothing, and basic living needs are met. Love, belonging, and recognition can matter more in their daily lives.",
+      "voice": "louise/en"
+    },
+    {
+      "id": "n005",
+      "kind": "needs",
+      "text": "Being included at school, getting likes on Instagram, or finding teammates in a game.",
+      "spoken_text": "Being included at school, getting likes on Instagram, or finding teammates in a game.",
+      "voice": "louise/en"
+    },
+    {
+      "id": "n006",
+      "kind": "needs",
+      "text": "Winning competitions, skiing well, playing tennis or cello, even finding rare game gear: each can answer the same question. Am I worth noticing?",
+      "spoken_text": "Winning competitions, skiing well, playing tennis or cello, even finding rare game gear: each can answer the same question. Am I worth noticing?",
+      "voice": "louise/en"
+    },
+    {
+      "id": "n007",
+      "kind": "content",
+      "text": "Lucas Academy offers Chinese and English, art, and software projects we build together. Today, let's talk about software projects.",
+      "spoken_text": "Lucas Academy offers Chinese and English, art, and software projects we build together. Today, let's talk about software projects.",
+      "voice": "louise/en"
+    },
+    {
+      "id": "n008",
+      "kind": "content",
+      "text": "Games, pictures, short videos: as much as you want. But what do they give our children?",
+      "spoken_text": "Games, pictures, short videos: as much as you want. But what do they give our children?",
+      "voice": "louise/en"
+    },
+    {
+      "id": "n009",
+      "kind": "content",
+      "text": "Some content is like junk food: filling, but not nourishing. With media, as with food, more isn't always better.",
+      "spoken_text": "Some content is like junk food: filling, but not nourishing. With media, as with food, more isn't always better.",
+      "voice": "louise/en"
+    },
+    {
+      "id": "n010",
+      "kind": "building",
+      "text": "AI makes polished work easier to produce. But how much of the child's own thinking is in it?",
+      "spoken_text": "AI makes polished work easier to produce. But how much of the child's own thinking is in it?",
+      "voice": "louise/en"
+    },
+    {
+      "id": "n011",
+      "kind": "building",
+      "text": "We start with children's interests and build their work step by step. Through choices and revisions, children practice judgment, ownership, leadership, and teamwork.",
+      "spoken_text": "We start with children's interests and build their work step by step. Through choices and revisions, children practice judgment, ownership, leadership, and teamwork.",
+      "voice": "louise/en"
+    },
+    {
+      "id": "n012",
+      "kind": "insert_intro",
+      "text": "Let's explore our projects.",
+      "spoken_text": "Let's explore our projects.",
+      "voice": "louise/en"
+    }
+  ]
+}

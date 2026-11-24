@@ -1,0 +1,51 @@
+{
+  "video_id": "LOCAL_VIDEO_ID",
+  "title_zh": "AI辅助, 从兴趣到产品",
+  "title_en": "With AI, from Curiosity to Product",
+  "proposal_directory": "/Users/yqin/repo/playground/lucas-academy-video-data/why-build-together-20261122/cover-options-20261123",
+  "status": "Selected option 2 saved in both languages",
+  "options": [
+    {
+      "option": 1,
+      "file": "01-editorial.jpg",
+      "title": "从兴趣到产品",
+      "size": [
+        1280,
+        720
+      ],
+      "bytes": 315844,
+      "sha256": "238255d5bc149b4057d6e730cf6b0bab1d2da3f04885602cc6a895411ae99182"
+    },
+    {
+      "option": 2,
+      "file": "02-walk-into-a-painting.jpg",
+      "title": "从兴趣到产品",
+      "size": [
+        1280,
+        720
+      ],
+      "bytes": 699281,
+      "sha256": "9d7b86f22452203c58ba5d1dfacfc8483053c946ac7e01ab03a2363ca32d8c4d"
+    },
+    {
+      "option": 3,
+      "file": "03-project-collection.jpg",
+      "title": "从兴趣到产品",
+      "size": [
+        1280,
+        720
+      ],
+      "bytes": 381815,
+      "sha256": "142b9c1c531ae47e453fab8975e412698f2659a69ab4938af6b9147e9c7bd3b8"
+    }
+  ],
+  "new_thumbnail_uploaded": true,
+  "all_dimensions": [
+    1280,
+    720
+  ],
+  "phone_review_width": 320,
+  "selected_option": 2,
+  "selected_cover_directory": "/Users/yqin/repo/playground/lucas-academy-video-data/why-build-together-20261122/cover-final-20261123-ai-assisted",
+  "visibility": "private"
+}

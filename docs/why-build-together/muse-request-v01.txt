@@ -1,0 +1,25 @@
+Please generate SIX separate actual videos for a Lucas Academy parent-introduction film, "Why Build Together". The owner has approved video generation. Generate the clips now and return six separate downloadable video attachments, labelled G01 through G06. Each attachment must be a video, not a still, storyboard or prompt draft.
+
+Common specification: landscape 16:9, 8–10 seconds per clip, one continuous coherent action and smooth restrained camera movement. Photorealistic cinematic observation, natural neutral daylight, tactile materials, balanced colors and human-scale composition. Keep hands anatomically natural and wholly visible. No readable writing, generated numbers, labels, logos, watermarks, captions, speech or music. These are illustrative scenes for a modern educational film, not documentary records of a specific family or historical event. Create the normal-color originals; we will add selective black-and-white animation and accurate diagrams later.
+
+G01 — The time traveller's bag
+A person wearing an ordinary contemporary dark jacket is already sitting on a broad stone on a grassy eastern Mediterranean hillside reminiscent of the first century. Their face stays out of frame. Their hands gently open a plain canvas drawstring bag containing simple flatbreads. A few small groups in plain historical clothing sit far behind on the hillside. Begin close to the bag and make one slow continuous pullback revealing the improbable modern bag in this ancient landscape. Keep the bag and hands consistent, no environment transformation, no glowing portal.
+
+G02 — A simple meal shared
+An observational close-to-medium shot of simple flatbreads being passed from a plain basket to several waiting people on the same type of Mediterranean hillside. Foreground hands and bread are clear and natural, with small seated groups softly out of focus behind them. One deliberate handover, gentle sideways camera movement. Simple linen clothing, natural daylight, real food texture, calm human interaction. The editor will show the exact number of people and budget separately.
+
+G03 — A place with others
+A quiet contemporary American school courtyard in natural daylight. Two preteen friends sit at a low outdoor table looking at a simple unlabelled object. A third child approaches; one friend slides a chair a little and gestures to the open place. The newcomer sits and all three lean toward the same small object. One natural welcoming action, a gentle continuous camera drift, ordinary casual clothing, no uniforms or school branding. A warm ordinary moment of belonging, without posing toward the camera.
+
+G04 — More and more
+A cinematic lateral tracking view of a clean food packaging conveyor. Rows of identical small snack packages in restrained red, blue and silver pass through the frame, all entirely blank with no readable branding. The repeating rectangles and steady movement are the subject. Neutral daylight with soft highlights, physical package texture and convincing machinery. Smooth continuous shot, no labels and no cuts. The editor will connect these rectangles to a stream of digital content.
+
+G05 — An idea on the table
+A Chinese American parent and school-age child at a real workshop table in cool neutral daylight. The child points at an uncomplicated pencil sketch on white paper while the adult sits at the same eye level, listens and then lightly points at another part of the page. Cardboard, a few wooden pieces and pencils lie naturally around them. Keep the child's drawing as plain abstract pencil lines without generated words or exact diagrams. Slow camera movement toward their hands and shared attention. Curious, patient, everyday interaction.
+
+G06 — Building together
+Two school-age children collaborate on a small cardboard-and-wood track model at a workshop table. One steadies the base while the other carefully fits one component, then passes a spare piece back. An adult sits nearby listening and watching without taking over. One clear cooperative action, whole natural hands and consistent objects, neutral daylight, tactile materials, unhurried continuous camera drift. Finish on their shared model and hands with quiet space near the top for the editor's closing question.
+
+If local saving is available, preferred originals folder:
+/Users/yqin/repo/playground/lucas-academy-video/out/why-build-together-v01/muse/
+Use G01.mp4 through G06.mp4. Otherwise return the six downloadable video attachments in this chat. Preserve originals at their native duration and resolution. Please report any failed generation explicitly; do not substitute stock footage or previously generated clips.

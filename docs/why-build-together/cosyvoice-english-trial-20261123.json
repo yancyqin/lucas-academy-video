@@ -1,0 +1,31 @@
+{
+  "title": "With AI, from Curiosity to Product",
+  "trial_directory": "/Users/yqin/repo/playground/lucas-academy-video-data/why-build-together-20261122/cosyvoice-en-trial-20261123",
+  "pdf_pages": 1,
+  "passages": 12,
+  "generation": "Original local CosyVoice, direct zero-shot TTS",
+  "voice": "louise/en",
+  "seconds": 110.07,
+  "speed": 1.0,
+  "time_stretch": false,
+  "music": false,
+  "asr_all_12_takes_match": true,
+  "current_youtube_audio_unchanged": true,
+  "outputs": [
+    {
+      "file": "/Users/yqin/repo/playground/lucas-academy-video/output/pdf/with-ai-english-narration-script.pdf",
+      "bytes": 55296,
+      "sha256": "71e1f86bc80f4a05c7b5d3a760e7c21a471743ccb9184b7c8bcd665044ffd7ee"
+    },
+    {
+      "file": "/Users/yqin/repo/playground/lucas-academy-video/output/audio/with-ai.cosyvoice-english-audition.mp3",
+      "bytes": 2203320,
+      "sha256": "a6c79e126c888c5879b2e6c8654c6f3843ee2dce9753ab6783422ae0369a2adf"
+    },
+    {
+      "file": "/Users/yqin/repo/playground/lucas-academy-video/output/audio/with-ai.cosyvoice-english-audition.wav",
+      "bytes": 7925084,
+      "sha256": "52ea0641a6d33bec99a043d8d9d80bc60d358a0eee5fe02b9d65dbbb3f18f416"
+    }
+  ]
+}

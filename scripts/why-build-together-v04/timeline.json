@@ -1,0 +1,292 @@
+{
+  "title": "孩子做项目，我们真正看重什么？",
+  "language": "zh",
+  "rows": [
+    {
+      "id": "n001",
+      "kind": "opening",
+      "text": "穿越到两千年前，你有一个时空袋，能把今天的食物送过去。喂饱五千个人，要花多少钱？",
+      "spoken_text": "穿越到两千年前，你有一个时空袋，能把今天的食物送过去。喂饱五千个人，要花多少钱？",
+      "voice": "louise/zh"
+    },
+    {
+      "id": "n002",
+      "kind": "opening",
+      "text": "做个粗略假设：一顿简单的饭，食材两三千美元。这笔钱，今天不少家庭都能承担。放到今天，喂饱五千人，还算神迹吗？",
+      "spoken_text": "做个粗略假设：一顿简单的饭，食材两三千美元。这笔钱，今天不少家庭都能承担。放到今天，喂饱五千人，还算神迹吗？",
+      "voice": "louise/zh"
+    },
+    {
+      "id": "n003",
+      "kind": "needs",
+      "text": "物质越来越丰富，孩子最需要的，又是什么？",
+      "spoken_text": "物质越来越丰富，孩子最需要的，又是什么？",
+      "voice": "louise/zh"
+    },
+    {
+      "id": "n004",
+      "kind": "needs",
+      "text": "对我们身边不少美国华人孩子来说，吃穿和基本生活已经有了保障。爱、归属和认可，成了更牵动他们的需要。",
+      "spoken_text": "对我们身边不少美国华人孩子来说，吃穿和基本生活已经有了保障。爱、归属和认可，成了更牵动他们的需要。",
+      "voice": "louise/zh"
+    },
+    {
+      "id": "n005",
+      "kind": "needs",
+      "text": "在学校被接纳，在 Instagram 有人点赞，在游戏里有人组队；",
+      "spoken_text": "在学校被接纳，在 Instagram 有人点赞，在游戏里有人组队；",
+      "voice": "louise/zh"
+    },
+    {
+      "id": "n006",
+      "kind": "needs",
+      "text": "竞赛拿奖、滑雪滑得好、网球打得好、大提琴拉得好，甚至在游戏里获得一件稀有装备，都可能在回答同一个问题：我值得被看见吗？",
+      "spoken_text": "竞赛拿奖、滑雪滑得好、网球打得好、大提琴拉得好，甚至在游戏里获得一件稀有装备，都可能在回答同一个问题：我值得被看见吗？",
+      "voice": "louise/zh"
+    },
+    {
+      "id": "n007",
+      "kind": "content",
+      "text": "Lucas Academy 的项目包括中英文、艺术和软件项目共建。今天，我们聊聊软件项目。",
+      "spoken_text": "Lucas Academy 的项目包括中英文、艺术和软件项目共建。今天，我们聊聊软件项目。",
+      "voice": "louise/zh"
+    },
+    {
+      "id": "n008",
+      "kind": "content",
+      "text": "游戏、图片、短视频，要多少有多少。但这些内容，能给孩子带来什么？",
+      "spoken_text": "游戏图片短视频，要多少有多少。但这些内容能给孩子带来什么？",
+      "voice": "louise/zh"
+    },
+    {
+      "id": "n009",
+      "kind": "content",
+      "text": "有些内容像工业化的零食，量大管饱，吃饱却不等于吃好。多媒体和食物一样，不是越多越好。",
+      "spoken_text": "有些内容像工业化的零食，量大管饱，吃饱却不等于吃好。多媒体和食物一样，不是越多越好。",
+      "voice": "louise/zh"
+    },
+    {
+      "id": "n010",
+      "kind": "building",
+      "text": "借助 AI，给作品做出漂亮的外表，越来越容易。但孩子在里面，留下了多少自己的想法？",
+      "spoken_text": "借助 AI，给作品做出漂亮的外表，越来越容易。但孩子在里面，留下了多少自己的想法？",
+      "voice": "louise/zh"
+    },
+    {
+      "id": "n011",
+      "kind": "building",
+      "text": "我们的想法是：从孩子的兴趣出发，一点一点把作品做出来，在选择和修改中，练习判断力、对作品的责任感，还有带领与合作的能力。",
+      "spoken_text": "我们的想法是：从孩子的兴趣出发，一点一点把作品做出来，在选择和修改中，练习判断力、对作品的责任感，还有带领与合作的能力。",
+      "voice": "louise/zh"
+    },
+    {
+      "id": "n012",
+      "kind": "insert_intro",
+      "text": "我们来看一下已有的项目展示。",
+      "spoken_text": "我们来看一下已有的项目展示。",
+      "voice": "louise/zh"
+    }
+  ],
+  "approved_script_sha256": "3f22728ea54a55abb01c8c79d663ef55cb3ab5428d3c023c9faf1f8689d8976f",
+  "embedded_movie": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/delivery/curiosity-builds.en.no-voice.mp4",
+  "embedded_subtitles": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/delivery/curiosity-builds.en.no-voice.zh-CN.srt",
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "frames": 12099,
+  "seconds": 403.3,
+  "intro_frames": 3585,
+  "outro_frames": 0,
+  "insert": {
+    "start_frame": 3585,
+    "frames": 8514,
+    "seconds": 283.8
+  },
+  "scenes": [
+    {
+      "id": "n001",
+      "kind": "opening",
+      "text": "穿越到两千年前，你有一个时空袋，能把今天的食物送过去。喂饱五千个人，要花多少钱？",
+      "spoken_text": "穿越到两千年前，你有一个时空袋，能把今天的食物送过去。喂饱五千个人，要花多少钱？",
+      "voice": "louise/zh",
+      "text_en": "Travel back two thousand years with today's food in a time-travel bag. What would feeding five thousand people cost?",
+      "start_frame": 0,
+      "local_start": 0,
+      "frames": 313,
+      "piece": "intro",
+      "voice_offset": 0.2,
+      "voice_seconds": 9.36,
+      "voice_seconds_en": 7.36
+    },
+    {
+      "id": "n002",
+      "kind": "opening",
+      "text": "做个粗略假设：一顿简单的饭，食材两三千美元。这笔钱，今天不少家庭都能承担。放到今天，喂饱五千人，还算神迹吗？",
+      "spoken_text": "做个粗略假设：一顿简单的饭，食材两三千美元。这笔钱，今天不少家庭都能承担。放到今天，喂饱五千人，还算神迹吗？",
+      "voice": "louise/zh",
+      "text_en": "Suppose the ingredients for a simple meal for everyone cost two or three thousand dollars. Many families could afford that today. Would feeding five thousand still count as a miracle?",
+      "start_frame": 313,
+      "local_start": 313,
+      "frames": 404,
+      "piece": "intro",
+      "voice_offset": 0.2,
+      "voice_seconds": 12.4,
+      "voice_seconds_en": 12.4
+    },
+    {
+      "id": "n003",
+      "kind": "needs",
+      "text": "物质越来越丰富，孩子最需要的，又是什么？",
+      "spoken_text": "物质越来越丰富，孩子最需要的，又是什么？",
+      "voice": "louise/zh",
+      "text_en": "As material life gets easier, what do kids need most?",
+      "start_frame": 717,
+      "local_start": 717,
+      "frames": 164,
+      "piece": "intro",
+      "voice_offset": 0.2,
+      "voice_seconds": 4.16,
+      "voice_seconds_en": 4.4
+    },
+    {
+      "id": "n004",
+      "kind": "needs",
+      "text": "对我们身边不少美国华人孩子来说，吃穿和基本生活已经有了保障。爱、归属和认可，成了更牵动他们的需要。",
+      "spoken_text": "对我们身边不少美国华人孩子来说，吃穿和基本生活已经有了保障。爱、归属和认可，成了更牵动他们的需要。",
+      "voice": "louise/zh",
+      "text_en": "For many Chinese American children around us, food, clothing, and basic living needs are met. Love, belonging, and recognition can matter more in their daily lives.",
+      "start_frame": 881,
+      "local_start": 881,
+      "frames": 392,
+      "piece": "intro",
+      "voice_offset": 0.2,
+      "voice_seconds": 11.84,
+      "voice_seconds_en": 12.4
+    },
+    {
+      "id": "n005",
+      "kind": "needs",
+      "text": "在学校被接纳，在 Instagram 有人点赞，在游戏里有人组队；",
+      "spoken_text": "在学校被接纳，在 Instagram 有人点赞，在游戏里有人组队；",
+      "voice": "louise/zh",
+      "text_en": "Being included at school, getting likes on Instagram, or finding teammates in a game.",
+      "start_frame": 1273,
+      "local_start": 1273,
+      "frames": 214,
+      "piece": "intro",
+      "voice_offset": 0.2,
+      "voice_seconds": 6.08,
+      "voice_seconds_en": 6.48
+    },
+    {
+      "id": "n006",
+      "kind": "needs",
+      "text": "竞赛拿奖、滑雪滑得好、网球打得好、大提琴拉得好，甚至在游戏里获得一件稀有装备，都可能在回答同一个问题：我值得被看见吗？",
+      "spoken_text": "竞赛拿奖、滑雪滑得好、网球打得好、大提琴拉得好，甚至在游戏里获得一件稀有装备，都可能在回答同一个问题：我值得被看见吗？",
+      "voice": "louise/zh",
+      "text_en": "Winning competitions, skiing well, playing tennis or cello, even finding rare game gear: each can answer the same question. Am I worth noticing?",
+      "start_frame": 1487,
+      "local_start": 1487,
+      "frames": 466,
+      "piece": "intro",
+      "voice_offset": 0.2,
+      "voice_seconds": 14.48,
+      "voice_seconds_en": 11.92
+    },
+    {
+      "id": "n007",
+      "kind": "content",
+      "text": "Lucas Academy 的项目包括中英文、艺术和软件项目共建。今天，我们聊聊软件项目。",
+      "spoken_text": "Lucas Academy 的项目包括中英文、艺术和软件项目共建。今天，我们聊聊软件项目。",
+      "voice": "louise/zh",
+      "text_en": "Lucas Academy offers Chinese and English, art, and software projects we build together. Today, let's talk about software projects.",
+      "start_frame": 1953,
+      "local_start": 1953,
+      "frames": 320,
+      "piece": "intro",
+      "voice_offset": 0.2,
+      "voice_seconds": 8.88,
+      "voice_seconds_en": 10.0
+    },
+    {
+      "id": "n008",
+      "kind": "content",
+      "text": "游戏、图片、短视频，要多少有多少。但这些内容，能给孩子带来什么？",
+      "spoken_text": "游戏图片短视频，要多少有多少。但这些内容能给孩子带来什么？",
+      "voice": "louise/zh",
+      "text_en": "Games, pictures, short videos: as much as you want. But what do they give our children?",
+      "start_frame": 2273,
+      "local_start": 2273,
+      "frames": 248,
+      "piece": "intro",
+      "voice_offset": 0.2,
+      "voice_seconds": 7.2,
+      "voice_seconds_en": 6.8
+    },
+    {
+      "id": "n009",
+      "kind": "content",
+      "text": "有些内容像工业化的零食，量大管饱，吃饱却不等于吃好。多媒体和食物一样，不是越多越好。",
+      "spoken_text": "有些内容像工业化的零食，量大管饱，吃饱却不等于吃好。多媒体和食物一样，不是越多越好。",
+      "voice": "louise/zh",
+      "text_en": "Some content is like junk food: filling, but not nourishing. With media, as with food, more isn't always better.",
+      "start_frame": 2521,
+      "local_start": 2521,
+      "frames": 303,
+      "piece": "intro",
+      "voice_offset": 0.2,
+      "voice_seconds": 9.44,
+      "voice_seconds_en": 9.28
+    },
+    {
+      "id": "n010",
+      "kind": "building",
+      "text": "借助 AI，给作品做出漂亮的外表，越来越容易。但孩子在里面，留下了多少自己的想法？",
+      "spoken_text": "借助 AI，给作品做出漂亮的外表，越来越容易。但孩子在里面，留下了多少自己的想法？",
+      "voice": "louise/zh",
+      "text_en": "AI makes polished work easier to produce. But how much of the child's own thinking is in it?",
+      "start_frame": 2824,
+      "local_start": 2824,
+      "frames": 258,
+      "piece": "intro",
+      "voice_offset": 0.2,
+      "voice_seconds": 7.52,
+      "voice_seconds_en": 7.28
+    },
+    {
+      "id": "n011",
+      "kind": "building",
+      "text": "我们的想法是：从孩子的兴趣出发，一点一点把作品做出来，在选择和修改中，练习判断力、对作品的责任感，还有带领与合作的能力。",
+      "spoken_text": "我们的想法是：从孩子的兴趣出发，一点一点把作品做出来，在选择和修改中，练习判断力、对作品的责任感，还有带领与合作的能力。",
+      "voice": "louise/zh",
+      "text_en": "We start with children's interests and build their work step by step. Through choices and revisions, children practice judgment, ownership, leadership, and teamwork.",
+      "start_frame": 3082,
+      "local_start": 3082,
+      "frames": 411,
+      "piece": "intro",
+      "voice_offset": 0.2,
+      "voice_seconds": 13.04,
+      "voice_seconds_en": 12.08
+    },
+    {
+      "id": "n012",
+      "kind": "insert_intro",
+      "text": "我们来看一下已有的项目展示。",
+      "spoken_text": "我们来看一下已有的项目展示。",
+      "voice": "louise/zh",
+      "text_en": "Let's explore our projects.",
+      "start_frame": 3493,
+      "local_start": 3493,
+      "frames": 92,
+      "piece": "intro",
+      "voice_offset": 0.2,
+      "voice_seconds": 2.4,
+      "voice_seconds_en": 2.08
+    }
+  ],
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "default_audio": "zh"
+}
