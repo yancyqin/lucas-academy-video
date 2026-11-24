@@ -1,0 +1,92 @@
+{
+  "video_id": "LOCAL_VIDEO_ID",
+  "title_zh": "AI辅助, 从兴趣到产品",
+  "title_en": "With AI, from Curiosity to Product",
+  "selected_option": 2,
+  "source_recording_frame": "/Users/yqin/repo/playground/lucas-academy-video-data/why-build-together-20261122/cover-options-20261123/sources/vangogh-room.png",
+  "no_header_or_footer_captions": true,
+  "no_footer_band": true,
+  "only_title_text": true,
+  "dimensions": [
+    1280,
+    720
+  ],
+  "covers": [
+    {
+      "language": "zh",
+      "file": "youtube-cover.zh.jpg",
+      "bytes": 759685,
+      "sha256": "eef1817c780ef617492639220ec951666c13fc11ce10b49622981b721bc962bd",
+      "text": [
+        {
+          "text": "AI辅助",
+          "font_size": 128,
+          "bounds": [
+            60.0,
+            140.0,
+            457.0,
+            260.5
+          ]
+        },
+        {
+          "text": "从兴趣",
+          "font_size": 128,
+          "bounds": [
+            60.0,
+            304.0,
+            444.0,
+            421.5
+          ]
+        },
+        {
+          "text": "到产品",
+          "font_size": 128,
+          "bounds": [
+            60.0,
+            468.0,
+            444.0,
+            589.0
+          ]
+        }
+      ]
+    },
+    {
+      "language": "en",
+      "file": "youtube-cover.en.jpg",
+      "bytes": 758043,
+      "sha256": "9ce1044f3bc65f6637044acba33158d9b4e263489fceaedf6935337c4fd767d9",
+      "text": [
+        {
+          "text": "With AI,",
+          "font_size": 88,
+          "bounds": [
+            60.0,
+            182.0,
+            388.0,
+            259.5
+          ]
+        },
+        {
+          "text": "from Curiosity",
+          "font_size": 88,
+          "bounds": [
+            60.0,
+            310.0,
+            663.5,
+            392.5
+          ]
+        },
+        {
+          "text": "to Product",
+          "font_size": 88,
+          "bounds": [
+            60.0,
+            438.0,
+            501.5,
+            502.0
+          ]
+        }
+      ]
+    }
+  ]
+}

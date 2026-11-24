@@ -1,0 +1,243 @@
+{
+  "version": "owner English narration v05; v04 picture",
+  "status": "complete",
+  "video_id": "LOCAL_VIDEO_ID",
+  "watch_url": "LOCAL_UNLISTED_WATCH_URL",
+  "edit_url": "LOCAL_STUDIO_EDIT_URL",
+  "channel_id": "UCtn9_kNupjZvWAJVOqWUbYw",
+  "visibility": "unlisted",
+  "visibility_verified": true,
+  "schedule": null,
+  "new_video_uploaded": false,
+  "owner_source": {
+    "file": "/Users/yqin/repo/playground/lucas-academy-video-data/why-build-together-20261122/english-owner-track-v05/source/with-ai-english-narration-louise.wav",
+    "sha256": "67c6253be8b07321e0dbe6000e39700615f01b9d9d13a94a0608c0c56e16e75b",
+    "seconds": 101.69
+  },
+  "english_audio": {
+    "file": "why-build-together.en-owner-v05.wav",
+    "sha256": "54bccd94a5c8f85ae676d487dcc236c983f0f42755efdf7f836af6565b0b2ed2",
+    "seconds": 403.3,
+    "sample_rate": 48000,
+    "channels": 2,
+    "language": "English",
+    "source": "Uploaded",
+    "status": "Published",
+    "success_notice": "Your audio track has been successfully processed and published",
+    "success_notice_observed_at": "2026-11-24T02:31:37.531Z",
+    "preview": {
+      "selected_language": "English",
+      "before": [
+        {
+          "currentTime": 0,
+          "duration": 403.330612,
+          "paused": true,
+          "readyState": 4
+        }
+      ],
+      "observed": [
+        {
+          "currentTime": 19.665456,
+          "duration": 403.330612,
+          "error": null,
+          "paused": false,
+          "readyState": 4
+        }
+      ],
+      "playback_advanced": true
+    }
+  },
+  "english_subtitles": {
+    "file": "why-build-together.en-owner-v05.srt",
+    "sha256": "952a81d6d71dfa77ac992704b7ecadddeddde8748e9fb590f0d28fd7a9695fcc",
+    "language": "English",
+    "cues": 55,
+    "type": "Manual",
+    "status": "Published",
+    "first_imported_timecode_30fps": "0:00:15",
+    "previous_first_timecode_30fps": "0:00:18",
+    "new_timing_verified_after_reopening": true
+  },
+  "chinese_metadata_unchanged": true,
+  "english_metadata_unchanged": true,
+  "titles": {
+    "zh": "AI辅助, 从兴趣到产品",
+    "en": "With AI, from Curiosity to Product"
+  },
+  "picture_unchanged": true,
+  "chinese_audio_unchanged": true,
+  "local_verification": {
+    "status": "passed",
+    "seconds": 403.3,
+    "decoded_frames": 12099,
+    "picture": "1920x1080 30fps",
+    "picture_payload_sha256": "SHA256=169278bf21c6c48e2de8710c732d890fe038a5b0b10986885c2fd5c91d4584e4",
+    "picture_payload_identical": true,
+    "speech_speed": 1.0,
+    "source_samples_preserved_once": 2440560,
+    "source_sample_rate": 24000,
+    "source_seconds": 101.69,
+    "all_voice_samples_verified_after_resampling_and_gain": true,
+    "project_music_pcm_identical": true,
+    "captions": 55,
+    "original_project_captions_preserved": 27,
+    "embedded_english_captions_verified": true,
+    "first_23_9_seconds_without_music": true,
+    "quiet_cut_rms_max": 0.0,
+    "food_comparison": {
+      "junk_food_word_seconds": 84.195,
+      "food_picture_starts": 84.03333333333333
+    },
+    "wav_peak_dbfs": -3.566205444703141
+  },
+  "local_player_check": [
+    {
+      "name": "narration",
+      "time": 25.4,
+      "videoDimensions": [
+        1920,
+        1080
+      ],
+      "seconds": 403.3,
+      "playedSeconds": 0.41121900000000267,
+      "cues": 55,
+      "mode": "showing",
+      "activeCaption": [
+        "As material life gets easier, what do kids need most?"
+      ]
+    },
+    {
+      "name": "software",
+      "time": 72.69999999999999,
+      "videoDimensions": [
+        1920,
+        1080
+      ],
+      "seconds": 403.3,
+      "playedSeconds": 0.40980500000000575,
+      "cues": 55,
+      "mode": "showing",
+      "activeCaption": [
+        "Today, let's talk about software projects."
+      ]
+    },
+    {
+      "name": "cards",
+      "time": 78,
+      "videoDimensions": [
+        1920,
+        1080
+      ],
+      "seconds": 403.3,
+      "playedSeconds": 0.4089699999999965,
+      "cues": 55,
+      "mode": "showing",
+      "activeCaption": [
+        "Games, pictures, short videos: as much as you want."
+      ]
+    },
+    {
+      "name": "food",
+      "time": 85,
+      "videoDimensions": [
+        1920,
+        1080
+      ],
+      "seconds": 403.3,
+      "playedSeconds": 0.41020799999999724,
+      "cues": 55,
+      "mode": "showing",
+      "activeCaption": [
+        "Some content is like junk food: filling, but not nourishing."
+      ]
+    },
+    {
+      "name": "sixth-shot",
+      "time": 100.13333333333334,
+      "videoDimensions": [
+        1920,
+        1080
+      ],
+      "seconds": 403.3,
+      "playedSeconds": 0.4094376666666619,
+      "cues": 55,
+      "mode": "showing",
+      "activeCaption": [
+        "But how much of the child's own thinking is in it?"
+      ]
+    },
+    {
+      "name": "building",
+      "time": 109.2,
+      "videoDimensions": [
+        1920,
+        1080
+      ],
+      "seconds": 403.3,
+      "playedSeconds": 0.41088299999999833,
+      "cues": 55,
+      "mode": "showing",
+      "activeCaption": [
+        "Through choices and revisions, children practice judgment, ownership,"
+      ]
+    },
+    {
+      "name": "project",
+      "time": 120.7,
+      "videoDimensions": [
+        1920,
+        1080
+      ],
+      "seconds": 403.3,
+      "playedSeconds": 0.4109289999999959,
+      "cues": 55,
+      "mode": "showing",
+      "activeCaption": [
+        "What Can Curiosity Build?"
+      ]
+    },
+    {
+      "name": "ending",
+      "time": 401.3,
+      "videoDimensions": [
+        1920,
+        1080
+      ],
+      "seconds": 403.3,
+      "playedSeconds": 0.41099099999996724,
+      "cues": 55,
+      "mode": "showing",
+      "activeCaption": [
+        "Where will you make a difference?"
+      ],
+      "endState": {
+        "ended": true,
+        "stoppedAt": 403.3,
+        "duration": 403.3
+      }
+    }
+  ],
+  "archive": "/Users/yqin/repo/playground/lucas-academy-video-data/why-build-together-20261122/english-owner-track-v05",
+  "last_checked_at": "2026-11-24T02:34:06.997335+00:00",
+  "visibility_rechecked_after_all_language_publications": true,
+  "visibility_verified_in_content": true,
+  "final_content_row": "6:44\nAI辅助, 从兴趣到产品\n0:00 穿越：喂饱五千人 0:23 孩子的需要 1:05 信息与内容 1:34 从兴趣出发，共同创作 1:59 Balanced Chess：逆转与落石 2:37 Bible Sequence：经文游戏 3:08 梵高房间 3:36 Journey of Art 艺术画廊 4:03 The Sky：宇宙与流水 4:35 Painterly Chameleon：画作里的捉迷藏 4:54 7×7 与 11×11 魔方 5:21 Coder Arena：编程与排行 5:49 用公式建造过山车 6:25 你对什么感到好奇？ 为什么陪孩子一起做软件项目？从孩子的需要、信息内容和共同创作出发，完整观看九个 Lucas Academy 项目。 项目入口 https://lucasacademy.org https://is.lucasacademy.org By Lucas Academy Team Muse 概念镜头采用白底铅笔画效果；需求金字塔为生成的静态手绘插画，图解使用黑底白线动画。项目展示包含既有项目录像及概念建造示意。配音：中文与英文，Louise，经授权参考音色在本机生成。\n—\nUnlisted\nNov 23, 2026\nUploaded\n2\n0",
+  "all_descriptions_begin_with_complete_chapter_lists": true,
+  "chapter_counts": {
+    "zh": 14,
+    "en": 14
+  },
+  "copyright_status": "No claims were found in this video",
+  "chinese_captions_preserved": true,
+  "original_video_picture_and_chinese_audio_preserved": true,
+  "publicly_published": false,
+  "studio_tab_marked_deliverable": true,
+  "screenshots": [
+    "studio-unlisted-final.jpg",
+    "studio-english-final.jpg",
+    "studio-languages-final.jpg",
+    "studio-captions-v05.jpg",
+    "studio-details-unlisted.jpg",
+    "studio-claims.jpg"
+  ]
+}

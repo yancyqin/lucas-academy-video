@@ -1,0 +1,112 @@
+{
+  "status": "complete",
+  "client_date": "2026-11-23",
+  "checked_at": "2026-11-24T06:52:06.798032+00:00",
+  "title": "With AI, from Curiosity to Product",
+  "version": "English natural punctuation pauses v06; picture v04",
+  "speech_source": "owner-supplied Louise recording, reused; no new speech synthesis",
+  "source_sha256": "67c6253be8b07321e0dbe6000e39700615f01b9d9d13a94a0608c0c56e16e75b",
+  "speech_speed": 1.0,
+  "alignment_method": "Extend selected existing natural punctuation pauses; preserve native speech and connected words; share picture and meaning cues.",
+  "punctuation_pause_insertions": 23,
+  "added_internal_pause_seconds": 8.21,
+  "longest_paragraph_gap_before": 4.0683,
+  "longest_paragraph_gap_after": 2.5383,
+  "source_samples_preserved_once": true,
+  "preview_seconds": 119.5,
+  "full_timeline_seconds": 403.3,
+  "chinese_audio_unchanged": true,
+  "picture_unchanged": true,
+  "project_audio_pcm_identical": true,
+  "captions_retimed": 55,
+  "preview_captions": 28,
+  "original_project_captions_preserved": 27,
+  "waveform_and_picture_verification": {
+    "status": "passed",
+    "pause_insertions": 23,
+    "inserted_silence_seconds": 8.21,
+    "seconds": 403.3,
+    "decoded_frames": 12099,
+    "picture": "1920x1080 30fps",
+    "picture_payload_sha256": "SHA256=169278bf21c6c48e2de8710c732d890fe038a5b0b10986885c2fd5c91d4584e4",
+    "picture_payload_identical": true,
+    "speech_speed": 1.0,
+    "source_samples_preserved_once": 2440560,
+    "source_sample_rate": 24000,
+    "source_seconds": 101.69,
+    "all_voice_samples_verified_after_resampling_and_gain": true,
+    "project_music_pcm_identical": true,
+    "captions": 55,
+    "original_project_captions_preserved": 27,
+    "embedded_english_captions_verified": true,
+    "first_23_9_seconds_without_music": true,
+    "quiet_cut_rms_max": 0.00010637922451898186,
+    "food_comparison": {
+      "junk_food_word_seconds": 84.325,
+      "food_picture_starts": 84.03333333333333
+    },
+    "wav_peak_dbfs": -3.566205444703141
+  },
+  "mixed_speech_transcript_check": {
+    "status": "passed",
+    "normalization_note": "Compare number spellings and the equivalent currency range $2,000 or $3,000 semantically; the raw transcript is preserved unchanged.",
+    "raw_transcript_retained": true
+  },
+  "full_player_checks": 8,
+  "preview_player_checks": 4,
+  "timing_guideline": "adopted after local validation; concrete pause lengths remain editorial choices per film",
+  "guideline_files": [
+    "/Users/yqin/.codex/AGENTS.md",
+    "/Users/yqin/repo/playground/lucas-academy-media/AGENTS.md",
+    "/Users/yqin/repo/playground/lucas-academy-media/docs/PRODUCTION-CHECKLIST.md",
+    "/Users/yqin/repo/playground/lucas-academy-media/README.md"
+  ],
+  "online": {
+    "video_id": "LOCAL_VIDEO_ID",
+    "current_audio_version": "natural punctuation pauses v06",
+    "current_visibility": "unlisted",
+    "upload_status": "complete",
+    "watch_url": "LOCAL_UNLISTED_WATCH_URL",
+    "english_audio_status": "Published",
+    "english_manual_subtitles_status": "Published",
+    "preview_played": true
+  },
+  "archive": "/Users/yqin/repo/playground/lucas-academy-video-data/why-build-together-20261122/english-pause-alignment-v06",
+  "files": [
+    {
+      "file": "/Users/yqin/repo/playground/lucas-academy-video-data/why-build-together-20261122/english-pause-alignment-v06/delivery/with-ai.english-pause-preview-v06.mp4",
+      "bytes": 98433272,
+      "sha256": "affea03e260a09c46f7dedbb57fa25b25180cd436d68172edd0c2e8ab0592587"
+    },
+    {
+      "file": "/Users/yqin/repo/playground/lucas-academy-video-data/why-build-together-20261122/english-pause-alignment-v06/delivery/why-build-together.en-pauses-v06.mp4",
+      "bytes": 345782875,
+      "sha256": "779c33e2cdd78c5223dc058eb0dfef3e83ccf85ed042f293ca91ef376ffdb436"
+    },
+    {
+      "file": "/Users/yqin/repo/playground/lucas-academy-video-data/why-build-together-20261122/english-pause-alignment-v06/delivery/why-build-together.en-pauses-v06.wav",
+      "bytes": 77433644,
+      "sha256": "b840cd726ff5204fcb996bbda971cd3f6d6f9c25191513eb6b09366a791c4e6a"
+    },
+    {
+      "file": "/Users/yqin/repo/playground/lucas-academy-video-data/why-build-together-20261122/english-pause-alignment-v06/delivery/why-build-together.en-pauses-v06.srt",
+      "bytes": 4353,
+      "sha256": "cb8330d5927301bbd9625c3225f300b4ef3f02bdf89b7fef16ee9eb943b795a0"
+    }
+  ],
+  "reproduce": {
+    "build": ".venv-align/bin/python scripts/why-build-together-pause-en/build.py",
+    "verify": ".venv-align/bin/python scripts/why-build-together-pause-en/verify.py",
+    "asr": ".venv-align/bin/python scripts/why-build-together-pause-en/inspect_align.py transcribe-mix",
+    "full_player": "node scripts/why-build-together-pause-en/verify-player.cjs",
+    "preview_encoding": {
+      "video": "libx264, preset fast, crf 19, threads 4, yuv420p",
+      "audio": "intro-en-mix.wav, AAC 192k",
+      "duration": 119.5,
+      "source_picture": "lossless-copy full local v06 preview",
+      "captions": "28 intro cues; mov_text and separate VTT; English default"
+    }
+  },
+  "owner_approved_upload": true,
+  "upload_receipt": "/Users/yqin/repo/playground/lucas-academy-video-data/why-build-together-20261122/english-pause-alignment-v06/delivery/upload-receipt.json"
+}

@@ -1,0 +1,114 @@
+{
+  "title": "孩子做项目，我们真正看重什么？",
+  "language": "zh",
+  "rows": [
+    {
+      "id": "n001",
+      "kind": "opening",
+      "text": "穿越到两千年前，你有一个时空袋，能把今天的食物送过去。喂饱五千个人，要花多少钱？",
+      "spoken_text": "穿越到两千年前，你有一个时空袋，能把今天的食物送过去。喂饱五千个人，要花多少钱？",
+      "voice": "louise/zh"
+    },
+    {
+      "id": "n002",
+      "kind": "opening",
+      "text": "做个粗略假设：一顿简单的饭，食材两三千美元。这笔钱，今天不少家庭都能承担。放到今天，喂饱五千人，还算神迹吗？",
+      "spoken_text": "做个粗略假设：一顿简单的饭，食材两三千美元。这笔钱，今天不少家庭都能承担。放到今天，喂饱五千人，还算神迹吗？",
+      "voice": "louise/zh"
+    },
+    {
+      "id": "n003",
+      "kind": "needs",
+      "text": "物质越来越丰富，孩子最需要的，又是什么？",
+      "spoken_text": "物质越来越丰富，孩子最需要的，又是什么？",
+      "voice": "louise/zh"
+    },
+    {
+      "id": "n004",
+      "kind": "needs",
+      "text": "对我们身边不少美国华人孩子来说，吃穿和基本生活已经有了保障。爱、归属和认可，成了更牵动他们的需要。",
+      "spoken_text": "对我们身边不少美国华人孩子来说，吃穿和基本生活已经有了保障。爱、归属和认可，成了更牵动他们的需要。",
+      "voice": "louise/zh"
+    },
+    {
+      "id": "n005",
+      "kind": "needs",
+      "text": "在学校被接纳，在 Instagram 有人点赞，在游戏里有人组队；",
+      "spoken_text": "在学校被接纳，在 Instagram 有人点赞，在游戏里有人组队；",
+      "voice": "louise/zh"
+    },
+    {
+      "id": "n006",
+      "kind": "needs",
+      "text": "竞赛拿奖、滑雪滑得好、网球打得好、大提琴拉得好，甚至在游戏里获得一件稀有装备，都可能在回答同一个问题：我值得被看见吗？",
+      "spoken_text": "竞赛拿奖、滑雪滑得好、网球打得好、大提琴拉得好，甚至在游戏里获得一件稀有装备，都可能在回答同一个问题：我值得被看见吗？",
+      "voice": "louise/zh"
+    },
+    {
+      "id": "n007",
+      "kind": "content",
+      "text": "Lucas Academy 的项目包括中英文、艺术和网络项目共建。今天，我们聊聊网络项目。",
+      "spoken_text": "Lucas Academy 的项目包括中英文、艺术和网络项目共建。今天，我们聊聊网络项目。",
+      "voice": "louise/zh"
+    },
+    {
+      "id": "n008",
+      "kind": "content",
+      "text": "游戏、图片、短视频，要多少有多少。但这些内容，能给孩子带来什么？",
+      "spoken_text": "游戏、图片、短视频，要多少有多少。但这些内容，能给孩子带来什么？",
+      "voice": "louise/zh"
+    },
+    {
+      "id": "n009",
+      "kind": "content",
+      "text": "有些内容像工业化的零食，量大管饱，吃饱却不等于吃好。多媒体和食物一样，不是越多越好。",
+      "spoken_text": "有些内容像工业化的零食，量大管饱，吃饱却不等于吃好。多媒体和食物一样，不是越多越好。",
+      "voice": "louise/zh"
+    },
+    {
+      "id": "n010",
+      "kind": "building",
+      "text": "借助 AI，给作品做出漂亮的外表，越来越容易。但孩子在里面，留下了多少自己的想法？",
+      "spoken_text": "借助 AI，给作品做出漂亮的外表，越来越容易。但孩子在里面，留下了多少自己的想法？",
+      "voice": "louise/zh"
+    },
+    {
+      "id": "n011",
+      "kind": "building",
+      "text": "我们的想法是：从孩子的兴趣出发，一点一点把作品做出来，在选择和修改中，练习判断力、对作品的责任感，还有带领与合作的能力。",
+      "spoken_text": "我们的想法是：从孩子的兴趣出发，一点一点把作品做出来，在选择和修改中，练习判断力、对作品的责任感，还有带领与合作的能力。",
+      "voice": "louise/zh"
+    },
+    {
+      "id": "n012",
+      "kind": "insert_intro",
+      "text": "我们来看一下已有的项目展示。",
+      "spoken_text": "我们来看一下已有的项目展示。",
+      "voice": "louise/zh"
+    },
+    {
+      "id": "n013",
+      "kind": "closing",
+      "text": "兴趣只是开始，发布作品、参加竞赛，也不是终点。我们更看重孩子在这个过程中，学会怎样带领、怎样负责、怎样合作。",
+      "spoken_text": "兴趣只是开始，发布作品、参加竞赛，也不是终点。我们更看重孩子在这个过程中，学会怎样带领、怎样负责、怎样合作。",
+      "voice": "louise/zh"
+    },
+    {
+      "id": "n014",
+      "kind": "closing",
+      "text": "我们也希望成为他们的同伴，从共同的兴趣出发，一起探索人生的意义。",
+      "spoken_text": "我们也希望成为他们的同伴，从共同的兴趣出发，一起探索人生的意义。",
+      "voice": "louise/zh"
+    },
+    {
+      "id": "n015",
+      "kind": "closing",
+      "text": "从你和孩子的一个小兴趣开始，你们想一起创造什么，给别人带来一点帮助或快乐？",
+      "spoken_text": "从你和孩子的一个小兴趣开始，你们想一起创造什么，给别人带来一点帮助或快乐？",
+      "voice": "louise/zh"
+    }
+  ],
+  "approved_script_sha256": "eb7ec3abde9a383799ac02f626186d6a0cdc2b8c0bcd9513a85bd91144383522",
+  "embedded_movie": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/delivery/curiosity-builds.en.no-voice.mp4",
+  "embedded_subtitles": "/Users/yqin/repo/playground/lucas-academy-video-data/curiosity-builds-20261118/v10/delivery/curiosity-builds.en.no-voice.zh-CN.srt"
+}

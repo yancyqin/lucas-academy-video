@@ -162,7 +162,13 @@ checks it against this standard:
 
 ## Narration voices
 
-**Replaced for new films on 2026-10-24** by [SCRIPT-AND-VOICE.md](./SCRIPT-AND-VOICE.md): Yancy (`yancy/zh`),
+**Current production defaults (2026-11-23):** local Qwen3-TTS for Chinese and
+local CosyVoice for English, preserving each project's approved voice and recordings.
+Keep speech at its natural speed; align meaning and picture cues by selectively
+extending existing punctuation pauses and retiming captions and music ducking.
+Follow the [production checklist](docs/PRODUCTION-CHECKLIST.md).
+
+**Earlier convention (2026-10-24)** in [SCRIPT-AND-VOICE.md](./SCRIPT-AND-VOICE.md): Yancy (`yancy/zh`),
 in the first person, at a faster speed. The table below is kept for re-making the films that used it. The rule on
 numbers at the end of this section still holds.
 
