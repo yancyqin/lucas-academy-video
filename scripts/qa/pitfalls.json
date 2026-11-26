@@ -1,7 +1,8 @@
 {
  "_doc": "Words the voices have read wrong before (narration-retake-lessons, film notes). 'risky': a second Whisper model double-checks these in every film. 'avoid': the pre-voice lint (qa.py lint) flags them in the SPOKEN text. Add to this list whenever a new slip is found.",
  "zh": {
-  "risky": ["落", "刹", "量", "幺", "拐", "冗余", "积木", "拼好", "泰迪熊", "进位", "省掉", "解药", "减药", "照", "奖", "拦", "痫"],
+  "risky": ["落", "刹", "量", "幺", "拐", "冗余", "积木", "拼好", "泰迪熊", "进位", "省掉", "解药", "减药", "照", "奖", "拦", "痫", "角色"],
+  "listen": [{"text": "角色", "why": "记忆片 v08 约 17 秒：ASR 识别正确，句末的 色 仍被作者听出未读完整。核听末字、韵母和自然收尾。"}],
   "avoid": [
    {"text": "〇", "why": "声音读不出 〇（「二〇二六年」被听成「这课 26 年」），朗读稿写 零"},
    {"pattern": "[0-9]", "why": "数字写成汉字（读法要明确，比如 二零二六年 / 两千零二十六）"},
@@ -9,7 +10,8 @@
   ]
  },
  "en": {
-  "risky": ["road", "wall", "skill", "brick", "route", "missed", "fooled", "screen", "tenths", "halving"],
+  "risky": ["road", "wall", "skill", "brick", "route", "missed", "fooled", "screen", "tenths", "halving", "predict"],
+  "listen": [{"text": "predict", "why": "记忆片 v08 约 20 秒：作者指出 predict 及其后面的衔接不自然。即使转写正确，也要听完整句子的重音、尾辅音和连读。"}],
   "avoid": [
    {"pattern": "\\b(can't|can’t)\\b", "why": "can't 常被听成 can（意思反了），写 cannot"},
    {"pattern": "\\b(won't|won’t)\\b", "why": "won't 被听成 will，写 will not"},

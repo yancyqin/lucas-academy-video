@@ -7,6 +7,7 @@
     $PY scripts/qa/qa.py check FILM.mp4 --spec qa-spec.json [--audio en.m4a] [--out DIR]
     $PY scripts/qa/qa.py serve DIR                # the listening page; 通过 / 重配 are saved to DIR/decisions.json
     $PY scripts/qa/qa.py decide DIR --from pasted.json   # the same, from the page's 复制 button (page opened as a file)
+    $PY scripts/qa/qa.py final-review DIR --reviewer owner --evidence 'Owner approved this exact version'
     $PY scripts/qa/qa.py gate FILM.mp4 [--audio en.m4a]  # exit 0 only when these exact files passed, every 拿不准 decided
     $PY scripts/qa/qa.py upload ~/Desktop/<片名>-上传   # the upload folder: chapters first, tags, covers, SRTs, gates
 
@@ -31,6 +32,28 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from common import FAIL, LABEL, OUT, PASS, RANK, UNSURE, decode_audio, sha256  # noqa: E402
 import decisions as store  # noqa: E402
 import spec as specmod  # noqa: E402
+
+POLICY_REVISION = "2026-11-26-final-listening"
+
+
+def listening_review(folder: Path, report: dict) -> dict | None:
+    path = folder / "final-listening.json"
+    if not path.exists():
+        return None
+    review = json.loads(path.read_text(encoding="utf-8"))
+    keys = ("sha256", "audio_sha256", "spec_sha256", "input_sha256")
+    if review.get("policy_revision") != POLICY_REVISION or any(review.get(k) != report.get(k) for k in keys):
+        return None
+    if review.get("reviewer") not in ("owner", "human_operator") or not review.get("evidence", "").strip():
+        return None
+    return review
+
+
+def spec_inputs(spec: dict) -> dict:
+    paths = [Path(c["path"]).resolve() for c in spec.get("captions", [])]
+    if spec.get("voice_audio"):
+        paths.append(Path(spec["voice_audio"]).resolve())
+    return {str(p): sha256(p) if p.is_file() else None for p in paths}
 
 
 def out_dir_for(video: Path, spec: dict | None, given: str | None, audio: Path | None = None) -> Path:
@@ -70,7 +93,7 @@ def cmd_check(args) -> int:
     sections["format"] = info
     items += found
     if audio:
-        info, found = fmt.audio_file(audio, sections["format"].get("duration"))
+        info, found = fmt.audio_file(audio, sections["format"].get("duration"), (spec.get("format") or {}).get("audio_channels", 2))
         sections["audio_file"] = info
         items += found
     info, found = fmt.captions(spec, sections["format"].get("duration"))
@@ -133,7 +156,10 @@ def cmd_check(args) -> int:
     seen = set()
     items = [i for i in items if not (i["key"] in seen or seen.add(i["key"]))]
     items.sort(key=lambda i: (-RANK[i["verdict"]], i.get("t0", -1)))
-    report = {"video": str(video), "audio": str(audio) if audio else None,
+    report = {"policy_revision": POLICY_REVISION, "listening_required": bool(spec["lines"]),
+              "input_sha256": spec_inputs(spec),
+              "spec_sha256": sha256(Path(args.spec).resolve()) if args.spec else None,
+              "video": str(video), "audio": str(audio) if audio else None,
               "sha256": digest, "audio_sha256": audio_digest, "spec": str(Path(args.spec).resolve()) if args.spec else None,
               "film": spec.get("film"), "created": dt.datetime.now().isoformat(timespec="seconds"),
               "items": items, "skipped": skipped, "ran": ran, "incomplete": incomplete, "sections": sections}
@@ -144,6 +170,9 @@ def cmd_check(args) -> int:
     page.build(out, report, video, audio)
     st = status(report, store.load(out))
     print(summary(report, st, out))
+    if report["listening_required"] and not listening_review(out, report):
+        print("最终音轨听感尚未确认：ASR、解码和采样保留不能证明尾字完整。用 final-review 记录实际人类复核或作者对此版本的确认。")
+        return 2 if st["fail"] or st["redo"] else 1
     return 0 if st["ok"] else (2 if st["fail"] or st["redo"] else 1)
 
 
@@ -198,9 +227,42 @@ def require(video, out: str | None = None, audio=None) -> None:
         why = ("这个音频文件没查过，或者查过之后文件变了" if audio else
                "只查过外挂音轨，片子自带的音轨还没查过" if others else "自动检测没跑过这个文件")
         raise SystemExit(f"{what}：{why}（视频 sha256 {digest[:12]}…）：先运行 {hint}")
+    if r.get("policy_revision") != POLICY_REVISION:
+        raise SystemExit("全局检查报告版本过旧：请按当前规则重新运行 qa.py check。")
+    if not r.get("spec") or not Path(r["spec"]).is_file() or sha256(Path(r["spec"])) != r.get("spec_sha256"):
+        raise SystemExit("检查规范已变化或缺失：请重新运行 qa.py check。")
+    if r.get("input_sha256") != spec_inputs(specmod.load(Path(r["spec"]))):
+        raise SystemExit("字幕或人声音轨已经变化：请重新运行 qa.py check。")
     st = status(r, store.load(d))
     if not st["ok"]:
         raise SystemExit(summary(r, st, d) + "\n自动检测没通过，不能打包或发送。")
+    if r.get("listening_required") and not listening_review(d, r):
+        raise SystemExit("此版本的最终音轨尚未通过人类听感复核：先记录 final-review，再打包或上传。")
+
+
+def cmd_final_review(args) -> int:
+    folder = Path(args.dir).resolve()
+    report = json.loads((folder / "report.json").read_text(encoding="utf-8"))
+    if not args.evidence.strip():
+        raise SystemExit("必须记录真实复核记录，或作者针对该版本的确认原话；不能把 ASR 当作耳听。")
+    if report.get("policy_revision") != POLICY_REVISION:
+        raise SystemExit("先按当前规范重跑 qa.py check。")
+    if sha256(Path(report["video"])) != report["sha256"] or (report.get("audio") and sha256(Path(report["audio"])) != report["audio_sha256"]):
+        raise SystemExit("媒体已变化：先重跑 qa.py check。")
+    if sha256(Path(report["spec"])) != report.get("spec_sha256") or spec_inputs(specmod.load(Path(report["spec"]))) != report.get("input_sha256"):
+        raise SystemExit("规范、字幕或人声音轨已变化：先重跑 qa.py check。")
+    review = {k: report.get(k) for k in ("sha256", "audio_sha256", "spec_sha256", "input_sha256")}
+    review.update(policy_revision=POLICY_REVISION, reviewer=args.reviewer, evidence=args.evidence.strip(),
+                  scope="full_film_final_audio", at=dt.datetime.now().isoformat(timespec="seconds"))
+    (folder / "final-listening.json").write_text(json.dumps(review, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    if args.approve_unsure:
+        for finding in report["items"]:
+            if finding["verdict"] == UNSURE:
+                store.record(folder, finding["key"], "pass", args.evidence)
+    st = status(report, store.load(folder))
+    print(summary(report, st, folder))
+    print("已记录最终版本的真实复核依据；不通过项不会因此被放行。")
+    return 0 if st["ok"] else (2 if st["fail"] or st["redo"] else 1)
 
 
 def cmd_gate(args) -> int:
@@ -209,7 +271,7 @@ def cmd_gate(args) -> int:
     except SystemExit as e:
         print(e)
         return 1
-    print(f"{Path(args.video).name}" + (f" + {Path(args.audio).name}" if args.audio else "") + "：自动检测通过。")
+    print(f"{Path(args.video).name}" + (f" + {Path(args.audio).name}" if args.audio else "") + "：全局检查通过。")
     return 0
 
 
@@ -307,6 +369,12 @@ def main() -> int:
     d.add_argument("--note")
     d.add_argument("--from", dest="file", help="the JSON copied from the listening page")
     d.set_defaults(fn=cmd_decide)
+    f = sub.add_parser("final-review", help="record real human final-audio review or explicit owner approval")
+    f.add_argument("dir")
+    f.add_argument("--reviewer", required=True, choices=["owner", "human_operator"])
+    f.add_argument("--evidence", required=True, help="actual review record or the owner's exact approval for this version")
+    f.add_argument("--approve-unsure", action="store_true", help="only after the human explicitly accepted the full version; never clears failures")
+    f.set_defaults(fn=cmd_final_review)
     s = sub.add_parser("spec")
     s.add_argument("adapter", choices=["zhongying", "srt"])
     s.add_argument("source", nargs="+", help="timeline.json, or SRT files as path:lang")

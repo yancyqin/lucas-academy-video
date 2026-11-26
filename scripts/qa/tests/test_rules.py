@@ -73,6 +73,8 @@ SOUND_CASES = [
     ("Christina written Cristina", "en", "Then Christina sang.", "Then Cristina sang.", None),
     ("十 written 时 (same tone)", "zh", "一共有十个人。", "一共有时个人。", None),
     ("136 written out", "en", "Psalm 136 is a song.", "Psalm one hundred and thirty six is a song.", None),
+    ("角色 still needs listening", "zh", "记忆扮演了什么角色。", "记忆扮演了什么角色。", ("narration.articulation", UNSURE)),
+    ("predict still needs listening", "en", "We predict what comes next.", "We predict what comes next.", ("narration.articulation", UNSURE)),
 ]
 
 

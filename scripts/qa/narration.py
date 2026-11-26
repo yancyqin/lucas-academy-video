@@ -458,6 +458,9 @@ def check(spec: dict, played: np.ndarray, voice: np.ndarray | None, listener: Li
                 add(FAIL, "narration.repeat", "有词说了两遍", "、".join(reps) + f"（逐字听写：{hv['text']}）")
         if line.get("question"):
             add(UNSURE, "narration.tone", "向观众提问的一句：语气要好奇，不是批评")
+        for rule in PITFALLS[lang].get("listen", []):
+            if rule["text"].lower() in line["text"].lower():
+                add(UNSURE, "narration.articulation", f"「{rule['text']}」须核听完整字音及衔接", rule["why"])
         # The voice alone (when the film keeps it): clicks and level. Needs exact speech times, not caption times.
         if voice is not None and words:
             spans = [(lo + w["s"], lo + w["e"]) for w in words]
