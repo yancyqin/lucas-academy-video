@@ -82,6 +82,9 @@ class MusicTests(unittest.TestCase):
         inverted = self.source * (.7 - self.gain)
         self.assertIn('mix.ducking_gap', self.codes(music=inverted))
 
+    def test_correct_duck_shape_with_music_too_loud_still_fails(self):
+        self.assertIn('mix.music_level', self.codes(music=self.source * self.gain * 3))
+
     def test_unauthorized_music_hole_fails(self):
         music = self.source * self.gain
         music[(self.t > 4.2) & (self.t < 5.7)] = 0

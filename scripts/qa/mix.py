@@ -146,6 +146,11 @@ def ducking(played: np.ndarray, spec: dict) -> tuple[dict, list]:
     music_sec = np.sqrt(np.mean(mr[:size].reshape(-1, block) ** 2, axis=1))
     speaking = np.mean(active[:size].reshape(-1, block), axis=1) >= .3
     margin = dbs(voice_sec) - dbs(music_sec)
+    median_margin = float(np.median(margin[speaking])) if speaking.any() else None
+    if median_margin is not None and median_margin < 17:
+        found.append(item('mix', FAIL, 'mix.music_level', '人声下的背景音乐整体过响',
+            f'说话时间窗的典型人声/音乐差只有 {median_margin:.1f} dB；目标约 20 dB，允许录音动态波动。',
+            key='mix.music_level'))
     masked = np.flatnonzero(speaking & (margin < 6))
     if len(masked):
         found.append(item('mix', FAIL, 'mix.music_masking', '配乐可能盖住人声',
@@ -157,5 +162,6 @@ def ducking(played: np.ndarray, spec: dict) -> tuple[dict, list]:
             'music_analysis_route_gain': float(music_route),
             'gaps': len(rows), 'rows': rows,
             'unmeasurable_source_rests': unavailable,
+            'median_voice_music_margin_db': round(median_margin, 2) if median_margin is not None else None,
             'median_rise_db': round(float(np.median([r['rise_db'] for r in rows])), 2) if rows else None,
             'minimum_voice_music_margin_db': round(float(margin[speaking].min()), 2) if speaking.any() else None}, found
