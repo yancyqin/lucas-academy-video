@@ -64,16 +64,27 @@ def out_dir_for(video: Path, spec: dict | None, given: str | None, audio: Path |
     return OUT / (name if audio is None else f"{name}+{audio.stem}")
 
 
+def asr_only_finding(finding: dict) -> bool:
+    """Text hypotheses are not codec/timing failures; a human may adjudicate only these two ASR rules."""
+    hard = [p for p in finding.get("problems", []) if p["verdict"] == FAIL]
+    return finding.get("code") == "narration.line" and bool(hard) and all(
+        p["code"] in {"narration.text", "narration.extra_edge"} for p in hard)
+
+
 def status(report: dict, decisions: dict) -> dict:
     """A decision counts only while it still holds (decisions.holds: a line's approval is for one recording)."""
-    fails = [i for i in report["items"] if i["verdict"] == FAIL]
+    adjudicated = [i for i in report["items"] if i["verdict"] == FAIL and asr_only_finding(i)
+                   and decisions.get(i["key"], {}).get("review_scope") == "asr_only"
+                   and store.decision_for(i, decisions) == "pass"]
+    accepted = {i["key"] for i in adjudicated}
+    fails = [i for i in report["items"] if i["verdict"] == FAIL and i["key"] not in accepted]
     unsure = [i for i in report["items"] if i["verdict"] == UNSURE]
     said = {i["key"]: store.decision_for(i, decisions) for i in unsure}
     waiting = [i for i in unsure if said[i["key"]] is None]
     redo = [i for i in unsure if said[i["key"]] == "redo"]
     incomplete = report.get("incomplete", [])
     ok = not fails and not waiting and not redo and not incomplete
-    return {"ok": ok, "incomplete": len(incomplete), "fail": len(fails), "unsure": len(unsure), "waiting": len(waiting), "redo": len(redo),
+    return {"ok": ok, "incomplete": len(incomplete), "fail": len(fails), "asr_adjudicated": len(adjudicated), "unsure": len(unsure), "waiting": len(waiting), "redo": len(redo),
             "approved": len(unsure) - len(waiting) - len(redo)}
 
 
@@ -183,9 +194,11 @@ def summary(report: dict, st: dict, out: Path) -> str:
     decisions = store.load(out)
     for i in report["items"]:
         if i["verdict"] != PASS:
-            d = decisions.get(i["key"]) if i["verdict"] == UNSURE else None
+            d = decisions.get(i["key"])
             d = d if store.holds(i, d) else {}
             tag = LABEL[i["verdict"]] + {"pass": "·已通过", "redo": "·要重配"}.get(d.get("decision"), "")
+            if i["verdict"] == FAIL and asr_only_finding(i) and d.get("review_scope") == "asr_only" and d.get("decision") == "pass":
+                tag = "识别争议·人类确认"
             note = f"（备注：{d['note']}）" if d.get("note") else ""
             lines.append(f"  [{tag}] {i['title']}{note}" + (f" — {i['detail'][:90]}" if i["detail"] else ""))
     auto = [i for i in report["items"] if i["code"] == "narration.second_pass"]
@@ -259,6 +272,10 @@ def cmd_final_review(args) -> int:
         for finding in report["items"]:
             if finding["verdict"] == UNSURE:
                 store.record(folder, finding["key"], "pass", args.evidence)
+    if getattr(args, "accept_asr_only", False):
+        for finding in report["items"]:
+            if finding["verdict"] == FAIL and asr_only_finding(finding):
+                store.record(folder, finding["key"], "pass", args.evidence, review_scope="asr_only")
     st = status(report, store.load(folder))
     print(summary(report, st, folder))
     print("已记录最终版本的真实复核依据；不通过项不会因此被放行。")
@@ -374,6 +391,7 @@ def main() -> int:
     f.add_argument("--reviewer", required=True, choices=["owner", "human_operator"])
     f.add_argument("--evidence", required=True, help="actual review record or the owner's exact approval for this version")
     f.add_argument("--approve-unsure", action="store_true", help="only after the human explicitly accepted the full version; never clears failures")
+    f.add_argument("--accept-asr-only", action="store_true", help="record actual human adjudication of ASR text/spurious-tail hypotheses; never waives number, negation, timing, mix or picture failures")
     f.set_defaults(fn=cmd_final_review)
     s = sub.add_parser("spec")
     s.add_argument("adapter", choices=["zhongying", "srt"])

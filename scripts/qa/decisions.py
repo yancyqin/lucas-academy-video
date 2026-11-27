@@ -110,7 +110,7 @@ def decision_for(item: dict, decisions: dict) -> str | None:
 
 
 def record(folder: Path, key: str, decision: str | None, note: str = "", title: str = "",
-           seen: str | None = None) -> dict:
+           seen: str | None = None, review_scope: str | None = None) -> dict:
     """Save (or with decision None, withdraw) one decision. The take print comes from the folder's own report.json,
     never from the caller: the decision is tied to what the report says was checked. `seen` is the report_id the
     decider was looking at; KeyError when that is not the folder's current report, or when the report has no such
@@ -124,6 +124,10 @@ def record(folder: Path, key: str, decision: str | None, note: str = "", title: 
             raise ValueError(f"decision must be pass or redo, not {decision!r}")
         entry = {"decision": decision, "note": (note or "").strip(), "title": title or "",
                  "at": dt.datetime.now().isoformat(timespec="seconds")}
+        if review_scope is not None:
+            if review_scope != "asr_only" or not entry["note"]:
+                raise ValueError("ASR adjudication requires genuine human evidence")
+            entry["review_scope"] = review_scope
         report = folder / "report.json"
         if report.exists():
             current = json.loads(report.read_text(encoding="utf-8"))

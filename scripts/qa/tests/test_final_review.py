@@ -30,8 +30,8 @@ class FinalReviewTests(unittest.TestCase):
 
     def tearDown(self):self.temp.cleanup()
     def save(self):(self.folder/'report.json').write_text(json.dumps(self.report))
-    def approve(self,approve_unsure=False):
-        args=argparse.Namespace(dir=str(self.folder),reviewer='owner',evidence='Owner approved this exact version.',approve_unsure=approve_unsure)
+    def approve(self,approve_unsure=False,accept_asr_only=False):
+        args=argparse.Namespace(dir=str(self.folder),reviewer='owner',evidence='Owner approved this exact version.',approve_unsure=approve_unsure,accept_asr_only=accept_asr_only)
         with contextlib.redirect_stdout(io.StringIO()):return qa.cmd_final_review(args)
     def gate(self):qa.require(self.video,out=str(self.folder))
 
@@ -63,6 +63,20 @@ class FinalReviewTests(unittest.TestCase):
     def test_old_policy_report_is_rejected(self):
         self.report.pop('policy_revision');self.save()
         with self.assertRaises(SystemExit):self.gate()
+
+    def test_explicit_human_asr_adjudication_keeps_original_finding(self):
+        self.report['items']=[dict(verdict=FAIL,key='asr.words',code='narration.line',title='ASR spelling dispute',detail='',
+            problems=[dict(verdict=FAIL,code='narration.text')])];self.save()
+        self.assertEqual(self.approve(True),2)
+        self.assertEqual(self.approve(True,True),0);self.gate()
+        self.assertEqual(json.loads((self.folder/'report.json').read_text())['items'][0]['verdict'],FAIL)
+
+    def test_asr_adjudication_does_not_accept_numbers_or_media_failures(self):
+        for code in ['narration.number','narration.negation','picture.freeze','format.audio']:
+            self.report['items']=[dict(verdict=FAIL,key=code,code='narration.line',title='Hard failure',detail='',
+                problems=[dict(verdict=FAIL,code=code)])];self.save()
+            self.assertEqual(self.approve(True,True),2)
+            with self.assertRaises(SystemExit):self.gate()
 
     def test_extra_track_approval_is_not_main_track_approval(self):
         alt=self.folder/'zh.m4a';alt.write_bytes(b'Chinese track')

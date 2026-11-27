@@ -377,7 +377,10 @@ def check(spec: dict, played: np.ndarray, voice: np.ndarray | None, listener: Li
         if bad_num:
             add(FAIL, "narration.number", "数字听起来不对", "、".join(bad_num))
         n_want, n_got = sum(u["neg"] for u in want), sum(u["neg"] for u in got)
-        if n_want != n_got:
+        phonetic_matches = matched(ops)
+        missing_neg = [k for k, u in enumerate(want) if u["neg"] and k not in phonetic_matches]
+        added_neg = [k for k, u in enumerate(got) if u["neg"] and k not in set(phonetic_matches.values())]
+        if missing_neg or added_neg:
             add(FAIL, "narration.negation", "否定词数量不对（意思可能反了）", f"稿子 {n_want} 个，听到 {n_got} 个")
         # A repeated phrase in the script that Whisper wrote once (it merges repeats: 「胜于守夜的，等候天亮」×2).
         repeat_drop = [joiner(lang).join(u["c"] for u in want[a1:a2]) for op, a1, a2, b1, b2 in ops
@@ -456,6 +459,20 @@ def check(spec: dict, played: np.ndarray, voice: np.ndarray | None, listener: Li
                         reps.append(" ".join(u["c"] for u in gv[b1:b2]))
             if reps:
                 add(FAIL, "narration.repeat", "有词说了两遍", "、".join(reps) + f"（逐字听写：{hv['text']}）")
+        # A recognizer disagreement is a listening question, not proof of a wrong recording.
+        # Keep a hard failure unless the independent second transcription matches the entire line.
+        content_codes = {"narration.text", "narration.number", "narration.negation", "narration.extra_edge",
+                         "narration.extra", "narration.repeat"}
+        if any(p["verdict"] == FAIL and p["code"] in content_codes for p in probs):
+            h2 = listener.hear(clip, lang, prompt, which="second")
+            got2, _ = heard_units(merge_digits(h2["words"]), lang)
+            _, second_errors, _ = compare(want, got2, lang)
+            res["heard_second"] = h2["text"]
+            if second_errors == 0:
+                for problem in probs:
+                    if problem["verdict"] == FAIL and problem["code"] in content_codes:
+                        problem["verdict"] = UNSURE
+                        problem["detail"] += f"；两识别器结论不同，small 完整匹配文案，须实际核听：{h2['text']}"
         if line.get("question"):
             add(UNSURE, "narration.tone", "向观众提问的一句：语气要好奇，不是批评")
         for rule in PITFALLS[lang].get("listen", []):
