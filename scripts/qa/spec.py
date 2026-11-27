@@ -11,7 +11,9 @@ A film's pipeline writes one `qa-spec.json` next to its timeline (or an adapter 
      "caption": "…",                  # optional: the caption text, also accepted as a match
      "question": false}               # optional: a question put to the audience → its tone goes to Yancy
   ],
-  "voice_audio": "path/narration.wav",  # optional: the voices alone on the film's clock (clicks, levels)
+  "voice_audio": "path/narration.wav",  # required with music: true; voices on the film's clock
+  "music_source": "path/music-raw.wav", # un-ducked music, on the entire film's clock
+  "music_audio": "path/music-mixed.wav",# the actual added music stem, after fades and ducking
   "music": true,                      # is there a music bed that must duck under the voices?
   "loudness": {"lufs": -16, "tol": 0.5, "tp_max": -1.0},
   "format": {"width": 1920, "height": 1080, "fps": 30, "duration": 209.32, "tol": 0.15},
@@ -31,8 +33,13 @@ A film's pipeline writes one `qa-spec.json` next to its timeline (or an adapter 
   "risky": ["落", "刹"]               # extra words/characters this film should double-check
 }
 
-Paths are relative to the spec file. Only `lines` matters for the narration check; everything else is optional and
-the checks it feeds are skipped (and listed as skipped) when it is missing.
+Narrated films with music also supply `music_source` (the un-ducked full-timeline
+track) and `music_audio` (the exact music stem added to `voice_audio`). Music covers
+the entire film by default. Any `music_exceptions` entry needs start, end, reason
+and actual owner_evidence; never invent an exception for a test or story.
+
+Paths are relative to the spec file. Required evidence depends on kind and music;
+missing required music stems fail rather than silently skipping the check.
 """
 from __future__ import annotations
 
@@ -48,7 +55,7 @@ DEFAULT_LOUDNESS = {"narrated": {"lufs": -16.0, "tol": 0.5, "tp_max": -1.0},
 def load(path: Path) -> dict:
     spec = json.loads(Path(path).read_text(encoding="utf-8"))
     base = Path(path).resolve().parent
-    for key in ("voice_audio",):
+    for key in ("voice_audio", "music_audio", "music_source"):
         if spec.get(key):
             spec[key] = str((base / spec[key]).resolve())
     for c in spec.get("captions", []):

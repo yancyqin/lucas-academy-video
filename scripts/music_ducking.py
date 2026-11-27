@@ -31,6 +31,55 @@ QUIET_FADE = (0.6, 0.8)       # into and out of a stretch with no music at all
 ENV_RATE = 1000
 
 
+def speech_cues(voice, sample_rate: int) -> list[dict]:
+    """Locate actual voice activity, including pauses inside a subtitle/paragraph.
+
+    This controls music only; never cuts, gates or alters narration samples.
+    """
+    import numpy as np
+    x = np.asarray(voice)
+    if x.ndim == 2:
+        x = x.mean(axis=1)
+    hop = max(1, round(sample_rate * .02))
+    n = len(x) // hop
+    if not n:
+        return []
+    level = np.sqrt(np.mean(x[:n * hop].reshape(n, hop).astype(np.float64) ** 2, axis=1))
+    active = np.flatnonzero(level > 10 ** (-48 / 20))
+    spans = []
+    for k in active:
+        a, b = k * hop / sample_rate, (k + 1) * hop / sample_rate
+        if spans and a - spans[-1][1] < .12:
+            spans[-1][1] = b
+        else:
+            spans.append([a, b])
+    return [{"speech": {"start": a, "end": b}} for a, b in spans]
+
+
+def limit_under_voice(music, voice, sample_rate: int, below_db: float = -20):
+    """Keep piano peaks behind quiet speech without changing the voice at all."""
+    import numpy as np
+    from scipy.ndimage import uniform_filter1d, minimum_filter1d, gaussian_filter1d
+    dry = np.asarray(voice)
+    if dry.ndim == 2:
+        dry = dry.mean(axis=1)
+    bg = music.mean(axis=1) if music.ndim == 2 else music
+    hop = max(1, round(sample_rate * .02))
+    n = min(len(dry), len(bg)) // hop
+    if n == 0:
+        return music.copy()
+    vr = np.sqrt(np.mean(dry[:n * hop].reshape(n, hop).astype(np.float64) ** 2, axis=1))
+    mr = np.sqrt(np.mean(bg[:n * hop].reshape(n, hop).astype(np.float64) ** 2, axis=1))
+    vlevel = np.sqrt(uniform_filter1d(vr ** 2, 25))
+    mlevel = np.sqrt(uniform_filter1d(mr ** 2, 25))
+    cap = np.ones(n)
+    active = vr > 10 ** (-48 / 20)
+    cap[active] = np.minimum(1, vlevel[active] * 10 ** (below_db / 20) / np.maximum(mlevel[active], 1e-9))
+    cap = gaussian_filter1d(minimum_filter1d(cap, 21), 4)
+    gain = np.interp(np.arange(len(music)) / hop, np.arange(n), cap).astype(np.float32)
+    return music * (gain[:, None] if music.ndim == 2 else gain)
+
+
 def _smooth(x: float) -> float:
     x = min(1.0, max(0.0, x))
     return x * x * (3 - 2 * x)

@@ -20,3 +20,9 @@
 - Keep original recordings, approved voice performances, model weights and personal voice profiles out of Git.
 - Keep final masters, reusable source media and shared museum assets outside Git. Preserve cross-project dependencies before removing intermediates. Record exact cleanup candidates and verify their hashes before deletion.
 - Do not include unrelated work from another film or the shared museum UI in a production archive PR. Keep the museum's source and deployment in its own repository.
+
+## Background music — owner confirmed 2026-11-26
+
+- Narrated films with music use continuous background music by default. Do not invent music-free tests, story sections or reflection pauses. Exceptions need the owner's actual instruction.
+- Duck from actual voice activity in each language, including within paragraph-length subtitle cues: about -20 dB under speech, rising toward -9 dB in gaps of 0.8 seconds or more; 0.35-second pre-attack, 0.8-second release.
+- Shared QA requires full-timeline voice, un-ducked music source and actual music stem; verifies the encoded mix, full coverage and every measurable duck/recovery gap. Average loudness or a good median cannot excuse missing music or bad individual gaps.

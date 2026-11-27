@@ -33,7 +33,7 @@ from common import FAIL, LABEL, OUT, PASS, RANK, UNSURE, decode_audio, sha256  #
 import decisions as store  # noqa: E402
 import spec as specmod  # noqa: E402
 
-POLICY_REVISION = "2026-11-26-final-listening"
+POLICY_REVISION = "2026-11-26-music-ducking"
 
 
 def listening_review(folder: Path, report: dict) -> dict | None:
@@ -51,8 +51,9 @@ def listening_review(folder: Path, report: dict) -> dict | None:
 
 def spec_inputs(spec: dict) -> dict:
     paths = [Path(c["path"]).resolve() for c in spec.get("captions", [])]
-    if spec.get("voice_audio"):
-        paths.append(Path(spec["voice_audio"]).resolve())
+    for key in ("voice_audio", "music_audio", "music_source"):
+        if spec.get(key):
+            paths.append(Path(spec[key]).resolve())
     return {str(p): sha256(p) if p.is_file() else None for p in paths}
 
 

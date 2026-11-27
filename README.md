@@ -198,12 +198,21 @@ spoken respelling. Years are read digit by digit (二零二六年, 一九九一�
 
 ## Music under narration
 
+Owner clarification (2026-11-26): keep the music throughout the film, including tests,
+stories and reflection pauses, unless the owner explicitly requests an exception.
+Use `music_ducking.speech_cues(voice, sample_rate)` for actual voice activity, including
+pauses inside paragraphs; `limit_under_voice` keeps piano peaks behind quiet speech.
+The global check requires `voice_audio`, un-ducked full-timeline `music_source` and
+the actual added `music_audio`. It verifies the final encoded mix against those stems,
+music coverage and each measurable pause's gain recovery. An exception needs its
+actual owner evidence in `music_exceptions`; a good median cannot hide a bad section.
+
 The owner's rule (2026-10-16): the music **audibly makes room whenever a voice comes in**, and comes back
-as soon as it stops: in every gap between lines, not only in long pauses. `scripts/music_ducking.py` holds the
+as soon as it stops: in natural voice pauses, including those within a paragraph. `scripts/music_ducking.py` holds the
 defaults. The music sits 20 dB under the voice while someone speaks (the narration, or a real recording in the
 film). In any gap of 0.8 s or more it rises to 9 dB under the voice. It steps back 0.35 s before a voice starts
-and returns over 0.8 s after it ends. Shorter gaps stay down, so the music does not pump between phrases. A
-listening moment can ask for no music at all (`quiet`). Timeline builders swap it in for whole-person-01's
+and returns over 0.8 s after it ends. Shorter gaps stay down, so the music does not pump between phrases. Only an explicit owner request can make a
+listening moment music-free (`quiet`). Timeline builders swap it in for whole-person-01's
 envelope with `wp.music_envelope = music_ducking.envelope`. That older envelope raised the music only in pauses
 of 2.5 s or more, so through a stretch of narration it sat at one flat level and never seemed to give way.
 Films delivered before this rule (Fun Informatics 1 and 2, the whole-person films) keep their recorded mixes.
