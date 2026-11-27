@@ -219,6 +219,11 @@ the walkie-talkie listening tests.
 
 ## Automatic checks (自动检测)
 
+**2026-11-26 owner confirmation:** this is mandatory for every video revision before delivery, packaging and
+upload. Film-specific checks supplement it. The final spoken audio also needs real human listening review or
+the owner's explicit approval of that exact version; ASR agreement is not listening. See the
+[shared checklist](docs/PRODUCTION-CHECKLIST.md) and [memory-film lessons](docs/qa-lessons/memory-audio-2026-11-26.md).
+
 The owner's rule (2026-11-19): **every video passes the automatic checks before Yancy sees it**. That covers
 the delivered film, a preview, a part of a film sent for checking, and a short. Yancy used to catch these by
 hand:
@@ -240,6 +245,7 @@ $PY scripts/qa/qa.py lint out/qa/<film>/qa-spec.json      # before voicing
 $PY scripts/qa/qa.py check FILM.mp4 --spec out/qa/<film>/qa-spec.json
 $PY scripts/qa/qa.py check FILM.mp4 --spec … --audio FILM.zh.m4a   # an extra-language track: its own check
 $PY scripts/qa/qa.py serve out/qa/<film>                   # the listening page for Yancy
+$PY scripts/qa/qa.py final-review out/qa/<film> --reviewer owner --evidence 'Owner approved this version on DATE'
 $PY scripts/qa/qa.py gate FILM.mp4                         # 0 only if this exact file passed
 $PY scripts/qa/qa.py gate FILM.mp4 --audio FILM.zh.m4a     # 0 only if this exact m4a passed, with this film
 $PY scripts/qa/qa.py upload ~/Desktop/<片名>-上传            # the final package: chapters first, tags, covers

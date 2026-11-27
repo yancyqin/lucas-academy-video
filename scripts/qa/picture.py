@@ -256,6 +256,12 @@ def check(video: Path, spec: dict, out: Path | None = None) -> tuple[dict, list]
     t = lambda i: i / fps  # noqa: E731
 
     def add(verdict, code, title, detail, i0, i1, extra_key=""):
+        if code in {"picture.jump", "picture.shake", "picture.start_wobble", "picture.drift"} and any(
+            shot.get("camera_motion") == "review" and shot["start"] <= t(i0) < shot["end"]
+            for shot in spec.get("shots", [])
+        ):
+            verdict = UNSURE
+            detail += "；前景主体会影响全图位移估计，须对照背景实际复核，不能单凭相位相关认定为相机抖动"
         findings.append(item("picture", verdict, code, title, detail, t0=t(i0), t1=t(i1),
                              key=short_hash("picture", code, round(t(i0), 1), extra_key)))
 
@@ -344,6 +350,14 @@ def check(video: Path, spec: dict, out: Path | None = None) -> tuple[dict, list]
         dd = d[a + 1:b].copy()            # shifts inside the segment (the first one crosses its edge)
         row = {"t": [round(t(a), 2), round(t(b), 2)], "frames": b - a}
         if len(dd) < 4:
+            seg_info.append(row)
+            continue
+        camera = [shot for shot in spec.get("shots", [])
+                  if shot["start"] <= a / fps and shot["end"] >= b / fps]
+        if camera and all(shot.get("camera_motion", True) is False for shot in camera):
+            # Drawing strokes, moving hands and appearing icons are not camera translations.
+            # Black/glitch/flash, declared static regions and footage-freeze checks still run.
+            row["camera_motion"] = "not_applicable_by_shot_intent"
             seg_info.append(row)
             continue
         traj = np.vstack([[0, 0], np.cumsum(dd, axis=0)])

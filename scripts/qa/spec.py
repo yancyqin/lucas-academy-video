@@ -19,6 +19,9 @@ A film's pipeline writes one `qa-spec.json` next to its timeline (or an adapter 
   "shots": [{"id": "G1", "start": 20.86, "end": 31.5, "kind": "footage", "static": false}],
                                       # kind: footage (real/Muse/MiniMax video: must move), painting, still, title,
                                       # animation; static: true = nothing may move at all
+                                      # camera_motion: false only when a global camera model does not apply
+                                      # (drawn strokes/icons); "review" for foreground-dominated camera estimates.
+                                      # Neither disables black/glitch/static/frozen-footage checks.
   "transitions": [[31.5, 33.0]],      # dissolves/fades (picture checks skip them)
   "planned_black": [[0, 0.5]],        # black that is meant to be there
   "prompt": {"zh": "孟浩然", "en": "Haoran"},   # names to bias Whisper's spelling (use sparingly)

@@ -41,8 +41,9 @@ def video_format(path: Path, spec: dict) -> tuple[dict, list]:
     if a is None:
         bad("format.no_audio", "没有音轨")
     else:
-        if a["codec_name"] != "aac" or int(a.get("sample_rate", 0)) != 48000 or a.get("channels") != 2:
-            bad("format.audio", f"音频 {a['codec_name']} {a.get('sample_rate')} Hz {a.get('channels')} 声道，应为 aac 48000 Hz 立体声")
+        channels = want.get("audio_channels", 2)
+        if a["codec_name"] != "aac" or int(a.get("sample_rate", 0)) != 48000 or a.get("channels") != channels:
+            bad("format.audio", f"音频 {a['codec_name']} {a.get('sample_rate')} Hz {a.get('channels')} 声道，应为 aac 48000 Hz {channels} 声道")
         vd, ad = float(v.get("duration") or 0), float(a.get("duration") or 0)
         if vd and ad and abs(vd - ad) > 1 / want["fps"] + 0.05:
             bad("format.av_length", f"音视频长度差 {abs(vd - ad):.2f} 秒")
@@ -53,7 +54,7 @@ def video_format(path: Path, spec: dict) -> tuple[dict, list]:
     return info, found
 
 
-def audio_file(path: Path, video_duration: float | None) -> tuple[dict, list]:
+def audio_file(path: Path, video_duration: float | None, channels: int = 2) -> tuple[dict, list]:
     """An extra-language track delivered beside the film (`check --audio`): the same audio rules as the film's own
     track, and as long as the picture."""
     p = ffprobe(path)
@@ -64,9 +65,9 @@ def audio_file(path: Path, video_duration: float | None) -> tuple[dict, list]:
     info = {"file": name, "acodec": a["codec_name"], "channels": a.get("channels"), "sample_rate": a.get("sample_rate"),
             "duration": float(p["format"]["duration"])}
     found = []
-    if a["codec_name"] != "aac" or int(a.get("sample_rate", 0)) != 48000 or a.get("channels") != 2:
+    if a["codec_name"] != "aac" or int(a.get("sample_rate", 0)) != 48000 or a.get("channels") != channels:
         found.append(item("format", FAIL, "format.alt_audio",
-                          f"{name}：音频 {a['codec_name']} {a.get('sample_rate')} Hz {a.get('channels')} 声道，应为 aac 48000 Hz 立体声",
+                          f"{name}：音频 {a['codec_name']} {a.get('sample_rate')} Hz {a.get('channels')} 声道，应为 aac 48000 Hz {channels} 声道",
                           key="format.alt_audio"))
     if video_duration and abs(info["duration"] - video_duration) > 0.25:
         found.append(item("format", FAIL, "format.alt_length",
@@ -81,7 +82,7 @@ def width(s: str) -> float:
 def captions(spec: dict, duration: float | None) -> tuple[dict, list]:
     caps = spec.get("captions") or []
     found = []
-    if spec.get("kind") == "narrated" and caps:
+    if spec.get("kind") == "narrated":
         langs = {c["lang"] for c in caps}
         for need in ("zh", "en"):
             if need not in langs:
