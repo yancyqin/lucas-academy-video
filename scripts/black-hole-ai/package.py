@@ -133,7 +133,7 @@ def texts(tl: dict, report: dict) -> dict:
 
 def gate(qa_dir: Path | None) -> list[str]:
     """What the global gate says about the delivered film and the Chinese track (nothing is forced or recorded)."""
-    cands = [qa_dir] if qa_dir else [ROOT / "scripts/qa", *[p / "lucas-academy-video-global-qa-pr/scripts/qa" for p in ROOT.parents]]
+    cands = [qa_dir] if qa_dir else [ROOT / "scripts/qa"]
     qa = next((c for c in cands if c and (c / "qa.py").is_file() and "music_source" in (c / "spec.py").read_text()), None)
     if qa is None:
         return ["global QA (with music-ducking rules) not found: run qa.py check/gate by hand"]
@@ -157,6 +157,7 @@ def main() -> None:
     print(json.dumps(report, ensure_ascii=False, indent=1))
     if report["problems"] or any("exit 0" not in g for g in report["gate"]):
         print("\nNOT READY TO HAND OVER: see problems and gate above.")
+        raise SystemExit(1)
 
 
 if __name__ == "__main__":

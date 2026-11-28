@@ -77,3 +77,34 @@ Bottom chapter bar segmented exactly like the YouTube chapters (cube-film conven
 M4A (`aac_at`, not WAV), `black-hole-ai.en.srt`, `black-hole-ai.zh-Hans.srt`, upload text with chapters first
 (`scripts/youtube_text.py`). Mandatory: `scripts/qa/qa.py check` then `gate`, for the film and the Chinese track
 separately; `final-review` only with real listening or the owner's approval of the exact version.
+
+## Release review — 2026-11-27
+
+UI PR #142 merged as `77a76a5307a72f1ad9a5959823326bac86d2b00e`; the
+production site serves the upgraded Journey and the byte-exact R2 manifest.
+Global QA PR #69 merged as `5e9b8a40c5d6a0e0ec2d5345f3a1ed593be468a4`;
+this branch includes that current shared implementation.
+
+The owner selected YouTube **Unlisted**, retained both short shadow-only
+passages (film 183.400–184.000 and 204.900–206.267 s), and explicitly said
+that the English and Chinese final audio still need listening review.
+Only those two passages are declared intentional still views in the QA
+spec, with a static-region check above the chapter bar and the owner's
+actual wording. The intent is bound to the source take's SHA-256; a new take
+does not inherit it. All other fall frames retain footage-freeze checks.
+The original failed reports are retained outside Git with release evidence.
+
+Lensing changes image shape while the ship and view direction remain fixed,
+so the fall's global camera-motion estimate is retained as `review`.
+Full-resolution decoded cadence, source-frame continuity and the actual
+frames supplement the global checks. Neither ASR nor this picture review
+constitutes final-audio listening approval. No audio or film bytes were
+changed during this review.
+
+The repository's existing `findLastIndex` calls need ES2023 type definitions.
+The explicit TypeScript libraries now include ES2023 and the browser DOM;
+the ES2022 output target is unchanged.
+
+Production helpers now use this checkout's merged shared QA and mixer instead
+of silently finding a sibling feature checkout. `bh:package` returns a failing
+exit code while any gate or delivery requirement remains unmet.

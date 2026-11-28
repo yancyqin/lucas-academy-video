@@ -52,3 +52,33 @@ Commit and open PRs
 The film has not passed the global QA gate and has not had the owner's final
 listen; it is not to be uploaded until inception-space-ui's Journey upgrade
 is merged and deployed, because the end card names the Teleport Orb route.
+
+## Merge and upload follow-up — 2026-11-27 Pacific
+
+Source: Codex chat `01a220ed-f451-7f00-b59e-89c35688a77e`.
+
+```text
+PRs 没问题合并一下&#x20;
+R2应该需要的已经上传了。
+新做的黑洞影片也上传
+```
+
+Asked whether the film should go to YouTube, R2, or both, the owner chose:
+
+```text
+YouTube，设为 Unlisted（持链接可看）
+```
+
+Asked whether to retain the two shadow-only passages at about 3:03 and 3:25
+or change the camera and recapture the fall, the owner answered:
+
+```text
+保留，按有意的阴影视野记录并核验
+```
+
+Asked whether both final language tracks of the current v0.1 film had been
+listened to completely and approved, the owner answered:
+
+```text
+尚未完整试听，需要先复核
+```

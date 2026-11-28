@@ -85,19 +85,11 @@ voice = load_module("bh_voice", ROOT / "scripts/black-hole-ai/voice.py")   # the
 
 
 def _ducking():
-    """The owner's ducking rules (AGENTS.md "Background music", 2026-11-26). This branch's music_ducking.py predates
-    `speech_cues` (duck from actual voice activity) and `limit_under_voice`; the main checkout's working copy has
-    them, so it is loaded read-only from there when this branch's copy lacks them."""
+    """Use the repository's shared mixer, including the merged #69 helpers."""
     own = load_module("music_ducking", ROOT / "scripts/music_ducking.py")
     if hasattr(own, "speech_cues") and hasattr(own, "limit_under_voice"):
         return own, str(ROOT / "scripts/music_ducking.py")
-    for parent in ROOT.parents:
-        cand = parent / "scripts/music_ducking.py"
-        if cand.is_file() and cand.resolve() != (ROOT / "scripts/music_ducking.py").resolve():
-            main = load_module("music_ducking_main", cand)
-            if hasattr(main, "speech_cues") and hasattr(main, "limit_under_voice"):
-                return main, str(cand)
-    raise SystemExit("music_ducking.py with speech_cues/limit_under_voice not found")
+    raise SystemExit("Update this checkout from video main: shared music_ducking.py helpers are missing")
 
 
 ducking, DUCKING_FROM = _ducking()
@@ -159,6 +151,13 @@ D3_GAIN = 8            # d3-cost is drawn at most RGB (24, 5, 9): shown 8x brigh
 FALL_FROM = 5.5
 FALL = {"capture": 7.83, "ring": 27.33, "horizon": 79.9, "pull_in_end": 82.9, "fade": 92.63, "black": 93.37,
         "end": 93.4}
+# Owner reviewed the two shadow-only passages on 2026-11-27 and chose:
+# "保留，按有意的阴影视野记录并核验". These are intentional still views,
+# not dropped simulation frames. Bind this intent to the approved source:
+# replacing the take must not silently inherit the approval.
+SHADOW_TAKE_SHA256 = "1db47c4d651f7a8f805cc3fe0d272d103e7a08441b58ab906b0da908a4335712"
+SHADOW_FRAME_SPANS = ((1330, 1348), (1975, 2016))  # source frames, half-open
+SHADOW_OWNER_EVIDENCE = "2026-11-27: 保留，按有意的阴影视野记录并核验"
 ANCHOR = {             # line -> ("start" | "end", clip second): where its voiced span must start / end
     "bh03-01": ("start", 7.83),
     "bh03-02": ("start", 7.83 + 12.0),
@@ -834,7 +833,36 @@ def qa_specs(cues, rows, shots, marks, total, audio: Path) -> dict:
         else:
             row = {"id": s["id"], "start": round(a, 3), "end": round(b, 3), "kind": "title", "camera_motion": False,
                    "note": "graphic card"}
-        spec_shots.append(row)
+        if s.get("clip") == "f3-fall":
+            # Lensing deforms the background while the ship stays fixed. A
+            # rigid whole-image translation is an estimate requiring review.
+            row["camera_motion"] = "review"
+            source = PUB / "footage/f3-fall.mp4"
+            same_take = hashlib.sha256(source.read_bytes()).hexdigest() == SHADOW_TAKE_SHA256
+            windows = []
+            if same_take:
+                offset = s["startFrame"] - s["fromFrame"]
+                windows = [(max(a, (offset + x) / FPS), min(b, (offset + y) / FPS))
+                           for x, y in SHADOW_FRAME_SPANS]
+                windows = [(x, y) for x, y in windows if x < y]
+            cursor = a
+            for index, (start, end) in enumerate(windows, 1):
+                if cursor < start:
+                    spec_shots.append({**row, "id": f"{s['id']}-moving-{index}",
+                                       "start": round(cursor, 3), "end": round(start, 3)})
+                spec_shots.append({**row, "id": f"{s['id']}-shadow-{index}", "kind": "still",
+                                   "start": round(start, 3), "end": round(end, 3),
+                                   "static": [[0, 0, 1920, 990]],  # excludes the moving chapter playhead
+                                   "note": "Owner-approved stationary ship against the ray-traced shadow; "
+                                           "source simulation continues, no cut or frame retiming",
+                                   "source_sha256": SHADOW_TAKE_SHA256,
+                                   "owner_evidence": SHADOW_OWNER_EVIDENCE})
+                cursor = end
+            if cursor < b:
+                spec_shots.append({**row, "id": f"{s['id']}-moving-end",
+                                   "start": round(cursor, 3), "end": round(b, 3)})
+        else:
+            spec_shots.append(row)
         fade = s.get("fadeIn", 0)
         if fade and a > 0:
             transitions.append([round(a, 3), round(a + fade, 3)])
