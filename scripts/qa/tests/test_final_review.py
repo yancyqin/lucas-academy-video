@@ -51,6 +51,22 @@ class FinalReviewTests(unittest.TestCase):
         self.caption.write_text('approved captions');self.spec.write_text('{}')
         with self.assertRaises(SystemExit):self.gate()
 
+    def test_changed_music_stem_or_source_requires_recheck(self):
+        for key in ('music_audio', 'music_source'):
+            music = self.folder / (key + '.wav')
+            music.write_bytes(b'checked music')
+            spec = json.loads(self.spec.read_text())
+            spec[key] = str(music)
+            self.spec.write_text(json.dumps(spec))
+            self.report['spec_sha256'] = sha256(self.spec)
+            self.report['input_sha256'][str(music)] = sha256(music)
+            self.save()
+            self.approve()
+            self.gate()
+            music.write_bytes(b'changed music')
+            with self.assertRaises(SystemExit):self.gate()
+            music.write_bytes(b'checked music')
+
     def test_owner_approval_cannot_waive_failures(self):
         self.report['items']=[dict(verdict=FAIL,key='wrong.number',code='narration.number',title='Wrong number',detail='')];self.save()
         self.assertEqual(self.approve(True),2)
