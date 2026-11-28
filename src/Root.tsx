@@ -29,6 +29,7 @@ import {WeeklyCover, WeeklyEpisode, calculateWeeklyMetadata} from './videos/week
 import {Cube2x2Cover, Cube2x2Video, calculateCubeMetadata} from './videos/cube-2x2/Cube2x2Video';
 import {ZhongYingCover, ZhongYingSeal, ZhongYingVideo, calculateZhongYingMetadata} from './videos/zhong-ying/ZhongYingVideo';
 import {Cube5x5Cover, Cube5x5Video, calculateCube5x5Metadata} from './videos/cube-5x5/Cube5x5Video';
+import {BlackHoleAiVideo, calculateBlackHoleMetadata} from './videos/black-hole-ai/BlackHoleAiVideo';
 import type {FC} from 'react';
 import {MonkeySocietyVideo} from './MonkeySocietyVideo';
 import {MonkeyIntroVideo} from './videos/MonkeyIntroVideo';
@@ -357,6 +358,9 @@ export const Root: FC = () => {
       <Composition id="Cube2x2" component={Cube2x2Video} durationInFrames={12000} fps={30} width={1920} height={1080} defaultProps={{tl:null,track:"en" as const}} calculateMetadata={calculateCubeMetadata} />
       <Composition id="Cube2x2ZhTrack" component={Cube2x2Video} durationInFrames={12000} fps={30} width={1920} height={1080} defaultProps={{tl:null,track:"zh" as const}} calculateMetadata={calculateCubeMetadata} />
       <Composition id="Cube2x2Cover" component={Cube2x2Cover} durationInFrames={1} fps={30} width={1920} height={1080} />
+      {/* "We Build A BlackHole with AI" (BLACK-HOLE-AI.md): one picture; English narration, and the Chinese track to preview */}
+      <Composition id="BlackHoleAi" component={BlackHoleAiVideo} durationInFrames={9000} fps={30} width={1920} height={1080} defaultProps={{tl:null,track:"en" as const}} calculateMetadata={calculateBlackHoleMetadata} />
+      <Composition id="BlackHoleAiZhTrack" component={BlackHoleAiVideo} durationInFrames={9000} fps={30} width={1920} height={1080} defaultProps={{tl:null,track:"zh" as const}} calculateMetadata={calculateBlackHoleMetadata} />
       <Composition id="ZhongYingClimbHigher" component={ZhongYingVideo} durationInFrames={9000} fps={30} width={1920} height={1080} defaultProps={{film:"climb-higher",tl:null}} calculateMetadata={calculateZhongYingMetadata} />
       <Composition id="ZhongYingLittleBoats" component={ZhongYingVideo} durationInFrames={9000} fps={30} width={1920} height={1080} defaultProps={{film:"little-boats",tl:null}} calculateMetadata={calculateZhongYingMetadata} />
       <Composition id="ZhongYingCanBeautyLast" component={ZhongYingVideo} durationInFrames={9000} fps={30} width={1920} height={1080} defaultProps={{film:"can-beauty-last",tl:null}} calculateMetadata={calculateZhongYingMetadata} />
