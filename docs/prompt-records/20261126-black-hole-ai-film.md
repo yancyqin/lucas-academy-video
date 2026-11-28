@@ -82,3 +82,9 @@ listened to completely and approved, the owner answered:
 ```text
 尚未完整试听，需要先复核
 ```
+
+The owner then wrote:
+
+```text
+我自己试听
+```
